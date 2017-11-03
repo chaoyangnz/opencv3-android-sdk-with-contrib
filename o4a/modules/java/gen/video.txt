@@ -1,0 +1,145 @@
+PORTED FUNCs LIST (131 of 131):
+
+static Ptr_DualTVL1OpticalFlow create(double tau = 0.25, double lambda = 0.15, double theta = 0.3, int nscales = 5, int warps = 5, double epsilon = 0.01, int innnerIterations = 30, int outerIterations = 10, double scaleStep = 0.8, double gamma = 0.0, int medianFiltering = 5, bool useInitialFlow = false)
+ bool getUseInitialFlow()
+ double getEpsilon()
+ double getGamma()
+ double getLambda()
+ double getScaleStep()
+ double getTau()
+ double getTheta()
+ int getInnerIterations()
+ int getMedianFiltering()
+ int getOuterIterations()
+ int getScalesNumber()
+ int getWarpingsNumber()
+ void setEpsilon(double val)
+ void setGamma(double val)
+ void setInnerIterations(int val)
+ void setLambda(double val)
+ void setMedianFiltering(int val)
+ void setOuterIterations(int val)
+ void setScaleStep(double val)
+ void setScalesNumber(int val)
+ void setTau(double val)
+ void setTheta(double val)
+ void setUseInitialFlow(bool val)
+ void setWarpingsNumber(int val)
+static Ptr_SparsePyrLKOpticalFlow create(Size winSize = Size(21, 21), int maxLevel = 3, TermCriteria crit = TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), int flags = 0, double minEigThreshold = 1e-4)
+ Size getWinSize()
+ TermCriteria getTermCriteria()
+ double getMinEigThreshold()
+ int getFlags()
+ int getMaxLevel()
+ void setFlags(int flags)
+ void setMaxLevel(int maxLevel)
+ void setMinEigThreshold(double minEigThreshold)
+ void setTermCriteria(TermCriteria crit)
+ void setWinSize(Size winSize)
+static Ptr_FarnebackOpticalFlow create(int numLevels = 5, double pyrScale = 0.5, bool fastPyramids = false, int winSize = 13, int numIters = 10, int polyN = 5, double polySigma = 1.1, int flags = 0)
+ bool getFastPyramids()
+ double getPolySigma()
+ double getPyrScale()
+ int getFlags()
+ int getNumIters()
+ int getNumLevels()
+ int getPolyN()
+ int getWinSize()
+ void setFastPyramids(bool fastPyramids)
+ void setFlags(int flags)
+ void setNumIters(int numIters)
+ void setNumLevels(int numLevels)
+ void setPolyN(int polyN)
+ void setPolySigma(double polySigma)
+ void setPyrScale(double pyrScale)
+ void setWinSize(int winSize)
+ void calc(Mat prevImg, Mat nextImg, Mat prevPts, Mat& nextPts, Mat& status, Mat& err = cv::Mat())
+ void calc(Mat I0, Mat I1, Mat& flow)
+ void collectGarbage()
+ void apply(Mat image, Mat& fgmask, double learningRate = -1)
+ void getBackgroundImage(Mat& backgroundImage)
+ Mat estimateRigidTransform(Mat src, Mat dst, bool fullAffine)
+ Ptr_BackgroundSubtractorKNN createBackgroundSubtractorKNN(int history = 500, double dist2Threshold = 400.0, bool detectShadows = true)
+ Ptr_BackgroundSubtractorMOG2 createBackgroundSubtractorMOG2(int history = 500, double varThreshold = 16, bool detectShadows = true)
+ Ptr_DualTVL1OpticalFlow createOptFlow_DualTVL1()
+ RotatedRect CamShift(Mat probImage, Rect& window, TermCriteria criteria)
+ double findTransformECC(Mat templateImage, Mat inputImage, Mat& warpMatrix, int motionType = MOTION_AFFINE, TermCriteria criteria = TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 50, 0.001), Mat inputMask = Mat())
+ int buildOpticalFlowPyramid(Mat img, vector_Mat& pyramid, Size winSize, int maxLevel, bool withDerivatives = true, int pyrBorder = BORDER_REFLECT_101, int derivBorder = BORDER_CONSTANT, bool tryReuseInputImage = true)
+ int meanShift(Mat probImage, Rect& window, TermCriteria criteria)
+ void calcOpticalFlowFarneback(Mat prev, Mat next, Mat& flow, double pyr_scale, int levels, int winsize, int iterations, int poly_n, double poly_sigma, int flags)
+ void calcOpticalFlowPyrLK(Mat prevImg, Mat nextImg, vector_Point2f prevPts, vector_Point2f& nextPts, vector_uchar& status, vector_float& err, Size winSize = Size(21,21), int maxLevel = 3, TermCriteria criteria = TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), int flags = 0, double minEigThreshold = 1e-4)
+  KalmanFilter(int dynamParams, int measureParams, int controlParams = 0, int type = CV_32F)
+  KalmanFilter()
+ Mat correct(Mat measurement)
+ Mat predict(Mat control = Mat())
+Mat KalmanFilter::statePre
+void KalmanFilter::statePre
+Mat KalmanFilter::statePost
+void KalmanFilter::statePost
+Mat KalmanFilter::transitionMatrix
+void KalmanFilter::transitionMatrix
+Mat KalmanFilter::controlMatrix
+void KalmanFilter::controlMatrix
+Mat KalmanFilter::measurementMatrix
+void KalmanFilter::measurementMatrix
+Mat KalmanFilter::processNoiseCov
+void KalmanFilter::processNoiseCov
+Mat KalmanFilter::measurementNoiseCov
+void KalmanFilter::measurementNoiseCov
+Mat KalmanFilter::errorCovPre
+void KalmanFilter::errorCovPre
+Mat KalmanFilter::gain
+void KalmanFilter::gain
+Mat KalmanFilter::errorCovPost
+void KalmanFilter::errorCovPost
+ bool getDetectShadows()
+ double getBackgroundRatio()
+ double getComplexityReductionThreshold()
+ double getShadowThreshold()
+ double getVarInit()
+ double getVarMax()
+ double getVarMin()
+ double getVarThreshold()
+ double getVarThresholdGen()
+ int getHistory()
+ int getNMixtures()
+ int getShadowValue()
+ void apply(Mat image, Mat& fgmask, double learningRate = -1)
+ void setBackgroundRatio(double ratio)
+ void setComplexityReductionThreshold(double ct)
+ void setDetectShadows(bool detectShadows)
+ void setHistory(int history)
+ void setNMixtures(int nmixtures)
+ void setShadowThreshold(double threshold)
+ void setShadowValue(int value)
+ void setVarInit(double varInit)
+ void setVarMax(double varMax)
+ void setVarMin(double varMin)
+ void setVarThreshold(double varThreshold)
+ void setVarThresholdGen(double varThresholdGen)
+ bool getDetectShadows()
+ double getDist2Threshold()
+ double getShadowThreshold()
+ int getHistory()
+ int getNSamples()
+ int getShadowValue()
+ int getkNNSamples()
+ void setDetectShadows(bool detectShadows)
+ void setDist2Threshold(double _dist2Threshold)
+ void setHistory(int history)
+ void setNSamples(int _nN)
+ void setShadowThreshold(double threshold)
+ void setShadowValue(int value)
+ void setkNNSamples(int _nkNN)
+
+SKIPPED FUNCs LIST (0 of 131):
+
+
+0 def args - 98 funcs
+1 def args - 4 funcs
+2 def args - 1 funcs
+3 def args - 3 funcs
+4 def args - 1 funcs
+5 def args - 2 funcs
+8 def args - 1 funcs
+12 def args - 1 funcs

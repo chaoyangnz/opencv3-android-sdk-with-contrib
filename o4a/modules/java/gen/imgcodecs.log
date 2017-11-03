@@ -1,0 +1,359 @@
+ok: class CLASS ::.Imgcodecs : , name: Imgcodecs, base: 
+
+
+===== Header: /Users/Chao/opencv/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs_c.h =====
+Namespaces: set([''])
+
+--- Incoming ---
+[u'const CV_LOAD_IMAGE_UNCHANGED', u'-1', [], [], None, '']
+ok: CONST CV_LOAD_IMAGE_UNCHANGED=-1
+
+--- Incoming ---
+[u'const CV_LOAD_IMAGE_GRAYSCALE', u'0', [], [], None, '']
+ok: CONST CV_LOAD_IMAGE_GRAYSCALE=0
+
+--- Incoming ---
+[u'const CV_LOAD_IMAGE_COLOR', u'1', [], [], None, '']
+ok: CONST CV_LOAD_IMAGE_COLOR=1
+
+--- Incoming ---
+[u'const CV_LOAD_IMAGE_ANYDEPTH', u'2', [], [], None, '']
+ok: CONST CV_LOAD_IMAGE_ANYDEPTH=2
+
+--- Incoming ---
+[u'const CV_LOAD_IMAGE_ANYCOLOR', u'4', [], [], None, '']
+ok: CONST CV_LOAD_IMAGE_ANYCOLOR=4
+
+--- Incoming ---
+[u'const CV_LOAD_IMAGE_IGNORE_ORIENTATION', u'128', [], [], None, '']
+ok: CONST CV_LOAD_IMAGE_IGNORE_ORIENTATION=128
+
+--- Incoming ---
+[u'const CV_IMWRITE_JPEG_QUALITY', u'1', [], [], None, '']
+ok: CONST CV_IMWRITE_JPEG_QUALITY=1
+
+--- Incoming ---
+[u'const CV_IMWRITE_JPEG_PROGRESSIVE', u'2', [], [], None, '']
+ok: CONST CV_IMWRITE_JPEG_PROGRESSIVE=2
+
+--- Incoming ---
+[u'const CV_IMWRITE_JPEG_OPTIMIZE', u'3', [], [], None, '']
+ok: CONST CV_IMWRITE_JPEG_OPTIMIZE=3
+
+--- Incoming ---
+[u'const CV_IMWRITE_JPEG_RST_INTERVAL', u'4', [], [], None, '']
+ok: CONST CV_IMWRITE_JPEG_RST_INTERVAL=4
+
+--- Incoming ---
+[u'const CV_IMWRITE_JPEG_LUMA_QUALITY', u'5', [], [], None, '']
+ok: CONST CV_IMWRITE_JPEG_LUMA_QUALITY=5
+
+--- Incoming ---
+[u'const CV_IMWRITE_JPEG_CHROMA_QUALITY', u'6', [], [], None, '']
+ok: CONST CV_IMWRITE_JPEG_CHROMA_QUALITY=6
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_COMPRESSION', u'16', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_COMPRESSION=16
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_STRATEGY', u'17', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_STRATEGY=17
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_BILEVEL', u'18', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_BILEVEL=18
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_STRATEGY_DEFAULT', u'0', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_STRATEGY_DEFAULT=0
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_STRATEGY_FILTERED', u'1', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_STRATEGY_FILTERED=1
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY', u'2', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY=2
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_STRATEGY_RLE', u'3', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_STRATEGY_RLE=3
+
+--- Incoming ---
+[u'const CV_IMWRITE_PNG_STRATEGY_FIXED', u'4', [], [], None, '']
+ok: CONST CV_IMWRITE_PNG_STRATEGY_FIXED=4
+
+--- Incoming ---
+[u'const CV_IMWRITE_PXM_BINARY', u'32', [], [], None, '']
+ok: CONST CV_IMWRITE_PXM_BINARY=32
+
+--- Incoming ---
+[u'const CV_IMWRITE_WEBP_QUALITY', u'64', [], [], None, '']
+ok: CONST CV_IMWRITE_WEBP_QUALITY=64
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_TUPLETYPE', u'128', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_TUPLETYPE=128
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_FORMAT_NULL', u'0', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_FORMAT_NULL=0
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_FORMAT_BLACKANDWHITE', u'1', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_FORMAT_BLACKANDWHITE=1
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_FORMAT_GRAYSCALE', u'2', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_FORMAT_GRAYSCALE=2
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA', u'3', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA=3
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_FORMAT_RGB', u'4', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_FORMAT_RGB=4
+
+--- Incoming ---
+[u'const CV_IMWRITE_PAM_FORMAT_RGB_ALPHA', u'5', [], [], None, '']
+ok: CONST CV_IMWRITE_PAM_FORMAT_RGB_ALPHA=5
+
+--- Incoming ---
+[u'const CV_CVTIMG_FLIP', u'1', [], [], None, '']
+ok: CONST CV_CVTIMG_FLIP=1
+
+--- Incoming ---
+[u'const CV_CVTIMG_SWAP_RB', u'2', [], [], None, '']
+ok: CONST CV_CVTIMG_SWAP_RB=2
+
+
+===== Header: /Users/Chao/opencv/modules/imgcodecs/include/opencv2/imgcodecs/ios.h =====
+Namespaces: set([''])
+Ignore header: /Users/Chao/opencv/modules/imgcodecs/include/opencv2/imgcodecs/ios.h
+
+
+===== Header: /Users/Chao/opencv/modules/imgcodecs/include/opencv2/imgcodecs.hpp =====
+Namespaces: set(['', u'cv'])
+
+--- Incoming ---
+[u'const cv.IMREAD_UNCHANGED', u'-1', [], [], None, '']
+ok: CONST IMREAD_UNCHANGED=-1
+
+--- Incoming ---
+[u'const cv.IMREAD_GRAYSCALE', u'0', [], [], None, '']
+ok: CONST IMREAD_GRAYSCALE=0
+
+--- Incoming ---
+[u'const cv.IMREAD_COLOR', u'1', [], [], None, '']
+ok: CONST IMREAD_COLOR=1
+
+--- Incoming ---
+[u'const cv.IMREAD_ANYDEPTH', u'2', [], [], None, '']
+ok: CONST IMREAD_ANYDEPTH=2
+
+--- Incoming ---
+[u'const cv.IMREAD_ANYCOLOR', u'4', [], [], None, '']
+ok: CONST IMREAD_ANYCOLOR=4
+
+--- Incoming ---
+[u'const cv.IMREAD_LOAD_GDAL', u'8', [], [], None, '']
+ok: CONST IMREAD_LOAD_GDAL=8
+
+--- Incoming ---
+[u'const cv.IMREAD_REDUCED_GRAYSCALE_2', u'16', [], [], None, '']
+ok: CONST IMREAD_REDUCED_GRAYSCALE_2=16
+
+--- Incoming ---
+[u'const cv.IMREAD_REDUCED_COLOR_2', u'17', [], [], None, '']
+ok: CONST IMREAD_REDUCED_COLOR_2=17
+
+--- Incoming ---
+[u'const cv.IMREAD_REDUCED_GRAYSCALE_4', u'32', [], [], None, '']
+ok: CONST IMREAD_REDUCED_GRAYSCALE_4=32
+
+--- Incoming ---
+[u'const cv.IMREAD_REDUCED_COLOR_4', u'33', [], [], None, '']
+ok: CONST IMREAD_REDUCED_COLOR_4=33
+
+--- Incoming ---
+[u'const cv.IMREAD_REDUCED_GRAYSCALE_8', u'64', [], [], None, '']
+ok: CONST IMREAD_REDUCED_GRAYSCALE_8=64
+
+--- Incoming ---
+[u'const cv.IMREAD_REDUCED_COLOR_8', u'65', [], [], None, '']
+ok: CONST IMREAD_REDUCED_COLOR_8=65
+
+--- Incoming ---
+[u'const cv.IMREAD_IGNORE_ORIENTATION', u'128', [], [], None, '']
+ok: CONST IMREAD_IGNORE_ORIENTATION=128
+
+--- Incoming ---
+[u'const cv.IMWRITE_JPEG_QUALITY', u'1', [], [], None, '']
+ok: CONST IMWRITE_JPEG_QUALITY=1
+
+--- Incoming ---
+[u'const cv.IMWRITE_JPEG_PROGRESSIVE', u'2', [], [], None, '']
+ok: CONST IMWRITE_JPEG_PROGRESSIVE=2
+
+--- Incoming ---
+[u'const cv.IMWRITE_JPEG_OPTIMIZE', u'3', [], [], None, '']
+ok: CONST IMWRITE_JPEG_OPTIMIZE=3
+
+--- Incoming ---
+[u'const cv.IMWRITE_JPEG_RST_INTERVAL', u'4', [], [], None, '']
+ok: CONST IMWRITE_JPEG_RST_INTERVAL=4
+
+--- Incoming ---
+[u'const cv.IMWRITE_JPEG_LUMA_QUALITY', u'5', [], [], None, '']
+ok: CONST IMWRITE_JPEG_LUMA_QUALITY=5
+
+--- Incoming ---
+[u'const cv.IMWRITE_JPEG_CHROMA_QUALITY', u'6', [], [], None, '']
+ok: CONST IMWRITE_JPEG_CHROMA_QUALITY=6
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_COMPRESSION', u'16', [], [], None, '']
+ok: CONST IMWRITE_PNG_COMPRESSION=16
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_STRATEGY', u'17', [], [], None, '']
+ok: CONST IMWRITE_PNG_STRATEGY=17
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_BILEVEL', u'18', [], [], None, '']
+ok: CONST IMWRITE_PNG_BILEVEL=18
+
+--- Incoming ---
+[u'const cv.IMWRITE_PXM_BINARY', u'32', [], [], None, '']
+ok: CONST IMWRITE_PXM_BINARY=32
+
+--- Incoming ---
+[u'const cv.IMWRITE_WEBP_QUALITY', u'64', [], [], None, '']
+ok: CONST IMWRITE_WEBP_QUALITY=64
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_TUPLETYPE', u'128', [], [], None, '']
+ok: CONST IMWRITE_PAM_TUPLETYPE=128
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_STRATEGY_DEFAULT', u'0', [], [], None, '']
+ok: CONST IMWRITE_PNG_STRATEGY_DEFAULT=0
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_STRATEGY_FILTERED', u'1', [], [], None, '']
+ok: CONST IMWRITE_PNG_STRATEGY_FILTERED=1
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY', u'2', [], [], None, '']
+ok: CONST IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY=2
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_STRATEGY_RLE', u'3', [], [], None, '']
+ok: CONST IMWRITE_PNG_STRATEGY_RLE=3
+
+--- Incoming ---
+[u'const cv.IMWRITE_PNG_STRATEGY_FIXED', u'4', [], [], None, '']
+ok: CONST IMWRITE_PNG_STRATEGY_FIXED=4
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_FORMAT_NULL', u'0', [], [], None, '']
+ok: CONST IMWRITE_PAM_FORMAT_NULL=0
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_FORMAT_BLACKANDWHITE', u'1', [], [], None, '']
+ok: CONST IMWRITE_PAM_FORMAT_BLACKANDWHITE=1
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_FORMAT_GRAYSCALE', u'2', [], [], None, '']
+ok: CONST IMWRITE_PAM_FORMAT_GRAYSCALE=2
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA', u'3', [], [], None, '']
+ok: CONST IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA=3
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_FORMAT_RGB', u'4', [], [], None, '']
+ok: CONST IMWRITE_PAM_FORMAT_RGB=4
+
+--- Incoming ---
+[u'const cv.IMWRITE_PAM_FORMAT_RGB_ALPHA', u'5', [], [], None, '']
+ok: CONST IMWRITE_PAM_FORMAT_RGB_ALPHA=5
+
+--- Incoming ---
+[   u'cv.imread',
+    u'Mat',
+    [],
+    [   [u'String', u'filename', u'', ['/C', '/Ref']],
+        [u'int', u'flags', u'IMREAD_COLOR', []]],
+    u'Mat',
+    u'@brief Loads an image from a file.\n\n@anchor imread\n\nThe function imread loads an image from the specified file and returns it. If the image cannot be\nread (because of missing file, improper permissions, unsupported or invalid format), the function\nreturns an empty matrix ( Mat::data==NULL ).\n\nCurrently, the following file formats are supported:\n\n-   Windows bitmaps - \\*.bmp, \\*.dib (always supported)\n-   JPEG files - \\*.jpeg, \\*.jpg, \\*.jpe (see the *Notes* section)\n-   JPEG 2000 files - \\*.jp2 (see the *Notes* section)\n-   Portable Network Graphics - \\*.png (see the *Notes* section)\n-   WebP - \\*.webp (see the *Notes* section)\n-   Portable image format - \\*.pbm, \\*.pgm, \\*.ppm \\*.pxm, \\*.pnm (always supported)\n-   Sun rasters - \\*.sr, \\*.ras (always supported)\n-   TIFF files - \\*.tiff, \\*.tif (see the *Notes* section)\n-   OpenEXR Image files - \\*.exr (see the *Notes* section)\n-   Radiance HDR - \\*.hdr, \\*.pic (always supported)\n-   Raster and Vector geospatial data supported by Gdal (see the *Notes* section)\n\n@note\n\n-   The function determines the type of an image by the content, not by the file extension.\n-   In the case of color images, the decoded images will have the channels stored in **B G R** order.\n-   On Microsoft Windows\\* OS and MacOSX\\*, the codecs shipped with an OpenCV image (libjpeg,\nlibpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,\nand TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware\nthat currently these native image loaders give images with different pixel values because of\nthe color management embedded into MacOSX.\n-   On Linux\\*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for\ncodecs supplied with an OS image. Install the relevant packages (do not forget the development\nfiles, for example, "libjpeg-dev", in Debian\\* and Ubuntu\\*) to get the codec support or turn\non the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.\n-   In the case you set *WITH_GDAL* flag to true in CMake and @ref IMREAD_LOAD_GDAL to load the image,\nthen [GDAL](http://www.gdal.org) driver will be used in order to decode the image by supporting\nthe following formats: [Raster](http://www.gdal.org/formats_list.html),\n[Vector](http://www.gdal.org/ogr_formats.html).\n-   If EXIF information are embedded in the image file, the EXIF orientation will be taken into account\nand thus the image will be rotated accordingly except if the flag @ref IMREAD_IGNORE_ORIENTATION is passed.\n@param filename Name of file to be loaded.\n@param flags Flag that can take values of cv::ImreadModes']
+ok: FUNC <Mat cv..imread [ARG String filename=, ARG int flags=IMREAD_COLOR]>
+
+--- Incoming ---
+[   u'cv.imreadmulti',
+    u'bool',
+    [],
+    [   [u'String', u'filename', u'', ['/C', '/Ref']],
+        [u'vector_Mat', u'mats', u'', ['/O', '/Ref']],
+        [u'int', u'flags', u'IMREAD_ANYCOLOR', []]],
+    u'bool',
+    u'@brief Loads a multi-page image from a file.\n\nThe function imreadmulti loads a multi-page image from the specified file into a vector of Mat objects.\n@param filename Name of file to be loaded.\n@param flags Flag that can take values of cv::ImreadModes, default with cv::IMREAD_ANYCOLOR.\n@param mats A vector of Mat objects holding each page, if more than one.\n@sa cv::imread']
+ok: FUNC <bool cv..imreadmulti [ARG String filename=, ARG vector_Mat mats=, ARG int flags=IMREAD_ANYCOLOR]>
+
+--- Incoming ---
+[   u'cv.imwrite',
+    u'bool',
+    [],
+    [   [u'String', u'filename', u'', ['/C', '/Ref']],
+        ['Mat', u'img', '', []],
+        [u'vector_int', u'params', u'std::vector<int>()', ['/C', '/Ref']]],
+    u'bool',
+    u'@brief Saves an image to a specified file.\n\nThe function imwrite saves the image to the specified file. The image format is chosen based on the\nfilename extension (see cv::imread for the list of extensions). Only 8-bit (or 16-bit unsigned (CV_16U)\nin case of PNG, JPEG 2000, and TIFF) single-channel or 3-channel (with \'BGR\' channel order) images\ncan be saved using this function. If the format, depth or channel order is different, use\nMat::convertTo , and cv::cvtColor to convert it before saving. Or, use the universal FileStorage I/O\nfunctions to save the image to XML or YAML format.\n\nIt is possible to store PNG images with an alpha channel using this function. To do this, create\n8-bit (or 16-bit) 4-channel image BGRA, where the alpha channel goes last. Fully transparent pixels\nshould have alpha set to 0, fully opaque pixels should have alpha set to 255/65535.\n\nThe sample below shows how to create such a BGRA image and store to PNG file. It also demonstrates how to set custom\ncompression parameters :\n@code\n#include <opencv2/opencv.hpp>\n\nusing namespace cv;\nusing namespace std;\n\nvoid createAlphaMat(Mat &mat)\n{\nCV_Assert(mat.channels() == 4);\nfor (int i = 0; i < mat.rows; ++i) {\nfor (int j = 0; j < mat.cols; ++j) {\nVec4b& bgra = mat.at<Vec4b>(i, j);\nbgra[0] = UCHAR_MAX; // Blue\nbgra[1] = saturate_cast<uchar>((float (mat.cols - j)) / ((float)mat.cols) * UCHAR_MAX); // Green\nbgra[2] = saturate_cast<uchar>((float (mat.rows - i)) / ((float)mat.rows) * UCHAR_MAX); // Red\nbgra[3] = saturate_cast<uchar>(0.5 * (bgra[1] + bgra[2])); // Alpha\n}\n}\n}\n\nint main(int argv, char **argc)\n{\n// Create mat with alpha channel\nMat mat(480, 640, CV_8UC4);\ncreateAlphaMat(mat);\n\nvector<int> compression_params;\ncompression_params.push_back(IMWRITE_PNG_COMPRESSION);\ncompression_params.push_back(9);\n\ntry {\nimwrite("alpha.png", mat, compression_params);\n}\ncatch (cv::Exception& ex) {\nfprintf(stderr, "Exception converting image to PNG format: %s\\n", ex.what());\nreturn 1;\n}\n\nfprintf(stdout, "Saved PNG file with alpha data.\\n");\nreturn 0;\n}\n@endcode\n@param filename Name of the file.\n@param img Image to be saved.\n@param params Format-specific parameters encoded as pairs (paramId_1, paramValue_1, paramId_2, paramValue_2, ... .) see cv::ImwriteFlags']
+ok: FUNC <bool cv..imwrite [ARG String filename=, ARG Mat img=, ARG vector_int params=std::vector<int>()]>
+
+--- Incoming ---
+[   u'cv.imdecode',
+    u'Mat',
+    [],
+    [['Mat', u'buf', '', []], [u'int', u'flags', u'', []]],
+    u'Mat',
+    u'@brief Reads an image from a buffer in memory.\n\nThe function imdecode reads an image from the specified buffer in the memory. If the buffer is too short or\ncontains invalid data, the function returns an empty matrix ( Mat::data==NULL ).\n\nSee cv::imread for the list of supported formats and flags description.\n\n@note In the case of color images, the decoded images will have the channels stored in **B G R** order.\n@param buf Input array or vector of bytes.\n@param flags The same flags as in cv::imread, see cv::ImreadModes.']
+ok: FUNC <Mat cv..imdecode [ARG Mat buf=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.imencode',
+    u'bool',
+    [],
+    [   [u'String', u'ext', u'', ['/C', '/Ref']],
+        ['Mat', u'img', '', []],
+        [u'vector_uchar', u'buf', u'', ['/O', '/Ref']],
+        [u'vector_int', u'params', u'std::vector<int>()', ['/C', '/Ref']]],
+    u'bool',
+    u'@brief Encodes an image into a memory buffer.\n\nThe function imencode compresses the image and stores it in the memory buffer that is resized to fit the\nresult. See cv::imwrite for the list of supported formats and flags description.\n\n@param ext File extension that defines the output format.\n@param img Image to be written.\n@param buf Output buffer resized to fit the compressed image.\n@param params Format-specific parameters. See cv::imwrite and cv::ImwriteFlags.']
+ok: FUNC <bool cv..imencode [ARG String ext=, ARG Mat img=, ARG vector_uchar buf=, ARG vector_int params=std::vector<int>()]>
+
+
+===== Header: /Users/Chao/opencv/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs.hpp =====
+Namespaces: set(['', u'cv'])
+Ignore header: /Users/Chao/opencv/modules/imgcodecs/include/opencv2/imgcodecs/imgcodecs.hpp
+
+
+===== Generating... =====
+CLASS ::.Imgcodecs : 
+[CONST CV_LOAD_IMAGE_UNCHANGED=-1, CONST CV_LOAD_IMAGE_GRAYSCALE=0, CONST CV_LOAD_IMAGE_COLOR=1, CONST CV_LOAD_IMAGE_ANYDEPTH=2, CONST CV_LOAD_IMAGE_ANYCOLOR=4, CONST CV_LOAD_IMAGE_IGNORE_ORIENTATION=128, CONST CV_IMWRITE_JPEG_QUALITY=1, CONST CV_IMWRITE_JPEG_PROGRESSIVE=2, CONST CV_IMWRITE_JPEG_OPTIMIZE=3, CONST CV_IMWRITE_JPEG_RST_INTERVAL=4, CONST CV_IMWRITE_JPEG_LUMA_QUALITY=5, CONST CV_IMWRITE_JPEG_CHROMA_QUALITY=6, CONST CV_IMWRITE_PNG_COMPRESSION=16, CONST CV_IMWRITE_PNG_STRATEGY=17, CONST CV_IMWRITE_PNG_BILEVEL=18, CONST CV_IMWRITE_PNG_STRATEGY_DEFAULT=0, CONST CV_IMWRITE_PNG_STRATEGY_FILTERED=1, CONST CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY=2, CONST CV_IMWRITE_PNG_STRATEGY_RLE=3, CONST CV_IMWRITE_PNG_STRATEGY_FIXED=4, CONST CV_IMWRITE_PXM_BINARY=32, CONST CV_IMWRITE_WEBP_QUALITY=64, CONST CV_IMWRITE_PAM_TUPLETYPE=128, CONST CV_IMWRITE_PAM_FORMAT_NULL=0, CONST CV_IMWRITE_PAM_FORMAT_BLACKANDWHITE=1, CONST CV_IMWRITE_PAM_FORMAT_GRAYSCALE=2, CONST CV_IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA=3, CONST CV_IMWRITE_PAM_FORMAT_RGB=4, CONST CV_IMWRITE_PAM_FORMAT_RGB_ALPHA=5, CONST CV_CVTIMG_FLIP=1, CONST CV_CVTIMG_SWAP_RB=2, CONST IMREAD_UNCHANGED=-1, CONST IMREAD_GRAYSCALE=0, CONST IMREAD_COLOR=1, CONST IMREAD_ANYDEPTH=2, CONST IMREAD_ANYCOLOR=4, CONST IMREAD_LOAD_GDAL=8, CONST IMREAD_REDUCED_GRAYSCALE_2=16, CONST IMREAD_REDUCED_COLOR_2=17, CONST IMREAD_REDUCED_GRAYSCALE_4=32, CONST IMREAD_REDUCED_COLOR_4=33, CONST IMREAD_REDUCED_GRAYSCALE_8=64, CONST IMREAD_REDUCED_COLOR_8=65, CONST IMREAD_IGNORE_ORIENTATION=128, CONST IMWRITE_JPEG_QUALITY=1, CONST IMWRITE_JPEG_PROGRESSIVE=2, CONST IMWRITE_JPEG_OPTIMIZE=3, CONST IMWRITE_JPEG_RST_INTERVAL=4, CONST IMWRITE_JPEG_LUMA_QUALITY=5, CONST IMWRITE_JPEG_CHROMA_QUALITY=6, CONST IMWRITE_PNG_COMPRESSION=16, CONST IMWRITE_PNG_STRATEGY=17, CONST IMWRITE_PNG_BILEVEL=18, CONST IMWRITE_PXM_BINARY=32, CONST IMWRITE_WEBP_QUALITY=64, CONST IMWRITE_PAM_TUPLETYPE=128, CONST IMWRITE_PNG_STRATEGY_DEFAULT=0, CONST IMWRITE_PNG_STRATEGY_FILTERED=1, CONST IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY=2, CONST IMWRITE_PNG_STRATEGY_RLE=3, CONST IMWRITE_PNG_STRATEGY_FIXED=4, CONST IMWRITE_PAM_FORMAT_NULL=0, CONST IMWRITE_PAM_FORMAT_BLACKANDWHITE=1, CONST IMWRITE_PAM_FORMAT_GRAYSCALE=2, CONST IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA=3, CONST IMWRITE_PAM_FORMAT_RGB=4, CONST IMWRITE_PAM_FORMAT_RGB_ALPHA=5]
+FUNC <Mat cv..imdecode [ARG Mat buf=, ARG int flags=]>
+java: Mat imdecode(Mat buf, int flags)
+FUNC <Mat cv..imread [ARG String filename=, ARG int flags=IMREAD_COLOR]>
+java: Mat imread(String filename, int flags)
+java: Mat imread(String filename)
+FUNC <bool cv..imencode [ARG String ext=, ARG Mat img=, ARG vector_uchar buf=, ARG vector_int params=std::vector<int>()]>
+java: boolean imencode(String ext, Mat img, MatOfByte buf, MatOfInt params)
+java: boolean imencode(String ext, Mat img, MatOfByte buf)
+FUNC <bool cv..imreadmulti [ARG String filename=, ARG vector_Mat mats=, ARG int flags=IMREAD_ANYCOLOR]>
+java: boolean imreadmulti(String filename, List<Mat> mats, int flags)
+java: boolean imreadmulti(String filename, List<Mat> mats)
+FUNC <bool cv..imwrite [ARG String filename=, ARG Mat img=, ARG vector_int params=std::vector<int>()]>
+java: boolean imwrite(String filename, Mat img, MatOfInt params)
+java: boolean imwrite(String filename, Mat img)

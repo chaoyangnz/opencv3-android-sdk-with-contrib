@@ -1,0 +1,468 @@
+# Target labels
+ Main
+ opencv_dnn
+ Module
+# Source files and their labels
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/attr_value.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/function.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/graph.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/op_def.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/tensor.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/tensor_shape.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/types.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/versions.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/caffe/caffe.pb.cc
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/attr_value.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/function.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/graph.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/op_def.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/tensor.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/tensor_shape.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/types.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/tensorflow/versions.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/misc/caffe/caffe.pb.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/all_layers.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/dict.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/dnn.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/dnn.inl.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/layer.details.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/layer.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/include/opencv2/dnn/shape_utils.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/caffe/caffe_importer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/caffe/caffe_io.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/caffe/caffe_shrinker.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/darknet/darknet_importer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/darknet/darknet_io.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/dnn.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/halide_scheduler.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/init.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/batch_norm_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/blank_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/concat_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/convolution_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/crop_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/detection_output_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/elementwise_layers.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/eltwise_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/flatten_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/fully_connected_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/layers_common.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/lrn_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/max_unpooling_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/mvn_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/normalize_bbox_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/padding_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/permute_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/pooling_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/prior_box_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/recurrent_layers.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/region_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/reorg_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/reshape_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/resize_nearest_neighbor_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/scale_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/shift_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/slice_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/softmax_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/split_layer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/nms.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/common.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/math_functions.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_conv_spatial.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_inner_product.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_lrn.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_pool.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_softmax.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/op_halide.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_importer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_io.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THDiskFile.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THFile.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THGeneral.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/torch_importer.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/activations.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/batchnorm.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/col2im.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/concat.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/conv_layer_spatial.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/conv_spatial_helper.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/dummy.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/gemm_image.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/im2col.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/lrn.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/math.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/matvec_mul.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/ocl4dnn_lrn.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/ocl4dnn_pooling.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/pooling.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/softmax.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/opencl/softmax_loss.cl
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/build/build_service_mips/modules/dnn/opencl_kernels_dnn.cpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/build/build_service_mips/modules/dnn/opencl_kernels_dnn.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/caffe/caffe_io.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/caffe/glog_emulator.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/darknet/darknet_io.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/halide_scheduler.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/layers_common.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/layers/layers_common.simd.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/nms.inl.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/common.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/default_kernel_config.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/math_functions.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/ocl4dnn.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/op_halide.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/precomp.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_io.hpp
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THDiskFile.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THFile.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THFilePrivate.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/modules/dnn/src/torch/THGeneral.h
+ Main
+ opencv_dnn
+ Module
+/Users/Chao/opencv/build/build_service_mips/cvconfig.h
+/Users/Chao/opencv/build/build_service_mips/opencv2/opencv_modules.hpp
+/Users/Chao/opencv/build/build_service_mips/modules/dnn/opencl_kernels_dnn.cpp.rule

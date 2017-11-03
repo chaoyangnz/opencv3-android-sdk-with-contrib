@@ -1,0 +1,21 @@
+# Target labels
+ Main
+ opencv_objdetect
+ AccuracyTest
+# Source files and their labels
+/Users/Chao/opencv/modules/objdetect/test/opencl/test_hogdetector.cpp
+ Main
+ opencv_objdetect
+ AccuracyTest
+/Users/Chao/opencv/modules/objdetect/test/test_cascadeandhog.cpp
+ Main
+ opencv_objdetect
+ AccuracyTest
+/Users/Chao/opencv/modules/objdetect/test/test_main.cpp
+ Main
+ opencv_objdetect
+ AccuracyTest
+/Users/Chao/opencv/modules/objdetect/test/test_precomp.hpp
+ Main
+ opencv_objdetect
+ AccuracyTest

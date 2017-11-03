@@ -1,0 +1,20 @@
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes.dex : \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R$attr.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R$drawable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R$id.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R$layout.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R$string.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R$styleable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/R.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/BuildConfig.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R$attr.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R$drawable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R$id.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R$layout.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R$string.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R$styleable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/R.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/Tutorial1Activity$1.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/classes/org/opencv/samples/tutorial1/Tutorial1Activity.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/dexedLibs/classes-8d1c20d073048638d4d603ca8e937d1c.jar \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-1-camerapreview/.build/bin/dexedLibs/annotations-811193dd20b80b4c74bc4f05ba119b9d.jar \

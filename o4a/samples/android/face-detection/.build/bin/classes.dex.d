@@ -1,0 +1,22 @@
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes.dex : \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R$attr.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R$drawable.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R$id.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R$layout.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R$string.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R$styleable.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/R.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/BuildConfig.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/DetectionBasedTracker.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/FdActivity$1.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/FdActivity.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$attr.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$drawable.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$id.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$layout.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$raw.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$string.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R$styleable.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/classes/org/opencv/samples/facedetect/R.class \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/dexedLibs/classes-8d1c20d073048638d4d603ca8e937d1c.jar \
+/Users/Chao/opencv/build/o4a/samples/android/face-detection/.build/bin/dexedLibs/annotations-811193dd20b80b4c74bc4f05ba119b9d.jar \

@@ -1,0 +1,43 @@
+# Target labels
+ Main
+ opencv_videoio
+ Module
+# Source files and their labels
+/Users/Chao/opencv/modules/videoio/include/opencv2/videoio.hpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/include/opencv2/videoio/videoio.hpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/include/opencv2/videoio/cap_ios.h
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/include/opencv2/videoio/videoio_c.h
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/src/cap.cpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/src/cap_images.cpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/src/cap_mjpeg_encoder.cpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/src/cap_mjpeg_decoder.cpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/modules/videoio/src/precomp.hpp
+ Main
+ opencv_videoio
+ Module
+/Users/Chao/opencv/build/build_service_mips64/cvconfig.h
+/Users/Chao/opencv/build/build_service_mips64/opencv2/opencv_modules.hpp

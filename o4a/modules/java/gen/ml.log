@@ -1,0 +1,2642 @@
+ok: class CLASS ::.Ml : , name: Ml, base: 
+
+
+===== Header: /Users/Chao/opencv/modules/ml/include/opencv2/ml.hpp =====
+Namespaces: set([u'cv', u'cv.ml'])
+
+--- Incoming ---
+[u'const cv.ml.VAR_NUMERICAL', u'0', [], [], None, '']
+ok: CONST VAR_NUMERICAL=0
+
+--- Incoming ---
+[u'const cv.ml.VAR_ORDERED', u'0', [], [], None, '']
+ok: CONST VAR_ORDERED=0
+
+--- Incoming ---
+[u'const cv.ml.VAR_CATEGORICAL', u'1', [], [], None, '']
+ok: CONST VAR_CATEGORICAL=1
+
+--- Incoming ---
+[u'const cv.ml.TEST_ERROR', u'0', [], [], None, '']
+ok: CONST TEST_ERROR=0
+
+--- Incoming ---
+[u'const cv.ml.TRAIN_ERROR', u'1', [], [], None, '']
+ok: CONST TRAIN_ERROR=1
+
+--- Incoming ---
+[u'const cv.ml.ROW_SAMPLE', u'0', [], [], None, '']
+ok: CONST ROW_SAMPLE=0
+
+--- Incoming ---
+[u'const cv.ml.COL_SAMPLE', u'1', [], [], None, '']
+ok: CONST COL_SAMPLE=1
+
+--- Incoming ---
+[   u'class cv.ml.ParamGrid',
+    '',
+    [],
+    [   [u'double', u'minVal', '', ['/RW']],
+        [u'double', u'maxVal', '', ['/RW']],
+        [u'double', u'logStep', '', ['/RW']]],
+    None,
+    u'@brief The structure represents the logarithmic grid range of statmodel parameters.\n\nIt is used for optimizing statmodel accuracy by varying model parameters, the accuracy estimate\nbeing computed by cross-validation.']
+ok: class CLASS cv.ml::.ParamGrid : , name: ParamGrid, base: 
+
+--- Incoming ---
+[   u'cv.ml.ParamGrid.create',
+    u'Ptr_ParamGrid',
+    ['/S'],
+    [   [u'double', u'minVal', u'0.', []],
+        [u'double', u'maxVal', u'0.', []],
+        [u'double', u'logstep', u'1.', []]],
+    u'Ptr<ParamGrid>',
+    u'@brief Creates a ParamGrid Ptr that can be given to the %SVM::trainAuto method\n\n@param minVal minimum value of the parameter grid\n@param maxVal maximum value of the parameter grid\n@param logstep Logarithmic step for iterating the statmodel parameter']
+ok: FUNC <Ptr_ParamGrid cv.ml.ParamGrid.create [ARG double minVal=0., ARG double maxVal=0., ARG double logstep=1.]>
+
+--- Incoming ---
+[   u'class cv.ml.TrainData',
+    '',
+    [],
+    [],
+    None,
+    u'@brief Class encapsulating training data.\n\nPlease note that the class only specifies the interface of training data, but not implementation.\nAll the statistical model classes in _ml_ module accepts Ptr\\<TrainData\\> as parameter. In other\nwords, you can create your own class derived from TrainData and pass smart pointer to the instance\nof this class into StatModel::train.\n\n@sa @ref ml_intro_data']
+ok: class CLASS cv.ml::.TrainData : , name: TrainData, base: 
+
+--- Incoming ---
+[u'cv.ml.TrainData.getLayout', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.ml.TrainData.getLayout []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getNTrainSamples',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.ml.TrainData.getNTrainSamples []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getNTestSamples',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.ml.TrainData.getNTestSamples []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getNSamples', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.ml.TrainData.getNSamples []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getNVars', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.ml.TrainData.getNVars []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getNAllVars', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.ml.TrainData.getNAllVars []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getSample',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [   ['Mat', u'varIdx', '', []],
+        [u'int', u'sidx', u'', []],
+        [u'float*', u'buf', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.ml.TrainData.getSample [ARG Mat varIdx=, ARG int sidx=, ARG float * buf=]>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getSamples', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getSamples []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getMissing', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getMissing []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTrainSamples',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [   [u'int', u'layout', u'ROW_SAMPLE', []],
+        [u'bool', u'compressSamples', u'true', []],
+        [u'bool', u'compressVars', u'true', []]],
+    u'Mat',
+    u"@brief Returns matrix of train samples\n\n@param layout The requested layout. If it's different from the initial one, the matrix is\ntransposed. See ml::SampleTypes.\n@param compressSamples if true, the function returns only the training samples (specified by\nsampleIdx)\n@param compressVars if true, the function returns the shorter training samples, containing only\nthe active variables.\n\nIn current implementation the function tries to avoid physical data copying and returns the\nmatrix stored inside TrainData (unless the transposition or compression is needed)."]
+ok: FUNC <Mat cv.ml.TrainData.getTrainSamples [ARG int layout=ROW_SAMPLE, ARG bool compressSamples=true, ARG bool compressVars=true]>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTrainResponses',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u"@brief Returns the vector of responses\n\nThe function returns ordered or the original categorical responses. Usually it's used in\nregression algorithms."]
+ok: FUNC <Mat cv.ml.TrainData.getTrainResponses []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTrainNormCatResponses',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'@brief Returns the vector of normalized categorical responses\n\nThe function returns vector of responses. Each response is integer from `0` to `<number of\nclasses>-1`. The actual label value can be retrieved then from the class label vector, see\nTrainData::getClassLabels.']
+ok: FUNC <Mat cv.ml.TrainData.getTrainNormCatResponses []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTestResponses',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getTestResponses []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTestNormCatResponses',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getTestNormCatResponses []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getResponses', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getResponses []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getNormCatResponses',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getNormCatResponses []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getSampleWeights',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getSampleWeights []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTrainSampleWeights',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getTrainSampleWeights []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTestSampleWeights',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getTestSampleWeights []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getVarIdx', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getVarIdx []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getVarType', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getVarType []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getVarSymbolFlags', u'Mat', ['/C'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getVarSymbolFlags []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getResponseType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.ml.TrainData.getResponseType []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTrainSampleIdx',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getTrainSampleIdx []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTestSampleIdx',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getTestSampleIdx []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getValues',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [   [u'int', u'vi', u'', []],
+        ['Mat', u'sidx', '', []],
+        [u'float*', u'values', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.ml.TrainData.getValues [ARG int vi=, ARG Mat sidx=, ARG float * values=]>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getDefaultSubstValues',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getDefaultSubstValues []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getCatCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [[u'int', u'vi', u'', []]],
+    u'int',
+    '']
+ok: FUNC <int cv.ml.TrainData.getCatCount [ARG int vi=]>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getClassLabels',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'@brief Returns the vector of class labels\n\nThe function returns vector of unique labels occurred in the responses.']
+ok: FUNC <Mat cv.ml.TrainData.getClassLabels []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getCatOfs', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getCatOfs []>
+
+--- Incoming ---
+[u'cv.ml.TrainData.getCatMap', u'Mat', ['/C', '/V', '/PV'], [], u'Mat', '']
+ok: FUNC <Mat cv.ml.TrainData.getCatMap []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.setTrainTestSplit',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'count', u'', []], [u'bool', u'shuffle', u'true', []]],
+    u'void',
+    u'@brief Splits the training data into the training and test parts\n@sa TrainData::setTrainTestSplitRatio']
+ok: FUNC <void cv.ml.TrainData.setTrainTestSplit [ARG int count=, ARG bool shuffle=true]>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.setTrainTestSplitRatio',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'ratio', u'', []], [u'bool', u'shuffle', u'true', []]],
+    u'void',
+    u'@brief Splits the training data into the training and test parts\n\nThe function selects a subset of specified relative size and then returns it as the training\nset. If the function is not called, all the data is used for training. Please, note that for\neach of TrainData::getTrain\\* there is corresponding TrainData::getTest\\*, so that the test\nsubset can be retrieved and processed as well.\n@sa TrainData::setTrainTestSplit']
+ok: FUNC <void cv.ml.TrainData.setTrainTestSplitRatio [ARG double ratio=, ARG bool shuffle=true]>
+
+--- Incoming ---
+[u'cv.ml.TrainData.shuffleTrainTest', u'void', ['/V', '/PV'], [], u'void', '']
+ok: FUNC <void cv.ml.TrainData.shuffleTrainTest []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getTestSamples',
+    u'Mat',
+    ['/C'],
+    [],
+    u'Mat',
+    u'@brief Returns matrix of test samples']
+ok: FUNC <Mat cv.ml.TrainData.getTestSamples []>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getNames',
+    u'void',
+    ['/C'],
+    [[u'vector_String', u'names', u'', ['/Ref']]],
+    u'void',
+    u'@brief Returns vector of symbolic names captured in loadFromCSV()']
+ok: FUNC <void cv.ml.TrainData.getNames [ARG vector_String names=]>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.getSubVector',
+    u'Mat',
+    ['/S'],
+    [   [u'Mat', u'vec', u'', ['/C', '/Ref']],
+        [u'Mat', u'idx', u'', ['/C', '/Ref']]],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.TrainData.getSubVector [ARG Mat vec=, ARG Mat idx=]>
+
+--- Incoming ---
+[   u'cv.ml.TrainData.create',
+    u'Ptr_TrainData',
+    ['/S'],
+    [   ['Mat', u'samples', '', []],
+        [u'int', u'layout', u'', []],
+        ['Mat', u'responses', '', []],
+        ['Mat', u'varIdx', u'Mat()', []],
+        ['Mat', u'sampleIdx', u'Mat()', []],
+        ['Mat', u'sampleWeights', u'Mat()', []],
+        ['Mat', u'varType', u'Mat()', []]],
+    u'Ptr<TrainData>',
+    u'@brief Creates training data from in-memory arrays.\n\n@param samples matrix of samples. It should have CV_32F type.\n@param layout see ml::SampleTypes.\n@param responses matrix of responses. If the responses are scalar, they should be stored as a\nsingle row or as a single column. The matrix should have type CV_32F or CV_32S (in the\nformer case the responses are considered as ordered by default; in the latter case - as\ncategorical)\n@param varIdx vector specifying which variables to use for training. It can be an integer vector\n(CV_32S) containing 0-based variable indices or byte vector (CV_8U) containing a mask of\nactive variables.\n@param sampleIdx vector specifying which samples to use for training. It can be an integer\nvector (CV_32S) containing 0-based sample indices or byte vector (CV_8U) containing a mask\nof training samples.\n@param sampleWeights optional vector with weights for each sample. It should have CV_32F type.\n@param varType optional vector of type CV_8U and size `<number_of_variables_in_samples> +\n<number_of_variables_in_responses>`, containing types of each input and output variable. See\nml::VariableTypes.']
+ok: FUNC <Ptr_TrainData cv.ml.TrainData.create [ARG Mat samples=, ARG int layout=, ARG Mat responses=, ARG Mat varIdx=Mat(), ARG Mat sampleIdx=Mat(), ARG Mat sampleWeights=Mat(), ARG Mat varType=Mat()]>
+
+--- Incoming ---
+[   u'class cv.ml.StatModel',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief Base class for statistical models in OpenCV ML.']
+ok: class CLASS cv.ml::.StatModel : Algorithm, name: StatModel, base: Algorithm
+
+--- Incoming ---
+[u'const cv.ml.StatModel.UPDATE_MODEL', u'1', [], [], None, '']
+ok: CONST UPDATE_MODEL=1
+
+--- Incoming ---
+[u'const cv.ml.StatModel.RAW_OUTPUT', u'1', [], [], None, '']
+ok: CONST RAW_OUTPUT=1
+
+--- Incoming ---
+[u'const cv.ml.StatModel.COMPRESSED_INPUT', u'2', [], [], None, '']
+ok: CONST COMPRESSED_INPUT=2
+
+--- Incoming ---
+[u'const cv.ml.StatModel.PREPROCESSED_INPUT', u'4', [], [], None, '']
+ok: CONST PREPROCESSED_INPUT=4
+
+--- Incoming ---
+[   u'cv.ml.StatModel.getVarCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the number of variables in training samples']
+ok: FUNC <int cv.ml.StatModel.getVarCount []>
+
+--- Incoming ---
+[u'cv.ml.StatModel.empty', u'bool', ['/C', '/V'], [], u'bool', '']
+ok: FUNC <bool cv.ml.StatModel.empty []>
+
+--- Incoming ---
+[   u'cv.ml.StatModel.isTrained',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@brief Returns true if the model is trained']
+ok: FUNC <bool cv.ml.StatModel.isTrained []>
+
+--- Incoming ---
+[   u'cv.ml.StatModel.isClassifier',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@brief Returns true if the model is classifier']
+ok: FUNC <bool cv.ml.StatModel.isClassifier []>
+
+--- Incoming ---
+[   u'cv.ml.StatModel.train',
+    u'bool',
+    ['/V'],
+    [   [u'Ptr_TrainData', u'trainData', u'', ['/C', '/Ref']],
+        [u'int', u'flags', u'0', []]],
+    u'bool',
+    u'@brief Trains the statistical model\n\n@param trainData training data that can be loaded from file using TrainData::loadFromCSV or\ncreated with TrainData::create.\n@param flags optional flags, depending on the model. Some of the models can be updated with the\nnew training samples, not completely overwritten (such as NormalBayesClassifier or ANN_MLP).']
+ok: FUNC <bool cv.ml.StatModel.train [ARG Ptr_TrainData trainData=, ARG int flags=0]>
+
+--- Incoming ---
+[   u'cv.ml.StatModel.train',
+    u'bool',
+    ['/V'],
+    [   ['Mat', u'samples', '', []],
+        [u'int', u'layout', u'', []],
+        ['Mat', u'responses', '', []]],
+    u'bool',
+    u'@brief Trains the statistical model\n\n@param samples training samples\n@param layout See ml::SampleTypes.\n@param responses vector of responses associated with the training samples.']
+ok: FUNC <bool cv.ml.StatModel.train [ARG Mat samples=, ARG int layout=, ARG Mat responses=]>
+
+--- Incoming ---
+[   u'cv.ml.StatModel.calcError',
+    u'float',
+    ['/C', '/V'],
+    [   [u'Ptr_TrainData', u'data', u'', ['/C', '/Ref']],
+        [u'bool', u'test', u'', []],
+        ['Mat', u'resp', '', ['/O']]],
+    u'float',
+    u"@brief Computes error on the training or test dataset\n\n@param data the training data\n@param test if true, the error is computed over the test subset of the data, otherwise it's\ncomputed over the training subset of the data. Please note that if you loaded a completely\ndifferent dataset to evaluate already trained classifier, you will probably want not to set\nthe test subset at all with TrainData::setTrainTestSplitRatio and specify test=false, so\nthat the error is computed for the whole new set. Yes, this sounds a bit confusing.\n@param resp the optional output responses.\n\nThe method uses StatModel::predict to compute the error. For regression models the error is\ncomputed as RMS, for classifiers - as a percent of missclassified samples (0%-100%)."]
+ok: FUNC <float cv.ml.StatModel.calcError [ARG Ptr_TrainData data=, ARG bool test=, ARG Mat resp=]>
+
+--- Incoming ---
+[   u'cv.ml.StatModel.predict',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'results', u'Mat()', ['/O']],
+        [u'int', u'flags', u'0', []]],
+    u'float',
+    u'@brief Predicts response(s) for the provided sample(s)\n\n@param samples The input samples, floating-point matrix\n@param results The optional output matrix of results.\n@param flags The optional flags, model-dependent. See cv::ml::StatModel::Flags.']
+ok: FUNC <float cv.ml.StatModel.predict [ARG Mat samples=, ARG Mat results=Mat(), ARG int flags=0]>
+
+--- Incoming ---
+[   u'class cv.ml.NormalBayesClassifier',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief Bayes classifier for normally distributed data.\n\n@sa @ref ml_intro_bayes']
+ok: class CLASS cv.ml::.NormalBayesClassifier : StatModel, name: NormalBayesClassifier, base: StatModel
+
+--- Incoming ---
+[   u'cv.ml.NormalBayesClassifier.predictProb',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [   ['Mat', u'inputs', '', []],
+        ['Mat', u'outputs', '', ['/O']],
+        ['Mat', u'outputProbs', '', ['/O']],
+        [u'int', u'flags', u'0', []]],
+    u'float',
+    u'@brief Predicts the response for sample(s).\n\nThe method estimates the most probable classes for input vectors. Input vectors (one or more)\nare stored as rows of the matrix inputs. In case of multiple input vectors, there should be one\noutput vector outputs. The predicted class for a single input vector is returned by the method.\nThe vector outputProbs contains the output probabilities corresponding to each element of\nresult.']
+ok: FUNC <float cv.ml.NormalBayesClassifier.predictProb [ARG Mat inputs=, ARG Mat outputs=, ARG Mat outputProbs=, ARG int flags=0]>
+
+--- Incoming ---
+[   u'cv.ml.NormalBayesClassifier.create',
+    u'Ptr_NormalBayesClassifier',
+    ['/S'],
+    [],
+    u'Ptr<NormalBayesClassifier>',
+    u'Creates empty model\nUse StatModel::train to train the model after creation.']
+ok: FUNC <Ptr_NormalBayesClassifier cv.ml.NormalBayesClassifier.create []>
+
+--- Incoming ---
+[   u'cv.ml.NormalBayesClassifier.load',
+    u'Ptr_NormalBayesClassifier',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<NormalBayesClassifier>',
+    u'@brief Loads and creates a serialized NormalBayesClassifier from a file\n*\n* Use NormalBayesClassifier::save to serialize and store an NormalBayesClassifier to disk.\n* Load the NormalBayesClassifier from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized NormalBayesClassifier\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_NormalBayesClassifier cv.ml.NormalBayesClassifier.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'class cv.ml.KNearest',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief The class implements K-Nearest Neighbors model\n\n@sa @ref ml_intro_knn']
+ok: class CLASS cv.ml::.KNearest : StatModel, name: KNearest, base: StatModel
+
+--- Incoming ---
+[   u'cv.ml.KNearest.getDefaultK',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setDefaultK']
+ok: FUNC <int cv.ml.KNearest.getDefaultK []>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.setDefaultK',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getDefaultK @see getDefaultK']
+ok: FUNC <void cv.ml.KNearest.setDefaultK [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.getIsClassifier',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@see setIsClassifier']
+ok: FUNC <bool cv.ml.KNearest.getIsClassifier []>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.setIsClassifier',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'val', u'', []]],
+    u'void',
+    u'@copybrief getIsClassifier @see getIsClassifier']
+ok: FUNC <void cv.ml.KNearest.setIsClassifier [ARG bool val=]>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.getEmax',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setEmax']
+ok: FUNC <int cv.ml.KNearest.getEmax []>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.setEmax',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getEmax @see getEmax']
+ok: FUNC <void cv.ml.KNearest.setEmax [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.getAlgorithmType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setAlgorithmType']
+ok: FUNC <int cv.ml.KNearest.getAlgorithmType []>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.setAlgorithmType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getAlgorithmType @see getAlgorithmType']
+ok: FUNC <void cv.ml.KNearest.setAlgorithmType [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.KNearest.findNearest',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        [u'int', u'k', u'', []],
+        ['Mat', u'results', '', ['/O']],
+        ['Mat', u'neighborResponses', u'Mat()', ['/O']],
+        ['Mat', u'dist', u'Mat()', ['/O']]],
+    u'float',
+    u"@brief Finds the neighbors and predicts responses for input vectors.\n\n@param samples Input samples stored by rows. It is a single-precision floating-point matrix of\n`<number_of_samples> * k` size.\n@param k Number of used nearest neighbors. Should be greater than 1.\n@param results Vector with results of prediction (regression or classification) for each input\nsample. It is a single-precision floating-point vector with `<number_of_samples>` elements.\n@param neighborResponses Optional output values for corresponding neighbors. It is a single-\nprecision floating-point matrix of `<number_of_samples> * k` size.\n@param dist Optional output distances from the input vectors to the corresponding neighbors. It\nis a single-precision floating-point matrix of `<number_of_samples> * k` size.\n\nFor each input vector (a row of the matrix samples), the method finds the k nearest neighbors.\nIn case of regression, the predicted result is a mean value of the particular vector's neighbor\nresponses. In case of classification, the class is determined by voting.\n\nFor each input vector, the neighbors are sorted by their distances to the vector.\n\nIn case of C++ interface you can use output pointers to empty matrices and the function will\nallocate memory itself.\n\nIf only a single input vector is passed, all output matrices are optional and the predicted\nvalue is returned by the method.\n\nThe function is parallelized with the TBB library."]
+ok: FUNC <float cv.ml.KNearest.findNearest [ARG Mat samples=, ARG int k=, ARG Mat results=, ARG Mat neighborResponses=Mat(), ARG Mat dist=Mat()]>
+
+--- Incoming ---
+[u'const cv.ml.KNearest.BRUTE_FORCE', u'1', [], [], None, '']
+ok: CONST BRUTE_FORCE=1
+
+--- Incoming ---
+[u'const cv.ml.KNearest.KDTREE', u'2', [], [], None, '']
+ok: CONST KDTREE=2
+
+--- Incoming ---
+[   u'cv.ml.KNearest.create',
+    u'Ptr_KNearest',
+    ['/S'],
+    [],
+    u'Ptr<KNearest>',
+    u'@brief Creates the empty model\n\nThe static method creates empty %KNearest classifier. It should be then trained using StatModel::train method.']
+ok: FUNC <Ptr_KNearest cv.ml.KNearest.create []>
+
+--- Incoming ---
+[   u'class cv.ml.SVM',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief Support Vector Machines.\n\n@sa @ref ml_intro_svm']
+ok: class CLASS cv.ml::.SVM : StatModel, name: SVM, base: StatModel
+
+--- Incoming ---
+[   u'cv.ml.SVM.getType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setType']
+ok: FUNC <int cv.ml.SVM.getType []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getType @see getType']
+ok: FUNC <void cv.ml.SVM.setType [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getGamma',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setGamma']
+ok: FUNC <double cv.ml.SVM.getGamma []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setGamma',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getGamma @see getGamma']
+ok: FUNC <void cv.ml.SVM.setGamma [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getCoef0',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setCoef0']
+ok: FUNC <double cv.ml.SVM.getCoef0 []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setCoef0',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getCoef0 @see getCoef0']
+ok: FUNC <void cv.ml.SVM.setCoef0 [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getDegree',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setDegree']
+ok: FUNC <double cv.ml.SVM.getDegree []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setDegree',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getDegree @see getDegree']
+ok: FUNC <void cv.ml.SVM.setDegree [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getC',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setC']
+ok: FUNC <double cv.ml.SVM.getC []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setC',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getC @see getC']
+ok: FUNC <void cv.ml.SVM.setC [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getNu',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setNu']
+ok: FUNC <double cv.ml.SVM.getNu []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setNu',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getNu @see getNu']
+ok: FUNC <void cv.ml.SVM.setNu [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getP',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setP']
+ok: FUNC <double cv.ml.SVM.getP []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setP',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getP @see getP']
+ok: FUNC <void cv.ml.SVM.setP [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getClassWeights',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'cv::Mat',
+    u'@see setClassWeights']
+ok: FUNC <Mat cv.ml.SVM.getClassWeights []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setClassWeights',
+    u'void',
+    ['/V', '/PV'],
+    [[u'Mat', u'val', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@copybrief getClassWeights @see getClassWeights']
+ok: FUNC <void cv.ml.SVM.setClassWeights [ARG Mat val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'cv::TermCriteria',
+    u'@see setTermCriteria']
+ok: FUNC <TermCriteria cv.ml.SVM.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'val', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@copybrief getTermCriteria @see getTermCriteria']
+ok: FUNC <void cv.ml.SVM.setTermCriteria [ARG TermCriteria val=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getKernelType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'Type of a %SVM kernel.\nSee SVM::KernelTypes. Default value is SVM::RBF.']
+ok: FUNC <int cv.ml.SVM.getKernelType []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.setKernel',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'kernelType', u'', []]],
+    u'void',
+    u'Initialize with one of predefined kernels.\nSee SVM::KernelTypes.']
+ok: FUNC <void cv.ml.SVM.setKernel [ARG int kernelType=]>
+
+--- Incoming ---
+[u'const cv.ml.SVM.C_SVC', u'100', [], [], None, '']
+ok: CONST C_SVC=100
+
+--- Incoming ---
+[u'const cv.ml.SVM.NU_SVC', u'101', [], [], None, '']
+ok: CONST NU_SVC=101
+
+--- Incoming ---
+[u'const cv.ml.SVM.ONE_CLASS', u'102', [], [], None, '']
+ok: CONST ONE_CLASS=102
+
+--- Incoming ---
+[u'const cv.ml.SVM.EPS_SVR', u'103', [], [], None, '']
+ok: CONST EPS_SVR=103
+
+--- Incoming ---
+[u'const cv.ml.SVM.NU_SVR', u'104', [], [], None, '']
+ok: CONST NU_SVR=104
+
+--- Incoming ---
+[u'const cv.ml.SVM.CUSTOM', u'-1', [], [], None, '']
+ok: CONST CUSTOM=-1
+
+--- Incoming ---
+[u'const cv.ml.SVM.LINEAR', u'0', [], [], None, '']
+ok: CONST LINEAR=0
+
+--- Incoming ---
+[u'const cv.ml.SVM.POLY', u'1', [], [], None, '']
+ok: CONST POLY=1
+
+--- Incoming ---
+[u'const cv.ml.SVM.RBF', u'2', [], [], None, '']
+ok: CONST RBF=2
+
+--- Incoming ---
+[u'const cv.ml.SVM.SIGMOID', u'3', [], [], None, '']
+ok: CONST SIGMOID=3
+
+--- Incoming ---
+[u'const cv.ml.SVM.CHI2', u'4', [], [], None, '']
+ok: CONST CHI2=4
+
+--- Incoming ---
+[u'const cv.ml.SVM.INTER', u'5', [], [], None, '']
+ok: CONST INTER=5
+
+--- Incoming ---
+[u'const cv.ml.SVM.C', u'0', [], [], None, '']
+ok: CONST C=0
+
+--- Incoming ---
+[u'const cv.ml.SVM.GAMMA', u'1', [], [], None, '']
+ok: CONST GAMMA=1
+
+--- Incoming ---
+[u'const cv.ml.SVM.P', u'2', [], [], None, '']
+ok: CONST P=2
+
+--- Incoming ---
+[u'const cv.ml.SVM.NU', u'3', [], [], None, '']
+ok: CONST NU=3
+
+--- Incoming ---
+[u'const cv.ml.SVM.COEF', u'4', [], [], None, '']
+ok: CONST COEF=4
+
+--- Incoming ---
+[u'const cv.ml.SVM.DEGREE', u'5', [], [], None, '']
+ok: CONST DEGREE=5
+
+--- Incoming ---
+[   u'cv.ml.SVM.trainAuto',
+    u'bool',
+    [],
+    [   ['Mat', u'samples', '', []],
+        [u'int', u'layout', u'', []],
+        ['Mat', u'responses', '', []],
+        [u'int', u'kFold', u'10', []],
+        [u'Ptr_ParamGrid', u'Cgrid', u'SVM::getDefaultGridPtr(SVM::C)', []],
+        [   u'Ptr_ParamGrid',
+            u'gammaGrid',
+            u'SVM::getDefaultGridPtr(SVM::GAMMA)',
+            []],
+        [u'Ptr_ParamGrid', u'pGrid', u'SVM::getDefaultGridPtr(SVM::P)', []],
+        [u'Ptr_ParamGrid', u'nuGrid', u'SVM::getDefaultGridPtr(SVM::NU)', []],
+        [   u'Ptr_ParamGrid',
+            u'coeffGrid',
+            u'SVM::getDefaultGridPtr(SVM::COEF)',
+            []],
+        [   u'Ptr_ParamGrid',
+            u'degreeGrid',
+            u'SVM::getDefaultGridPtr(SVM::DEGREE)',
+            []],
+        [u'bool', u'balanced', u'false', []]],
+    u'bool',
+    u'@brief Trains an %SVM with optimal parameters\n\n@param samples training samples\n@param layout See ml::SampleTypes.\n@param responses vector of responses associated with the training samples.\n@param kFold Cross-validation parameter. The training set is divided into kFold subsets. One\nsubset is used to test the model, the others form the train set. So, the %SVM algorithm is\n@param Cgrid grid for C\n@param gammaGrid grid for gamma\n@param pGrid grid for p\n@param nuGrid grid for nu\n@param coeffGrid grid for coeff\n@param degreeGrid grid for degree\n@param balanced If true and the problem is 2-class classification then the method creates more\nbalanced cross-validation subsets that is proportions between classes in subsets are close\nto such proportion in the whole train dataset.\n\nThe method trains the %SVM model automatically by choosing the optimal parameters C, gamma, p,\nnu, coef0, degree. Parameters are considered optimal when the cross-validation\nestimate of the test set error is minimal.\n\nThis function only makes use of SVM::getDefaultGrid for parameter optimization and thus only\noffers rudimentary parameter options.\n\nThis function works for the classification (SVM::C_SVC or SVM::NU_SVC) as well as for the\nregression (SVM::EPS_SVR or SVM::NU_SVR). If it is SVM::ONE_CLASS, no optimization is made and\nthe usual %SVM with parameters specified in params is executed.']
+ok: FUNC <bool cv.ml.SVM.trainAuto [ARG Mat samples=, ARG int layout=, ARG Mat responses=, ARG int kFold=10, ARG Ptr_ParamGrid Cgrid=SVM::getDefaultGridPtr(SVM::C), ARG Ptr_ParamGrid gammaGrid=SVM::getDefaultGridPtr(SVM::GAMMA), ARG Ptr_ParamGrid pGrid=SVM::getDefaultGridPtr(SVM::P), ARG Ptr_ParamGrid nuGrid=SVM::getDefaultGridPtr(SVM::NU), ARG Ptr_ParamGrid coeffGrid=SVM::getDefaultGridPtr(SVM::COEF), ARG Ptr_ParamGrid degreeGrid=SVM::getDefaultGridPtr(SVM::DEGREE), ARG bool balanced=false]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getSupportVectors',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'@brief Retrieves all the support vectors\n\nThe method returns all the support vectors as a floating-point matrix, where support vectors are\nstored as matrix rows.']
+ok: FUNC <Mat cv.ml.SVM.getSupportVectors []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getUncompressedSupportVectors',
+    u'Mat',
+    ['/C'],
+    [],
+    u'Mat',
+    u'@brief Retrieves all the uncompressed support vectors of a linear %SVM\n\nThe method returns all the uncompressed support vectors of a linear %SVM that the compressed\nsupport vector, used for prediction, was derived from. They are returned in a floating-point\nmatrix, where the support vectors are stored as matrix rows.']
+ok: FUNC <Mat cv.ml.SVM.getUncompressedSupportVectors []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getDecisionFunction',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [   [u'int', u'i', u'', []],
+        ['Mat', u'alpha', '', ['/O']],
+        ['Mat', u'svidx', '', ['/O']]],
+    u'double',
+    u'@brief Retrieves the decision function\n\n@param i the index of the decision function. If the problem solved is regression, 1-class or\n2-class classification, then there will be just one decision function and the index should\nalways be 0. Otherwise, in the case of N-class classification, there will be \\f$N(N-1)/2\\f$\ndecision functions.\n@param alpha the optional output vector for weights, corresponding to different support vectors.\nIn the case of linear %SVM all the alpha\'s will be 1\'s.\n@param svidx the optional output vector of indices of support vectors within the matrix of\nsupport vectors (which can be retrieved by SVM::getSupportVectors). In the case of linear\n%SVM each decision function consists of a single "compressed" support vector.\n\nThe method returns rho parameter of the decision function, a scalar subtracted from the weighted\nsum of kernel responses.']
+ok: FUNC <double cv.ml.SVM.getDecisionFunction [ARG int i=, ARG Mat alpha=, ARG Mat svidx=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.getDefaultGridPtr',
+    u'Ptr_ParamGrid',
+    ['/S'],
+    [[u'int', u'param_id', u'', []]],
+    u'Ptr<ParamGrid>',
+    u'@brief Generates a grid for %SVM parameters.\n\n@param param_id %SVM parameters IDs that must be one of the SVM::ParamTypes. The grid is\ngenerated for the parameter with this ID.\n\nThe function generates a grid pointer for the specified parameter of the %SVM algorithm.\nThe grid may be passed to the function SVM::trainAuto.']
+ok: FUNC <Ptr_ParamGrid cv.ml.SVM.getDefaultGridPtr [ARG int param_id=]>
+
+--- Incoming ---
+[   u'cv.ml.SVM.create',
+    u'Ptr_SVM',
+    ['/S'],
+    [],
+    u'Ptr<SVM>',
+    u'Creates empty model.\nUse StatModel::train to train the model. Since %SVM has several parameters, you may want to\nfind the best parameters for your problem, it can be done with SVM::trainAuto.']
+ok: FUNC <Ptr_SVM cv.ml.SVM.create []>
+
+--- Incoming ---
+[   u'cv.ml.SVM.load',
+    u'Ptr_SVM',
+    ['/S'],
+    [[u'String', u'filepath', u'', ['/C', '/Ref']]],
+    u'Ptr<SVM>',
+    u'@brief Loads and creates a serialized svm from a file\n*\n* Use SVM::save to serialize and store an SVM to disk.\n* Load the SVM from this file again, by calling this function with the path to the file.\n*\n* @param filepath path to serialized svm']
+ok: FUNC <Ptr_SVM cv.ml.SVM.load [ARG String filepath=]>
+
+--- Incoming ---
+[   u'class cv.ml.EM',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief The class implements the Expectation Maximization algorithm.\n\n@sa @ref ml_intro_em']
+ok: class CLASS cv.ml::.EM : StatModel, name: EM, base: StatModel
+
+--- Incoming ---
+[u'const cv.ml.EM.COV_MAT_SPHERICAL', u'0', [], [], None, '']
+ok: CONST COV_MAT_SPHERICAL=0
+
+--- Incoming ---
+[u'const cv.ml.EM.COV_MAT_DIAGONAL', u'1', [], [], None, '']
+ok: CONST COV_MAT_DIAGONAL=1
+
+--- Incoming ---
+[u'const cv.ml.EM.COV_MAT_GENERIC', u'2', [], [], None, '']
+ok: CONST COV_MAT_GENERIC=2
+
+--- Incoming ---
+[u'const cv.ml.EM.COV_MAT_DEFAULT', u'COV_MAT_DIAGONAL', [], [], None, '']
+ok: CONST COV_MAT_DEFAULT=COV_MAT_DIAGONAL
+
+--- Incoming ---
+[u'const cv.ml.EM.DEFAULT_NCLUSTERS', u'5', [], [], None, '']
+ok: CONST DEFAULT_NCLUSTERS=5
+
+--- Incoming ---
+[u'const cv.ml.EM.DEFAULT_MAX_ITERS', u'100', [], [], None, '']
+ok: CONST DEFAULT_MAX_ITERS=100
+
+--- Incoming ---
+[u'const cv.ml.EM.START_E_STEP', u'1', [], [], None, '']
+ok: CONST START_E_STEP=1
+
+--- Incoming ---
+[u'const cv.ml.EM.START_M_STEP', u'2', [], [], None, '']
+ok: CONST START_M_STEP=2
+
+--- Incoming ---
+[u'const cv.ml.EM.START_AUTO_STEP', u'0', [], [], None, '']
+ok: CONST START_AUTO_STEP=0
+
+--- Incoming ---
+[   u'cv.ml.EM.getClustersNumber',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setClustersNumber']
+ok: FUNC <int cv.ml.EM.getClustersNumber []>
+
+--- Incoming ---
+[   u'cv.ml.EM.setClustersNumber',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getClustersNumber @see getClustersNumber']
+ok: FUNC <void cv.ml.EM.setClustersNumber [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.EM.getCovarianceMatrixType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setCovarianceMatrixType']
+ok: FUNC <int cv.ml.EM.getCovarianceMatrixType []>
+
+--- Incoming ---
+[   u'cv.ml.EM.setCovarianceMatrixType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getCovarianceMatrixType @see getCovarianceMatrixType']
+ok: FUNC <void cv.ml.EM.setCovarianceMatrixType [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.EM.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'TermCriteria',
+    u'@see setTermCriteria']
+ok: FUNC <TermCriteria cv.ml.EM.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.ml.EM.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'val', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@copybrief getTermCriteria @see getTermCriteria']
+ok: FUNC <void cv.ml.EM.setTermCriteria [ARG TermCriteria val=]>
+
+--- Incoming ---
+[   u'cv.ml.EM.getWeights',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'@brief Returns weights of the mixtures\n\nReturns vector with the number of elements equal to the number of mixtures.']
+ok: FUNC <Mat cv.ml.EM.getWeights []>
+
+--- Incoming ---
+[   u'cv.ml.EM.getMeans',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'@brief Returns the cluster centers (means of the Gaussian mixture)\n\nReturns matrix with the number of rows equal to the number of mixtures and number of columns\nequal to the space dimensionality.']
+ok: FUNC <Mat cv.ml.EM.getMeans []>
+
+--- Incoming ---
+[   u'cv.ml.EM.getCovs',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [[u'vector_Mat', u'covs', u'', ['/O', '/Ref']]],
+    u'void',
+    u'@brief Returns covariation matrices\n\nReturns vector of covariation matrices. Number of matrices is the number of gaussian mixtures,\neach matrix is a square floating-point matrix NxN, where N is the space dimensionality.']
+ok: FUNC <void cv.ml.EM.getCovs [ARG vector_Mat covs=]>
+
+--- Incoming ---
+[   u'cv.ml.EM.predict',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'results', u'Mat()', ['/O']],
+        [u'int', u'flags', u'0', []]],
+    u'float',
+    u'@brief Returns posterior probabilities for the provided samples\n\n@param samples The input samples, floating-point matrix\n@param results The optional output \\f$ nSamples \\times nClusters\\f$ matrix of results. It contains\nposterior probabilities for each sample from the input\n@param flags This parameter will be ignored']
+ok: FUNC <float cv.ml.EM.predict [ARG Mat samples=, ARG Mat results=Mat(), ARG int flags=0]>
+
+--- Incoming ---
+[   u'cv.ml.EM.predict2',
+    u'Vec2d',
+    ['/C', '/V', '/PV'],
+    [['Mat', u'sample', '', []], ['Mat', u'probs', '', ['/O']]],
+    u'Vec2d',
+    u'@brief Returns a likelihood logarithm value and an index of the most probable mixture component\nfor the given sample.\n\n@param sample A sample for classification. It should be a one-channel matrix of\n\\f$1 \\times dims\\f$ or \\f$dims \\times 1\\f$ size.\n@param probs Optional output matrix that contains posterior probabilities of each component\ngiven the sample. It has \\f$1 \\times nclusters\\f$ size and CV_64FC1 type.\n\nThe method returns a two-element double vector. Zero element is a likelihood logarithm value for\nthe sample. First element is an index of the most probable mixture component for the given\nsample.']
+ok: FUNC <Vec2d cv.ml.EM.predict2 [ARG Mat sample=, ARG Mat probs=]>
+
+--- Incoming ---
+[   u'cv.ml.EM.trainEM',
+    u'bool',
+    ['/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'logLikelihoods', u'Mat()', ['/O']],
+        ['Mat', u'labels', u'Mat()', ['/O']],
+        ['Mat', u'probs', u'Mat()', ['/O']]],
+    u'bool',
+    u'@brief Estimate the Gaussian mixture parameters from a samples set.\n\nThis variation starts with Expectation step. Initial values of the model parameters will be\nestimated by the k-means algorithm.\n\nUnlike many of the ML models, %EM is an unsupervised learning algorithm and it does not take\nresponses (class labels or function values) as input. Instead, it computes the *Maximum\nLikelihood Estimate* of the Gaussian mixture parameters from an input sample set, stores all the\nparameters inside the structure: \\f$p_{i,k}\\f$ in probs, \\f$a_k\\f$ in means , \\f$S_k\\f$ in\ncovs[k], \\f$\\pi_k\\f$ in weights , and optionally computes the output "class label" for each\nsample: \\f$\\texttt{labels}_i=\\texttt{arg max}_k(p_{i,k}), i=1..N\\f$ (indices of the most\nprobable mixture component for each sample).\n\nThe trained model can be used further for prediction, just like any other classifier. The\ntrained model is similar to the NormalBayesClassifier.\n\n@param samples Samples from which the Gaussian mixture model will be estimated. It should be a\none-channel matrix, each row of which is a sample. If the matrix does not have CV_64F type\nit will be converted to the inner matrix of such type for the further computing.\n@param logLikelihoods The optional output matrix that contains a likelihood logarithm value for\neach sample. It has \\f$nsamples \\times 1\\f$ size and CV_64FC1 type.\n@param labels The optional output "class label" for each sample:\n\\f$\\texttt{labels}_i=\\texttt{arg max}_k(p_{i,k}), i=1..N\\f$ (indices of the most probable\nmixture component for each sample). It has \\f$nsamples \\times 1\\f$ size and CV_32SC1 type.\n@param probs The optional output matrix that contains posterior probabilities of each Gaussian\nmixture component given the each sample. It has \\f$nsamples \\times nclusters\\f$ size and\nCV_64FC1 type.']
+ok: FUNC <bool cv.ml.EM.trainEM [ARG Mat samples=, ARG Mat logLikelihoods=Mat(), ARG Mat labels=Mat(), ARG Mat probs=Mat()]>
+
+--- Incoming ---
+[   u'cv.ml.EM.trainE',
+    u'bool',
+    ['/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'means0', '', []],
+        ['Mat', u'covs0', u'Mat()', []],
+        ['Mat', u'weights0', u'Mat()', []],
+        ['Mat', u'logLikelihoods', u'Mat()', ['/O']],
+        ['Mat', u'labels', u'Mat()', ['/O']],
+        ['Mat', u'probs', u'Mat()', ['/O']]],
+    u'bool',
+    u'@brief Estimate the Gaussian mixture parameters from a samples set.\n\nThis variation starts with Expectation step. You need to provide initial means \\f$a_k\\f$ of\nmixture components. Optionally you can pass initial weights \\f$\\pi_k\\f$ and covariance matrices\n\\f$S_k\\f$ of mixture components.\n\n@param samples Samples from which the Gaussian mixture model will be estimated. It should be a\none-channel matrix, each row of which is a sample. If the matrix does not have CV_64F type\nit will be converted to the inner matrix of such type for the further computing.\n@param means0 Initial means \\f$a_k\\f$ of mixture components. It is a one-channel matrix of\n\\f$nclusters \\times dims\\f$ size. If the matrix does not have CV_64F type it will be\nconverted to the inner matrix of such type for the further computing.\n@param covs0 The vector of initial covariance matrices \\f$S_k\\f$ of mixture components. Each of\ncovariance matrices is a one-channel matrix of \\f$dims \\times dims\\f$ size. If the matrices\ndo not have CV_64F type they will be converted to the inner matrices of such type for the\nfurther computing.\n@param weights0 Initial weights \\f$\\pi_k\\f$ of mixture components. It should be a one-channel\nfloating-point matrix with \\f$1 \\times nclusters\\f$ or \\f$nclusters \\times 1\\f$ size.\n@param logLikelihoods The optional output matrix that contains a likelihood logarithm value for\neach sample. It has \\f$nsamples \\times 1\\f$ size and CV_64FC1 type.\n@param labels The optional output "class label" for each sample:\n\\f$\\texttt{labels}_i=\\texttt{arg max}_k(p_{i,k}), i=1..N\\f$ (indices of the most probable\nmixture component for each sample). It has \\f$nsamples \\times 1\\f$ size and CV_32SC1 type.\n@param probs The optional output matrix that contains posterior probabilities of each Gaussian\nmixture component given the each sample. It has \\f$nsamples \\times nclusters\\f$ size and\nCV_64FC1 type.']
+ok: FUNC <bool cv.ml.EM.trainE [ARG Mat samples=, ARG Mat means0=, ARG Mat covs0=Mat(), ARG Mat weights0=Mat(), ARG Mat logLikelihoods=Mat(), ARG Mat labels=Mat(), ARG Mat probs=Mat()]>
+
+--- Incoming ---
+[   u'cv.ml.EM.trainM',
+    u'bool',
+    ['/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'probs0', '', []],
+        ['Mat', u'logLikelihoods', u'Mat()', ['/O']],
+        ['Mat', u'labels', u'Mat()', ['/O']],
+        ['Mat', u'probs', u'Mat()', ['/O']]],
+    u'bool',
+    u'@brief Estimate the Gaussian mixture parameters from a samples set.\n\nThis variation starts with Maximization step. You need to provide initial probabilities\n\\f$p_{i,k}\\f$ to use this option.\n\n@param samples Samples from which the Gaussian mixture model will be estimated. It should be a\none-channel matrix, each row of which is a sample. If the matrix does not have CV_64F type\nit will be converted to the inner matrix of such type for the further computing.\n@param probs0\n@param logLikelihoods The optional output matrix that contains a likelihood logarithm value for\neach sample. It has \\f$nsamples \\times 1\\f$ size and CV_64FC1 type.\n@param labels The optional output "class label" for each sample:\n\\f$\\texttt{labels}_i=\\texttt{arg max}_k(p_{i,k}), i=1..N\\f$ (indices of the most probable\nmixture component for each sample). It has \\f$nsamples \\times 1\\f$ size and CV_32SC1 type.\n@param probs The optional output matrix that contains posterior probabilities of each Gaussian\nmixture component given the each sample. It has \\f$nsamples \\times nclusters\\f$ size and\nCV_64FC1 type.']
+ok: FUNC <bool cv.ml.EM.trainM [ARG Mat samples=, ARG Mat probs0=, ARG Mat logLikelihoods=Mat(), ARG Mat labels=Mat(), ARG Mat probs=Mat()]>
+
+--- Incoming ---
+[   u'cv.ml.EM.create',
+    u'Ptr_EM',
+    ['/S'],
+    [],
+    u'Ptr<EM>',
+    u'Creates empty %EM model.\nThe model should be trained then using StatModel::train(traindata, flags) method. Alternatively, you\ncan use one of the EM::train\\* methods or load it from file using Algorithm::load\\<EM\\>(filename).']
+ok: FUNC <Ptr_EM cv.ml.EM.create []>
+
+--- Incoming ---
+[   u'cv.ml.EM.load',
+    u'Ptr_EM',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<EM>',
+    u'@brief Loads and creates a serialized EM from a file\n*\n* Use EM::save to serialize and store an EM to disk.\n* Load the EM from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized EM\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_EM cv.ml.EM.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'class cv.ml.DTrees',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief The class represents a single decision tree or a collection of decision trees.\n\nThe current public interface of the class allows user to train only a single decision tree, however\nthe class is capable of storing multiple decision trees and using them for prediction (by summing\nresponses or using a voting schemes), and the derived from DTrees classes (such as RTrees and Boost)\nuse this capability to implement decision tree ensembles.\n\n@sa @ref ml_intro_trees']
+ok: class CLASS cv.ml::.DTrees : StatModel, name: DTrees, base: StatModel
+
+--- Incoming ---
+[u'const cv.ml.DTrees.PREDICT_AUTO', u'0', [], [], None, '']
+ok: CONST PREDICT_AUTO=0
+
+--- Incoming ---
+[u'const cv.ml.DTrees.PREDICT_SUM', u'(1<<8)', [], [], None, '']
+ok: CONST PREDICT_SUM=(1<<8)
+
+--- Incoming ---
+[u'const cv.ml.DTrees.PREDICT_MAX_VOTE', u'(2<<8)', [], [], None, '']
+ok: CONST PREDICT_MAX_VOTE=(2<<8)
+
+--- Incoming ---
+[u'const cv.ml.DTrees.PREDICT_MASK', u'(3<<8)', [], [], None, '']
+ok: CONST PREDICT_MASK=(3<<8)
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getMaxCategories',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setMaxCategories']
+ok: FUNC <int cv.ml.DTrees.getMaxCategories []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setMaxCategories',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getMaxCategories @see getMaxCategories']
+ok: FUNC <void cv.ml.DTrees.setMaxCategories [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getMaxDepth',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setMaxDepth']
+ok: FUNC <int cv.ml.DTrees.getMaxDepth []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setMaxDepth',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getMaxDepth @see getMaxDepth']
+ok: FUNC <void cv.ml.DTrees.setMaxDepth [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getMinSampleCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setMinSampleCount']
+ok: FUNC <int cv.ml.DTrees.getMinSampleCount []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setMinSampleCount',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getMinSampleCount @see getMinSampleCount']
+ok: FUNC <void cv.ml.DTrees.setMinSampleCount [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getCVFolds',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setCVFolds']
+ok: FUNC <int cv.ml.DTrees.getCVFolds []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setCVFolds',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getCVFolds @see getCVFolds']
+ok: FUNC <void cv.ml.DTrees.setCVFolds [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getUseSurrogates',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@see setUseSurrogates']
+ok: FUNC <bool cv.ml.DTrees.getUseSurrogates []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setUseSurrogates',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'val', u'', []]],
+    u'void',
+    u'@copybrief getUseSurrogates @see getUseSurrogates']
+ok: FUNC <void cv.ml.DTrees.setUseSurrogates [ARG bool val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getUse1SERule',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@see setUse1SERule']
+ok: FUNC <bool cv.ml.DTrees.getUse1SERule []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setUse1SERule',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'val', u'', []]],
+    u'void',
+    u'@copybrief getUse1SERule @see getUse1SERule']
+ok: FUNC <void cv.ml.DTrees.setUse1SERule [ARG bool val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getTruncatePrunedTree',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@see setTruncatePrunedTree']
+ok: FUNC <bool cv.ml.DTrees.getTruncatePrunedTree []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setTruncatePrunedTree',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'val', u'', []]],
+    u'void',
+    u'@copybrief getTruncatePrunedTree @see getTruncatePrunedTree']
+ok: FUNC <void cv.ml.DTrees.setTruncatePrunedTree [ARG bool val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getRegressionAccuracy',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'@see setRegressionAccuracy']
+ok: FUNC <float cv.ml.DTrees.getRegressionAccuracy []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setRegressionAccuracy',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRegressionAccuracy @see getRegressionAccuracy']
+ok: FUNC <void cv.ml.DTrees.setRegressionAccuracy [ARG float val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.getPriors',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'cv::Mat',
+    u'@see setPriors']
+ok: FUNC <Mat cv.ml.DTrees.getPriors []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.setPriors',
+    u'void',
+    ['/V', '/PV'],
+    [[u'Mat', u'val', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@copybrief getPriors @see getPriors']
+ok: FUNC <void cv.ml.DTrees.setPriors [ARG Mat val=]>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.create',
+    u'Ptr_DTrees',
+    ['/S'],
+    [],
+    u'Ptr<DTrees>',
+    u'@brief Creates the empty model\n\nThe static method creates empty decision tree with the specified parameters. It should be then\ntrained using train method (see StatModel::train). Alternatively, you can load the model from\nfile using Algorithm::load\\<DTrees\\>(filename).']
+ok: FUNC <Ptr_DTrees cv.ml.DTrees.create []>
+
+--- Incoming ---
+[   u'cv.ml.DTrees.load',
+    u'Ptr_DTrees',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<DTrees>',
+    u'@brief Loads and creates a serialized DTrees from a file\n*\n* Use DTree::save to serialize and store an DTree to disk.\n* Load the DTree from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized DTree\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_DTrees cv.ml.DTrees.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'class cv.ml.RTrees',
+    u': cv::ml::DTrees',
+    [],
+    [],
+    None,
+    u'@brief The class implements the random forest predictor.\n\n@sa @ref ml_intro_rtrees']
+ok: class CLASS cv.ml::.RTrees : DTrees, name: RTrees, base: DTrees
+
+--- Incoming ---
+[   u'cv.ml.RTrees.getCalculateVarImportance',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@see setCalculateVarImportance']
+ok: FUNC <bool cv.ml.RTrees.getCalculateVarImportance []>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.setCalculateVarImportance',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'val', u'', []]],
+    u'void',
+    u'@copybrief getCalculateVarImportance @see getCalculateVarImportance']
+ok: FUNC <void cv.ml.RTrees.setCalculateVarImportance [ARG bool val=]>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.getActiveVarCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setActiveVarCount']
+ok: FUNC <int cv.ml.RTrees.getActiveVarCount []>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.setActiveVarCount',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getActiveVarCount @see getActiveVarCount']
+ok: FUNC <void cv.ml.RTrees.setActiveVarCount [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'TermCriteria',
+    u'@see setTermCriteria']
+ok: FUNC <TermCriteria cv.ml.RTrees.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'val', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@copybrief getTermCriteria @see getTermCriteria']
+ok: FUNC <void cv.ml.RTrees.setTermCriteria [ARG TermCriteria val=]>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.getVarImportance',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'Returns the variable importance array.\nThe method returns the variable importance vector, computed at the training stage when\nCalculateVarImportance is set to true. If this flag was set to false, the empty matrix is\nreturned.']
+ok: FUNC <Mat cv.ml.RTrees.getVarImportance []>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.getVotes',
+    u'void',
+    ['/C'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'results', '', ['/O']],
+        [u'int', u'flags', u'', []]],
+    u'void',
+    u"Returns the result of each individual tree in the forest.\nIn case the model is a regression problem, the method will return each of the trees'\nresults for each of the sample cases. If the model is a classifier, it will return\na Mat with samples + 1 rows, where the first row gives the class number and the\nfollowing rows return the votes each class had for each sample.\n@param samples Array containg the samples for which votes will be calculated.\n@param results Array where the result of the calculation will be written.\n@param flags Flags for defining the type of RTrees."]
+ok: FUNC <void cv.ml.RTrees.getVotes [ARG Mat samples=, ARG Mat results=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.create',
+    u'Ptr_RTrees',
+    ['/S'],
+    [],
+    u'Ptr<RTrees>',
+    u'Creates the empty model.\nUse StatModel::train to train the model, StatModel::train to create and train the model,\nAlgorithm::load to load the pre-trained model.']
+ok: FUNC <Ptr_RTrees cv.ml.RTrees.create []>
+
+--- Incoming ---
+[   u'cv.ml.RTrees.load',
+    u'Ptr_RTrees',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<RTrees>',
+    u'@brief Loads and creates a serialized RTree from a file\n*\n* Use RTree::save to serialize and store an RTree to disk.\n* Load the RTree from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized RTree\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_RTrees cv.ml.RTrees.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'class cv.ml.Boost',
+    u': cv::ml::DTrees',
+    [],
+    [],
+    None,
+    u'@brief Boosted tree classifier derived from DTrees\n\n@sa @ref ml_intro_boost']
+ok: class CLASS cv.ml::.Boost : DTrees, name: Boost, base: DTrees
+
+--- Incoming ---
+[   u'cv.ml.Boost.getBoostType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setBoostType']
+ok: FUNC <int cv.ml.Boost.getBoostType []>
+
+--- Incoming ---
+[   u'cv.ml.Boost.setBoostType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getBoostType @see getBoostType']
+ok: FUNC <void cv.ml.Boost.setBoostType [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.Boost.getWeakCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setWeakCount']
+ok: FUNC <int cv.ml.Boost.getWeakCount []>
+
+--- Incoming ---
+[   u'cv.ml.Boost.setWeakCount',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getWeakCount @see getWeakCount']
+ok: FUNC <void cv.ml.Boost.setWeakCount [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.Boost.getWeightTrimRate',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setWeightTrimRate']
+ok: FUNC <double cv.ml.Boost.getWeightTrimRate []>
+
+--- Incoming ---
+[   u'cv.ml.Boost.setWeightTrimRate',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getWeightTrimRate @see getWeightTrimRate']
+ok: FUNC <void cv.ml.Boost.setWeightTrimRate [ARG double val=]>
+
+--- Incoming ---
+[u'const cv.ml.Boost.DISCRETE', u'0', [], [], None, '']
+ok: CONST DISCRETE=0
+
+--- Incoming ---
+[u'const cv.ml.Boost.REAL', u'1', [], [], None, '']
+ok: CONST REAL=1
+
+--- Incoming ---
+[u'const cv.ml.Boost.LOGIT', u'2', [], [], None, '']
+ok: CONST LOGIT=2
+
+--- Incoming ---
+[u'const cv.ml.Boost.GENTLE', u'3', [], [], None, '']
+ok: CONST GENTLE=3
+
+--- Incoming ---
+[   u'cv.ml.Boost.create',
+    u'Ptr_Boost',
+    ['/S'],
+    [],
+    u'Ptr<Boost>',
+    u'Creates the empty model.\nUse StatModel::train to train the model, Algorithm::load\\<Boost\\>(filename) to load the pre-trained model.']
+ok: FUNC <Ptr_Boost cv.ml.Boost.create []>
+
+--- Incoming ---
+[   u'cv.ml.Boost.load',
+    u'Ptr_Boost',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<Boost>',
+    u'@brief Loads and creates a serialized Boost from a file\n*\n* Use Boost::save to serialize and store an RTree to disk.\n* Load the Boost from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized Boost\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_Boost cv.ml.Boost.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'class cv.ml.ANN_MLP',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief Artificial Neural Networks - Multi-Layer Perceptrons.\n\nUnlike many other models in ML that are constructed and trained at once, in the MLP model these\nsteps are separated. First, a network with the specified topology is created using the non-default\nconstructor or the method ANN_MLP::create. All the weights are set to zeros. Then, the network is\ntrained using a set of input and output vectors. The training procedure can be repeated more than\nonce, that is, the weights can be adjusted based on the new training data.\n\nAdditional flags for StatModel::train are available: ANN_MLP::TrainFlags.\n\n@sa @ref ml_intro_ann']
+ok: class CLASS cv.ml::.ANN_MLP : StatModel, name: ANN_MLP, base: StatModel
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.BACKPROP', u'0', [], [], None, '']
+ok: CONST BACKPROP=0
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.RPROP', u'1', [], [], None, '']
+ok: CONST RPROP=1
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setTrainMethod',
+    u'void',
+    ['/V', '/PV'],
+    [   [u'int', u'method', u'', []],
+        [u'double', u'param1', u'0', []],
+        [u'double', u'param2', u'0', []]],
+    u'void',
+    u'Sets training method and common parameters.\n@param method Default value is ANN_MLP::RPROP. See ANN_MLP::TrainingMethods.\n@param param1 passed to setRpropDW0 for ANN_MLP::RPROP and to setBackpropWeightScale for ANN_MLP::BACKPROP\n@param param2 passed to setRpropDWMin for ANN_MLP::RPROP and to setBackpropMomentumScale for ANN_MLP::BACKPROP.']
+ok: FUNC <void cv.ml.ANN_MLP.setTrainMethod [ARG int method=, ARG double param1=0, ARG double param2=0]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getTrainMethod',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'Returns current training method']
+ok: FUNC <int cv.ml.ANN_MLP.getTrainMethod []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setActivationFunction',
+    u'void',
+    ['/V', '/PV'],
+    [   [u'int', u'type', u'', []],
+        [u'double', u'param1', u'0', []],
+        [u'double', u'param2', u'0', []]],
+    u'void',
+    u'Initialize the activation function for each neuron.\nCurrently the default and the only fully supported activation function is ANN_MLP::SIGMOID_SYM.\n@param type The type of activation function. See ANN_MLP::ActivationFunctions.\n@param param1 The first parameter of the activation function, \\f$\\alpha\\f$. Default value is 0.\n@param param2 The second parameter of the activation function, \\f$\\beta\\f$. Default value is 0.']
+ok: FUNC <void cv.ml.ANN_MLP.setActivationFunction [ARG int type=, ARG double param1=0, ARG double param2=0]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setLayerSizes',
+    u'void',
+    ['/V', '/PV'],
+    [['Mat', u'_layer_sizes', '', []]],
+    u'void',
+    u'Integer vector specifying the number of neurons in each layer including the input and output layers.\nThe very first element specifies the number of elements in the input layer.\nThe last element - number of elements in the output layer. Default value is empty Mat.\n@sa getLayerSizes']
+ok: FUNC <void cv.ml.ANN_MLP.setLayerSizes [ARG Mat _layer_sizes=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getLayerSizes',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'cv::Mat',
+    u'Integer vector specifying the number of neurons in each layer including the input and output layers.\nThe very first element specifies the number of elements in the input layer.\nThe last element - number of elements in the output layer.\n@sa setLayerSizes']
+ok: FUNC <Mat cv.ml.ANN_MLP.getLayerSizes []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'TermCriteria',
+    u'@see setTermCriteria']
+ok: FUNC <TermCriteria cv.ml.ANN_MLP.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'val', u'', []]],
+    u'void',
+    u'@copybrief getTermCriteria @see getTermCriteria']
+ok: FUNC <void cv.ml.ANN_MLP.setTermCriteria [ARG TermCriteria val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getBackpropWeightScale',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setBackpropWeightScale']
+ok: FUNC <double cv.ml.ANN_MLP.getBackpropWeightScale []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setBackpropWeightScale',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getBackpropWeightScale @see getBackpropWeightScale']
+ok: FUNC <void cv.ml.ANN_MLP.setBackpropWeightScale [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getBackpropMomentumScale',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setBackpropMomentumScale']
+ok: FUNC <double cv.ml.ANN_MLP.getBackpropMomentumScale []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setBackpropMomentumScale',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getBackpropMomentumScale @see getBackpropMomentumScale']
+ok: FUNC <void cv.ml.ANN_MLP.setBackpropMomentumScale [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getRpropDW0',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setRpropDW0']
+ok: FUNC <double cv.ml.ANN_MLP.getRpropDW0 []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setRpropDW0',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRpropDW0 @see getRpropDW0']
+ok: FUNC <void cv.ml.ANN_MLP.setRpropDW0 [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getRpropDWPlus',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setRpropDWPlus']
+ok: FUNC <double cv.ml.ANN_MLP.getRpropDWPlus []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setRpropDWPlus',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRpropDWPlus @see getRpropDWPlus']
+ok: FUNC <void cv.ml.ANN_MLP.setRpropDWPlus [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getRpropDWMinus',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setRpropDWMinus']
+ok: FUNC <double cv.ml.ANN_MLP.getRpropDWMinus []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setRpropDWMinus',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRpropDWMinus @see getRpropDWMinus']
+ok: FUNC <void cv.ml.ANN_MLP.setRpropDWMinus [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getRpropDWMin',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setRpropDWMin']
+ok: FUNC <double cv.ml.ANN_MLP.getRpropDWMin []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setRpropDWMin',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRpropDWMin @see getRpropDWMin']
+ok: FUNC <void cv.ml.ANN_MLP.setRpropDWMin [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getRpropDWMax',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setRpropDWMax']
+ok: FUNC <double cv.ml.ANN_MLP.getRpropDWMax []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.setRpropDWMax',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRpropDWMax @see getRpropDWMax']
+ok: FUNC <void cv.ml.ANN_MLP.setRpropDWMax [ARG double val=]>
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.IDENTITY', u'0', [], [], None, '']
+ok: CONST IDENTITY=0
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.SIGMOID_SYM', u'1', [], [], None, '']
+ok: CONST SIGMOID_SYM=1
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.GAUSSIAN', u'2', [], [], None, '']
+ok: CONST GAUSSIAN=2
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.UPDATE_WEIGHTS', u'1', [], [], None, '']
+ok: CONST UPDATE_WEIGHTS=1
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.NO_INPUT_SCALE', u'2', [], [], None, '']
+ok: CONST NO_INPUT_SCALE=2
+
+--- Incoming ---
+[u'const cv.ml.ANN_MLP.NO_OUTPUT_SCALE', u'4', [], [], None, '']
+ok: CONST NO_OUTPUT_SCALE=4
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.getWeights',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [[u'int', u'layerIdx', u'', []]],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.ml.ANN_MLP.getWeights [ARG int layerIdx=]>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.create',
+    u'Ptr_ANN_MLP',
+    ['/S'],
+    [],
+    u'Ptr<ANN_MLP>',
+    u'@brief Creates empty model\n\nUse StatModel::train to train the model, Algorithm::load\\<ANN_MLP\\>(filename) to load the pre-trained model.\nNote that the train method has optional flags: ANN_MLP::TrainFlags.']
+ok: FUNC <Ptr_ANN_MLP cv.ml.ANN_MLP.create []>
+
+--- Incoming ---
+[   u'cv.ml.ANN_MLP.load',
+    u'Ptr_ANN_MLP',
+    ['/S'],
+    [[u'String', u'filepath', u'', ['/C', '/Ref']]],
+    u'Ptr<ANN_MLP>',
+    u'@brief Loads and creates a serialized ANN from a file\n*\n* Use ANN::save to serialize and store an ANN to disk.\n* Load the ANN from this file again, by calling this function with the path to the file.\n*\n* @param filepath path to serialized ANN']
+ok: FUNC <Ptr_ANN_MLP cv.ml.ANN_MLP.load [ARG String filepath=]>
+
+--- Incoming ---
+[   u'class cv.ml.LogisticRegression',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'@brief Implements Logistic Regression classifier.\n\n@sa @ref ml_intro_lr']
+ok: class CLASS cv.ml::.LogisticRegression : StatModel, name: LogisticRegression, base: StatModel
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.getLearningRate',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setLearningRate']
+ok: FUNC <double cv.ml.LogisticRegression.getLearningRate []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.setLearningRate',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getLearningRate @see getLearningRate']
+ok: FUNC <void cv.ml.LogisticRegression.setLearningRate [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.getIterations',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setIterations']
+ok: FUNC <int cv.ml.LogisticRegression.getIterations []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.setIterations',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getIterations @see getIterations']
+ok: FUNC <void cv.ml.LogisticRegression.setIterations [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.getRegularization',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setRegularization']
+ok: FUNC <int cv.ml.LogisticRegression.getRegularization []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.setRegularization',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getRegularization @see getRegularization']
+ok: FUNC <void cv.ml.LogisticRegression.setRegularization [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.getTrainMethod',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setTrainMethod']
+ok: FUNC <int cv.ml.LogisticRegression.getTrainMethod []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.setTrainMethod',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getTrainMethod @see getTrainMethod']
+ok: FUNC <void cv.ml.LogisticRegression.setTrainMethod [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.getMiniBatchSize',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setMiniBatchSize']
+ok: FUNC <int cv.ml.LogisticRegression.getMiniBatchSize []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.setMiniBatchSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getMiniBatchSize @see getMiniBatchSize']
+ok: FUNC <void cv.ml.LogisticRegression.setMiniBatchSize [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'TermCriteria',
+    u'@see setTermCriteria']
+ok: FUNC <TermCriteria cv.ml.LogisticRegression.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'val', u'', []]],
+    u'void',
+    u'@copybrief getTermCriteria @see getTermCriteria']
+ok: FUNC <void cv.ml.LogisticRegression.setTermCriteria [ARG TermCriteria val=]>
+
+--- Incoming ---
+[u'const cv.ml.LogisticRegression.REG_DISABLE', u'-1', [], [], None, '']
+ok: CONST REG_DISABLE=-1
+
+--- Incoming ---
+[u'const cv.ml.LogisticRegression.REG_L1', u'0', [], [], None, '']
+ok: CONST REG_L1=0
+
+--- Incoming ---
+[u'const cv.ml.LogisticRegression.REG_L2', u'1', [], [], None, '']
+ok: CONST REG_L2=1
+
+--- Incoming ---
+[u'const cv.ml.LogisticRegression.BATCH', u'0', [], [], None, '']
+ok: CONST BATCH=0
+
+--- Incoming ---
+[u'const cv.ml.LogisticRegression.MINI_BATCH', u'1', [], [], None, '']
+ok: CONST MINI_BATCH=1
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.predict',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [   ['Mat', u'samples', '', []],
+        ['Mat', u'results', u'Mat()', ['/O']],
+        [u'int', u'flags', u'0', []]],
+    u'float',
+    u'@brief Predicts responses for input samples and returns a float type.\n\n@param samples The input data for the prediction algorithm. Matrix [m x n], where each row\ncontains variables (features) of one object being classified. Should have data type CV_32F.\n@param results Predicted labels as a column matrix of type CV_32S.\n@param flags Not used.']
+ok: FUNC <float cv.ml.LogisticRegression.predict [ARG Mat samples=, ARG Mat results=Mat(), ARG int flags=0]>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.get_learnt_thetas',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    u'@brief This function returns the trained paramters arranged across rows.\n\nFor a two class classifcation problem, it returns a row matrix. It returns learnt paramters of\nthe Logistic Regression as a matrix of type CV_32F.']
+ok: FUNC <Mat cv.ml.LogisticRegression.get_learnt_thetas []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.create',
+    u'Ptr_LogisticRegression',
+    ['/S'],
+    [],
+    u'Ptr<LogisticRegression>',
+    u'@brief Creates empty model.\n\nCreates Logistic Regression model with parameters given.']
+ok: FUNC <Ptr_LogisticRegression cv.ml.LogisticRegression.create []>
+
+--- Incoming ---
+[   u'cv.ml.LogisticRegression.load',
+    u'Ptr_LogisticRegression',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<LogisticRegression>',
+    u'@brief Loads and creates a serialized LogisticRegression from a file\n*\n* Use LogisticRegression::save to serialize and store an LogisticRegression to disk.\n* Load the LogisticRegression from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized LogisticRegression\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_LogisticRegression cv.ml.LogisticRegression.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'class cv.ml.SVMSGD',
+    u': cv::ml::StatModel',
+    [],
+    [],
+    None,
+    u'**************************************************************************************\\\n*                        Stochastic Gradient Descent SVM Classifier                      *\n\\***************************************************************************************']
+ok: class CLASS cv.ml::.SVMSGD : StatModel, name: SVMSGD, base: StatModel
+
+--- Incoming ---
+[u'const cv.ml.SVMSGD.SGD', '0', [], [], None, '']
+ok: CONST SGD=0
+
+--- Incoming ---
+[u'const cv.ml.SVMSGD.ASGD', '1', [], [], None, '']
+ok: CONST ASGD=1
+
+--- Incoming ---
+[u'const cv.ml.SVMSGD.SOFT_MARGIN', '0', [], [], None, '']
+ok: CONST SOFT_MARGIN=0
+
+--- Incoming ---
+[u'const cv.ml.SVMSGD.HARD_MARGIN', '1', [], [], None, '']
+ok: CONST HARD_MARGIN=1
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getWeights',
+    u'Mat',
+    ['/V', '/PV'],
+    [],
+    u'Mat',
+    u'* @return the weights of the trained model (decision function f(x) = weights * x + shift).']
+ok: FUNC <Mat cv.ml.SVMSGD.getWeights []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getShift',
+    u'float',
+    ['/V', '/PV'],
+    [],
+    u'float',
+    u'* @return the shift of the trained model (decision function f(x) = weights * x + shift).']
+ok: FUNC <float cv.ml.SVMSGD.getShift []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.create',
+    u'Ptr_SVMSGD',
+    ['/S'],
+    [],
+    u'Ptr<SVMSGD>',
+    u'@brief Creates empty model.\n* Use StatModel::train to train the model. Since %SVMSGD has several parameters, you may want to\n* find the best parameters for your problem or use setOptimalParameters() to set some default parameters.']
+ok: FUNC <Ptr_SVMSGD cv.ml.SVMSGD.create []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.load',
+    u'Ptr_SVMSGD',
+    ['/S'],
+    [   [u'String', u'filepath', u'', ['/C', '/Ref']],
+        [u'String', u'nodeName', u'String()', ['/C', '/Ref']]],
+    u'Ptr<SVMSGD>',
+    u'@brief Loads and creates a serialized SVMSGD from a file\n*\n* Use SVMSGD::save to serialize and store an SVMSGD to disk.\n* Load the SVMSGD from this file again, by calling this function with the path to the file.\n* Optionally specify the node for the file containing the classifier\n*\n* @param filepath path to serialized SVMSGD\n* @param nodeName name of node containing the classifier']
+ok: FUNC <Ptr_SVMSGD cv.ml.SVMSGD.load [ARG String filepath=, ARG String nodeName=String()]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setOptimalParameters',
+    u'void',
+    ['/V', '/PV'],
+    [   [u'int', u'svmsgdType', u'SVMSGD::ASGD', []],
+        [u'int', u'marginType', u'SVMSGD::SOFT_MARGIN', []]],
+    u'void',
+    u'@brief Function sets optimal parameters values for chosen SVM SGD model.\n* @param svmsgdType is the type of SVMSGD classifier.\n* @param marginType is the type of margin constraint.']
+ok: FUNC <void cv.ml.SVMSGD.setOptimalParameters [ARG int svmsgdType=SVMSGD::ASGD, ARG int marginType=SVMSGD::SOFT_MARGIN]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getSvmsgdType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setSvmsgdType']
+ok: FUNC <int cv.ml.SVMSGD.getSvmsgdType []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setSvmsgdType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'svmsgdType', u'', []]],
+    u'void',
+    u'@copybrief getSvmsgdType @see getSvmsgdType']
+ok: FUNC <void cv.ml.SVMSGD.setSvmsgdType [ARG int svmsgdType=]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getMarginType',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setMarginType']
+ok: FUNC <int cv.ml.SVMSGD.getMarginType []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setMarginType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'marginType', u'', []]],
+    u'void',
+    u'@copybrief getMarginType @see getMarginType']
+ok: FUNC <void cv.ml.SVMSGD.setMarginType [ARG int marginType=]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getMarginRegularization',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'@see setMarginRegularization']
+ok: FUNC <float cv.ml.SVMSGD.getMarginRegularization []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setMarginRegularization',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'marginRegularization', u'', []]],
+    u'void',
+    u'@copybrief getMarginRegularization @see getMarginRegularization']
+ok: FUNC <void cv.ml.SVMSGD.setMarginRegularization [ARG float marginRegularization=]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getInitialStepSize',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'@see setInitialStepSize']
+ok: FUNC <float cv.ml.SVMSGD.getInitialStepSize []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setInitialStepSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'InitialStepSize', u'', []]],
+    u'void',
+    u'@copybrief getInitialStepSize @see getInitialStepSize']
+ok: FUNC <void cv.ml.SVMSGD.setInitialStepSize [ARG float InitialStepSize=]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getStepDecreasingPower',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'@see setStepDecreasingPower']
+ok: FUNC <float cv.ml.SVMSGD.getStepDecreasingPower []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setStepDecreasingPower',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'stepDecreasingPower', u'', []]],
+    u'void',
+    u'@copybrief getStepDecreasingPower @see getStepDecreasingPower']
+ok: FUNC <void cv.ml.SVMSGD.setStepDecreasingPower [ARG float stepDecreasingPower=]>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'TermCriteria',
+    u'@see setTermCriteria']
+ok: FUNC <TermCriteria cv.ml.SVMSGD.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.ml.SVMSGD.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'val', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@copybrief getTermCriteria @see getTermCriteria']
+ok: FUNC <void cv.ml.SVMSGD.setTermCriteria [ARG TermCriteria val=]>
+
+
+===== Header: /Users/Chao/opencv/modules/ml/include/opencv2/ml/ml.hpp =====
+Namespaces: set([u'cv', u'cv.ml'])
+Ignore header: /Users/Chao/opencv/modules/ml/include/opencv2/ml/ml.hpp
+
+
+===== Generating... =====
+CLASS cv.ml::.EM : StatModel
+[CONST COV_MAT_SPHERICAL=0, CONST COV_MAT_DIAGONAL=1, CONST COV_MAT_GENERIC=2, CONST COV_MAT_DEFAULT=COV_MAT_DIAGONAL, CONST DEFAULT_NCLUSTERS=5, CONST DEFAULT_MAX_ITERS=100, CONST START_E_STEP=1, CONST START_M_STEP=2, CONST START_AUTO_STEP=0]
+FUNC <Mat cv.ml.EM.getMeans []>
+java: Mat getMeans()
+FUNC <Mat cv.ml.EM.getWeights []>
+java: Mat getWeights()
+FUNC <Ptr_EM cv.ml.EM.create []>
+java: EM create()
+FUNC <Ptr_EM cv.ml.EM.load [ARG String filepath=, ARG String nodeName=String()]>
+java: EM load(String filepath, String nodeName)
+java: EM load(String filepath)
+FUNC <TermCriteria cv.ml.EM.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <Vec2d cv.ml.EM.predict2 [ARG Mat sample=, ARG Mat probs=]>
+java: double[] predict2(Mat sample, Mat probs)
+FUNC <bool cv.ml.EM.trainE [ARG Mat samples=, ARG Mat means0=, ARG Mat covs0=Mat(), ARG Mat weights0=Mat(), ARG Mat logLikelihoods=Mat(), ARG Mat labels=Mat(), ARG Mat probs=Mat()]>
+java: boolean trainE(Mat samples, Mat means0, Mat covs0, Mat weights0, Mat logLikelihoods, Mat labels, Mat probs)
+java: boolean trainE(Mat samples, Mat means0)
+FUNC <bool cv.ml.EM.trainEM [ARG Mat samples=, ARG Mat logLikelihoods=Mat(), ARG Mat labels=Mat(), ARG Mat probs=Mat()]>
+java: boolean trainEM(Mat samples, Mat logLikelihoods, Mat labels, Mat probs)
+java: boolean trainEM(Mat samples)
+FUNC <bool cv.ml.EM.trainM [ARG Mat samples=, ARG Mat probs0=, ARG Mat logLikelihoods=Mat(), ARG Mat labels=Mat(), ARG Mat probs=Mat()]>
+java: boolean trainM(Mat samples, Mat probs0, Mat logLikelihoods, Mat labels, Mat probs)
+java: boolean trainM(Mat samples, Mat probs0)
+FUNC <float cv.ml.EM.predict [ARG Mat samples=, ARG Mat results=Mat(), ARG int flags=0]>
+java: float predict(Mat samples, Mat results, int flags)
+java: float predict(Mat samples)
+FUNC <int cv.ml.EM.getClustersNumber []>
+java: int getClustersNumber()
+FUNC <int cv.ml.EM.getCovarianceMatrixType []>
+java: int getCovarianceMatrixType()
+FUNC <void cv.ml.EM.getCovs [ARG vector_Mat covs=]>
+java: void getCovs(List<Mat> covs)
+FUNC <void cv.ml.EM.setClustersNumber [ARG int val=]>
+java: void setClustersNumber(int val)
+FUNC <void cv.ml.EM.setCovarianceMatrixType [ARG int val=]>
+java: void setCovarianceMatrixType(int val)
+FUNC <void cv.ml.EM.setTermCriteria [ARG TermCriteria val=]>
+java: void setTermCriteria(TermCriteria val)
+CLASS cv.ml::.SVM : StatModel
+[CONST C_SVC=100, CONST NU_SVC=101, CONST ONE_CLASS=102, CONST EPS_SVR=103, CONST NU_SVR=104, CONST CUSTOM=-1, CONST LINEAR=0, CONST POLY=1, CONST RBF=2, CONST SIGMOID=3, CONST CHI2=4, CONST INTER=5, CONST C=0, CONST GAMMA=1, CONST P=2, CONST NU=3, CONST COEF=4, CONST DEGREE=5]
+FUNC <Mat cv.ml.SVM.getClassWeights []>
+java: Mat getClassWeights()
+FUNC <Mat cv.ml.SVM.getSupportVectors []>
+java: Mat getSupportVectors()
+FUNC <Mat cv.ml.SVM.getUncompressedSupportVectors []>
+java: Mat getUncompressedSupportVectors()
+FUNC <Ptr_ParamGrid cv.ml.SVM.getDefaultGridPtr [ARG int param_id=]>
+java: ParamGrid getDefaultGridPtr(int param_id)
+FUNC <Ptr_SVM cv.ml.SVM.create []>
+java: SVM create()
+FUNC <Ptr_SVM cv.ml.SVM.load [ARG String filepath=]>
+java: SVM load(String filepath)
+FUNC <TermCriteria cv.ml.SVM.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <bool cv.ml.SVM.trainAuto [ARG Mat samples=, ARG int layout=, ARG Mat responses=, ARG int kFold=10, ARG Ptr_ParamGrid Cgrid=SVM::getDefaultGridPtr(SVM::C), ARG Ptr_ParamGrid gammaGrid=SVM::getDefaultGridPtr(SVM::GAMMA), ARG Ptr_ParamGrid pGrid=SVM::getDefaultGridPtr(SVM::P), ARG Ptr_ParamGrid nuGrid=SVM::getDefaultGridPtr(SVM::NU), ARG Ptr_ParamGrid coeffGrid=SVM::getDefaultGridPtr(SVM::COEF), ARG Ptr_ParamGrid degreeGrid=SVM::getDefaultGridPtr(SVM::DEGREE), ARG bool balanced=false]>
+java: boolean trainAuto(Mat samples, int layout, Mat responses, int kFold, ParamGrid Cgrid, ParamGrid gammaGrid, ParamGrid pGrid, ParamGrid nuGrid, ParamGrid coeffGrid, ParamGrid degreeGrid, boolean balanced)
+java: boolean trainAuto(Mat samples, int layout, Mat responses)
+FUNC <double cv.ml.SVM.getC []>
+java: double getC()
+FUNC <double cv.ml.SVM.getCoef0 []>
+java: double getCoef0()
+FUNC <double cv.ml.SVM.getDecisionFunction [ARG int i=, ARG Mat alpha=, ARG Mat svidx=]>
+java: double getDecisionFunction(int i, Mat alpha, Mat svidx)
+FUNC <double cv.ml.SVM.getDegree []>
+java: double getDegree()
+FUNC <double cv.ml.SVM.getGamma []>
+java: double getGamma()
+FUNC <double cv.ml.SVM.getNu []>
+java: double getNu()
+FUNC <double cv.ml.SVM.getP []>
+java: double getP()
+FUNC <int cv.ml.SVM.getKernelType []>
+java: int getKernelType()
+FUNC <int cv.ml.SVM.getType []>
+java: int getType()
+FUNC <void cv.ml.SVM.setC [ARG double val=]>
+java: void setC(double val)
+FUNC <void cv.ml.SVM.setClassWeights [ARG Mat val=]>
+java: void setClassWeights(Mat val)
+FUNC <void cv.ml.SVM.setCoef0 [ARG double val=]>
+java: void setCoef0(double val)
+FUNC <void cv.ml.SVM.setDegree [ARG double val=]>
+java: void setDegree(double val)
+FUNC <void cv.ml.SVM.setGamma [ARG double val=]>
+java: void setGamma(double val)
+FUNC <void cv.ml.SVM.setKernel [ARG int kernelType=]>
+java: void setKernel(int kernelType)
+FUNC <void cv.ml.SVM.setNu [ARG double val=]>
+java: void setNu(double val)
+FUNC <void cv.ml.SVM.setP [ARG double val=]>
+java: void setP(double val)
+FUNC <void cv.ml.SVM.setTermCriteria [ARG TermCriteria val=]>
+java: void setTermCriteria(TermCriteria val)
+FUNC <void cv.ml.SVM.setType [ARG int val=]>
+java: void setType(int val)
+CLASS ::.Ml : 
+[CONST VAR_NUMERICAL=0, CONST VAR_ORDERED=0, CONST VAR_CATEGORICAL=1, CONST TEST_ERROR=0, CONST TRAIN_ERROR=1, CONST ROW_SAMPLE=0, CONST COL_SAMPLE=1]
+CLASS cv.ml::.NormalBayesClassifier : StatModel
+FUNC <Ptr_NormalBayesClassifier cv.ml.NormalBayesClassifier.create []>
+java: NormalBayesClassifier create()
+FUNC <Ptr_NormalBayesClassifier cv.ml.NormalBayesClassifier.load [ARG String filepath=, ARG String nodeName=String()]>
+java: NormalBayesClassifier load(String filepath, String nodeName)
+java: NormalBayesClassifier load(String filepath)
+FUNC <float cv.ml.NormalBayesClassifier.predictProb [ARG Mat inputs=, ARG Mat outputs=, ARG Mat outputProbs=, ARG int flags=0]>
+java: float predictProb(Mat inputs, Mat outputs, Mat outputProbs, int flags)
+java: float predictProb(Mat inputs, Mat outputs, Mat outputProbs)
+CLASS cv.ml::.TrainData : 
+FUNC <Mat cv.ml.TrainData.getCatMap []>
+java: Mat getCatMap()
+FUNC <Mat cv.ml.TrainData.getCatOfs []>
+java: Mat getCatOfs()
+FUNC <Mat cv.ml.TrainData.getClassLabels []>
+java: Mat getClassLabels()
+FUNC <Mat cv.ml.TrainData.getDefaultSubstValues []>
+java: Mat getDefaultSubstValues()
+FUNC <Mat cv.ml.TrainData.getMissing []>
+java: Mat getMissing()
+FUNC <Mat cv.ml.TrainData.getNormCatResponses []>
+java: Mat getNormCatResponses()
+FUNC <Mat cv.ml.TrainData.getResponses []>
+java: Mat getResponses()
+FUNC <Mat cv.ml.TrainData.getSampleWeights []>
+java: Mat getSampleWeights()
+FUNC <Mat cv.ml.TrainData.getSamples []>
+java: Mat getSamples()
+FUNC <Mat cv.ml.TrainData.getSubVector [ARG Mat vec=, ARG Mat idx=]>
+java: Mat getSubVector(Mat vec, Mat idx)
+FUNC <Mat cv.ml.TrainData.getTestNormCatResponses []>
+java: Mat getTestNormCatResponses()
+FUNC <Mat cv.ml.TrainData.getTestResponses []>
+java: Mat getTestResponses()
+FUNC <Mat cv.ml.TrainData.getTestSampleIdx []>
+java: Mat getTestSampleIdx()
+FUNC <Mat cv.ml.TrainData.getTestSampleWeights []>
+java: Mat getTestSampleWeights()
+FUNC <Mat cv.ml.TrainData.getTestSamples []>
+java: Mat getTestSamples()
+FUNC <Mat cv.ml.TrainData.getTrainNormCatResponses []>
+java: Mat getTrainNormCatResponses()
+FUNC <Mat cv.ml.TrainData.getTrainResponses []>
+java: Mat getTrainResponses()
+FUNC <Mat cv.ml.TrainData.getTrainSampleIdx []>
+java: Mat getTrainSampleIdx()
+FUNC <Mat cv.ml.TrainData.getTrainSampleWeights []>
+java: Mat getTrainSampleWeights()
+FUNC <Mat cv.ml.TrainData.getTrainSamples [ARG int layout=ROW_SAMPLE, ARG bool compressSamples=true, ARG bool compressVars=true]>
+java: Mat getTrainSamples(int layout, boolean compressSamples, boolean compressVars)
+java: Mat getTrainSamples()
+FUNC <Mat cv.ml.TrainData.getVarIdx []>
+java: Mat getVarIdx()
+FUNC <Mat cv.ml.TrainData.getVarSymbolFlags []>
+java: Mat getVarSymbolFlags()
+FUNC <Mat cv.ml.TrainData.getVarType []>
+java: Mat getVarType()
+FUNC <Ptr_TrainData cv.ml.TrainData.create [ARG Mat samples=, ARG int layout=, ARG Mat responses=, ARG Mat varIdx=Mat(), ARG Mat sampleIdx=Mat(), ARG Mat sampleWeights=Mat(), ARG Mat varType=Mat()]>
+java: TrainData create(Mat samples, int layout, Mat responses, Mat varIdx, Mat sampleIdx, Mat sampleWeights, Mat varType)
+java: TrainData create(Mat samples, int layout, Mat responses)
+FUNC <int cv.ml.TrainData.getCatCount [ARG int vi=]>
+java: int getCatCount(int vi)
+FUNC <int cv.ml.TrainData.getLayout []>
+java: int getLayout()
+FUNC <int cv.ml.TrainData.getNAllVars []>
+java: int getNAllVars()
+FUNC <int cv.ml.TrainData.getNSamples []>
+java: int getNSamples()
+FUNC <int cv.ml.TrainData.getNTestSamples []>
+java: int getNTestSamples()
+FUNC <int cv.ml.TrainData.getNTrainSamples []>
+java: int getNTrainSamples()
+FUNC <int cv.ml.TrainData.getNVars []>
+java: int getNVars()
+FUNC <int cv.ml.TrainData.getResponseType []>
+java: int getResponseType()
+FUNC <void cv.ml.TrainData.getNames [ARG vector_String names=]>
+java: void getNames(List<String> names)
+FUNC <void cv.ml.TrainData.getSample [ARG Mat varIdx=, ARG int sidx=, ARG float * buf=]>
+java: void getSample(Mat varIdx, int sidx, float buf)
+FUNC <void cv.ml.TrainData.getValues [ARG int vi=, ARG Mat sidx=, ARG float * values=]>
+java: void getValues(int vi, Mat sidx, float values)
+FUNC <void cv.ml.TrainData.setTrainTestSplit [ARG int count=, ARG bool shuffle=true]>
+java: void setTrainTestSplit(int count, boolean shuffle)
+java: void setTrainTestSplit(int count)
+FUNC <void cv.ml.TrainData.setTrainTestSplitRatio [ARG double ratio=, ARG bool shuffle=true]>
+java: void setTrainTestSplitRatio(double ratio, boolean shuffle)
+java: void setTrainTestSplitRatio(double ratio)
+FUNC <void cv.ml.TrainData.shuffleTrainTest []>
+java: void shuffleTrainTest()
+CLASS cv.ml::.Boost : DTrees
+[CONST DISCRETE=0, CONST REAL=1, CONST LOGIT=2, CONST GENTLE=3]
+FUNC <Ptr_Boost cv.ml.Boost.create []>
+java: Boost create()
+FUNC <Ptr_Boost cv.ml.Boost.load [ARG String filepath=, ARG String nodeName=String()]>
+java: Boost load(String filepath, String nodeName)
+java: Boost load(String filepath)
+FUNC <double cv.ml.Boost.getWeightTrimRate []>
+java: double getWeightTrimRate()
+FUNC <int cv.ml.Boost.getBoostType []>
+java: int getBoostType()
+FUNC <int cv.ml.Boost.getWeakCount []>
+java: int getWeakCount()
+FUNC <void cv.ml.Boost.setBoostType [ARG int val=]>
+java: void setBoostType(int val)
+FUNC <void cv.ml.Boost.setWeakCount [ARG int val=]>
+java: void setWeakCount(int val)
+FUNC <void cv.ml.Boost.setWeightTrimRate [ARG double val=]>
+java: void setWeightTrimRate(double val)
+CLASS cv.ml::.LogisticRegression : StatModel
+[CONST REG_DISABLE=-1, CONST REG_L1=0, CONST REG_L2=1, CONST BATCH=0, CONST MINI_BATCH=1]
+FUNC <Mat cv.ml.LogisticRegression.get_learnt_thetas []>
+java: Mat get_learnt_thetas()
+FUNC <Ptr_LogisticRegression cv.ml.LogisticRegression.create []>
+java: LogisticRegression create()
+FUNC <Ptr_LogisticRegression cv.ml.LogisticRegression.load [ARG String filepath=, ARG String nodeName=String()]>
+java: LogisticRegression load(String filepath, String nodeName)
+java: LogisticRegression load(String filepath)
+FUNC <TermCriteria cv.ml.LogisticRegression.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <double cv.ml.LogisticRegression.getLearningRate []>
+java: double getLearningRate()
+FUNC <float cv.ml.LogisticRegression.predict [ARG Mat samples=, ARG Mat results=Mat(), ARG int flags=0]>
+java: float predict(Mat samples, Mat results, int flags)
+java: float predict(Mat samples)
+FUNC <int cv.ml.LogisticRegression.getIterations []>
+java: int getIterations()
+FUNC <int cv.ml.LogisticRegression.getMiniBatchSize []>
+java: int getMiniBatchSize()
+FUNC <int cv.ml.LogisticRegression.getRegularization []>
+java: int getRegularization()
+FUNC <int cv.ml.LogisticRegression.getTrainMethod []>
+java: int getTrainMethod()
+FUNC <void cv.ml.LogisticRegression.setIterations [ARG int val=]>
+java: void setIterations(int val)
+FUNC <void cv.ml.LogisticRegression.setLearningRate [ARG double val=]>
+java: void setLearningRate(double val)
+FUNC <void cv.ml.LogisticRegression.setMiniBatchSize [ARG int val=]>
+java: void setMiniBatchSize(int val)
+FUNC <void cv.ml.LogisticRegression.setRegularization [ARG int val=]>
+java: void setRegularization(int val)
+FUNC <void cv.ml.LogisticRegression.setTermCriteria [ARG TermCriteria val=]>
+java: void setTermCriteria(TermCriteria val)
+FUNC <void cv.ml.LogisticRegression.setTrainMethod [ARG int val=]>
+java: void setTrainMethod(int val)
+CLASS cv.ml::.ParamGrid : 
+FUNC <Ptr_ParamGrid cv.ml.ParamGrid.create [ARG double minVal=0., ARG double maxVal=0., ARG double logstep=1.]>
+java: ParamGrid create(double minVal, double maxVal, double logstep)
+java: ParamGrid create()
+FUNC <double cv.ml.ParamGrid.get_minVal []>
+java: double get_minVal()
+FUNC <void cv.ml.ParamGrid.set_minVal [ARG double minVal=]>
+java: void set_minVal(double minVal)
+FUNC <double cv.ml.ParamGrid.get_maxVal []>
+java: double get_maxVal()
+FUNC <void cv.ml.ParamGrid.set_maxVal [ARG double maxVal=]>
+java: void set_maxVal(double maxVal)
+FUNC <double cv.ml.ParamGrid.get_logStep []>
+java: double get_logStep()
+FUNC <void cv.ml.ParamGrid.set_logStep [ARG double logStep=]>
+java: void set_logStep(double logStep)
+CLASS cv.ml::.KNearest : StatModel
+[CONST BRUTE_FORCE=1, CONST KDTREE=2]
+FUNC <Ptr_KNearest cv.ml.KNearest.create []>
+java: KNearest create()
+FUNC <bool cv.ml.KNearest.getIsClassifier []>
+java: boolean getIsClassifier()
+FUNC <float cv.ml.KNearest.findNearest [ARG Mat samples=, ARG int k=, ARG Mat results=, ARG Mat neighborResponses=Mat(), ARG Mat dist=Mat()]>
+java: float findNearest(Mat samples, int k, Mat results, Mat neighborResponses, Mat dist)
+java: float findNearest(Mat samples, int k, Mat results)
+FUNC <int cv.ml.KNearest.getAlgorithmType []>
+java: int getAlgorithmType()
+FUNC <int cv.ml.KNearest.getDefaultK []>
+java: int getDefaultK()
+FUNC <int cv.ml.KNearest.getEmax []>
+java: int getEmax()
+FUNC <void cv.ml.KNearest.setAlgorithmType [ARG int val=]>
+java: void setAlgorithmType(int val)
+FUNC <void cv.ml.KNearest.setDefaultK [ARG int val=]>
+java: void setDefaultK(int val)
+FUNC <void cv.ml.KNearest.setEmax [ARG int val=]>
+java: void setEmax(int val)
+FUNC <void cv.ml.KNearest.setIsClassifier [ARG bool val=]>
+java: void setIsClassifier(boolean val)
+CLASS cv.ml::.SVMSGD : StatModel
+[CONST SGD=0, CONST ASGD=1, CONST SOFT_MARGIN=0, CONST HARD_MARGIN=1]
+FUNC <Mat cv.ml.SVMSGD.getWeights []>
+java: Mat getWeights()
+FUNC <Ptr_SVMSGD cv.ml.SVMSGD.create []>
+java: SVMSGD create()
+FUNC <Ptr_SVMSGD cv.ml.SVMSGD.load [ARG String filepath=, ARG String nodeName=String()]>
+java: SVMSGD load(String filepath, String nodeName)
+java: SVMSGD load(String filepath)
+FUNC <TermCriteria cv.ml.SVMSGD.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <float cv.ml.SVMSGD.getInitialStepSize []>
+java: float getInitialStepSize()
+FUNC <float cv.ml.SVMSGD.getMarginRegularization []>
+java: float getMarginRegularization()
+FUNC <float cv.ml.SVMSGD.getShift []>
+java: float getShift()
+FUNC <float cv.ml.SVMSGD.getStepDecreasingPower []>
+java: float getStepDecreasingPower()
+FUNC <int cv.ml.SVMSGD.getMarginType []>
+java: int getMarginType()
+FUNC <int cv.ml.SVMSGD.getSvmsgdType []>
+java: int getSvmsgdType()
+FUNC <void cv.ml.SVMSGD.setInitialStepSize [ARG float InitialStepSize=]>
+java: void setInitialStepSize(float InitialStepSize)
+FUNC <void cv.ml.SVMSGD.setMarginRegularization [ARG float marginRegularization=]>
+java: void setMarginRegularization(float marginRegularization)
+FUNC <void cv.ml.SVMSGD.setMarginType [ARG int marginType=]>
+java: void setMarginType(int marginType)
+FUNC <void cv.ml.SVMSGD.setOptimalParameters [ARG int svmsgdType=SVMSGD::ASGD, ARG int marginType=SVMSGD::SOFT_MARGIN]>
+java: void setOptimalParameters(int svmsgdType, int marginType)
+java: void setOptimalParameters()
+FUNC <void cv.ml.SVMSGD.setStepDecreasingPower [ARG float stepDecreasingPower=]>
+java: void setStepDecreasingPower(float stepDecreasingPower)
+FUNC <void cv.ml.SVMSGD.setSvmsgdType [ARG int svmsgdType=]>
+java: void setSvmsgdType(int svmsgdType)
+FUNC <void cv.ml.SVMSGD.setTermCriteria [ARG TermCriteria val=]>
+java: void setTermCriteria(TermCriteria val)
+CLASS cv.ml::.DTrees : StatModel
+[CONST PREDICT_AUTO=0, CONST PREDICT_SUM=(1<<8), CONST PREDICT_MAX_VOTE=(2<<8), CONST PREDICT_MASK=(3<<8)]
+FUNC <Mat cv.ml.DTrees.getPriors []>
+java: Mat getPriors()
+FUNC <Ptr_DTrees cv.ml.DTrees.create []>
+java: DTrees create()
+FUNC <Ptr_DTrees cv.ml.DTrees.load [ARG String filepath=, ARG String nodeName=String()]>
+java: DTrees load(String filepath, String nodeName)
+java: DTrees load(String filepath)
+FUNC <bool cv.ml.DTrees.getTruncatePrunedTree []>
+java: boolean getTruncatePrunedTree()
+FUNC <bool cv.ml.DTrees.getUse1SERule []>
+java: boolean getUse1SERule()
+FUNC <bool cv.ml.DTrees.getUseSurrogates []>
+java: boolean getUseSurrogates()
+FUNC <float cv.ml.DTrees.getRegressionAccuracy []>
+java: float getRegressionAccuracy()
+FUNC <int cv.ml.DTrees.getCVFolds []>
+java: int getCVFolds()
+FUNC <int cv.ml.DTrees.getMaxCategories []>
+java: int getMaxCategories()
+FUNC <int cv.ml.DTrees.getMaxDepth []>
+java: int getMaxDepth()
+FUNC <int cv.ml.DTrees.getMinSampleCount []>
+java: int getMinSampleCount()
+FUNC <void cv.ml.DTrees.setCVFolds [ARG int val=]>
+java: void setCVFolds(int val)
+FUNC <void cv.ml.DTrees.setMaxCategories [ARG int val=]>
+java: void setMaxCategories(int val)
+FUNC <void cv.ml.DTrees.setMaxDepth [ARG int val=]>
+java: void setMaxDepth(int val)
+FUNC <void cv.ml.DTrees.setMinSampleCount [ARG int val=]>
+java: void setMinSampleCount(int val)
+FUNC <void cv.ml.DTrees.setPriors [ARG Mat val=]>
+java: void setPriors(Mat val)
+FUNC <void cv.ml.DTrees.setRegressionAccuracy [ARG float val=]>
+java: void setRegressionAccuracy(float val)
+FUNC <void cv.ml.DTrees.setTruncatePrunedTree [ARG bool val=]>
+java: void setTruncatePrunedTree(boolean val)
+FUNC <void cv.ml.DTrees.setUse1SERule [ARG bool val=]>
+java: void setUse1SERule(boolean val)
+FUNC <void cv.ml.DTrees.setUseSurrogates [ARG bool val=]>
+java: void setUseSurrogates(boolean val)
+CLASS cv.ml::.ANN_MLP : StatModel
+[CONST BACKPROP=0, CONST RPROP=1, CONST IDENTITY=0, CONST SIGMOID_SYM=1, CONST GAUSSIAN=2, CONST UPDATE_WEIGHTS=1, CONST NO_INPUT_SCALE=2, CONST NO_OUTPUT_SCALE=4]
+FUNC <Mat cv.ml.ANN_MLP.getLayerSizes []>
+java: Mat getLayerSizes()
+FUNC <Mat cv.ml.ANN_MLP.getWeights [ARG int layerIdx=]>
+java: Mat getWeights(int layerIdx)
+FUNC <Ptr_ANN_MLP cv.ml.ANN_MLP.create []>
+java: ANN_MLP create()
+FUNC <Ptr_ANN_MLP cv.ml.ANN_MLP.load [ARG String filepath=]>
+java: ANN_MLP load(String filepath)
+FUNC <TermCriteria cv.ml.ANN_MLP.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <double cv.ml.ANN_MLP.getBackpropMomentumScale []>
+java: double getBackpropMomentumScale()
+FUNC <double cv.ml.ANN_MLP.getBackpropWeightScale []>
+java: double getBackpropWeightScale()
+FUNC <double cv.ml.ANN_MLP.getRpropDW0 []>
+java: double getRpropDW0()
+FUNC <double cv.ml.ANN_MLP.getRpropDWMax []>
+java: double getRpropDWMax()
+FUNC <double cv.ml.ANN_MLP.getRpropDWMin []>
+java: double getRpropDWMin()
+FUNC <double cv.ml.ANN_MLP.getRpropDWMinus []>
+java: double getRpropDWMinus()
+FUNC <double cv.ml.ANN_MLP.getRpropDWPlus []>
+java: double getRpropDWPlus()
+FUNC <int cv.ml.ANN_MLP.getTrainMethod []>
+java: int getTrainMethod()
+FUNC <void cv.ml.ANN_MLP.setActivationFunction [ARG int type=, ARG double param1=0, ARG double param2=0]>
+java: void setActivationFunction(int type, double param1, double param2)
+java: void setActivationFunction(int type)
+FUNC <void cv.ml.ANN_MLP.setBackpropMomentumScale [ARG double val=]>
+java: void setBackpropMomentumScale(double val)
+FUNC <void cv.ml.ANN_MLP.setBackpropWeightScale [ARG double val=]>
+java: void setBackpropWeightScale(double val)
+FUNC <void cv.ml.ANN_MLP.setLayerSizes [ARG Mat _layer_sizes=]>
+java: void setLayerSizes(Mat _layer_sizes)
+FUNC <void cv.ml.ANN_MLP.setRpropDW0 [ARG double val=]>
+java: void setRpropDW0(double val)
+FUNC <void cv.ml.ANN_MLP.setRpropDWMax [ARG double val=]>
+java: void setRpropDWMax(double val)
+FUNC <void cv.ml.ANN_MLP.setRpropDWMin [ARG double val=]>
+java: void setRpropDWMin(double val)
+FUNC <void cv.ml.ANN_MLP.setRpropDWMinus [ARG double val=]>
+java: void setRpropDWMinus(double val)
+FUNC <void cv.ml.ANN_MLP.setRpropDWPlus [ARG double val=]>
+java: void setRpropDWPlus(double val)
+FUNC <void cv.ml.ANN_MLP.setTermCriteria [ARG TermCriteria val=]>
+java: void setTermCriteria(TermCriteria val)
+FUNC <void cv.ml.ANN_MLP.setTrainMethod [ARG int method=, ARG double param1=0, ARG double param2=0]>
+java: void setTrainMethod(int method, double param1, double param2)
+java: void setTrainMethod(int method)
+CLASS cv.ml::.StatModel : Algorithm
+[CONST UPDATE_MODEL=1, CONST RAW_OUTPUT=1, CONST COMPRESSED_INPUT=2, CONST PREPROCESSED_INPUT=4]
+FUNC <bool cv.ml.StatModel.empty []>
+java: boolean empty()
+FUNC <bool cv.ml.StatModel.isClassifier []>
+java: boolean isClassifier()
+FUNC <bool cv.ml.StatModel.isTrained []>
+java: boolean isTrained()
+FUNC <bool cv.ml.StatModel.train [ARG Mat samples=, ARG int layout=, ARG Mat responses=]>
+java: boolean train(Mat samples, int layout, Mat responses)
+FUNC <bool cv.ml.StatModel.train [ARG Ptr_TrainData trainData=, ARG int flags=0]>
+java: boolean train(TrainData trainData, int flags)
+java: boolean train(TrainData trainData)
+FUNC <float cv.ml.StatModel.calcError [ARG Ptr_TrainData data=, ARG bool test=, ARG Mat resp=]>
+java: float calcError(TrainData data, boolean test, Mat resp)
+FUNC <float cv.ml.StatModel.predict [ARG Mat samples=, ARG Mat results=Mat(), ARG int flags=0]>
+java: float predict(Mat samples, Mat results, int flags)
+java: float predict(Mat samples)
+FUNC <int cv.ml.StatModel.getVarCount []>
+java: int getVarCount()
+CLASS cv.ml::.RTrees : DTrees
+FUNC <Mat cv.ml.RTrees.getVarImportance []>
+java: Mat getVarImportance()
+FUNC <Ptr_RTrees cv.ml.RTrees.create []>
+java: RTrees create()
+FUNC <Ptr_RTrees cv.ml.RTrees.load [ARG String filepath=, ARG String nodeName=String()]>
+java: RTrees load(String filepath, String nodeName)
+java: RTrees load(String filepath)
+FUNC <TermCriteria cv.ml.RTrees.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <bool cv.ml.RTrees.getCalculateVarImportance []>
+java: boolean getCalculateVarImportance()
+FUNC <int cv.ml.RTrees.getActiveVarCount []>
+java: int getActiveVarCount()
+FUNC <void cv.ml.RTrees.getVotes [ARG Mat samples=, ARG Mat results=, ARG int flags=]>
+java: void getVotes(Mat samples, Mat results, int flags)
+FUNC <void cv.ml.RTrees.setActiveVarCount [ARG int val=]>
+java: void setActiveVarCount(int val)
+FUNC <void cv.ml.RTrees.setCalculateVarImportance [ARG bool val=]>
+java: void setCalculateVarImportance(boolean val)
+FUNC <void cv.ml.RTrees.setTermCriteria [ARG TermCriteria val=]>
+java: void setTermCriteria(TermCriteria val)

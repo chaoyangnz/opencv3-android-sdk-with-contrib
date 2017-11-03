@@ -1,0 +1,1315 @@
+ok: class CLASS ::.Photo : , name: Photo, base: 
+
+
+===== Header: /Users/Chao/opencv/modules/photo/include/opencv2/photo/photo_c.h =====
+Namespaces: set([''])
+
+--- Incoming ---
+[u'const CV_INPAINT_NS', u'0', [], [], None, '']
+ok: CONST CV_INPAINT_NS=0
+
+--- Incoming ---
+[u'const CV_INPAINT_TELEA', u'1', [], [], None, '']
+ok: CONST CV_INPAINT_TELEA=1
+
+
+===== Header: /Users/Chao/opencv/modules/photo/include/opencv2/photo.hpp =====
+Namespaces: set(['', u'cv'])
+
+--- Incoming ---
+[u'const cv.INPAINT_NS', u'0', [], [], None, '']
+ok: CONST INPAINT_NS=0
+
+--- Incoming ---
+[u'const cv.INPAINT_TELEA', u'1', [], [], None, '']
+ok: CONST INPAINT_TELEA=1
+
+--- Incoming ---
+[u'const cv.NORMAL_CLONE', u'1', [], [], None, '']
+ok: CONST NORMAL_CLONE=1
+
+--- Incoming ---
+[u'const cv.MIXED_CLONE', u'2', [], [], None, '']
+ok: CONST MIXED_CLONE=2
+
+--- Incoming ---
+[u'const cv.MONOCHROME_TRANSFER', u'3', [], [], None, '']
+ok: CONST MONOCHROME_TRANSFER=3
+
+--- Incoming ---
+[u'const cv.RECURS_FILTER', u'1', [], [], None, '']
+ok: CONST RECURS_FILTER=1
+
+--- Incoming ---
+[u'const cv.NORMCONV_FILTER', u'2', [], [], None, '']
+ok: CONST NORMCONV_FILTER=2
+
+--- Incoming ---
+[   u'cv.inpaint',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'inpaintMask', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'double', u'inpaintRadius', u'', []],
+        [u'int', u'flags', u'', []]],
+    u'void',
+    u'@brief Restores the selected region in an image using the region neighborhood.\n\n@param src Input 8-bit, 16-bit unsigned or 32-bit float 1-channel or 8-bit 3-channel image.\n@param inpaintMask Inpainting mask, 8-bit 1-channel image. Non-zero pixels indicate the area that\nneeds to be inpainted.\n@param dst Output image with the same size and type as src .\n@param inpaintRadius Radius of a circular neighborhood of each point inpainted that is considered\nby the algorithm.\n@param flags Inpainting method that could be one of the following:\n-   **INPAINT_NS** Navier-Stokes based method [Navier01]\n-   **INPAINT_TELEA** Method by Alexandru Telea @cite Telea04 .\n\nThe function reconstructs the selected image area from the pixel near the area boundary. The\nfunction may be used to remove dust and scratches from a scanned photo, or to remove undesirable\nobjects from still images or video. See <http://en.wikipedia.org/wiki/Inpainting> for more details.\n\n@note\n-   An example using the inpainting technique can be found at\nopencv_source_code/samples/cpp/inpaint.cpp\n-   (Python) An example using the inpainting technique can be found at\nopencv_source_code/samples/python/inpaint.py']
+ok: FUNC <void cv..inpaint [ARG Mat src=, ARG Mat inpaintMask=, ARG Mat dst=, ARG double inpaintRadius=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.fastNlMeansDenoising',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'h', u'3', []],
+        [u'int', u'templateWindowSize', u'7', []],
+        [u'int', u'searchWindowSize', u'21', []]],
+    u'void',
+    u'@brief Perform image denoising using Non-local Means Denoising algorithm\n<http://www.ipol.im/pub/algo/bcm_non_local_means_denoising/> with several computational\noptimizations. Noise expected to be a gaussian white noise\n\n@param src Input 8-bit 1-channel, 2-channel, 3-channel or 4-channel image.\n@param dst Output image with the same size and type as src .\n@param templateWindowSize Size in pixels of the template patch that is used to compute weights.\nShould be odd. Recommended value 7 pixels\n@param searchWindowSize Size in pixels of the window that is used to compute weighted average for\ngiven pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater\ndenoising time. Recommended value 21 pixels\n@param h Parameter regulating filter strength. Big h value perfectly removes noise but also\nremoves image details, smaller h value preserves details but also preserves some noise\n\nThis function expected to be applied to grayscale images. For colored images look at\nfastNlMeansDenoisingColored. Advanced usage of this functions can be manual denoising of colored\nimage in different colorspaces. Such approach is used in fastNlMeansDenoisingColored by converting\nimage to CIELAB colorspace and then separately denoise L and AB components with different h\nparameter.']
+ok: FUNC <void cv..fastNlMeansDenoising [ARG Mat src=, ARG Mat dst=, ARG float h=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+
+--- Incoming ---
+[   u'cv.fastNlMeansDenoising',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'vector_float', u'h', u'', ['/C', '/Ref']],
+        [u'int', u'templateWindowSize', u'7', []],
+        [u'int', u'searchWindowSize', u'21', []],
+        [u'int', u'normType', u'NORM_L2', []]],
+    u'void',
+    u'@brief Perform image denoising using Non-local Means Denoising algorithm\n<http://www.ipol.im/pub/algo/bcm_non_local_means_denoising/> with several computational\noptimizations. Noise expected to be a gaussian white noise\n\n@param src Input 8-bit or 16-bit (only with NORM_L1) 1-channel,\n2-channel, 3-channel or 4-channel image.\n@param dst Output image with the same size and type as src .\n@param templateWindowSize Size in pixels of the template patch that is used to compute weights.\nShould be odd. Recommended value 7 pixels\n@param searchWindowSize Size in pixels of the window that is used to compute weighted average for\ngiven pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater\ndenoising time. Recommended value 21 pixels\n@param h Array of parameters regulating filter strength, either one\nparameter applied to all channels or one per channel in dst. Big h value\nperfectly removes noise but also removes image details, smaller h\nvalue preserves details but also preserves some noise\n@param normType Type of norm used for weight calculation. Can be either NORM_L2 or NORM_L1\n\nThis function expected to be applied to grayscale images. For colored images look at\nfastNlMeansDenoisingColored. Advanced usage of this functions can be manual denoising of colored\nimage in different colorspaces. Such approach is used in fastNlMeansDenoisingColored by converting\nimage to CIELAB colorspace and then separately denoise L and AB components with different h\nparameter.']
+ok: FUNC <void cv..fastNlMeansDenoising [ARG Mat src=, ARG Mat dst=, ARG vector_float h=, ARG int templateWindowSize=7, ARG int searchWindowSize=21, ARG int normType=NORM_L2]>
+
+--- Incoming ---
+[   u'cv.fastNlMeansDenoisingColored',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'h', u'3', []],
+        [u'float', u'hColor', u'3', []],
+        [u'int', u'templateWindowSize', u'7', []],
+        [u'int', u'searchWindowSize', u'21', []]],
+    u'void',
+    u'@brief Modification of fastNlMeansDenoising function for colored images\n\n@param src Input 8-bit 3-channel image.\n@param dst Output image with the same size and type as src .\n@param templateWindowSize Size in pixels of the template patch that is used to compute weights.\nShould be odd. Recommended value 7 pixels\n@param searchWindowSize Size in pixels of the window that is used to compute weighted average for\ngiven pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater\ndenoising time. Recommended value 21 pixels\n@param h Parameter regulating filter strength for luminance component. Bigger h value perfectly\nremoves noise but also removes image details, smaller h value preserves details but also preserves\nsome noise\n@param hColor The same as h but for color components. For most images value equals 10\nwill be enough to remove colored noise and do not distort colors\n\nThe function converts image to CIELAB colorspace and then separately denoise L and AB components\nwith given h parameters using fastNlMeansDenoising function.']
+ok: FUNC <void cv..fastNlMeansDenoisingColored [ARG Mat src=, ARG Mat dst=, ARG float h=3, ARG float hColor=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+
+--- Incoming ---
+[   u'cv.fastNlMeansDenoisingMulti',
+    u'void',
+    [],
+    [   ['vector_Mat', u'srcImgs', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'int', u'imgToDenoiseIndex', u'', []],
+        [u'int', u'temporalWindowSize', u'', []],
+        [u'float', u'h', u'3', []],
+        [u'int', u'templateWindowSize', u'7', []],
+        [u'int', u'searchWindowSize', u'21', []]],
+    u'void',
+    u'@brief Modification of fastNlMeansDenoising function for images sequence where consequtive images have been\ncaptured in small period of time. For example video. This version of the function is for grayscale\nimages or for manual manipulation with colorspaces. For more details see\n<http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394>\n\n@param srcImgs Input 8-bit 1-channel, 2-channel, 3-channel or\n4-channel images sequence. All images should have the same type and\nsize.\n@param imgToDenoiseIndex Target image to denoise index in srcImgs sequence\n@param temporalWindowSize Number of surrounding images to use for target image denoising. Should\nbe odd. Images from imgToDenoiseIndex - temporalWindowSize / 2 to\nimgToDenoiseIndex - temporalWindowSize / 2 from srcImgs will be used to denoise\nsrcImgs[imgToDenoiseIndex] image.\n@param dst Output image with the same size and type as srcImgs images.\n@param templateWindowSize Size in pixels of the template patch that is used to compute weights.\nShould be odd. Recommended value 7 pixels\n@param searchWindowSize Size in pixels of the window that is used to compute weighted average for\ngiven pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater\ndenoising time. Recommended value 21 pixels\n@param h Parameter regulating filter strength. Bigger h value\nperfectly removes noise but also removes image details, smaller h\nvalue preserves details but also preserves some noise']
+ok: FUNC <void cv..fastNlMeansDenoisingMulti [ARG vector_Mat srcImgs=, ARG Mat dst=, ARG int imgToDenoiseIndex=, ARG int temporalWindowSize=, ARG float h=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+
+--- Incoming ---
+[   u'cv.fastNlMeansDenoisingMulti',
+    u'void',
+    [],
+    [   ['vector_Mat', u'srcImgs', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'int', u'imgToDenoiseIndex', u'', []],
+        [u'int', u'temporalWindowSize', u'', []],
+        [u'vector_float', u'h', u'', ['/C', '/Ref']],
+        [u'int', u'templateWindowSize', u'7', []],
+        [u'int', u'searchWindowSize', u'21', []],
+        [u'int', u'normType', u'NORM_L2', []]],
+    u'void',
+    u'@brief Modification of fastNlMeansDenoising function for images sequence where consequtive images have been\ncaptured in small period of time. For example video. This version of the function is for grayscale\nimages or for manual manipulation with colorspaces. For more details see\n<http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394>\n\n@param srcImgs Input 8-bit or 16-bit (only with NORM_L1) 1-channel,\n2-channel, 3-channel or 4-channel images sequence. All images should\nhave the same type and size.\n@param imgToDenoiseIndex Target image to denoise index in srcImgs sequence\n@param temporalWindowSize Number of surrounding images to use for target image denoising. Should\nbe odd. Images from imgToDenoiseIndex - temporalWindowSize / 2 to\nimgToDenoiseIndex - temporalWindowSize / 2 from srcImgs will be used to denoise\nsrcImgs[imgToDenoiseIndex] image.\n@param dst Output image with the same size and type as srcImgs images.\n@param templateWindowSize Size in pixels of the template patch that is used to compute weights.\nShould be odd. Recommended value 7 pixels\n@param searchWindowSize Size in pixels of the window that is used to compute weighted average for\ngiven pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater\ndenoising time. Recommended value 21 pixels\n@param h Array of parameters regulating filter strength, either one\nparameter applied to all channels or one per channel in dst. Big h value\nperfectly removes noise but also removes image details, smaller h\nvalue preserves details but also preserves some noise\n@param normType Type of norm used for weight calculation. Can be either NORM_L2 or NORM_L1']
+ok: FUNC <void cv..fastNlMeansDenoisingMulti [ARG vector_Mat srcImgs=, ARG Mat dst=, ARG int imgToDenoiseIndex=, ARG int temporalWindowSize=, ARG vector_float h=, ARG int templateWindowSize=7, ARG int searchWindowSize=21, ARG int normType=NORM_L2]>
+
+--- Incoming ---
+[   u'cv.fastNlMeansDenoisingColoredMulti',
+    u'void',
+    [],
+    [   ['vector_Mat', u'srcImgs', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'int', u'imgToDenoiseIndex', u'', []],
+        [u'int', u'temporalWindowSize', u'', []],
+        [u'float', u'h', u'3', []],
+        [u'float', u'hColor', u'3', []],
+        [u'int', u'templateWindowSize', u'7', []],
+        [u'int', u'searchWindowSize', u'21', []]],
+    u'void',
+    u'@brief Modification of fastNlMeansDenoisingMulti function for colored images sequences\n\n@param srcImgs Input 8-bit 3-channel images sequence. All images should have the same type and\nsize.\n@param imgToDenoiseIndex Target image to denoise index in srcImgs sequence\n@param temporalWindowSize Number of surrounding images to use for target image denoising. Should\nbe odd. Images from imgToDenoiseIndex - temporalWindowSize / 2 to\nimgToDenoiseIndex - temporalWindowSize / 2 from srcImgs will be used to denoise\nsrcImgs[imgToDenoiseIndex] image.\n@param dst Output image with the same size and type as srcImgs images.\n@param templateWindowSize Size in pixels of the template patch that is used to compute weights.\nShould be odd. Recommended value 7 pixels\n@param searchWindowSize Size in pixels of the window that is used to compute weighted average for\ngiven pixel. Should be odd. Affect performance linearly: greater searchWindowsSize - greater\ndenoising time. Recommended value 21 pixels\n@param h Parameter regulating filter strength for luminance component. Bigger h value perfectly\nremoves noise but also removes image details, smaller h value preserves details but also preserves\nsome noise.\n@param hColor The same as h but for color components.\n\nThe function converts images to CIELAB colorspace and then separately denoise L and AB components\nwith given h parameters using fastNlMeansDenoisingMulti function.']
+ok: FUNC <void cv..fastNlMeansDenoisingColoredMulti [ARG vector_Mat srcImgs=, ARG Mat dst=, ARG int imgToDenoiseIndex=, ARG int temporalWindowSize=, ARG float h=3, ARG float hColor=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+
+--- Incoming ---
+[   u'cv.denoise_TVL1',
+    u'void',
+    [],
+    [   [u'vector_Mat', u'observations', u'', ['/C', '/Ref']],
+        [u'Mat', u'result', u'', ['/Ref']],
+        [u'double', u'lambda', u'1.0', []],
+        [u'int', u'niters', u'30', []]],
+    u'void',
+    u"@brief Primal-dual algorithm is an algorithm for solving special types of variational problems (that is,\nfinding a function to minimize some functional). As the image denoising, in particular, may be seen\nas the variational problem, primal-dual algorithm then can be used to perform denoising and this is\nexactly what is implemented.\n\nIt should be noted, that this implementation was taken from the July 2013 blog entry\n@cite MA13 , which also contained (slightly more general) ready-to-use source code on Python.\nSubsequently, that code was rewritten on C++ with the usage of openCV by Vadim Pisarevsky at the end\nof July 2013 and finally it was slightly adapted by later authors.\n\nAlthough the thorough discussion and justification of the algorithm involved may be found in\n@cite ChambolleEtAl, it might make sense to skim over it here, following @cite MA13 . To begin\nwith, we consider the 1-byte gray-level images as the functions from the rectangular domain of\npixels (it may be seen as set\n\\f$\\left\\{(x,y)\\in\\mathbb{N}\\times\\mathbb{N}\\mid 1\\leq x\\leq n,\\;1\\leq y\\leq m\\right\\}\\f$ for some\n\\f$m,\\;n\\in\\mathbb{N}\\f$) into \\f$\\{0,1,\\dots,255\\}\\f$. We shall denote the noised images as \\f$f_i\\f$ and with\nthis view, given some image \\f$x\\f$ of the same size, we may measure how bad it is by the formula\n\n\\f[\\left\\|\\left\\|\\nabla x\\right\\|\\right\\| + \\lambda\\sum_i\\left\\|\\left\\|x-f_i\\right\\|\\right\\|\\f]\n\n\\f$\\|\\|\\cdot\\|\\|\\f$ here denotes \\f$L_2\\f$-norm and as you see, the first addend states that we want our\nimage to be smooth (ideally, having zero gradient, thus being constant) and the second states that\nwe want our result to be close to the observations we've got. If we treat \\f$x\\f$ as a function, this is\nexactly the functional what we seek to minimize and here the Primal-Dual algorithm comes into play.\n\n@param observations This array should contain one or more noised versions of the image that is to\nbe restored.\n@param result Here the denoised image will be stored. There is no need to do pre-allocation of\nstorage space, as it will be automatically allocated, if necessary.\n@param lambda Corresponds to \\f$\\lambda\\f$ in the formulas above. As it is enlarged, the smooth\n(blurred) images are treated more favorably than detailed (but maybe more noised) ones. Roughly\nspeaking, as it becomes smaller, the result will be more blur but more sever outliers will be\nremoved.\n@param niters Number of iterations that the algorithm will run. Of course, as more iterations as\nbetter, but it is hard to quantitatively refine this statement, so just use the default and\nincrease it if the results are poor."]
+ok: FUNC <void cv..denoise_TVL1 [ARG vector_Mat observations=, ARG Mat result=, ARG double lambda=1.0, ARG int niters=30]>
+
+--- Incoming ---
+[u'const cv.LDR_SIZE', u'256', [], [], None, '']
+ok: CONST LDR_SIZE=256
+
+--- Incoming ---
+[   u'class cv.Tonemap',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief Base class for tonemapping algorithms - tools that are used to map HDR image to 8-bit range.']
+ok: class CLASS cv::.Tonemap : Algorithm, name: Tonemap, base: Algorithm
+
+--- Incoming ---
+[   u'cv.Tonemap.process',
+    u'void',
+    ['/V', '/PV'],
+    [['Mat', u'src', '', []], ['Mat', u'dst', '', ['/O']]],
+    u'void',
+    u'@brief Tonemaps image\n\n@param src source image - 32-bit 3-channel Mat\n@param dst destination image - 32-bit 3-channel Mat with values in [0, 1] range']
+ok: FUNC <void cv.Tonemap.process [ARG Mat src=, ARG Mat dst=]>
+
+--- Incoming ---
+[u'cv.Tonemap.getGamma', u'float', ['/C', '/V', '/PV'], [], u'float', '']
+ok: FUNC <float cv.Tonemap.getGamma []>
+
+--- Incoming ---
+[   u'cv.Tonemap.setGamma',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'gamma', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.Tonemap.setGamma [ARG float gamma=]>
+
+--- Incoming ---
+[   u'cv.createTonemap',
+    u'Ptr_Tonemap',
+    [],
+    [[u'float', u'gamma', u'1.0f', []]],
+    u'Ptr<Tonemap>',
+    u'@brief Creates simple linear mapper with gamma correction\n\n@param gamma positive value for gamma correction. Gamma value of 1.0 implies no correction, gamma\nequal to 2.2f is suitable for most displays.\nGenerally gamma \\> 1 brightens the image and gamma \\< 1 darkens it.']
+ok: FUNC <Ptr_Tonemap cv..createTonemap [ARG float gamma=1.0f]>
+
+--- Incoming ---
+[   u'class cv.TonemapDrago',
+    u': cv::Tonemap',
+    [],
+    [],
+    None,
+    u"@brief Adaptive logarithmic mapping is a fast global tonemapping algorithm that scales the image in\nlogarithmic domain.\n\nSince it's a global operator the same function is applied to all the pixels, it is controlled by the\nbias parameter.\n\nOptional saturation enhancement is possible as described in @cite FL02 .\n\nFor more information see @cite DM03 ."]
+ok: class CLASS cv::.TonemapDrago : Tonemap, name: TonemapDrago, base: Tonemap
+
+--- Incoming ---
+[   u'cv.TonemapDrago.getSaturation',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapDrago.getSaturation []>
+
+--- Incoming ---
+[   u'cv.TonemapDrago.setSaturation',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'saturation', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapDrago.setSaturation [ARG float saturation=]>
+
+--- Incoming ---
+[u'cv.TonemapDrago.getBias', u'float', ['/C', '/V', '/PV'], [], u'float', '']
+ok: FUNC <float cv.TonemapDrago.getBias []>
+
+--- Incoming ---
+[   u'cv.TonemapDrago.setBias',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'bias', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapDrago.setBias [ARG float bias=]>
+
+--- Incoming ---
+[   u'cv.createTonemapDrago',
+    u'Ptr_TonemapDrago',
+    [],
+    [   [u'float', u'gamma', u'1.0f', []],
+        [u'float', u'saturation', u'1.0f', []],
+        [u'float', u'bias', u'0.85f', []]],
+    u'Ptr<TonemapDrago>',
+    u'@brief Creates TonemapDrago object\n\n@param gamma gamma value for gamma correction. See createTonemap\n@param saturation positive saturation enhancement value. 1.0 preserves saturation, values greater\nthan 1 increase saturation and values less than 1 decrease it.\n@param bias value for bias function in [0, 1] range. Values from 0.7 to 0.9 usually give best\nresults, default value is 0.85.']
+ok: FUNC <Ptr_TonemapDrago cv..createTonemapDrago [ARG float gamma=1.0f, ARG float saturation=1.0f, ARG float bias=0.85f]>
+
+--- Incoming ---
+[   u'class cv.TonemapDurand',
+    u': cv::Tonemap',
+    [],
+    [],
+    None,
+    u'@brief This algorithm decomposes image into two layers: base layer and detail layer using bilateral filter\nand compresses contrast of the base layer thus preserving all the details.\n\nThis implementation uses regular bilateral filter from opencv.\n\nSaturation enhancement is possible as in ocvTonemapDrago.\n\nFor more information see @cite DD02 .']
+ok: class CLASS cv::.TonemapDurand : Tonemap, name: TonemapDurand, base: Tonemap
+
+--- Incoming ---
+[   u'cv.TonemapDurand.getSaturation',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapDurand.getSaturation []>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.setSaturation',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'saturation', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapDurand.setSaturation [ARG float saturation=]>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.getContrast',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapDurand.getContrast []>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.setContrast',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'contrast', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapDurand.setContrast [ARG float contrast=]>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.getSigmaSpace',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapDurand.getSigmaSpace []>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.setSigmaSpace',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'sigma_space', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapDurand.setSigmaSpace [ARG float sigma_space=]>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.getSigmaColor',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapDurand.getSigmaColor []>
+
+--- Incoming ---
+[   u'cv.TonemapDurand.setSigmaColor',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'sigma_color', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapDurand.setSigmaColor [ARG float sigma_color=]>
+
+--- Incoming ---
+[   u'cv.createTonemapDurand',
+    u'Ptr_TonemapDurand',
+    [],
+    [   [u'float', u'gamma', u'1.0f', []],
+        [u'float', u'contrast', u'4.0f', []],
+        [u'float', u'saturation', u'1.0f', []],
+        [u'float', u'sigma_space', u'2.0f', []],
+        [u'float', u'sigma_color', u'2.0f', []]],
+    u'Ptr<TonemapDurand>',
+    u'@brief Creates TonemapDurand object\n\n@param gamma gamma value for gamma correction. See createTonemap\n@param contrast resulting contrast on logarithmic scale, i. e. log(max / min), where max and min\nare maximum and minimum luminance values of the resulting image.\n@param saturation saturation enhancement value. See createTonemapDrago\n@param sigma_space bilateral filter sigma in color space\n@param sigma_color bilateral filter sigma in coordinate space']
+ok: FUNC <Ptr_TonemapDurand cv..createTonemapDurand [ARG float gamma=1.0f, ARG float contrast=4.0f, ARG float saturation=1.0f, ARG float sigma_space=2.0f, ARG float sigma_color=2.0f]>
+
+--- Incoming ---
+[   u'class cv.TonemapReinhard',
+    u': cv::Tonemap',
+    [],
+    [],
+    None,
+    u'@brief This is a global tonemapping operator that models human visual system.\n\nMapping function is controlled by adaptation parameter, that is computed using light adaptation and\ncolor adaptation.\n\nFor more information see @cite RD05 .']
+ok: class CLASS cv::.TonemapReinhard : Tonemap, name: TonemapReinhard, base: Tonemap
+
+--- Incoming ---
+[   u'cv.TonemapReinhard.getIntensity',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapReinhard.getIntensity []>
+
+--- Incoming ---
+[   u'cv.TonemapReinhard.setIntensity',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'intensity', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapReinhard.setIntensity [ARG float intensity=]>
+
+--- Incoming ---
+[   u'cv.TonemapReinhard.getLightAdaptation',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapReinhard.getLightAdaptation []>
+
+--- Incoming ---
+[   u'cv.TonemapReinhard.setLightAdaptation',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'light_adapt', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapReinhard.setLightAdaptation [ARG float light_adapt=]>
+
+--- Incoming ---
+[   u'cv.TonemapReinhard.getColorAdaptation',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapReinhard.getColorAdaptation []>
+
+--- Incoming ---
+[   u'cv.TonemapReinhard.setColorAdaptation',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'color_adapt', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapReinhard.setColorAdaptation [ARG float color_adapt=]>
+
+--- Incoming ---
+[   u'cv.createTonemapReinhard',
+    u'Ptr_TonemapReinhard',
+    [],
+    [   [u'float', u'gamma', u'1.0f', []],
+        [u'float', u'intensity', u'0.0f', []],
+        [u'float', u'light_adapt', u'1.0f', []],
+        [u'float', u'color_adapt', u'0.0f', []]],
+    u'Ptr<TonemapReinhard>',
+    u"@brief Creates TonemapReinhard object\n\n@param gamma gamma value for gamma correction. See createTonemap\n@param intensity result intensity in [-8, 8] range. Greater intensity produces brighter results.\n@param light_adapt light adaptation in [0, 1] range. If 1 adaptation is based only on pixel\nvalue, if 0 it's global, otherwise it's a weighted mean of this two cases.\n@param color_adapt chromatic adaptation in [0, 1] range. If 1 channels are treated independently,\nif 0 adaptation level is the same for each channel."]
+ok: FUNC <Ptr_TonemapReinhard cv..createTonemapReinhard [ARG float gamma=1.0f, ARG float intensity=0.0f, ARG float light_adapt=1.0f, ARG float color_adapt=0.0f]>
+
+--- Incoming ---
+[   u'class cv.TonemapMantiuk',
+    u': cv::Tonemap',
+    [],
+    [],
+    None,
+    u'@brief This algorithm transforms image to contrast using gradients on all levels of gaussian pyramid,\ntransforms contrast values to HVS response and scales the response. After this the image is\nreconstructed from new contrast values.\n\nFor more information see @cite MM06 .']
+ok: class CLASS cv::.TonemapMantiuk : Tonemap, name: TonemapMantiuk, base: Tonemap
+
+--- Incoming ---
+[   u'cv.TonemapMantiuk.getScale',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapMantiuk.getScale []>
+
+--- Incoming ---
+[   u'cv.TonemapMantiuk.setScale',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'scale', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapMantiuk.setScale [ARG float scale=]>
+
+--- Incoming ---
+[   u'cv.TonemapMantiuk.getSaturation',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.TonemapMantiuk.getSaturation []>
+
+--- Incoming ---
+[   u'cv.TonemapMantiuk.setSaturation',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'saturation', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.TonemapMantiuk.setSaturation [ARG float saturation=]>
+
+--- Incoming ---
+[   u'cv.createTonemapMantiuk',
+    u'Ptr_TonemapMantiuk',
+    [],
+    [   [u'float', u'gamma', u'1.0f', []],
+        [u'float', u'scale', u'0.7f', []],
+        [u'float', u'saturation', u'1.0f', []]],
+    u'Ptr<TonemapMantiuk>',
+    u'@brief Creates TonemapMantiuk object\n\n@param gamma gamma value for gamma correction. See createTonemap\n@param scale contrast scale factor. HVS response is multiplied by this parameter, thus compressing\ndynamic range. Values from 0.6 to 0.9 produce best results.\n@param saturation saturation enhancement value. See createTonemapDrago']
+ok: FUNC <Ptr_TonemapMantiuk cv..createTonemapMantiuk [ARG float gamma=1.0f, ARG float scale=0.7f, ARG float saturation=1.0f]>
+
+--- Incoming ---
+[   u'class cv.AlignExposures',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief The base class for algorithms that align images of the same scene with different exposures']
+ok: class CLASS cv::.AlignExposures : Algorithm, name: AlignExposures, base: Algorithm
+
+--- Incoming ---
+[   u'cv.AlignExposures.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        [u'vector_Mat', u'dst', u'', ['/Ref']],
+        ['Mat', u'times', '', []],
+        ['Mat', u'response', '', []]],
+    u'void',
+    u'@brief Aligns images\n\n@param src vector of input images\n@param dst vector of aligned images\n@param times vector of exposure time values for each image\n@param response 256x1 matrix with inverse camera response function for each pixel value, it should\nhave the same number of channels as images.']
+ok: FUNC <void cv.AlignExposures.process [ARG vector_Mat src=, ARG vector_Mat dst=, ARG Mat times=, ARG Mat response=]>
+
+--- Incoming ---
+[   u'class cv.AlignMTB',
+    u': cv::AlignExposures',
+    [],
+    [],
+    None,
+    u'@brief This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median\nluminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations.\n\nIt is invariant to exposure, so exposure values and camera response are not necessary.\n\nIn this implementation new image regions are filled with zeros.\n\nFor more information see @cite GW03 .']
+ok: class CLASS cv::.AlignMTB : AlignExposures, name: AlignMTB, base: AlignExposures
+
+--- Incoming ---
+[   u'cv.AlignMTB.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        [u'vector_Mat', u'dst', u'', ['/Ref']],
+        ['Mat', u'times', '', []],
+        ['Mat', u'response', '', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.AlignMTB.process [ARG vector_Mat src=, ARG vector_Mat dst=, ARG Mat times=, ARG Mat response=]>
+
+--- Incoming ---
+[   u'cv.AlignMTB.process',
+    u'void',
+    ['/V', '/PV'],
+    [['vector_Mat', u'src', '', []], [u'vector_Mat', u'dst', u'', ['/Ref']]],
+    u'void',
+    u"@brief Short version of process, that doesn't take extra arguments.\n\n@param src vector of input images\n@param dst vector of aligned images"]
+ok: FUNC <void cv.AlignMTB.process [ARG vector_Mat src=, ARG vector_Mat dst=]>
+
+--- Incoming ---
+[   u'cv.AlignMTB.calculateShift',
+    u'Point',
+    ['/V', '/PV'],
+    [['Mat', u'img0', '', []], ['Mat', u'img1', '', []]],
+    u'Point',
+    u'@brief Calculates shift between two images, i. e. how to shift the second image to correspond it with the\nfirst.\n\n@param img0 first image\n@param img1 second image']
+ok: FUNC <Point cv.AlignMTB.calculateShift [ARG Mat img0=, ARG Mat img1=]>
+
+--- Incoming ---
+[   u'cv.AlignMTB.shiftMat',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'Point', u'shift', u'', ['/C']]],
+    u'void',
+    u'@brief Helper function, that shift Mat filling new regions with zeros.\n\n@param src input image\n@param dst result image\n@param shift shift value']
+ok: FUNC <void cv.AlignMTB.shiftMat [ARG Mat src=, ARG Mat dst=, ARG Point shift=]>
+
+--- Incoming ---
+[   u'cv.AlignMTB.computeBitmaps',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'img', '', []],
+        ['Mat', u'tb', '', ['/O']],
+        ['Mat', u'eb', '', ['/O']]],
+    u'void',
+    u'@brief Computes median threshold and exclude bitmaps of given image.\n\n@param img input image\n@param tb median threshold bitmap\n@param eb exclude bitmap']
+ok: FUNC <void cv.AlignMTB.computeBitmaps [ARG Mat img=, ARG Mat tb=, ARG Mat eb=]>
+
+--- Incoming ---
+[u'cv.AlignMTB.getMaxBits', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.AlignMTB.getMaxBits []>
+
+--- Incoming ---
+[   u'cv.AlignMTB.setMaxBits',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'max_bits', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.AlignMTB.setMaxBits [ARG int max_bits=]>
+
+--- Incoming ---
+[u'cv.AlignMTB.getExcludeRange', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.AlignMTB.getExcludeRange []>
+
+--- Incoming ---
+[   u'cv.AlignMTB.setExcludeRange',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'exclude_range', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.AlignMTB.setExcludeRange [ARG int exclude_range=]>
+
+--- Incoming ---
+[u'cv.AlignMTB.getCut', u'bool', ['/C', '/V', '/PV'], [], u'bool', '']
+ok: FUNC <bool cv.AlignMTB.getCut []>
+
+--- Incoming ---
+[   u'cv.AlignMTB.setCut',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'value', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.AlignMTB.setCut [ARG bool value=]>
+
+--- Incoming ---
+[   u'cv.createAlignMTB',
+    u'Ptr_AlignMTB',
+    [],
+    [   [u'int', u'max_bits', u'6', []],
+        [u'int', u'exclude_range', u'4', []],
+        [u'bool', u'cut', u'true', []]],
+    u'Ptr<AlignMTB>',
+    u'@brief Creates AlignMTB object\n\n@param max_bits logarithm to the base 2 of maximal shift in each dimension. Values of 5 and 6 are\nusually good enough (31 and 63 pixels shift respectively).\n@param exclude_range range for exclusion bitmap that is constructed to suppress noise around the\nmedian value.\n@param cut if true cuts images, otherwise fills the new regions with zeros.']
+ok: FUNC <Ptr_AlignMTB cv..createAlignMTB [ARG int max_bits=6, ARG int exclude_range=4, ARG bool cut=true]>
+
+--- Incoming ---
+[   u'class cv.CalibrateCRF',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief The base class for camera response calibration algorithms.']
+ok: class CLASS cv::.CalibrateCRF : Algorithm, name: CalibrateCRF, base: Algorithm
+
+--- Incoming ---
+[   u'cv.CalibrateCRF.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []]],
+    u'void',
+    u'@brief Recovers inverse camera response.\n\n@param src vector of input images\n@param dst 256x1 matrix with inverse camera response function\n@param times vector of exposure time values for each image']
+ok: FUNC <void cv.CalibrateCRF.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=]>
+
+--- Incoming ---
+[   u'class cv.CalibrateDebevec',
+    u': cv::CalibrateCRF',
+    [],
+    [],
+    None,
+    u'@brief Inverse camera response function is extracted for each brightness value by minimizing an objective\nfunction as linear system. Objective function is constructed using pixel values on the same position\nin all images, extra term is added to make the result smoother.\n\nFor more information see @cite DM97 .']
+ok: class CLASS cv::.CalibrateDebevec : CalibrateCRF, name: CalibrateDebevec, base: CalibrateCRF
+
+--- Incoming ---
+[   u'cv.CalibrateDebevec.getLambda',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.CalibrateDebevec.getLambda []>
+
+--- Incoming ---
+[   u'cv.CalibrateDebevec.setLambda',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'lambda', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.CalibrateDebevec.setLambda [ARG float lambda=]>
+
+--- Incoming ---
+[   u'cv.CalibrateDebevec.getSamples',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.CalibrateDebevec.getSamples []>
+
+--- Incoming ---
+[   u'cv.CalibrateDebevec.setSamples',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'samples', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.CalibrateDebevec.setSamples [ARG int samples=]>
+
+--- Incoming ---
+[   u'cv.CalibrateDebevec.getRandom',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    '']
+ok: FUNC <bool cv.CalibrateDebevec.getRandom []>
+
+--- Incoming ---
+[   u'cv.CalibrateDebevec.setRandom',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'random', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.CalibrateDebevec.setRandom [ARG bool random=]>
+
+--- Incoming ---
+[   u'cv.createCalibrateDebevec',
+    u'Ptr_CalibrateDebevec',
+    [],
+    [   [u'int', u'samples', u'70', []],
+        [u'float', u'lambda', u'10.0f', []],
+        [u'bool', u'random', u'false', []]],
+    u'Ptr<CalibrateDebevec>',
+    u'@brief Creates CalibrateDebevec object\n\n@param samples number of pixel locations to use\n@param lambda smoothness term weight. Greater values produce smoother results, but can alter the\nresponse.\n@param random if true sample pixel locations are chosen at random, otherwise they form a\nrectangular grid.']
+ok: FUNC <Ptr_CalibrateDebevec cv..createCalibrateDebevec [ARG int samples=70, ARG float lambda=10.0f, ARG bool random=false]>
+
+--- Incoming ---
+[   u'class cv.CalibrateRobertson',
+    u': cv::CalibrateCRF',
+    [],
+    [],
+    None,
+    u'@brief Inverse camera response function is extracted for each brightness value by minimizing an objective\nfunction as linear system. This algorithm uses all image pixels.\n\nFor more information see @cite RB99 .']
+ok: class CLASS cv::.CalibrateRobertson : CalibrateCRF, name: CalibrateRobertson, base: CalibrateCRF
+
+--- Incoming ---
+[   u'cv.CalibrateRobertson.getMaxIter',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.CalibrateRobertson.getMaxIter []>
+
+--- Incoming ---
+[   u'cv.CalibrateRobertson.setMaxIter',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'max_iter', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.CalibrateRobertson.setMaxIter [ARG int max_iter=]>
+
+--- Incoming ---
+[   u'cv.CalibrateRobertson.getThreshold',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.CalibrateRobertson.getThreshold []>
+
+--- Incoming ---
+[   u'cv.CalibrateRobertson.setThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'threshold', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.CalibrateRobertson.setThreshold [ARG float threshold=]>
+
+--- Incoming ---
+[   u'cv.CalibrateRobertson.getRadiance',
+    u'Mat',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Mat',
+    '']
+ok: FUNC <Mat cv.CalibrateRobertson.getRadiance []>
+
+--- Incoming ---
+[   u'cv.createCalibrateRobertson',
+    u'Ptr_CalibrateRobertson',
+    [],
+    [[u'int', u'max_iter', u'30', []], [u'float', u'threshold', u'0.01f', []]],
+    u'Ptr<CalibrateRobertson>',
+    u'@brief Creates CalibrateRobertson object\n\n@param max_iter maximal number of Gauss-Seidel solver iterations.\n@param threshold target difference between results of two successive steps of the minimization.']
+ok: FUNC <Ptr_CalibrateRobertson cv..createCalibrateRobertson [ARG int max_iter=30, ARG float threshold=0.01f]>
+
+--- Incoming ---
+[   u'class cv.MergeExposures',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief The base class algorithms that can merge exposure sequence to a single image.']
+ok: class CLASS cv::.MergeExposures : Algorithm, name: MergeExposures, base: Algorithm
+
+--- Incoming ---
+[   u'cv.MergeExposures.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []],
+        ['Mat', u'response', '', []]],
+    u'void',
+    u'@brief Merges images.\n\n@param src vector of input images\n@param dst result image\n@param times vector of exposure time values for each image\n@param response 256x1 matrix with inverse camera response function for each pixel value, it should\nhave the same number of channels as images.']
+ok: FUNC <void cv.MergeExposures.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+
+--- Incoming ---
+[   u'class cv.MergeDebevec',
+    u': cv::MergeExposures',
+    [],
+    [],
+    None,
+    u'@brief The resulting HDR image is calculated as weighted average of the exposures considering exposure\nvalues and camera response.\n\nFor more information see @cite DM97 .']
+ok: class CLASS cv::.MergeDebevec : MergeExposures, name: MergeDebevec, base: MergeExposures
+
+--- Incoming ---
+[   u'cv.MergeDebevec.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []],
+        ['Mat', u'response', '', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeDebevec.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+
+--- Incoming ---
+[   u'cv.MergeDebevec.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeDebevec.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=]>
+
+--- Incoming ---
+[   u'cv.createMergeDebevec',
+    u'Ptr_MergeDebevec',
+    [],
+    [],
+    u'Ptr<MergeDebevec>',
+    u'@brief Creates MergeDebevec object']
+ok: FUNC <Ptr_MergeDebevec cv..createMergeDebevec []>
+
+--- Incoming ---
+[   u'class cv.MergeMertens',
+    u': cv::MergeExposures',
+    [],
+    [],
+    None,
+    u"@brief Pixels are weighted using contrast, saturation and well-exposedness measures, than images are\ncombined using laplacian pyramids.\n\nThe resulting image weight is constructed as weighted average of contrast, saturation and\nwell-exposedness measures.\n\nThe resulting image doesn't require tonemapping and can be converted to 8-bit image by multiplying\nby 255, but it's recommended to apply gamma correction and/or linear tonemapping.\n\nFor more information see @cite MK07 ."]
+ok: class CLASS cv::.MergeMertens : MergeExposures, name: MergeMertens, base: MergeExposures
+
+--- Incoming ---
+[   u'cv.MergeMertens.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []],
+        ['Mat', u'response', '', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeMertens.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+
+--- Incoming ---
+[   u'cv.MergeMertens.process',
+    u'void',
+    ['/V', '/PV'],
+    [['vector_Mat', u'src', '', []], ['Mat', u'dst', '', ['/O']]],
+    u'void',
+    u"@brief Short version of process, that doesn't take extra arguments.\n\n@param src vector of input images\n@param dst result image"]
+ok: FUNC <void cv.MergeMertens.process [ARG vector_Mat src=, ARG Mat dst=]>
+
+--- Incoming ---
+[   u'cv.MergeMertens.getContrastWeight',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.MergeMertens.getContrastWeight []>
+
+--- Incoming ---
+[   u'cv.MergeMertens.setContrastWeight',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'contrast_weiht', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeMertens.setContrastWeight [ARG float contrast_weiht=]>
+
+--- Incoming ---
+[   u'cv.MergeMertens.getSaturationWeight',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.MergeMertens.getSaturationWeight []>
+
+--- Incoming ---
+[   u'cv.MergeMertens.setSaturationWeight',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'saturation_weight', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeMertens.setSaturationWeight [ARG float saturation_weight=]>
+
+--- Incoming ---
+[   u'cv.MergeMertens.getExposureWeight',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    '']
+ok: FUNC <float cv.MergeMertens.getExposureWeight []>
+
+--- Incoming ---
+[   u'cv.MergeMertens.setExposureWeight',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'exposure_weight', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeMertens.setExposureWeight [ARG float exposure_weight=]>
+
+--- Incoming ---
+[   u'cv.createMergeMertens',
+    u'Ptr_MergeMertens',
+    [],
+    [   [u'float', u'contrast_weight', u'1.0f', []],
+        [u'float', u'saturation_weight', u'1.0f', []],
+        [u'float', u'exposure_weight', u'0.0f', []]],
+    u'Ptr<MergeMertens>',
+    u'@brief Creates MergeMertens object\n\n@param contrast_weight contrast measure weight. See MergeMertens.\n@param saturation_weight saturation measure weight\n@param exposure_weight well-exposedness measure weight']
+ok: FUNC <Ptr_MergeMertens cv..createMergeMertens [ARG float contrast_weight=1.0f, ARG float saturation_weight=1.0f, ARG float exposure_weight=0.0f]>
+
+--- Incoming ---
+[   u'class cv.MergeRobertson',
+    u': cv::MergeExposures',
+    [],
+    [],
+    None,
+    u'@brief The resulting HDR image is calculated as weighted average of the exposures considering exposure\nvalues and camera response.\n\nFor more information see @cite RB99 .']
+ok: class CLASS cv::.MergeRobertson : MergeExposures, name: MergeRobertson, base: MergeExposures
+
+--- Incoming ---
+[   u'cv.MergeRobertson.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []],
+        ['Mat', u'response', '', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeRobertson.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+
+--- Incoming ---
+[   u'cv.MergeRobertson.process',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'times', '', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.MergeRobertson.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=]>
+
+--- Incoming ---
+[   u'cv.createMergeRobertson',
+    u'Ptr_MergeRobertson',
+    [],
+    [],
+    u'Ptr<MergeRobertson>',
+    u'@brief Creates MergeRobertson object']
+ok: FUNC <Ptr_MergeRobertson cv..createMergeRobertson []>
+
+--- Incoming ---
+[   u'cv.decolor',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'grayscale', '', ['/O']],
+        ['Mat', u'color_boost', '', ['/O']]],
+    u'void',
+    u'@brief Transforms a color image to a grayscale image. It is a basic tool in digital printing, stylized\nblack-and-white photograph rendering, and in many single channel image processing applications\n@cite CL12 .\n\n@param src Input 8-bit 3-channel image.\n@param grayscale Output 8-bit 1-channel image.\n@param color_boost Output 8-bit 3-channel image.\n\nThis function is to be applied on color images.']
+ok: FUNC <void cv..decolor [ARG Mat src=, ARG Mat grayscale=, ARG Mat color_boost=]>
+
+--- Incoming ---
+[   u'cv.seamlessClone',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', []],
+        ['Mat', u'mask', '', []],
+        [u'Point', u'p', u'', []],
+        ['Mat', u'blend', '', ['/O']],
+        [u'int', u'flags', u'', []]],
+    u'void',
+    u'@brief Image editing tasks concern either global changes (color/intensity corrections, filters,\ndeformations) or local changes concerned to a selection. Here we are interested in achieving local\nchanges, ones that are restricted to a region manually selected (ROI), in a seamless and effortless\nmanner. The extent of the changes ranges from slight distortions to complete replacement by novel\ncontent @cite PM03 .\n\n@param src Input 8-bit 3-channel image.\n@param dst Input 8-bit 3-channel image.\n@param mask Input 8-bit 1 or 3-channel image.\n@param p Point in dst image where object is placed.\n@param blend Output image with the same size and type as dst.\n@param flags Cloning method that could be one of the following:\n-   **NORMAL_CLONE** The power of the method is fully expressed when inserting objects with\ncomplex outlines into a new background\n-   **MIXED_CLONE** The classic method, color-based selection and alpha masking might be time\nconsuming and often leaves an undesirable halo. Seamless cloning, even averaged with the\noriginal image, is not effective. Mixed seamless cloning based on a loose selection proves\neffective.\n-   **MONOCHROME_TRANSFER** Monochrome transfer allows the user to easily replace certain features of\none object by alternative features.']
+ok: FUNC <void cv..seamlessClone [ARG Mat src=, ARG Mat dst=, ARG Mat mask=, ARG Point p=, ARG Mat blend=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.colorChange',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'mask', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'red_mul', u'1.0f', []],
+        [u'float', u'green_mul', u'1.0f', []],
+        [u'float', u'blue_mul', u'1.0f', []]],
+    u'void',
+    u'@brief Given an original color image, two differently colored versions of this image can be mixed\nseamlessly.\n\n@param src Input 8-bit 3-channel image.\n@param mask Input 8-bit 1 or 3-channel image.\n@param dst Output image with the same size and type as src .\n@param red_mul R-channel multiply factor.\n@param green_mul G-channel multiply factor.\n@param blue_mul B-channel multiply factor.\n\nMultiplication factor is between .5 to 2.5.']
+ok: FUNC <void cv..colorChange [ARG Mat src=, ARG Mat mask=, ARG Mat dst=, ARG float red_mul=1.0f, ARG float green_mul=1.0f, ARG float blue_mul=1.0f]>
+
+--- Incoming ---
+[   u'cv.illuminationChange',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'mask', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'alpha', u'0.2f', []],
+        [u'float', u'beta', u'0.4f', []]],
+    u'void',
+    u'@brief Applying an appropriate non-linear transformation to the gradient field inside the selection and\nthen integrating back with a Poisson solver, modifies locally the apparent illumination of an image.\n\n@param src Input 8-bit 3-channel image.\n@param mask Input 8-bit 1 or 3-channel image.\n@param dst Output image with the same size and type as src.\n@param alpha Value ranges between 0-2.\n@param beta Value ranges between 0-2.\n\nThis is useful to highlight under-exposed foreground objects or to reduce specular reflections.']
+ok: FUNC <void cv..illuminationChange [ARG Mat src=, ARG Mat mask=, ARG Mat dst=, ARG float alpha=0.2f, ARG float beta=0.4f]>
+
+--- Incoming ---
+[   u'cv.textureFlattening',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'mask', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'low_threshold', u'30', []],
+        [u'float', u'high_threshold', u'45', []],
+        [u'int', u'kernel_size', u'3', []]],
+    u'void',
+    u"@brief By retaining only the gradients at edge locations, before integrating with the Poisson solver, one\nwashes out the texture of the selected region, giving its contents a flat aspect. Here Canny Edge\nDetector is used.\n\n@param src Input 8-bit 3-channel image.\n@param mask Input 8-bit 1 or 3-channel image.\n@param dst Output image with the same size and type as src.\n@param low_threshold Range from 0 to 100.\n@param high_threshold Value \\> 100.\n@param kernel_size The size of the Sobel kernel to be used.\n\n**NOTE:**\n\nThe algorithm assumes that the color of the source image is close to that of the destination. This\nassumption means that when the colors don't match, the source image color gets tinted toward the\ncolor of the destination image."]
+ok: FUNC <void cv..textureFlattening [ARG Mat src=, ARG Mat mask=, ARG Mat dst=, ARG float low_threshold=30, ARG float high_threshold=45, ARG int kernel_size=3]>
+
+--- Incoming ---
+[   u'cv.edgePreservingFilter',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'int', u'flags', u'1', []],
+        [u'float', u'sigma_s', u'60', []],
+        [u'float', u'sigma_r', u'0.4f', []]],
+    u'void',
+    u'@brief Filtering is the fundamental operation in image and video processing. Edge-preserving smoothing\nfilters are used in many different applications @cite EM11 .\n\n@param src Input 8-bit 3-channel image.\n@param dst Output 8-bit 3-channel image.\n@param flags Edge preserving filters:\n-   **RECURS_FILTER** = 1\n-   **NORMCONV_FILTER** = 2\n@param sigma_s Range between 0 to 200.\n@param sigma_r Range between 0 to 1.']
+ok: FUNC <void cv..edgePreservingFilter [ARG Mat src=, ARG Mat dst=, ARG int flags=1, ARG float sigma_s=60, ARG float sigma_r=0.4f]>
+
+--- Incoming ---
+[   u'cv.detailEnhance',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'sigma_s', u'10', []],
+        [u'float', u'sigma_r', u'0.15f', []]],
+    u'void',
+    u'@brief This filter enhances the details of a particular image.\n\n@param src Input 8-bit 3-channel image.\n@param dst Output image with the same size and type as src.\n@param sigma_s Range between 0 to 200.\n@param sigma_r Range between 0 to 1.']
+ok: FUNC <void cv..detailEnhance [ARG Mat src=, ARG Mat dst=, ARG float sigma_s=10, ARG float sigma_r=0.15f]>
+
+--- Incoming ---
+[   u'cv.pencilSketch',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst1', '', ['/O']],
+        ['Mat', u'dst2', '', ['/O']],
+        [u'float', u'sigma_s', u'60', []],
+        [u'float', u'sigma_r', u'0.07f', []],
+        [u'float', u'shade_factor', u'0.02f', []]],
+    u'void',
+    u'@brief Pencil-like non-photorealistic line drawing\n\n@param src Input 8-bit 3-channel image.\n@param dst1 Output 8-bit 1-channel image.\n@param dst2 Output image with the same size and type as src.\n@param sigma_s Range between 0 to 200.\n@param sigma_r Range between 0 to 1.\n@param shade_factor Range between 0 to 0.1.']
+ok: FUNC <void cv..pencilSketch [ARG Mat src=, ARG Mat dst1=, ARG Mat dst2=, ARG float sigma_s=60, ARG float sigma_r=0.07f, ARG float shade_factor=0.02f]>
+
+--- Incoming ---
+[   u'cv.stylization',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        [u'float', u'sigma_s', u'60', []],
+        [u'float', u'sigma_r', u'0.45f', []]],
+    u'void',
+    u'@brief Stylization aims to produce digital imagery with a wide variety of effects not focused on\nphotorealism. Edge-aware filters are ideal for stylization, as they can abstract regions of low\ncontrast while preserving, or enhancing, high-contrast features.\n\n@param src Input 8-bit 3-channel image.\n@param dst Output image with the same size and type as src.\n@param sigma_s Range between 0 to 200.\n@param sigma_r Range between 0 to 1.']
+ok: FUNC <void cv..stylization [ARG Mat src=, ARG Mat dst=, ARG float sigma_s=60, ARG float sigma_r=0.45f]>
+
+
+===== Header: /Users/Chao/opencv/modules/photo/include/opencv2/photo/cuda.hpp =====
+Namespaces: set(['', u'cv.cuda', u'cv'])
+Ignore header: /Users/Chao/opencv/modules/photo/include/opencv2/photo/cuda.hpp
+
+
+===== Header: /Users/Chao/opencv/modules/photo/include/opencv2/photo/photo.hpp =====
+Namespaces: set(['', u'cv.cuda', u'cv'])
+Ignore header: /Users/Chao/opencv/modules/photo/include/opencv2/photo/photo.hpp
+
+
+===== Generating... =====
+CLASS cv::.CalibrateRobertson : CalibrateCRF
+FUNC <Mat cv.CalibrateRobertson.getRadiance []>
+java: Mat getRadiance()
+FUNC <float cv.CalibrateRobertson.getThreshold []>
+java: float getThreshold()
+FUNC <int cv.CalibrateRobertson.getMaxIter []>
+java: int getMaxIter()
+FUNC <void cv.CalibrateRobertson.setMaxIter [ARG int max_iter=]>
+java: void setMaxIter(int max_iter)
+FUNC <void cv.CalibrateRobertson.setThreshold [ARG float threshold=]>
+java: void setThreshold(float threshold)
+CLASS cv::.TonemapMantiuk : Tonemap
+FUNC <float cv.TonemapMantiuk.getSaturation []>
+java: float getSaturation()
+FUNC <float cv.TonemapMantiuk.getScale []>
+java: float getScale()
+FUNC <void cv.TonemapMantiuk.setSaturation [ARG float saturation=]>
+java: void setSaturation(float saturation)
+FUNC <void cv.TonemapMantiuk.setScale [ARG float scale=]>
+java: void setScale(float scale)
+CLASS cv::.TonemapDurand : Tonemap
+FUNC <float cv.TonemapDurand.getContrast []>
+java: float getContrast()
+FUNC <float cv.TonemapDurand.getSaturation []>
+java: float getSaturation()
+FUNC <float cv.TonemapDurand.getSigmaColor []>
+java: float getSigmaColor()
+FUNC <float cv.TonemapDurand.getSigmaSpace []>
+java: float getSigmaSpace()
+FUNC <void cv.TonemapDurand.setContrast [ARG float contrast=]>
+java: void setContrast(float contrast)
+FUNC <void cv.TonemapDurand.setSaturation [ARG float saturation=]>
+java: void setSaturation(float saturation)
+FUNC <void cv.TonemapDurand.setSigmaColor [ARG float sigma_color=]>
+java: void setSigmaColor(float sigma_color)
+FUNC <void cv.TonemapDurand.setSigmaSpace [ARG float sigma_space=]>
+java: void setSigmaSpace(float sigma_space)
+CLASS cv::.CalibrateDebevec : CalibrateCRF
+FUNC <bool cv.CalibrateDebevec.getRandom []>
+java: boolean getRandom()
+FUNC <float cv.CalibrateDebevec.getLambda []>
+java: float getLambda()
+FUNC <int cv.CalibrateDebevec.getSamples []>
+java: int getSamples()
+FUNC <void cv.CalibrateDebevec.setLambda [ARG float lambda=]>
+java: void setLambda(float lambda)
+FUNC <void cv.CalibrateDebevec.setRandom [ARG bool random=]>
+java: void setRandom(boolean random)
+FUNC <void cv.CalibrateDebevec.setSamples [ARG int samples=]>
+java: void setSamples(int samples)
+CLASS cv::.TonemapReinhard : Tonemap
+FUNC <float cv.TonemapReinhard.getColorAdaptation []>
+java: float getColorAdaptation()
+FUNC <float cv.TonemapReinhard.getIntensity []>
+java: float getIntensity()
+FUNC <float cv.TonemapReinhard.getLightAdaptation []>
+java: float getLightAdaptation()
+FUNC <void cv.TonemapReinhard.setColorAdaptation [ARG float color_adapt=]>
+java: void setColorAdaptation(float color_adapt)
+FUNC <void cv.TonemapReinhard.setIntensity [ARG float intensity=]>
+java: void setIntensity(float intensity)
+FUNC <void cv.TonemapReinhard.setLightAdaptation [ARG float light_adapt=]>
+java: void setLightAdaptation(float light_adapt)
+CLASS ::.Photo : 
+[CONST CV_INPAINT_NS=0, CONST CV_INPAINT_TELEA=1]
+[CONST INPAINT_NS=0, CONST INPAINT_TELEA=1, CONST NORMAL_CLONE=1, CONST MIXED_CLONE=2, CONST MONOCHROME_TRANSFER=3, CONST RECURS_FILTER=1, CONST NORMCONV_FILTER=2, CONST LDR_SIZE=256]
+FUNC <Ptr_AlignMTB cv..createAlignMTB [ARG int max_bits=6, ARG int exclude_range=4, ARG bool cut=true]>
+java: AlignMTB createAlignMTB(int max_bits, int exclude_range, boolean cut)
+java: AlignMTB createAlignMTB()
+FUNC <Ptr_CalibrateDebevec cv..createCalibrateDebevec [ARG int samples=70, ARG float lambda=10.0f, ARG bool random=false]>
+java: CalibrateDebevec createCalibrateDebevec(int samples, float lambda, boolean random)
+java: CalibrateDebevec createCalibrateDebevec()
+FUNC <Ptr_CalibrateRobertson cv..createCalibrateRobertson [ARG int max_iter=30, ARG float threshold=0.01f]>
+java: CalibrateRobertson createCalibrateRobertson(int max_iter, float threshold)
+java: CalibrateRobertson createCalibrateRobertson()
+FUNC <Ptr_MergeDebevec cv..createMergeDebevec []>
+java: MergeDebevec createMergeDebevec()
+FUNC <Ptr_MergeMertens cv..createMergeMertens [ARG float contrast_weight=1.0f, ARG float saturation_weight=1.0f, ARG float exposure_weight=0.0f]>
+java: MergeMertens createMergeMertens(float contrast_weight, float saturation_weight, float exposure_weight)
+java: MergeMertens createMergeMertens()
+FUNC <Ptr_MergeRobertson cv..createMergeRobertson []>
+java: MergeRobertson createMergeRobertson()
+FUNC <Ptr_Tonemap cv..createTonemap [ARG float gamma=1.0f]>
+java: Tonemap createTonemap(float gamma)
+java: Tonemap createTonemap()
+FUNC <Ptr_TonemapDrago cv..createTonemapDrago [ARG float gamma=1.0f, ARG float saturation=1.0f, ARG float bias=0.85f]>
+java: TonemapDrago createTonemapDrago(float gamma, float saturation, float bias)
+java: TonemapDrago createTonemapDrago()
+FUNC <Ptr_TonemapDurand cv..createTonemapDurand [ARG float gamma=1.0f, ARG float contrast=4.0f, ARG float saturation=1.0f, ARG float sigma_space=2.0f, ARG float sigma_color=2.0f]>
+java: TonemapDurand createTonemapDurand(float gamma, float contrast, float saturation, float sigma_space, float sigma_color)
+java: TonemapDurand createTonemapDurand()
+FUNC <Ptr_TonemapMantiuk cv..createTonemapMantiuk [ARG float gamma=1.0f, ARG float scale=0.7f, ARG float saturation=1.0f]>
+java: TonemapMantiuk createTonemapMantiuk(float gamma, float scale, float saturation)
+java: TonemapMantiuk createTonemapMantiuk()
+FUNC <Ptr_TonemapReinhard cv..createTonemapReinhard [ARG float gamma=1.0f, ARG float intensity=0.0f, ARG float light_adapt=1.0f, ARG float color_adapt=0.0f]>
+java: TonemapReinhard createTonemapReinhard(float gamma, float intensity, float light_adapt, float color_adapt)
+java: TonemapReinhard createTonemapReinhard()
+FUNC <void cv..colorChange [ARG Mat src=, ARG Mat mask=, ARG Mat dst=, ARG float red_mul=1.0f, ARG float green_mul=1.0f, ARG float blue_mul=1.0f]>
+java: void colorChange(Mat src, Mat mask, Mat dst, float red_mul, float green_mul, float blue_mul)
+java: void colorChange(Mat src, Mat mask, Mat dst)
+FUNC <void cv..decolor [ARG Mat src=, ARG Mat grayscale=, ARG Mat color_boost=]>
+java: void decolor(Mat src, Mat grayscale, Mat color_boost)
+FUNC <void cv..denoise_TVL1 [ARG vector_Mat observations=, ARG Mat result=, ARG double lambda=1.0, ARG int niters=30]>
+java: void denoise_TVL1(List<Mat> observations, Mat result, double lambda, int niters)
+java: void denoise_TVL1(List<Mat> observations, Mat result)
+FUNC <void cv..detailEnhance [ARG Mat src=, ARG Mat dst=, ARG float sigma_s=10, ARG float sigma_r=0.15f]>
+java: void detailEnhance(Mat src, Mat dst, float sigma_s, float sigma_r)
+java: void detailEnhance(Mat src, Mat dst)
+FUNC <void cv..edgePreservingFilter [ARG Mat src=, ARG Mat dst=, ARG int flags=1, ARG float sigma_s=60, ARG float sigma_r=0.4f]>
+java: void edgePreservingFilter(Mat src, Mat dst, int flags, float sigma_s, float sigma_r)
+java: void edgePreservingFilter(Mat src, Mat dst)
+FUNC <void cv..fastNlMeansDenoising [ARG Mat src=, ARG Mat dst=, ARG float h=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+java: void fastNlMeansDenoising(Mat src, Mat dst, float h, int templateWindowSize, int searchWindowSize)
+java: void fastNlMeansDenoising(Mat src, Mat dst)
+FUNC <void cv..fastNlMeansDenoising [ARG Mat src=, ARG Mat dst=, ARG vector_float h=, ARG int templateWindowSize=7, ARG int searchWindowSize=21, ARG int normType=NORM_L2]>
+java: void fastNlMeansDenoising(Mat src, Mat dst, MatOfFloat h, int templateWindowSize, int searchWindowSize, int normType)
+java: void fastNlMeansDenoising(Mat src, Mat dst, MatOfFloat h)
+FUNC <void cv..fastNlMeansDenoisingColored [ARG Mat src=, ARG Mat dst=, ARG float h=3, ARG float hColor=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+java: void fastNlMeansDenoisingColored(Mat src, Mat dst, float h, float hColor, int templateWindowSize, int searchWindowSize)
+java: void fastNlMeansDenoisingColored(Mat src, Mat dst)
+FUNC <void cv..fastNlMeansDenoisingColoredMulti [ARG vector_Mat srcImgs=, ARG Mat dst=, ARG int imgToDenoiseIndex=, ARG int temporalWindowSize=, ARG float h=3, ARG float hColor=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+java: void fastNlMeansDenoisingColoredMulti(List<Mat> srcImgs, Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, float hColor, int templateWindowSize, int searchWindowSize)
+java: void fastNlMeansDenoisingColoredMulti(List<Mat> srcImgs, Mat dst, int imgToDenoiseIndex, int temporalWindowSize)
+FUNC <void cv..fastNlMeansDenoisingMulti [ARG vector_Mat srcImgs=, ARG Mat dst=, ARG int imgToDenoiseIndex=, ARG int temporalWindowSize=, ARG float h=3, ARG int templateWindowSize=7, ARG int searchWindowSize=21]>
+java: void fastNlMeansDenoisingMulti(List<Mat> srcImgs, Mat dst, int imgToDenoiseIndex, int temporalWindowSize, float h, int templateWindowSize, int searchWindowSize)
+java: void fastNlMeansDenoisingMulti(List<Mat> srcImgs, Mat dst, int imgToDenoiseIndex, int temporalWindowSize)
+FUNC <void cv..fastNlMeansDenoisingMulti [ARG vector_Mat srcImgs=, ARG Mat dst=, ARG int imgToDenoiseIndex=, ARG int temporalWindowSize=, ARG vector_float h=, ARG int templateWindowSize=7, ARG int searchWindowSize=21, ARG int normType=NORM_L2]>
+java: void fastNlMeansDenoisingMulti(List<Mat> srcImgs, Mat dst, int imgToDenoiseIndex, int temporalWindowSize, MatOfFloat h, int templateWindowSize, int searchWindowSize, int normType)
+java: void fastNlMeansDenoisingMulti(List<Mat> srcImgs, Mat dst, int imgToDenoiseIndex, int temporalWindowSize, MatOfFloat h)
+FUNC <void cv..illuminationChange [ARG Mat src=, ARG Mat mask=, ARG Mat dst=, ARG float alpha=0.2f, ARG float beta=0.4f]>
+java: void illuminationChange(Mat src, Mat mask, Mat dst, float alpha, float beta)
+java: void illuminationChange(Mat src, Mat mask, Mat dst)
+FUNC <void cv..inpaint [ARG Mat src=, ARG Mat inpaintMask=, ARG Mat dst=, ARG double inpaintRadius=, ARG int flags=]>
+java: void inpaint(Mat src, Mat inpaintMask, Mat dst, double inpaintRadius, int flags)
+FUNC <void cv..pencilSketch [ARG Mat src=, ARG Mat dst1=, ARG Mat dst2=, ARG float sigma_s=60, ARG float sigma_r=0.07f, ARG float shade_factor=0.02f]>
+java: void pencilSketch(Mat src, Mat dst1, Mat dst2, float sigma_s, float sigma_r, float shade_factor)
+java: void pencilSketch(Mat src, Mat dst1, Mat dst2)
+FUNC <void cv..seamlessClone [ARG Mat src=, ARG Mat dst=, ARG Mat mask=, ARG Point p=, ARG Mat blend=, ARG int flags=]>
+java: void seamlessClone(Mat src, Mat dst, Mat mask, Point p, Mat blend, int flags)
+FUNC <void cv..stylization [ARG Mat src=, ARG Mat dst=, ARG float sigma_s=60, ARG float sigma_r=0.45f]>
+java: void stylization(Mat src, Mat dst, float sigma_s, float sigma_r)
+java: void stylization(Mat src, Mat dst)
+FUNC <void cv..textureFlattening [ARG Mat src=, ARG Mat mask=, ARG Mat dst=, ARG float low_threshold=30, ARG float high_threshold=45, ARG int kernel_size=3]>
+java: void textureFlattening(Mat src, Mat mask, Mat dst, float low_threshold, float high_threshold, int kernel_size)
+java: void textureFlattening(Mat src, Mat mask, Mat dst)
+CLASS cv::.AlignExposures : Algorithm
+FUNC <void cv.AlignExposures.process [ARG vector_Mat src=, ARG vector_Mat dst=, ARG Mat times=, ARG Mat response=]>
+java: void process(List<Mat> src, List<Mat> dst, Mat times, Mat response)
+CLASS cv::.CalibrateCRF : Algorithm
+FUNC <void cv.CalibrateCRF.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=]>
+java: void process(List<Mat> src, Mat dst, Mat times)
+CLASS cv::.TonemapDrago : Tonemap
+FUNC <float cv.TonemapDrago.getBias []>
+java: float getBias()
+FUNC <float cv.TonemapDrago.getSaturation []>
+java: float getSaturation()
+FUNC <void cv.TonemapDrago.setBias [ARG float bias=]>
+java: void setBias(float bias)
+FUNC <void cv.TonemapDrago.setSaturation [ARG float saturation=]>
+java: void setSaturation(float saturation)
+CLASS cv::.AlignMTB : AlignExposures
+FUNC <Point cv.AlignMTB.calculateShift [ARG Mat img0=, ARG Mat img1=]>
+java: Point calculateShift(Mat img0, Mat img1)
+FUNC <bool cv.AlignMTB.getCut []>
+java: boolean getCut()
+FUNC <int cv.AlignMTB.getExcludeRange []>
+java: int getExcludeRange()
+FUNC <int cv.AlignMTB.getMaxBits []>
+java: int getMaxBits()
+FUNC <void cv.AlignMTB.computeBitmaps [ARG Mat img=, ARG Mat tb=, ARG Mat eb=]>
+java: void computeBitmaps(Mat img, Mat tb, Mat eb)
+FUNC <void cv.AlignMTB.process [ARG vector_Mat src=, ARG vector_Mat dst=, ARG Mat times=, ARG Mat response=]>
+java: void process(List<Mat> src, List<Mat> dst, Mat times, Mat response)
+FUNC <void cv.AlignMTB.process [ARG vector_Mat src=, ARG vector_Mat dst=]>
+java: void process(List<Mat> src, List<Mat> dst)
+FUNC <void cv.AlignMTB.setCut [ARG bool value=]>
+java: void setCut(boolean value)
+FUNC <void cv.AlignMTB.setExcludeRange [ARG int exclude_range=]>
+java: void setExcludeRange(int exclude_range)
+FUNC <void cv.AlignMTB.setMaxBits [ARG int max_bits=]>
+java: void setMaxBits(int max_bits)
+FUNC <void cv.AlignMTB.shiftMat [ARG Mat src=, ARG Mat dst=, ARG Point shift=]>
+java: void shiftMat(Mat src, Mat dst, Point shift)
+CLASS cv::.MergeDebevec : MergeExposures
+FUNC <void cv.MergeDebevec.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+java: void process(List<Mat> src, Mat dst, Mat times, Mat response)
+FUNC <void cv.MergeDebevec.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=]>
+java: void process(List<Mat> src, Mat dst, Mat times)
+CLASS cv::.MergeMertens : MergeExposures
+FUNC <float cv.MergeMertens.getContrastWeight []>
+java: float getContrastWeight()
+FUNC <float cv.MergeMertens.getExposureWeight []>
+java: float getExposureWeight()
+FUNC <float cv.MergeMertens.getSaturationWeight []>
+java: float getSaturationWeight()
+FUNC <void cv.MergeMertens.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+java: void process(List<Mat> src, Mat dst, Mat times, Mat response)
+FUNC <void cv.MergeMertens.process [ARG vector_Mat src=, ARG Mat dst=]>
+java: void process(List<Mat> src, Mat dst)
+FUNC <void cv.MergeMertens.setContrastWeight [ARG float contrast_weiht=]>
+java: void setContrastWeight(float contrast_weiht)
+FUNC <void cv.MergeMertens.setExposureWeight [ARG float exposure_weight=]>
+java: void setExposureWeight(float exposure_weight)
+FUNC <void cv.MergeMertens.setSaturationWeight [ARG float saturation_weight=]>
+java: void setSaturationWeight(float saturation_weight)
+CLASS cv::.MergeExposures : Algorithm
+FUNC <void cv.MergeExposures.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+java: void process(List<Mat> src, Mat dst, Mat times, Mat response)
+CLASS cv::.MergeRobertson : MergeExposures
+FUNC <void cv.MergeRobertson.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=, ARG Mat response=]>
+java: void process(List<Mat> src, Mat dst, Mat times, Mat response)
+FUNC <void cv.MergeRobertson.process [ARG vector_Mat src=, ARG Mat dst=, ARG Mat times=]>
+java: void process(List<Mat> src, Mat dst, Mat times)
+CLASS cv::.Tonemap : Algorithm
+FUNC <float cv.Tonemap.getGamma []>
+java: float getGamma()
+FUNC <void cv.Tonemap.process [ARG Mat src=, ARG Mat dst=]>
+java: void process(Mat src, Mat dst)
+FUNC <void cv.Tonemap.setGamma [ARG float gamma=]>
+java: void setGamma(float gamma)

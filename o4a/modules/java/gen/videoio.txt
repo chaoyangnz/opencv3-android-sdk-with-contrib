@@ -1,0 +1,34 @@
+PORTED FUNCs LIST (26 of 26):
+
+  VideoWriter(String filename, int apiPreference, int fourcc, double fps, Size frameSize, bool isColor = true)
+  VideoWriter(String filename, int fourcc, double fps, Size frameSize, bool isColor = true)
+  VideoWriter()
+ bool isOpened()
+ bool open(String filename, int apiPreference, int fourcc, double fps, Size frameSize, bool isColor = true)
+ bool open(String filename, int fourcc, double fps, Size frameSize, bool isColor = true)
+ bool set(int propId, double value)
+ double get(int propId)
+static int fourcc(char c1, char c2, char c3, char c4)
+ void release()
+ void write(Mat image)
+  VideoCapture(String filename, int apiPreference)
+  VideoCapture(String filename)
+  VideoCapture(int index)
+  VideoCapture()
+ bool grab()
+ bool isOpened()
+ bool open(String filename, int apiPreference)
+ bool open(String filename)
+ bool open(int cameraNum, int apiPreference)
+ bool open(int index)
+ bool read(Mat& image)
+ bool retrieve(Mat& image, int flag = 0)
+ bool set(int propId, double value)
+ double get(int propId)
+ void release()
+
+SKIPPED FUNCs LIST (0 of 26):
+
+
+0 def args - 21 funcs
+1 def args - 5 funcs

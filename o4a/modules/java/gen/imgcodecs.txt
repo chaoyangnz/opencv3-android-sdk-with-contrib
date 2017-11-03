@@ -1,0 +1,13 @@
+PORTED FUNCs LIST (5 of 5):
+
+ Mat imdecode(Mat buf, int flags)
+ Mat imread(String filename, int flags = IMREAD_COLOR)
+ bool imencode(String ext, Mat img, vector_uchar& buf, vector_int params = std::vector<int>())
+ bool imreadmulti(String filename, vector_Mat& mats, int flags = IMREAD_ANYCOLOR)
+ bool imwrite(String filename, Mat img, vector_int params = std::vector<int>())
+
+SKIPPED FUNCs LIST (0 of 5):
+
+
+0 def args - 1 funcs
+1 def args - 4 funcs

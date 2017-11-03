@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:14
+-keep class org.opencv.samples.puzzle15.Puzzle15Activity { <init>(...); }
+

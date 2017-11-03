@@ -1,0 +1,356 @@
+Compilation failed:
+    source file: '/Users/Chao/opencv/cmake/checks/cxx11.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_18618"
+[1/2] Building CXX object CMakeFiles/cmTC_18618.dir/cxx11.cpp.o
+FAILED: CMakeFiles/cmTC_18618.dir/cxx11.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/bin/mips64el-linux-android-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-21/arch-mips64/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -frtti -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-mips64 -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack   -fPIE -o CMakeFiles/cmTC_18618.dir/cxx11.cpp.o -c /Users/Chao/opencv/cmake/checks/cxx11.cpp
+/Users/Chao/opencv/cmake/checks/cxx11.cpp:4:2: error: #error "C++11 is not supported"
+ #error "C++11 is not supported"
+  ^
+/Users/Chao/opencv/cmake/checks/cxx11.cpp: In function 'int main()':
+/Users/Chao/opencv/cmake/checks/cxx11.cpp:11:10: error: 'res' does not name a type
+     auto res = test();
+          ^
+/Users/Chao/opencv/cmake/checks/cxx11.cpp:12:12: error: 'res' was not declared in this scope
+     return res;
+            ^
+ninja: build stopped: subcommand failed.
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_9cd3e"
+[1/2] Building CXX object CMakeFiles/cmTC_9cd3e.dir/src.cxx.o
+cc1plus: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking CXX executable cmTC_9cd3e
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c8144"
+[1/2] Building CXX object CMakeFiles/cmTC_c8144.dir/src.cxx.o
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking CXX executable cmTC_c8144
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option '-Wsign-promo' is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_978a7"
+[1/2] Building C object CMakeFiles/cmTC_978a7.dir/src.c.o
+cc1: warning: command line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking C executable cmTC_978a7
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_95493"
+[1/2] Building C object CMakeFiles/cmTC_95493.dir/src.c.o
+cc1: warning: command line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking C executable cmTC_95493
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-unnamed-type-template-args"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_d50d6"
+[1/2] Building CXX object CMakeFiles/cmTC_d50d6.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-unnamed-type-template-args"
+[2/2] Linking CXX executable cmTC_d50d6
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-unnamed-type-template-args"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_08986"
+[1/2] Building C object CMakeFiles/cmTC_08986.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-unnamed-type-template-args"
+[2/2] Linking C executable cmTC_08986
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-implicit-fallthrough"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment  -Wno-implicit-fallthrough'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_4461a"
+[1/2] Building CXX object CMakeFiles/cmTC_4461a.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-implicit-fallthrough"
+[2/2] Linking CXX executable cmTC_4461a
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-implicit-fallthrough"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment  -Wno-implicit-fallthrough'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_a885c"
+[1/2] Building C object CMakeFiles/cmTC_a885c.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-implicit-fallthrough"
+[2/2] Linking C executable cmTC_a885c
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_e5505"
+[1/2] Building C object CMakeFiles/cmTC_e5505.dir/src.c.o
+cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking C executable cmTC_e5505
+
+===== END =====
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_24049"
+[1/2] Building C object CMakeFiles/cmTC_24049.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_24049.dir/CheckIncludeFile.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/bin/mips64el-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-21/arch-mips64/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-mips64 -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -fPIE -o CMakeFiles/cmTC_24049.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
+CheckIncludeFile.c:1:16: fatal error: io.h: No such file or directory
+ #include <io.h>
+                ^
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Determining if the function jbg_newlen exists failed with the following output:
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_3038b"
+[1/2] Building C object CMakeFiles/cmTC_3038b.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_3038b
+FAILED: cmTC_3038b 
+: && /Users/Chao/android-ndk-r10e/toolchains/mips64el-linux-android-4.9/prebuilt/darwin-x86_64/bin/mips64el-linux-android-gcc -fexceptions -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-mips64 -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=jbg_newlen -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG  -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc -fPIE -pie CMakeFiles/cmTC_3038b.dir/CheckFunctionExists.c.o -o cmTC_3038b   "/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips64/libsupc++.a" && :
+CMakeFiles/cmTC_3038b.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text.startup.main+0x1c): undefined reference to `jbg_newlen'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-misleading-indentation"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-misleading-indentation'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0a967"
+[1/2] Building C object CMakeFiles/cmTC_0a967.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-misleading-indentation"
+[2/2] Linking C executable cmTC_0a967
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-shift-negative-value"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-shift-negative-value'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_36951"
+[1/2] Building C object CMakeFiles/cmTC_36951.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-shift-negative-value"
+[2/2] Linking C executable cmTC_36951
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-misleading-indentation"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-misleading-indentation'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_247ee"
+[1/2] Building CXX object CMakeFiles/cmTC_247ee.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-misleading-indentation"
+[2/2] Linking CXX executable cmTC_247ee
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_91dd5"
+[1/2] Building CXX object CMakeFiles/cmTC_91dd5.dir/src.cxx.o
+cc1plus: warning: command line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking CXX executable cmTC_91dd5
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-tautological-undefined-compare"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_67174"
+[1/2] Building CXX object CMakeFiles/cmTC_67174.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-tautological-undefined-compare"
+[2/2] Linking CXX executable cmTC_67174
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-unused-const-variable"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-const-variable'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_4c5e0"
+[1/2] Building CXX object CMakeFiles/cmTC_4c5e0.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-unused-const-variable"
+[2/2] Linking CXX executable cmTC_4c5e0
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-shorten-64-to-32"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_mips64/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_a0d04"
+[1/2] Building CXX object CMakeFiles/cmTC_a0d04.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-shorten-64-to-32"
+[2/2] Linking CXX executable cmTC_a0d04
+
+===== END =====
+

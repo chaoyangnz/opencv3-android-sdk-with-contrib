@@ -1,0 +1,14 @@
+# Package Information for pkg-config
+
+prefix=/Users/Chao/opencv/build/o4a/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/sdk/native/libs/mips
+includedir_old=${prefix}/sdk/native/jni/include/opencv
+includedir_new=${prefix}/sdk/native/jni/include
+
+Name: OpenCV
+Description: Open Source Computer Vision Library
+Version: 3.3.1
+Libs: -L${exec_prefix}/sdk/native/libs/mips -lopencv_dnn -lopencv_ml -lopencv_objdetect -lopencv_shape -lopencv_stitching -lopencv_superres -lopencv_videostab -lopencv_video -lopencv_photo -lopencv_aruco -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_imgproc -lopencv_flann -lopencv_core
+Libs.private: -L${exec_prefix}/sdk/native/3rdparty/libs/mips -lcpufeatures -llibprotobuf -llibjpeg -llibwebp -llibpng -llibtiff -llibjasper -lIlmImf -ltbb -lz -ldl -lm -llog
+Cflags: -I${includedir_old} -I${includedir_new}

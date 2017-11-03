@@ -1,0 +1,57 @@
+PORTED FUNCs LIST (40 of 41):
+
+  CascadeClassifier(String filename)
+  CascadeClassifier()
+ Size getOriginalWindowSize()
+static bool convert(String oldcascade, String newcascade)
+ bool empty()
+ bool isOldFormatCascade()
+ bool load(String filename)
+ int getFeatureType()
+ void detectMultiScale(Mat image, vector_Rect& objects, double scaleFactor = 1.1, int minNeighbors = 3, int flags = 0, Size minSize = Size(), Size maxSize = Size())
+ void detectMultiScale(Mat image, vector_Rect& objects, vector_int& numDetections, double scaleFactor = 1.1, int minNeighbors = 3, int flags = 0, Size minSize = Size(), Size maxSize = Size())
+ void detectMultiScale(Mat image, vector_Rect& objects, vector_int& rejectLevels, vector_double& levelWeights, double scaleFactor = 1.1, int minNeighbors = 3, int flags = 0, Size minSize = Size(), Size maxSize = Size(), bool outputRejectLevels = false)
+  HOGDescriptor(Size _winSize, Size _blockSize, Size _blockStride, Size _cellSize, int _nbins, int _derivAperture = 1, double _winSigma = -1, int _histogramNormType = HOGDescriptor::L2Hys, double _L2HysThreshold = 0.2, bool _gammaCorrection = false, int _nlevels = HOGDescriptor::DEFAULT_NLEVELS, bool _signedGradient = false)
+  HOGDescriptor(String filename)
+  HOGDescriptor()
+ bool checkDetectorSize()
+ bool load(String filename, String objname = String())
+ double getWinSigma()
+ size_t getDescriptorSize()
+static vector_float getDaimlerPeopleDetector()
+static vector_float getDefaultPeopleDetector()
+ void compute(Mat img, vector_float& descriptors, Size winStride = Size(), Size padding = Size(), vector_Point locations = std::vector<Point>())
+ void computeGradient(Mat img, Mat& grad, Mat& angleOfs, Size paddingTL = Size(), Size paddingBR = Size())
+ void detect(Mat img, vector_Point& foundLocations, vector_double& weights, double hitThreshold = 0, Size winStride = Size(), Size padding = Size(), vector_Point searchLocations = std::vector<Point>())
+ void detectMultiScale(Mat img, vector_Rect& foundLocations, vector_double& foundWeights, double hitThreshold = 0, Size winStride = Size(), Size padding = Size(), double scale = 1.05, double finalThreshold = 2.0, bool useMeanshiftGrouping = false)
+ void save(String filename, String objname = String())
+ void setSVMDetector(Mat _svmdetector)
+Size HOGDescriptor::winSize
+Size HOGDescriptor::blockSize
+Size HOGDescriptor::blockStride
+Size HOGDescriptor::cellSize
+int HOGDescriptor::nbins
+int HOGDescriptor::derivAperture
+double HOGDescriptor::winSigma
+int HOGDescriptor::histogramNormType
+double HOGDescriptor::L2HysThreshold
+bool HOGDescriptor::gammaCorrection
+vector_float HOGDescriptor::svmDetector
+int HOGDescriptor::nlevels
+bool HOGDescriptor::signedGradient
+ void groupRectangles(vector_Rect& rectList, vector_int& weights, int groupThreshold, double eps = 0.2)
+
+SKIPPED FUNCs LIST (1 of 41):
+
+ bool read(FileNode node)
+// Unknown type 'FileNode' (I), skipping the function
+
+
+0 def args - 17 funcs
+1 def args - 3 funcs
+2 def args - 1 funcs
+3 def args - 1 funcs
+4 def args - 1 funcs
+5 def args - 2 funcs
+6 def args - 2 funcs
+7 def args - 1 funcs

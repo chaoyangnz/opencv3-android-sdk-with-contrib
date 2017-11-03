@@ -1,0 +1,503 @@
+Compilation failed:
+    source file: '/Users/Chao/opencv/cmake/checks/cxx11.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_04e0e"
+[1/2] Building CXX object CMakeFiles/cmTC_04e0e.dir/cxx11.cpp.o
+FAILED: CMakeFiles/cmTC_04e0e.dir/cxx11.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack -o CMakeFiles/cmTC_04e0e.dir/cxx11.cpp.o -c /Users/Chao/opencv/cmake/checks/cxx11.cpp
+/Users/Chao/opencv/cmake/checks/cxx11.cpp:4:2: error: #error "C++11 is not supported"
+ #error "C++11 is not supported"
+  ^
+/Users/Chao/opencv/cmake/checks/cxx11.cpp: In function 'int main()':
+/Users/Chao/opencv/cmake/checks/cxx11.cpp:11:10: error: 'res' does not name a type
+     auto res = test();
+          ^
+/Users/Chao/opencv/cmake/checks/cxx11.cpp:12:12: error: 'res' was not declared in this scope
+     return res;
+            ^
+ninja: build stopped: subcommand failed.
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_8f6c4"
+[1/2] Building CXX object CMakeFiles/cmTC_8f6c4.dir/src.cxx.o
+cc1plus: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking CXX executable cmTC_8f6c4
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_43020"
+[1/2] Building CXX object CMakeFiles/cmTC_43020.dir/src.cxx.o
+cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking CXX executable cmTC_43020
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option '-Wsign-promo' is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_2ab81"
+[1/2] Building C object CMakeFiles/cmTC_2ab81.dir/src.c.o
+cc1: warning: command line option '-Wsign-promo' is valid for C++/ObjC++ but not for C
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking C executable cmTC_2ab81
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_03555"
+[1/2] Building C object CMakeFiles/cmTC_03555.dir/src.c.o
+cc1: warning: command line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking C executable cmTC_03555
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-unnamed-type-template-args"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_e94fc"
+[1/2] Building CXX object CMakeFiles/cmTC_e94fc.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-unnamed-type-template-args"
+[2/2] Linking CXX executable cmTC_e94fc
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-unnamed-type-template-args"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_cca88"
+[1/2] Building C object CMakeFiles/cmTC_cca88.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-unnamed-type-template-args"
+[2/2] Linking C executable cmTC_cca88
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-implicit-fallthrough"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment  -Wno-implicit-fallthrough'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_2d8bb"
+[1/2] Building CXX object CMakeFiles/cmTC_2d8bb.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-implicit-fallthrough"
+[2/2] Linking CXX executable cmTC_2d8bb
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-implicit-fallthrough"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment  -Wno-implicit-fallthrough'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_dad83"
+[1/2] Building C object CMakeFiles/cmTC_dad83.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-implicit-fallthrough"
+[2/2] Linking C executable cmTC_dad83
+
+===== END =====
+
+Compilation failed:
+    source file: '/Users/Chao/opencv/cmake/checks/cpu_neon.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0c628"
+[1/2] Building CXX object CMakeFiles/cmTC_0c628.dir/cpu_neon.cpp.o
+FAILED: CMakeFiles/cmTC_0c628.dir/cpu_neon.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack   -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG -o CMakeFiles/cmTC_0c628.dir/cpu_neon.cpp.o -c /Users/Chao/opencv/cmake/checks/cpu_neon.cpp
+/Users/Chao/opencv/cmake/checks/cpu_neon.cpp:20:2: error: #error "NEON is not supported"
+ #error "NEON is not supported"
+  ^
+/Users/Chao/opencv/cmake/checks/cpu_neon.cpp: In function 'int main()':
+/Users/Chao/opencv/cmake/checks/cpu_neon.cpp:25:23: error: 'test' was not declared in this scope
+   printf("%d\n", test());
+                       ^
+ninja: build stopped: subcommand failed.
+
+===== END =====
+
+Compilation failed:
+    source file: '/Users/Chao/opencv/cmake/checks/cpu_neon.cpp'
+    check option: ' -mfpu=neon'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_ce54e"
+[1/2] Building CXX object CMakeFiles/cmTC_ce54e.dir/cpu_neon.cpp.o
+FAILED: CMakeFiles/cmTC_ce54e.dir/cpu_neon.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack   -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG   -mfpu=neon -o CMakeFiles/cmTC_ce54e.dir/cpu_neon.cpp.o -c /Users/Chao/opencv/cmake/checks/cpu_neon.cpp
+/Users/Chao/opencv/cmake/checks/cpu_neon.cpp:20:2: error: #error "NEON is not supported"
+ #error "NEON is not supported"
+  ^
+/Users/Chao/opencv/cmake/checks/cpu_neon.cpp: In function 'int main()':
+/Users/Chao/opencv/cmake/checks/cpu_neon.cpp:25:23: error: 'test' was not declared in this scope
+   printf("%d\n", test());
+                       ^
+ninja: build stopped: subcommand failed.
+
+===== END =====
+
+Compilation failed:
+    source file: '/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_9fa6c"
+[1/2] Building CXX object CMakeFiles/cmTC_9fa6c.dir/cpu_fp16.cpp.o
+FAILED: CMakeFiles/cmTC_9fa6c.dir/cpu_fp16.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack   -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG -o CMakeFiles/cmTC_9fa6c.dir/cpu_fp16.cpp.o -c /Users/Chao/opencv/cmake/checks/cpu_fp16.cpp
+In file included from /Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:15:0:
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/arm_neon.h:31:2: error: #error You must enable NEON instructions (e.g. -mfloat-abi=softfp -mfpu=neon) to use arm_neon.h
+ #error You must enable NEON instructions (e.g. -mfloat-abi=softfp -mfpu=neon) to use arm_neon.h
+  ^
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp: In function 'int test()':
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:20:5: error: 'float32x4_t' was not declared in this scope
+     float32x4_t v_src = *(float32x4_t*)src;
+     ^
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:21:5: error: 'float16x4_t' was not declared in this scope
+     float16x4_t v_dst = vcvt_f16_f32(v_src);
+     ^
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:22:19: error: expected primary-expression before ')' token
+     *(float16x4_t*)dst = v_dst;
+                   ^
+ninja: build stopped: subcommand failed.
+
+===== END =====
+
+Compilation failed:
+    source file: '/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp'
+    check option: ' -mfpu=neon-fp16'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_a3245"
+[1/2] Building CXX object CMakeFiles/cmTC_a3245.dir/cpu_fp16.cpp.o
+FAILED: CMakeFiles/cmTC_a3245.dir/cpu_fp16.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack   -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG   -mfpu=neon-fp16 -o CMakeFiles/cmTC_a3245.dir/cpu_fp16.cpp.o -c /Users/Chao/opencv/cmake/checks/cpu_fp16.cpp
+In file included from /Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:15:0:
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/lib/gcc/arm-linux-androideabi/4.9/include/arm_neon.h:31:2: error: #error You must enable NEON instructions (e.g. -mfloat-abi=softfp -mfpu=neon) to use arm_neon.h
+ #error You must enable NEON instructions (e.g. -mfloat-abi=softfp -mfpu=neon) to use arm_neon.h
+  ^
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp: In function 'int test()':
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:20:5: error: 'float32x4_t' was not declared in this scope
+     float32x4_t v_src = *(float32x4_t*)src;
+     ^
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:21:5: error: 'float16x4_t' was not declared in this scope
+     float16x4_t v_dst = vcvt_f16_f32(v_src);
+     ^
+/Users/Chao/opencv/cmake/checks/cpu_fp16.cpp:22:19: error: expected primary-expression before ')' token
+     *(float16x4_t*)dst = v_dst;
+                   ^
+ninja: build stopped: subcommand failed.
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfp16-format=ieee -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_f3a48"
+[1/2] Building C object CMakeFiles/cmTC_f3a48.dir/src.c.o
+cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking C executable cmTC_f3a48
+
+===== END =====
+
+Determining if the posix_memalign exist failed with the following output:
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_4cc68"
+[1/2] Building C object CMakeFiles/cmTC_4cc68.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_4cc68.dir/CheckSymbolExists.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfp16-format=ieee -fvisibility=hidden  -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG -o CMakeFiles/cmTC_4cc68.dir/CheckSymbolExists.c.o   -c CheckSymbolExists.c
+CheckSymbolExists.c: In function 'main':
+CheckSymbolExists.c:8:19: error: 'posix_memalign' undeclared (first use in this function)
+   return ((int*)(&posix_memalign))[argc];
+                   ^
+CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CheckSymbolExists.c:4:14: warning: parameter 'argc' set but not used [-Wunused-but-set-parameter]
+ int main(int argc, char** argv)
+              ^
+CheckSymbolExists.c:13:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.
+
+File /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_memalign
+  return ((int*)(&posix_memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_1bc10"
+[1/2] Building C object CMakeFiles/cmTC_1bc10.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_1bc10.dir/CheckIncludeFile.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfp16-format=ieee -fvisibility=hidden  -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG -o CMakeFiles/cmTC_1bc10.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
+CheckIncludeFile.c:1:16: fatal error: io.h: No such file or directory
+ #include <io.h>
+                ^
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Determining if the function jbg_newlen exists failed with the following output:
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_39cef"
+[1/2] Building C object CMakeFiles/cmTC_39cef.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_39cef
+FAILED: cmTC_39cef 
+: && /Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfp16-format=ieee -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=jbg_newlen -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG  -Wl,--no-undefined -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc CMakeFiles/cmTC_39cef.dir/CheckFunctionExists.c.o -o cmTC_39cef   "/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/libsupc++.a" && :
+CMakeFiles/cmTC_39cef.dir/CheckFunctionExists.c.o:CheckFunctionExists.c:function main: error: undefined reference to 'jbg_newlen'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Determining if the include file search.h exists failed with the following output:
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c1408"
+[1/2] Building C object CMakeFiles/cmTC_c1408.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_c1408.dir/CheckIncludeFile.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-arm -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -mfp16-format=ieee -fvisibility=hidden  -mthumb -fomit-frame-pointer -fno-strict-aliasing -O3 -DNDEBUG -o CMakeFiles/cmTC_c1408.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
+CheckIncludeFile.c:1:20: fatal error: search.h: No such file or directory
+ #include <search.h>
+                    ^
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-misleading-indentation"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-misleading-indentation'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_ae45e"
+[1/2] Building C object CMakeFiles/cmTC_ae45e.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-misleading-indentation"
+[2/2] Linking C executable cmTC_ae45e
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option "-Wno-shift-negative-value"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-shift-negative-value'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_a0797"
+[1/2] Building C object CMakeFiles/cmTC_a0797.dir/src.c.o
+src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option "-Wno-shift-negative-value"
+[2/2] Linking C executable cmTC_a0797
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-misleading-indentation"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-misleading-indentation'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_4e212"
+[1/2] Building CXX object CMakeFiles/cmTC_4e212.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-misleading-indentation"
+[2/2] Linking CXX executable cmTC_4e212
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_40098"
+[1/2] Building CXX object CMakeFiles/cmTC_40098.dir/src.cxx.o
+cc1plus: warning: command line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+[2/2] Linking CXX executable cmTC_40098
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-tautological-undefined-compare"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_4184c"
+[1/2] Building CXX object CMakeFiles/cmTC_4184c.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-tautological-undefined-compare"
+[2/2] Linking CXX executable cmTC_4184c
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-unused-const-variable"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-const-variable'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_34bb6"
+[1/2] Building CXX object CMakeFiles/cmTC_34bb6.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-unused-const-variable"
+[2/2] Linking CXX executable cmTC_34bb6
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option "-Wno-shorten-64-to-32"'
+Compilation failed:
+    source file: '/Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /Users/Chao/opencv/build/build_service_armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/ninja" "cmTC_e6e1d"
+[1/2] Building CXX object CMakeFiles/cmTC_e6e1d.dir/src.cxx.o
+src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option "-Wno-shorten-64-to-32"
+[2/2] Linking CXX executable cmTC_e6e1d
+
+===== END =====
+

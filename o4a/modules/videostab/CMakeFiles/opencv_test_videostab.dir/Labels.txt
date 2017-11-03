@@ -1,0 +1,17 @@
+# Target labels
+ Main
+ opencv_videostab
+ AccuracyTest
+# Source files and their labels
+/Users/Chao/opencv/modules/videostab/test/test_main.cpp
+ Main
+ opencv_videostab
+ AccuracyTest
+/Users/Chao/opencv/modules/videostab/test/test_motion_estimation.cpp
+ Main
+ opencv_videostab
+ AccuracyTest
+/Users/Chao/opencv/modules/videostab/test/test_precomp.hpp
+ Main
+ opencv_videostab
+ AccuracyTest

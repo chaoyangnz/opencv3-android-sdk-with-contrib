@@ -1,0 +1,21 @@
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes.dex : \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R$attr.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R$drawable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R$id.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R$layout.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R$string.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R$styleable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/R.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/BuildConfig.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R$attr.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R$drawable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R$id.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R$layout.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R$string.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R$styleable.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/R.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/Tutorial3Activity$1.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/Tutorial3Activity.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/classes/org/opencv/samples/tutorial3/Tutorial3View.class \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/dexedLibs/classes-8d1c20d073048638d4d603ca8e937d1c.jar \
+/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol/.build/bin/dexedLibs/annotations-811193dd20b80b4c74bc4f05ba119b9d.jar \

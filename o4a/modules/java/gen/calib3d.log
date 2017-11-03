@@ -1,0 +1,1813 @@
+ok: class CLASS ::.Calib3d : , name: Calib3d, base: 
+
+===== Common header : /Users/Chao/opencv/modules/features2d/misc/java/src/cpp/features2d_converters.hpp =====
+
+
+===== Header: /Users/Chao/opencv/modules/calib3d/include/opencv2/calib3d/calib3d_c.h =====
+Namespaces: set([''])
+
+--- Incoming ---
+[u'const CV_ITERATIVE', u'0', [], [], None, '']
+ok: CONST CV_ITERATIVE=0
+
+--- Incoming ---
+[u'const CV_EPNP', u'1', [], [], None, '']
+ok: CONST CV_EPNP=1
+
+--- Incoming ---
+[u'const CV_P3P', u'2', [], [], None, '']
+ok: CONST CV_P3P=2
+
+--- Incoming ---
+[u'const CV_DLS', u'3', [], [], None, '']
+ok: CONST CV_DLS=3
+
+--- Incoming ---
+[u'const CvLevMarq.DONE', u'0', [], [], None, '']
+class not found: CONST DONE=0
+
+--- Incoming ---
+[u'const CvLevMarq.STARTED', u'1', [], [], None, '']
+class not found: CONST STARTED=1
+
+--- Incoming ---
+[u'const CvLevMarq.CALC_J', u'2', [], [], None, '']
+class not found: CONST CALC_J=2
+
+--- Incoming ---
+[u'const CvLevMarq.CHECK_ERR', u'3', [], [], None, '']
+class not found: CONST CHECK_ERR=3
+
+
+===== Header: /Users/Chao/opencv/modules/calib3d/include/opencv2/calib3d.hpp =====
+Namespaces: set(['', u'cv.fisheye', u'cv'])
+
+--- Incoming ---
+[u'const cv.LMEDS', u'4', [], [], None, '']
+ok: CONST LMEDS=4
+
+--- Incoming ---
+[u'const cv.RANSAC', u'8', [], [], None, '']
+ok: CONST RANSAC=8
+
+--- Incoming ---
+[u'const cv.RHO', u'16', [], [], None, '']
+ok: CONST RHO=16
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_ITERATIVE', u'0', [], [], None, '']
+ok: CONST SOLVEPNP_ITERATIVE=0
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_EPNP', u'1', [], [], None, '']
+ok: CONST SOLVEPNP_EPNP=1
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_P3P', u'2', [], [], None, '']
+ok: CONST SOLVEPNP_P3P=2
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_DLS', u'3', [], [], None, '']
+ok: CONST SOLVEPNP_DLS=3
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_UPNP', u'4', [], [], None, '']
+ok: CONST SOLVEPNP_UPNP=4
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_AP3P', u'5', [], [], None, '']
+ok: CONST SOLVEPNP_AP3P=5
+
+--- Incoming ---
+[u'const cv.SOLVEPNP_MAX_COUNT', u'5+1', [], [], None, '']
+ok: CONST SOLVEPNP_MAX_COUNT=5+1
+
+--- Incoming ---
+[u'const cv.CALIB_CB_ADAPTIVE_THRESH', u'1', [], [], None, '']
+ok: CONST CALIB_CB_ADAPTIVE_THRESH=1
+
+--- Incoming ---
+[u'const cv.CALIB_CB_NORMALIZE_IMAGE', u'2', [], [], None, '']
+ok: CONST CALIB_CB_NORMALIZE_IMAGE=2
+
+--- Incoming ---
+[u'const cv.CALIB_CB_FILTER_QUADS', u'4', [], [], None, '']
+ok: CONST CALIB_CB_FILTER_QUADS=4
+
+--- Incoming ---
+[u'const cv.CALIB_CB_FAST_CHECK', u'8', [], [], None, '']
+ok: CONST CALIB_CB_FAST_CHECK=8
+
+--- Incoming ---
+[u'const cv.CALIB_CB_SYMMETRIC_GRID', u'1', [], [], None, '']
+ok: CONST CALIB_CB_SYMMETRIC_GRID=1
+
+--- Incoming ---
+[u'const cv.CALIB_CB_ASYMMETRIC_GRID', u'2', [], [], None, '']
+ok: CONST CALIB_CB_ASYMMETRIC_GRID=2
+
+--- Incoming ---
+[u'const cv.CALIB_CB_CLUSTERING', u'4', [], [], None, '']
+ok: CONST CALIB_CB_CLUSTERING=4
+
+--- Incoming ---
+[u'const cv.CALIB_USE_INTRINSIC_GUESS', u'0x00001', [], [], None, '']
+manual: CONST CALIB_USE_INTRINSIC_GUESS=0x00001
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_ASPECT_RATIO', u'0x00002', [], [], None, '']
+ok: CONST CALIB_FIX_ASPECT_RATIO=0x00002
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_PRINCIPAL_POINT', u'0x00004', [], [], None, '']
+ok: CONST CALIB_FIX_PRINCIPAL_POINT=0x00004
+
+--- Incoming ---
+[u'const cv.CALIB_ZERO_TANGENT_DIST', u'0x00008', [], [], None, '']
+ok: CONST CALIB_ZERO_TANGENT_DIST=0x00008
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_FOCAL_LENGTH', u'0x00010', [], [], None, '']
+ok: CONST CALIB_FIX_FOCAL_LENGTH=0x00010
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_K1', u'0x00020', [], [], None, '']
+manual: CONST CALIB_FIX_K1=0x00020
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_K2', u'0x00040', [], [], None, '']
+manual: CONST CALIB_FIX_K2=0x00040
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_K3', u'0x00080', [], [], None, '']
+manual: CONST CALIB_FIX_K3=0x00080
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_K4', u'0x00800', [], [], None, '']
+manual: CONST CALIB_FIX_K4=0x00800
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_K5', u'0x01000', [], [], None, '']
+ok: CONST CALIB_FIX_K5=0x01000
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_K6', u'0x02000', [], [], None, '']
+ok: CONST CALIB_FIX_K6=0x02000
+
+--- Incoming ---
+[u'const cv.CALIB_RATIONAL_MODEL', u'0x04000', [], [], None, '']
+ok: CONST CALIB_RATIONAL_MODEL=0x04000
+
+--- Incoming ---
+[u'const cv.CALIB_THIN_PRISM_MODEL', u'0x08000', [], [], None, '']
+ok: CONST CALIB_THIN_PRISM_MODEL=0x08000
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_S1_S2_S3_S4', u'0x10000', [], [], None, '']
+ok: CONST CALIB_FIX_S1_S2_S3_S4=0x10000
+
+--- Incoming ---
+[u'const cv.CALIB_TILTED_MODEL', u'0x40000', [], [], None, '']
+ok: CONST CALIB_TILTED_MODEL=0x40000
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_TAUX_TAUY', u'0x80000', [], [], None, '']
+ok: CONST CALIB_FIX_TAUX_TAUY=0x80000
+
+--- Incoming ---
+[u'const cv.CALIB_USE_QR', u'0x100000', [], [], None, '']
+ok: CONST CALIB_USE_QR=0x100000
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_TANGENT_DIST', u'0x200000', [], [], None, '']
+ok: CONST CALIB_FIX_TANGENT_DIST=0x200000
+
+--- Incoming ---
+[u'const cv.CALIB_FIX_INTRINSIC', u'0x00100', [], [], None, '']
+manual: CONST CALIB_FIX_INTRINSIC=0x00100
+
+--- Incoming ---
+[u'const cv.CALIB_SAME_FOCAL_LENGTH', u'0x00200', [], [], None, '']
+ok: CONST CALIB_SAME_FOCAL_LENGTH=0x00200
+
+--- Incoming ---
+[u'const cv.CALIB_ZERO_DISPARITY', u'0x00400', [], [], None, '']
+ok: CONST CALIB_ZERO_DISPARITY=0x00400
+
+--- Incoming ---
+[u'const cv.CALIB_USE_LU', u'(1 << 17)', [], [], None, '']
+ok: CONST CALIB_USE_LU=(1 << 17)
+
+--- Incoming ---
+[u'const cv.FM_7POINT', u'1', [], [], None, '']
+ok: CONST FM_7POINT=1
+
+--- Incoming ---
+[u'const cv.FM_8POINT', u'2', [], [], None, '']
+ok: CONST FM_8POINT=2
+
+--- Incoming ---
+[u'const cv.FM_LMEDS', u'4', [], [], None, '']
+ok: CONST FM_LMEDS=4
+
+--- Incoming ---
+[u'const cv.FM_RANSAC', u'8', [], [], None, '']
+ok: CONST FM_RANSAC=8
+
+--- Incoming ---
+[   u'cv.Rodrigues',
+    u'void',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', ['/O']],
+        ['Mat', u'jacobian', u'Mat()', ['/O']]],
+    u'void',
+    u'@brief Converts a rotation matrix to a rotation vector or vice versa.\n\n@param src Input rotation vector (3x1 or 1x3) or rotation matrix (3x3).\n@param dst Output rotation matrix (3x3) or rotation vector (3x1 or 1x3), respectively.\n@param jacobian Optional output Jacobian matrix, 3x9 or 9x3, which is a matrix of partial\nderivatives of the output array components with respect to the input array components.\n\n\\f[\\begin{array}{l} \\theta \\leftarrow norm(r) \\\\ r  \\leftarrow r/ \\theta \\\\ R =  \\cos{\\theta} I + (1- \\cos{\\theta} ) r r^T +  \\sin{\\theta} \\vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} \\end{array}\\f]\n\nInverse transformation can be also done easily, since\n\n\\f[\\sin ( \\theta ) \\vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} = \\frac{R - R^T}{2}\\f]\n\nA rotation vector is a convenient and most compact representation of a rotation matrix (since any\nrotation matrix has just 3 degrees of freedom). The representation is used in the global 3D geometry\noptimization procedures like calibrateCamera, stereoCalibrate, or solvePnP .']
+ok: FUNC <void cv..Rodrigues [ARG Mat src=, ARG Mat dst=, ARG Mat jacobian=Mat()]>
+
+--- Incoming ---
+[   u'cv.findHomography',
+    u'Mat',
+    [],
+    [   ['Mat', u'srcPoints', '', []],
+        ['Mat', u'dstPoints', '', []],
+        [u'int', u'method', u'0', []],
+        [u'double', u'ransacReprojThreshold', u'3', []],
+        ['Mat', u'mask', u'Mat()', ['/O']],
+        [u'int', u'maxIters', u'2000', ['/C']],
+        [u'double', u'confidence', u'0.995', ['/C']]],
+    u'Mat',
+    u"@brief Finds a perspective transformation between two planes.\n\n@param srcPoints Coordinates of the points in the original plane, a matrix of the type CV_32FC2\nor vector\\<Point2f\\> .\n@param dstPoints Coordinates of the points in the target plane, a matrix of the type CV_32FC2 or\na vector\\<Point2f\\> .\n@param method Method used to computed a homography matrix. The following methods are possible:\n-   **0** - a regular method using all the points\n-   **RANSAC** - RANSAC-based robust method\n-   **LMEDS** - Least-Median robust method\n-   **RHO**    - PROSAC-based robust method\n@param ransacReprojThreshold Maximum allowed reprojection error to treat a point pair as an inlier\n(used in the RANSAC and RHO methods only). That is, if\n\\f[\\| \\texttt{dstPoints} _i -  \\texttt{convertPointsHomogeneous} ( \\texttt{H} * \\texttt{srcPoints} _i) \\|  >  \\texttt{ransacReprojThreshold}\\f]\nthen the point \\f$i\\f$ is considered an outlier. If srcPoints and dstPoints are measured in pixels,\nit usually makes sense to set this parameter somewhere in the range of 1 to 10.\n@param mask Optional output mask set by a robust method ( RANSAC or LMEDS ). Note that the input\nmask values are ignored.\n@param maxIters The maximum number of RANSAC iterations, 2000 is the maximum it can be.\n@param confidence Confidence level, between 0 and 1.\n\nThe function finds and returns the perspective transformation \\f$H\\f$ between the source and the\ndestination planes:\n\n\\f[s_i  \\vecthree{x'_i}{y'_i}{1} \\sim H  \\vecthree{x_i}{y_i}{1}\\f]\n\nso that the back-projection error\n\n\\f[\\sum _i \\left ( x'_i- \\frac{h_{11} x_i + h_{12} y_i + h_{13}}{h_{31} x_i + h_{32} y_i + h_{33}} \\right )^2+ \\left ( y'_i- \\frac{h_{21} x_i + h_{22} y_i + h_{23}}{h_{31} x_i + h_{32} y_i + h_{33}} \\right )^2\\f]\n\nis minimized. If the parameter method is set to the default value 0, the function uses all the point\npairs to compute an initial homography estimate with a simple least-squares scheme.\n\nHowever, if not all of the point pairs ( \\f$srcPoints_i\\f$, \\f$dstPoints_i\\f$ ) fit the rigid perspective\ntransformation (that is, there are some outliers), this initial estimate will be poor. In this case,\nyou can use one of the three robust methods. The methods RANSAC, LMeDS and RHO try many different\nrandom subsets of the corresponding point pairs (of four pairs each), estimate the homography matrix\nusing this subset and a simple least-square algorithm, and then compute the quality/goodness of the\ncomputed homography (which is the number of inliers for RANSAC or the median re-projection error for\nLMeDs). The best subset is then used to produce the initial estimate of the homography matrix and\nthe mask of inliers/outliers.\n\nRegardless of the method, robust or not, the computed homography matrix is refined further (using\ninliers only in case of a robust method) with the Levenberg-Marquardt method to reduce the\nre-projection error even more.\n\nThe methods RANSAC and RHO can handle practically any ratio of outliers but need a threshold to\ndistinguish inliers from outliers. The method LMeDS does not need any threshold but it works\ncorrectly only when there are more than 50% of inliers. Finally, if there are no outliers and the\nnoise is rather small, use the default method (method=0).\n\nThe function is used to find initial intrinsic and extrinsic matrices. Homography matrix is\ndetermined up to a scale. Thus, it is normalized so that \\f$h_{33}=1\\f$. Note that whenever an H matrix\ncannot be estimated, an empty one will be returned.\n\n@sa\ngetAffineTransform, estimateAffine2D, estimateAffinePartial2D, getPerspectiveTransform, warpPerspective,\nperspectiveTransform\n\n\n@note\n-   A example on calculating a homography for image matching can be found at\nopencv_source_code/samples/cpp/video_homography.cpp"]
+ok: FUNC <Mat cv..findHomography [ARG vector_Point2f srcPoints=, ARG vector_Point2f dstPoints=, ARG int method=0, ARG double ransacReprojThreshold=3, ARG Mat mask=Mat(), ARG int maxIters=2000, ARG double confidence=0.995]>
+
+--- Incoming ---
+[   u'cv.RQDecomp3x3',
+    u'Vec3d',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'mtxR', '', ['/O']],
+        ['Mat', u'mtxQ', '', ['/O']],
+        ['Mat', u'Qx', u'Mat()', ['/O']],
+        ['Mat', u'Qy', u'Mat()', ['/O']],
+        ['Mat', u'Qz', u'Mat()', ['/O']]],
+    u'Vec3d',
+    u'@brief Computes an RQ decomposition of 3x3 matrices.\n\n@param src 3x3 input matrix.\n@param mtxR Output 3x3 upper-triangular matrix.\n@param mtxQ Output 3x3 orthogonal matrix.\n@param Qx Optional output 3x3 rotation matrix around x-axis.\n@param Qy Optional output 3x3 rotation matrix around y-axis.\n@param Qz Optional output 3x3 rotation matrix around z-axis.\n\nThe function computes a RQ decomposition using the given rotations. This function is used in\ndecomposeProjectionMatrix to decompose the left 3x3 submatrix of a projection matrix into a camera\nand a rotation matrix.\n\nIt optionally returns three rotation matrices, one for each axis, and the three Euler angles in\ndegrees (as the return value) that could be used in OpenGL. Note, there is always more than one\nsequence of rotations about the three principal axes that results in the same orientation of an\nobject, eg. see @cite Slabaugh . Returned tree rotation matrices and corresponding three Euler angles\nare only one of the possible solutions.']
+ok: FUNC <Vec3d cv..RQDecomp3x3 [ARG Mat src=, ARG Mat mtxR=, ARG Mat mtxQ=, ARG Mat Qx=Mat(), ARG Mat Qy=Mat(), ARG Mat Qz=Mat()]>
+
+--- Incoming ---
+[   u'cv.decomposeProjectionMatrix',
+    u'void',
+    [],
+    [   ['Mat', u'projMatrix', '', []],
+        ['Mat', u'cameraMatrix', '', ['/O']],
+        ['Mat', u'rotMatrix', '', ['/O']],
+        ['Mat', u'transVect', '', ['/O']],
+        ['Mat', u'rotMatrixX', u'Mat()', ['/O']],
+        ['Mat', u'rotMatrixY', u'Mat()', ['/O']],
+        ['Mat', u'rotMatrixZ', u'Mat()', ['/O']],
+        ['Mat', u'eulerAngles', u'Mat()', ['/O']]],
+    u'void',
+    u'@brief Decomposes a projection matrix into a rotation matrix and a camera matrix.\n\n@param projMatrix 3x4 input projection matrix P.\n@param cameraMatrix Output 3x3 camera matrix K.\n@param rotMatrix Output 3x3 external rotation matrix R.\n@param transVect Output 4x1 translation vector T.\n@param rotMatrixX Optional 3x3 rotation matrix around x-axis.\n@param rotMatrixY Optional 3x3 rotation matrix around y-axis.\n@param rotMatrixZ Optional 3x3 rotation matrix around z-axis.\n@param eulerAngles Optional three-element vector containing three Euler angles of rotation in\ndegrees.\n\nThe function computes a decomposition of a projection matrix into a calibration and a rotation\nmatrix and the position of a camera.\n\nIt optionally returns three rotation matrices, one for each axis, and three Euler angles that could\nbe used in OpenGL. Note, there is always more than one sequence of rotations about the three\nprincipal axes that results in the same orientation of an object, eg. see @cite Slabaugh . Returned\ntree rotation matrices and corresponding three Euler angules are only one of the possible solutions.\n\nThe function is based on RQDecomp3x3 .']
+ok: FUNC <void cv..decomposeProjectionMatrix [ARG Mat projMatrix=, ARG Mat cameraMatrix=, ARG Mat rotMatrix=, ARG Mat transVect=, ARG Mat rotMatrixX=Mat(), ARG Mat rotMatrixY=Mat(), ARG Mat rotMatrixZ=Mat(), ARG Mat eulerAngles=Mat()]>
+
+--- Incoming ---
+[   u'cv.matMulDeriv',
+    u'void',
+    [],
+    [   ['Mat', u'A', '', []],
+        ['Mat', u'B', '', []],
+        ['Mat', u'dABdA', '', ['/O']],
+        ['Mat', u'dABdB', '', ['/O']]],
+    u'void',
+    u'@brief Computes partial derivatives of the matrix product for each multiplied matrix.\n\n@param A First multiplied matrix.\n@param B Second multiplied matrix.\n@param dABdA First output derivative matrix d(A\\*B)/dA of size\n\\f$\\texttt{A.rows*B.cols} \\times {A.rows*A.cols}\\f$ .\n@param dABdB Second output derivative matrix d(A\\*B)/dB of size\n\\f$\\texttt{A.rows*B.cols} \\times {B.rows*B.cols}\\f$ .\n\nThe function computes partial derivatives of the elements of the matrix product \\f$A*B\\f$ with regard to\nthe elements of each of the two input matrices. The function is used to compute the Jacobian\nmatrices in stereoCalibrate but can also be used in any other similar optimization function.']
+ok: FUNC <void cv..matMulDeriv [ARG Mat A=, ARG Mat B=, ARG Mat dABdA=, ARG Mat dABdB=]>
+
+--- Incoming ---
+[   u'cv.composeRT',
+    u'void',
+    [],
+    [   ['Mat', u'rvec1', '', []],
+        ['Mat', u'tvec1', '', []],
+        ['Mat', u'rvec2', '', []],
+        ['Mat', u'tvec2', '', []],
+        ['Mat', u'rvec3', '', ['/O']],
+        ['Mat', u'tvec3', '', ['/O']],
+        ['Mat', u'dr3dr1', u'Mat()', ['/O']],
+        ['Mat', u'dr3dt1', u'Mat()', ['/O']],
+        ['Mat', u'dr3dr2', u'Mat()', ['/O']],
+        ['Mat', u'dr3dt2', u'Mat()', ['/O']],
+        ['Mat', u'dt3dr1', u'Mat()', ['/O']],
+        ['Mat', u'dt3dt1', u'Mat()', ['/O']],
+        ['Mat', u'dt3dr2', u'Mat()', ['/O']],
+        ['Mat', u'dt3dt2', u'Mat()', ['/O']]],
+    u'void',
+    u'@brief Combines two rotation-and-shift transformations.\n\n@param rvec1 First rotation vector.\n@param tvec1 First translation vector.\n@param rvec2 Second rotation vector.\n@param tvec2 Second translation vector.\n@param rvec3 Output rotation vector of the superposition.\n@param tvec3 Output translation vector of the superposition.\n@param dr3dr1\n@param dr3dt1\n@param dr3dr2\n@param dr3dt2\n@param dt3dr1\n@param dt3dt1\n@param dt3dr2\n@param dt3dt2 Optional output derivatives of rvec3 or tvec3 with regard to rvec1, rvec2, tvec1 and\ntvec2, respectively.\n\nThe functions compute:\n\n\\f[\\begin{array}{l} \\texttt{rvec3} =  \\mathrm{rodrigues} ^{-1} \\left ( \\mathrm{rodrigues} ( \\texttt{rvec2} )  \\cdot \\mathrm{rodrigues} ( \\texttt{rvec1} ) \\right )  \\\\ \\texttt{tvec3} =  \\mathrm{rodrigues} ( \\texttt{rvec2} )  \\cdot \\texttt{tvec1} +  \\texttt{tvec2} \\end{array} ,\\f]\n\nwhere \\f$\\mathrm{rodrigues}\\f$ denotes a rotation vector to a rotation matrix transformation, and\n\\f$\\mathrm{rodrigues}^{-1}\\f$ denotes the inverse transformation. See Rodrigues for details.\n\nAlso, the functions can compute the derivatives of the output vectors with regards to the input\nvectors (see matMulDeriv ). The functions are used inside stereoCalibrate but can also be used in\nyour own code where Levenberg-Marquardt or another gradient-based solver is used to optimize a\nfunction that contains a matrix multiplication.']
+ok: FUNC <void cv..composeRT [ARG Mat rvec1=, ARG Mat tvec1=, ARG Mat rvec2=, ARG Mat tvec2=, ARG Mat rvec3=, ARG Mat tvec3=, ARG Mat dr3dr1=Mat(), ARG Mat dr3dt1=Mat(), ARG Mat dr3dr2=Mat(), ARG Mat dr3dt2=Mat(), ARG Mat dt3dr1=Mat(), ARG Mat dt3dt1=Mat(), ARG Mat dt3dr2=Mat(), ARG Mat dt3dt2=Mat()]>
+
+--- Incoming ---
+[   u'cv.projectPoints',
+    u'void',
+    [],
+    [   ['Mat', u'objectPoints', '', []],
+        ['Mat', u'rvec', '', []],
+        ['Mat', u'tvec', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'distCoeffs', '', []],
+        ['Mat', u'imagePoints', '', ['/O']],
+        ['Mat', u'jacobian', u'Mat()', ['/O']],
+        [u'double', u'aspectRatio', u'0', []]],
+    u'void',
+    u'@brief Projects 3D points to an image plane.\n\n@param objectPoints Array of object points, 3xN/Nx3 1-channel or 1xN/Nx1 3-channel (or\nvector\\<Point3f\\> ), where N is the number of points in the view.\n@param rvec Rotation vector. See Rodrigues for details.\n@param tvec Translation vector.\n@param cameraMatrix Camera matrix \\f$A = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}\\f$ .\n@param distCoeffs Input vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements. If the vector is empty, the zero distortion coefficients are assumed.\n@param imagePoints Output array of image points, 2xN/Nx2 1-channel or 1xN/Nx1 2-channel, or\nvector\\<Point2f\\> .\n@param jacobian Optional output 2Nx(10+\\<numDistCoeffs\\>) jacobian matrix of derivatives of image\npoints with respect to components of the rotation vector, translation vector, focal lengths,\ncoordinates of the principal point and the distortion coefficients. In the old interface different\ncomponents of the jacobian are returned via different output parameters.\n@param aspectRatio Optional "fixed aspect ratio" parameter. If the parameter is not 0, the\nfunction assumes that the aspect ratio (*fx/fy*) is fixed and correspondingly adjusts the jacobian\nmatrix.\n\nThe function computes projections of 3D points to the image plane given intrinsic and extrinsic\ncamera parameters. Optionally, the function computes Jacobians - matrices of partial derivatives of\nimage points coordinates (as functions of all the input parameters) with respect to the particular\nparameters, intrinsic and/or extrinsic. The Jacobians are used during the global optimization in\ncalibrateCamera, solvePnP, and stereoCalibrate . The function itself can also be used to compute a\nre-projection error given the current intrinsic and extrinsic parameters.\n\n@note By setting rvec=tvec=(0,0,0) or by setting cameraMatrix to a 3x3 identity matrix, or by\npassing zero distortion coefficients, you can get various useful partial cases of the function. This\nmeans that you can compute the distorted coordinates for a sparse set of points or apply a\nperspective transformation (and also compute the derivatives) in the ideal zero-distortion setup.']
+ok: FUNC <void cv..projectPoints [ARG vector_Point3f objectPoints=, ARG Mat rvec=, ARG Mat tvec=, ARG Mat cameraMatrix=, ARG vector_double distCoeffs=, ARG vector_Point2f imagePoints=, ARG Mat jacobian=Mat(), ARG double aspectRatio=0]>
+
+--- Incoming ---
+[   u'cv.solvePnP',
+    u'bool',
+    [],
+    [   ['Mat', u'objectPoints', '', []],
+        ['Mat', u'imagePoints', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'distCoeffs', '', []],
+        ['Mat', u'rvec', '', ['/O']],
+        ['Mat', u'tvec', '', ['/O']],
+        [u'bool', u'useExtrinsicGuess', u'false', []],
+        [u'int', u'flags', u'SOLVEPNP_ITERATIVE', []]],
+    u'bool',
+    u'@brief Finds an object pose from 3D-2D point correspondences.\n\n@param objectPoints Array of object points in the object coordinate space, Nx3 1-channel or\n1xN/Nx1 3-channel, where N is the number of points. vector\\<Point3f\\> can be also passed here.\n@param imagePoints Array of corresponding image points, Nx2 1-channel or 1xN/Nx1 2-channel,\nwhere N is the number of points. vector\\<Point2f\\> can be also passed here.\n@param cameraMatrix Input camera matrix \\f$A = \\vecthreethree{fx}{0}{cx}{0}{fy}{cy}{0}{0}{1}\\f$ .\n@param distCoeffs Input vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements. If the vector is NULL/empty, the zero distortion coefficients are\nassumed.\n@param rvec Output rotation vector (see @ref Rodrigues ) that, together with tvec , brings points from\nthe model coordinate system to the camera coordinate system.\n@param tvec Output translation vector.\n@param useExtrinsicGuess Parameter used for #SOLVEPNP_ITERATIVE. If true (1), the function uses\nthe provided rvec and tvec values as initial approximations of the rotation and translation\nvectors, respectively, and further optimizes them.\n@param flags Method for solving a PnP problem:\n-   **SOLVEPNP_ITERATIVE** Iterative method is based on Levenberg-Marquardt optimization. In\nthis case the function finds such a pose that minimizes reprojection error, that is the sum\nof squared distances between the observed projections imagePoints and the projected (using\nprojectPoints ) objectPoints .\n-   **SOLVEPNP_P3P** Method is based on the paper of X.S. Gao, X.-R. Hou, J. Tang, H.-F. Chang\n"Complete Solution Classification for the Perspective-Three-Point Problem" (@cite gao2003complete).\nIn this case the function requires exactly four object and image points.\n-   **SOLVEPNP_AP3P** Method is based on the paper of T. Ke, S. Roumeliotis\n"An Efficient Algebraic Solution to the Perspective-Three-Point Problem" (@cite Ke17).\nIn this case the function requires exactly four object and image points.\n-   **SOLVEPNP_EPNP** Method has been introduced by F.Moreno-Noguer, V.Lepetit and P.Fua in the\npaper "EPnP: Efficient Perspective-n-Point Camera Pose Estimation" (@cite lepetit2009epnp).\n-   **SOLVEPNP_DLS** Method is based on the paper of Joel A. Hesch and Stergios I. Roumeliotis.\n"A Direct Least-Squares (DLS) Method for PnP" (@cite hesch2011direct).\n-   **SOLVEPNP_UPNP** Method is based on the paper of A.Penate-Sanchez, J.Andrade-Cetto,\nF.Moreno-Noguer. "Exhaustive Linearization for Robust Camera Pose and Focal Length\nEstimation" (@cite penate2013exhaustive). In this case the function also estimates the parameters \\f$f_x\\f$ and \\f$f_y\\f$\nassuming that both have the same value. Then the cameraMatrix is updated with the estimated\nfocal length.\n-   **SOLVEPNP_AP3P** Method is based on the paper of Tong Ke and Stergios I. Roumeliotis.\n"An Efficient Algebraic Solution to the Perspective-Three-Point Problem". In this case the\nfunction requires exactly four object and image points.\n\nThe function estimates the object pose given a set of object points, their corresponding image\nprojections, as well as the camera matrix and the distortion coefficients.\n\n@note\n-   An example of how to use solvePnP for planar augmented reality can be found at\nopencv_source_code/samples/python/plane_ar.py\n-   If you are using Python:\n- Numpy array slices won\'t work as input because solvePnP requires contiguous\narrays (enforced by the assertion using cv::Mat::checkVector() around line 55 of\nmodules/calib3d/src/solvepnp.cpp version 2.4.9)\n- The P3P algorithm requires image points to be in an array of shape (N,1,2) due\nto its calling of cv::undistortPoints (around line 75 of modules/calib3d/src/solvepnp.cpp version 2.4.9)\nwhich requires 2-channel information.\n- Thus, given some data D = np.array(...) where D.shape = (N,M), in order to use a subset of\nit as, e.g., imagePoints, one must effectively copy it into a new array: imagePoints =\nnp.ascontiguousarray(D[:,:2]).reshape((N,1,2))\n-   The methods **SOLVEPNP_DLS** and **SOLVEPNP_UPNP** cannot be used as the current implementations are\nunstable and sometimes give completely wrong results. If you pass one of these two\nflags, **SOLVEPNP_EPNP** method will be used instead.\n-   The minimum number of points is 4. In the case of **SOLVEPNP_P3P** and **SOLVEPNP_AP3P**\nmethods, it is required to use exactly 4 points (the first 3 points are used to estimate all the solutions\nof the P3P problem, the last one is used to retain the best solution that minimizes the reprojection error).']
+ok: FUNC <bool cv..solvePnP [ARG vector_Point3f objectPoints=, ARG vector_Point2f imagePoints=, ARG Mat cameraMatrix=, ARG vector_double distCoeffs=, ARG Mat rvec=, ARG Mat tvec=, ARG bool useExtrinsicGuess=false, ARG int flags=SOLVEPNP_ITERATIVE]>
+
+--- Incoming ---
+[   u'cv.solvePnPRansac',
+    u'bool',
+    [],
+    [   ['Mat', u'objectPoints', '', []],
+        ['Mat', u'imagePoints', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'distCoeffs', '', []],
+        ['Mat', u'rvec', '', ['/O']],
+        ['Mat', u'tvec', '', ['/O']],
+        [u'bool', u'useExtrinsicGuess', u'false', []],
+        [u'int', u'iterationsCount', u'100', []],
+        [u'float', u'reprojectionError', u'8.0', []],
+        [u'double', u'confidence', u'0.99', []],
+        ['Mat', u'inliers', u'Mat()', ['/O']],
+        [u'int', u'flags', u'SOLVEPNP_ITERATIVE', []]],
+    u'bool',
+    u'@brief Finds an object pose from 3D-2D point correspondences using the RANSAC scheme.\n\n@param objectPoints Array of object points in the object coordinate space, Nx3 1-channel or\n1xN/Nx1 3-channel, where N is the number of points. vector\\<Point3f\\> can be also passed here.\n@param imagePoints Array of corresponding image points, Nx2 1-channel or 1xN/Nx1 2-channel,\nwhere N is the number of points. vector\\<Point2f\\> can be also passed here.\n@param cameraMatrix Input camera matrix \\f$A = \\vecthreethree{fx}{0}{cx}{0}{fy}{cy}{0}{0}{1}\\f$ .\n@param distCoeffs Input vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements. If the vector is NULL/empty, the zero distortion coefficients are\nassumed.\n@param rvec Output rotation vector (see Rodrigues ) that, together with tvec , brings points from\nthe model coordinate system to the camera coordinate system.\n@param tvec Output translation vector.\n@param useExtrinsicGuess Parameter used for SOLVEPNP_ITERATIVE. If true (1), the function uses\nthe provided rvec and tvec values as initial approximations of the rotation and translation\nvectors, respectively, and further optimizes them.\n@param iterationsCount Number of iterations.\n@param reprojectionError Inlier threshold value used by the RANSAC procedure. The parameter value\nis the maximum allowed distance between the observed and computed point projections to consider it\nan inlier.\n@param confidence The probability that the algorithm produces a useful result.\n@param inliers Output vector that contains indices of inliers in objectPoints and imagePoints .\n@param flags Method for solving a PnP problem (see solvePnP ).\n\nThe function estimates an object pose given a set of object points, their corresponding image\nprojections, as well as the camera matrix and the distortion coefficients. This function finds such\na pose that minimizes reprojection error, that is, the sum of squared distances between the observed\nprojections imagePoints and the projected (using projectPoints ) objectPoints. The use of RANSAC\nmakes the function resistant to outliers.\n\n@note\n-   An example of how to use solvePNPRansac for object detection can be found at\nopencv_source_code/samples/cpp/tutorial_code/calib3d/real_time_pose_estimation/\n-   The default method used to estimate the camera pose for the Minimal Sample Sets step\nis #SOLVEPNP_EPNP. Exceptions are:\n- if you choose #SOLVEPNP_P3P or #SOLVEPNP_AP3P, these methods will be used.\n- if the number of input points is equal to 4, #SOLVEPNP_P3P is used.\n-   The method used to estimate the camera pose using all the inliers is defined by the\nflags parameters unless it is equal to #SOLVEPNP_P3P or #SOLVEPNP_AP3P. In this case,\nthe method #SOLVEPNP_EPNP will be used instead.']
+ok: FUNC <bool cv..solvePnPRansac [ARG vector_Point3f objectPoints=, ARG vector_Point2f imagePoints=, ARG Mat cameraMatrix=, ARG vector_double distCoeffs=, ARG Mat rvec=, ARG Mat tvec=, ARG bool useExtrinsicGuess=false, ARG int iterationsCount=100, ARG float reprojectionError=8.0, ARG double confidence=0.99, ARG Mat inliers=Mat(), ARG int flags=SOLVEPNP_ITERATIVE]>
+
+--- Incoming ---
+[   u'cv.solveP3P',
+    u'int',
+    [],
+    [   ['Mat', u'objectPoints', '', []],
+        ['Mat', u'imagePoints', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'distCoeffs', '', []],
+        ['vector_Mat', u'rvecs', '', ['/O']],
+        ['vector_Mat', u'tvecs', '', ['/O']],
+        [u'int', u'flags', u'', []]],
+    u'int',
+    u'@brief Finds an object pose from 3 3D-2D point correspondences.\n\n@param objectPoints Array of object points in the object coordinate space, 3x3 1-channel or\n1x3/3x1 3-channel. vector\\<Point3f\\> can be also passed here.\n@param imagePoints Array of corresponding image points, 3x2 1-channel or 1x3/3x1 2-channel.\nvector\\<Point2f\\> can be also passed here.\n@param cameraMatrix Input camera matrix \\f$A = \\vecthreethree{fx}{0}{cx}{0}{fy}{cy}{0}{0}{1}\\f$ .\n@param distCoeffs Input vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements. If the vector is NULL/empty, the zero distortion coefficients are\nassumed.\n@param rvecs Output rotation vectors (see Rodrigues ) that, together with tvecs , brings points from\nthe model coordinate system to the camera coordinate system. A P3P problem has up to 4 solutions.\n@param tvecs Output translation vectors.\n@param flags Method for solving a P3P problem:\n-   **SOLVEPNP_P3P** Method is based on the paper of X.S. Gao, X.-R. Hou, J. Tang, H.-F. Chang\n"Complete Solution Classification for the Perspective-Three-Point Problem".\n-   **SOLVEPNP_AP3P** Method is based on the paper of Tong Ke and Stergios I. Roumeliotis.\n"An Efficient Algebraic Solution to the Perspective-Three-Point Problem".\n\nThe function estimates the object pose given 3 object points, their corresponding image\nprojections, as well as the camera matrix and the distortion coefficients.']
+ok: FUNC <int cv..solveP3P [ARG Mat objectPoints=, ARG Mat imagePoints=, ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.initCameraMatrix2D',
+    u'Mat',
+    [],
+    [   ['vector_Mat', u'objectPoints', '', []],
+        ['vector_Mat', u'imagePoints', '', []],
+        [u'Size', u'imageSize', u'', []],
+        [u'double', u'aspectRatio', u'1.0', []]],
+    u'Mat',
+    u'@brief Finds an initial camera matrix from 3D-2D point correspondences.\n\n@param objectPoints Vector of vectors of the calibration pattern points in the calibration pattern\ncoordinate space. In the old interface all the per-view vectors are concatenated. See\ncalibrateCamera for details.\n@param imagePoints Vector of vectors of the projections of the calibration pattern points. In the\nold interface all the per-view vectors are concatenated.\n@param imageSize Image size in pixels used to initialize the principal point.\n@param aspectRatio If it is zero or negative, both \\f$f_x\\f$ and \\f$f_y\\f$ are estimated independently.\nOtherwise, \\f$f_x = f_y * \\texttt{aspectRatio}\\f$ .\n\nThe function estimates and returns an initial camera matrix for the camera calibration process.\nCurrently, the function only supports planar calibration patterns, which are patterns where each\nobject point has z-coordinate =0.']
+ok: FUNC <Mat cv..initCameraMatrix2D [ARG vector_vector_Point3f objectPoints=, ARG vector_vector_Point2f imagePoints=, ARG Size imageSize=, ARG double aspectRatio=1.0]>
+
+--- Incoming ---
+[   u'cv.findChessboardCorners',
+    u'bool',
+    [],
+    [   ['Mat', u'image', '', []],
+        [u'Size', u'patternSize', u'', []],
+        ['Mat', u'corners', '', ['/O']],
+        [   u'int',
+            u'flags',
+            u'CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE',
+            []]],
+    u'bool',
+    u'@brief Finds the positions of internal corners of the chessboard.\n\n@param image Source chessboard view. It must be an 8-bit grayscale or color image.\n@param patternSize Number of inner corners per a chessboard row and column\n( patternSize = cvSize(points_per_row,points_per_colum) = cvSize(columns,rows) ).\n@param corners Output array of detected corners.\n@param flags Various operation flags that can be zero or a combination of the following values:\n-   **CALIB_CB_ADAPTIVE_THRESH** Use adaptive thresholding to convert the image to black\nand white, rather than a fixed threshold level (computed from the average image brightness).\n-   **CALIB_CB_NORMALIZE_IMAGE** Normalize the image gamma with equalizeHist before\napplying fixed or adaptive thresholding.\n-   **CALIB_CB_FILTER_QUADS** Use additional criteria (like contour area, perimeter,\nsquare-like shape) to filter out false quads extracted at the contour retrieval stage.\n-   **CALIB_CB_FAST_CHECK** Run a fast check on the image that looks for chessboard corners,\nand shortcut the call if none is found. This can drastically speed up the call in the\ndegenerate condition when no chessboard is observed.\n\nThe function attempts to determine whether the input image is a view of the chessboard pattern and\nlocate the internal chessboard corners. The function returns a non-zero value if all of the corners\nare found and they are placed in a certain order (row by row, left to right in every row).\nOtherwise, if the function fails to find all the corners or reorder them, it returns 0. For example,\na regular chessboard has 8 x 8 squares and 7 x 7 internal corners, that is, points where the black\nsquares touch each other. The detected coordinates are approximate, and to determine their positions\nmore accurately, the function calls cornerSubPix. You also may use the function cornerSubPix with\ndifferent parameters if returned coordinates are not accurate enough.\n\nSample usage of detecting and drawing chessboard corners: :\n@code\nSize patternsize(8,6); //interior number of corners\nMat gray = ....; //source image\nvector<Point2f> corners; //this will be filled by the detected corners\n\n//CALIB_CB_FAST_CHECK saves a lot of time on images\n//that do not contain any chessboard corners\nbool patternfound = findChessboardCorners(gray, patternsize, corners,\nCALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE\n+ CALIB_CB_FAST_CHECK);\n\nif(patternfound)\ncornerSubPix(gray, corners, Size(11, 11), Size(-1, -1),\nTermCriteria(CV_TERMCRIT_EPS + CV_TERMCRIT_ITER, 30, 0.1));\n\ndrawChessboardCorners(img, patternsize, Mat(corners), patternfound);\n@endcode\n@note The function requires white space (like a square-thick border, the wider the better) around\nthe board to make the detection more robust in various environments. Otherwise, if there is no\nborder and the background is dark, the outer black squares cannot be segmented properly and so the\nsquare grouping and ordering algorithm fails.']
+ok: FUNC <bool cv..findChessboardCorners [ARG Mat image=, ARG Size patternSize=, ARG vector_Point2f corners=, ARG int flags=CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE]>
+
+--- Incoming ---
+[   u'cv.drawChessboardCorners',
+    u'void',
+    [],
+    [   ['Mat', u'image', '', ['/IO']],
+        [u'Size', u'patternSize', u'', []],
+        ['Mat', u'corners', '', []],
+        [u'bool', u'patternWasFound', u'', []]],
+    u'void',
+    u'@brief Renders the detected chessboard corners.\n\n@param image Destination image. It must be an 8-bit color image.\n@param patternSize Number of inner corners per a chessboard row and column\n(patternSize = cv::Size(points_per_row,points_per_column)).\n@param corners Array of detected corners, the output of findChessboardCorners.\n@param patternWasFound Parameter indicating whether the complete board was found or not. The\nreturn value of findChessboardCorners should be passed here.\n\nThe function draws individual chessboard corners detected either as red circles if the board was not\nfound, or as colored corners connected with lines if the board was found.']
+ok: FUNC <void cv..drawChessboardCorners [ARG Mat image=, ARG Size patternSize=, ARG vector_Point2f corners=, ARG bool patternWasFound=]>
+
+--- Incoming ---
+[   u'struct cv.CirclesGridFinderParameters',
+    '',
+    ['/Simple'],
+    [   [u'Size2f', u'densityNeighborhoodSize', '', ['/RW']],
+        [u'float', u'minDensity', '', ['/RW']],
+        [u'int', u'kmeansAttempts', '', ['/RW']],
+        [u'int', u'minDistanceToAddKeypoint', '', ['/RW']],
+        [u'int', u'keypointScale', '', ['/RW']],
+        [u'float', u'minGraphConfidence', '', ['/RW']],
+        [u'float', u'vertexGain', '', ['/RW']],
+        [u'float', u'vertexPenalty', '', ['/RW']],
+        [u'float', u'existingVertexGain', '', ['/RW']],
+        [u'float', u'edgeGain', '', ['/RW']],
+        [u'float', u'edgePenalty', '', ['/RW']],
+        [u'float', u'convexHullFactor', '', ['/RW']],
+        [u'float', u'minRNGEdgeSwitchDist', '', ['/RW']]],
+    None,
+    '']
+ignored: CLASS cv::.CirclesGridFinderParameters : 
+
+--- Incoming ---
+[   u'cv.CirclesGridFinderParameters.CirclesGridFinderParameters',
+    '',
+    [],
+    [],
+    None,
+    '']
+ignored: FUNC < cv.CirclesGridFinderParameters.CirclesGridFinderParameters []>
+
+--- Incoming ---
+[u'const cv.CirclesGridFinderParameters.SYMMETRIC_GRID', '0', [], [], None, '']
+class not found: CONST SYMMETRIC_GRID=0
+
+--- Incoming ---
+[   u'const cv.CirclesGridFinderParameters.ASYMMETRIC_GRID',
+    '1',
+    [],
+    [],
+    None,
+    '']
+class not found: CONST ASYMMETRIC_GRID=1
+
+--- Incoming ---
+[   u'struct cv.CirclesGridFinderParameters2',
+    u': cv::CirclesGridFinderParameters',
+    ['/Simple'],
+    [   [u'float', u'squareSize', '', ['/RW']],
+        [u'float', u'maxRectifiedDistance', '', ['/RW']]],
+    None,
+    '']
+ignored: CLASS cv::.CirclesGridFinderParameters2 : CirclesGridFinderParameters
+
+--- Incoming ---
+[   u'cv.CirclesGridFinderParameters2.CirclesGridFinderParameters2',
+    '',
+    [],
+    [],
+    None,
+    '']
+ignored: FUNC < cv.CirclesGridFinderParameters2.CirclesGridFinderParameters2 []>
+
+--- Incoming ---
+[   u'cv.findCirclesGrid',
+    u'bool',
+    [],
+    [   ['Mat', u'image', '', []],
+        [u'Size', u'patternSize', u'', []],
+        ['Mat', u'centers', '', ['/O']],
+        [u'int', u'flags', u'', []],
+        [u'Ptr_FeatureDetector', u'blobDetector', u'', ['/C', '/Ref']],
+        [u'CirclesGridFinderParameters', u'parameters', u'', []]],
+    u'bool',
+    u'@brief Finds centers in the grid of circles.\n\n@param image grid view of input circles; it must be an 8-bit grayscale or color image.\n@param patternSize number of circles per row and column\n( patternSize = Size(points_per_row, points_per_colum) ).\n@param centers output array of detected centers.\n@param flags various operation flags that can be one of the following values:\n-   **CALIB_CB_SYMMETRIC_GRID** uses symmetric pattern of circles.\n-   **CALIB_CB_ASYMMETRIC_GRID** uses asymmetric pattern of circles.\n-   **CALIB_CB_CLUSTERING** uses a special algorithm for grid detection. It is more robust to\nperspective distortions but much more sensitive to background clutter.\n@param blobDetector feature detector that finds blobs like dark circles on light background.\n@param parameters struct for finding circles in a grid pattern.\n\nThe function attempts to determine whether the input image contains a grid of circles. If it is, the\nfunction locates centers of the circles. The function returns a non-zero value if all of the centers\nhave been found and they have been placed in a certain order (row by row, left to right in every\nrow). Otherwise, if the function fails to find all the corners or reorder them, it returns 0.\n\nSample usage of detecting and drawing the centers of circles: :\n@code\nSize patternsize(7,7); //number of centers\nMat gray = ....; //source image\nvector<Point2f> centers; //this will be filled by the detected centers\n\nbool patternfound = findCirclesGrid(gray, patternsize, centers);\n\ndrawChessboardCorners(img, patternsize, Mat(centers), patternfound);\n@endcode\n@note The function requires white space (like a square-thick border, the wider the better) around\nthe board to make the detection more robust in various environments.']
+ok: FUNC <bool cv..findCirclesGrid [ARG Mat image=, ARG Size patternSize=, ARG Mat centers=, ARG int flags=, ARG Ptr_FeatureDetector blobDetector=, ARG CirclesGridFinderParameters parameters=]>
+
+--- Incoming ---
+[   u'cv.findCirclesGrid2',
+    u'bool',
+    [],
+    [   ['Mat', u'image', '', []],
+        [u'Size', u'patternSize', u'', []],
+        ['Mat', u'centers', '', ['/O']],
+        [u'int', u'flags', u'', []],
+        [u'Ptr_FeatureDetector', u'blobDetector', u'', ['/C', '/Ref']],
+        [u'CirclesGridFinderParameters2', u'parameters', u'', []]],
+    u'bool',
+    u'@overload']
+ok: FUNC <bool cv..findCirclesGrid2 [ARG Mat image=, ARG Size patternSize=, ARG Mat centers=, ARG int flags=, ARG Ptr_FeatureDetector blobDetector=, ARG CirclesGridFinderParameters2 parameters=]>
+
+--- Incoming ---
+[   u'cv.findCirclesGrid',
+    u'bool',
+    [],
+    [   ['Mat', u'image', '', []],
+        [u'Size', u'patternSize', u'', []],
+        ['Mat', u'centers', '', ['/O']],
+        [u'int', u'flags', u'CALIB_CB_SYMMETRIC_GRID', []],
+        [   u'Ptr_FeatureDetector',
+            u'blobDetector',
+            u'SimpleBlobDetector::create()',
+            ['/C', '/Ref']]],
+    u'bool',
+    u'@overload']
+ok: FUNC <bool cv..findCirclesGrid [ARG Mat image=, ARG Size patternSize=, ARG Mat centers=, ARG int flags=CALIB_CB_SYMMETRIC_GRID, ARG Ptr_FeatureDetector blobDetector=SimpleBlobDetector::create()]>
+
+--- Incoming ---
+[   u'cv.calibrateCamera',
+    u'double',
+    [u'=calibrateCameraExtended'],
+    [   ['vector_Mat', u'objectPoints', '', []],
+        ['vector_Mat', u'imagePoints', '', []],
+        [u'Size', u'imageSize', u'', []],
+        ['Mat', u'cameraMatrix', '', ['/IO']],
+        ['Mat', u'distCoeffs', '', ['/IO']],
+        ['vector_Mat', u'rvecs', '', ['/O']],
+        ['vector_Mat', u'tvecs', '', ['/O']],
+        ['Mat', u'stdDeviationsIntrinsics', '', ['/O']],
+        ['Mat', u'stdDeviationsExtrinsics', '', ['/O']],
+        ['Mat', u'perViewErrors', '', ['/O']],
+        [u'int', u'flags', u'0', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)',
+            []]],
+    u'double',
+    u"@brief Finds the camera intrinsic and extrinsic parameters from several views of a calibration pattern.\n\n@param objectPoints In the new interface it is a vector of vectors of calibration pattern points in\nthe calibration pattern coordinate space (e.g. std::vector<std::vector<cv::Vec3f>>). The outer\nvector contains as many elements as the number of the pattern views. If the same calibration pattern\nis shown in each view and it is fully visible, all the vectors will be the same. Although, it is\npossible to use partially occluded patterns, or even different patterns in different views. Then,\nthe vectors will be different. The points are 3D, but since they are in a pattern coordinate system,\nthen, if the rig is planar, it may make sense to put the model to a XY coordinate plane so that\nZ-coordinate of each input object point is 0.\nIn the old interface all the vectors of object points from different views are concatenated\ntogether.\n@param imagePoints In the new interface it is a vector of vectors of the projections of calibration\npattern points (e.g. std::vector<std::vector<cv::Vec2f>>). imagePoints.size() and\nobjectPoints.size() and imagePoints[i].size() must be equal to objectPoints[i].size() for each i.\nIn the old interface all the vectors of object points from different views are concatenated\ntogether.\n@param imageSize Size of the image used only to initialize the intrinsic camera matrix.\n@param cameraMatrix Output 3x3 floating-point camera matrix\n\\f$A = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\f$ . If CV\\_CALIB\\_USE\\_INTRINSIC\\_GUESS\nand/or CALIB_FIX_ASPECT_RATIO are specified, some or all of fx, fy, cx, cy must be\ninitialized before calling the function.\n@param distCoeffs Output vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements.\n@param rvecs Output vector of rotation vectors (see Rodrigues ) estimated for each pattern view\n(e.g. std::vector<cv::Mat>>). That is, each k-th rotation vector together with the corresponding\nk-th translation vector (see the next output parameter description) brings the calibration pattern\nfrom the model coordinate space (in which object points are specified) to the world coordinate\nspace, that is, a real position of the calibration pattern in the k-th pattern view (k=0.. *M* -1).\n@param tvecs Output vector of translation vectors estimated for each pattern view.\n@param stdDeviationsIntrinsics Output vector of standard deviations estimated for intrinsic parameters.\nOrder of deviations values:\n\\f$(f_x, f_y, c_x, c_y, k_1, k_2, p_1, p_2, k_3, k_4, k_5, k_6 , s_1, s_2, s_3,\ns_4, \\tau_x, \\tau_y)\\f$ If one of parameters is not estimated, it's deviation is equals to zero.\n@param stdDeviationsExtrinsics Output vector of standard deviations estimated for extrinsic parameters.\nOrder of deviations values: \\f$(R_1, T_1, \\dotsc , R_M, T_M)\\f$ where M is number of pattern views,\n\\f$R_i, T_i\\f$ are concatenated 1x3 vectors.\n@param perViewErrors Output vector of the RMS re-projection error estimated for each pattern view.\n@param flags Different flags that may be zero or a combination of the following values:\n-   **CALIB_USE_INTRINSIC_GUESS** cameraMatrix contains valid initial values of\nfx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image\ncenter ( imageSize is used), and focal distances are computed in a least-squares fashion.\nNote, that if intrinsic parameters are known, there is no need to use this function just to\nestimate extrinsic parameters. Use solvePnP instead.\n-   **CALIB_FIX_PRINCIPAL_POINT** The principal point is not changed during the global\noptimization. It stays at the center or at a different location specified when\nCALIB_USE_INTRINSIC_GUESS is set too.\n-   **CALIB_FIX_ASPECT_RATIO** The functions considers only fy as a free parameter. The\nratio fx/fy stays the same as in the input cameraMatrix . When\nCALIB_USE_INTRINSIC_GUESS is not set, the actual input values of fx and fy are\nignored, only their ratio is computed and used further.\n-   **CALIB_ZERO_TANGENT_DIST** Tangential distortion coefficients \\f$(p_1, p_2)\\f$ are set\nto zeros and stay zero.\n-   **CALIB_FIX_K1,...,CALIB_FIX_K6** The corresponding radial distortion\ncoefficient is not changed during the optimization. If CALIB_USE_INTRINSIC_GUESS is\nset, the coefficient from the supplied distCoeffs matrix is used. Otherwise, it is set to 0.\n-   **CALIB_RATIONAL_MODEL** Coefficients k4, k5, and k6 are enabled. To provide the\nbackward compatibility, this extra flag should be explicitly specified to make the\ncalibration function use the rational model and return 8 coefficients. If the flag is not\nset, the function computes and returns only 5 distortion coefficients.\n-   **CALIB_THIN_PRISM_MODEL** Coefficients s1, s2, s3 and s4 are enabled. To provide the\nbackward compatibility, this extra flag should be explicitly specified to make the\ncalibration function use the thin prism model and return 12 coefficients. If the flag is not\nset, the function computes and returns only 5 distortion coefficients.\n-   **CALIB_FIX_S1_S2_S3_S4** The thin prism distortion coefficients are not changed during\nthe optimization. If CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the\nsupplied distCoeffs matrix is used. Otherwise, it is set to 0.\n-   **CALIB_TILTED_MODEL** Coefficients tauX and tauY are enabled. To provide the\nbackward compatibility, this extra flag should be explicitly specified to make the\ncalibration function use the tilted sensor model and return 14 coefficients. If the flag is not\nset, the function computes and returns only 5 distortion coefficients.\n-   **CALIB_FIX_TAUX_TAUY** The coefficients of the tilted sensor model are not changed during\nthe optimization. If CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the\nsupplied distCoeffs matrix is used. Otherwise, it is set to 0.\n@param criteria Termination criteria for the iterative optimization algorithm.\n\n@return the overall RMS re-projection error.\n\nThe function estimates the intrinsic camera parameters and extrinsic parameters for each of the\nviews. The algorithm is based on @cite Zhang2000 and @cite BouguetMCT . The coordinates of 3D object\npoints and their corresponding 2D projections in each view must be specified. That may be achieved\nby using an object with a known geometry and easily detectable feature points. Such an object is\ncalled a calibration rig or calibration pattern, and OpenCV has built-in support for a chessboard as\na calibration rig (see findChessboardCorners ). Currently, initialization of intrinsic parameters\n(when CALIB_USE_INTRINSIC_GUESS is not set) is only implemented for planar calibration\npatterns (where Z-coordinates of the object points must be all zeros). 3D calibration rigs can also\nbe used as long as initial cameraMatrix is provided.\n\nThe algorithm performs the following steps:\n\n-   Compute the initial intrinsic parameters (the option only available for planar calibration\npatterns) or read them from the input parameters. The distortion coefficients are all set to\nzeros initially unless some of CALIB_FIX_K? are specified.\n\n-   Estimate the initial camera pose as if the intrinsic parameters have been already known. This is\ndone using solvePnP .\n\n-   Run the global Levenberg-Marquardt optimization algorithm to minimize the reprojection error,\nthat is, the total sum of squared distances between the observed feature points imagePoints and\nthe projected (using the current estimates for camera parameters and the poses) object points\nobjectPoints. See projectPoints for details.\n\n@note\nIf you use a non-square (=non-NxN) grid and findChessboardCorners for calibration, and\ncalibrateCamera returns bad values (zero distortion coefficients, an image center very far from\n(w/2-0.5,h/2-0.5), and/or large differences between \\f$f_x\\f$ and \\f$f_y\\f$ (ratios of 10:1 or more)),\nthen you have probably used patternSize=cvSize(rows,cols) instead of using\npatternSize=cvSize(cols,rows) in findChessboardCorners .\n\n@sa\nfindChessboardCorners, solvePnP, initCameraMatrix2D, stereoCalibrate, undistort"]
+ok: FUNC <double cv..calibrateCamera [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints=, ARG Size imageSize=, ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG Mat stdDeviationsIntrinsics=, ARG Mat stdDeviationsExtrinsics=, ARG Mat perViewErrors=, ARG int flags=0, ARG TermCriteria criteria=TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)]>
+
+--- Incoming ---
+[   u'cv.calibrateCamera',
+    u'double',
+    [],
+    [   ['vector_Mat', u'objectPoints', '', []],
+        ['vector_Mat', u'imagePoints', '', []],
+        [u'Size', u'imageSize', u'', []],
+        ['Mat', u'cameraMatrix', '', ['/IO']],
+        ['Mat', u'distCoeffs', '', ['/IO']],
+        ['vector_Mat', u'rvecs', '', ['/O']],
+        ['vector_Mat', u'tvecs', '', ['/O']],
+        [u'int', u'flags', u'0', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)',
+            []]],
+    u'double',
+    u'@overload double calibrateCamera( InputArrayOfArrays objectPoints,\nInputArrayOfArrays imagePoints, Size imageSize,\nInputOutputArray cameraMatrix, InputOutputArray distCoeffs,\nOutputArrayOfArrays rvecs, OutputArrayOfArrays tvecs,\nOutputArray stdDeviations, OutputArray perViewErrors,\nint flags = 0, TermCriteria criteria = TermCriteria(\nTermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON) )']
+ok: FUNC <double cv..calibrateCamera [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints=, ARG Size imageSize=, ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG int flags=0, ARG TermCriteria criteria=TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)]>
+
+--- Incoming ---
+[   u'cv.calibrationMatrixValues',
+    u'void',
+    [],
+    [   ['Mat', u'cameraMatrix', '', []],
+        [u'Size', u'imageSize', u'', []],
+        [u'double', u'apertureWidth', u'', []],
+        [u'double', u'apertureHeight', u'', []],
+        [u'double', u'fovx', u'', ['/O', '/Ref']],
+        [u'double', u'fovy', u'', ['/O', '/Ref']],
+        [u'double', u'focalLength', u'', ['/O', '/Ref']],
+        [u'Point2d', u'principalPoint', u'', ['/O', '/Ref']],
+        [u'double', u'aspectRatio', u'', ['/O', '/Ref']]],
+    u'void',
+    u"@brief Computes useful camera characteristics from the camera matrix.\n\n@param cameraMatrix Input camera matrix that can be estimated by calibrateCamera or\nstereoCalibrate .\n@param imageSize Input image size in pixels.\n@param apertureWidth Physical width in mm of the sensor.\n@param apertureHeight Physical height in mm of the sensor.\n@param fovx Output field of view in degrees along the horizontal sensor axis.\n@param fovy Output field of view in degrees along the vertical sensor axis.\n@param focalLength Focal length of the lens in mm.\n@param principalPoint Principal point in mm.\n@param aspectRatio \\f$f_y/f_x\\f$\n\nThe function computes various useful camera characteristics from the previously estimated camera\nmatrix.\n\n@note\nDo keep in mind that the unity measure 'mm' stands for whatever unit of measure one chooses for\nthe chessboard pitch (it can thus be any value)."]
+ok: FUNC <void cv..calibrationMatrixValues [ARG Mat cameraMatrix=, ARG Size imageSize=, ARG double apertureWidth=, ARG double apertureHeight=, ARG double fovx=, ARG double fovy=, ARG double focalLength=, ARG Point2d principalPoint=, ARG double aspectRatio=]>
+
+--- Incoming ---
+[   u'cv.stereoCalibrate',
+    u'double',
+    [],
+    [   ['vector_Mat', u'objectPoints', '', []],
+        ['vector_Mat', u'imagePoints1', '', []],
+        ['vector_Mat', u'imagePoints2', '', []],
+        ['Mat', u'cameraMatrix1', '', ['/IO']],
+        ['Mat', u'distCoeffs1', '', ['/IO']],
+        ['Mat', u'cameraMatrix2', '', ['/IO']],
+        ['Mat', u'distCoeffs2', '', ['/IO']],
+        [u'Size', u'imageSize', u'', []],
+        ['Mat', u'R', '', ['/O']],
+        ['Mat', u'T', '', ['/O']],
+        ['Mat', u'E', '', ['/O']],
+        ['Mat', u'F', '', ['/O']],
+        [u'int', u'flags', u'CALIB_FIX_INTRINSIC', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)',
+            []]],
+    u'double',
+    u'@brief Calibrates the stereo camera.\n\n@param objectPoints Vector of vectors of the calibration pattern points.\n@param imagePoints1 Vector of vectors of the projections of the calibration pattern points,\nobserved by the first camera.\n@param imagePoints2 Vector of vectors of the projections of the calibration pattern points,\nobserved by the second camera.\n@param cameraMatrix1 Input/output first camera matrix:\n\\f$\\vecthreethree{f_x^{(j)}}{0}{c_x^{(j)}}{0}{f_y^{(j)}}{c_y^{(j)}}{0}{0}{1}\\f$ , \\f$j = 0,\\, 1\\f$ . If\nany of CALIB_USE_INTRINSIC_GUESS , CALIB_FIX_ASPECT_RATIO ,\nCALIB_FIX_INTRINSIC , or CALIB_FIX_FOCAL_LENGTH are specified, some or all of the\nmatrix components must be initialized. See the flags description for details.\n@param distCoeffs1 Input/output vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements. The output vector length depends on the flags.\n@param cameraMatrix2 Input/output second camera matrix. The parameter is similar to cameraMatrix1\n@param distCoeffs2 Input/output lens distortion coefficients for the second camera. The parameter\nis similar to distCoeffs1 .\n@param imageSize Size of the image used only to initialize intrinsic camera matrix.\n@param R Output rotation matrix between the 1st and the 2nd camera coordinate systems.\n@param T Output translation vector between the coordinate systems of the cameras.\n@param E Output essential matrix.\n@param F Output fundamental matrix.\n@param flags Different flags that may be zero or a combination of the following values:\n-   **CALIB_FIX_INTRINSIC** Fix cameraMatrix? and distCoeffs? so that only R, T, E , and F\nmatrices are estimated.\n-   **CALIB_USE_INTRINSIC_GUESS** Optimize some or all of the intrinsic parameters\naccording to the specified flags. Initial values are provided by the user.\n-   **CALIB_FIX_PRINCIPAL_POINT** Fix the principal points during the optimization.\n-   **CALIB_FIX_FOCAL_LENGTH** Fix \\f$f^{(j)}_x\\f$ and \\f$f^{(j)}_y\\f$ .\n-   **CALIB_FIX_ASPECT_RATIO** Optimize \\f$f^{(j)}_y\\f$ . Fix the ratio \\f$f^{(j)}_x/f^{(j)}_y\\f$\n.\n-   **CALIB_SAME_FOCAL_LENGTH** Enforce \\f$f^{(0)}_x=f^{(1)}_x\\f$ and \\f$f^{(0)}_y=f^{(1)}_y\\f$ .\n-   **CALIB_ZERO_TANGENT_DIST** Set tangential distortion coefficients for each camera to\nzeros and fix there.\n-   **CALIB_FIX_K1,...,CALIB_FIX_K6** Do not change the corresponding radial\ndistortion coefficient during the optimization. If CALIB_USE_INTRINSIC_GUESS is set,\nthe coefficient from the supplied distCoeffs matrix is used. Otherwise, it is set to 0.\n-   **CALIB_RATIONAL_MODEL** Enable coefficients k4, k5, and k6. To provide the backward\ncompatibility, this extra flag should be explicitly specified to make the calibration\nfunction use the rational model and return 8 coefficients. If the flag is not set, the\nfunction computes and returns only 5 distortion coefficients.\n-   **CALIB_THIN_PRISM_MODEL** Coefficients s1, s2, s3 and s4 are enabled. To provide the\nbackward compatibility, this extra flag should be explicitly specified to make the\ncalibration function use the thin prism model and return 12 coefficients. If the flag is not\nset, the function computes and returns only 5 distortion coefficients.\n-   **CALIB_FIX_S1_S2_S3_S4** The thin prism distortion coefficients are not changed during\nthe optimization. If CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the\nsupplied distCoeffs matrix is used. Otherwise, it is set to 0.\n-   **CALIB_TILTED_MODEL** Coefficients tauX and tauY are enabled. To provide the\nbackward compatibility, this extra flag should be explicitly specified to make the\ncalibration function use the tilted sensor model and return 14 coefficients. If the flag is not\nset, the function computes and returns only 5 distortion coefficients.\n-   **CALIB_FIX_TAUX_TAUY** The coefficients of the tilted sensor model are not changed during\nthe optimization. If CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the\nsupplied distCoeffs matrix is used. Otherwise, it is set to 0.\n@param criteria Termination criteria for the iterative optimization algorithm.\n\nThe function estimates transformation between two cameras making a stereo pair. If you have a stereo\ncamera where the relative position and orientation of two cameras is fixed, and if you computed\nposes of an object relative to the first camera and to the second camera, (R1, T1) and (R2, T2),\nrespectively (this can be done with solvePnP ), then those poses definitely relate to each other.\nThis means that, given ( \\f$R_1\\f$,\\f$T_1\\f$ ), it should be possible to compute ( \\f$R_2\\f$,\\f$T_2\\f$ ). You only\nneed to know the position and orientation of the second camera relative to the first camera. This is\nwhat the described function does. It computes ( \\f$R\\f$,\\f$T\\f$ ) so that:\n\n\\f[R_2=R*R_1\\f]\n\\f[T_2=R*T_1 + T,\\f]\n\nOptionally, it computes the essential matrix E:\n\n\\f[E= \\vecthreethree{0}{-T_2}{T_1}{T_2}{0}{-T_0}{-T_1}{T_0}{0} *R\\f]\n\nwhere \\f$T_i\\f$ are components of the translation vector \\f$T\\f$ : \\f$T=[T_0, T_1, T_2]^T\\f$ . And the function\ncan also compute the fundamental matrix F:\n\n\\f[F = cameraMatrix2^{-T} E cameraMatrix1^{-1}\\f]\n\nBesides the stereo-related information, the function can also perform a full calibration of each of\ntwo cameras. However, due to the high dimensionality of the parameter space and noise in the input\ndata, the function can diverge from the correct solution. If the intrinsic parameters can be\nestimated with high accuracy for each of the cameras individually (for example, using\ncalibrateCamera ), you are recommended to do so and then pass CALIB_FIX_INTRINSIC flag to the\nfunction along with the computed intrinsic parameters. Otherwise, if all the parameters are\nestimated at once, it makes sense to restrict some parameters, for example, pass\nCALIB_SAME_FOCAL_LENGTH and CALIB_ZERO_TANGENT_DIST flags, which is usually a\nreasonable assumption.\n\nSimilarly to calibrateCamera , the function minimizes the total re-projection error for all the\npoints in all the available views from both cameras. The function returns the final value of the\nre-projection error.']
+ok: FUNC <double cv..stereoCalibrate [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints1=, ARG vector_Mat imagePoints2=, ARG Mat cameraMatrix1=, ARG Mat distCoeffs1=, ARG Mat cameraMatrix2=, ARG Mat distCoeffs2=, ARG Size imageSize=, ARG Mat R=, ARG Mat T=, ARG Mat E=, ARG Mat F=, ARG int flags=CALIB_FIX_INTRINSIC, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)]>
+
+--- Incoming ---
+[   u'cv.stereoRectify',
+    u'void',
+    [],
+    [   ['Mat', u'cameraMatrix1', '', []],
+        ['Mat', u'distCoeffs1', '', []],
+        ['Mat', u'cameraMatrix2', '', []],
+        ['Mat', u'distCoeffs2', '', []],
+        [u'Size', u'imageSize', u'', []],
+        ['Mat', u'R', '', []],
+        ['Mat', u'T', '', []],
+        ['Mat', u'R1', '', ['/O']],
+        ['Mat', u'R2', '', ['/O']],
+        ['Mat', u'P1', '', ['/O']],
+        ['Mat', u'P2', '', ['/O']],
+        ['Mat', u'Q', '', ['/O']],
+        [u'int', u'flags', u'CALIB_ZERO_DISPARITY', []],
+        [u'double', u'alpha', u'-1', []],
+        [u'Size', u'newImageSize', u'Size()', []],
+        [u'Rect*', u'validPixROI1', u'0', ['/O']],
+        [u'Rect*', u'validPixROI2', u'0', ['/O']]],
+    u'void',
+    u'@brief Computes rectification transforms for each head of a calibrated stereo camera.\n\n@param cameraMatrix1 First camera matrix.\n@param distCoeffs1 First camera distortion parameters.\n@param cameraMatrix2 Second camera matrix.\n@param distCoeffs2 Second camera distortion parameters.\n@param imageSize Size of the image used for stereo calibration.\n@param R Rotation matrix between the coordinate systems of the first and the second cameras.\n@param T Translation vector between coordinate systems of the cameras.\n@param R1 Output 3x3 rectification transform (rotation matrix) for the first camera.\n@param R2 Output 3x3 rectification transform (rotation matrix) for the second camera.\n@param P1 Output 3x4 projection matrix in the new (rectified) coordinate systems for the first\ncamera.\n@param P2 Output 3x4 projection matrix in the new (rectified) coordinate systems for the second\ncamera.\n@param Q Output \\f$4 \\times 4\\f$ disparity-to-depth mapping matrix (see reprojectImageTo3D ).\n@param flags Operation flags that may be zero or CALIB_ZERO_DISPARITY . If the flag is set,\nthe function makes the principal points of each camera have the same pixel coordinates in the\nrectified views. And if the flag is not set, the function may still shift the images in the\nhorizontal or vertical direction (depending on the orientation of epipolar lines) to maximize the\nuseful image area.\n@param alpha Free scaling parameter. If it is -1 or absent, the function performs the default\nscaling. Otherwise, the parameter should be between 0 and 1. alpha=0 means that the rectified\nimages are zoomed and shifted so that only valid pixels are visible (no black areas after\nrectification). alpha=1 means that the rectified image is decimated and shifted so that all the\npixels from the original images from the cameras are retained in the rectified images (no source\nimage pixels are lost). Obviously, any intermediate value yields an intermediate result between\nthose two extreme cases.\n@param newImageSize New image resolution after rectification. The same size should be passed to\ninitUndistortRectifyMap (see the stereo_calib.cpp sample in OpenCV samples directory). When (0,0)\nis passed (default), it is set to the original imageSize . Setting it to larger value can help you\npreserve details in the original image, especially when there is a big radial distortion.\n@param validPixROI1 Optional output rectangles inside the rectified images where all the pixels\nare valid. If alpha=0 , the ROIs cover the whole images. Otherwise, they are likely to be smaller\n(see the picture below).\n@param validPixROI2 Optional output rectangles inside the rectified images where all the pixels\nare valid. If alpha=0 , the ROIs cover the whole images. Otherwise, they are likely to be smaller\n(see the picture below).\n\nThe function computes the rotation matrices for each camera that (virtually) make both camera image\nplanes the same plane. Consequently, this makes all the epipolar lines parallel and thus simplifies\nthe dense stereo correspondence problem. The function takes the matrices computed by stereoCalibrate\nas input. As output, it provides two rotation matrices and also two projection matrices in the new\ncoordinates. The function distinguishes the following two cases:\n\n-   **Horizontal stereo**: the first and the second camera views are shifted relative to each other\nmainly along the x axis (with possible small vertical shift). In the rectified images, the\ncorresponding epipolar lines in the left and right cameras are horizontal and have the same\ny-coordinate. P1 and P2 look like:\n\n\\f[\\texttt{P1} = \\begin{bmatrix} f & 0 & cx_1 & 0 \\\\ 0 & f & cy & 0 \\\\ 0 & 0 & 1 & 0 \\end{bmatrix}\\f]\n\n\\f[\\texttt{P2} = \\begin{bmatrix} f & 0 & cx_2 & T_x*f \\\\ 0 & f & cy & 0 \\\\ 0 & 0 & 1 & 0 \\end{bmatrix} ,\\f]\n\nwhere \\f$T_x\\f$ is a horizontal shift between the cameras and \\f$cx_1=cx_2\\f$ if\nCALIB_ZERO_DISPARITY is set.\n\n-   **Vertical stereo**: the first and the second camera views are shifted relative to each other\nmainly in vertical direction (and probably a bit in the horizontal direction too). The epipolar\nlines in the rectified images are vertical and have the same x-coordinate. P1 and P2 look like:\n\n\\f[\\texttt{P1} = \\begin{bmatrix} f & 0 & cx & 0 \\\\ 0 & f & cy_1 & 0 \\\\ 0 & 0 & 1 & 0 \\end{bmatrix}\\f]\n\n\\f[\\texttt{P2} = \\begin{bmatrix} f & 0 & cx & 0 \\\\ 0 & f & cy_2 & T_y*f \\\\ 0 & 0 & 1 & 0 \\end{bmatrix} ,\\f]\n\nwhere \\f$T_y\\f$ is a vertical shift between the cameras and \\f$cy_1=cy_2\\f$ if CALIB_ZERO_DISPARITY is\nset.\n\nAs you can see, the first three columns of P1 and P2 will effectively be the new "rectified" camera\nmatrices. The matrices, together with R1 and R2 , can then be passed to initUndistortRectifyMap to\ninitialize the rectification map for each camera.\n\nSee below the screenshot from the stereo_calib.cpp sample. Some red horizontal lines pass through\nthe corresponding image regions. This means that the images are well rectified, which is what most\nstereo correspondence algorithms rely on. The green rectangles are roi1 and roi2 . You see that\ntheir interiors are all valid pixels.\n\n![image](pics/stereo_undistort.jpg)']
+ok: FUNC <void cv..stereoRectify [ARG Mat cameraMatrix1=, ARG Mat distCoeffs1=, ARG Mat cameraMatrix2=, ARG Mat distCoeffs2=, ARG Size imageSize=, ARG Mat R=, ARG Mat T=, ARG Mat R1=, ARG Mat R2=, ARG Mat P1=, ARG Mat P2=, ARG Mat Q=, ARG int flags=CALIB_ZERO_DISPARITY, ARG double alpha=-1, ARG Size newImageSize=Size(), ARG Rect * validPixROI1=0, ARG Rect * validPixROI2=0]>
+
+--- Incoming ---
+[   u'cv.stereoRectifyUncalibrated',
+    u'bool',
+    [],
+    [   ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        ['Mat', u'F', '', []],
+        [u'Size', u'imgSize', u'', []],
+        ['Mat', u'H1', '', ['/O']],
+        ['Mat', u'H2', '', ['/O']],
+        [u'double', u'threshold', u'5', []]],
+    u'bool',
+    u'@brief Computes a rectification transform for an uncalibrated stereo camera.\n\n@param points1 Array of feature points in the first image.\n@param points2 The corresponding points in the second image. The same formats as in\nfindFundamentalMat are supported.\n@param F Input fundamental matrix. It can be computed from the same set of point pairs using\nfindFundamentalMat .\n@param imgSize Size of the image.\n@param H1 Output rectification homography matrix for the first image.\n@param H2 Output rectification homography matrix for the second image.\n@param threshold Optional threshold used to filter out the outliers. If the parameter is greater\nthan zero, all the point pairs that do not comply with the epipolar geometry (that is, the points\nfor which \\f$|\\texttt{points2[i]}^T*\\texttt{F}*\\texttt{points1[i]}|>\\texttt{threshold}\\f$ ) are\nrejected prior to computing the homographies. Otherwise,all the points are considered inliers.\n\nThe function computes the rectification transformations without knowing intrinsic parameters of the\ncameras and their relative position in the space, which explains the suffix "uncalibrated". Another\nrelated difference from stereoRectify is that the function outputs not the rectification\ntransformations in the object (3D) space, but the planar perspective transformations encoded by the\nhomography matrices H1 and H2 . The function implements the algorithm @cite Hartley99 .\n\n@note\nWhile the algorithm does not need to know the intrinsic parameters of the cameras, it heavily\ndepends on the epipolar geometry. Therefore, if the camera lenses have a significant distortion,\nit would be better to correct it before computing the fundamental matrix and calling this\nfunction. For example, distortion coefficients can be estimated for each head of stereo camera\nseparately by using calibrateCamera . Then, the images can be corrected using undistort , or\njust the point coordinates can be corrected with undistortPoints .']
+ok: FUNC <bool cv..stereoRectifyUncalibrated [ARG Mat points1=, ARG Mat points2=, ARG Mat F=, ARG Size imgSize=, ARG Mat H1=, ARG Mat H2=, ARG double threshold=5]>
+
+--- Incoming ---
+[   u'cv.rectify3Collinear',
+    u'float',
+    [],
+    [   ['Mat', u'cameraMatrix1', '', []],
+        ['Mat', u'distCoeffs1', '', []],
+        ['Mat', u'cameraMatrix2', '', []],
+        ['Mat', u'distCoeffs2', '', []],
+        ['Mat', u'cameraMatrix3', '', []],
+        ['Mat', u'distCoeffs3', '', []],
+        ['vector_Mat', u'imgpt1', '', []],
+        ['vector_Mat', u'imgpt3', '', []],
+        [u'Size', u'imageSize', u'', []],
+        ['Mat', u'R12', '', []],
+        ['Mat', u'T12', '', []],
+        ['Mat', u'R13', '', []],
+        ['Mat', u'T13', '', []],
+        ['Mat', u'R1', '', ['/O']],
+        ['Mat', u'R2', '', ['/O']],
+        ['Mat', u'R3', '', ['/O']],
+        ['Mat', u'P1', '', ['/O']],
+        ['Mat', u'P2', '', ['/O']],
+        ['Mat', u'P3', '', ['/O']],
+        ['Mat', u'Q', '', ['/O']],
+        [u'double', u'alpha', u'', []],
+        [u'Size', u'newImgSize', u'', []],
+        [u'Rect*', u'roi1', u'', ['/O']],
+        [u'Rect*', u'roi2', u'', ['/O']],
+        [u'int', u'flags', u'', []]],
+    u'float',
+    '']
+ok: FUNC <float cv..rectify3Collinear [ARG Mat cameraMatrix1=, ARG Mat distCoeffs1=, ARG Mat cameraMatrix2=, ARG Mat distCoeffs2=, ARG Mat cameraMatrix3=, ARG Mat distCoeffs3=, ARG vector_Mat imgpt1=, ARG vector_Mat imgpt3=, ARG Size imageSize=, ARG Mat R12=, ARG Mat T12=, ARG Mat R13=, ARG Mat T13=, ARG Mat R1=, ARG Mat R2=, ARG Mat R3=, ARG Mat P1=, ARG Mat P2=, ARG Mat P3=, ARG Mat Q=, ARG double alpha=, ARG Size newImgSize=, ARG Rect * roi1=, ARG Rect * roi2=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.getOptimalNewCameraMatrix',
+    u'Mat',
+    [],
+    [   ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'distCoeffs', '', []],
+        [u'Size', u'imageSize', u'', []],
+        [u'double', u'alpha', u'', []],
+        [u'Size', u'newImgSize', u'Size()', []],
+        [u'Rect*', u'validPixROI', u'0', ['/O']],
+        [u'bool', u'centerPrincipalPoint', u'false', []]],
+    u'Mat',
+    u'@brief Returns the new camera matrix based on the free scaling parameter.\n\n@param cameraMatrix Input camera matrix.\n@param distCoeffs Input vector of distortion coefficients\n\\f$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6 [, s_1, s_2, s_3, s_4[, \\tau_x, \\tau_y]]]])\\f$ of\n4, 5, 8, 12 or 14 elements. If the vector is NULL/empty, the zero distortion coefficients are\nassumed.\n@param imageSize Original image size.\n@param alpha Free scaling parameter between 0 (when all the pixels in the undistorted image are\nvalid) and 1 (when all the source image pixels are retained in the undistorted image). See\nstereoRectify for details.\n@param newImgSize Image size after rectification. By default,it is set to imageSize .\n@param validPixROI Optional output rectangle that outlines all-good-pixels region in the\nundistorted image. See roi1, roi2 description in stereoRectify .\n@param centerPrincipalPoint Optional flag that indicates whether in the new camera matrix the\nprincipal point should be at the image center or not. By default, the principal point is chosen to\nbest fit a subset of the source image (determined by alpha) to the corrected image.\n@return new_camera_matrix Output new camera matrix.\n\nThe function computes and returns the optimal new camera matrix based on the free scaling parameter.\nBy varying this parameter, you may retrieve only sensible pixels alpha=0 , keep all the original\nimage pixels if there is valuable information in the corners alpha=1 , or get something in between.\nWhen alpha\\>0 , the undistortion result is likely to have some black pixels corresponding to\n"virtual" pixels outside of the captured distorted image. The original camera matrix, distortion\ncoefficients, the computed new camera matrix, and newImageSize should be passed to\ninitUndistortRectifyMap to produce the maps for remap .']
+ok: FUNC <Mat cv..getOptimalNewCameraMatrix [ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG Size imageSize=, ARG double alpha=, ARG Size newImgSize=Size(), ARG Rect * validPixROI=0, ARG bool centerPrincipalPoint=false]>
+
+--- Incoming ---
+[   u'cv.convertPointsToHomogeneous',
+    u'void',
+    [],
+    [['Mat', u'src', '', []], ['Mat', u'dst', '', ['/O']]],
+    u'void',
+    u"@brief Converts points from Euclidean to homogeneous space.\n\n@param src Input vector of N-dimensional points.\n@param dst Output vector of N+1-dimensional points.\n\nThe function converts points from Euclidean to homogeneous space by appending 1's to the tuple of\npoint coordinates. That is, each point (x1, x2, ..., xn) is converted to (x1, x2, ..., xn, 1)."]
+ok: FUNC <void cv..convertPointsToHomogeneous [ARG Mat src=, ARG Mat dst=]>
+
+--- Incoming ---
+[   u'cv.convertPointsFromHomogeneous',
+    u'void',
+    [],
+    [['Mat', u'src', '', []], ['Mat', u'dst', '', ['/O']]],
+    u'void',
+    u'@brief Converts points from homogeneous to Euclidean space.\n\n@param src Input vector of N-dimensional points.\n@param dst Output vector of N-1-dimensional points.\n\nThe function converts points homogeneous to Euclidean space using perspective projection. That is,\neach point (x1, x2, ... x(n-1), xn) is converted to (x1/xn, x2/xn, ..., x(n-1)/xn). When xn=0, the\noutput point coordinates will be (0,0,0,...).']
+ok: FUNC <void cv..convertPointsFromHomogeneous [ARG Mat src=, ARG Mat dst=]>
+
+--- Incoming ---
+[   u'cv.findFundamentalMat',
+    u'Mat',
+    [],
+    [   ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        [u'int', u'method', u'FM_RANSAC', []],
+        [u'double', u'param1', u'3.', []],
+        [u'double', u'param2', u'0.99', []],
+        ['Mat', u'mask', u'Mat()', ['/O']]],
+    u'Mat',
+    u'@brief Calculates a fundamental matrix from the corresponding points in two images.\n\n@param points1 Array of N points from the first image. The point coordinates should be\nfloating-point (single or double precision).\n@param points2 Array of the second image points of the same size and format as points1 .\n@param method Method for computing a fundamental matrix.\n-   **CV_FM_7POINT** for a 7-point algorithm. \\f$N = 7\\f$\n-   **CV_FM_8POINT** for an 8-point algorithm. \\f$N \\ge 8\\f$\n-   **CV_FM_RANSAC** for the RANSAC algorithm. \\f$N \\ge 8\\f$\n-   **CV_FM_LMEDS** for the LMedS algorithm. \\f$N \\ge 8\\f$\n@param param1 Parameter used for RANSAC. It is the maximum distance from a point to an epipolar\nline in pixels, beyond which the point is considered an outlier and is not used for computing the\nfinal fundamental matrix. It can be set to something like 1-3, depending on the accuracy of the\npoint localization, image resolution, and the image noise.\n@param param2 Parameter used for the RANSAC or LMedS methods only. It specifies a desirable level\nof confidence (probability) that the estimated matrix is correct.\n@param mask\n\nThe epipolar geometry is described by the following equation:\n\n\\f[[p_2; 1]^T F [p_1; 1] = 0\\f]\n\nwhere \\f$F\\f$ is a fundamental matrix, \\f$p_1\\f$ and \\f$p_2\\f$ are corresponding points in the first and the\nsecond images, respectively.\n\nThe function calculates the fundamental matrix using one of four methods listed above and returns\nthe found fundamental matrix. Normally just one matrix is found. But in case of the 7-point\nalgorithm, the function may return up to 3 solutions ( \\f$9 \\times 3\\f$ matrix that stores all 3\nmatrices sequentially).\n\nThe calculated fundamental matrix may be passed further to computeCorrespondEpilines that finds the\nepipolar lines corresponding to the specified points. It can also be passed to\nstereoRectifyUncalibrated to compute the rectification transformation. :\n@code\n// Example. Estimation of fundamental matrix using the RANSAC algorithm\nint point_count = 100;\nvector<Point2f> points1(point_count);\nvector<Point2f> points2(point_count);\n\n// initialize the points here ...\nfor( int i = 0; i < point_count; i++ )\n{\npoints1[i] = ...;\npoints2[i] = ...;\n}\n\nMat fundamental_matrix =\nfindFundamentalMat(points1, points2, FM_RANSAC, 3, 0.99);\n@endcode']
+ok: FUNC <Mat cv..findFundamentalMat [ARG vector_Point2f points1=, ARG vector_Point2f points2=, ARG int method=FM_RANSAC, ARG double param1=3., ARG double param2=0.99, ARG Mat mask=Mat()]>
+
+--- Incoming ---
+[   u'cv.findEssentialMat',
+    u'Mat',
+    [],
+    [   ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        [u'int', u'method', u'RANSAC', []],
+        [u'double', u'prob', u'0.999', []],
+        [u'double', u'threshold', u'1.0', []],
+        ['Mat', u'mask', u'Mat()', ['/O']]],
+    u'Mat',
+    u'@brief Calculates an essential matrix from the corresponding points in two images.\n\n@param points1 Array of N (N \\>= 5) 2D points from the first image. The point coordinates should\nbe floating-point (single or double precision).\n@param points2 Array of the second image points of the same size and format as points1 .\n@param cameraMatrix Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\f$ .\nNote that this function assumes that points1 and points2 are feature points from cameras with the\nsame camera matrix.\n@param method Method for computing an essential matrix.\n-   **RANSAC** for the RANSAC algorithm.\n-   **LMEDS** for the LMedS algorithm.\n@param prob Parameter used for the RANSAC or LMedS methods only. It specifies a desirable level of\nconfidence (probability) that the estimated matrix is correct.\n@param threshold Parameter used for RANSAC. It is the maximum distance from a point to an epipolar\nline in pixels, beyond which the point is considered an outlier and is not used for computing the\nfinal fundamental matrix. It can be set to something like 1-3, depending on the accuracy of the\npoint localization, image resolution, and the image noise.\n@param mask Output array of N elements, every element of which is set to 0 for outliers and to 1\nfor the other points. The array is computed only in the RANSAC and LMedS methods.\n\nThis function estimates essential matrix based on the five-point algorithm solver in @cite Nister03 .\n@cite SteweniusCFS is also a related. The epipolar geometry is described by the following equation:\n\n\\f[[p_2; 1]^T K^{-T} E K^{-1} [p_1; 1] = 0\\f]\n\nwhere \\f$E\\f$ is an essential matrix, \\f$p_1\\f$ and \\f$p_2\\f$ are corresponding points in the first and the\nsecond images, respectively. The result of this function may be passed further to\ndecomposeEssentialMat or recoverPose to recover the relative pose between cameras.']
+ok: FUNC <Mat cv..findEssentialMat [ARG Mat points1=, ARG Mat points2=, ARG Mat cameraMatrix=, ARG int method=RANSAC, ARG double prob=0.999, ARG double threshold=1.0, ARG Mat mask=Mat()]>
+
+--- Incoming ---
+[   u'cv.findEssentialMat',
+    u'Mat',
+    [],
+    [   ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        [u'double', u'focal', u'1.0', []],
+        [u'Point2d', u'pp', u'Point2d(0, 0)', []],
+        [u'int', u'method', u'RANSAC', []],
+        [u'double', u'prob', u'0.999', []],
+        [u'double', u'threshold', u'1.0', []],
+        ['Mat', u'mask', u'Mat()', ['/O']]],
+    u'Mat',
+    u'@overload\n@param points1 Array of N (N \\>= 5) 2D points from the first image. The point coordinates should\nbe floating-point (single or double precision).\n@param points2 Array of the second image points of the same size and format as points1 .\n@param focal focal length of the camera. Note that this function assumes that points1 and points2\nare feature points from cameras with same focal length and principal point.\n@param pp principal point of the camera.\n@param method Method for computing a fundamental matrix.\n-   **RANSAC** for the RANSAC algorithm.\n-   **LMEDS** for the LMedS algorithm.\n@param threshold Parameter used for RANSAC. It is the maximum distance from a point to an epipolar\nline in pixels, beyond which the point is considered an outlier and is not used for computing the\nfinal fundamental matrix. It can be set to something like 1-3, depending on the accuracy of the\npoint localization, image resolution, and the image noise.\n@param prob Parameter used for the RANSAC or LMedS methods only. It specifies a desirable level of\nconfidence (probability) that the estimated matrix is correct.\n@param mask Output array of N elements, every element of which is set to 0 for outliers and to 1\nfor the other points. The array is computed only in the RANSAC and LMedS methods.\n\nThis function differs from the one above that it computes camera matrix from focal length and\nprincipal point:\n\n\\f[K =\n\\begin{bmatrix}\nf & 0 & x_{pp}  \\\\\n0 & f & y_{pp}  \\\\\n0 & 0 & 1\n\\end{bmatrix}\\f]']
+ok: FUNC <Mat cv..findEssentialMat [ARG Mat points1=, ARG Mat points2=, ARG double focal=1.0, ARG Point2d pp=Point2d(0, 0), ARG int method=RANSAC, ARG double prob=0.999, ARG double threshold=1.0, ARG Mat mask=Mat()]>
+
+--- Incoming ---
+[   u'cv.decomposeEssentialMat',
+    u'void',
+    [],
+    [   ['Mat', u'E', '', []],
+        ['Mat', u'R1', '', ['/O']],
+        ['Mat', u'R2', '', ['/O']],
+        ['Mat', u't', '', ['/O']]],
+    u'void',
+    u'@brief Decompose an essential matrix to possible rotations and translation.\n\n@param E The input essential matrix.\n@param R1 One possible rotation matrix.\n@param R2 Another possible rotation matrix.\n@param t One possible translation.\n\nThis function decompose an essential matrix E using svd decomposition @cite HartleyZ00 . Generally 4\npossible poses exists for a given E. They are \\f$[R_1, t]\\f$, \\f$[R_1, -t]\\f$, \\f$[R_2, t]\\f$, \\f$[R_2, -t]\\f$. By\ndecomposing E, you can only get the direction of the translation, so the function returns unit t.']
+ok: FUNC <void cv..decomposeEssentialMat [ARG Mat E=, ARG Mat R1=, ARG Mat R2=, ARG Mat t=]>
+
+--- Incoming ---
+[   u'cv.recoverPose',
+    u'int',
+    [],
+    [   ['Mat', u'E', '', []],
+        ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'R', '', ['/O']],
+        ['Mat', u't', '', ['/O']],
+        ['Mat', u'mask', u'Mat()', ['/IO']]],
+    u'int',
+    u'@brief Recover relative camera rotation and translation from an estimated essential matrix and the\ncorresponding points in two images, using cheirality check. Returns the number of inliers which pass\nthe check.\n\n@param E The input essential matrix.\n@param points1 Array of N 2D points from the first image. The point coordinates should be\nfloating-point (single or double precision).\n@param points2 Array of the second image points of the same size and format as points1 .\n@param cameraMatrix Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\f$ .\nNote that this function assumes that points1 and points2 are feature points from cameras with the\nsame camera matrix.\n@param R Recovered relative rotation.\n@param t Recoverd relative translation.\n@param mask Input/output mask for inliers in points1 and points2.\n:   If it is not empty, then it marks inliers in points1 and points2 for then given essential\nmatrix E. Only these inliers will be used to recover pose. In the output mask only inliers\nwhich pass the cheirality check.\nThis function decomposes an essential matrix using decomposeEssentialMat and then verifies possible\npose hypotheses by doing cheirality check. The cheirality check basically means that the\ntriangulated 3D points should have positive depth. Some details can be found in @cite Nister03 .\n\nThis function can be used to process output E and mask from findEssentialMat. In this scenario,\npoints1 and points2 are the same input for findEssentialMat. :\n@code\n// Example. Estimation of fundamental matrix using the RANSAC algorithm\nint point_count = 100;\nvector<Point2f> points1(point_count);\nvector<Point2f> points2(point_count);\n\n// initialize the points here ...\nfor( int i = 0; i < point_count; i++ )\n{\npoints1[i] = ...;\npoints2[i] = ...;\n}\n\n// cametra matrix with both focal lengths = 1, and principal point = (0, 0)\nMat cameraMatrix = Mat::eye(3, 3, CV_64F);\n\nMat E, R, t, mask;\n\nE = findEssentialMat(points1, points2, cameraMatrix, RANSAC, 0.999, 1.0, mask);\nrecoverPose(E, points1, points2, cameraMatrix, R, t, mask);\n@endcode']
+ok: FUNC <int cv..recoverPose [ARG Mat E=, ARG Mat points1=, ARG Mat points2=, ARG Mat cameraMatrix=, ARG Mat R=, ARG Mat t=, ARG Mat mask=Mat()]>
+
+--- Incoming ---
+[   u'cv.recoverPose',
+    u'int',
+    [],
+    [   ['Mat', u'E', '', []],
+        ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        ['Mat', u'R', '', ['/O']],
+        ['Mat', u't', '', ['/O']],
+        [u'double', u'focal', u'1.0', []],
+        [u'Point2d', u'pp', u'Point2d(0, 0)', []],
+        ['Mat', u'mask', u'Mat()', ['/IO']]],
+    u'int',
+    u'@overload\n@param E The input essential matrix.\n@param points1 Array of N 2D points from the first image. The point coordinates should be\nfloating-point (single or double precision).\n@param points2 Array of the second image points of the same size and format as points1 .\n@param R Recovered relative rotation.\n@param t Recoverd relative translation.\n@param focal Focal length of the camera. Note that this function assumes that points1 and points2\nare feature points from cameras with same focal length and principal point.\n@param pp principal point of the camera.\n@param mask Input/output mask for inliers in points1 and points2.\n:   If it is not empty, then it marks inliers in points1 and points2 for then given essential\nmatrix E. Only these inliers will be used to recover pose. In the output mask only inliers\nwhich pass the cheirality check.\n\nThis function differs from the one above that it computes camera matrix from focal length and\nprincipal point:\n\n\\f[K =\n\\begin{bmatrix}\nf & 0 & x_{pp}  \\\\\n0 & f & y_{pp}  \\\\\n0 & 0 & 1\n\\end{bmatrix}\\f]']
+ok: FUNC <int cv..recoverPose [ARG Mat E=, ARG Mat points1=, ARG Mat points2=, ARG Mat R=, ARG Mat t=, ARG double focal=1.0, ARG Point2d pp=Point2d(0, 0), ARG Mat mask=Mat()]>
+
+--- Incoming ---
+[   u'cv.recoverPose',
+    u'int',
+    [],
+    [   ['Mat', u'E', '', []],
+        ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        ['Mat', u'cameraMatrix', '', []],
+        ['Mat', u'R', '', ['/O']],
+        ['Mat', u't', '', ['/O']],
+        [u'double', u'distanceThresh', u'', []],
+        ['Mat', u'mask', u'Mat()', ['/IO']],
+        ['Mat', u'triangulatedPoints', u'Mat()', ['/O']]],
+    u'int',
+    u'@overload\n@param E The input essential matrix.\n@param points1 Array of N 2D points from the first image. The point coordinates should be\nfloating-point (single or double precision).\n@param points2 Array of the second image points of the same size and format as points1.\n@param cameraMatrix Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\f$ .\nNote that this function assumes that points1 and points2 are feature points from cameras with the\nsame camera matrix.\n@param R Recovered relative rotation.\n@param t Recoverd relative translation.\n@param distanceThresh threshold distance which is used to filter out far away points (i.e. infinite points).\n@param mask Input/output mask for inliers in points1 and points2.\n:   If it is not empty, then it marks inliers in points1 and points2 for then given essential\nmatrix E. Only these inliers will be used to recover pose. In the output mask only inliers\nwhich pass the cheirality check.\n@param triangulatedPoints 3d points which were reconstructed by triangulation.']
+ok: FUNC <int cv..recoverPose [ARG Mat E=, ARG Mat points1=, ARG Mat points2=, ARG Mat cameraMatrix=, ARG Mat R=, ARG Mat t=, ARG double distanceThresh=, ARG Mat mask=Mat(), ARG Mat triangulatedPoints=Mat()]>
+
+--- Incoming ---
+[   u'cv.computeCorrespondEpilines',
+    u'void',
+    [],
+    [   ['Mat', u'points', '', []],
+        [u'int', u'whichImage', u'', []],
+        ['Mat', u'F', '', []],
+        ['Mat', u'lines', '', ['/O']]],
+    u'void',
+    u'@brief For points in an image of a stereo pair, computes the corresponding epilines in the other image.\n\n@param points Input points. \\f$N \\times 1\\f$ or \\f$1 \\times N\\f$ matrix of type CV_32FC2 or\nvector\\<Point2f\\> .\n@param whichImage Index of the image (1 or 2) that contains the points .\n@param F Fundamental matrix that can be estimated using findFundamentalMat or stereoRectify .\n@param lines Output vector of the epipolar lines corresponding to the points in the other image.\nEach line \\f$ax + by + c=0\\f$ is encoded by 3 numbers \\f$(a, b, c)\\f$ .\n\nFor every point in one of the two images of a stereo pair, the function finds the equation of the\ncorresponding epipolar line in the other image.\n\nFrom the fundamental matrix definition (see findFundamentalMat ), line \\f$l^{(2)}_i\\f$ in the second\nimage for the point \\f$p^{(1)}_i\\f$ in the first image (when whichImage=1 ) is computed as:\n\n\\f[l^{(2)}_i = F p^{(1)}_i\\f]\n\nAnd vice versa, when whichImage=2, \\f$l^{(1)}_i\\f$ is computed from \\f$p^{(2)}_i\\f$ as:\n\n\\f[l^{(1)}_i = F^T p^{(2)}_i\\f]\n\nLine coefficients are defined up to a scale. They are normalized so that \\f$a_i^2+b_i^2=1\\f$ .']
+ok: FUNC <void cv..computeCorrespondEpilines [ARG Mat points=, ARG int whichImage=, ARG Mat F=, ARG Mat lines=]>
+
+--- Incoming ---
+[   u'cv.triangulatePoints',
+    u'void',
+    [],
+    [   ['Mat', u'projMatr1', '', []],
+        ['Mat', u'projMatr2', '', []],
+        ['Mat', u'projPoints1', '', []],
+        ['Mat', u'projPoints2', '', []],
+        ['Mat', u'points4D', '', ['/O']]],
+    u'void',
+    u'@brief Reconstructs points by triangulation.\n\n@param projMatr1 3x4 projection matrix of the first camera.\n@param projMatr2 3x4 projection matrix of the second camera.\n@param projPoints1 2xN array of feature points in the first image. In case of c++ version it can\nbe also a vector of feature points or two-channel matrix of size 1xN or Nx1.\n@param projPoints2 2xN array of corresponding points in the second image. In case of c++ version\nit can be also a vector of feature points or two-channel matrix of size 1xN or Nx1.\n@param points4D 4xN array of reconstructed points in homogeneous coordinates.\n\nThe function reconstructs 3-dimensional points (in homogeneous coordinates) by using their\nobservations with a stereo camera. Projections matrices can be obtained from stereoRectify.\n\n@note\nKeep in mind that all input data should be of float type in order for this function to work.\n\n@sa\nreprojectImageTo3D']
+ok: FUNC <void cv..triangulatePoints [ARG Mat projMatr1=, ARG Mat projMatr2=, ARG Mat projPoints1=, ARG Mat projPoints2=, ARG Mat points4D=]>
+
+--- Incoming ---
+[   u'cv.correctMatches',
+    u'void',
+    [],
+    [   ['Mat', u'F', '', []],
+        ['Mat', u'points1', '', []],
+        ['Mat', u'points2', '', []],
+        ['Mat', u'newPoints1', '', ['/O']],
+        ['Mat', u'newPoints2', '', ['/O']]],
+    u'void',
+    u'@brief Refines coordinates of corresponding points.\n\n@param F 3x3 fundamental matrix.\n@param points1 1xN array containing the first set of points.\n@param points2 1xN array containing the second set of points.\n@param newPoints1 The optimized points1.\n@param newPoints2 The optimized points2.\n\nThe function implements the Optimal Triangulation Method (see Multiple View Geometry for details).\nFor each given point correspondence points1[i] \\<-\\> points2[i], and a fundamental matrix F, it\ncomputes the corrected correspondences newPoints1[i] \\<-\\> newPoints2[i] that minimize the geometric\nerror \\f$d(points1[i], newPoints1[i])^2 + d(points2[i],newPoints2[i])^2\\f$ (where \\f$d(a,b)\\f$ is the\ngeometric distance between points \\f$a\\f$ and \\f$b\\f$ ) subject to the epipolar constraint\n\\f$newPoints2^T * F * newPoints1 = 0\\f$ .']
+ok: FUNC <void cv..correctMatches [ARG Mat F=, ARG Mat points1=, ARG Mat points2=, ARG Mat newPoints1=, ARG Mat newPoints2=]>
+
+--- Incoming ---
+[   u'cv.filterSpeckles',
+    u'void',
+    [],
+    [   ['Mat', u'img', '', ['/IO']],
+        [u'double', u'newVal', u'', []],
+        [u'int', u'maxSpeckleSize', u'', []],
+        [u'double', u'maxDiff', u'', []],
+        ['Mat', u'buf', u'Mat()', ['/IO']]],
+    u'void',
+    u'@brief Filters off small noise blobs (speckles) in the disparity map\n\n@param img The input 16-bit signed disparity image\n@param newVal The disparity value used to paint-off the speckles\n@param maxSpeckleSize The maximum speckle size to consider it a speckle. Larger blobs are not\naffected by the algorithm\n@param maxDiff Maximum difference between neighbor disparity pixels to put them into the same\nblob. Note that since StereoBM, StereoSGBM and may be other algorithms return a fixed-point\ndisparity map, where disparity values are multiplied by 16, this scale factor should be taken into\naccount when specifying this parameter value.\n@param buf The optional temporary buffer to avoid memory allocation within the function.']
+ok: FUNC <void cv..filterSpeckles [ARG Mat img=, ARG double newVal=, ARG int maxSpeckleSize=, ARG double maxDiff=, ARG Mat buf=Mat()]>
+
+--- Incoming ---
+[   u'cv.getValidDisparityROI',
+    u'Rect',
+    [],
+    [   [u'Rect', u'roi1', u'', []],
+        [u'Rect', u'roi2', u'', []],
+        [u'int', u'minDisparity', u'', []],
+        [u'int', u'numberOfDisparities', u'', []],
+        [u'int', u'SADWindowSize', u'', []]],
+    u'Rect',
+    '']
+ok: FUNC <Rect cv..getValidDisparityROI [ARG Rect roi1=, ARG Rect roi2=, ARG int minDisparity=, ARG int numberOfDisparities=, ARG int SADWindowSize=]>
+
+--- Incoming ---
+[   u'cv.validateDisparity',
+    u'void',
+    [],
+    [   ['Mat', u'disparity', '', ['/IO']],
+        ['Mat', u'cost', '', []],
+        [u'int', u'minDisparity', u'', []],
+        [u'int', u'numberOfDisparities', u'', []],
+        [u'int', u'disp12MaxDisp', u'1', []]],
+    u'void',
+    '']
+ok: FUNC <void cv..validateDisparity [ARG Mat disparity=, ARG Mat cost=, ARG int minDisparity=, ARG int numberOfDisparities=, ARG int disp12MaxDisp=1]>
+
+--- Incoming ---
+[   u'cv.reprojectImageTo3D',
+    u'void',
+    [],
+    [   ['Mat', u'disparity', '', []],
+        ['Mat', u'_3dImage', '', ['/O']],
+        ['Mat', u'Q', '', []],
+        [u'bool', u'handleMissingValues', u'false', []],
+        [u'int', u'ddepth', u'-1', []]],
+    u'void',
+    u'@brief Reprojects a disparity image to 3D space.\n\n@param disparity Input single-channel 8-bit unsigned, 16-bit signed, 32-bit signed or 32-bit\nfloating-point disparity image. If 16-bit signed format is used, the values are assumed to have no\nfractional bits.\n@param _3dImage Output 3-channel floating-point image of the same size as disparity . Each\nelement of _3dImage(x,y) contains 3D coordinates of the point (x,y) computed from the disparity\nmap.\n@param Q \\f$4 \\times 4\\f$ perspective transformation matrix that can be obtained with stereoRectify.\n@param handleMissingValues Indicates, whether the function should handle missing values (i.e.\npoints where the disparity was not computed). If handleMissingValues=true, then pixels with the\nminimal disparity that corresponds to the outliers (see StereoMatcher::compute ) are transformed\nto 3D points with a very large Z value (currently set to 10000).\n@param ddepth The optional output array depth. If it is -1, the output image will have CV_32F\ndepth. ddepth can also be set to CV_16S, CV_32S or CV_32F.\n\nThe function transforms a single-channel disparity map to a 3-channel image representing a 3D\nsurface. That is, for each pixel (x,y) and the corresponding disparity d=disparity(x,y) , it\ncomputes:\n\n\\f[\\begin{array}{l} [X \\; Y \\; Z \\; W]^T =  \\texttt{Q} *[x \\; y \\; \\texttt{disparity} (x,y) \\; 1]^T  \\\\ \\texttt{\\_3dImage} (x,y) = (X/W, \\; Y/W, \\; Z/W) \\end{array}\\f]\n\nThe matrix Q can be an arbitrary \\f$4 \\times 4\\f$ matrix (for example, the one computed by\nstereoRectify). To reproject a sparse set of points {(x,y,d),...} to 3D space, use\nperspectiveTransform .']
+ok: FUNC <void cv..reprojectImageTo3D [ARG Mat disparity=, ARG Mat _3dImage=, ARG Mat Q=, ARG bool handleMissingValues=false, ARG int ddepth=-1]>
+
+--- Incoming ---
+[   u'cv.sampsonDistance',
+    u'double',
+    [],
+    [['Mat', u'pt1', '', []], ['Mat', u'pt2', '', []], ['Mat', u'F', '', []]],
+    u'double',
+    u'@brief Calculates the Sampson Distance between two points.\n\nThe function sampsonDistance calculates and returns the first order approximation of the geometric error as:\n\\f[sd( \\texttt{pt1} , \\texttt{pt2} )= \\frac{(\\texttt{pt2}^t \\cdot \\texttt{F} \\cdot \\texttt{pt1})^2}{(\\texttt{F} \\cdot \\texttt{pt1})(0) + (\\texttt{F} \\cdot \\texttt{pt1})(1) + (\\texttt{F}^t \\cdot \\texttt{pt2})(0) + (\\texttt{F}^t \\cdot \\texttt{pt2})(1)}\\f]\nThe fundamental matrix may be calculated using the cv::findFundamentalMat function. See HZ 11.4.3 for details.\n@param pt1 first homogeneous 2d point\n@param pt2 second homogeneous 2d point\n@param F fundamental matrix']
+ok: FUNC <double cv..sampsonDistance [ARG Mat pt1=, ARG Mat pt2=, ARG Mat F=]>
+
+--- Incoming ---
+[   u'cv.estimateAffine3D',
+    u'int',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', []],
+        ['Mat', u'out', '', ['/O']],
+        ['Mat', u'inliers', '', ['/O']],
+        [u'double', u'ransacThreshold', u'3', []],
+        [u'double', u'confidence', u'0.99', []]],
+    u'int',
+    u'@brief Computes an optimal affine transformation between two 3D point sets.\n\n@param src First input 3D point set.\n@param dst Second input 3D point set.\n@param out Output 3D affine transformation matrix \\f$3 \\times 4\\f$ .\n@param inliers Output vector indicating which points are inliers.\n@param ransacThreshold Maximum reprojection error in the RANSAC algorithm to consider a point as\nan inlier.\n@param confidence Confidence level, between 0 and 1, for the estimated transformation. Anything\nbetween 0.95 and 0.99 is usually good enough. Values too close to 1 can slow down the estimation\nsignificantly. Values lower than 0.8-0.9 can result in an incorrectly estimated transformation.\n\nThe function estimates an optimal 3D affine transformation between two 3D point sets using the\nRANSAC algorithm.']
+ok: FUNC <int cv..estimateAffine3D [ARG Mat src=, ARG Mat dst=, ARG Mat out=, ARG Mat inliers=, ARG double ransacThreshold=3, ARG double confidence=0.99]>
+
+--- Incoming ---
+[   u'cv.estimateAffine2D',
+    u'Mat',
+    [],
+    [   ['Mat', u'from', '', []],
+        ['Mat', u'to', '', []],
+        ['Mat', u'inliers', u'Mat()', ['/O']],
+        [u'int', u'method', u'RANSAC', []],
+        [u'double', u'ransacReprojThreshold', u'3', []],
+        [u'size_t', u'maxIters', u'2000', []],
+        [u'double', u'confidence', u'0.99', []],
+        [u'size_t', u'refineIters', u'10', []]],
+    u'cv::Mat',
+    u'@brief Computes an optimal affine transformation between two 2D point sets.\n\n@param from First input 2D point set.\n@param to Second input 2D point set.\n@param inliers Output vector indicating which points are inliers.\n@param method Robust method used to compute transformation. The following methods are possible:\n-   cv::RANSAC - RANSAC-based robust method\n-   cv::LMEDS - Least-Median robust method\nRANSAC is the default method.\n@param ransacReprojThreshold Maximum reprojection error in the RANSAC algorithm to consider\na point as an inlier. Applies only to RANSAC.\n@param maxIters The maximum number of robust method iterations, 2000 is the maximum it can be.\n@param confidence Confidence level, between 0 and 1, for the estimated transformation. Anything\nbetween 0.95 and 0.99 is usually good enough. Values too close to 1 can slow down the estimation\nsignificantly. Values lower than 0.8-0.9 can result in an incorrectly estimated transformation.\n@param refineIters Maximum number of iterations of refining algorithm (Levenberg-Marquardt).\nPassing 0 will disable refining, so the output matrix will be output of robust method.\n\n@return Output 2D affine transformation matrix \\f$2 \\times 3\\f$ or empty matrix if transformation\ncould not be estimated.\n\nThe function estimates an optimal 2D affine transformation between two 2D point sets using the\nselected robust algorithm.\n\nThe computed transformation is then refined further (using only inliers) with the\nLevenberg-Marquardt method to reduce the re-projection error even more.\n\n@note\nThe RANSAC method can handle practically any ratio of outliers but need a threshold to\ndistinguish inliers from outliers. The method LMeDS does not need any threshold but it works\ncorrectly only when there are more than 50% of inliers.\n\n@sa estimateAffinePartial2D, getAffineTransform']
+ok: FUNC <Mat cv..estimateAffine2D [ARG Mat from=, ARG Mat to=, ARG Mat inliers=Mat(), ARG int method=RANSAC, ARG double ransacReprojThreshold=3, ARG size_t maxIters=2000, ARG double confidence=0.99, ARG size_t refineIters=10]>
+
+--- Incoming ---
+[   u'cv.estimateAffinePartial2D',
+    u'Mat',
+    [],
+    [   ['Mat', u'from', '', []],
+        ['Mat', u'to', '', []],
+        ['Mat', u'inliers', u'Mat()', ['/O']],
+        [u'int', u'method', u'RANSAC', []],
+        [u'double', u'ransacReprojThreshold', u'3', []],
+        [u'size_t', u'maxIters', u'2000', []],
+        [u'double', u'confidence', u'0.99', []],
+        [u'size_t', u'refineIters', u'10', []]],
+    u'cv::Mat',
+    u'@brief Computes an optimal limited affine transformation with 4 degrees of freedom between\ntwo 2D point sets.\n\n@param from First input 2D point set.\n@param to Second input 2D point set.\n@param inliers Output vector indicating which points are inliers.\n@param method Robust method used to compute transformation. The following methods are possible:\n-   cv::RANSAC - RANSAC-based robust method\n-   cv::LMEDS - Least-Median robust method\nRANSAC is the default method.\n@param ransacReprojThreshold Maximum reprojection error in the RANSAC algorithm to consider\na point as an inlier. Applies only to RANSAC.\n@param maxIters The maximum number of robust method iterations, 2000 is the maximum it can be.\n@param confidence Confidence level, between 0 and 1, for the estimated transformation. Anything\nbetween 0.95 and 0.99 is usually good enough. Values too close to 1 can slow down the estimation\nsignificantly. Values lower than 0.8-0.9 can result in an incorrectly estimated transformation.\n@param refineIters Maximum number of iterations of refining algorithm (Levenberg-Marquardt).\nPassing 0 will disable refining, so the output matrix will be output of robust method.\n\n@return Output 2D affine transformation (4 degrees of freedom) matrix \\f$2 \\times 3\\f$ or\nempty matrix if transformation could not be estimated.\n\nThe function estimates an optimal 2D affine transformation with 4 degrees of freedom limited to\ncombinations of translation, rotation, and uniform scaling. Uses the selected algorithm for robust\nestimation.\n\nThe computed transformation is then refined further (using only inliers) with the\nLevenberg-Marquardt method to reduce the re-projection error even more.\n\nEstimated transformation matrix is:\n\\f[ \\begin{bmatrix} \\cos(\\theta)s & -\\sin(\\theta)s & tx \\\\\n\\sin(\\theta)s & \\cos(\\theta)s & ty\n\\end{bmatrix} \\f]\nWhere \\f$ \\theta \\f$ is the rotation angle, \\f$ s \\f$ the scaling factor and \\f$ tx, ty \\f$ are\ntranslations in \\f$ x, y \\f$ axes respectively.\n\n@note\nThe RANSAC method can handle practically any ratio of outliers but need a threshold to\ndistinguish inliers from outliers. The method LMeDS does not need any threshold but it works\ncorrectly only when there are more than 50% of inliers.\n\n@sa estimateAffine2D, getAffineTransform']
+ok: FUNC <Mat cv..estimateAffinePartial2D [ARG Mat from=, ARG Mat to=, ARG Mat inliers=Mat(), ARG int method=RANSAC, ARG double ransacReprojThreshold=3, ARG size_t maxIters=2000, ARG double confidence=0.99, ARG size_t refineIters=10]>
+
+--- Incoming ---
+[   u'cv.decomposeHomographyMat',
+    u'int',
+    [],
+    [   ['Mat', u'H', '', []],
+        ['Mat', u'K', '', []],
+        ['vector_Mat', u'rotations', '', ['/O']],
+        ['vector_Mat', u'translations', '', ['/O']],
+        ['vector_Mat', u'normals', '', ['/O']]],
+    u'int',
+    u'@brief Decompose a homography matrix to rotation(s), translation(s) and plane normal(s).\n\n@param H The input homography matrix between two images.\n@param K The input intrinsic camera calibration matrix.\n@param rotations Array of rotation matrices.\n@param translations Array of translation matrices.\n@param normals Array of plane normal matrices.\n\nThis function extracts relative camera motion between two views observing a planar object from the\nhomography H induced by the plane. The intrinsic camera matrix K must also be provided. The function\nmay return up to four mathematical solution sets. At least two of the solutions may further be\ninvalidated if point correspondences are available by applying positive depth constraint (all points\nmust be in front of the camera). The decomposition method is described in detail in @cite Malis .']
+ok: FUNC <int cv..decomposeHomographyMat [ARG Mat H=, ARG Mat K=, ARG vector_Mat rotations=, ARG vector_Mat translations=, ARG vector_Mat normals=]>
+
+--- Incoming ---
+[   u'class cv.StereoMatcher',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief The base class for stereo correspondence algorithms.']
+ok: class CLASS cv::.StereoMatcher : Algorithm, name: StereoMatcher, base: Algorithm
+
+--- Incoming ---
+[u'const cv.StereoMatcher.DISP_SHIFT', u'4', [], [], None, '']
+ok: CONST DISP_SHIFT=4
+
+--- Incoming ---
+[u'const cv.StereoMatcher.DISP_SCALE', u'(1 << DISP_SHIFT)', [], [], None, '']
+ok: CONST DISP_SCALE=(1 << DISP_SHIFT)
+
+--- Incoming ---
+[   u'cv.StereoMatcher.compute',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'left', '', []],
+        ['Mat', u'right', '', []],
+        ['Mat', u'disparity', '', ['/O']]],
+    u'void',
+    u'@brief Computes disparity map for the specified stereo pair\n\n@param left Left 8-bit single-channel image.\n@param right Right image of the same size and the same type as the left one.\n@param disparity Output disparity map. It has the same size as the input images. Some algorithms,\nlike StereoBM or StereoSGBM compute 16-bit fixed-point disparity map (where each disparity value\nhas 4 fractional bits), whereas other algorithms output 32-bit floating-point disparity map.']
+ok: FUNC <void cv.StereoMatcher.compute [ARG Mat left=, ARG Mat right=, ARG Mat disparity=]>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.getMinDisparity',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoMatcher.getMinDisparity []>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.setMinDisparity',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'minDisparity', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoMatcher.setMinDisparity [ARG int minDisparity=]>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.getNumDisparities',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoMatcher.getNumDisparities []>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.setNumDisparities',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'numDisparities', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoMatcher.setNumDisparities [ARG int numDisparities=]>
+
+--- Incoming ---
+[u'cv.StereoMatcher.getBlockSize', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoMatcher.getBlockSize []>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.setBlockSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'blockSize', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoMatcher.setBlockSize [ARG int blockSize=]>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.getSpeckleWindowSize',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoMatcher.getSpeckleWindowSize []>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.setSpeckleWindowSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'speckleWindowSize', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoMatcher.setSpeckleWindowSize [ARG int speckleWindowSize=]>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.getSpeckleRange',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoMatcher.getSpeckleRange []>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.setSpeckleRange',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'speckleRange', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoMatcher.setSpeckleRange [ARG int speckleRange=]>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.getDisp12MaxDiff',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoMatcher.getDisp12MaxDiff []>
+
+--- Incoming ---
+[   u'cv.StereoMatcher.setDisp12MaxDiff',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'disp12MaxDiff', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoMatcher.setDisp12MaxDiff [ARG int disp12MaxDiff=]>
+
+--- Incoming ---
+[   u'class cv.StereoBM',
+    u': cv::StereoMatcher',
+    [],
+    [],
+    None,
+    u'@brief Class for computing stereo correspondence using the block matching algorithm, introduced and\ncontributed to OpenCV by K. Konolige.']
+ok: class CLASS cv::.StereoBM : StereoMatcher, name: StereoBM, base: StereoMatcher
+
+--- Incoming ---
+[u'const cv.StereoBM.PREFILTER_NORMALIZED_RESPONSE', u'0', [], [], None, '']
+ok: CONST PREFILTER_NORMALIZED_RESPONSE=0
+
+--- Incoming ---
+[u'const cv.StereoBM.PREFILTER_XSOBEL', u'1', [], [], None, '']
+ok: CONST PREFILTER_XSOBEL=1
+
+--- Incoming ---
+[u'cv.StereoBM.getPreFilterType', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoBM.getPreFilterType []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setPreFilterType',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'preFilterType', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setPreFilterType [ARG int preFilterType=]>
+
+--- Incoming ---
+[u'cv.StereoBM.getPreFilterSize', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoBM.getPreFilterSize []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setPreFilterSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'preFilterSize', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setPreFilterSize [ARG int preFilterSize=]>
+
+--- Incoming ---
+[u'cv.StereoBM.getPreFilterCap', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoBM.getPreFilterCap []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setPreFilterCap',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'preFilterCap', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setPreFilterCap [ARG int preFilterCap=]>
+
+--- Incoming ---
+[   u'cv.StereoBM.getTextureThreshold',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoBM.getTextureThreshold []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setTextureThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'textureThreshold', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setTextureThreshold [ARG int textureThreshold=]>
+
+--- Incoming ---
+[   u'cv.StereoBM.getUniquenessRatio',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoBM.getUniquenessRatio []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setUniquenessRatio',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'uniquenessRatio', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setUniquenessRatio [ARG int uniquenessRatio=]>
+
+--- Incoming ---
+[   u'cv.StereoBM.getSmallerBlockSize',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoBM.getSmallerBlockSize []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setSmallerBlockSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'blockSize', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setSmallerBlockSize [ARG int blockSize=]>
+
+--- Incoming ---
+[u'cv.StereoBM.getROI1', u'Rect', ['/C', '/V', '/PV'], [], u'Rect', '']
+ok: FUNC <Rect cv.StereoBM.getROI1 []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setROI1',
+    u'void',
+    ['/V', '/PV'],
+    [[u'Rect', u'roi1', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setROI1 [ARG Rect roi1=]>
+
+--- Incoming ---
+[u'cv.StereoBM.getROI2', u'Rect', ['/C', '/V', '/PV'], [], u'Rect', '']
+ok: FUNC <Rect cv.StereoBM.getROI2 []>
+
+--- Incoming ---
+[   u'cv.StereoBM.setROI2',
+    u'void',
+    ['/V', '/PV'],
+    [[u'Rect', u'roi2', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoBM.setROI2 [ARG Rect roi2=]>
+
+--- Incoming ---
+[   u'cv.StereoBM.create',
+    u'Ptr_StereoBM',
+    ['/S'],
+    [[u'int', u'numDisparities', u'0', []], [u'int', u'blockSize', u'21', []]],
+    u'Ptr<StereoBM>',
+    u'@brief Creates StereoBM object\n\n@param numDisparities the disparity search range. For each pixel algorithm will find the best\ndisparity from 0 (default minimum disparity) to numDisparities. The search range can then be\nshifted by changing the minimum disparity.\n@param blockSize the linear size of the blocks compared by the algorithm. The size should be odd\n(as the block is centered at the current pixel). Larger block size implies smoother, though less\naccurate disparity map. Smaller block size gives more detailed disparity map, but there is higher\nchance for algorithm to find a wrong correspondence.\n\nThe function create StereoBM object. You can then call StereoBM::compute() to compute disparity for\na specific stereo pair.']
+ok: FUNC <Ptr_StereoBM cv.StereoBM.create [ARG int numDisparities=0, ARG int blockSize=21]>
+
+--- Incoming ---
+[   u'class cv.StereoSGBM',
+    u': cv::StereoMatcher',
+    [],
+    [],
+    None,
+    u'@brief The class implements the modified H. Hirschmuller algorithm @cite HH08 that differs from the original\none as follows:\n\n-   By default, the algorithm is single-pass, which means that you consider only 5 directions\ninstead of 8. Set mode=StereoSGBM::MODE_HH in createStereoSGBM to run the full variant of the\nalgorithm but beware that it may consume a lot of memory.\n-   The algorithm matches blocks, not individual pixels. Though, setting blockSize=1 reduces the\nblocks to single pixels.\n-   Mutual information cost function is not implemented. Instead, a simpler Birchfield-Tomasi\nsub-pixel metric from @cite BT98 is used. Though, the color images are supported as well.\n-   Some pre- and post- processing steps from K. Konolige algorithm StereoBM are included, for\nexample: pre-filtering (StereoBM::PREFILTER_XSOBEL type) and post-filtering (uniqueness\ncheck, quadratic interpolation and speckle filtering).\n\n@note\n-   (Python) An example illustrating the use of the StereoSGBM matching algorithm can be found\nat opencv_source_code/samples/python/stereo_match.py']
+ok: class CLASS cv::.StereoSGBM : StereoMatcher, name: StereoSGBM, base: StereoMatcher
+
+--- Incoming ---
+[u'const cv.StereoSGBM.MODE_SGBM', u'0', [], [], None, '']
+ok: CONST MODE_SGBM=0
+
+--- Incoming ---
+[u'const cv.StereoSGBM.MODE_HH', u'1', [], [], None, '']
+ok: CONST MODE_HH=1
+
+--- Incoming ---
+[u'const cv.StereoSGBM.MODE_SGBM_3WAY', u'2', [], [], None, '']
+ok: CONST MODE_SGBM_3WAY=2
+
+--- Incoming ---
+[u'const cv.StereoSGBM.MODE_HH4', u'3', [], [], None, '']
+ok: CONST MODE_HH4=3
+
+--- Incoming ---
+[u'cv.StereoSGBM.getPreFilterCap', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoSGBM.getPreFilterCap []>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.setPreFilterCap',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'preFilterCap', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoSGBM.setPreFilterCap [ARG int preFilterCap=]>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.getUniquenessRatio',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.StereoSGBM.getUniquenessRatio []>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.setUniquenessRatio',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'uniquenessRatio', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoSGBM.setUniquenessRatio [ARG int uniquenessRatio=]>
+
+--- Incoming ---
+[u'cv.StereoSGBM.getP1', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoSGBM.getP1 []>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.setP1',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'P1', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoSGBM.setP1 [ARG int P1=]>
+
+--- Incoming ---
+[u'cv.StereoSGBM.getP2', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoSGBM.getP2 []>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.setP2',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'P2', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoSGBM.setP2 [ARG int P2=]>
+
+--- Incoming ---
+[u'cv.StereoSGBM.getMode', u'int', ['/C', '/V', '/PV'], [], u'int', '']
+ok: FUNC <int cv.StereoSGBM.getMode []>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.setMode',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'mode', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.StereoSGBM.setMode [ARG int mode=]>
+
+--- Incoming ---
+[   u'cv.StereoSGBM.create',
+    u'Ptr_StereoSGBM',
+    ['/S'],
+    [   [u'int', u'minDisparity', u'0', []],
+        [u'int', u'numDisparities', u'16', []],
+        [u'int', u'blockSize', u'3', []],
+        [u'int', u'P1', u'0', []],
+        [u'int', u'P2', u'0', []],
+        [u'int', u'disp12MaxDiff', u'0', []],
+        [u'int', u'preFilterCap', u'0', []],
+        [u'int', u'uniquenessRatio', u'0', []],
+        [u'int', u'speckleWindowSize', u'0', []],
+        [u'int', u'speckleRange', u'0', []],
+        [u'int', u'mode', u'StereoSGBM::MODE_SGBM', []]],
+    u'Ptr<StereoSGBM>',
+    u'@brief Creates StereoSGBM object\n\n@param minDisparity Minimum possible disparity value. Normally, it is zero but sometimes\nrectification algorithms can shift images, so this parameter needs to be adjusted accordingly.\n@param numDisparities Maximum disparity minus minimum disparity. The value is always greater than\nzero. In the current implementation, this parameter must be divisible by 16.\n@param blockSize Matched block size. It must be an odd number \\>=1 . Normally, it should be\nsomewhere in the 3..11 range.\n@param P1 The first parameter controlling the disparity smoothness. See below.\n@param P2 The second parameter controlling the disparity smoothness. The larger the values are,\nthe smoother the disparity is. P1 is the penalty on the disparity change by plus or minus 1\nbetween neighbor pixels. P2 is the penalty on the disparity change by more than 1 between neighbor\npixels. The algorithm requires P2 \\> P1 . See stereo_match.cpp sample where some reasonably good\nP1 and P2 values are shown (like 8\\*number_of_image_channels\\*SADWindowSize\\*SADWindowSize and\n32\\*number_of_image_channels\\*SADWindowSize\\*SADWindowSize , respectively).\n@param disp12MaxDiff Maximum allowed difference (in integer pixel units) in the left-right\ndisparity check. Set it to a non-positive value to disable the check.\n@param preFilterCap Truncation value for the prefiltered image pixels. The algorithm first\ncomputes x-derivative at each pixel and clips its value by [-preFilterCap, preFilterCap] interval.\nThe result values are passed to the Birchfield-Tomasi pixel cost function.\n@param uniquenessRatio Margin in percentage by which the best (minimum) computed cost function\nvalue should "win" the second best value to consider the found match correct. Normally, a value\nwithin the 5-15 range is good enough.\n@param speckleWindowSize Maximum size of smooth disparity regions to consider their noise speckles\nand invalidate. Set it to 0 to disable speckle filtering. Otherwise, set it somewhere in the\n50-200 range.\n@param speckleRange Maximum disparity variation within each connected component. If you do speckle\nfiltering, set the parameter to a positive value, it will be implicitly multiplied by 16.\nNormally, 1 or 2 is good enough.\n@param mode Set it to StereoSGBM::MODE_HH to run the full-scale two-pass dynamic programming\nalgorithm. It will consume O(W\\*H\\*numDisparities) bytes, which is large for 640x480 stereo and\nhuge for HD-size pictures. By default, it is set to false .\n\nThe first constructor initializes StereoSGBM with all the default parameters. So, you only have to\nset StereoSGBM::numDisparities at minimum. The second constructor enables you to set each parameter\nto a custom value.']
+ok: FUNC <Ptr_StereoSGBM cv.StereoSGBM.create [ARG int minDisparity=0, ARG int numDisparities=16, ARG int blockSize=3, ARG int P1=0, ARG int P2=0, ARG int disp12MaxDiff=0, ARG int preFilterCap=0, ARG int uniquenessRatio=0, ARG int speckleWindowSize=0, ARG int speckleRange=0, ARG int mode=StereoSGBM::MODE_SGBM]>
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_USE_INTRINSIC_GUESS', u'1 << 0', [], [], None, '']
+manual: CONST CALIB_USE_INTRINSIC_GUESS=1 << 0
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_RECOMPUTE_EXTRINSIC', u'1 << 1', [], [], None, '']
+manual: CONST CALIB_RECOMPUTE_EXTRINSIC=1 << 1
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_CHECK_COND', u'1 << 2', [], [], None, '']
+manual: CONST CALIB_CHECK_COND=1 << 2
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_SKEW', u'1 << 3', [], [], None, '']
+manual: CONST CALIB_FIX_SKEW=1 << 3
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_K1', u'1 << 4', [], [], None, '']
+manual: CONST CALIB_FIX_K1=1 << 4
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_K2', u'1 << 5', [], [], None, '']
+manual: CONST CALIB_FIX_K2=1 << 5
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_K3', u'1 << 6', [], [], None, '']
+manual: CONST CALIB_FIX_K3=1 << 6
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_K4', u'1 << 7', [], [], None, '']
+manual: CONST CALIB_FIX_K4=1 << 7
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_INTRINSIC', u'1 << 8', [], [], None, '']
+manual: CONST CALIB_FIX_INTRINSIC=1 << 8
+
+--- Incoming ---
+[u'const cv.fisheye.CALIB_FIX_PRINCIPAL_POINT', u'1 << 9', [], [], None, '']
+duplicated: CONST CALIB_FIX_PRINCIPAL_POINT=1 << 9
+
+--- Incoming ---
+[   u'cv.fisheye.projectPoints',
+    u'void',
+    [],
+    [   ['Mat', u'objectPoints', '', []],
+        ['Mat', u'imagePoints', '', ['/O']],
+        ['Mat', u'rvec', '', []],
+        ['Mat', u'tvec', '', []],
+        ['Mat', u'K', '', []],
+        ['Mat', u'D', '', []],
+        [u'double', u'alpha', u'0', []],
+        ['Mat', u'jacobian', u'Mat()', ['/O']]],
+    u'void',
+    u'@overload']
+ok: FUNC <void cv.fisheye..projectPoints [ARG vector_Point3f objectPoints=, ARG vector_Point2f imagePoints=, ARG Mat rvec=, ARG Mat tvec=, ARG Mat K=, ARG Mat D=, ARG double alpha=0, ARG Mat jacobian=Mat()]>
+
+--- Incoming ---
+[   u'cv.fisheye.distortPoints',
+    u'void',
+    [],
+    [   ['Mat', u'undistorted', '', []],
+        ['Mat', u'distorted', '', ['/O']],
+        ['Mat', u'K', '', []],
+        ['Mat', u'D', '', []],
+        [u'double', u'alpha', u'0', []]],
+    u'void',
+    u'@brief Distorts 2D points using fisheye model.\n\n@param undistorted Array of object points, 1xN/Nx1 2-channel (or vector\\<Point2f\\> ), where N is\nthe number of points in the view.\n@param K Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}\\f$.\n@param D Input vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$.\n@param alpha The skew coefficient.\n@param distorted Output array of image points, 1xN/Nx1 2-channel, or vector\\<Point2f\\> .\n\nNote that the function assumes the camera matrix of the undistorted points to be identity.\nThis means if you want to transform back points undistorted with undistortPoints() you have to\nmultiply them with \\f$P^{-1}\\f$.']
+ok: FUNC <void cv.fisheye..distortPoints [ARG Mat undistorted=, ARG Mat distorted=, ARG Mat K=, ARG Mat D=, ARG double alpha=0]>
+
+--- Incoming ---
+[   u'cv.fisheye.undistortPoints',
+    u'void',
+    [],
+    [   ['Mat', u'distorted', '', []],
+        ['Mat', u'undistorted', '', ['/O']],
+        ['Mat', u'K', '', []],
+        ['Mat', u'D', '', []],
+        ['Mat', u'R', u'Mat()', []],
+        ['Mat', u'P', u'Mat()', []]],
+    u'void',
+    u'@brief Undistorts 2D points using fisheye model\n\n@param distorted Array of object points, 1xN/Nx1 2-channel (or vector\\<Point2f\\> ), where N is the\nnumber of points in the view.\n@param K Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}\\f$.\n@param D Input vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$.\n@param R Rectification transformation in the object space: 3x3 1-channel, or vector: 3x1/1x3\n1-channel or 1x1 3-channel\n@param P New camera matrix (3x3) or new projection matrix (3x4)\n@param undistorted Output array of image points, 1xN/Nx1 2-channel, or vector\\<Point2f\\> .']
+ok: FUNC <void cv.fisheye..undistortPoints [ARG Mat distorted=, ARG Mat undistorted=, ARG Mat K=, ARG Mat D=, ARG Mat R=Mat(), ARG Mat P=Mat()]>
+
+--- Incoming ---
+[   u'cv.fisheye.initUndistortRectifyMap',
+    u'void',
+    [],
+    [   ['Mat', u'K', '', []],
+        ['Mat', u'D', '', []],
+        ['Mat', u'R', '', []],
+        ['Mat', u'P', '', []],
+        [u'Size', u'size', u'', ['/C', '/Ref']],
+        [u'int', u'm1type', u'', []],
+        ['Mat', u'map1', '', ['/O']],
+        ['Mat', u'map2', '', ['/O']]],
+    u'void',
+    u'@brief Computes undistortion and rectification maps for image transform by cv::remap(). If D is empty zero\ndistortion is used, if R or P is empty identity matrixes are used.\n\n@param K Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}\\f$.\n@param D Input vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$.\n@param R Rectification transformation in the object space: 3x3 1-channel, or vector: 3x1/1x3\n1-channel or 1x1 3-channel\n@param P New camera matrix (3x3) or new projection matrix (3x4)\n@param size Undistorted image size.\n@param m1type Type of the first output map that can be CV_32FC1 or CV_16SC2 . See convertMaps()\nfor details.\n@param map1 The first output map.\n@param map2 The second output map.']
+ok: FUNC <void cv.fisheye..initUndistortRectifyMap [ARG Mat K=, ARG Mat D=, ARG Mat R=, ARG Mat P=, ARG Size size=, ARG int m1type=, ARG Mat map1=, ARG Mat map2=]>
+
+--- Incoming ---
+[   u'cv.fisheye.undistortImage',
+    u'void',
+    [],
+    [   ['Mat', u'distorted', '', []],
+        ['Mat', u'undistorted', '', ['/O']],
+        ['Mat', u'K', '', []],
+        ['Mat', u'D', '', []],
+        ['Mat', u'Knew', u'cv::Mat()', []],
+        [u'Size', u'new_size', u'Size()', ['/C', '/Ref']]],
+    u'void',
+    u'@brief Transforms an image to compensate for fisheye lens distortion.\n\n@param distorted image with fisheye lens distortion.\n@param undistorted Output image with compensated fisheye lens distortion.\n@param K Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}\\f$.\n@param D Input vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$.\n@param Knew Camera matrix of the distorted image. By default, it is the identity matrix but you\nmay additionally scale and shift the result by using a different matrix.\n@param new_size\n\nThe function transforms an image to compensate radial and tangential lens distortion.\n\nThe function is simply a combination of fisheye::initUndistortRectifyMap (with unity R ) and remap\n(with bilinear interpolation). See the former function for details of the transformation being\nperformed.\n\nSee below the results of undistortImage.\n-   a\\) result of undistort of perspective camera model (all possible coefficients (k_1, k_2, k_3,\nk_4, k_5, k_6) of distortion were optimized under calibration)\n-   b\\) result of fisheye::undistortImage of fisheye camera model (all possible coefficients (k_1, k_2,\nk_3, k_4) of fisheye distortion were optimized under calibration)\n-   c\\) original image was captured with fisheye lens\n\nPictures a) and b) almost the same. But if we consider points of image located far from the center\nof image, we can notice that on image a) these points are distorted.\n\n![image](pics/fisheye_undistorted.jpg)']
+ok: FUNC <void cv.fisheye..undistortImage [ARG Mat distorted=, ARG Mat undistorted=, ARG Mat K=, ARG Mat D=, ARG Mat Knew=cv::Mat(), ARG Size new_size=Size()]>
+
+--- Incoming ---
+[   u'cv.fisheye.estimateNewCameraMatrixForUndistortRectify',
+    u'void',
+    [],
+    [   ['Mat', u'K', '', []],
+        ['Mat', u'D', '', []],
+        [u'Size', u'image_size', u'', ['/C', '/Ref']],
+        ['Mat', u'R', '', []],
+        ['Mat', u'P', '', ['/O']],
+        [u'double', u'balance', u'0.0', []],
+        [u'Size', u'new_size', u'Size()', ['/C', '/Ref']],
+        [u'double', u'fov_scale', u'1.0', []]],
+    u'void',
+    u'@brief Estimates new camera matrix for undistortion or rectification.\n\n@param K Camera matrix \\f$K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{_1}\\f$.\n@param image_size\n@param D Input vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$.\n@param R Rectification transformation in the object space: 3x3 1-channel, or vector: 3x1/1x3\n1-channel or 1x1 3-channel\n@param P New camera matrix (3x3) or new projection matrix (3x4)\n@param balance Sets the new focal length in range between the min focal length and the max focal\nlength. Balance is in range of [0, 1].\n@param new_size\n@param fov_scale Divisor for new focal length.']
+ok: FUNC <void cv.fisheye..estimateNewCameraMatrixForUndistortRectify [ARG Mat K=, ARG Mat D=, ARG Size image_size=, ARG Mat R=, ARG Mat P=, ARG double balance=0.0, ARG Size new_size=Size(), ARG double fov_scale=1.0]>
+
+--- Incoming ---
+[   u'cv.fisheye.calibrate',
+    u'double',
+    [],
+    [   ['vector_Mat', u'objectPoints', '', []],
+        ['vector_Mat', u'imagePoints', '', []],
+        [u'Size', u'image_size', u'', ['/C', '/Ref']],
+        ['Mat', u'K', '', ['/IO']],
+        ['Mat', u'D', '', ['/IO']],
+        ['vector_Mat', u'rvecs', '', ['/O']],
+        ['vector_Mat', u'tvecs', '', ['/O']],
+        [u'int', u'flags', u'0', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)',
+            []]],
+    u'double',
+    u'@brief Performs camera calibaration\n\n@param objectPoints vector of vectors of calibration pattern points in the calibration pattern\ncoordinate space.\n@param imagePoints vector of vectors of the projections of calibration pattern points.\nimagePoints.size() and objectPoints.size() and imagePoints[i].size() must be equal to\nobjectPoints[i].size() for each i.\n@param image_size Size of the image used only to initialize the intrinsic camera matrix.\n@param K Output 3x3 floating-point camera matrix\n\\f$A = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\f$ . If\nfisheye::CALIB_USE_INTRINSIC_GUESS/ is specified, some or all of fx, fy, cx, cy must be\ninitialized before calling the function.\n@param D Output vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$.\n@param rvecs Output vector of rotation vectors (see Rodrigues ) estimated for each pattern view.\nThat is, each k-th rotation vector together with the corresponding k-th translation vector (see\nthe next output parameter description) brings the calibration pattern from the model coordinate\nspace (in which object points are specified) to the world coordinate space, that is, a real\nposition of the calibration pattern in the k-th pattern view (k=0.. *M* -1).\n@param tvecs Output vector of translation vectors estimated for each pattern view.\n@param flags Different flags that may be zero or a combination of the following values:\n-   **fisheye::CALIB_USE_INTRINSIC_GUESS** cameraMatrix contains valid initial values of\nfx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image\ncenter ( imageSize is used), and focal distances are computed in a least-squares fashion.\n-   **fisheye::CALIB_RECOMPUTE_EXTRINSIC** Extrinsic will be recomputed after each iteration\nof intrinsic optimization.\n-   **fisheye::CALIB_CHECK_COND** The functions will check validity of condition number.\n-   **fisheye::CALIB_FIX_SKEW** Skew coefficient (alpha) is set to zero and stay zero.\n-   **fisheye::CALIB_FIX_K1..fisheye::CALIB_FIX_K4** Selected distortion coefficients\nare set to zeros and stay zero.\n-   **fisheye::CALIB_FIX_PRINCIPAL_POINT** The principal point is not changed during the global\noptimization. It stays at the center or at a different location specified when CALIB_USE_INTRINSIC_GUESS is set too.\n@param criteria Termination criteria for the iterative optimization algorithm.']
+ok: FUNC <double cv.fisheye..calibrate [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints=, ARG Size image_size=, ARG Mat K=, ARG Mat D=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG int flags=0, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)]>
+
+--- Incoming ---
+[   u'cv.fisheye.stereoRectify',
+    u'void',
+    [],
+    [   ['Mat', u'K1', '', []],
+        ['Mat', u'D1', '', []],
+        ['Mat', u'K2', '', []],
+        ['Mat', u'D2', '', []],
+        [u'Size', u'imageSize', u'', ['/C', '/Ref']],
+        ['Mat', u'R', '', []],
+        ['Mat', u'tvec', '', []],
+        ['Mat', u'R1', '', ['/O']],
+        ['Mat', u'R2', '', ['/O']],
+        ['Mat', u'P1', '', ['/O']],
+        ['Mat', u'P2', '', ['/O']],
+        ['Mat', u'Q', '', ['/O']],
+        [u'int', u'flags', u'', []],
+        [u'Size', u'newImageSize', u'Size()', ['/C', '/Ref']],
+        [u'double', u'balance', u'0.0', []],
+        [u'double', u'fov_scale', u'1.0', []]],
+    u'void',
+    u'@brief Stereo rectification for fisheye camera model\n\n@param K1 First camera matrix.\n@param D1 First camera distortion parameters.\n@param K2 Second camera matrix.\n@param D2 Second camera distortion parameters.\n@param imageSize Size of the image used for stereo calibration.\n@param R Rotation matrix between the coordinate systems of the first and the second\ncameras.\n@param tvec Translation vector between coordinate systems of the cameras.\n@param R1 Output 3x3 rectification transform (rotation matrix) for the first camera.\n@param R2 Output 3x3 rectification transform (rotation matrix) for the second camera.\n@param P1 Output 3x4 projection matrix in the new (rectified) coordinate systems for the first\ncamera.\n@param P2 Output 3x4 projection matrix in the new (rectified) coordinate systems for the second\ncamera.\n@param Q Output \\f$4 \\times 4\\f$ disparity-to-depth mapping matrix (see reprojectImageTo3D ).\n@param flags Operation flags that may be zero or CALIB_ZERO_DISPARITY . If the flag is set,\nthe function makes the principal points of each camera have the same pixel coordinates in the\nrectified views. And if the flag is not set, the function may still shift the images in the\nhorizontal or vertical direction (depending on the orientation of epipolar lines) to maximize the\nuseful image area.\n@param newImageSize New image resolution after rectification. The same size should be passed to\ninitUndistortRectifyMap (see the stereo_calib.cpp sample in OpenCV samples directory). When (0,0)\nis passed (default), it is set to the original imageSize . Setting it to larger value can help you\npreserve details in the original image, especially when there is a big radial distortion.\n@param balance Sets the new focal length in range between the min focal length and the max focal\nlength. Balance is in range of [0, 1].\n@param fov_scale Divisor for new focal length.']
+ok: FUNC <void cv.fisheye..stereoRectify [ARG Mat K1=, ARG Mat D1=, ARG Mat K2=, ARG Mat D2=, ARG Size imageSize=, ARG Mat R=, ARG Mat tvec=, ARG Mat R1=, ARG Mat R2=, ARG Mat P1=, ARG Mat P2=, ARG Mat Q=, ARG int flags=, ARG Size newImageSize=Size(), ARG double balance=0.0, ARG double fov_scale=1.0]>
+
+--- Incoming ---
+[   u'cv.fisheye.stereoCalibrate',
+    u'double',
+    [],
+    [   ['vector_Mat', u'objectPoints', '', []],
+        ['vector_Mat', u'imagePoints1', '', []],
+        ['vector_Mat', u'imagePoints2', '', []],
+        ['Mat', u'K1', '', ['/IO']],
+        ['Mat', u'D1', '', ['/IO']],
+        ['Mat', u'K2', '', ['/IO']],
+        ['Mat', u'D2', '', ['/IO']],
+        [u'Size', u'imageSize', u'', []],
+        ['Mat', u'R', '', ['/O']],
+        ['Mat', u'T', '', ['/O']],
+        [u'int', u'flags', u'fisheye::CALIB_FIX_INTRINSIC', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)',
+            []]],
+    u'double',
+    u'@brief Performs stereo calibration\n\n@param objectPoints Vector of vectors of the calibration pattern points.\n@param imagePoints1 Vector of vectors of the projections of the calibration pattern points,\nobserved by the first camera.\n@param imagePoints2 Vector of vectors of the projections of the calibration pattern points,\nobserved by the second camera.\n@param K1 Input/output first camera matrix:\n\\f$\\vecthreethree{f_x^{(j)}}{0}{c_x^{(j)}}{0}{f_y^{(j)}}{c_y^{(j)}}{0}{0}{1}\\f$ , \\f$j = 0,\\, 1\\f$ . If\nany of fisheye::CALIB_USE_INTRINSIC_GUESS , fisheye::CALIB_FIX_INTRINSIC are specified,\nsome or all of the matrix components must be initialized.\n@param D1 Input/output vector of distortion coefficients \\f$(k_1, k_2, k_3, k_4)\\f$ of 4 elements.\n@param K2 Input/output second camera matrix. The parameter is similar to K1 .\n@param D2 Input/output lens distortion coefficients for the second camera. The parameter is\nsimilar to D1 .\n@param imageSize Size of the image used only to initialize intrinsic camera matrix.\n@param R Output rotation matrix between the 1st and the 2nd camera coordinate systems.\n@param T Output translation vector between the coordinate systems of the cameras.\n@param flags Different flags that may be zero or a combination of the following values:\n-   **fisheye::CALIB_FIX_INTRINSIC** Fix K1, K2? and D1, D2? so that only R, T matrices\nare estimated.\n-   **fisheye::CALIB_USE_INTRINSIC_GUESS** K1, K2 contains valid initial values of\nfx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image\ncenter (imageSize is used), and focal distances are computed in a least-squares fashion.\n-   **fisheye::CALIB_RECOMPUTE_EXTRINSIC** Extrinsic will be recomputed after each iteration\nof intrinsic optimization.\n-   **fisheye::CALIB_CHECK_COND** The functions will check validity of condition number.\n-   **fisheye::CALIB_FIX_SKEW** Skew coefficient (alpha) is set to zero and stay zero.\n-   **fisheye::CALIB_FIX_K1..4** Selected distortion coefficients are set to zeros and stay\nzero.\n@param criteria Termination criteria for the iterative optimization algorithm.']
+ok: FUNC <double cv.fisheye..stereoCalibrate [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints1=, ARG vector_Mat imagePoints2=, ARG Mat K1=, ARG Mat D1=, ARG Mat K2=, ARG Mat D2=, ARG Size imageSize=, ARG Mat R=, ARG Mat T=, ARG int flags=fisheye::CALIB_FIX_INTRINSIC, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)]>
+
+
+===== Header: /Users/Chao/opencv/modules/calib3d/include/opencv2/calib3d/calib3d.hpp =====
+Namespaces: set(['', u'cv.fisheye', u'cv'])
+Ignore header: /Users/Chao/opencv/modules/calib3d/include/opencv2/calib3d/calib3d.hpp
+
+
+===== Generating... =====
+CLASS cv::.StereoSGBM : StereoMatcher
+[CONST MODE_SGBM=0, CONST MODE_HH=1, CONST MODE_SGBM_3WAY=2, CONST MODE_HH4=3]
+FUNC <Ptr_StereoSGBM cv.StereoSGBM.create [ARG int minDisparity=0, ARG int numDisparities=16, ARG int blockSize=3, ARG int P1=0, ARG int P2=0, ARG int disp12MaxDiff=0, ARG int preFilterCap=0, ARG int uniquenessRatio=0, ARG int speckleWindowSize=0, ARG int speckleRange=0, ARG int mode=StereoSGBM::MODE_SGBM]>
+java: StereoSGBM create(int minDisparity, int numDisparities, int blockSize, int P1, int P2, int disp12MaxDiff, int preFilterCap, int uniquenessRatio, int speckleWindowSize, int speckleRange, int mode)
+java: StereoSGBM create()
+FUNC <int cv.StereoSGBM.getMode []>
+java: int getMode()
+FUNC <int cv.StereoSGBM.getP1 []>
+java: int getP1()
+FUNC <int cv.StereoSGBM.getP2 []>
+java: int getP2()
+FUNC <int cv.StereoSGBM.getPreFilterCap []>
+java: int getPreFilterCap()
+FUNC <int cv.StereoSGBM.getUniquenessRatio []>
+java: int getUniquenessRatio()
+FUNC <void cv.StereoSGBM.setMode [ARG int mode=]>
+java: void setMode(int mode)
+FUNC <void cv.StereoSGBM.setP1 [ARG int P1=]>
+java: void setP1(int P1)
+FUNC <void cv.StereoSGBM.setP2 [ARG int P2=]>
+java: void setP2(int P2)
+FUNC <void cv.StereoSGBM.setPreFilterCap [ARG int preFilterCap=]>
+java: void setPreFilterCap(int preFilterCap)
+FUNC <void cv.StereoSGBM.setUniquenessRatio [ARG int uniquenessRatio=]>
+java: void setUniquenessRatio(int uniquenessRatio)
+CLASS cv::.StereoBM : StereoMatcher
+[CONST PREFILTER_NORMALIZED_RESPONSE=0, CONST PREFILTER_XSOBEL=1]
+FUNC <Ptr_StereoBM cv.StereoBM.create [ARG int numDisparities=0, ARG int blockSize=21]>
+java: StereoBM create(int numDisparities, int blockSize)
+java: StereoBM create()
+FUNC <Rect cv.StereoBM.getROI1 []>
+java: Rect getROI1()
+FUNC <Rect cv.StereoBM.getROI2 []>
+java: Rect getROI2()
+FUNC <int cv.StereoBM.getPreFilterCap []>
+java: int getPreFilterCap()
+FUNC <int cv.StereoBM.getPreFilterSize []>
+java: int getPreFilterSize()
+FUNC <int cv.StereoBM.getPreFilterType []>
+java: int getPreFilterType()
+FUNC <int cv.StereoBM.getSmallerBlockSize []>
+java: int getSmallerBlockSize()
+FUNC <int cv.StereoBM.getTextureThreshold []>
+java: int getTextureThreshold()
+FUNC <int cv.StereoBM.getUniquenessRatio []>
+java: int getUniquenessRatio()
+FUNC <void cv.StereoBM.setPreFilterCap [ARG int preFilterCap=]>
+java: void setPreFilterCap(int preFilterCap)
+FUNC <void cv.StereoBM.setPreFilterSize [ARG int preFilterSize=]>
+java: void setPreFilterSize(int preFilterSize)
+FUNC <void cv.StereoBM.setPreFilterType [ARG int preFilterType=]>
+java: void setPreFilterType(int preFilterType)
+FUNC <void cv.StereoBM.setROI1 [ARG Rect roi1=]>
+java: void setROI1(Rect roi1)
+FUNC <void cv.StereoBM.setROI2 [ARG Rect roi2=]>
+java: void setROI2(Rect roi2)
+FUNC <void cv.StereoBM.setSmallerBlockSize [ARG int blockSize=]>
+java: void setSmallerBlockSize(int blockSize)
+FUNC <void cv.StereoBM.setTextureThreshold [ARG int textureThreshold=]>
+java: void setTextureThreshold(int textureThreshold)
+FUNC <void cv.StereoBM.setUniquenessRatio [ARG int uniquenessRatio=]>
+java: void setUniquenessRatio(int uniquenessRatio)
+CLASS cv::.StereoMatcher : Algorithm
+[CONST DISP_SHIFT=4, CONST DISP_SCALE=(1 << DISP_SHIFT)]
+FUNC <int cv.StereoMatcher.getBlockSize []>
+java: int getBlockSize()
+FUNC <int cv.StereoMatcher.getDisp12MaxDiff []>
+java: int getDisp12MaxDiff()
+FUNC <int cv.StereoMatcher.getMinDisparity []>
+java: int getMinDisparity()
+FUNC <int cv.StereoMatcher.getNumDisparities []>
+java: int getNumDisparities()
+FUNC <int cv.StereoMatcher.getSpeckleRange []>
+java: int getSpeckleRange()
+FUNC <int cv.StereoMatcher.getSpeckleWindowSize []>
+java: int getSpeckleWindowSize()
+FUNC <void cv.StereoMatcher.compute [ARG Mat left=, ARG Mat right=, ARG Mat disparity=]>
+java: void compute(Mat left, Mat right, Mat disparity)
+FUNC <void cv.StereoMatcher.setBlockSize [ARG int blockSize=]>
+java: void setBlockSize(int blockSize)
+FUNC <void cv.StereoMatcher.setDisp12MaxDiff [ARG int disp12MaxDiff=]>
+java: void setDisp12MaxDiff(int disp12MaxDiff)
+FUNC <void cv.StereoMatcher.setMinDisparity [ARG int minDisparity=]>
+java: void setMinDisparity(int minDisparity)
+FUNC <void cv.StereoMatcher.setNumDisparities [ARG int numDisparities=]>
+java: void setNumDisparities(int numDisparities)
+FUNC <void cv.StereoMatcher.setSpeckleRange [ARG int speckleRange=]>
+java: void setSpeckleRange(int speckleRange)
+FUNC <void cv.StereoMatcher.setSpeckleWindowSize [ARG int speckleWindowSize=]>
+java: void setSpeckleWindowSize(int speckleWindowSize)
+CLASS ::.Calib3d : 
+[CONST CALIB_USE_INTRINSIC_GUESS=1(manual), CONST CALIB_RECOMPUTE_EXTRINSIC=2(manual), CONST CALIB_CHECK_COND=4(manual), CONST CALIB_FIX_SKEW=8(manual), CONST CALIB_FIX_K1=16(manual), CONST CALIB_FIX_K2=32(manual), CONST CALIB_FIX_K3=64(manual), CONST CALIB_FIX_K4=128(manual), CONST CALIB_FIX_INTRINSIC=256(manual), CONST CV_ITERATIVE=0, CONST CV_EPNP=1, CONST CV_P3P=2, CONST CV_DLS=3, CONST LMEDS=4, CONST RANSAC=8, CONST RHO=16, CONST SOLVEPNP_ITERATIVE=0, CONST SOLVEPNP_EPNP=1, CONST SOLVEPNP_P3P=2, CONST SOLVEPNP_DLS=3, CONST SOLVEPNP_UPNP=4, CONST SOLVEPNP_AP3P=5, CONST SOLVEPNP_MAX_COUNT=5+1, CONST CALIB_CB_ADAPTIVE_THRESH=1, CONST CALIB_CB_NORMALIZE_IMAGE=2, CONST CALIB_CB_FILTER_QUADS=4, CONST CALIB_CB_FAST_CHECK=8, CONST CALIB_CB_SYMMETRIC_GRID=1, CONST CALIB_CB_ASYMMETRIC_GRID=2, CONST CALIB_CB_CLUSTERING=4, CONST CALIB_FIX_ASPECT_RATIO=0x00002, CONST CALIB_FIX_PRINCIPAL_POINT=0x00004, CONST CALIB_ZERO_TANGENT_DIST=0x00008, CONST CALIB_FIX_FOCAL_LENGTH=0x00010, CONST CALIB_FIX_K5=0x01000, CONST CALIB_FIX_K6=0x02000, CONST CALIB_RATIONAL_MODEL=0x04000, CONST CALIB_THIN_PRISM_MODEL=0x08000, CONST CALIB_FIX_S1_S2_S3_S4=0x10000, CONST CALIB_TILTED_MODEL=0x40000, CONST CALIB_FIX_TAUX_TAUY=0x80000, CONST CALIB_USE_QR=0x100000, CONST CALIB_FIX_TANGENT_DIST=0x200000, CONST CALIB_SAME_FOCAL_LENGTH=0x00200, CONST CALIB_ZERO_DISPARITY=0x00400, CONST CALIB_USE_LU=(1 << 17), CONST FM_7POINT=1, CONST FM_8POINT=2, CONST FM_LMEDS=4, CONST FM_RANSAC=8]
+FUNC <Mat cv..estimateAffine2D [ARG Mat from=, ARG Mat to=, ARG Mat inliers=Mat(), ARG int method=RANSAC, ARG double ransacReprojThreshold=3, ARG size_t maxIters=2000, ARG double confidence=0.99, ARG size_t refineIters=10]>
+java: Mat estimateAffine2D(Mat from, Mat to, Mat inliers, int method, double ransacReprojThreshold, long maxIters, double confidence, long refineIters)
+java: Mat estimateAffine2D(Mat from, Mat to)
+FUNC <Mat cv..estimateAffinePartial2D [ARG Mat from=, ARG Mat to=, ARG Mat inliers=Mat(), ARG int method=RANSAC, ARG double ransacReprojThreshold=3, ARG size_t maxIters=2000, ARG double confidence=0.99, ARG size_t refineIters=10]>
+java: Mat estimateAffinePartial2D(Mat from, Mat to, Mat inliers, int method, double ransacReprojThreshold, long maxIters, double confidence, long refineIters)
+java: Mat estimateAffinePartial2D(Mat from, Mat to)
+FUNC <Mat cv..findEssentialMat [ARG Mat points1=, ARG Mat points2=, ARG Mat cameraMatrix=, ARG int method=RANSAC, ARG double prob=0.999, ARG double threshold=1.0, ARG Mat mask=Mat()]>
+java: Mat findEssentialMat(Mat points1, Mat points2, Mat cameraMatrix, int method, double prob, double threshold, Mat mask)
+java: Mat findEssentialMat(Mat points1, Mat points2, Mat cameraMatrix, int method, double prob, double threshold)
+java: Mat findEssentialMat(Mat points1, Mat points2, Mat cameraMatrix)
+FUNC <Mat cv..findEssentialMat [ARG Mat points1=, ARG Mat points2=, ARG double focal=1.0, ARG Point2d pp=Point2d(0, 0), ARG int method=RANSAC, ARG double prob=0.999, ARG double threshold=1.0, ARG Mat mask=Mat()]>
+java: Mat findEssentialMat(Mat points1, Mat points2, double focal, Point pp, int method, double prob, double threshold, Mat mask)
+java: Mat findEssentialMat(Mat points1, Mat points2, double focal, Point pp, int method, double prob, double threshold)
+java: Mat findEssentialMat(Mat points1, Mat points2)
+FUNC <Mat cv..findFundamentalMat [ARG vector_Point2f points1=, ARG vector_Point2f points2=, ARG int method=FM_RANSAC, ARG double param1=3., ARG double param2=0.99, ARG Mat mask=Mat()]>
+java: Mat findFundamentalMat(MatOfPoint2f points1, MatOfPoint2f points2, int method, double param1, double param2, Mat mask)
+java: Mat findFundamentalMat(MatOfPoint2f points1, MatOfPoint2f points2, int method, double param1, double param2)
+java: Mat findFundamentalMat(MatOfPoint2f points1, MatOfPoint2f points2)
+FUNC <Mat cv..findHomography [ARG vector_Point2f srcPoints=, ARG vector_Point2f dstPoints=, ARG int method=0, ARG double ransacReprojThreshold=3, ARG Mat mask=Mat(), ARG int maxIters=2000, ARG double confidence=0.995]>
+java: Mat findHomography(MatOfPoint2f srcPoints, MatOfPoint2f dstPoints, int method, double ransacReprojThreshold, Mat mask, int maxIters, double confidence)
+java: Mat findHomography(MatOfPoint2f srcPoints, MatOfPoint2f dstPoints, int method, double ransacReprojThreshold)
+java: Mat findHomography(MatOfPoint2f srcPoints, MatOfPoint2f dstPoints)
+FUNC <Mat cv..getOptimalNewCameraMatrix [ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG Size imageSize=, ARG double alpha=, ARG Size newImgSize=Size(), ARG Rect * validPixROI=0, ARG bool centerPrincipalPoint=false]>
+java: Mat getOptimalNewCameraMatrix(Mat cameraMatrix, Mat distCoeffs, Size imageSize, double alpha, Size newImgSize, Rect validPixROI, boolean centerPrincipalPoint)
+java: Mat getOptimalNewCameraMatrix(Mat cameraMatrix, Mat distCoeffs, Size imageSize, double alpha)
+FUNC <Mat cv..initCameraMatrix2D [ARG vector_vector_Point3f objectPoints=, ARG vector_vector_Point2f imagePoints=, ARG Size imageSize=, ARG double aspectRatio=1.0]>
+java: Mat initCameraMatrix2D(List<MatOfPoint3f> objectPoints, List<MatOfPoint2f> imagePoints, Size imageSize, double aspectRatio)
+java: Mat initCameraMatrix2D(List<MatOfPoint3f> objectPoints, List<MatOfPoint2f> imagePoints, Size imageSize)
+FUNC <Rect cv..getValidDisparityROI [ARG Rect roi1=, ARG Rect roi2=, ARG int minDisparity=, ARG int numberOfDisparities=, ARG int SADWindowSize=]>
+java: Rect getValidDisparityROI(Rect roi1, Rect roi2, int minDisparity, int numberOfDisparities, int SADWindowSize)
+FUNC <Vec3d cv..RQDecomp3x3 [ARG Mat src=, ARG Mat mtxR=, ARG Mat mtxQ=, ARG Mat Qx=Mat(), ARG Mat Qy=Mat(), ARG Mat Qz=Mat()]>
+java: double[] RQDecomp3x3(Mat src, Mat mtxR, Mat mtxQ, Mat Qx, Mat Qy, Mat Qz)
+java: double[] RQDecomp3x3(Mat src, Mat mtxR, Mat mtxQ)
+FUNC <bool cv..findChessboardCorners [ARG Mat image=, ARG Size patternSize=, ARG vector_Point2f corners=, ARG int flags=CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE]>
+java: boolean findChessboardCorners(Mat image, Size patternSize, MatOfPoint2f corners, int flags)
+java: boolean findChessboardCorners(Mat image, Size patternSize, MatOfPoint2f corners)
+FUNC <bool cv..findCirclesGrid [ARG Mat image=, ARG Size patternSize=, ARG Mat centers=, ARG int flags=, ARG Ptr_FeatureDetector blobDetector=, ARG CirclesGridFinderParameters parameters=]>
+SKIP:bool findCirclesGrid(Mat image, Size patternSize, Mat& centers, int flags, Ptr_FeatureDetector blobDetector, CirclesGridFinderParameters parameters)	 due to ARG typePtr_FeatureDetector/I
+FUNC <bool cv..findCirclesGrid [ARG Mat image=, ARG Size patternSize=, ARG Mat centers=, ARG int flags=CALIB_CB_SYMMETRIC_GRID, ARG Ptr_FeatureDetector blobDetector=SimpleBlobDetector::create()]>
+java: boolean findCirclesGrid(Mat image, Size patternSize, Mat centers, int flags)
+java: boolean findCirclesGrid(Mat image, Size patternSize, Mat centers)
+FUNC <bool cv..findCirclesGrid2 [ARG Mat image=, ARG Size patternSize=, ARG Mat centers=, ARG int flags=, ARG Ptr_FeatureDetector blobDetector=, ARG CirclesGridFinderParameters2 parameters=]>
+SKIP:bool findCirclesGrid2(Mat image, Size patternSize, Mat& centers, int flags, Ptr_FeatureDetector blobDetector, CirclesGridFinderParameters2 parameters)	 due to ARG typePtr_FeatureDetector/I
+FUNC <bool cv..solvePnP [ARG vector_Point3f objectPoints=, ARG vector_Point2f imagePoints=, ARG Mat cameraMatrix=, ARG vector_double distCoeffs=, ARG Mat rvec=, ARG Mat tvec=, ARG bool useExtrinsicGuess=false, ARG int flags=SOLVEPNP_ITERATIVE]>
+java: boolean solvePnP(MatOfPoint3f objectPoints, MatOfPoint2f imagePoints, Mat cameraMatrix, MatOfDouble distCoeffs, Mat rvec, Mat tvec, boolean useExtrinsicGuess, int flags)
+java: boolean solvePnP(MatOfPoint3f objectPoints, MatOfPoint2f imagePoints, Mat cameraMatrix, MatOfDouble distCoeffs, Mat rvec, Mat tvec)
+FUNC <bool cv..solvePnPRansac [ARG vector_Point3f objectPoints=, ARG vector_Point2f imagePoints=, ARG Mat cameraMatrix=, ARG vector_double distCoeffs=, ARG Mat rvec=, ARG Mat tvec=, ARG bool useExtrinsicGuess=false, ARG int iterationsCount=100, ARG float reprojectionError=8.0, ARG double confidence=0.99, ARG Mat inliers=Mat(), ARG int flags=SOLVEPNP_ITERATIVE]>
+java: boolean solvePnPRansac(MatOfPoint3f objectPoints, MatOfPoint2f imagePoints, Mat cameraMatrix, MatOfDouble distCoeffs, Mat rvec, Mat tvec, boolean useExtrinsicGuess, int iterationsCount, float reprojectionError, double confidence, Mat inliers, int flags)
+java: boolean solvePnPRansac(MatOfPoint3f objectPoints, MatOfPoint2f imagePoints, Mat cameraMatrix, MatOfDouble distCoeffs, Mat rvec, Mat tvec)
+FUNC <bool cv..stereoRectifyUncalibrated [ARG Mat points1=, ARG Mat points2=, ARG Mat F=, ARG Size imgSize=, ARG Mat H1=, ARG Mat H2=, ARG double threshold=5]>
+java: boolean stereoRectifyUncalibrated(Mat points1, Mat points2, Mat F, Size imgSize, Mat H1, Mat H2, double threshold)
+java: boolean stereoRectifyUncalibrated(Mat points1, Mat points2, Mat F, Size imgSize, Mat H1, Mat H2)
+FUNC <double cv..calibrateCamera [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints=, ARG Size imageSize=, ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG Mat stdDeviationsIntrinsics=, ARG Mat stdDeviationsExtrinsics=, ARG Mat perViewErrors=, ARG int flags=0, ARG TermCriteria criteria=TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)]>
+java: double calibrateCameraExtended(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, Mat stdDeviationsIntrinsics, Mat stdDeviationsExtrinsics, Mat perViewErrors, int flags, TermCriteria criteria)
+java: double calibrateCameraExtended(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, Mat stdDeviationsIntrinsics, Mat stdDeviationsExtrinsics, Mat perViewErrors, int flags)
+java: double calibrateCameraExtended(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, Mat stdDeviationsIntrinsics, Mat stdDeviationsExtrinsics, Mat perViewErrors)
+FUNC <double cv..calibrateCamera [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints=, ARG Size imageSize=, ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG int flags=0, ARG TermCriteria criteria=TermCriteria( TermCriteria::COUNT + TermCriteria::EPS, 30, DBL_EPSILON)]>
+java: double calibrateCamera(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, int flags, TermCriteria criteria)
+java: double calibrateCamera(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, int flags)
+java: double calibrateCamera(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs)
+FUNC <double cv..sampsonDistance [ARG Mat pt1=, ARG Mat pt2=, ARG Mat F=]>
+java: double sampsonDistance(Mat pt1, Mat pt2, Mat F)
+FUNC <double cv..stereoCalibrate [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints1=, ARG vector_Mat imagePoints2=, ARG Mat cameraMatrix1=, ARG Mat distCoeffs1=, ARG Mat cameraMatrix2=, ARG Mat distCoeffs2=, ARG Size imageSize=, ARG Mat R=, ARG Mat T=, ARG Mat E=, ARG Mat F=, ARG int flags=CALIB_FIX_INTRINSIC, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 1e-6)]>
+java: double stereoCalibrate(List<Mat> objectPoints, List<Mat> imagePoints1, List<Mat> imagePoints2, Mat cameraMatrix1, Mat distCoeffs1, Mat cameraMatrix2, Mat distCoeffs2, Size imageSize, Mat R, Mat T, Mat E, Mat F, int flags, TermCriteria criteria)
+java: double stereoCalibrate(List<Mat> objectPoints, List<Mat> imagePoints1, List<Mat> imagePoints2, Mat cameraMatrix1, Mat distCoeffs1, Mat cameraMatrix2, Mat distCoeffs2, Size imageSize, Mat R, Mat T, Mat E, Mat F, int flags)
+java: double stereoCalibrate(List<Mat> objectPoints, List<Mat> imagePoints1, List<Mat> imagePoints2, Mat cameraMatrix1, Mat distCoeffs1, Mat cameraMatrix2, Mat distCoeffs2, Size imageSize, Mat R, Mat T, Mat E, Mat F)
+FUNC <double cv.fisheye..calibrate [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints=, ARG Size image_size=, ARG Mat K=, ARG Mat D=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG int flags=0, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)]>
+java: double calibrate(List<Mat> objectPoints, List<Mat> imagePoints, Size image_size, Mat K, Mat D, List<Mat> rvecs, List<Mat> tvecs, int flags, TermCriteria criteria)
+java: double calibrate(List<Mat> objectPoints, List<Mat> imagePoints, Size image_size, Mat K, Mat D, List<Mat> rvecs, List<Mat> tvecs, int flags)
+java: double calibrate(List<Mat> objectPoints, List<Mat> imagePoints, Size image_size, Mat K, Mat D, List<Mat> rvecs, List<Mat> tvecs)
+FUNC <double cv.fisheye..stereoCalibrate [ARG vector_Mat objectPoints=, ARG vector_Mat imagePoints1=, ARG vector_Mat imagePoints2=, ARG Mat K1=, ARG Mat D1=, ARG Mat K2=, ARG Mat D2=, ARG Size imageSize=, ARG Mat R=, ARG Mat T=, ARG int flags=fisheye::CALIB_FIX_INTRINSIC, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, 100, DBL_EPSILON)]>
+java: double stereoCalibrate(List<Mat> objectPoints, List<Mat> imagePoints1, List<Mat> imagePoints2, Mat K1, Mat D1, Mat K2, Mat D2, Size imageSize, Mat R, Mat T, int flags, TermCriteria criteria)
+java: double stereoCalibrate(List<Mat> objectPoints, List<Mat> imagePoints1, List<Mat> imagePoints2, Mat K1, Mat D1, Mat K2, Mat D2, Size imageSize, Mat R, Mat T, int flags)
+java: double stereoCalibrate(List<Mat> objectPoints, List<Mat> imagePoints1, List<Mat> imagePoints2, Mat K1, Mat D1, Mat K2, Mat D2, Size imageSize, Mat R, Mat T)
+FUNC <float cv..rectify3Collinear [ARG Mat cameraMatrix1=, ARG Mat distCoeffs1=, ARG Mat cameraMatrix2=, ARG Mat distCoeffs2=, ARG Mat cameraMatrix3=, ARG Mat distCoeffs3=, ARG vector_Mat imgpt1=, ARG vector_Mat imgpt3=, ARG Size imageSize=, ARG Mat R12=, ARG Mat T12=, ARG Mat R13=, ARG Mat T13=, ARG Mat R1=, ARG Mat R2=, ARG Mat R3=, ARG Mat P1=, ARG Mat P2=, ARG Mat P3=, ARG Mat Q=, ARG double alpha=, ARG Size newImgSize=, ARG Rect * roi1=, ARG Rect * roi2=, ARG int flags=]>
+java: float rectify3Collinear(Mat cameraMatrix1, Mat distCoeffs1, Mat cameraMatrix2, Mat distCoeffs2, Mat cameraMatrix3, Mat distCoeffs3, List<Mat> imgpt1, List<Mat> imgpt3, Size imageSize, Mat R12, Mat T12, Mat R13, Mat T13, Mat R1, Mat R2, Mat R3, Mat P1, Mat P2, Mat P3, Mat Q, double alpha, Size newImgSize, Rect roi1, Rect roi2, int flags)
+FUNC <int cv..decomposeHomographyMat [ARG Mat H=, ARG Mat K=, ARG vector_Mat rotations=, ARG vector_Mat translations=, ARG vector_Mat normals=]>
+java: int decomposeHomographyMat(Mat H, Mat K, List<Mat> rotations, List<Mat> translations, List<Mat> normals)
+FUNC <int cv..estimateAffine3D [ARG Mat src=, ARG Mat dst=, ARG Mat out=, ARG Mat inliers=, ARG double ransacThreshold=3, ARG double confidence=0.99]>
+java: int estimateAffine3D(Mat src, Mat dst, Mat out, Mat inliers, double ransacThreshold, double confidence)
+java: int estimateAffine3D(Mat src, Mat dst, Mat out, Mat inliers)
+FUNC <int cv..recoverPose [ARG Mat E=, ARG Mat points1=, ARG Mat points2=, ARG Mat R=, ARG Mat t=, ARG double focal=1.0, ARG Point2d pp=Point2d(0, 0), ARG Mat mask=Mat()]>
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat R, Mat t, double focal, Point pp, Mat mask)
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat R, Mat t, double focal, Point pp)
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat R, Mat t)
+FUNC <int cv..recoverPose [ARG Mat E=, ARG Mat points1=, ARG Mat points2=, ARG Mat cameraMatrix=, ARG Mat R=, ARG Mat t=, ARG Mat mask=Mat()]>
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat cameraMatrix, Mat R, Mat t, Mat mask)
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat cameraMatrix, Mat R, Mat t)
+FUNC <int cv..recoverPose [ARG Mat E=, ARG Mat points1=, ARG Mat points2=, ARG Mat cameraMatrix=, ARG Mat R=, ARG Mat t=, ARG double distanceThresh=, ARG Mat mask=Mat(), ARG Mat triangulatedPoints=Mat()]>
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat cameraMatrix, Mat R, Mat t, double distanceThresh, Mat mask, Mat triangulatedPoints)
+java: int recoverPose(Mat E, Mat points1, Mat points2, Mat cameraMatrix, Mat R, Mat t, double distanceThresh)
+FUNC <int cv..solveP3P [ARG Mat objectPoints=, ARG Mat imagePoints=, ARG Mat cameraMatrix=, ARG Mat distCoeffs=, ARG vector_Mat rvecs=, ARG vector_Mat tvecs=, ARG int flags=]>
+java: int solveP3P(Mat objectPoints, Mat imagePoints, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, int flags)
+FUNC <void cv..Rodrigues [ARG Mat src=, ARG Mat dst=, ARG Mat jacobian=Mat()]>
+java: void Rodrigues(Mat src, Mat dst, Mat jacobian)
+java: void Rodrigues(Mat src, Mat dst)
+FUNC <void cv..calibrationMatrixValues [ARG Mat cameraMatrix=, ARG Size imageSize=, ARG double apertureWidth=, ARG double apertureHeight=, ARG double fovx=, ARG double fovy=, ARG double focalLength=, ARG Point2d principalPoint=, ARG double aspectRatio=]>
+java: void calibrationMatrixValues(Mat cameraMatrix, Size imageSize, double apertureWidth, double apertureHeight, double[] fovx, double[] fovy, double[] focalLength, Point principalPoint, double[] aspectRatio)
+FUNC <void cv..composeRT [ARG Mat rvec1=, ARG Mat tvec1=, ARG Mat rvec2=, ARG Mat tvec2=, ARG Mat rvec3=, ARG Mat tvec3=, ARG Mat dr3dr1=Mat(), ARG Mat dr3dt1=Mat(), ARG Mat dr3dr2=Mat(), ARG Mat dr3dt2=Mat(), ARG Mat dt3dr1=Mat(), ARG Mat dt3dt1=Mat(), ARG Mat dt3dr2=Mat(), ARG Mat dt3dt2=Mat()]>
+java: void composeRT(Mat rvec1, Mat tvec1, Mat rvec2, Mat tvec2, Mat rvec3, Mat tvec3, Mat dr3dr1, Mat dr3dt1, Mat dr3dr2, Mat dr3dt2, Mat dt3dr1, Mat dt3dt1, Mat dt3dr2, Mat dt3dt2)
+java: void composeRT(Mat rvec1, Mat tvec1, Mat rvec2, Mat tvec2, Mat rvec3, Mat tvec3)
+FUNC <void cv..computeCorrespondEpilines [ARG Mat points=, ARG int whichImage=, ARG Mat F=, ARG Mat lines=]>
+java: void computeCorrespondEpilines(Mat points, int whichImage, Mat F, Mat lines)
+FUNC <void cv..convertPointsFromHomogeneous [ARG Mat src=, ARG Mat dst=]>
+java: void convertPointsFromHomogeneous(Mat src, Mat dst)
+FUNC <void cv..convertPointsToHomogeneous [ARG Mat src=, ARG Mat dst=]>
+java: void convertPointsToHomogeneous(Mat src, Mat dst)
+FUNC <void cv..correctMatches [ARG Mat F=, ARG Mat points1=, ARG Mat points2=, ARG Mat newPoints1=, ARG Mat newPoints2=]>
+java: void correctMatches(Mat F, Mat points1, Mat points2, Mat newPoints1, Mat newPoints2)
+FUNC <void cv..decomposeEssentialMat [ARG Mat E=, ARG Mat R1=, ARG Mat R2=, ARG Mat t=]>
+java: void decomposeEssentialMat(Mat E, Mat R1, Mat R2, Mat t)
+FUNC <void cv..decomposeProjectionMatrix [ARG Mat projMatrix=, ARG Mat cameraMatrix=, ARG Mat rotMatrix=, ARG Mat transVect=, ARG Mat rotMatrixX=Mat(), ARG Mat rotMatrixY=Mat(), ARG Mat rotMatrixZ=Mat(), ARG Mat eulerAngles=Mat()]>
+java: void decomposeProjectionMatrix(Mat projMatrix, Mat cameraMatrix, Mat rotMatrix, Mat transVect, Mat rotMatrixX, Mat rotMatrixY, Mat rotMatrixZ, Mat eulerAngles)
+java: void decomposeProjectionMatrix(Mat projMatrix, Mat cameraMatrix, Mat rotMatrix, Mat transVect)
+FUNC <void cv..drawChessboardCorners [ARG Mat image=, ARG Size patternSize=, ARG vector_Point2f corners=, ARG bool patternWasFound=]>
+java: void drawChessboardCorners(Mat image, Size patternSize, MatOfPoint2f corners, boolean patternWasFound)
+FUNC <void cv..filterSpeckles [ARG Mat img=, ARG double newVal=, ARG int maxSpeckleSize=, ARG double maxDiff=, ARG Mat buf=Mat()]>
+java: void filterSpeckles(Mat img, double newVal, int maxSpeckleSize, double maxDiff, Mat buf)
+java: void filterSpeckles(Mat img, double newVal, int maxSpeckleSize, double maxDiff)
+FUNC <void cv..matMulDeriv [ARG Mat A=, ARG Mat B=, ARG Mat dABdA=, ARG Mat dABdB=]>
+java: void matMulDeriv(Mat A, Mat B, Mat dABdA, Mat dABdB)
+FUNC <void cv..projectPoints [ARG vector_Point3f objectPoints=, ARG Mat rvec=, ARG Mat tvec=, ARG Mat cameraMatrix=, ARG vector_double distCoeffs=, ARG vector_Point2f imagePoints=, ARG Mat jacobian=Mat(), ARG double aspectRatio=0]>
+java: void projectPoints(MatOfPoint3f objectPoints, Mat rvec, Mat tvec, Mat cameraMatrix, MatOfDouble distCoeffs, MatOfPoint2f imagePoints, Mat jacobian, double aspectRatio)
+java: void projectPoints(MatOfPoint3f objectPoints, Mat rvec, Mat tvec, Mat cameraMatrix, MatOfDouble distCoeffs, MatOfPoint2f imagePoints)
+FUNC <void cv..reprojectImageTo3D [ARG Mat disparity=, ARG Mat _3dImage=, ARG Mat Q=, ARG bool handleMissingValues=false, ARG int ddepth=-1]>
+java: void reprojectImageTo3D(Mat disparity, Mat _3dImage, Mat Q, boolean handleMissingValues, int ddepth)
+java: void reprojectImageTo3D(Mat disparity, Mat _3dImage, Mat Q, boolean handleMissingValues)
+java: void reprojectImageTo3D(Mat disparity, Mat _3dImage, Mat Q)
+FUNC <void cv..stereoRectify [ARG Mat cameraMatrix1=, ARG Mat distCoeffs1=, ARG Mat cameraMatrix2=, ARG Mat distCoeffs2=, ARG Size imageSize=, ARG Mat R=, ARG Mat T=, ARG Mat R1=, ARG Mat R2=, ARG Mat P1=, ARG Mat P2=, ARG Mat Q=, ARG int flags=CALIB_ZERO_DISPARITY, ARG double alpha=-1, ARG Size newImageSize=Size(), ARG Rect * validPixROI1=0, ARG Rect * validPixROI2=0]>
+java: void stereoRectify(Mat cameraMatrix1, Mat distCoeffs1, Mat cameraMatrix2, Mat distCoeffs2, Size imageSize, Mat R, Mat T, Mat R1, Mat R2, Mat P1, Mat P2, Mat Q, int flags, double alpha, Size newImageSize, Rect validPixROI1, Rect validPixROI2)
+java: void stereoRectify(Mat cameraMatrix1, Mat distCoeffs1, Mat cameraMatrix2, Mat distCoeffs2, Size imageSize, Mat R, Mat T, Mat R1, Mat R2, Mat P1, Mat P2, Mat Q)
+FUNC <void cv..triangulatePoints [ARG Mat projMatr1=, ARG Mat projMatr2=, ARG Mat projPoints1=, ARG Mat projPoints2=, ARG Mat points4D=]>
+java: void triangulatePoints(Mat projMatr1, Mat projMatr2, Mat projPoints1, Mat projPoints2, Mat points4D)
+FUNC <void cv..validateDisparity [ARG Mat disparity=, ARG Mat cost=, ARG int minDisparity=, ARG int numberOfDisparities=, ARG int disp12MaxDisp=1]>
+java: void validateDisparity(Mat disparity, Mat cost, int minDisparity, int numberOfDisparities, int disp12MaxDisp)
+java: void validateDisparity(Mat disparity, Mat cost, int minDisparity, int numberOfDisparities)
+FUNC <void cv.fisheye..distortPoints [ARG Mat undistorted=, ARG Mat distorted=, ARG Mat K=, ARG Mat D=, ARG double alpha=0]>
+java: void distortPoints(Mat undistorted, Mat distorted, Mat K, Mat D, double alpha)
+java: void distortPoints(Mat undistorted, Mat distorted, Mat K, Mat D)
+FUNC <void cv.fisheye..estimateNewCameraMatrixForUndistortRectify [ARG Mat K=, ARG Mat D=, ARG Size image_size=, ARG Mat R=, ARG Mat P=, ARG double balance=0.0, ARG Size new_size=Size(), ARG double fov_scale=1.0]>
+java: void estimateNewCameraMatrixForUndistortRectify(Mat K, Mat D, Size image_size, Mat R, Mat P, double balance, Size new_size, double fov_scale)
+java: void estimateNewCameraMatrixForUndistortRectify(Mat K, Mat D, Size image_size, Mat R, Mat P)
+FUNC <void cv.fisheye..initUndistortRectifyMap [ARG Mat K=, ARG Mat D=, ARG Mat R=, ARG Mat P=, ARG Size size=, ARG int m1type=, ARG Mat map1=, ARG Mat map2=]>
+java: void initUndistortRectifyMap(Mat K, Mat D, Mat R, Mat P, Size size, int m1type, Mat map1, Mat map2)
+FUNC <void cv.fisheye..projectPoints [ARG vector_Point3f objectPoints=, ARG vector_Point2f imagePoints=, ARG Mat rvec=, ARG Mat tvec=, ARG Mat K=, ARG Mat D=, ARG double alpha=0, ARG Mat jacobian=Mat()]>
+java: void projectPoints(MatOfPoint3f objectPoints, MatOfPoint2f imagePoints, Mat rvec, Mat tvec, Mat K, Mat D, double alpha, Mat jacobian)
+java: void projectPoints(MatOfPoint3f objectPoints, MatOfPoint2f imagePoints, Mat rvec, Mat tvec, Mat K, Mat D)
+FUNC <void cv.fisheye..stereoRectify [ARG Mat K1=, ARG Mat D1=, ARG Mat K2=, ARG Mat D2=, ARG Size imageSize=, ARG Mat R=, ARG Mat tvec=, ARG Mat R1=, ARG Mat R2=, ARG Mat P1=, ARG Mat P2=, ARG Mat Q=, ARG int flags=, ARG Size newImageSize=Size(), ARG double balance=0.0, ARG double fov_scale=1.0]>
+java: void stereoRectify(Mat K1, Mat D1, Mat K2, Mat D2, Size imageSize, Mat R, Mat tvec, Mat R1, Mat R2, Mat P1, Mat P2, Mat Q, int flags, Size newImageSize, double balance, double fov_scale)
+java: void stereoRectify(Mat K1, Mat D1, Mat K2, Mat D2, Size imageSize, Mat R, Mat tvec, Mat R1, Mat R2, Mat P1, Mat P2, Mat Q, int flags)
+FUNC <void cv.fisheye..undistortImage [ARG Mat distorted=, ARG Mat undistorted=, ARG Mat K=, ARG Mat D=, ARG Mat Knew=cv::Mat(), ARG Size new_size=Size()]>
+java: void undistortImage(Mat distorted, Mat undistorted, Mat K, Mat D, Mat Knew, Size new_size)
+java: void undistortImage(Mat distorted, Mat undistorted, Mat K, Mat D)
+FUNC <void cv.fisheye..undistortPoints [ARG Mat distorted=, ARG Mat undistorted=, ARG Mat K=, ARG Mat D=, ARG Mat R=Mat(), ARG Mat P=Mat()]>
+java: void undistortPoints(Mat distorted, Mat undistorted, Mat K, Mat D, Mat R, Mat P)
+java: void undistortPoints(Mat distorted, Mat undistorted, Mat K, Mat D)

@@ -1,0 +1,108 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/include/opencv2/objdetect.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/include/opencv2/objdetect/detection_based_tracker.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/include/opencv2/objdetect/objdetect.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/include/opencv2/objdetect/objdetect_c.h",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/cascadedetect.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/cascadedetect_convert.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/detection_based_tracker.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/haar.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/hog.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/main.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/opencl/cascadedetect.cl",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/opencl/objdetect_hog.cl",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/build_service_armeabi-v7a/modules/objdetect/opencl_kernels_objdetect.cpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/build_service_armeabi-v7a/modules/objdetect/opencl_kernels_objdetect.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/cascadedetect.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/haar.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/modules/objdetect/src/precomp.hpp",
+			"labels" : [ "Main", "opencv_objdetect", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/build_service_armeabi-v7a/cvconfig.h"
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/build_service_armeabi-v7a/opencv2/opencv_modules.hpp"
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/build_service_armeabi-v7a/modules/objdetect/opencl_kernels_objdetect.cpp.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Main", "opencv_objdetect", "Module" ],
+		"name" : "opencv_objdetect"
+	}
+}

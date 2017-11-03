@@ -1,0 +1,6 @@
+# view res/layout/face_detect_surface_view.xml #generated:6
+-keep class org.opencv.android.JavaCameraView { <init>(...); }
+
+# view AndroidManifest.xml #generated:12
+-keep class org.opencv.samples.facedetect.FdActivity { <init>(...); }
+

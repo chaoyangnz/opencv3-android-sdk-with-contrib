@@ -1,0 +1,79 @@
+PORTED FUNCs LIST (60 of 63):
+
+ vector_Mat finalize(vector_Mat inputs)
+ void finalize(vector_Mat inputs, vector_Mat& outputs)
+ void forward(vector_Mat inputs, vector_Mat& outputs, vector_Mat& internals)
+ void run(vector_Mat inputs, vector_Mat& outputs, vector_Mat& internals)
+vector_Mat Layer::blobs
+void Layer::blobs
+String Layer::name
+String Layer::type
+int Layer::preferableTarget
+ Mat blobFromImage(Mat image, double scalefactor = 1.0, Size size = Size(), Scalar mean = Scalar(), bool swapRB = true, bool crop = true)
+ Mat blobFromImages(vector_Mat images, double scalefactor = 1.0, Size size = Size(), Scalar mean = Scalar(), bool swapRB = true, bool crop = true)
+ Mat readTorchBlob(String filename, bool isBinary = true)
+ Net readNetFromCaffe(String prototxt, String caffeModel = String())
+ Net readNetFromDarknet(String cfgFile, String darknetModel = String())
+ Net readNetFromTensorflow(String model, String config = String())
+ Net readNetFromTorch(String model, bool isBinary = true)
+ Ptr_Importer createCaffeImporter(String prototxt, String caffeModel = String())
+ Ptr_Importer createTensorflowImporter(String model)
+ Ptr_Importer createTorchImporter(String filename, bool isBinary = true)
+ void NMSBoxes(vector_Rect bboxes, vector_float scores, float score_threshold, float nms_threshold, vector_int& indices, float eta = 1.f, int top_k = 0)
+ void shrinkCaffeModel(String src, String dst, vector_String layersTypes = std::vector<String>())
+ void populateNet(Net net)
+  DictValue(String s)
+  DictValue(double p)
+  DictValue(int i)
+ String getStringValue(int idx = -1)
+ bool isInt()
+ bool isReal()
+ bool isString()
+ double getRealValue(int idx = -1)
+ int getIntValue(int idx = -1)
+  Net()
+ Mat forward(String outputName = String())
+ Mat getParam(LayerId layer, int numParam = 0)
+ Ptr_Layer getLayer(LayerId layerId)
+ bool empty()
+ int getLayerId(String layer)
+ int getLayersCount(String layerType)
+ int64 getFLOPS(MatShape netInputShape)
+ int64 getFLOPS(int layerId, MatShape netInputShape)
+ int64 getFLOPS(int layerId, vector_MatShape netInputShapes)
+ int64 getFLOPS(vector_MatShape netInputShapes)
+ int64 getPerfProfile(vector_double& timings)
+ vector_String getLayerNames()
+ vector_int getUnconnectedOutLayers()
+ void connect(String outPin, String inpPin)
+ void deleteLayer(LayerId layer)
+ void enableFusion(bool fusion)
+ void forward(vector_Mat outputBlobs, String outputName = String())
+ void forward(vector_Mat outputBlobs, vector_String outBlobNames)
+ void getLayerTypes(vector_String& layersTypes)
+ void getMemoryConsumption(MatShape netInputShape, size_t& weights, size_t& blobs)
+ void getMemoryConsumption(int layerId, MatShape netInputShape, size_t& weights, size_t& blobs)
+ void getMemoryConsumption(int layerId, vector_MatShape netInputShapes, size_t& weights, size_t& blobs)
+ void setHalideScheduler(String scheduler)
+ void setInput(Mat blob, String name = "")
+ void setInputsNames(vector_String inputBlobNames)
+ void setParam(LayerId layer, int numParam, Mat blob)
+ void setPreferableBackend(int backendId)
+ void setPreferableTarget(int targetId)
+
+SKIPPED FUNCs LIST (3 of 63):
+
+ void forward(vector_vector_Mat outputBlobs, vector_String outBlobNames)
+// Unknown type 'vector_vector_Mat' (I), skipping the function
+
+ void getLayersShapes(MatShape netInputShape, vector_int& layersIds, vector_vector_MatShape& inLayersShapes, vector_vector_MatShape& outLayersShapes)
+// Unknown type 'vector_vector_MatShape' (O), skipping the function
+
+ void getLayersShapes(vector_MatShape netInputShapes, vector_int& layersIds, vector_vector_MatShape& inLayersShapes, vector_vector_MatShape& outLayersShapes)
+// Unknown type 'vector_vector_MatShape' (O), skipping the function
+
+
+0 def args - 40 funcs
+1 def args - 15 funcs
+2 def args - 1 funcs
+5 def args - 2 funcs

@@ -1,0 +1,1509 @@
+ok: class CLASS ::.Video : , name: Video, base: 
+
+
+===== Header: /Users/Chao/opencv/modules/video/include/opencv2/video/tracking_c.h =====
+Namespaces: set([''])
+Ignore header: /Users/Chao/opencv/modules/video/include/opencv2/video/tracking_c.h
+
+
+===== Header: /Users/Chao/opencv/modules/video/include/opencv2/video.hpp =====
+Namespaces: set([''])
+Ignore header: /Users/Chao/opencv/modules/video/include/opencv2/video.hpp
+
+
+===== Header: /Users/Chao/opencv/modules/video/include/opencv2/video/background_segm.hpp =====
+Namespaces: set(['', u'cv'])
+
+--- Incoming ---
+[   u'class cv.BackgroundSubtractor',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief Base class for background/foreground segmentation. :\n\nThe class is only used to define the common interface for the whole family of background/foreground\nsegmentation algorithms.']
+ok: class CLASS cv::.BackgroundSubtractor : Algorithm, name: BackgroundSubtractor, base: Algorithm
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractor.apply',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'image', '', []],
+        ['Mat', u'fgmask', '', ['/O']],
+        [u'double', u'learningRate', u'-1', []]],
+    u'void',
+    u'@brief Computes a foreground mask.\n\n@param image Next video frame.\n@param fgmask The output foreground mask as an 8-bit binary image.\n@param learningRate The value between 0 and 1 that indicates how fast the background model is\nlearnt. Negative parameter value makes the algorithm to use some automatically chosen learning\nrate. 0 means that the background model is not updated at all, 1 means that the background model\nis completely reinitialized from the last frame.']
+ok: FUNC <void cv.BackgroundSubtractor.apply [ARG Mat image=, ARG Mat fgmask=, ARG double learningRate=-1]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractor.getBackgroundImage',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [['Mat', u'backgroundImage', '', ['/O']]],
+    u'void',
+    u'@brief Computes a background image.\n\n@param backgroundImage The output background image.\n\n@note Sometimes the background image can be very blurry, as it contain the average background\nstatistics.']
+ok: FUNC <void cv.BackgroundSubtractor.getBackgroundImage [ARG Mat backgroundImage=]>
+
+--- Incoming ---
+[   u'class cv.BackgroundSubtractorMOG2',
+    u': cv::BackgroundSubtractor',
+    [],
+    [],
+    None,
+    u'@brief Gaussian Mixture-based Background/Foreground Segmentation Algorithm.\n\nThe class implements the Gaussian mixture model background subtraction described in @cite Zivkovic2004\nand @cite Zivkovic2006 .']
+ok: class CLASS cv::.BackgroundSubtractorMOG2 : BackgroundSubtractor, name: BackgroundSubtractorMOG2, base: BackgroundSubtractor
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getHistory',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the number of last frames that affect the background model']
+ok: FUNC <int cv.BackgroundSubtractorMOG2.getHistory []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setHistory',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'history', u'', []]],
+    u'void',
+    u'@brief Sets the number of last frames that affect the background model']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setHistory [ARG int history=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getNMixtures',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the number of gaussian components in the background model']
+ok: FUNC <int cv.BackgroundSubtractorMOG2.getNMixtures []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setNMixtures',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'nmixtures', u'', []]],
+    u'void',
+    u'@brief Sets the number of gaussian components in the background model.\n\nThe model needs to be reinitalized to reserve memory.']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setNMixtures [ARG int nmixtures=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getBackgroundRatio',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the "background ratio" parameter of the algorithm\n\nIf a foreground pixel keeps semi-constant value for about backgroundRatio\\*history frames, it\'s\nconsidered background and added to the model as a center of a new component. It corresponds to TB\nparameter in the paper.']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getBackgroundRatio []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setBackgroundRatio',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'ratio', u'', []]],
+    u'void',
+    u'@brief Sets the "background ratio" parameter of the algorithm']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setBackgroundRatio [ARG double ratio=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getVarThreshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the variance threshold for the pixel-model match\n\nThe main threshold on the squared Mahalanobis distance to decide if the sample is well described by\nthe background model or not. Related to Cthr from the paper.']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getVarThreshold []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setVarThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'varThreshold', u'', []]],
+    u'void',
+    u'@brief Sets the variance threshold for the pixel-model match']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setVarThreshold [ARG double varThreshold=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getVarThresholdGen',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the variance threshold for the pixel-model match used for new mixture component generation\n\nThreshold for the squared Mahalanobis distance that helps decide when a sample is close to the\nexisting components (corresponds to Tg in the paper). If a pixel is not close to any component, it\nis considered foreground or added as a new component. 3 sigma =\\> Tg=3\\*3=9 is default. A smaller Tg\nvalue generates more components. A higher Tg value may result in a small number of components but\nthey can grow too large.']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getVarThresholdGen []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setVarThresholdGen',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'varThresholdGen', u'', []]],
+    u'void',
+    u'@brief Sets the variance threshold for the pixel-model match used for new mixture component generation']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setVarThresholdGen [ARG double varThresholdGen=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getVarInit',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the initial variance of each gaussian component']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getVarInit []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setVarInit',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'varInit', u'', []]],
+    u'void',
+    u'@brief Sets the initial variance of each gaussian component']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setVarInit [ARG double varInit=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getVarMin',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getVarMin []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setVarMin',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'varMin', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setVarMin [ARG double varMin=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getVarMax',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getVarMax []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setVarMax',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'varMax', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setVarMax [ARG double varMax=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getComplexityReductionThreshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the complexity reduction threshold\n\nThis parameter defines the number of samples needed to accept to prove the component exists. CT=0.05\nis a default value for all the samples. By setting CT=0 you get an algorithm very similar to the\nstandard Stauffer&Grimson algorithm.']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getComplexityReductionThreshold []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setComplexityReductionThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'ct', u'', []]],
+    u'void',
+    u'@brief Sets the complexity reduction threshold']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setComplexityReductionThreshold [ARG double ct=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getDetectShadows',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@brief Returns the shadow detection flag\n\nIf true, the algorithm detects shadows and marks them. See createBackgroundSubtractorMOG2 for\ndetails.']
+ok: FUNC <bool cv.BackgroundSubtractorMOG2.getDetectShadows []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setDetectShadows',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'detectShadows', u'', []]],
+    u'void',
+    u'@brief Enables or disables shadow detection']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setDetectShadows [ARG bool detectShadows=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getShadowValue',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the shadow value\n\nShadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0\nin the mask always means background, 255 means foreground.']
+ok: FUNC <int cv.BackgroundSubtractorMOG2.getShadowValue []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setShadowValue',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'value', u'', []]],
+    u'void',
+    u'@brief Sets the shadow value']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setShadowValue [ARG int value=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.getShadowThreshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the shadow threshold\n\nA shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in\nthe paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel\nis more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,\n*Detecting Moving Shadows...*, IEEE PAMI,2003.']
+ok: FUNC <double cv.BackgroundSubtractorMOG2.getShadowThreshold []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.setShadowThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'threshold', u'', []]],
+    u'void',
+    u'@brief Sets the shadow threshold']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.setShadowThreshold [ARG double threshold=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorMOG2.apply',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'image', '', []],
+        ['Mat', u'fgmask', '', ['/O']],
+        [u'double', u'learningRate', u'-1', []]],
+    u'void',
+    u'@brief Computes a foreground mask.\n\n@param image Next video frame. Floating point frame will be used without scaling and should be in range \\f$[0,255]\\f$.\n@param fgmask The output foreground mask as an 8-bit binary image.\n@param learningRate The value between 0 and 1 that indicates how fast the background model is\nlearnt. Negative parameter value makes the algorithm to use some automatically chosen learning\nrate. 0 means that the background model is not updated at all, 1 means that the background model\nis completely reinitialized from the last frame.']
+ok: FUNC <void cv.BackgroundSubtractorMOG2.apply [ARG Mat image=, ARG Mat fgmask=, ARG double learningRate=-1]>
+
+--- Incoming ---
+[   u'cv.createBackgroundSubtractorMOG2',
+    u'Ptr_BackgroundSubtractorMOG2',
+    [],
+    [   [u'int', u'history', u'500', []],
+        [u'double', u'varThreshold', u'16', []],
+        [u'bool', u'detectShadows', u'true', []]],
+    u'Ptr<BackgroundSubtractorMOG2>',
+    u'@brief Creates MOG2 Background Subtractor\n\n@param history Length of the history.\n@param varThreshold Threshold on the squared Mahalanobis distance between the pixel and the model\nto decide whether a pixel is well described by the background model. This parameter does not\naffect the background update.\n@param detectShadows If true, the algorithm will detect shadows and mark them. It decreases the\nspeed a bit, so if you do not need this feature, set the parameter to false.']
+ok: FUNC <Ptr_BackgroundSubtractorMOG2 cv..createBackgroundSubtractorMOG2 [ARG int history=500, ARG double varThreshold=16, ARG bool detectShadows=true]>
+
+--- Incoming ---
+[   u'class cv.BackgroundSubtractorKNN',
+    u': cv::BackgroundSubtractor',
+    [],
+    [],
+    None,
+    u'@brief K-nearest neigbours - based Background/Foreground Segmentation Algorithm.\n\nThe class implements the K-nearest neigbours background subtraction described in @cite Zivkovic2006 .\nVery efficient if number of foreground pixels is low.']
+ok: class CLASS cv::.BackgroundSubtractorKNN : BackgroundSubtractor, name: BackgroundSubtractorKNN, base: BackgroundSubtractor
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getHistory',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the number of last frames that affect the background model']
+ok: FUNC <int cv.BackgroundSubtractorKNN.getHistory []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setHistory',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'history', u'', []]],
+    u'void',
+    u'@brief Sets the number of last frames that affect the background model']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setHistory [ARG int history=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getNSamples',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the number of data samples in the background model']
+ok: FUNC <int cv.BackgroundSubtractorKNN.getNSamples []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setNSamples',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'_nN', u'', []]],
+    u'void',
+    u'@brief Sets the number of data samples in the background model.\n\nThe model needs to be reinitalized to reserve memory.']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setNSamples [ARG int _nN=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getDist2Threshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the threshold on the squared distance between the pixel and the sample\n\nThe threshold on the squared distance between the pixel and the sample to decide whether a pixel is\nclose to a data sample.']
+ok: FUNC <double cv.BackgroundSubtractorKNN.getDist2Threshold []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setDist2Threshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'_dist2Threshold', u'', []]],
+    u'void',
+    u'@brief Sets the threshold on the squared distance']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setDist2Threshold [ARG double _dist2Threshold=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getkNNSamples',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the number of neighbours, the k in the kNN.\n\nK is the number of samples that need to be within dist2Threshold in order to decide that that\npixel is matching the kNN background model.']
+ok: FUNC <int cv.BackgroundSubtractorKNN.getkNNSamples []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setkNNSamples',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'_nkNN', u'', []]],
+    u'void',
+    u'@brief Sets the k in the kNN. How many nearest neigbours need to match.']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setkNNSamples [ARG int _nkNN=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getDetectShadows',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@brief Returns the shadow detection flag\n\nIf true, the algorithm detects shadows and marks them. See createBackgroundSubtractorKNN for\ndetails.']
+ok: FUNC <bool cv.BackgroundSubtractorKNN.getDetectShadows []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setDetectShadows',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'detectShadows', u'', []]],
+    u'void',
+    u'@brief Enables or disables shadow detection']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setDetectShadows [ARG bool detectShadows=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getShadowValue',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@brief Returns the shadow value\n\nShadow value is the value used to mark shadows in the foreground mask. Default value is 127. Value 0\nin the mask always means background, 255 means foreground.']
+ok: FUNC <int cv.BackgroundSubtractorKNN.getShadowValue []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setShadowValue',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'value', u'', []]],
+    u'void',
+    u'@brief Sets the shadow value']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setShadowValue [ARG int value=]>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.getShadowThreshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@brief Returns the shadow threshold\n\nA shadow is detected if pixel is a darker version of the background. The shadow threshold (Tau in\nthe paper) is a threshold defining how much darker the shadow can be. Tau= 0.5 means that if a pixel\nis more than twice darker then it is not shadow. See Prati, Mikic, Trivedi and Cucchiara,\n*Detecting Moving Shadows...*, IEEE PAMI,2003.']
+ok: FUNC <double cv.BackgroundSubtractorKNN.getShadowThreshold []>
+
+--- Incoming ---
+[   u'cv.BackgroundSubtractorKNN.setShadowThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'threshold', u'', []]],
+    u'void',
+    u'@brief Sets the shadow threshold']
+ok: FUNC <void cv.BackgroundSubtractorKNN.setShadowThreshold [ARG double threshold=]>
+
+--- Incoming ---
+[   u'cv.createBackgroundSubtractorKNN',
+    u'Ptr_BackgroundSubtractorKNN',
+    [],
+    [   [u'int', u'history', u'500', []],
+        [u'double', u'dist2Threshold', u'400.0', []],
+        [u'bool', u'detectShadows', u'true', []]],
+    u'Ptr<BackgroundSubtractorKNN>',
+    u'@brief Creates KNN Background Subtractor\n\n@param history Length of the history.\n@param dist2Threshold Threshold on the squared distance between the pixel and the sample to decide\nwhether a pixel is close to that sample. This parameter does not affect the background update.\n@param detectShadows If true, the algorithm will detect shadows and mark them. It decreases the\nspeed a bit, so if you do not need this feature, set the parameter to false.']
+ok: FUNC <Ptr_BackgroundSubtractorKNN cv..createBackgroundSubtractorKNN [ARG int history=500, ARG double dist2Threshold=400.0, ARG bool detectShadows=true]>
+
+
+===== Header: /Users/Chao/opencv/modules/video/include/opencv2/video/tracking.hpp =====
+Namespaces: set(['', u'cv'])
+
+--- Incoming ---
+[u'const cv.OPTFLOW_USE_INITIAL_FLOW', u'4', [], [], None, '']
+ok: CONST OPTFLOW_USE_INITIAL_FLOW=4
+
+--- Incoming ---
+[u'const cv.OPTFLOW_LK_GET_MIN_EIGENVALS', u'8', [], [], None, '']
+ok: CONST OPTFLOW_LK_GET_MIN_EIGENVALS=8
+
+--- Incoming ---
+[u'const cv.OPTFLOW_FARNEBACK_GAUSSIAN', u'256', [], [], None, '']
+ok: CONST OPTFLOW_FARNEBACK_GAUSSIAN=256
+
+--- Incoming ---
+[   u'cv.CamShift',
+    u'RotatedRect',
+    [],
+    [   ['Mat', u'probImage', '', []],
+        [u'Rect', u'window', u'', ['/IO', '/Ref']],
+        [u'TermCriteria', u'criteria', u'', []]],
+    u'RotatedRect',
+    u'@brief Finds an object center, size, and orientation.\n\n@param probImage Back projection of the object histogram. See calcBackProject.\n@param window Initial search window.\n@param criteria Stop criteria for the underlying meanShift.\nreturns\n(in old interfaces) Number of iterations CAMSHIFT took to converge\nThe function implements the CAMSHIFT object tracking algorithm @cite Bradski98 . First, it finds an\nobject center using meanShift and then adjusts the window size and finds the optimal rotation. The\nfunction returns the rotated rectangle structure that includes the object position, size, and\norientation. The next position of the search window can be obtained with RotatedRect::boundingRect()\n\nSee the OpenCV sample camshiftdemo.c that tracks colored objects.\n\n@note\n-   (Python) A sample explaining the camshift tracking algorithm can be found at\nopencv_source_code/samples/python/camshift.py']
+ok: FUNC <RotatedRect cv..CamShift [ARG Mat probImage=, ARG Rect window=, ARG TermCriteria criteria=]>
+
+--- Incoming ---
+[   u'cv.meanShift',
+    u'int',
+    [],
+    [   ['Mat', u'probImage', '', []],
+        [u'Rect', u'window', u'', ['/IO', '/Ref']],
+        [u'TermCriteria', u'criteria', u'', []]],
+    u'int',
+    u'@brief Finds an object on a back projection image.\n\n@param probImage Back projection of the object histogram. See calcBackProject for details.\n@param window Initial search window.\n@param criteria Stop criteria for the iterative search algorithm.\nreturns\n:   Number of iterations CAMSHIFT took to converge.\nThe function implements the iterative object search algorithm. It takes the input back projection of\nan object and the initial position. The mass center in window of the back projection image is\ncomputed and the search window center shifts to the mass center. The procedure is repeated until the\nspecified number of iterations criteria.maxCount is done or until the window center shifts by less\nthan criteria.epsilon. The algorithm is used inside CamShift and, unlike CamShift , the search\nwindow size or orientation do not change during the search. You can simply pass the output of\ncalcBackProject to this function. But better results can be obtained if you pre-filter the back\nprojection and remove the noise. For example, you can do this by retrieving connected components\nwith findContours , throwing away contours with small area ( contourArea ), and rendering the\nremaining contours with drawContours.']
+ok: FUNC <int cv..meanShift [ARG Mat probImage=, ARG Rect window=, ARG TermCriteria criteria=]>
+
+--- Incoming ---
+[   u'cv.buildOpticalFlowPyramid',
+    u'int',
+    [],
+    [   ['Mat', u'img', '', []],
+        ['vector_Mat', u'pyramid', '', ['/O']],
+        [u'Size', u'winSize', u'', []],
+        [u'int', u'maxLevel', u'', []],
+        [u'bool', u'withDerivatives', u'true', []],
+        [u'int', u'pyrBorder', u'BORDER_REFLECT_101', []],
+        [u'int', u'derivBorder', u'BORDER_CONSTANT', []],
+        [u'bool', u'tryReuseInputImage', u'true', []]],
+    u'int',
+    u'@brief Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.\n\n@param img 8-bit input image.\n@param pyramid output pyramid.\n@param winSize window size of optical flow algorithm. Must be not less than winSize argument of\ncalcOpticalFlowPyrLK. It is needed to calculate required padding for pyramid levels.\n@param maxLevel 0-based maximal pyramid level number.\n@param withDerivatives set to precompute gradients for the every pyramid level. If pyramid is\nconstructed without the gradients then calcOpticalFlowPyrLK will calculate them internally.\n@param pyrBorder the border mode for pyramid layers.\n@param derivBorder the border mode for gradients.\n@param tryReuseInputImage put ROI of input image into the pyramid if possible. You can pass false\nto force data copying.\n@return number of levels in constructed pyramid. Can be less than maxLevel.']
+ok: FUNC <int cv..buildOpticalFlowPyramid [ARG Mat img=, ARG vector_Mat pyramid=, ARG Size winSize=, ARG int maxLevel=, ARG bool withDerivatives=true, ARG int pyrBorder=BORDER_REFLECT_101, ARG int derivBorder=BORDER_CONSTANT, ARG bool tryReuseInputImage=true]>
+
+--- Incoming ---
+[   u'cv.calcOpticalFlowPyrLK',
+    u'void',
+    [],
+    [   ['Mat', u'prevImg', '', []],
+        ['Mat', u'nextImg', '', []],
+        ['Mat', u'prevPts', '', []],
+        ['Mat', u'nextPts', '', ['/IO']],
+        ['Mat', u'status', '', ['/O']],
+        ['Mat', u'err', '', ['/O']],
+        [u'Size', u'winSize', u'Size(21,21)', []],
+        [u'int', u'maxLevel', u'3', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01)',
+            []],
+        [u'int', u'flags', u'0', []],
+        [u'double', u'minEigThreshold', u'1e-4', []]],
+    u'void',
+    u"@brief Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with\npyramids.\n\n@param prevImg first 8-bit input image or pyramid constructed by buildOpticalFlowPyramid.\n@param nextImg second input image or pyramid of the same size and the same type as prevImg.\n@param prevPts vector of 2D points for which the flow needs to be found; point coordinates must be\nsingle-precision floating-point numbers.\n@param nextPts output vector of 2D points (with single-precision floating-point coordinates)\ncontaining the calculated new positions of input features in the second image; when\nOPTFLOW_USE_INITIAL_FLOW flag is passed, the vector must have the same size as in the input.\n@param status output status vector (of unsigned chars); each element of the vector is set to 1 if\nthe flow for the corresponding features has been found, otherwise, it is set to 0.\n@param err output vector of errors; each element of the vector is set to an error for the\ncorresponding feature, type of the error measure can be set in flags parameter; if the flow wasn't\nfound then the error is not defined (use the status parameter to find such cases).\n@param winSize size of the search window at each pyramid level.\n@param maxLevel 0-based maximal pyramid level number; if set to 0, pyramids are not used (single\nlevel), if set to 1, two levels are used, and so on; if pyramids are passed to input then\nalgorithm will use as many levels as pyramids have but no more than maxLevel.\n@param criteria parameter, specifying the termination criteria of the iterative search algorithm\n(after the specified maximum number of iterations criteria.maxCount or when the search window\nmoves by less than criteria.epsilon.\n@param flags operation flags:\n-   **OPTFLOW_USE_INITIAL_FLOW** uses initial estimations, stored in nextPts; if the flag is\nnot set, then prevPts is copied to nextPts and is considered the initial estimate.\n-   **OPTFLOW_LK_GET_MIN_EIGENVALS** use minimum eigen values as an error measure (see\nminEigThreshold description); if the flag is not set, then L1 distance between patches\naround the original and a moved point, divided by number of pixels in a window, is used as a\nerror measure.\n@param minEigThreshold the algorithm calculates the minimum eigen value of a 2x2 normal matrix of\noptical flow equations (this matrix is called a spatial gradient matrix in @cite Bouguet00), divided\nby number of pixels in a window; if this value is less than minEigThreshold, then a corresponding\nfeature is filtered out and its flow is not processed, so it allows to remove bad points and get a\nperformance boost.\n\nThe function implements a sparse iterative version of the Lucas-Kanade optical flow in pyramids. See\n@cite Bouguet00 . The function is parallelized with the TBB library.\n\n@note\n\n-   An example using the Lucas-Kanade optical flow algorithm can be found at\nopencv_source_code/samples/cpp/lkdemo.cpp\n-   (Python) An example using the Lucas-Kanade optical flow algorithm can be found at\nopencv_source_code/samples/python/lk_track.py\n-   (Python) An example using the Lucas-Kanade tracker for homography matching can be found at\nopencv_source_code/samples/python/lk_homography.py"]
+ok: FUNC <void cv..calcOpticalFlowPyrLK [ARG Mat prevImg=, ARG Mat nextImg=, ARG vector_Point2f prevPts=, ARG vector_Point2f nextPts=, ARG vector_uchar status=, ARG vector_float err=, ARG Size winSize=Size(21,21), ARG int maxLevel=3, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), ARG int flags=0, ARG double minEigThreshold=1e-4]>
+
+--- Incoming ---
+[   u'cv.calcOpticalFlowFarneback',
+    u'void',
+    [],
+    [   ['Mat', u'prev', '', []],
+        ['Mat', u'next', '', []],
+        ['Mat', u'flow', '', ['/IO']],
+        [u'double', u'pyr_scale', u'', []],
+        [u'int', u'levels', u'', []],
+        [u'int', u'winsize', u'', []],
+        [u'int', u'iterations', u'', []],
+        [u'int', u'poly_n', u'', []],
+        [u'double', u'poly_sigma', u'', []],
+        [u'int', u'flags', u'', []]],
+    u'void',
+    u"@brief Computes a dense optical flow using the Gunnar Farneback's algorithm.\n\n@param prev first 8-bit single-channel input image.\n@param next second input image of the same size and the same type as prev.\n@param flow computed flow image that has the same size as prev and type CV_32FC2.\n@param pyr_scale parameter, specifying the image scale (\\<1) to build pyramids for each image;\npyr_scale=0.5 means a classical pyramid, where each next layer is twice smaller than the previous\none.\n@param levels number of pyramid layers including the initial image; levels=1 means that no extra\nlayers are created and only the original images are used.\n@param winsize averaging window size; larger values increase the algorithm robustness to image\nnoise and give more chances for fast motion detection, but yield more blurred motion field.\n@param iterations number of iterations the algorithm does at each pyramid level.\n@param poly_n size of the pixel neighborhood used to find polynomial expansion in each pixel;\nlarger values mean that the image will be approximated with smoother surfaces, yielding more\nrobust algorithm and more blurred motion field, typically poly_n =5 or 7.\n@param poly_sigma standard deviation of the Gaussian that is used to smooth derivatives used as a\nbasis for the polynomial expansion; for poly_n=5, you can set poly_sigma=1.1, for poly_n=7, a\ngood value would be poly_sigma=1.5.\n@param flags operation flags that can be a combination of the following:\n-   **OPTFLOW_USE_INITIAL_FLOW** uses the input flow as an initial flow approximation.\n-   **OPTFLOW_FARNEBACK_GAUSSIAN** uses the Gaussian \\f$\\texttt{winsize}\\times\\texttt{winsize}\\f$\nfilter instead of a box filter of the same size for optical flow estimation; usually, this\noption gives z more accurate flow than with a box filter, at the cost of lower speed;\nnormally, winsize for a Gaussian window should be set to a larger value to achieve the same\nlevel of robustness.\n\nThe function finds an optical flow for each prev pixel using the @cite Farneback2003 algorithm so that\n\n\\f[\\texttt{prev} (y,x)  \\sim \\texttt{next} ( y + \\texttt{flow} (y,x)[1],  x + \\texttt{flow} (y,x)[0])\\f]\n\n@note\n\n-   An example using the optical flow algorithm described by Gunnar Farneback can be found at\nopencv_source_code/samples/cpp/fback.cpp\n-   (Python) An example using the optical flow algorithm described by Gunnar Farneback can be\nfound at opencv_source_code/samples/python/opt_flow.py"]
+ok: FUNC <void cv..calcOpticalFlowFarneback [ARG Mat prev=, ARG Mat next=, ARG Mat flow=, ARG double pyr_scale=, ARG int levels=, ARG int winsize=, ARG int iterations=, ARG int poly_n=, ARG double poly_sigma=, ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.estimateRigidTransform',
+    u'Mat',
+    [],
+    [   ['Mat', u'src', '', []],
+        ['Mat', u'dst', '', []],
+        [u'bool', u'fullAffine', u'', []]],
+    u'Mat',
+    u'@brief Computes an optimal affine transformation between two 2D point sets.\n\n@param src First input 2D point set stored in std::vector or Mat, or an image stored in Mat.\n@param dst Second input 2D point set of the same size and the same type as A, or another image.\n@param fullAffine If true, the function finds an optimal affine transformation with no additional\nrestrictions (6 degrees of freedom). Otherwise, the class of transformations to choose from is\nlimited to combinations of translation, rotation, and uniform scaling (4 degrees of freedom).\n\nThe function finds an optimal affine transform *[A|b]* (a 2 x 3 floating-point matrix) that\napproximates best the affine transformation between:\n\n*   Two point sets\n*   Two raster images. In this case, the function first finds some features in the src image and\nfinds the corresponding features in dst image. After that, the problem is reduced to the first\ncase.\nIn case of point sets, the problem is formulated as follows: you need to find a 2x2 matrix *A* and\n2x1 vector *b* so that:\n\n\\f[[A^*|b^*] = arg  \\min _{[A|b]}  \\sum _i  \\| \\texttt{dst}[i] - A { \\texttt{src}[i]}^T - b  \\| ^2\\f]\nwhere src[i] and dst[i] are the i-th points in src and dst, respectively\n\\f$[A|b]\\f$ can be either arbitrary (when fullAffine=true ) or have a form of\n\\f[\\begin{bmatrix} a_{11} & a_{12} & b_1  \\\\ -a_{12} & a_{11} & b_2  \\end{bmatrix}\\f]\nwhen fullAffine=false.\n\n@sa\nestimateAffine2D, estimateAffinePartial2D, getAffineTransform, getPerspectiveTransform, findHomography']
+ok: FUNC <Mat cv..estimateRigidTransform [ARG Mat src=, ARG Mat dst=, ARG bool fullAffine=]>
+
+--- Incoming ---
+[u'const cv.MOTION_TRANSLATION', u'0', [], [], None, '']
+ok: CONST MOTION_TRANSLATION=0
+
+--- Incoming ---
+[u'const cv.MOTION_EUCLIDEAN', u'1', [], [], None, '']
+ok: CONST MOTION_EUCLIDEAN=1
+
+--- Incoming ---
+[u'const cv.MOTION_AFFINE', u'2', [], [], None, '']
+ok: CONST MOTION_AFFINE=2
+
+--- Incoming ---
+[u'const cv.MOTION_HOMOGRAPHY', u'3', [], [], None, '']
+ok: CONST MOTION_HOMOGRAPHY=3
+
+--- Incoming ---
+[   u'cv.findTransformECC',
+    u'double',
+    [],
+    [   ['Mat', u'templateImage', '', []],
+        ['Mat', u'inputImage', '', []],
+        ['Mat', u'warpMatrix', '', ['/IO']],
+        [u'int', u'motionType', u'MOTION_AFFINE', []],
+        [   u'TermCriteria',
+            u'criteria',
+            u'TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 50, 0.001)',
+            []],
+        ['Mat', u'inputMask', u'Mat()', []]],
+    u'double',
+    u"@brief Finds the geometric transform (warp) between two images in terms of the ECC criterion @cite EP08 .\n\n@param templateImage single-channel template image; CV_8U or CV_32F array.\n@param inputImage single-channel input image which should be warped with the final warpMatrix in\norder to provide an image similar to templateImage, same type as temlateImage.\n@param warpMatrix floating-point \\f$2\\times 3\\f$ or \\f$3\\times 3\\f$ mapping matrix (warp).\n@param motionType parameter, specifying the type of motion:\n-   **MOTION_TRANSLATION** sets a translational motion model; warpMatrix is \\f$2\\times 3\\f$ with\nthe first \\f$2\\times 2\\f$ part being the unity matrix and the rest two parameters being\nestimated.\n-   **MOTION_EUCLIDEAN** sets a Euclidean (rigid) transformation as motion model; three\nparameters are estimated; warpMatrix is \\f$2\\times 3\\f$.\n-   **MOTION_AFFINE** sets an affine motion model (DEFAULT); six parameters are estimated;\nwarpMatrix is \\f$2\\times 3\\f$.\n-   **MOTION_HOMOGRAPHY** sets a homography as a motion model; eight parameters are\nestimated;\\`warpMatrix\\` is \\f$3\\times 3\\f$.\n@param criteria parameter, specifying the termination criteria of the ECC algorithm;\ncriteria.epsilon defines the threshold of the increment in the correlation coefficient between two\niterations (a negative criteria.epsilon makes criteria.maxcount the only termination criterion).\nDefault values are shown in the declaration above.\n@param inputMask An optional mask to indicate valid values of inputImage.\n\nThe function estimates the optimum transformation (warpMatrix) with respect to ECC criterion\n(@cite EP08), that is\n\n\\f[\\texttt{warpMatrix} = \\texttt{warpMatrix} = \\arg\\max_{W} \\texttt{ECC}(\\texttt{templateImage}(x,y),\\texttt{inputImage}(x',y'))\\f]\n\nwhere\n\n\\f[\\begin{bmatrix} x' \\\\ y' \\end{bmatrix} = W \\cdot \\begin{bmatrix} x \\\\ y \\\\ 1 \\end{bmatrix}\\f]\n\n(the equation holds with homogeneous coordinates for homography). It returns the final enhanced\ncorrelation coefficient, that is the correlation coefficient between the template image and the\nfinal warped input image. When a \\f$3\\times 3\\f$ matrix is given with motionType =0, 1 or 2, the third\nrow is ignored.\n\nUnlike findHomography and estimateRigidTransform, the function findTransformECC implements an\narea-based alignment that builds on intensity similarities. In essence, the function updates the\ninitial transformation that roughly aligns the images. If this information is missing, the identity\nwarp (unity matrix) is used as an initialization. Note that if images undergo strong\ndisplacements/rotations, an initial transformation that roughly aligns the images is necessary\n(e.g., a simple euclidean/similarity transform that allows for the images showing the same image\ncontent approximately). Use inverse warping in the second image to take an image close to the first\none, i.e. use the flag WARP_INVERSE_MAP with warpAffine or warpPerspective. See also the OpenCV\nsample image_alignment.cpp that demonstrates the use of the function. Note that the function throws\nan exception if algorithm does not converges.\n\n@sa\nestimateAffine2D, estimateAffinePartial2D, findHomography"]
+ok: FUNC <double cv..findTransformECC [ARG Mat templateImage=, ARG Mat inputImage=, ARG Mat warpMatrix=, ARG int motionType=MOTION_AFFINE, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 50, 0.001), ARG Mat inputMask=Mat()]>
+
+--- Incoming ---
+[   u'class cv.KalmanFilter',
+    '',
+    [],
+    [   [u'Mat', u'statePre', '', ['/RW']],
+        [u'Mat', u'statePost', '', ['/RW']],
+        [u'Mat', u'transitionMatrix', '', ['/RW']],
+        [u'Mat', u'controlMatrix', '', ['/RW']],
+        [u'Mat', u'measurementMatrix', '', ['/RW']],
+        [u'Mat', u'processNoiseCov', '', ['/RW']],
+        [u'Mat', u'measurementNoiseCov', '', ['/RW']],
+        [u'Mat', u'errorCovPre', '', ['/RW']],
+        [u'Mat', u'gain', '', ['/RW']],
+        [u'Mat', u'errorCovPost', '', ['/RW']]],
+    None,
+    u'@brief Kalman filter class.\n\nThe class implements a standard Kalman filter <http://en.wikipedia.org/wiki/Kalman_filter>,\n@cite Welch95 . However, you can modify transitionMatrix, controlMatrix, and measurementMatrix to get\nan extended Kalman filter functionality.\n@note In C API when CvKalman\\* kalmanFilter structure is not needed anymore, it should be released\nwith cvReleaseKalman(&kalmanFilter)']
+ok: class CLASS cv::.KalmanFilter : , name: KalmanFilter, base: 
+
+--- Incoming ---
+[u'cv.KalmanFilter.KalmanFilter', '', [], [], None, '']
+ok: FUNC < cv.KalmanFilter.KalmanFilter []>
+
+--- Incoming ---
+[   u'cv.KalmanFilter.KalmanFilter',
+    '',
+    [],
+    [   [u'int', u'dynamParams', u'', []],
+        [u'int', u'measureParams', u'', []],
+        [u'int', u'controlParams', u'0', []],
+        [u'int', u'type', u'CV_32F', []]],
+    None,
+    u'@overload\n@param dynamParams Dimensionality of the state.\n@param measureParams Dimensionality of the measurement.\n@param controlParams Dimensionality of the control vector.\n@param type Type of the created matrices that should be CV_32F or CV_64F.']
+ok: FUNC < cv.KalmanFilter.KalmanFilter [ARG int dynamParams=, ARG int measureParams=, ARG int controlParams=0, ARG int type=CV_32F]>
+
+--- Incoming ---
+[   u'cv.KalmanFilter.predict',
+    u'Mat',
+    [],
+    [[u'Mat', u'control', u'Mat()', ['/C', '/Ref']]],
+    u'Mat',
+    u'@brief Computes a predicted state.\n\n@param control The optional input control']
+ok: FUNC <Mat cv.KalmanFilter.predict [ARG Mat control=Mat()]>
+
+--- Incoming ---
+[   u'cv.KalmanFilter.correct',
+    u'Mat',
+    [],
+    [[u'Mat', u'measurement', u'', ['/C', '/Ref']]],
+    u'Mat',
+    u'@brief Updates the predicted state from the measurement.\n\n@param measurement The measured system parameters']
+ok: FUNC <Mat cv.KalmanFilter.correct [ARG Mat measurement=]>
+
+--- Incoming ---
+[u'class cv.DenseOpticalFlow', ': cv::Algorithm', [], [], None, '']
+ok: class CLASS cv::.DenseOpticalFlow : Algorithm, name: DenseOpticalFlow, base: Algorithm
+
+--- Incoming ---
+[   u'cv.DenseOpticalFlow.calc',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'I0', '', []],
+        ['Mat', u'I1', '', []],
+        ['Mat', u'flow', '', ['/IO']]],
+    u'void',
+    u'@brief Calculates an optical flow.\n\n@param I0 first 8-bit single-channel input image.\n@param I1 second input image of the same size and the same type as prev.\n@param flow computed flow image that has the same size as prev and type CV_32FC2.']
+ok: FUNC <void cv.DenseOpticalFlow.calc [ARG Mat I0=, ARG Mat I1=, ARG Mat flow=]>
+
+--- Incoming ---
+[   u'cv.DenseOpticalFlow.collectGarbage',
+    u'void',
+    ['/V', '/PV'],
+    [],
+    u'void',
+    u'@brief Releases all inner buffers.']
+ok: FUNC <void cv.DenseOpticalFlow.collectGarbage []>
+
+--- Incoming ---
+[   u'class cv.SparseOpticalFlow',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief Base interface for sparse optical flow algorithms.']
+ok: class CLASS cv::.SparseOpticalFlow : Algorithm, name: SparseOpticalFlow, base: Algorithm
+
+--- Incoming ---
+[   u'cv.SparseOpticalFlow.calc',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'prevImg', '', []],
+        ['Mat', u'nextImg', '', []],
+        ['Mat', u'prevPts', '', []],
+        ['Mat', u'nextPts', '', ['/IO']],
+        ['Mat', u'status', '', ['/O']],
+        ['Mat', u'err', u'cv::Mat()', ['/O']]],
+    u'void',
+    u'@brief Calculates a sparse optical flow.\n\n@param prevImg First input image.\n@param nextImg Second input image of the same size and the same type as prevImg.\n@param prevPts Vector of 2D points for which the flow needs to be found.\n@param nextPts Output vector of 2D points containing the calculated new positions of input features in the second image.\n@param status Output status vector. Each element of the vector is set to 1 if the\nflow for the corresponding features has been found. Otherwise, it is set to 0.\n@param err Optional output vector that contains error response for each point (inverse confidence).']
+ok: FUNC <void cv.SparseOpticalFlow.calc [ARG Mat prevImg=, ARG Mat nextImg=, ARG Mat prevPts=, ARG Mat nextPts=, ARG Mat status=, ARG Mat err=cv::Mat()]>
+
+--- Incoming ---
+[   u'class cv.DualTVL1OpticalFlow',
+    u': cv::DenseOpticalFlow',
+    [],
+    [],
+    None,
+    u'@brief "Dual TV L1" Optical Flow Algorithm.\n\nThe class implements the "Dual TV L1" optical flow algorithm described in @cite Zach2007 and\n@cite Javier2012 .\nHere are important members of the class that control the algorithm, which you can set after\nconstructing the class instance:\n\n-   member double tau\nTime step of the numerical scheme.\n\n-   member double lambda\nWeight parameter for the data term, attachment parameter. This is the most relevant\nparameter, which determines the smoothness of the output. The smaller this parameter is,\nthe smoother the solutions we obtain. It depends on the range of motions of the images, so\nits value should be adapted to each image sequence.\n\n-   member double theta\nWeight parameter for (u - v)\\^2, tightness parameter. It serves as a link between the\nattachment and the regularization terms. In theory, it should have a small value in order\nto maintain both parts in correspondence. The method is stable for a large range of values\nof this parameter.\n\n-   member int nscales\nNumber of scales used to create the pyramid of images.\n\n-   member int warps\nNumber of warpings per scale. Represents the number of times that I1(x+u0) and grad(\nI1(x+u0) ) are computed per scale. This is a parameter that assures the stability of the\nmethod. It also affects the running time, so it is a compromise between speed and\naccuracy.\n\n-   member double epsilon\nStopping criterion threshold used in the numerical scheme, which is a trade-off between\nprecision and running time. A small value will yield more accurate solutions at the\nexpense of a slower convergence.\n\n-   member int iterations\nStopping criterion iterations number used in the numerical scheme.\n\nC. Zach, T. Pock and H. Bischof, "A Duality Based Approach for Realtime TV-L1 Optical Flow".\nJavier Sanchez, Enric Meinhardt-Llopis and Gabriele Facciolo. "TV-L1 Optical Flow Estimation".']
+ok: class CLASS cv::.DualTVL1OpticalFlow : DenseOpticalFlow, name: DualTVL1OpticalFlow, base: DenseOpticalFlow
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getTau',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setTau']
+ok: FUNC <double cv.DualTVL1OpticalFlow.getTau []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setTau',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getTau @see getTau']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setTau [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getLambda',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setLambda']
+ok: FUNC <double cv.DualTVL1OpticalFlow.getLambda []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setLambda',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getLambda @see getLambda']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setLambda [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getTheta',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setTheta']
+ok: FUNC <double cv.DualTVL1OpticalFlow.getTheta []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setTheta',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getTheta @see getTheta']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setTheta [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getGamma',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setGamma']
+ok: FUNC <double cv.DualTVL1OpticalFlow.getGamma []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setGamma',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getGamma @see getGamma']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setGamma [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getScalesNumber',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setScalesNumber']
+ok: FUNC <int cv.DualTVL1OpticalFlow.getScalesNumber []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setScalesNumber',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getScalesNumber @see getScalesNumber']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setScalesNumber [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getWarpingsNumber',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setWarpingsNumber']
+ok: FUNC <int cv.DualTVL1OpticalFlow.getWarpingsNumber []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setWarpingsNumber',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getWarpingsNumber @see getWarpingsNumber']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setWarpingsNumber [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getEpsilon',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setEpsilon']
+ok: FUNC <double cv.DualTVL1OpticalFlow.getEpsilon []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setEpsilon',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getEpsilon @see getEpsilon']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setEpsilon [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getInnerIterations',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setInnerIterations']
+ok: FUNC <int cv.DualTVL1OpticalFlow.getInnerIterations []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setInnerIterations',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getInnerIterations @see getInnerIterations']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setInnerIterations [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getOuterIterations',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setOuterIterations']
+ok: FUNC <int cv.DualTVL1OpticalFlow.getOuterIterations []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setOuterIterations',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getOuterIterations @see getOuterIterations']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setOuterIterations [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getUseInitialFlow',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    u'@see setUseInitialFlow']
+ok: FUNC <bool cv.DualTVL1OpticalFlow.getUseInitialFlow []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setUseInitialFlow',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'val', u'', []]],
+    u'void',
+    u'@copybrief getUseInitialFlow @see getUseInitialFlow']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setUseInitialFlow [ARG bool val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getScaleStep',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    u'@see setScaleStep']
+ok: FUNC <double cv.DualTVL1OpticalFlow.getScaleStep []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setScaleStep',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'val', u'', []]],
+    u'void',
+    u'@copybrief getScaleStep @see getScaleStep']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setScaleStep [ARG double val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.getMedianFiltering',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'@see setMedianFiltering']
+ok: FUNC <int cv.DualTVL1OpticalFlow.getMedianFiltering []>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.setMedianFiltering',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'val', u'', []]],
+    u'void',
+    u'@copybrief getMedianFiltering @see getMedianFiltering']
+ok: FUNC <void cv.DualTVL1OpticalFlow.setMedianFiltering [ARG int val=]>
+
+--- Incoming ---
+[   u'cv.DualTVL1OpticalFlow.create',
+    u'Ptr_DualTVL1OpticalFlow',
+    ['/S'],
+    [   [u'double', u'tau', u'0.25', []],
+        [u'double', u'lambda', u'0.15', []],
+        [u'double', u'theta', u'0.3', []],
+        [u'int', u'nscales', u'5', []],
+        [u'int', u'warps', u'5', []],
+        [u'double', u'epsilon', u'0.01', []],
+        [u'int', u'innnerIterations', u'30', []],
+        [u'int', u'outerIterations', u'10', []],
+        [u'double', u'scaleStep', u'0.8', []],
+        [u'double', u'gamma', u'0.0', []],
+        [u'int', u'medianFiltering', u'5', []],
+        [u'bool', u'useInitialFlow', u'false', []]],
+    u'Ptr<DualTVL1OpticalFlow>',
+    u'@brief Creates instance of cv::DualTVL1OpticalFlow']
+ok: FUNC <Ptr_DualTVL1OpticalFlow cv.DualTVL1OpticalFlow.create [ARG double tau=0.25, ARG double lambda=0.15, ARG double theta=0.3, ARG int nscales=5, ARG int warps=5, ARG double epsilon=0.01, ARG int innnerIterations=30, ARG int outerIterations=10, ARG double scaleStep=0.8, ARG double gamma=0.0, ARG int medianFiltering=5, ARG bool useInitialFlow=false]>
+
+--- Incoming ---
+[   u'cv.createOptFlow_DualTVL1',
+    u'Ptr_DualTVL1OpticalFlow',
+    [],
+    [],
+    u'Ptr<DualTVL1OpticalFlow>',
+    u'@brief Creates instance of cv::DenseOpticalFlow']
+ok: FUNC <Ptr_DualTVL1OpticalFlow cv..createOptFlow_DualTVL1 []>
+
+--- Incoming ---
+[   u'class cv.FarnebackOpticalFlow',
+    u': cv::DenseOpticalFlow',
+    [],
+    [],
+    None,
+    u"@brief Class computing a dense optical flow using the Gunnar Farneback's algorithm."]
+ok: class CLASS cv::.FarnebackOpticalFlow : DenseOpticalFlow, name: FarnebackOpticalFlow, base: DenseOpticalFlow
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getNumLevels',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.FarnebackOpticalFlow.getNumLevels []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setNumLevels',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'numLevels', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setNumLevels [ARG int numLevels=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getPyrScale',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.FarnebackOpticalFlow.getPyrScale []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setPyrScale',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'pyrScale', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setPyrScale [ARG double pyrScale=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getFastPyramids',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    '']
+ok: FUNC <bool cv.FarnebackOpticalFlow.getFastPyramids []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setFastPyramids',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'fastPyramids', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setFastPyramids [ARG bool fastPyramids=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getWinSize',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.FarnebackOpticalFlow.getWinSize []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setWinSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'winSize', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setWinSize [ARG int winSize=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getNumIters',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.FarnebackOpticalFlow.getNumIters []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setNumIters',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'numIters', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setNumIters [ARG int numIters=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getPolyN',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.FarnebackOpticalFlow.getPolyN []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setPolyN',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'polyN', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setPolyN [ARG int polyN=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getPolySigma',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.FarnebackOpticalFlow.getPolySigma []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setPolySigma',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'polySigma', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setPolySigma [ARG double polySigma=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.getFlags',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.FarnebackOpticalFlow.getFlags []>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.setFlags',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'flags', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.FarnebackOpticalFlow.setFlags [ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.FarnebackOpticalFlow.create',
+    u'Ptr_FarnebackOpticalFlow',
+    ['/S'],
+    [   [u'int', u'numLevels', u'5', []],
+        [u'double', u'pyrScale', u'0.5', []],
+        [u'bool', u'fastPyramids', u'false', []],
+        [u'int', u'winSize', u'13', []],
+        [u'int', u'numIters', u'10', []],
+        [u'int', u'polyN', u'5', []],
+        [u'double', u'polySigma', u'1.1', []],
+        [u'int', u'flags', u'0', []]],
+    u'Ptr<FarnebackOpticalFlow>',
+    '']
+ok: FUNC <Ptr_FarnebackOpticalFlow cv.FarnebackOpticalFlow.create [ARG int numLevels=5, ARG double pyrScale=0.5, ARG bool fastPyramids=false, ARG int winSize=13, ARG int numIters=10, ARG int polyN=5, ARG double polySigma=1.1, ARG int flags=0]>
+
+--- Incoming ---
+[   u'class cv.SparsePyrLKOpticalFlow',
+    u': cv::SparseOpticalFlow',
+    [],
+    [],
+    None,
+    u'@brief Class used for calculating a sparse optical flow.\n\nThe class can calculate an optical flow for a sparse feature set using the\niterative Lucas-Kanade method with pyramids.\n\n@sa calcOpticalFlowPyrLK']
+ok: class CLASS cv::.SparsePyrLKOpticalFlow : SparseOpticalFlow, name: SparsePyrLKOpticalFlow, base: SparseOpticalFlow
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.getWinSize',
+    u'Size',
+    ['/C', '/V', '/PV'],
+    [],
+    u'Size',
+    '']
+ok: FUNC <Size cv.SparsePyrLKOpticalFlow.getWinSize []>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.setWinSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'Size', u'winSize', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.SparsePyrLKOpticalFlow.setWinSize [ARG Size winSize=]>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.getMaxLevel',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.SparsePyrLKOpticalFlow.getMaxLevel []>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.setMaxLevel',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'maxLevel', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.SparsePyrLKOpticalFlow.setMaxLevel [ARG int maxLevel=]>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.getTermCriteria',
+    u'TermCriteria',
+    ['/C', '/V', '/PV'],
+    [],
+    u'TermCriteria',
+    '']
+ok: FUNC <TermCriteria cv.SparsePyrLKOpticalFlow.getTermCriteria []>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.setTermCriteria',
+    u'void',
+    ['/V', '/PV'],
+    [[u'TermCriteria', u'crit', u'', ['/Ref']]],
+    u'void',
+    '']
+ok: FUNC <void cv.SparsePyrLKOpticalFlow.setTermCriteria [ARG TermCriteria crit=]>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.getFlags',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.SparsePyrLKOpticalFlow.getFlags []>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.setFlags',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'flags', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.SparsePyrLKOpticalFlow.setFlags [ARG int flags=]>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.getMinEigThreshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.SparsePyrLKOpticalFlow.getMinEigThreshold []>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.setMinEigThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'minEigThreshold', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.SparsePyrLKOpticalFlow.setMinEigThreshold [ARG double minEigThreshold=]>
+
+--- Incoming ---
+[   u'cv.SparsePyrLKOpticalFlow.create',
+    u'Ptr_SparsePyrLKOpticalFlow',
+    ['/S'],
+    [   [u'Size', u'winSize', u'Size(21, 21)', []],
+        [u'int', u'maxLevel', u'3', []],
+        [   u'TermCriteria',
+            u'crit',
+            u'TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01)',
+            []],
+        [u'int', u'flags', u'0', []],
+        [u'double', u'minEigThreshold', u'1e-4', []]],
+    u'Ptr<SparsePyrLKOpticalFlow>',
+    '']
+ok: FUNC <Ptr_SparsePyrLKOpticalFlow cv.SparsePyrLKOpticalFlow.create [ARG Size winSize=Size(21, 21), ARG int maxLevel=3, ARG TermCriteria crit=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), ARG int flags=0, ARG double minEigThreshold=1e-4]>
+
+
+===== Header: /Users/Chao/opencv/modules/video/include/opencv2/video/video.hpp =====
+Namespaces: set(['', u'cv'])
+Ignore header: /Users/Chao/opencv/modules/video/include/opencv2/video/video.hpp
+
+
+===== Generating... =====
+CLASS cv::.DualTVL1OpticalFlow : DenseOpticalFlow
+FUNC <Ptr_DualTVL1OpticalFlow cv.DualTVL1OpticalFlow.create [ARG double tau=0.25, ARG double lambda=0.15, ARG double theta=0.3, ARG int nscales=5, ARG int warps=5, ARG double epsilon=0.01, ARG int innnerIterations=30, ARG int outerIterations=10, ARG double scaleStep=0.8, ARG double gamma=0.0, ARG int medianFiltering=5, ARG bool useInitialFlow=false]>
+java: DualTVL1OpticalFlow create(double tau, double lambda, double theta, int nscales, int warps, double epsilon, int innnerIterations, int outerIterations, double scaleStep, double gamma, int medianFiltering, boolean useInitialFlow)
+java: DualTVL1OpticalFlow create()
+FUNC <bool cv.DualTVL1OpticalFlow.getUseInitialFlow []>
+java: boolean getUseInitialFlow()
+FUNC <double cv.DualTVL1OpticalFlow.getEpsilon []>
+java: double getEpsilon()
+FUNC <double cv.DualTVL1OpticalFlow.getGamma []>
+java: double getGamma()
+FUNC <double cv.DualTVL1OpticalFlow.getLambda []>
+java: double getLambda()
+FUNC <double cv.DualTVL1OpticalFlow.getScaleStep []>
+java: double getScaleStep()
+FUNC <double cv.DualTVL1OpticalFlow.getTau []>
+java: double getTau()
+FUNC <double cv.DualTVL1OpticalFlow.getTheta []>
+java: double getTheta()
+FUNC <int cv.DualTVL1OpticalFlow.getInnerIterations []>
+java: int getInnerIterations()
+FUNC <int cv.DualTVL1OpticalFlow.getMedianFiltering []>
+java: int getMedianFiltering()
+FUNC <int cv.DualTVL1OpticalFlow.getOuterIterations []>
+java: int getOuterIterations()
+FUNC <int cv.DualTVL1OpticalFlow.getScalesNumber []>
+java: int getScalesNumber()
+FUNC <int cv.DualTVL1OpticalFlow.getWarpingsNumber []>
+java: int getWarpingsNumber()
+FUNC <void cv.DualTVL1OpticalFlow.setEpsilon [ARG double val=]>
+java: void setEpsilon(double val)
+FUNC <void cv.DualTVL1OpticalFlow.setGamma [ARG double val=]>
+java: void setGamma(double val)
+FUNC <void cv.DualTVL1OpticalFlow.setInnerIterations [ARG int val=]>
+java: void setInnerIterations(int val)
+FUNC <void cv.DualTVL1OpticalFlow.setLambda [ARG double val=]>
+java: void setLambda(double val)
+FUNC <void cv.DualTVL1OpticalFlow.setMedianFiltering [ARG int val=]>
+java: void setMedianFiltering(int val)
+FUNC <void cv.DualTVL1OpticalFlow.setOuterIterations [ARG int val=]>
+java: void setOuterIterations(int val)
+FUNC <void cv.DualTVL1OpticalFlow.setScaleStep [ARG double val=]>
+java: void setScaleStep(double val)
+FUNC <void cv.DualTVL1OpticalFlow.setScalesNumber [ARG int val=]>
+java: void setScalesNumber(int val)
+FUNC <void cv.DualTVL1OpticalFlow.setTau [ARG double val=]>
+java: void setTau(double val)
+FUNC <void cv.DualTVL1OpticalFlow.setTheta [ARG double val=]>
+java: void setTheta(double val)
+FUNC <void cv.DualTVL1OpticalFlow.setUseInitialFlow [ARG bool val=]>
+java: void setUseInitialFlow(boolean val)
+FUNC <void cv.DualTVL1OpticalFlow.setWarpingsNumber [ARG int val=]>
+java: void setWarpingsNumber(int val)
+CLASS cv::.SparsePyrLKOpticalFlow : SparseOpticalFlow
+FUNC <Ptr_SparsePyrLKOpticalFlow cv.SparsePyrLKOpticalFlow.create [ARG Size winSize=Size(21, 21), ARG int maxLevel=3, ARG TermCriteria crit=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), ARG int flags=0, ARG double minEigThreshold=1e-4]>
+java: SparsePyrLKOpticalFlow create(Size winSize, int maxLevel, TermCriteria crit, int flags, double minEigThreshold)
+java: SparsePyrLKOpticalFlow create()
+FUNC <Size cv.SparsePyrLKOpticalFlow.getWinSize []>
+java: Size getWinSize()
+FUNC <TermCriteria cv.SparsePyrLKOpticalFlow.getTermCriteria []>
+java: TermCriteria getTermCriteria()
+FUNC <double cv.SparsePyrLKOpticalFlow.getMinEigThreshold []>
+java: double getMinEigThreshold()
+FUNC <int cv.SparsePyrLKOpticalFlow.getFlags []>
+java: int getFlags()
+FUNC <int cv.SparsePyrLKOpticalFlow.getMaxLevel []>
+java: int getMaxLevel()
+FUNC <void cv.SparsePyrLKOpticalFlow.setFlags [ARG int flags=]>
+java: void setFlags(int flags)
+FUNC <void cv.SparsePyrLKOpticalFlow.setMaxLevel [ARG int maxLevel=]>
+java: void setMaxLevel(int maxLevel)
+FUNC <void cv.SparsePyrLKOpticalFlow.setMinEigThreshold [ARG double minEigThreshold=]>
+java: void setMinEigThreshold(double minEigThreshold)
+FUNC <void cv.SparsePyrLKOpticalFlow.setTermCriteria [ARG TermCriteria crit=]>
+java: void setTermCriteria(TermCriteria crit)
+FUNC <void cv.SparsePyrLKOpticalFlow.setWinSize [ARG Size winSize=]>
+java: void setWinSize(Size winSize)
+CLASS cv::.FarnebackOpticalFlow : DenseOpticalFlow
+FUNC <Ptr_FarnebackOpticalFlow cv.FarnebackOpticalFlow.create [ARG int numLevels=5, ARG double pyrScale=0.5, ARG bool fastPyramids=false, ARG int winSize=13, ARG int numIters=10, ARG int polyN=5, ARG double polySigma=1.1, ARG int flags=0]>
+java: FarnebackOpticalFlow create(int numLevels, double pyrScale, boolean fastPyramids, int winSize, int numIters, int polyN, double polySigma, int flags)
+java: FarnebackOpticalFlow create()
+FUNC <bool cv.FarnebackOpticalFlow.getFastPyramids []>
+java: boolean getFastPyramids()
+FUNC <double cv.FarnebackOpticalFlow.getPolySigma []>
+java: double getPolySigma()
+FUNC <double cv.FarnebackOpticalFlow.getPyrScale []>
+java: double getPyrScale()
+FUNC <int cv.FarnebackOpticalFlow.getFlags []>
+java: int getFlags()
+FUNC <int cv.FarnebackOpticalFlow.getNumIters []>
+java: int getNumIters()
+FUNC <int cv.FarnebackOpticalFlow.getNumLevels []>
+java: int getNumLevels()
+FUNC <int cv.FarnebackOpticalFlow.getPolyN []>
+java: int getPolyN()
+FUNC <int cv.FarnebackOpticalFlow.getWinSize []>
+java: int getWinSize()
+FUNC <void cv.FarnebackOpticalFlow.setFastPyramids [ARG bool fastPyramids=]>
+java: void setFastPyramids(boolean fastPyramids)
+FUNC <void cv.FarnebackOpticalFlow.setFlags [ARG int flags=]>
+java: void setFlags(int flags)
+FUNC <void cv.FarnebackOpticalFlow.setNumIters [ARG int numIters=]>
+java: void setNumIters(int numIters)
+FUNC <void cv.FarnebackOpticalFlow.setNumLevels [ARG int numLevels=]>
+java: void setNumLevels(int numLevels)
+FUNC <void cv.FarnebackOpticalFlow.setPolyN [ARG int polyN=]>
+java: void setPolyN(int polyN)
+FUNC <void cv.FarnebackOpticalFlow.setPolySigma [ARG double polySigma=]>
+java: void setPolySigma(double polySigma)
+FUNC <void cv.FarnebackOpticalFlow.setPyrScale [ARG double pyrScale=]>
+java: void setPyrScale(double pyrScale)
+FUNC <void cv.FarnebackOpticalFlow.setWinSize [ARG int winSize=]>
+java: void setWinSize(int winSize)
+CLASS cv::.SparseOpticalFlow : Algorithm
+FUNC <void cv.SparseOpticalFlow.calc [ARG Mat prevImg=, ARG Mat nextImg=, ARG Mat prevPts=, ARG Mat nextPts=, ARG Mat status=, ARG Mat err=cv::Mat()]>
+java: void calc(Mat prevImg, Mat nextImg, Mat prevPts, Mat nextPts, Mat status, Mat err)
+java: void calc(Mat prevImg, Mat nextImg, Mat prevPts, Mat nextPts, Mat status)
+CLASS cv::.DenseOpticalFlow : Algorithm
+FUNC <void cv.DenseOpticalFlow.calc [ARG Mat I0=, ARG Mat I1=, ARG Mat flow=]>
+java: void calc(Mat I0, Mat I1, Mat flow)
+FUNC <void cv.DenseOpticalFlow.collectGarbage []>
+java: void collectGarbage()
+CLASS cv::.BackgroundSubtractor : Algorithm
+FUNC <void cv.BackgroundSubtractor.apply [ARG Mat image=, ARG Mat fgmask=, ARG double learningRate=-1]>
+java: void apply(Mat image, Mat fgmask, double learningRate)
+java: void apply(Mat image, Mat fgmask)
+FUNC <void cv.BackgroundSubtractor.getBackgroundImage [ARG Mat backgroundImage=]>
+java: void getBackgroundImage(Mat backgroundImage)
+CLASS ::.Video : 
+[CONST CV_LKFLOW_INITIAL_GUESSES=4(manual), CONST CV_LKFLOW_GET_MIN_EIGENVALS=8(manual)]
+[CONST OPTFLOW_USE_INITIAL_FLOW=4, CONST OPTFLOW_LK_GET_MIN_EIGENVALS=8, CONST OPTFLOW_FARNEBACK_GAUSSIAN=256, CONST MOTION_TRANSLATION=0, CONST MOTION_EUCLIDEAN=1, CONST MOTION_AFFINE=2, CONST MOTION_HOMOGRAPHY=3]
+FUNC <Mat cv..estimateRigidTransform [ARG Mat src=, ARG Mat dst=, ARG bool fullAffine=]>
+java: Mat estimateRigidTransform(Mat src, Mat dst, boolean fullAffine)
+FUNC <Ptr_BackgroundSubtractorKNN cv..createBackgroundSubtractorKNN [ARG int history=500, ARG double dist2Threshold=400.0, ARG bool detectShadows=true]>
+java: BackgroundSubtractorKNN createBackgroundSubtractorKNN(int history, double dist2Threshold, boolean detectShadows)
+java: BackgroundSubtractorKNN createBackgroundSubtractorKNN()
+FUNC <Ptr_BackgroundSubtractorMOG2 cv..createBackgroundSubtractorMOG2 [ARG int history=500, ARG double varThreshold=16, ARG bool detectShadows=true]>
+java: BackgroundSubtractorMOG2 createBackgroundSubtractorMOG2(int history, double varThreshold, boolean detectShadows)
+java: BackgroundSubtractorMOG2 createBackgroundSubtractorMOG2()
+FUNC <Ptr_DualTVL1OpticalFlow cv..createOptFlow_DualTVL1 []>
+java: DualTVL1OpticalFlow createOptFlow_DualTVL1()
+FUNC <RotatedRect cv..CamShift [ARG Mat probImage=, ARG Rect window=, ARG TermCriteria criteria=]>
+java: RotatedRect CamShift(Mat probImage, Rect window, TermCriteria criteria)
+FUNC <double cv..findTransformECC [ARG Mat templateImage=, ARG Mat inputImage=, ARG Mat warpMatrix=, ARG int motionType=MOTION_AFFINE, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 50, 0.001), ARG Mat inputMask=Mat()]>
+java: double findTransformECC(Mat templateImage, Mat inputImage, Mat warpMatrix, int motionType, TermCriteria criteria, Mat inputMask)
+java: double findTransformECC(Mat templateImage, Mat inputImage, Mat warpMatrix, int motionType)
+java: double findTransformECC(Mat templateImage, Mat inputImage, Mat warpMatrix)
+FUNC <int cv..buildOpticalFlowPyramid [ARG Mat img=, ARG vector_Mat pyramid=, ARG Size winSize=, ARG int maxLevel=, ARG bool withDerivatives=true, ARG int pyrBorder=BORDER_REFLECT_101, ARG int derivBorder=BORDER_CONSTANT, ARG bool tryReuseInputImage=true]>
+java: int buildOpticalFlowPyramid(Mat img, List<Mat> pyramid, Size winSize, int maxLevel, boolean withDerivatives, int pyrBorder, int derivBorder, boolean tryReuseInputImage)
+java: int buildOpticalFlowPyramid(Mat img, List<Mat> pyramid, Size winSize, int maxLevel)
+FUNC <int cv..meanShift [ARG Mat probImage=, ARG Rect window=, ARG TermCriteria criteria=]>
+java: int meanShift(Mat probImage, Rect window, TermCriteria criteria)
+FUNC <void cv..calcOpticalFlowFarneback [ARG Mat prev=, ARG Mat next=, ARG Mat flow=, ARG double pyr_scale=, ARG int levels=, ARG int winsize=, ARG int iterations=, ARG int poly_n=, ARG double poly_sigma=, ARG int flags=]>
+java: void calcOpticalFlowFarneback(Mat prev, Mat next, Mat flow, double pyr_scale, int levels, int winsize, int iterations, int poly_n, double poly_sigma, int flags)
+FUNC <void cv..calcOpticalFlowPyrLK [ARG Mat prevImg=, ARG Mat nextImg=, ARG vector_Point2f prevPts=, ARG vector_Point2f nextPts=, ARG vector_uchar status=, ARG vector_float err=, ARG Size winSize=Size(21,21), ARG int maxLevel=3, ARG TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), ARG int flags=0, ARG double minEigThreshold=1e-4]>
+java: void calcOpticalFlowPyrLK(Mat prevImg, Mat nextImg, MatOfPoint2f prevPts, MatOfPoint2f nextPts, MatOfByte status, MatOfFloat err, Size winSize, int maxLevel, TermCriteria criteria, int flags, double minEigThreshold)
+java: void calcOpticalFlowPyrLK(Mat prevImg, Mat nextImg, MatOfPoint2f prevPts, MatOfPoint2f nextPts, MatOfByte status, MatOfFloat err, Size winSize, int maxLevel)
+java: void calcOpticalFlowPyrLK(Mat prevImg, Mat nextImg, MatOfPoint2f prevPts, MatOfPoint2f nextPts, MatOfByte status, MatOfFloat err)
+CLASS cv::.KalmanFilter : 
+FUNC < cv.KalmanFilter.KalmanFilter [ARG int dynamParams=, ARG int measureParams=, ARG int controlParams=0, ARG int type=CV_32F]>
+java:  KalmanFilter(int dynamParams, int measureParams, int controlParams, int type)
+java:  KalmanFilter(int dynamParams, int measureParams)
+FUNC < cv.KalmanFilter.KalmanFilter []>
+java:  KalmanFilter()
+FUNC <Mat cv.KalmanFilter.correct [ARG Mat measurement=]>
+java: Mat correct(Mat measurement)
+FUNC <Mat cv.KalmanFilter.predict [ARG Mat control=Mat()]>
+java: Mat predict(Mat control)
+java: Mat predict()
+FUNC <Mat cv.KalmanFilter.get_statePre []>
+java: Mat get_statePre()
+FUNC <void cv.KalmanFilter.set_statePre [ARG Mat statePre=]>
+java: void set_statePre(Mat statePre)
+FUNC <Mat cv.KalmanFilter.get_statePost []>
+java: Mat get_statePost()
+FUNC <void cv.KalmanFilter.set_statePost [ARG Mat statePost=]>
+java: void set_statePost(Mat statePost)
+FUNC <Mat cv.KalmanFilter.get_transitionMatrix []>
+java: Mat get_transitionMatrix()
+FUNC <void cv.KalmanFilter.set_transitionMatrix [ARG Mat transitionMatrix=]>
+java: void set_transitionMatrix(Mat transitionMatrix)
+FUNC <Mat cv.KalmanFilter.get_controlMatrix []>
+java: Mat get_controlMatrix()
+FUNC <void cv.KalmanFilter.set_controlMatrix [ARG Mat controlMatrix=]>
+java: void set_controlMatrix(Mat controlMatrix)
+FUNC <Mat cv.KalmanFilter.get_measurementMatrix []>
+java: Mat get_measurementMatrix()
+FUNC <void cv.KalmanFilter.set_measurementMatrix [ARG Mat measurementMatrix=]>
+java: void set_measurementMatrix(Mat measurementMatrix)
+FUNC <Mat cv.KalmanFilter.get_processNoiseCov []>
+java: Mat get_processNoiseCov()
+FUNC <void cv.KalmanFilter.set_processNoiseCov [ARG Mat processNoiseCov=]>
+java: void set_processNoiseCov(Mat processNoiseCov)
+FUNC <Mat cv.KalmanFilter.get_measurementNoiseCov []>
+java: Mat get_measurementNoiseCov()
+FUNC <void cv.KalmanFilter.set_measurementNoiseCov [ARG Mat measurementNoiseCov=]>
+java: void set_measurementNoiseCov(Mat measurementNoiseCov)
+FUNC <Mat cv.KalmanFilter.get_errorCovPre []>
+java: Mat get_errorCovPre()
+FUNC <void cv.KalmanFilter.set_errorCovPre [ARG Mat errorCovPre=]>
+java: void set_errorCovPre(Mat errorCovPre)
+FUNC <Mat cv.KalmanFilter.get_gain []>
+java: Mat get_gain()
+FUNC <void cv.KalmanFilter.set_gain [ARG Mat gain=]>
+java: void set_gain(Mat gain)
+FUNC <Mat cv.KalmanFilter.get_errorCovPost []>
+java: Mat get_errorCovPost()
+FUNC <void cv.KalmanFilter.set_errorCovPost [ARG Mat errorCovPost=]>
+java: void set_errorCovPost(Mat errorCovPost)
+CLASS cv::.BackgroundSubtractorMOG2 : BackgroundSubtractor
+FUNC <bool cv.BackgroundSubtractorMOG2.getDetectShadows []>
+java: boolean getDetectShadows()
+FUNC <double cv.BackgroundSubtractorMOG2.getBackgroundRatio []>
+java: double getBackgroundRatio()
+FUNC <double cv.BackgroundSubtractorMOG2.getComplexityReductionThreshold []>
+java: double getComplexityReductionThreshold()
+FUNC <double cv.BackgroundSubtractorMOG2.getShadowThreshold []>
+java: double getShadowThreshold()
+FUNC <double cv.BackgroundSubtractorMOG2.getVarInit []>
+java: double getVarInit()
+FUNC <double cv.BackgroundSubtractorMOG2.getVarMax []>
+java: double getVarMax()
+FUNC <double cv.BackgroundSubtractorMOG2.getVarMin []>
+java: double getVarMin()
+FUNC <double cv.BackgroundSubtractorMOG2.getVarThreshold []>
+java: double getVarThreshold()
+FUNC <double cv.BackgroundSubtractorMOG2.getVarThresholdGen []>
+java: double getVarThresholdGen()
+FUNC <int cv.BackgroundSubtractorMOG2.getHistory []>
+java: int getHistory()
+FUNC <int cv.BackgroundSubtractorMOG2.getNMixtures []>
+java: int getNMixtures()
+FUNC <int cv.BackgroundSubtractorMOG2.getShadowValue []>
+java: int getShadowValue()
+FUNC <void cv.BackgroundSubtractorMOG2.apply [ARG Mat image=, ARG Mat fgmask=, ARG double learningRate=-1]>
+java: void apply(Mat image, Mat fgmask, double learningRate)
+java: void apply(Mat image, Mat fgmask)
+FUNC <void cv.BackgroundSubtractorMOG2.setBackgroundRatio [ARG double ratio=]>
+java: void setBackgroundRatio(double ratio)
+FUNC <void cv.BackgroundSubtractorMOG2.setComplexityReductionThreshold [ARG double ct=]>
+java: void setComplexityReductionThreshold(double ct)
+FUNC <void cv.BackgroundSubtractorMOG2.setDetectShadows [ARG bool detectShadows=]>
+java: void setDetectShadows(boolean detectShadows)
+FUNC <void cv.BackgroundSubtractorMOG2.setHistory [ARG int history=]>
+java: void setHistory(int history)
+FUNC <void cv.BackgroundSubtractorMOG2.setNMixtures [ARG int nmixtures=]>
+java: void setNMixtures(int nmixtures)
+FUNC <void cv.BackgroundSubtractorMOG2.setShadowThreshold [ARG double threshold=]>
+java: void setShadowThreshold(double threshold)
+FUNC <void cv.BackgroundSubtractorMOG2.setShadowValue [ARG int value=]>
+java: void setShadowValue(int value)
+FUNC <void cv.BackgroundSubtractorMOG2.setVarInit [ARG double varInit=]>
+java: void setVarInit(double varInit)
+FUNC <void cv.BackgroundSubtractorMOG2.setVarMax [ARG double varMax=]>
+java: void setVarMax(double varMax)
+FUNC <void cv.BackgroundSubtractorMOG2.setVarMin [ARG double varMin=]>
+java: void setVarMin(double varMin)
+FUNC <void cv.BackgroundSubtractorMOG2.setVarThreshold [ARG double varThreshold=]>
+java: void setVarThreshold(double varThreshold)
+FUNC <void cv.BackgroundSubtractorMOG2.setVarThresholdGen [ARG double varThresholdGen=]>
+java: void setVarThresholdGen(double varThresholdGen)
+CLASS cv::.BackgroundSubtractorKNN : BackgroundSubtractor
+FUNC <bool cv.BackgroundSubtractorKNN.getDetectShadows []>
+java: boolean getDetectShadows()
+FUNC <double cv.BackgroundSubtractorKNN.getDist2Threshold []>
+java: double getDist2Threshold()
+FUNC <double cv.BackgroundSubtractorKNN.getShadowThreshold []>
+java: double getShadowThreshold()
+FUNC <int cv.BackgroundSubtractorKNN.getHistory []>
+java: int getHistory()
+FUNC <int cv.BackgroundSubtractorKNN.getNSamples []>
+java: int getNSamples()
+FUNC <int cv.BackgroundSubtractorKNN.getShadowValue []>
+java: int getShadowValue()
+FUNC <int cv.BackgroundSubtractorKNN.getkNNSamples []>
+java: int getkNNSamples()
+FUNC <void cv.BackgroundSubtractorKNN.setDetectShadows [ARG bool detectShadows=]>
+java: void setDetectShadows(boolean detectShadows)
+FUNC <void cv.BackgroundSubtractorKNN.setDist2Threshold [ARG double _dist2Threshold=]>
+java: void setDist2Threshold(double _dist2Threshold)
+FUNC <void cv.BackgroundSubtractorKNN.setHistory [ARG int history=]>
+java: void setHistory(int history)
+FUNC <void cv.BackgroundSubtractorKNN.setNSamples [ARG int _nN=]>
+java: void setNSamples(int _nN)
+FUNC <void cv.BackgroundSubtractorKNN.setShadowThreshold [ARG double threshold=]>
+java: void setShadowThreshold(double threshold)
+FUNC <void cv.BackgroundSubtractorKNN.setShadowValue [ARG int value=]>
+java: void setShadowValue(int value)
+FUNC <void cv.BackgroundSubtractorKNN.setkNNSamples [ARG int _nkNN=]>
+java: void setkNNSamples(int _nkNN)

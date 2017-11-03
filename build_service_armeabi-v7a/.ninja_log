@@ -1,0 +1,16 @@
+# ninja log v5
+0	13	0	platforms/android/service/engine/CMakeFiles/opencv_engine_copy_libs	f1d2cabe012fc5ed
+14	31	1509706040	platforms/android/service/engine/.build/res/drawable/icon.png	8c1c27719029947c
+15	34	1509706040	platforms/android/service/engine/.build/src/org/opencv/engine/OpenCVEngineInterface.aidl	2ccf3cc22303f05
+15	34	1509706040	platforms/android/service/engine/.build/res/values/strings.xml	f7f96bf7c915972f
+14	35	1509706040	platforms/android/service/engine/.build/src/org/opencv/engine/HardwareDetector.java	9d8873640d9e6dea
+14	36	1509706040	platforms/android/service/engine/.build/res/layout/main.xml	bd2271f7c171cd64
+16	38	1509706040	platforms/android/service/engine/.build/src/org/opencv/engine/MarketConnector.java	2064beb14629d7e6
+16	40	1509706040	platforms/android/service/engine/.build/src/org/opencv/engine/OpenCVEngineService.java	f54b494ec160460a
+16	40	1509706040	platforms/android/service/engine/.build/src/org/opencv/engine/manager/ManagerActivity.java	6c2709e159872665
+18	628	1509706041	platforms/android/service/engine/.build/build.xml	1950c1bd8067b55
+18	628	1509706041	platforms/android/service/engine/.build/local.properties	1950c1bd8067b55
+18	628	1509706041	platforms/android/service/engine/.build/proguard-project.txt	1950c1bd8067b55
+18	628	1509706041	platforms/android/service/engine/.build/project.properties	1950c1bd8067b55
+628	3982	1509706044	platforms/android/service/engine/.build/bin/opencv_engine-debug.apk	30b6ea61d5db4155
+3982	4025	1509706044	platforms/android/service/engine/CMakeFiles/opencv_engine.util	8f5c5912ef268255
