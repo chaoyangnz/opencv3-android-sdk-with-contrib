@@ -52,4 +52,4 @@ externalNativeBuild {
 
 Thanks to OpenCV, recently I developed an App sucessfully.
 
-![](https://i.imgur.com/VnT0c7U.gif)
+![](https://i.imgur.com/OLIwhHN.gif)
