@@ -133,6 +133,18 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/phase_unwrapping" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/phase_unwrapping/HistogramPhaseUnwrapping.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/phase_unwrapping" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/phase_unwrapping/PhaseUnwrapping.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/phase_unwrapping" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/phase_unwrapping/Phase_unwrapping.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/photo" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/photo/AlignExposures.java")
 endif()
 
@@ -253,6 +265,38 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/AverageHash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/BlockMeanHash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/ColorMomentHash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/ImgHashBase.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/Img_hash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/MarrHildrethHash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/PHash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/img_hash" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/img_hash/RadialVarianceHash.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/imgcodecs" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/imgcodecs/Imgcodecs.java")
 endif()
 
@@ -266,6 +310,22 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/videoio" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/videoio/Videoio.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/bioinspired" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/bioinspired/Bioinspired.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/bioinspired" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/bioinspired/Retina.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/bioinspired" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/bioinspired/RetinaFastToneMapping.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/bioinspired" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/bioinspired/TransientAreasSegmentationModule.java")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -345,6 +405,46 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/BaseOCR.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/Callback.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/ClassifierCallback.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/ERFilter.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/OCRBeamSearchDecoder.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/OCRHMMDecoder.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/OCRTesseract.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/Text.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/TextDetector.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/text" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/text/TextDetectorCNN.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/calib3d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/calib3d/Calib3d.java")
 endif()
 
@@ -358,6 +458,126 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/calib3d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/calib3d/StereoSGBM.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/structured_light" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/structured_light/GrayCodePattern.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/structured_light" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/structured_light/Params.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/structured_light" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/structured_light/SinusoidalPattern.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/structured_light" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/structured_light/StructuredLightPattern.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/structured_light" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/structured_light/Structured_light.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/MultiTracker.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/Tracker.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerBoosting.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerGOTURN.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerKCF.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerMIL.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerMOSSE.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerMedianFlow.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/TrackerTLD.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/tracking" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/tracking/Tracking.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/BoostDesc.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/BriefDescriptorExtractor.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/DAISY.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/FREAK.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/HarrisLaplaceFeatureDetector.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/LATCH.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/LUCID.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/MSDDetector.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/PCTSignatures.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/PCTSignaturesSQFD.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/SIFT.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/SURF.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/StarDetector.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/VGG.java")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/sdk/java/src/org/opencv/xfeatures2d" TYPE FILE FILES "/Users/Chao/opencv/build/o4a/src/org/opencv/xfeatures2d/Xfeatures2d.java")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "java" OR NOT CMAKE_INSTALL_COMPONENT)

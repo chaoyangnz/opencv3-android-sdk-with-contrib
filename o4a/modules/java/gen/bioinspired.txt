@@ -1,0 +1,45 @@
+PORTED FUNCs LIST (32 of 32):
+
+static Ptr_RetinaFastToneMapping create(Size inputSize)
+ void applyFastToneMapping(Mat inputImage, Mat& outputToneMappedImage)
+ void setup(float photoreceptorsNeighborhoodRadius = 3.f, float ganglioncellsNeighborhoodRadius = 1.f, float meanLuminanceModulatorK = 1.f)
+static Ptr_TransientAreasSegmentationModule create(Size inputSize)
+ Size getSize()
+ String printSetup()
+ void clearAllBuffers()
+ void getSegmentationPicture(Mat& transientAreas)
+ void run(Mat inputToSegment, int channelIndex = 0)
+ void setup(String segmentationParameterFile = "", bool applyDefaultSetupOnFailure = true)
+ void write(String fs)
+ Mat getMagnoRAW()
+ Mat getParvoRAW()
+static Ptr_Retina create(Size inputSize, bool colorMode, int colorSamplingMethod = RETINA_COLOR_BAYER, bool useRetinaLogSampling = false, float reductionFactor = 1.0f, float samplingStrenght = 10.0f)
+static Ptr_Retina create(Size inputSize)
+ Size getInputSize()
+ Size getOutputSize()
+ String printSetup()
+ void activateContoursProcessing(bool activate)
+ void activateMovingContoursProcessing(bool activate)
+ void applyFastToneMapping(Mat inputImage, Mat& outputToneMappedImage)
+ void clearBuffers()
+ void getMagno(Mat& retinaOutput_magno)
+ void getMagnoRAW(Mat& retinaOutput_magno)
+ void getParvo(Mat& retinaOutput_parvo)
+ void getParvoRAW(Mat& retinaOutput_parvo)
+ void run(Mat inputImage)
+ void setColorSaturation(bool saturateColors = true, float colorSaturationValue = 4.0f)
+ void setup(String retinaParameterFile = "", bool applyDefaultSetupOnFailure = true)
+ void setupIPLMagnoChannel(bool normaliseOutput = true, float parasolCells_beta = 0.f, float parasolCells_tau = 0.f, float parasolCells_k = 7.f, float amacrinCellsTemporalCutFrequency = 1.2f, float V0CompressionParameter = 0.95f, float localAdaptintegration_tau = 0.f, float localAdaptintegration_k = 7.f)
+ void setupOPLandIPLParvoChannel(bool colorMode = true, bool normaliseOutput = true, float photoreceptorsLocalAdaptationSensitivity = 0.7f, float photoreceptorsTemporalConstant = 0.5f, float photoreceptorsSpatialConstant = 0.53f, float horizontalCellsGain = 0.f, float HcellsTemporalConstant = 1.f, float HcellsSpatialConstant = 7.f, float ganglionCellsSensitivity = 0.7f)
+ void write(String fs)
+
+SKIPPED FUNCs LIST (0 of 32):
+
+
+0 def args - 24 funcs
+1 def args - 1 funcs
+2 def args - 3 funcs
+3 def args - 1 funcs
+4 def args - 1 funcs
+8 def args - 1 funcs
+9 def args - 1 funcs

@@ -1,0 +1,27 @@
+# Target labels
+ Extra
+ opencv_bgsegm
+ Module
+# Source files and their labels
+/Users/Chao/opencv_contrib/modules/bgsegm/include/opencv2/bgsegm.hpp
+ Extra
+ opencv_bgsegm
+ Module
+/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_gaussmix.cpp
+ Extra
+ opencv_bgsegm
+ Module
+/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_gmg.cpp
+ Extra
+ opencv_bgsegm
+ Module
+/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_subcnt.cpp
+ Extra
+ opencv_bgsegm
+ Module
+/Users/Chao/opencv_contrib/modules/bgsegm/src/precomp.hpp
+ Extra
+ opencv_bgsegm
+ Module
+/Users/Chao/opencv/build/o4a/cvconfig.h
+/Users/Chao/opencv/build/o4a/opencv2/opencv_modules.hpp

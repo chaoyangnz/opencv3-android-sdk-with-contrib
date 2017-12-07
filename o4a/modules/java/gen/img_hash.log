@@ -1,0 +1,379 @@
+ok: class CLASS ::.Img_hash : , name: Img_hash, base: 
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash.hpp =====
+Namespaces: set([])
+Ignore header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash.hpp
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/average_hash.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[   u'class cv.img_hash.AverageHash',
+    u': cv::img_hash::ImgHashBase',
+    [],
+    [],
+    None,
+    u'@brief Computes average hash value of the input image\n\nThis is a fast image hashing algorithm, but only work on simple case. For more details, please\nrefer to @cite lookslikeit']
+ok: class CLASS cv.img_hash::.AverageHash : ImgHashBase, name: AverageHash, base: ImgHashBase
+
+--- Incoming ---
+[   u'cv.img_hash.AverageHash.create',
+    u'Ptr_AverageHash',
+    ['/S'],
+    [],
+    u'Ptr<AverageHash>',
+    '']
+ok: FUNC <Ptr_AverageHash cv.img_hash.AverageHash.create []>
+
+--- Incoming ---
+[   u'cv.img_hash.averageHash',
+    u'void',
+    [],
+    [['Mat', u'inputArr', '', []], ['Mat', u'outputArr', '', ['/O']]],
+    u'void',
+    u'@brief Calculates img_hash::AverageHash in one call\n@param inputArr input image want to compute hash value, type should be CV_8UC4, CV_8UC3 or CV_8UC1.\n@param outputArr Hash value of input, it will contain 16 hex decimal number, return type is CV_8U']
+ok: FUNC <void cv.img_hash..averageHash [ARG Mat inputArr=, ARG Mat outputArr=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/block_mean_hash.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[u'const cv.img_hash.BLOCK_MEAN_HASH_MODE_0', u'0', [], [], None, '']
+ok: CONST BLOCK_MEAN_HASH_MODE_0=0
+
+--- Incoming ---
+[u'const cv.img_hash.BLOCK_MEAN_HASH_MODE_1', u'1', [], [], None, '']
+ok: CONST BLOCK_MEAN_HASH_MODE_1=1
+
+--- Incoming ---
+[   u'class cv.img_hash.BlockMeanHash',
+    u': cv::img_hash::ImgHashBase',
+    [],
+    [],
+    None,
+    u'@brief Image hash based on block mean.\n\nSee @cite zauner2010implementation for details.']
+ok: class CLASS cv.img_hash::.BlockMeanHash : ImgHashBase, name: BlockMeanHash, base: ImgHashBase
+
+--- Incoming ---
+[   u'cv.img_hash.BlockMeanHash.setMode',
+    u'void',
+    [],
+    [[u'int', u'mode', u'', []]],
+    u'void',
+    u'@brief Create BlockMeanHash object\n@param mode']
+ok: FUNC <void cv.img_hash.BlockMeanHash.setMode [ARG int mode=]>
+
+--- Incoming ---
+[   u'cv.img_hash.BlockMeanHash.getMean',
+    u'vector_double',
+    ['/C'],
+    [],
+    u'std::vector<double>',
+    '']
+ok: FUNC <vector_double cv.img_hash.BlockMeanHash.getMean []>
+
+--- Incoming ---
+[   u'cv.img_hash.BlockMeanHash.create',
+    u'Ptr_BlockMeanHash',
+    ['/S'],
+    [[u'int', u'mode', u'BLOCK_MEAN_HASH_MODE_0', []]],
+    u'Ptr<BlockMeanHash>',
+    '']
+ok: FUNC <Ptr_BlockMeanHash cv.img_hash.BlockMeanHash.create [ARG int mode=BLOCK_MEAN_HASH_MODE_0]>
+
+--- Incoming ---
+[   u'cv.img_hash.blockMeanHash',
+    u'void',
+    [],
+    [   ['Mat', u'inputArr', '', []],
+        ['Mat', u'outputArr', '', ['/O']],
+        [u'int', u'mode', u'BLOCK_MEAN_HASH_MODE_0', []]],
+    u'void',
+    u'@brief Computes block mean hash of the input image\n@param inputArr input image want to compute hash value, type should be CV_8UC4, CV_8UC3 or CV_8UC1.\n@param outputArr Hash value of input, it will contain 16 hex decimal number, return type is CV_8U\n@param mode']
+ok: FUNC <void cv.img_hash..blockMeanHash [ARG Mat inputArr=, ARG Mat outputArr=, ARG int mode=BLOCK_MEAN_HASH_MODE_0]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/color_moment_hash.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[   u'class cv.img_hash.ColorMomentHash',
+    u': cv::img_hash::ImgHashBase',
+    [],
+    [],
+    None,
+    u'@brief Image hash based on color moments.\n\nSee @cite tang2012perceptual for details.']
+ok: class CLASS cv.img_hash::.ColorMomentHash : ImgHashBase, name: ColorMomentHash, base: ImgHashBase
+
+--- Incoming ---
+[   u'cv.img_hash.ColorMomentHash.create',
+    u'Ptr_ColorMomentHash',
+    ['/S'],
+    [],
+    u'Ptr<ColorMomentHash>',
+    '']
+ok: FUNC <Ptr_ColorMomentHash cv.img_hash.ColorMomentHash.create []>
+
+--- Incoming ---
+[   u'cv.img_hash.colorMomentHash',
+    u'void',
+    [],
+    [['Mat', u'inputArr', '', []], ['Mat', u'outputArr', '', ['/O']]],
+    u'void',
+    u'@brief Computes color moment hash of the input, the algorithm\nis come from the paper "Perceptual  Hashing  for  Color  Images\nUsing  Invariant Moments"\n@param inputArr input image want to compute hash value,\ntype should be CV_8UC4, CV_8UC3 or CV_8UC1.\n@param outputArr 42 hash values with type CV_64F(double)']
+ok: FUNC <void cv.img_hash..colorMomentHash [ARG Mat inputArr=, ARG Mat outputArr=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/img_hash_base.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[   u'class cv.img_hash.ImgHashBase',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief The base class for image hash algorithms']
+ok: class CLASS cv.img_hash::.ImgHashBase : Algorithm, name: ImgHashBase, base: Algorithm
+
+--- Incoming ---
+[   u'cv.img_hash.ImgHashBase.compute',
+    u'void',
+    [],
+    [['Mat', u'inputArr', '', []], ['Mat', u'outputArr', '', ['/O']]],
+    u'void',
+    u'@brief Computes hash of the input image\n@param inputArr input image want to compute hash value\n@param outputArr hash of the image']
+ok: FUNC <void cv.img_hash.ImgHashBase.compute [ARG Mat inputArr=, ARG Mat outputArr=]>
+
+--- Incoming ---
+[   u'cv.img_hash.ImgHashBase.compare',
+    u'double',
+    ['/C'],
+    [['Mat', u'hashOne', '', []], ['Mat', u'hashTwo', '', []]],
+    u'double',
+    u'@brief Compare the hash value between inOne and inTwo\n@param hashOne Hash value one\n@param hashTwo Hash value two\n@return value indicate similarity between inOne and inTwo, the meaning\nof the value vary from algorithms to algorithms']
+ok: FUNC <double cv.img_hash.ImgHashBase.compare [ARG Mat hashOne=, ARG Mat hashTwo=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/marr_hildreth_hash.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[   u'class cv.img_hash.MarrHildrethHash',
+    u': cv::img_hash::ImgHashBase',
+    [],
+    [],
+    None,
+    u'@brief Marr-Hildreth Operator Based Hash, slowest but more discriminative.\n\nSee @cite zauner2010implementation for details.']
+ok: class CLASS cv.img_hash::.MarrHildrethHash : ImgHashBase, name: MarrHildrethHash, base: ImgHashBase
+
+--- Incoming ---
+[   u'cv.img_hash.MarrHildrethHash.getAlpha',
+    u'float',
+    ['/C'],
+    [],
+    u'float',
+    u'* @brief self explain']
+ok: FUNC <float cv.img_hash.MarrHildrethHash.getAlpha []>
+
+--- Incoming ---
+[   u'cv.img_hash.MarrHildrethHash.getScale',
+    u'float',
+    ['/C'],
+    [],
+    u'float',
+    u'* @brief self explain']
+ok: FUNC <float cv.img_hash.MarrHildrethHash.getScale []>
+
+--- Incoming ---
+[   u'cv.img_hash.MarrHildrethHash.setKernelParam',
+    u'void',
+    [],
+    [[u'float', u'alpha', u'', []], [u'float', u'scale', u'', []]],
+    u'void',
+    u'@brief Set Mh kernel parameters\n@param alpha int scale factor for marr wavelet (default=2).\n@param scale int level of scale factor (default = 1)']
+ok: FUNC <void cv.img_hash.MarrHildrethHash.setKernelParam [ARG float alpha=, ARG float scale=]>
+
+--- Incoming ---
+[   u'cv.img_hash.MarrHildrethHash.create',
+    u'Ptr_MarrHildrethHash',
+    ['/S'],
+    [[u'float', u'alpha', u'2.0f', []], [u'float', u'scale', u'1.0f', []]],
+    u'Ptr<MarrHildrethHash>',
+    u'@param alpha int scale factor for marr wavelet (default=2).\n@param scale int level of scale factor (default = 1)']
+ok: FUNC <Ptr_MarrHildrethHash cv.img_hash.MarrHildrethHash.create [ARG float alpha=2.0f, ARG float scale=1.0f]>
+
+--- Incoming ---
+[   u'cv.img_hash.marrHildrethHash',
+    u'void',
+    [],
+    [   ['Mat', u'inputArr', '', []],
+        ['Mat', u'outputArr', '', ['/O']],
+        [u'float', u'alpha', u'2.0f', []],
+        [u'float', u'scale', u'1.0f', []]],
+    u'void',
+    u'@brief Computes average hash value of the input image\n@param inputArr input image want to compute hash value,\ntype should be CV_8UC4, CV_8UC3, CV_8UC1.\n@param outputArr Hash value of input, it will contain 16 hex\ndecimal number, return type is CV_8U\n@param alpha int scale factor for marr wavelet (default=2).\n@param scale int level of scale factor (default = 1)']
+ok: FUNC <void cv.img_hash..marrHildrethHash [ARG Mat inputArr=, ARG Mat outputArr=, ARG float alpha=2.0f, ARG float scale=1.0f]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/phash.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[   u'class cv.img_hash.PHash',
+    u': cv::img_hash::ImgHashBase',
+    [],
+    [],
+    None,
+    u'@brief pHash\n\nSlower than average_hash, but tolerant of minor modifications\n\nThis algorithm can combat more variation than averageHash, for more details please refer to @cite lookslikeit']
+ok: class CLASS cv.img_hash::.PHash : ImgHashBase, name: PHash, base: ImgHashBase
+
+--- Incoming ---
+[u'cv.img_hash.PHash.create', u'Ptr_PHash', ['/S'], [], u'Ptr<PHash>', '']
+ok: FUNC <Ptr_PHash cv.img_hash.PHash.create []>
+
+--- Incoming ---
+[   u'cv.img_hash.pHash',
+    u'void',
+    [],
+    [['Mat', u'inputArr', '', []], ['Mat', u'outputArr', '', ['/O']]],
+    u'void',
+    u'@brief Computes pHash value of the input image\n@param inputArr input image want to compute hash value,\ntype should be CV_8UC4, CV_8UC3, CV_8UC1.\n@param outputArr Hash value of input, it will contain 8 uchar value']
+ok: FUNC <void cv.img_hash..pHash [ARG Mat inputArr=, ARG Mat outputArr=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/radial_variance_hash.hpp =====
+Namespaces: set([u'cv.img_hash', u'cv'])
+
+--- Incoming ---
+[   u'class cv.img_hash.RadialVarianceHash',
+    u': cv::img_hash::ImgHashBase',
+    [],
+    [],
+    None,
+    u'@brief Image hash based on Radon transform.\n\nSee @cite tang2012perceptual for details.']
+ok: class CLASS cv.img_hash::.RadialVarianceHash : ImgHashBase, name: RadialVarianceHash, base: ImgHashBase
+
+--- Incoming ---
+[   u'cv.img_hash.RadialVarianceHash.create',
+    u'Ptr_RadialVarianceHash',
+    ['/S'],
+    [[u'double', u'sigma', u'1', []], [u'int', u'numOfAngleLine', u'180', []]],
+    u'Ptr<RadialVarianceHash>',
+    '']
+ok: FUNC <Ptr_RadialVarianceHash cv.img_hash.RadialVarianceHash.create [ARG double sigma=1, ARG int numOfAngleLine=180]>
+
+--- Incoming ---
+[   u'cv.img_hash.RadialVarianceHash.getNumOfAngleLine',
+    u'int',
+    ['/C'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.img_hash.RadialVarianceHash.getNumOfAngleLine []>
+
+--- Incoming ---
+[   u'cv.img_hash.RadialVarianceHash.getSigma',
+    u'double',
+    ['/C'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.img_hash.RadialVarianceHash.getSigma []>
+
+--- Incoming ---
+[   u'cv.img_hash.RadialVarianceHash.setNumOfAngleLine',
+    u'void',
+    [],
+    [[u'int', u'value', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.img_hash.RadialVarianceHash.setNumOfAngleLine [ARG int value=]>
+
+--- Incoming ---
+[   u'cv.img_hash.RadialVarianceHash.setSigma',
+    u'void',
+    [],
+    [[u'double', u'value', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.img_hash.RadialVarianceHash.setSigma [ARG double value=]>
+
+--- Incoming ---
+[   u'cv.img_hash.radialVarianceHash',
+    u'void',
+    [],
+    [   ['Mat', u'inputArr', '', []],
+        ['Mat', u'outputArr', '', ['/O']],
+        [u'double', u'sigma', u'1', []],
+        [u'int', u'numOfAngleLine', u'180', []]],
+    u'void',
+    u'@brief Computes radial variance hash of the input image\n@param inputArr input image want to compute hash value,\ntype should be CV_8UC4, CV_8UC3, CV_8UC1.\n@param outputArr Hash value of input\n@param sigma Gaussian kernel standard deviation\n@param numOfAngleLine The number of angles to consider']
+ok: FUNC <void cv.img_hash..radialVarianceHash [ARG Mat inputArr=, ARG Mat outputArr=, ARG double sigma=1, ARG int numOfAngleLine=180]>
+
+
+===== Generating... =====
+CLASS cv.img_hash::.ColorMomentHash : ImgHashBase
+FUNC <Ptr_ColorMomentHash cv.img_hash.ColorMomentHash.create []>
+java: ColorMomentHash create()
+CLASS cv.img_hash::.AverageHash : ImgHashBase
+FUNC <Ptr_AverageHash cv.img_hash.AverageHash.create []>
+java: AverageHash create()
+CLASS cv.img_hash::.MarrHildrethHash : ImgHashBase
+FUNC <Ptr_MarrHildrethHash cv.img_hash.MarrHildrethHash.create [ARG float alpha=2.0f, ARG float scale=1.0f]>
+java: MarrHildrethHash create(float alpha, float scale)
+java: MarrHildrethHash create()
+FUNC <float cv.img_hash.MarrHildrethHash.getAlpha []>
+java: float getAlpha()
+FUNC <float cv.img_hash.MarrHildrethHash.getScale []>
+java: float getScale()
+FUNC <void cv.img_hash.MarrHildrethHash.setKernelParam [ARG float alpha=, ARG float scale=]>
+java: void setKernelParam(float alpha, float scale)
+CLASS cv.img_hash::.ImgHashBase : Algorithm
+FUNC <double cv.img_hash.ImgHashBase.compare [ARG Mat hashOne=, ARG Mat hashTwo=]>
+java: double compare(Mat hashOne, Mat hashTwo)
+FUNC <void cv.img_hash.ImgHashBase.compute [ARG Mat inputArr=, ARG Mat outputArr=]>
+java: void compute(Mat inputArr, Mat outputArr)
+CLASS cv.img_hash::.BlockMeanHash : ImgHashBase
+FUNC <Ptr_BlockMeanHash cv.img_hash.BlockMeanHash.create [ARG int mode=BLOCK_MEAN_HASH_MODE_0]>
+java: BlockMeanHash create(int mode)
+java: BlockMeanHash create()
+FUNC <vector_double cv.img_hash.BlockMeanHash.getMean []>
+java: MatOfDouble getMean()
+FUNC <void cv.img_hash.BlockMeanHash.setMode [ARG int mode=]>
+java: void setMode(int mode)
+CLASS cv.img_hash::.RadialVarianceHash : ImgHashBase
+FUNC <Ptr_RadialVarianceHash cv.img_hash.RadialVarianceHash.create [ARG double sigma=1, ARG int numOfAngleLine=180]>
+java: RadialVarianceHash create(double sigma, int numOfAngleLine)
+java: RadialVarianceHash create()
+FUNC <double cv.img_hash.RadialVarianceHash.getSigma []>
+java: double getSigma()
+FUNC <int cv.img_hash.RadialVarianceHash.getNumOfAngleLine []>
+java: int getNumOfAngleLine()
+FUNC <void cv.img_hash.RadialVarianceHash.setNumOfAngleLine [ARG int value=]>
+java: void setNumOfAngleLine(int value)
+FUNC <void cv.img_hash.RadialVarianceHash.setSigma [ARG double value=]>
+java: void setSigma(double value)
+CLASS ::.Img_hash : 
+[CONST BLOCK_MEAN_HASH_MODE_0=0, CONST BLOCK_MEAN_HASH_MODE_1=1]
+FUNC <void cv.img_hash..averageHash [ARG Mat inputArr=, ARG Mat outputArr=]>
+java: void averageHash(Mat inputArr, Mat outputArr)
+FUNC <void cv.img_hash..blockMeanHash [ARG Mat inputArr=, ARG Mat outputArr=, ARG int mode=BLOCK_MEAN_HASH_MODE_0]>
+java: void blockMeanHash(Mat inputArr, Mat outputArr, int mode)
+java: void blockMeanHash(Mat inputArr, Mat outputArr)
+FUNC <void cv.img_hash..colorMomentHash [ARG Mat inputArr=, ARG Mat outputArr=]>
+java: void colorMomentHash(Mat inputArr, Mat outputArr)
+FUNC <void cv.img_hash..marrHildrethHash [ARG Mat inputArr=, ARG Mat outputArr=, ARG float alpha=2.0f, ARG float scale=1.0f]>
+java: void marrHildrethHash(Mat inputArr, Mat outputArr, float alpha, float scale)
+java: void marrHildrethHash(Mat inputArr, Mat outputArr)
+FUNC <void cv.img_hash..pHash [ARG Mat inputArr=, ARG Mat outputArr=]>
+java: void pHash(Mat inputArr, Mat outputArr)
+FUNC <void cv.img_hash..radialVarianceHash [ARG Mat inputArr=, ARG Mat outputArr=, ARG double sigma=1, ARG int numOfAngleLine=180]>
+java: void radialVarianceHash(Mat inputArr, Mat outputArr, double sigma, int numOfAngleLine)
+java: void radialVarianceHash(Mat inputArr, Mat outputArr)
+CLASS cv.img_hash::.PHash : ImgHashBase
+FUNC <Ptr_PHash cv.img_hash.PHash.create []>
+java: PHash create()

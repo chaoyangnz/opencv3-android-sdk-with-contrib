@@ -137,14 +137,32 @@ BUILD_opencv_apps:BOOL=OFF
 //Include opencv_aruco module into the OpenCV build
 BUILD_opencv_aruco:BOOL=ON
 
+//Include opencv_bgsegm module into the OpenCV build
+BUILD_opencv_bgsegm:BOOL=ON
+
+//Include opencv_bioinspired module into the OpenCV build
+BUILD_opencv_bioinspired:BOOL=ON
+
 //Include opencv_calib3d module into the OpenCV build
 BUILD_opencv_calib3d:BOOL=ON
+
+//Include opencv_ccalib module into the OpenCV build
+BUILD_opencv_ccalib:BOOL=ON
 
 //Include opencv_core module into the OpenCV build
 BUILD_opencv_core:BOOL=ON
 
+//Include opencv_datasets module into the OpenCV build
+BUILD_opencv_datasets:BOOL=ON
+
 //Include opencv_dnn module into the OpenCV build
 BUILD_opencv_dnn:BOOL=ON
+
+//Include opencv_dpm module into the OpenCV build
+BUILD_opencv_dpm:BOOL=ON
+
+//Include opencv_face module into the OpenCV build
+BUILD_opencv_face:BOOL=ON
 
 //Include opencv_features2d module into the OpenCV build
 BUILD_opencv_features2d:BOOL=ON
@@ -152,8 +170,14 @@ BUILD_opencv_features2d:BOOL=ON
 //Include opencv_flann module into the OpenCV build
 BUILD_opencv_flann:BOOL=ON
 
+//Include opencv_fuzzy module into the OpenCV build
+BUILD_opencv_fuzzy:BOOL=ON
+
 //Include opencv_highgui module into the OpenCV build
 BUILD_opencv_highgui:BOOL=ON
+
+//Include opencv_img_hash module into the OpenCV build
+BUILD_opencv_img_hash:BOOL=ON
 
 //Include opencv_imgcodecs module into the OpenCV build
 BUILD_opencv_imgcodecs:BOOL=ON
@@ -167,23 +191,59 @@ BUILD_opencv_java:BOOL=ON
 //Include opencv_js module into the OpenCV build
 BUILD_opencv_js:BOOL=OFF
 
+//Include opencv_line_descriptor module into the OpenCV build
+BUILD_opencv_line_descriptor:BOOL=ON
+
 //Include opencv_ml module into the OpenCV build
 BUILD_opencv_ml:BOOL=ON
 
 //Include opencv_objdetect module into the OpenCV build
 BUILD_opencv_objdetect:BOOL=ON
 
+//Include opencv_optflow module into the OpenCV build
+BUILD_opencv_optflow:BOOL=ON
+
+//Include opencv_phase_unwrapping module into the OpenCV build
+BUILD_opencv_phase_unwrapping:BOOL=ON
+
 //Include opencv_photo module into the OpenCV build
 BUILD_opencv_photo:BOOL=ON
+
+//Include opencv_plot module into the OpenCV build
+BUILD_opencv_plot:BOOL=ON
+
+//Include opencv_reg module into the OpenCV build
+BUILD_opencv_reg:BOOL=ON
+
+//Include opencv_rgbd module into the OpenCV build
+BUILD_opencv_rgbd:BOOL=ON
+
+//Include opencv_saliency module into the OpenCV build
+BUILD_opencv_saliency:BOOL=ON
 
 //Include opencv_shape module into the OpenCV build
 BUILD_opencv_shape:BOOL=ON
 
+//Include opencv_stereo module into the OpenCV build
+BUILD_opencv_stereo:BOOL=ON
+
 //Include opencv_stitching module into the OpenCV build
 BUILD_opencv_stitching:BOOL=ON
 
+//Include opencv_structured_light module into the OpenCV build
+BUILD_opencv_structured_light:BOOL=ON
+
 //Include opencv_superres module into the OpenCV build
 BUILD_opencv_superres:BOOL=ON
+
+//Include opencv_surface_matching module into the OpenCV build
+BUILD_opencv_surface_matching:BOOL=ON
+
+//Include opencv_text module into the OpenCV build
+BUILD_opencv_text:BOOL=ON
+
+//Include opencv_tracking module into the OpenCV build
+BUILD_opencv_tracking:BOOL=ON
 
 //Include opencv_video module into the OpenCV build
 BUILD_opencv_video:BOOL=ON
@@ -196,6 +256,18 @@ BUILD_opencv_videostab:BOOL=ON
 
 //Include opencv_world module into the OpenCV build
 BUILD_opencv_world:BOOL=OFF
+
+//Include opencv_xfeatures2d module into the OpenCV build
+BUILD_opencv_xfeatures2d:BOOL=ON
+
+//Include opencv_ximgproc module into the OpenCV build
+BUILD_opencv_ximgproc:BOOL=ON
+
+//Include opencv_xobjdetect module into the OpenCV build
+BUILD_opencv_xobjdetect:BOOL=ON
+
+//Include opencv_xphoto module into the OpenCV build
+BUILD_opencv_xphoto:BOOL=ON
 
 //Path to a program.
 CCACHE_PROGRAM:FILEPATH=CCACHE_PROGRAM-NOTFOUND
@@ -440,6 +512,15 @@ CV_ENABLE_INTRINSICS:BOOL=ON
 //Enable OpenCV code trace
 CV_TRACE:BOOL=ON
 
+//Path to a file.
+Caffe_INCLUDE_DIR:PATH=Caffe_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+Caffe_LIBS:FILEPATH=Caffe_LIBS-NOTFOUND
+
+//The directory containing a CMake configuration file for Ceres.
+Ceres_DIR:PATH=Ceres_DIR-NOTFOUND
+
 //The path to Eigen3/Eigen2 headers
 EIGEN_INCLUDE_PATH:PATH=EIGEN_INCLUDE_PATH-NOTFOUND
 
@@ -486,8 +567,20 @@ EXECUTABLE_OUTPUT_PATH:PATH=/Users/Chao/opencv/build/o4a/bin
 //Generate XML file for abi_compliance_checker tool
 GENERATE_ABI_DESCRIPTOR:BOOL=OFF
 
+//Path to a file.
+GFLAGS_INCLUDE_DIR:PATH=GFLAGS_INCLUDE_DIR-NOTFOUND
+
+//gflags namespace (google or gflags)
+GFLAGS_NAMESPACE:STRING=
+
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
+//Path to a file.
+GLOG_INCLUDE_DIR:PATH=GLOG_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+Glog_LIBS:FILEPATH=Glog_LIBS-NOTFOUND
 
 //Install Android examples
 INSTALL_ANDROID_EXAMPLES:BOOL=ON
@@ -572,7 +665,7 @@ PYTHON2_NUMPY_INCLUDE_DIRS:PATH=
 PYTHON2_PACKAGES_PATH:PATH=
 
 //Path to Python interpretor
-PYTHON3_EXECUTABLE:FILEPATH=/Users/Chao/anaconda3/bin/python3
+PYTHON3_EXECUTABLE:FILEPATH=
 
 //Python include dir
 PYTHON3_INCLUDE_DIR:PATH=
@@ -592,8 +685,14 @@ PYTHON3_NUMPY_INCLUDE_DIRS:PATH=
 //Where to install the python packages.
 PYTHON3_PACKAGES_PATH:PATH=
 
+//Path to a program.
+PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
+
 //Path to a file.
 TBB_VER_FILE:FILEPATH=/Users/Chao/opencv/build/o4a/3rdparty/tbb/tbb-2018_U1/include/tbb/tbb_stddef.h
+
+//Path to a file.
+TINYDNN_INCLUDE_DIR:PATH=TINYDNN_INCLUDE_DIR-NOTFOUND
 
 //Path to a file.
 WEBP_INCLUDE_DIR:PATH=WEBP_INCLUDE_DIR-NOTFOUND
@@ -734,6 +833,9 @@ example-tutorial-3-cameracontrol_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/
 //Value Computed by CMake
 example-tutorial-3-cameracontrol_SOURCE_DIR:STATIC=/Users/Chao/opencv/samples/android/tutorial-3-cameracontrol
 
+//The directory containing a CMake configuration file for gflags.
+gflags_DIR:PATH=gflags_DIR-NOTFOUND
+
 //Dependencies for target
 libcpufeatures_LIB_DEPENDS:STATIC=
 
@@ -804,6 +906,24 @@ opencv_aruco_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general
 opencv_aruco_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/aruco
 
 //Value Computed by CMake
+opencv_bgsegm_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/bgsegm
+
+//Dependencies for the target
+opencv_bgsegm_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;opencv_video;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_bgsegm_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/bgsegm
+
+//Value Computed by CMake
+opencv_bioinspired_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/bioinspired
+
+//Dependencies for the target
+opencv_bioinspired_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_bioinspired_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/bioinspired
+
+//Value Computed by CMake
 opencv_calib3d_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/calib3d
 
 //Dependencies for the target
@@ -813,6 +933,15 @@ opencv_calib3d_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;gener
 opencv_calib3d_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/calib3d
 
 //Value Computed by CMake
+opencv_ccalib_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/ccalib
+
+//Dependencies for the target
+opencv_ccalib_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_ccalib_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/ccalib
+
+//Value Computed by CMake
 opencv_core_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/core
 
 //Dependencies for the target
@@ -820,6 +949,15 @@ opencv_core_LIB_DEPENDS:STATIC=general;dl;general;m;general;log;general;tbb;gene
 
 //Value Computed by CMake
 opencv_core_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/core
+
+//Value Computed by CMake
+opencv_datasets_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/datasets
+
+//Dependencies for the target
+opencv_datasets_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_text;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_datasets_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/datasets
 
 //Value Computed by CMake
 opencv_dnn_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/dnn
@@ -840,6 +978,24 @@ opencv_dnn_PERF_CLCAFFE:BOOL=OFF
 opencv_dnn_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/dnn
 
 //Value Computed by CMake
+opencv_dpm_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/dpm
+
+//Dependencies for the target
+opencv_dpm_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;opencv_objdetect;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_dpm_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/dpm
+
+//Value Computed by CMake
+opencv_face_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/face
+
+//Dependencies for the target
+opencv_face_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;opencv_objdetect;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_face_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/face
+
+//Value Computed by CMake
 opencv_features2d_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/features2d
 
 //Dependencies for the target
@@ -858,6 +1014,15 @@ opencv_flann_LIB_DEPENDS:STATIC=general;opencv_core;general;dl;general;m;general
 opencv_flann_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/flann
 
 //Value Computed by CMake
+opencv_fuzzy_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/fuzzy
+
+//Dependencies for the target
+opencv_fuzzy_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_fuzzy_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/fuzzy
+
+//Value Computed by CMake
 opencv_highgui_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/highgui
 
 //Dependencies for the target
@@ -865,6 +1030,15 @@ opencv_highgui_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;gen
 
 //Value Computed by CMake
 opencv_highgui_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/highgui
+
+//Value Computed by CMake
+opencv_img_hash_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/img_hash
+
+//Dependencies for the target
+opencv_img_hash_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_img_hash_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/img_hash
 
 //Value Computed by CMake
 opencv_imgcodecs_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/imgcodecs
@@ -888,10 +1062,19 @@ opencv_imgproc_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/imgproc
 opencv_java_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/java
 
 //Dependencies for the target
-opencv_java_LIB_DEPENDS:STATIC=general;-Wl,-whole-archive;general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_video;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_aruco;general;opencv_shape;general;opencv_superres;general;opencv_stitching;general;opencv_videostab;general;-Wl,-no-whole-archive;general;dl;general;m;general;log;general;tbb;general;jnigraphics;general;log;general;dl;general;z;general;dl;general;m;general;log;general;tbb;
+opencv_java_LIB_DEPENDS:STATIC=general;-Wl,-whole-archive;general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_phase_unwrapping;general;opencv_photo;general;opencv_plot;general;opencv_video;general;opencv_dnn;general;opencv_img_hash;general;opencv_imgcodecs;general;opencv_shape;general;opencv_videoio;general;opencv_highgui;general;opencv_bioinspired;general;opencv_features2d;general;opencv_text;general;opencv_calib3d;general;opencv_datasets;general;opencv_structured_light;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_aruco;general;opencv_reg;general;opencv_surface_matching;general;opencv_xphoto;general;opencv_bgsegm;general;opencv_face;general;opencv_fuzzy;general;opencv_xobjdetect;general;opencv_superres;general;opencv_dpm;general;opencv_line_descriptor;general;opencv_saliency;general;opencv_ccalib;general;opencv_rgbd;general;opencv_stereo;general;opencv_videostab;general;opencv_ximgproc;general;opencv_optflow;general;opencv_stitching;general;-Wl,-no-whole-archive;general;dl;general;m;general;log;general;tbb;general;jnigraphics;general;log;general;dl;general;z;general;dl;general;m;general;log;general;tbb;
 
 //Value Computed by CMake
 opencv_java_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/java
+
+//Value Computed by CMake
+opencv_line_descriptor_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/line_descriptor
+
+//Dependencies for the target
+opencv_line_descriptor_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_line_descriptor_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/line_descriptor
 
 //Value Computed by CMake
 opencv_ml_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/ml
@@ -912,6 +1095,24 @@ opencv_objdetect_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;g
 opencv_objdetect_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/objdetect
 
 //Value Computed by CMake
+opencv_optflow_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/optflow
+
+//Dependencies for the target
+opencv_optflow_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_video;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_ximgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_optflow_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/optflow
+
+//Value Computed by CMake
+opencv_phase_unwrapping_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/phase_unwrapping
+
+//Dependencies for the target
+opencv_phase_unwrapping_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_phase_unwrapping_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/phase_unwrapping
+
+//Value Computed by CMake
 opencv_photo_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/photo
 
 //Dependencies for the target
@@ -919,6 +1120,42 @@ opencv_photo_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;gener
 
 //Value Computed by CMake
 opencv_photo_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/photo
+
+//Value Computed by CMake
+opencv_plot_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/plot
+
+//Dependencies for the target
+opencv_plot_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_plot_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/plot
+
+//Value Computed by CMake
+opencv_reg_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/reg
+
+//Dependencies for the target
+opencv_reg_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_reg_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/reg
+
+//Value Computed by CMake
+opencv_rgbd_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/rgbd
+
+//Dependencies for the target
+opencv_rgbd_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_rgbd_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/rgbd
+
+//Value Computed by CMake
+opencv_saliency_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/saliency
+
+//Dependencies for the target
+opencv_saliency_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_saliency_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/saliency
 
 //Value Computed by CMake
 opencv_shape_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/shape
@@ -930,13 +1167,31 @@ opencv_shape_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;gener
 opencv_shape_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/shape
 
 //Value Computed by CMake
+opencv_stereo_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/stereo
+
+//Dependencies for the target
+opencv_stereo_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_stereo_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/stereo
+
+//Value Computed by CMake
 opencv_stitching_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/stitching
 
 //Dependencies for the target
-opencv_stitching_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_stitching_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_video;general;opencv_imgcodecs;general;opencv_shape;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_xfeatures2d;general;dl;general;m;general;log;general;tbb;
 
 //Value Computed by CMake
 opencv_stitching_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/stitching
+
+//Value Computed by CMake
+opencv_structured_light_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/structured_light
+
+//Dependencies for the target
+opencv_structured_light_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_phase_unwrapping;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_structured_light_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/structured_light
 
 //Value Computed by CMake
 opencv_superres_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/superres
@@ -946,6 +1201,33 @@ opencv_superres_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;ge
 
 //Value Computed by CMake
 opencv_superres_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/superres
+
+//Value Computed by CMake
+opencv_surface_matching_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/surface_matching
+
+//Dependencies for the target
+opencv_surface_matching_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_surface_matching_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/surface_matching
+
+//Value Computed by CMake
+opencv_text_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/text
+
+//Dependencies for the target
+opencv_text_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_text_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/text
+
+//Value Computed by CMake
+opencv_tracking_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/tracking
+
+//Dependencies for the target
+opencv_tracking_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_plot;general;opencv_video;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_text;general;opencv_datasets;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_tracking_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/tracking
 
 //Value Computed by CMake
 opencv_video_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/video
@@ -973,6 +1255,42 @@ opencv_videostab_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;gen
 
 //Value Computed by CMake
 opencv_videostab_SOURCE_DIR:STATIC=/Users/Chao/opencv/modules/videostab
+
+//Value Computed by CMake
+opencv_xfeatures2d_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/xfeatures2d
+
+//Dependencies for the target
+opencv_xfeatures2d_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_video;general;opencv_imgcodecs;general;opencv_shape;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_xfeatures2d_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/xfeatures2d
+
+//Value Computed by CMake
+opencv_ximgproc_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/ximgproc
+
+//Dependencies for the target
+opencv_ximgproc_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_ximgproc_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/ximgproc
+
+//Value Computed by CMake
+opencv_xobjdetect_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/xobjdetect
+
+//Dependencies for the target
+opencv_xobjdetect_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;opencv_objdetect;general;opencv_imgcodecs;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_xobjdetect_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/xobjdetect
+
+//Value Computed by CMake
+opencv_xphoto_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/modules/xphoto
+
+//Dependencies for the target
+opencv_xphoto_LIB_DEPENDS:STATIC=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+
+//Value Computed by CMake
+opencv_xphoto_SOURCE_DIR:STATIC=/Users/Chao/opencv_contrib/modules/xphoto
 
 //Value Computed by CMake
 openexr_BINARY_DIR:STATIC=/Users/Chao/opencv/build/o4a/3rdparty/openexr
@@ -1025,7 +1343,7 @@ ANDROID_NO_UNDEFINED-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ANDROID_RELRO
 ANDROID_RELRO-ADVANCED:INTERNAL=1
 //STRINGS property for variable: ANDROID_SDK_TARGET
-ANDROID_SDK_TARGET-STRINGS:INTERNAL=android-9;android-11;android-14;android-16;android-21;android-22;android-23;android-25;android-26;android-27
+ANDROID_SDK_TARGET-STRINGS:INTERNAL=android-9;android-10;android-11;android-14;android-16;android-21;android-22;android-23;android-25;android-26;android-27
 //ADVANCED property for variable: ANDROID_SO_UNDEFINED
 ANDROID_SO_UNDEFINED-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ANDROID_STL
@@ -1144,7 +1462,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=86
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=141
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1187,6 +1505,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Test COMPILER_SUPPORTS_CXX11
+COMPILER_SUPPORTS_CXX11:INTERNAL=1
 //ADVANCED property for variable: CPACK_BINARY_DEB
 CPACK_BINARY_DEB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CPACK_BINARY_IFW
@@ -1224,11 +1544,17 @@ CPU_BASELINE-STRINGS:INTERNAL=
 //STRINGS property for variable: CPU_DISPATCH
 CPU_DISPATCH-STRINGS:INTERNAL=
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/Users/Chao/anaconda3/bin/python3][v3.6.3(3.4)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2.7][v2.7.10(2.7)]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/libz.so][/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include][v1.2.3(1.2.3)]
+//ADVANCED property for variable: GFLAGS_INCLUDE_DIR
+GFLAGS_INCLUDE_DIR-ADVANCED:INTERNAL=0
+//ADVANCED property for variable: GFLAGS_NAMESPACE
+GFLAGS_NAMESPACE-ADVANCED:INTERNAL=0
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLOG_INCLUDE_DIR
+GLOG_INCLUDE_DIR-ADVANCED:INTERNAL=0
 //Have include assert.h
 HAVE_ASSERT_H:INTERNAL=1
 //Result of TRY_COMPILE
@@ -1297,6 +1623,8 @@ HAVE_CXX_WNO_MISSING_DECLARATIONS:INTERNAL=1
 HAVE_CXX_WNO_MISSING_PROTOTYPES:INTERNAL=
 //Test HAVE_CXX_WNO_NARROWING
 HAVE_CXX_WNO_NARROWING:INTERNAL=1
+//Test HAVE_CXX_WNO_OVERLOADED_VIRTUAL
+HAVE_CXX_WNO_OVERLOADED_VIRTUAL:INTERNAL=1
 //Test HAVE_CXX_WNO_PARENTHESES
 HAVE_CXX_WNO_PARENTHESES:INTERNAL=1
 //Test HAVE_CXX_WNO_SHADOW
@@ -1467,8 +1795,16 @@ HAVE_UNISTD_H:INTERNAL=1
 HAVE_WORDS_BIGENDIAN:INTERNAL=TRUE
 //Module opencv_aruco will be built in current configuration
 HAVE_opencv_aruco:INTERNAL=ON
+//Module opencv_bgsegm will be built in current configuration
+HAVE_opencv_bgsegm:INTERNAL=ON
+//Module opencv_bioinspired will be built in current configuration
+HAVE_opencv_bioinspired:INTERNAL=ON
 //Module opencv_calib3d will be built in current configuration
 HAVE_opencv_calib3d:INTERNAL=ON
+//Module opencv_ccalib will be built in current configuration
+HAVE_opencv_ccalib:INTERNAL=ON
+//Module opencv_cnn_3dobj can not be built in current configuration
+HAVE_opencv_cnn_3dobj:INTERNAL=OFF
 //Module opencv_core will be built in current configuration
 HAVE_opencv_core:INTERNAL=ON
 //Module opencv_cudaarithm can not be built in current configuration
@@ -1495,14 +1831,32 @@ HAVE_opencv_cudastereo:INTERNAL=OFF
 HAVE_opencv_cudawarping:INTERNAL=OFF
 //Module opencv_cudev can not be built in current configuration
 HAVE_opencv_cudev:INTERNAL=OFF
+//Module opencv_cvv can not be built in current configuration
+HAVE_opencv_cvv:INTERNAL=OFF
+//Module opencv_datasets will be built in current configuration
+HAVE_opencv_datasets:INTERNAL=ON
 //Module opencv_dnn will be built in current configuration
 HAVE_opencv_dnn:INTERNAL=ON
+//Module opencv_dnn_modern can not be built in current configuration
+HAVE_opencv_dnn_modern:INTERNAL=OFF
+//Module opencv_dpm will be built in current configuration
+HAVE_opencv_dpm:INTERNAL=ON
+//Module opencv_face will be built in current configuration
+HAVE_opencv_face:INTERNAL=ON
 //Module opencv_features2d will be built in current configuration
 HAVE_opencv_features2d:INTERNAL=ON
 //Module opencv_flann will be built in current configuration
 HAVE_opencv_flann:INTERNAL=ON
+//Module opencv_freetype can not be built in current configuration
+HAVE_opencv_freetype:INTERNAL=OFF
+//Module opencv_fuzzy will be built in current configuration
+HAVE_opencv_fuzzy:INTERNAL=ON
+//Module opencv_hdf can not be built in current configuration
+HAVE_opencv_hdf:INTERNAL=OFF
 //Module opencv_highgui will be built in current configuration
 HAVE_opencv_highgui:INTERNAL=ON
+//Module opencv_img_hash will be built in current configuration
+HAVE_opencv_img_hash:INTERNAL=ON
 //Module opencv_imgcodecs will be built in current configuration
 HAVE_opencv_imgcodecs:INTERNAL=ON
 //Module opencv_imgproc will be built in current configuration
@@ -1511,22 +1865,50 @@ HAVE_opencv_imgproc:INTERNAL=ON
 HAVE_opencv_java:INTERNAL=ON
 //Module opencv_js will not be built in current configuration
 HAVE_opencv_js:INTERNAL=OFF
+//Module opencv_line_descriptor will be built in current configuration
+HAVE_opencv_line_descriptor:INTERNAL=ON
+//Module opencv_matlab can not be built in current configuration
+HAVE_opencv_matlab:INTERNAL=OFF
 //Module opencv_ml will be built in current configuration
 HAVE_opencv_ml:INTERNAL=ON
 //Module opencv_objdetect will be built in current configuration
 HAVE_opencv_objdetect:INTERNAL=ON
+//Module opencv_optflow will be built in current configuration
+HAVE_opencv_optflow:INTERNAL=ON
+//Module opencv_phase_unwrapping will be built in current configuration
+HAVE_opencv_phase_unwrapping:INTERNAL=ON
 //Module opencv_photo will be built in current configuration
 HAVE_opencv_photo:INTERNAL=ON
+//Module opencv_plot will be built in current configuration
+HAVE_opencv_plot:INTERNAL=ON
 //Module opencv_python2 can not be built in current configuration
 HAVE_opencv_python2:INTERNAL=OFF
 //Module opencv_python3 can not be built in current configuration
 HAVE_opencv_python3:INTERNAL=OFF
+//Module opencv_reg will be built in current configuration
+HAVE_opencv_reg:INTERNAL=ON
+//Module opencv_rgbd will be built in current configuration
+HAVE_opencv_rgbd:INTERNAL=ON
+//Module opencv_saliency will be built in current configuration
+HAVE_opencv_saliency:INTERNAL=ON
+//Module opencv_sfm can not be built in current configuration
+HAVE_opencv_sfm:INTERNAL=OFF
 //Module opencv_shape will be built in current configuration
 HAVE_opencv_shape:INTERNAL=ON
+//Module opencv_stereo will be built in current configuration
+HAVE_opencv_stereo:INTERNAL=ON
 //Module opencv_stitching will be built in current configuration
 HAVE_opencv_stitching:INTERNAL=ON
+//Module opencv_structured_light will be built in current configuration
+HAVE_opencv_structured_light:INTERNAL=ON
 //Module opencv_superres will be built in current configuration
 HAVE_opencv_superres:INTERNAL=ON
+//Module opencv_surface_matching will be built in current configuration
+HAVE_opencv_surface_matching:INTERNAL=ON
+//Module opencv_text will be built in current configuration
+HAVE_opencv_text:INTERNAL=ON
+//Module opencv_tracking will be built in current configuration
+HAVE_opencv_tracking:INTERNAL=ON
 //Module opencv_ts can not be built in current configuration
 HAVE_opencv_ts:INTERNAL=OFF
 //Module opencv_video will be built in current configuration
@@ -1539,7 +1921,27 @@ HAVE_opencv_videostab:INTERNAL=ON
 HAVE_opencv_viz:INTERNAL=OFF
 //Module opencv_world will not be built in current configuration
 HAVE_opencv_world:INTERNAL=OFF
+//Module opencv_xfeatures2d will be built in current configuration
+HAVE_opencv_xfeatures2d:INTERNAL=ON
+//Module opencv_ximgproc will be built in current configuration
+HAVE_opencv_ximgproc:INTERNAL=ON
+//Module opencv_xobjdetect will be built in current configuration
+HAVE_opencv_xobjdetect:INTERNAL=ON
+//Module opencv_xphoto will be built in current configuration
+HAVE_opencv_xphoto:INTERNAL=ON
 OCV_DOWNLOAD_TBB_HASH_3rdparty_tbb_2018_U1_tar_gz:INTERNAL=b2f2fa09adf44a22f4024049907f774b
+OCV_DOWNLOAD_TINY_DNN_HASH_3rdparty_tinydnn_v1_0_0a3_tar_gz:INTERNAL=adb1c512e09ca2c7a6faef36f9c53e59
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_bgm_bi_i:INTERNAL=232c966b13651bd0e46a1497b0852191
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_bgm_hd_i:INTERNAL=324426a24fa56ad9c5b8e3e0b3e5303e
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_bgm_i:INTERNAL=0ea90e7a8f3f7876d450e4149c97c74f
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_binboost_064_i:INTERNAL=202e1b3e9fec871b04da31f7f016679f
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_binboost_128_i:INTERNAL=98ea99d399965c03d555cef3ea502a0b
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_binboost_256_i:INTERNAL=e6dcfa9f647779eb1ce446a8d759b6ea
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_lbgm_i:INTERNAL=0ae0675534aa318d9668f2a179c2a052
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_120_i:INTERNAL=151805e03568c9f490a5e3a872777b75
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_48_i:INTERNAL=e8d0dcd54d1bcfdc29203d011a797179
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_64_i:INTERNAL=7126a5d9a8884ebca5aea5d63d677225
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_80_i:INTERNAL=7cd47228edec52b6d82f46511af325c5
 //Extra compiler options for C++ sources
 OPENCV_EXTRA_CXX_FLAGS:INTERNAL=' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer '
 //Extra compiler options for C sources
@@ -1557,15 +1959,15 @@ OPENCV_EXTRA_FLAGS_DEBUG:INTERNAL= -DDEBUG -D_DEBUG
 //Extra compiler options for Release build
 OPENCV_EXTRA_FLAGS_RELEASE:INTERNAL= -DNDEBUG
 //List of OpenCV modules included into the build
-OPENCV_MODULES_BUILD:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_superres;opencv_features2d;opencv_calib3d;opencv_stitching;opencv_videostab;opencv_aruco;opencv_java
+OPENCV_MODULES_BUILD:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_reg;opencv_surface_matching;opencv_video;opencv_xphoto;opencv_bgsegm;opencv_dnn;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_xobjdetect;opencv_highgui;opencv_superres;opencv_bioinspired;opencv_dpm;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_rgbd;opencv_stereo;opencv_structured_light;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_aruco;opencv_java;opencv_optflow;opencv_stitching
 //List of OpenCV modules implicitly disabled due to dependencies
 OPENCV_MODULES_DISABLED_AUTO:INTERNAL=
 //List of OpenCV modules which can not be build in current configuration
-OPENCV_MODULES_DISABLED_FORCE:INTERNAL=opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_python2;opencv_python3;opencv_ts;opencv_viz
+OPENCV_MODULES_DISABLED_FORCE:INTERNAL=opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_python2;opencv_python3;opencv_ts;opencv_viz;opencv_cnn_3dobj;opencv_cvv;opencv_dnn_modern;opencv_freetype;opencv_hdf;opencv_matlab;opencv_sfm
 //List of OpenCV modules explicitly disabled by user
 OPENCV_MODULES_DISABLED_USER:INTERNAL=opencv_js;opencv_world
 //List of OpenCV modules marked for export
-OPENCV_MODULES_PUBLIC:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULES_PUBLIC:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_aruco_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/aruco
 //The category of the module
 OPENCV_MODULE_opencv_aruco_CLASS:INTERNAL=PUBLIC
@@ -1596,6 +1998,66 @@ OPENCV_MODULE_opencv_aruco_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_c
 OPENCV_MODULE_opencv_aruco_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/aruco/src/aruco.cpp;/Users/Chao/opencv_contrib/modules/aruco/src/charuco.cpp;/Users/Chao/opencv_contrib/modules/aruco/src/dictionary.cpp;/Users/Chao/opencv_contrib/modules/aruco/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/aruco/src/predefined_dictionaries.hpp
 //List of wrappers supporting module opencv_aruco
 OPENCV_MODULE_opencv_aruco_WRAPPERS:INTERNAL=java;python2;python3
+OPENCV_MODULE_opencv_bgsegm_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/bgsegm
+//The category of the module
+OPENCV_MODULE_opencv_bgsegm_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_video
+//Extra dependencies of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_bgsegm module (for linker)
+OPENCV_MODULE_opencv_bgsegm_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc;opencv_video
+//Brief description of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_DESCRIPTION:INTERNAL=Background Segmentation Algorithms
+//List of header files for opencv_bgsegm
+OPENCV_MODULE_opencv_bgsegm_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/bgsegm/include/opencv2/bgsegm.hpp
+OPENCV_MODULE_opencv_bgsegm_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_bgsegm_LABEL:INTERNAL=Extra;opencv_bgsegm
+OPENCV_MODULE_opencv_bgsegm_LINK_DEPS:INTERNAL=
+//Location of opencv_bgsegm module sources
+OPENCV_MODULE_opencv_bgsegm_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/bgsegm
+//Optional dependencies of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_bgsegm module
+OPENCV_MODULE_opencv_bgsegm_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_video
+//List of source files for opencv_bgsegm
+OPENCV_MODULE_opencv_bgsegm_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_gaussmix.cpp;/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_gmg.cpp;/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_subcnt.cpp;/Users/Chao/opencv_contrib/modules/bgsegm/src/precomp.hpp
+//List of wrappers supporting module opencv_bgsegm
+OPENCV_MODULE_opencv_bgsegm_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_bioinspired_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/bioinspired
+//The category of the module
+OPENCV_MODULE_opencv_bioinspired_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui
+//Extra dependencies of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_bioinspired module (for linker)
+OPENCV_MODULE_opencv_bioinspired_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui
+//Brief description of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_DESCRIPTION:INTERNAL=Biologically inspired algorithms
+//List of header files for opencv_bioinspired
+OPENCV_MODULE_opencv_bioinspired_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/bioinspired.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/retina.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/retinafasttonemapping.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/transientareassegmentationmodule.hpp
+OPENCV_MODULE_opencv_bioinspired_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_bioinspired_LABEL:INTERNAL=Extra;opencv_bioinspired
+OPENCV_MODULE_opencv_bioinspired_LINK_DEPS:INTERNAL=
+//Location of opencv_bioinspired module sources
+OPENCV_MODULE_opencv_bioinspired_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/bioinspired
+//Optional dependencies of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_OPT_DEPS:INTERNAL=opencv_highgui;opencv_ocl
+//Optional private dependencies of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_bioinspired module
+OPENCV_MODULE_opencv_bioinspired_REQ_DEPS:INTERNAL=opencv_core
+//List of source files for opencv_bioinspired
+OPENCV_MODULE_opencv_bioinspired_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/bioinspired/src/basicretinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/imagelogpolprojection.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/magnoretinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/parvoretinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retina.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retina_ocl.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinacolor.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinafasttonemapping.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/transientareassegmentationmodule.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/opencl/retina_kernel.cl;/Users/Chao/opencv/build/o4a/modules/bioinspired/opencl_kernels_bioinspired.cpp;/Users/Chao/opencv/build/o4a/modules/bioinspired/opencl_kernels_bioinspired.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/basicretinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/imagelogpolprojection.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/magnoretinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/parvoretinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retina_ocl.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinacolor.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/templatebuffer.hpp
+//List of wrappers supporting module opencv_bioinspired
+OPENCV_MODULE_opencv_bioinspired_WRAPPERS:INTERNAL=java;python2;python3
 OPENCV_MODULE_opencv_calib3d_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/calib3d
 //The category of the module
 OPENCV_MODULE_opencv_calib3d_CLASS:INTERNAL=PUBLIC
@@ -1626,6 +2088,38 @@ OPENCV_MODULE_opencv_calib3d_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_features2d
 OPENCV_MODULE_opencv_calib3d_SOURCES:INTERNAL=/Users/Chao/opencv/modules/calib3d/src/ap3p.cpp;/Users/Chao/opencv/modules/calib3d/src/calibinit.cpp;/Users/Chao/opencv/modules/calib3d/src/calibration.cpp;/Users/Chao/opencv/modules/calib3d/src/checkchessboard.cpp;/Users/Chao/opencv/modules/calib3d/src/circlesgrid.cpp;/Users/Chao/opencv/modules/calib3d/src/compat_ptsetreg.cpp;/Users/Chao/opencv/modules/calib3d/src/compat_stereo.cpp;/Users/Chao/opencv/modules/calib3d/src/dls.cpp;/Users/Chao/opencv/modules/calib3d/src/epnp.cpp;/Users/Chao/opencv/modules/calib3d/src/fisheye.cpp;/Users/Chao/opencv/modules/calib3d/src/five-point.cpp;/Users/Chao/opencv/modules/calib3d/src/fundam.cpp;/Users/Chao/opencv/modules/calib3d/src/homography_decomp.cpp;/Users/Chao/opencv/modules/calib3d/src/levmarq.cpp;/Users/Chao/opencv/modules/calib3d/src/main.cpp;/Users/Chao/opencv/modules/calib3d/src/p3p.cpp;/Users/Chao/opencv/modules/calib3d/src/polynom_solver.cpp;/Users/Chao/opencv/modules/calib3d/src/posit.cpp;/Users/Chao/opencv/modules/calib3d/src/ptsetreg.cpp;/Users/Chao/opencv/modules/calib3d/src/quadsubpix.cpp;/Users/Chao/opencv/modules/calib3d/src/rho.cpp;/Users/Chao/opencv/modules/calib3d/src/solvepnp.cpp;/Users/Chao/opencv/modules/calib3d/src/stereobm.cpp;/Users/Chao/opencv/modules/calib3d/src/stereosgbm.cpp;/Users/Chao/opencv/modules/calib3d/src/triangulate.cpp;/Users/Chao/opencv/modules/calib3d/src/upnp.cpp;/Users/Chao/opencv/modules/calib3d/src/opencl/stereobm.cl;/Users/Chao/opencv/build/o4a/modules/calib3d/opencl_kernels_calib3d.cpp;/Users/Chao/opencv/build/o4a/modules/calib3d/opencl_kernels_calib3d.hpp;/Users/Chao/opencv/modules/calib3d/src/circlesgrid.hpp;/Users/Chao/opencv/modules/calib3d/src/fisheye.hpp;/Users/Chao/opencv/modules/calib3d/src/precomp.hpp;/Users/Chao/opencv/modules/calib3d/src/ap3p.h;/Users/Chao/opencv/modules/calib3d/src/dls.h;/Users/Chao/opencv/modules/calib3d/src/epnp.h;/Users/Chao/opencv/modules/calib3d/src/p3p.h;/Users/Chao/opencv/modules/calib3d/src/polynom_solver.h;/Users/Chao/opencv/modules/calib3d/src/rho.h;/Users/Chao/opencv/modules/calib3d/src/upnp.h
 //List of wrappers supporting module opencv_calib3d
 OPENCV_MODULE_opencv_calib3d_WRAPPERS:INTERNAL=java;python2;python3
+OPENCV_MODULE_opencv_ccalib_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/ccalib
+//The category of the module
+OPENCV_MODULE_opencv_ccalib_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Extra dependencies of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_ccalib module (for linker)
+OPENCV_MODULE_opencv_ccalib_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Brief description of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_DESCRIPTION:INTERNAL=Custom Calibration Pattern
+//List of header files for opencv_ccalib
+OPENCV_MODULE_opencv_ccalib_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib.hpp;/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib/multicalib.hpp;/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib/omnidir.hpp;/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib/randpattern.hpp
+OPENCV_MODULE_opencv_ccalib_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_ccalib_LABEL:INTERNAL=Extra;opencv_ccalib
+OPENCV_MODULE_opencv_ccalib_LINK_DEPS:INTERNAL=
+//Location of opencv_ccalib module sources
+OPENCV_MODULE_opencv_ccalib_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/ccalib
+//Optional dependencies of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_ccalib module
+OPENCV_MODULE_opencv_ccalib_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_calib3d;opencv_features2d;opencv_highgui
+//List of source files for opencv_ccalib
+OPENCV_MODULE_opencv_ccalib_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/ccalib/src/ccalib.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/multicalib.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/omnidir.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/randpattern.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/precomp.hpp
+//List of wrappers supporting module opencv_ccalib
+OPENCV_MODULE_opencv_ccalib_WRAPPERS:INTERNAL=python2;python3
+//Location of opencv_cnn_3dobj module sources
+OPENCV_MODULE_opencv_cnn_3dobj_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/cnn_3dobj
 OPENCV_MODULE_opencv_core_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/core
 //The category of the module
 OPENCV_MODULE_opencv_core_CLASS:INTERNAL=PUBLIC
@@ -1680,6 +2174,38 @@ OPENCV_MODULE_opencv_cudastereo_LOCATION:INTERNAL=/Users/Chao/opencv/modules/cud
 OPENCV_MODULE_opencv_cudawarping_LOCATION:INTERNAL=/Users/Chao/opencv/modules/cudawarping
 //Location of opencv_cudev module sources
 OPENCV_MODULE_opencv_cudev_LOCATION:INTERNAL=/Users/Chao/opencv/modules/cudev
+//Location of opencv_cvv module sources
+OPENCV_MODULE_opencv_cvv_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/cvv
+OPENCV_MODULE_opencv_datasets_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/datasets
+//The category of the module
+OPENCV_MODULE_opencv_datasets_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text
+//Extra dependencies of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_datasets module (for linker)
+OPENCV_MODULE_opencv_datasets_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text
+//Brief description of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_DESCRIPTION:INTERNAL=datasets framework
+//List of header files for opencv_datasets
+OPENCV_MODULE_opencv_datasets_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ar_hmdb.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ar_sports.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/dataset.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/fr_adience.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/fr_lfw.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/gr_chalearn.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/gr_skig.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/hpe_humaneva.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/hpe_parse.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ir_affine.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ir_robot.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/is_bsds.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/is_weizmann.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/msm_epfl.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/msm_middlebury.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_imagenet.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_mnist.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_pascal.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_sun.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/pd_caltech.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/pd_inria.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/slam_kitti.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/slam_tumindoor.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/tr_chars.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/tr_icdar.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/tr_svt.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/track_alov.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/track_vot.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/util.hpp
+OPENCV_MODULE_opencv_datasets_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_datasets_LABEL:INTERNAL=Extra;opencv_datasets
+OPENCV_MODULE_opencv_datasets_LINK_DEPS:INTERNAL=
+//Location of opencv_datasets module sources
+OPENCV_MODULE_opencv_datasets_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/datasets
+//Optional dependencies of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_datasets module
+OPENCV_MODULE_opencv_datasets_REQ_DEPS:INTERNAL=opencv_core;opencv_imgcodecs;opencv_ml;opencv_flann;opencv_text
+//List of source files for opencv_datasets
+OPENCV_MODULE_opencv_datasets_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/datasets/src/ar_hmdb.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/ar_sports.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/dataset.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/fr_adience.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/fr_lfw.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/gr_chalearn.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/gr_skig.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/hpe_humaneva.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/hpe_parse.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/ir_affine.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/ir_robot.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/is_bsds.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/is_weizmann.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/msm_epfl.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/msm_middlebury.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_imagenet.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_mnist.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_pascal.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_sun.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/pd_caltech.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/pd_inria.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/slam_kitti.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/slam_tumindoor.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tinyxml2/tinyxml2.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tr_chars.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tr_icdar.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tr_svt.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/track_alov.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/track_vot.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/util.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tinyxml2/tinyxml2.h
+//List of wrappers supporting module opencv_datasets
+OPENCV_MODULE_opencv_datasets_WRAPPERS:INTERNAL=python2;python3
 OPENCV_MODULE_opencv_dnn_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/dnn
 //The category of the module
 OPENCV_MODULE_opencv_dnn_CLASS:INTERNAL=PUBLIC
@@ -1710,6 +2236,68 @@ OPENCV_MODULE_opencv_dnn_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc
 OPENCV_MODULE_opencv_dnn_SOURCES:INTERNAL=/Users/Chao/opencv/modules/dnn/src/caffe/caffe_importer.cpp;/Users/Chao/opencv/modules/dnn/src/caffe/caffe_io.cpp;/Users/Chao/opencv/modules/dnn/src/caffe/caffe_shrinker.cpp;/Users/Chao/opencv/modules/dnn/src/darknet/darknet_importer.cpp;/Users/Chao/opencv/modules/dnn/src/darknet/darknet_io.cpp;/Users/Chao/opencv/modules/dnn/src/dnn.cpp;/Users/Chao/opencv/modules/dnn/src/halide_scheduler.cpp;/Users/Chao/opencv/modules/dnn/src/init.cpp;/Users/Chao/opencv/modules/dnn/src/layers/batch_norm_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/blank_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/concat_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/convolution_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/crop_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/detection_output_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/elementwise_layers.cpp;/Users/Chao/opencv/modules/dnn/src/layers/eltwise_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/flatten_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/fully_connected_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/layers_common.cpp;/Users/Chao/opencv/modules/dnn/src/layers/lrn_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/max_unpooling_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/mvn_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/normalize_bbox_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/padding_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/permute_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/pooling_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/prior_box_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/recurrent_layers.cpp;/Users/Chao/opencv/modules/dnn/src/layers/region_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/reorg_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/reshape_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/resize_nearest_neighbor_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/scale_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/shift_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/slice_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/softmax_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/split_layer.cpp;/Users/Chao/opencv/modules/dnn/src/nms.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/common.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/math_functions.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_conv_spatial.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_inner_product.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_lrn.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_pool.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_softmax.cpp;/Users/Chao/opencv/modules/dnn/src/op_halide.cpp;/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_importer.cpp;/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_io.cpp;/Users/Chao/opencv/modules/dnn/src/torch/THDiskFile.cpp;/Users/Chao/opencv/modules/dnn/src/torch/THFile.cpp;/Users/Chao/opencv/modules/dnn/src/torch/THGeneral.cpp;/Users/Chao/opencv/modules/dnn/src/torch/torch_importer.cpp;/Users/Chao/opencv/modules/dnn/src/opencl/activations.cl;/Users/Chao/opencv/modules/dnn/src/opencl/batchnorm.cl;/Users/Chao/opencv/modules/dnn/src/opencl/col2im.cl;/Users/Chao/opencv/modules/dnn/src/opencl/concat.cl;/Users/Chao/opencv/modules/dnn/src/opencl/conv_layer_spatial.cl;/Users/Chao/opencv/modules/dnn/src/opencl/conv_spatial_helper.cl;/Users/Chao/opencv/modules/dnn/src/opencl/dummy.cl;/Users/Chao/opencv/modules/dnn/src/opencl/gemm_image.cl;/Users/Chao/opencv/modules/dnn/src/opencl/im2col.cl;/Users/Chao/opencv/modules/dnn/src/opencl/lrn.cl;/Users/Chao/opencv/modules/dnn/src/opencl/math.cl;/Users/Chao/opencv/modules/dnn/src/opencl/matvec_mul.cl;/Users/Chao/opencv/modules/dnn/src/opencl/ocl4dnn_lrn.cl;/Users/Chao/opencv/modules/dnn/src/opencl/ocl4dnn_pooling.cl;/Users/Chao/opencv/modules/dnn/src/opencl/pooling.cl;/Users/Chao/opencv/modules/dnn/src/opencl/softmax.cl;/Users/Chao/opencv/modules/dnn/src/opencl/softmax_loss.cl;/Users/Chao/opencv/build/o4a/modules/dnn/opencl_kernels_dnn.cpp;/Users/Chao/opencv/build/o4a/modules/dnn/opencl_kernels_dnn.hpp;/Users/Chao/opencv/modules/dnn/src/caffe/caffe_io.hpp;/Users/Chao/opencv/modules/dnn/src/caffe/glog_emulator.hpp;/Users/Chao/opencv/modules/dnn/src/darknet/darknet_io.hpp;/Users/Chao/opencv/modules/dnn/src/halide_scheduler.hpp;/Users/Chao/opencv/modules/dnn/src/layers/layers_common.hpp;/Users/Chao/opencv/modules/dnn/src/layers/layers_common.simd.hpp;/Users/Chao/opencv/modules/dnn/src/nms.inl.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/common.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/default_kernel_config.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/math_functions.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/ocl4dnn.hpp;/Users/Chao/opencv/modules/dnn/src/op_halide.hpp;/Users/Chao/opencv/modules/dnn/src/precomp.hpp;/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_io.hpp;/Users/Chao/opencv/modules/dnn/src/torch/THDiskFile.h;/Users/Chao/opencv/modules/dnn/src/torch/THFile.h;/Users/Chao/opencv/modules/dnn/src/torch/THFilePrivate.h;/Users/Chao/opencv/modules/dnn/src/torch/THGeneral.h
 //List of wrappers supporting module opencv_dnn
 OPENCV_MODULE_opencv_dnn_WRAPPERS:INTERNAL=matlab;java;python2;python3
+//Location of opencv_dnn_modern module sources
+OPENCV_MODULE_opencv_dnn_modern_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/dnn_modern
+OPENCV_MODULE_opencv_dpm_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/dpm
+//The category of the module
+OPENCV_MODULE_opencv_dpm_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs;opencv_videoio;opencv_highgui
+//Extra dependencies of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_dpm module (for linker)
+OPENCV_MODULE_opencv_dpm_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs;opencv_videoio;opencv_highgui
+//Brief description of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_DESCRIPTION:INTERNAL=Object Detection
+//List of header files for opencv_dpm
+OPENCV_MODULE_opencv_dpm_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/dpm/include/opencv2/dpm.hpp
+OPENCV_MODULE_opencv_dpm_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_dpm_LABEL:INTERNAL=Extra;opencv_dpm
+OPENCV_MODULE_opencv_dpm_LINK_DEPS:INTERNAL=
+//Location of opencv_dpm module sources
+OPENCV_MODULE_opencv_dpm_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/dpm
+//Optional dependencies of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_OPT_DEPS:INTERNAL=opencv_highgui
+//Optional private dependencies of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_dpm module
+OPENCV_MODULE_opencv_dpm_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect
+//List of source files for opencv_dpm
+OPENCV_MODULE_opencv_dpm_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/dpm/src/dpm_cascade.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_cascade_detector.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_convolution.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_feature.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_model.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_nms.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_cascade.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_convolution.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_feature.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_model.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_nms.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/precomp.hpp
+//List of wrappers supporting module opencv_dpm
+OPENCV_MODULE_opencv_dpm_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_face_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/face
+//The category of the module
+OPENCV_MODULE_opencv_face_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_face module
+OPENCV_MODULE_opencv_face_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect
+//Extra dependencies of opencv_face module
+OPENCV_MODULE_opencv_face_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_face module (for linker)
+OPENCV_MODULE_opencv_face_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect
+//Brief description of opencv_face module
+OPENCV_MODULE_opencv_face_DESCRIPTION:INTERNAL=Face recognition etc
+//List of header files for opencv_face
+OPENCV_MODULE_opencv_face_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/face/include/opencv2/face.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/bif.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facemark.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facemarkAAM.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facemarkLBF.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facerec.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/predict_collector.hpp
+OPENCV_MODULE_opencv_face_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_face_LABEL:INTERNAL=Extra;opencv_face
+OPENCV_MODULE_opencv_face_LINK_DEPS:INTERNAL=
+//Location of opencv_face module sources
+OPENCV_MODULE_opencv_face_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/face
+//Optional dependencies of opencv_face module
+OPENCV_MODULE_opencv_face_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_face module
+OPENCV_MODULE_opencv_face_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_face module
+OPENCV_MODULE_opencv_face_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_face module
+OPENCV_MODULE_opencv_face_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect
+//List of source files for opencv_face
+OPENCV_MODULE_opencv_face_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/face/src/bif.cpp;/Users/Chao/opencv_contrib/modules/face/src/eigen_faces.cpp;/Users/Chao/opencv_contrib/modules/face/src/face_basic.cpp;/Users/Chao/opencv_contrib/modules/face/src/facemark.cpp;/Users/Chao/opencv_contrib/modules/face/src/facemarkAAM.cpp;/Users/Chao/opencv_contrib/modules/face/src/facemarkLBF.cpp;/Users/Chao/opencv_contrib/modules/face/src/facerec.cpp;/Users/Chao/opencv_contrib/modules/face/src/fisher_faces.cpp;/Users/Chao/opencv_contrib/modules/face/src/lbph_faces.cpp;/Users/Chao/opencv_contrib/modules/face/src/predict_collector.cpp;/Users/Chao/opencv_contrib/modules/face/src/face_utils.hpp;/Users/Chao/opencv_contrib/modules/face/src/precomp.hpp
+//List of wrappers supporting module opencv_face
+OPENCV_MODULE_opencv_face_WRAPPERS:INTERNAL=python2;python3
 OPENCV_MODULE_opencv_features2d_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/features2d
 //The category of the module
 OPENCV_MODULE_opencv_features2d_CLASS:INTERNAL=PUBLIC
@@ -1770,6 +2358,40 @@ OPENCV_MODULE_opencv_flann_REQ_DEPS:INTERNAL=opencv_core
 OPENCV_MODULE_opencv_flann_SOURCES:INTERNAL=/Users/Chao/opencv/modules/flann/src/flann.cpp;/Users/Chao/opencv/modules/flann/src/miniflann.cpp;/Users/Chao/opencv/modules/flann/src/precomp.hpp
 //List of wrappers supporting module opencv_flann
 OPENCV_MODULE_opencv_flann_WRAPPERS:INTERNAL=python2;python3
+//Location of opencv_freetype module sources
+OPENCV_MODULE_opencv_freetype_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/freetype
+OPENCV_MODULE_opencv_fuzzy_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/fuzzy
+//The category of the module
+OPENCV_MODULE_opencv_fuzzy_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_fuzzy module (for linker)
+OPENCV_MODULE_opencv_fuzzy_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_DESCRIPTION:INTERNAL=Fuzzy mathematical image processing
+//List of header files for opencv_fuzzy
+OPENCV_MODULE_opencv_fuzzy_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F0_math.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F1_math.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_image.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/types.hpp
+OPENCV_MODULE_opencv_fuzzy_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_fuzzy_LABEL:INTERNAL=Extra;opencv_fuzzy
+OPENCV_MODULE_opencv_fuzzy_LINK_DEPS:INTERNAL=
+//Location of opencv_fuzzy module sources
+OPENCV_MODULE_opencv_fuzzy_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/fuzzy
+//Optional dependencies of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_fuzzy module
+OPENCV_MODULE_opencv_fuzzy_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_core
+//List of source files for opencv_fuzzy
+OPENCV_MODULE_opencv_fuzzy_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/fuzzy/src/fuzzy_F0_math.cpp;/Users/Chao/opencv_contrib/modules/fuzzy/src/fuzzy_F1_math.cpp;/Users/Chao/opencv_contrib/modules/fuzzy/src/fuzzy_image.cpp;/Users/Chao/opencv_contrib/modules/fuzzy/src/precomp.hpp
+//List of wrappers supporting module opencv_fuzzy
+OPENCV_MODULE_opencv_fuzzy_WRAPPERS:INTERNAL=python2;python3
+//Location of opencv_hdf module sources
+OPENCV_MODULE_opencv_hdf_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/hdf
 OPENCV_MODULE_opencv_highgui_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/highgui
 //The category of the module
 OPENCV_MODULE_opencv_highgui_CLASS:INTERNAL=PUBLIC
@@ -1800,6 +2422,36 @@ OPENCV_MODULE_opencv_highgui_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_imgcodecs
 OPENCV_MODULE_opencv_highgui_SOURCES:INTERNAL=/Users/Chao/opencv/modules/highgui/src/window.cpp;/Users/Chao/opencv/modules/highgui/src/roiSelector.cpp;/Users/Chao/opencv/modules/highgui/src/precomp.hpp
 //List of wrappers supporting module opencv_highgui
 OPENCV_MODULE_opencv_highgui_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_img_hash_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/img_hash
+//The category of the module
+OPENCV_MODULE_opencv_img_hash_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_img_hash module (for linker)
+OPENCV_MODULE_opencv_img_hash_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_DESCRIPTION:INTERNAL=Image hash algorithms
+//List of header files for opencv_img_hash
+OPENCV_MODULE_opencv_img_hash_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/average_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/block_mean_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/color_moment_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/img_hash_base.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/marr_hildreth_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/phash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/radial_variance_hash.hpp
+OPENCV_MODULE_opencv_img_hash_IS_PART_OF_WORLD:INTERNAL=OFF
+OPENCV_MODULE_opencv_img_hash_LABEL:INTERNAL=Extra;opencv_img_hash
+OPENCV_MODULE_opencv_img_hash_LINK_DEPS:INTERNAL=
+//Location of opencv_img_hash module sources
+OPENCV_MODULE_opencv_img_hash_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/img_hash
+//Optional dependencies of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_img_hash module
+OPENCV_MODULE_opencv_img_hash_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_core
+//List of source files for opencv_img_hash
+OPENCV_MODULE_opencv_img_hash_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/img_hash/src/average_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/block_mean_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/color_moment_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/img_hash_base.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/marr_hildreth_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/phash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/radial_variance_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/precomp.hpp
+//List of wrappers supporting module opencv_img_hash
+OPENCV_MODULE_opencv_img_hash_WRAPPERS:INTERNAL=java;python2;python3
 OPENCV_MODULE_opencv_imgcodecs_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/imgcodecs
 //The category of the module
 OPENCV_MODULE_opencv_imgcodecs_CLASS:INTERNAL=PUBLIC
@@ -1864,11 +2516,11 @@ OPENCV_MODULE_opencv_java_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modul
 //The category of the module
 OPENCV_MODULE_opencv_java_CLASS:INTERNAL=BINDINGS
 //Flattened dependencies of opencv_java module
-OPENCV_MODULE_opencv_java_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_aruco
+OPENCV_MODULE_opencv_java_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_video;opencv_dnn;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_text;opencv_calib3d;opencv_datasets;opencv_structured_light;opencv_tracking;opencv_xfeatures2d;opencv_aruco
 //Extra dependencies of opencv_java module
 OPENCV_MODULE_opencv_java_DEPS_EXT:INTERNAL=
 //Flattened dependencies of opencv_java module (for linker)
-OPENCV_MODULE_opencv_java_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_aruco
+OPENCV_MODULE_opencv_java_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_video;opencv_dnn;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_text;opencv_calib3d;opencv_datasets;opencv_structured_light;opencv_tracking;opencv_xfeatures2d;opencv_aruco
 //Brief description of opencv_java module
 OPENCV_MODULE_opencv_java_DESCRIPTION:INTERNAL=The java bindings
 OPENCV_MODULE_opencv_java_IS_PART_OF_WORLD:INTERNAL=OFF
@@ -1877,7 +2529,7 @@ OPENCV_MODULE_opencv_java_LINK_DEPS:INTERNAL=
 //Location of opencv_java module sources
 OPENCV_MODULE_opencv_java_LOCATION:INTERNAL=/Users/Chao/opencv/modules/java
 //Optional dependencies of opencv_java module
-OPENCV_MODULE_opencv_java_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_videoio;opencv_aruco
+OPENCV_MODULE_opencv_java_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_videoio;opencv_aruco;opencv_bioinspired;opencv_img_hash;opencv_phase_unwrapping;opencv_structured_light;opencv_text;opencv_tracking;opencv_xfeatures2d
 //Optional private dependencies of opencv_java module
 OPENCV_MODULE_opencv_java_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_java module
@@ -1905,6 +2557,39 @@ OPENCV_MODULE_opencv_js_PRIVATE_REQ_DEPS:INTERNAL=
 OPENCV_MODULE_opencv_js_REQ_DEPS:INTERNAL=
 //List of wrappers supporting module opencv_js
 OPENCV_MODULE_opencv_js_WRAPPERS:INTERNAL=
+OPENCV_MODULE_opencv_line_descriptor_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/line_descriptor
+//The category of the module
+OPENCV_MODULE_opencv_line_descriptor_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+//Extra dependencies of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_line_descriptor module (for
+// linker)
+OPENCV_MODULE_opencv_line_descriptor_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+//Brief description of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_DESCRIPTION:INTERNAL=Line descriptor
+//List of header files for opencv_line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/line_descriptor/include/opencv2/line_descriptor.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/include/opencv2/line_descriptor/descriptor.hpp
+OPENCV_MODULE_opencv_line_descriptor_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_line_descriptor_LABEL:INTERNAL=Extra;opencv_line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_LINK_DEPS:INTERNAL=
+//Location of opencv_line_descriptor module sources
+OPENCV_MODULE_opencv_line_descriptor_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/line_descriptor
+//Optional dependencies of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_OPT_DEPS:INTERNAL=opencv_features2d
+//Optional private dependencies of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_line_descriptor module
+OPENCV_MODULE_opencv_line_descriptor_REQ_DEPS:INTERNAL=opencv_imgproc
+//List of source files for opencv_line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/line_descriptor/src/LSDDetector.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/binary_descriptor.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/binary_descriptor_matcher.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/draw.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/bitarray.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/bitops.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/types.hpp
+//List of wrappers supporting module opencv_line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_WRAPPERS:INTERNAL=python2;python3
+//Location of opencv_matlab module sources
+OPENCV_MODULE_opencv_matlab_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/matlab
 //Optional dependencies of opencv_matlab module
 OPENCV_MODULE_opencv_matlab_OPT_DEPS:INTERNAL=opencv_dnn
 //Optional private dependencies of opencv_matlab module
@@ -1975,6 +2660,67 @@ OPENCV_MODULE_opencv_objdetect_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc
 OPENCV_MODULE_opencv_objdetect_SOURCES:INTERNAL=/Users/Chao/opencv/modules/objdetect/src/cascadedetect.cpp;/Users/Chao/opencv/modules/objdetect/src/cascadedetect_convert.cpp;/Users/Chao/opencv/modules/objdetect/src/detection_based_tracker.cpp;/Users/Chao/opencv/modules/objdetect/src/haar.cpp;/Users/Chao/opencv/modules/objdetect/src/hog.cpp;/Users/Chao/opencv/modules/objdetect/src/main.cpp;/Users/Chao/opencv/modules/objdetect/src/opencl/cascadedetect.cl;/Users/Chao/opencv/modules/objdetect/src/opencl/objdetect_hog.cl;/Users/Chao/opencv/build/o4a/modules/objdetect/opencl_kernels_objdetect.cpp;/Users/Chao/opencv/build/o4a/modules/objdetect/opencl_kernels_objdetect.hpp;/Users/Chao/opencv/modules/objdetect/src/cascadedetect.hpp;/Users/Chao/opencv/modules/objdetect/src/haar.hpp;/Users/Chao/opencv/modules/objdetect/src/precomp.hpp
 //List of wrappers supporting module opencv_objdetect
 OPENCV_MODULE_opencv_objdetect_WRAPPERS:INTERNAL=java;js;python2;python3
+OPENCV_MODULE_opencv_optflow_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/optflow
+//The category of the module
+OPENCV_MODULE_opencv_optflow_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ximgproc
+//Extra dependencies of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_optflow module (for linker)
+OPENCV_MODULE_opencv_optflow_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ximgproc
+//Brief description of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_DESCRIPTION:INTERNAL=Optical Flow Algorithms
+//List of header files for opencv_optflow
+OPENCV_MODULE_opencv_optflow_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow.hpp;/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow/motempl.hpp;/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow/pcaflow.hpp;/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow/sparse_matching_gpc.hpp
+OPENCV_MODULE_opencv_optflow_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_optflow_LABEL:INTERNAL=Extra;opencv_optflow
+OPENCV_MODULE_opencv_optflow_LINK_DEPS:INTERNAL=
+//Location of opencv_optflow module sources
+OPENCV_MODULE_opencv_optflow_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/optflow
+//Optional dependencies of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_optflow module
+OPENCV_MODULE_opencv_optflow_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_video;opencv_ximgproc;opencv_imgcodecs
+//List of source files for opencv_optflow
+OPENCV_MODULE_opencv_optflow_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/optflow/src/deepflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/dis_flow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/interfaces.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/motempl.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/optical_flow_io.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/pcaflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/simpleflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/sparse_matching_gpc.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/sparsetodenseflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/variational_refinement.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/opencl/dis_flow.cl;/Users/Chao/opencv_contrib/modules/optflow/src/opencl/sparse_matching_gpc.cl;/Users/Chao/opencv_contrib/modules/optflow/src/opencl/updatemotionhistory.cl;/Users/Chao/opencv/build/o4a/modules/optflow/opencl_kernels_optflow.cpp;/Users/Chao/opencv/build/o4a/modules/optflow/opencl_kernels_optflow.hpp;/Users/Chao/opencv_contrib/modules/optflow/src/precomp.hpp
+//List of wrappers supporting module opencv_optflow
+OPENCV_MODULE_opencv_optflow_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_phase_unwrapping_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/phase_unwrapping
+//The category of the module
+OPENCV_MODULE_opencv_phase_unwrapping_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_phase_unwrapping module (for
+// linker)
+OPENCV_MODULE_opencv_phase_unwrapping_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_DESCRIPTION:INTERNAL=Phase Unwrapping API
+//List of header files for opencv_phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping.hpp;/Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping/histogramphaseunwrapping.hpp;/Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping/phase_unwrapping.hpp
+OPENCV_MODULE_opencv_phase_unwrapping_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_phase_unwrapping_LABEL:INTERNAL=Extra;opencv_phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_LINK_DEPS:INTERNAL=
+//Location of opencv_phase_unwrapping module sources
+OPENCV_MODULE_opencv_phase_unwrapping_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/phase_unwrapping
+//Optional dependencies of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_phase_unwrapping module
+OPENCV_MODULE_opencv_phase_unwrapping_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//List of source files for opencv_phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/phase_unwrapping/src/histogramphaseunwrapping.cpp;/Users/Chao/opencv_contrib/modules/phase_unwrapping/src/precomp.hpp
+//List of wrappers supporting module opencv_phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_WRAPPERS:INTERNAL=java;python2;python3
 OPENCV_MODULE_opencv_photo_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/photo
 //The category of the module
 OPENCV_MODULE_opencv_photo_CLASS:INTERNAL=PUBLIC
@@ -2005,10 +2751,40 @@ OPENCV_MODULE_opencv_photo_REQ_DEPS:INTERNAL=opencv_imgproc
 OPENCV_MODULE_opencv_photo_SOURCES:INTERNAL=/Users/Chao/opencv/modules/photo/src/align.cpp;/Users/Chao/opencv/modules/photo/src/calibrate.cpp;/Users/Chao/opencv/modules/photo/src/contrast_preserve.cpp;/Users/Chao/opencv/modules/photo/src/denoise_tvl1.cpp;/Users/Chao/opencv/modules/photo/src/denoising.cpp;/Users/Chao/opencv/modules/photo/src/denoising.cuda.cpp;/Users/Chao/opencv/modules/photo/src/hdr_common.cpp;/Users/Chao/opencv/modules/photo/src/inpaint.cpp;/Users/Chao/opencv/modules/photo/src/merge.cpp;/Users/Chao/opencv/modules/photo/src/npr.cpp;/Users/Chao/opencv/modules/photo/src/seamless_cloning.cpp;/Users/Chao/opencv/modules/photo/src/seamless_cloning_impl.cpp;/Users/Chao/opencv/modules/photo/src/tonemap.cpp;/Users/Chao/opencv/modules/photo/src/opencl/nlmeans.cl;/Users/Chao/opencv/build/o4a/modules/photo/opencl_kernels_photo.cpp;/Users/Chao/opencv/build/o4a/modules/photo/opencl_kernels_photo.hpp;/Users/Chao/opencv/modules/photo/src/arrays.hpp;/Users/Chao/opencv/modules/photo/src/contrast_preserve.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_denoising_invoker.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_denoising_opencl.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp;/Users/Chao/opencv/modules/photo/src/hdr_common.hpp;/Users/Chao/opencv/modules/photo/src/npr.hpp;/Users/Chao/opencv/modules/photo/src/precomp.hpp;/Users/Chao/opencv/modules/photo/src/seamless_cloning.hpp
 //List of wrappers supporting module opencv_photo
 OPENCV_MODULE_opencv_photo_WRAPPERS:INTERNAL=java;python2;python3
+OPENCV_MODULE_opencv_plot_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/plot
+//The category of the module
+OPENCV_MODULE_opencv_plot_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_plot module
+OPENCV_MODULE_opencv_plot_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_plot module
+OPENCV_MODULE_opencv_plot_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_plot module (for linker)
+OPENCV_MODULE_opencv_plot_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_plot module
+OPENCV_MODULE_opencv_plot_DESCRIPTION:INTERNAL=Plot function for Mat data.
+//List of header files for opencv_plot
+OPENCV_MODULE_opencv_plot_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/plot/include/opencv2/plot.hpp
+OPENCV_MODULE_opencv_plot_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_plot_LABEL:INTERNAL=Extra;opencv_plot
+OPENCV_MODULE_opencv_plot_LINK_DEPS:INTERNAL=
+//Location of opencv_plot module sources
+OPENCV_MODULE_opencv_plot_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/plot
+//Optional dependencies of opencv_plot module
+OPENCV_MODULE_opencv_plot_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_plot module
+OPENCV_MODULE_opencv_plot_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_plot module
+OPENCV_MODULE_opencv_plot_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_plot module
+OPENCV_MODULE_opencv_plot_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//List of source files for opencv_plot
+OPENCV_MODULE_opencv_plot_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/plot/src/plot.cpp;/Users/Chao/opencv_contrib/modules/plot/src/precomp.hpp
+//List of wrappers supporting module opencv_plot
+OPENCV_MODULE_opencv_plot_WRAPPERS:INTERNAL=python2;python3
 //Location of opencv_python2 module sources
 OPENCV_MODULE_opencv_python2_LOCATION:INTERNAL=/Users/Chao/opencv/modules/python
 //Optional dependencies of opencv_python2 module
-OPENCV_MODULE_opencv_python2_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULE_opencv_python2_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_python2 module
 OPENCV_MODULE_opencv_python2_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_python2 module
@@ -2020,7 +2796,7 @@ OPENCV_MODULE_opencv_python2_WRAPPERS:INTERNAL=
 //Location of opencv_python3 module sources
 OPENCV_MODULE_opencv_python3_LOCATION:INTERNAL=/Users/Chao/opencv/modules/python
 //Optional dependencies of opencv_python3 module
-OPENCV_MODULE_opencv_python3_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULE_opencv_python3_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_python3 module
 OPENCV_MODULE_opencv_python3_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_python3 module
@@ -2029,6 +2805,98 @@ OPENCV_MODULE_opencv_python3_PRIVATE_REQ_DEPS:INTERNAL=
 OPENCV_MODULE_opencv_python3_REQ_DEPS:INTERNAL=
 //List of wrappers supporting module opencv_python3
 OPENCV_MODULE_opencv_python3_WRAPPERS:INTERNAL=
+OPENCV_MODULE_opencv_reg_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/reg
+//The category of the module
+OPENCV_MODULE_opencv_reg_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_reg module
+OPENCV_MODULE_opencv_reg_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_reg module
+OPENCV_MODULE_opencv_reg_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_reg module (for linker)
+OPENCV_MODULE_opencv_reg_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_reg module
+OPENCV_MODULE_opencv_reg_DESCRIPTION:INTERNAL=Image Registration
+//List of header files for opencv_reg
+OPENCV_MODULE_opencv_reg_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/map.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapaffine.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapper.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradaffine.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradeuclid.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradproj.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradshift.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradsimilar.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapperpyramid.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapprojec.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapshift.hpp
+OPENCV_MODULE_opencv_reg_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_reg_LABEL:INTERNAL=Extra;opencv_reg
+OPENCV_MODULE_opencv_reg_LINK_DEPS:INTERNAL=
+//Location of opencv_reg module sources
+OPENCV_MODULE_opencv_reg_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/reg
+//Optional dependencies of opencv_reg module
+OPENCV_MODULE_opencv_reg_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_reg module
+OPENCV_MODULE_opencv_reg_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_reg module
+OPENCV_MODULE_opencv_reg_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_reg module
+OPENCV_MODULE_opencv_reg_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_core
+//List of source files for opencv_reg
+OPENCV_MODULE_opencv_reg_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/reg/src/map.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapaffine.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapper.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradaffine.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradeuclid.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradproj.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradshift.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradsimilar.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapperpyramid.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapprojec.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapshift.cpp;/Users/Chao/opencv_contrib/modules/reg/src/precomp.hpp
+//List of wrappers supporting module opencv_reg
+OPENCV_MODULE_opencv_reg_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_rgbd_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/rgbd
+//The category of the module
+OPENCV_MODULE_opencv_rgbd_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Extra dependencies of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_rgbd module (for linker)
+OPENCV_MODULE_opencv_rgbd_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Brief description of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_DESCRIPTION:INTERNAL=RGBD algorithms
+//List of header files for opencv_rgbd
+OPENCV_MODULE_opencv_rgbd_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/rgbd/include/opencv2/rgbd.hpp;/Users/Chao/opencv_contrib/modules/rgbd/include/opencv2/rgbd/linemod.hpp
+OPENCV_MODULE_opencv_rgbd_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_rgbd_LABEL:INTERNAL=Extra;opencv_rgbd
+OPENCV_MODULE_opencv_rgbd_LINK_DEPS:INTERNAL=
+//Location of opencv_rgbd module sources
+OPENCV_MODULE_opencv_rgbd_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/rgbd
+//Optional dependencies of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_rgbd module
+OPENCV_MODULE_opencv_rgbd_REQ_DEPS:INTERNAL=opencv_core;opencv_calib3d;opencv_imgproc
+//List of source files for opencv_rgbd
+OPENCV_MODULE_opencv_rgbd_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/rgbd/src/depth_cleaner.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/depth_registration.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/depth_to_3d.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/linemod.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/normal.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/odometry.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/plane.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/utils.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/rgbd/src/depth_to_3d.h;/Users/Chao/opencv_contrib/modules/rgbd/src/utils.h
+//List of wrappers supporting module opencv_rgbd
+OPENCV_MODULE_opencv_rgbd_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_saliency_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/saliency
+//The category of the module
+OPENCV_MODULE_opencv_saliency_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+//Extra dependencies of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_saliency module (for linker)
+OPENCV_MODULE_opencv_saliency_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+//Brief description of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_DESCRIPTION:INTERNAL=Saliency API
+//List of header files for opencv_saliency
+OPENCV_MODULE_opencv_saliency_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/saliency/include/opencv2/saliency.hpp;/Users/Chao/opencv_contrib/modules/saliency/include/opencv2/saliency/saliencyBaseClasses.hpp;/Users/Chao/opencv_contrib/modules/saliency/include/opencv2/saliency/saliencySpecializedClasses.hpp
+OPENCV_MODULE_opencv_saliency_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_saliency_LABEL:INTERNAL=Extra;opencv_saliency
+OPENCV_MODULE_opencv_saliency_LINK_DEPS:INTERNAL=
+//Location of opencv_saliency module sources
+OPENCV_MODULE_opencv_saliency_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/saliency
+//Optional dependencies of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_saliency module
+OPENCV_MODULE_opencv_saliency_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_features2d
+//List of source files for opencv_saliency
+OPENCV_MODULE_opencv_saliency_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmFile.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmShow.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/FilterTIG.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/ValStructVec.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/objectnessBING.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/motionSaliency.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/motionSaliencyBinWangApr2014.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/objectness.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/saliency.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/staticSaliency.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/staticSaliencyFineGrained.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/staticSaliencySpectralResidual.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmFile.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmShow.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmTimer.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/kyheader.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/precomp.hpp
+//List of wrappers supporting module opencv_saliency
+OPENCV_MODULE_opencv_saliency_WRAPPERS:INTERNAL=python2;python3
+//Location of opencv_sfm module sources
+OPENCV_MODULE_opencv_sfm_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/sfm
 OPENCV_MODULE_opencv_shape_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/shape
 //The category of the module
 OPENCV_MODULE_opencv_shape_CLASS:INTERNAL=PUBLIC
@@ -2059,15 +2927,45 @@ OPENCV_MODULE_opencv_shape_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_v
 OPENCV_MODULE_opencv_shape_SOURCES:INTERNAL=/Users/Chao/opencv/modules/shape/src/aff_trans.cpp;/Users/Chao/opencv/modules/shape/src/emdL1.cpp;/Users/Chao/opencv/modules/shape/src/haus_dis.cpp;/Users/Chao/opencv/modules/shape/src/hist_cost.cpp;/Users/Chao/opencv/modules/shape/src/sc_dis.cpp;/Users/Chao/opencv/modules/shape/src/tps_trans.cpp;/Users/Chao/opencv/modules/shape/src/emdL1_def.hpp;/Users/Chao/opencv/modules/shape/src/precomp.hpp;/Users/Chao/opencv/modules/shape/src/scd_def.hpp
 //List of wrappers supporting module opencv_shape
 OPENCV_MODULE_opencv_shape_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_stereo_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/stereo
+//The category of the module
+OPENCV_MODULE_opencv_stereo_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Extra dependencies of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_stereo module (for linker)
+OPENCV_MODULE_opencv_stereo_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Brief description of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_DESCRIPTION:INTERNAL=Stereo Correspondence
+//List of header files for opencv_stereo
+OPENCV_MODULE_opencv_stereo_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo.hpp;/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo/descriptor.hpp;/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo/matching.hpp;/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo/stereo.hpp
+OPENCV_MODULE_opencv_stereo_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_stereo_LABEL:INTERNAL=Extra;opencv_stereo
+OPENCV_MODULE_opencv_stereo_LINK_DEPS:INTERNAL=
+//Location of opencv_stereo module sources
+OPENCV_MODULE_opencv_stereo_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/stereo
+//Optional dependencies of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_stereo module
+OPENCV_MODULE_opencv_stereo_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_features2d;opencv_core;opencv_calib3d
+//List of source files for opencv_stereo
+OPENCV_MODULE_opencv_stereo_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/stereo/src/descriptor.cpp;/Users/Chao/opencv_contrib/modules/stereo/src/stereo_binary_bm.cpp;/Users/Chao/opencv_contrib/modules/stereo/src/stereo_binary_sgbm.cpp;/Users/Chao/opencv_contrib/modules/stereo/src/precomp.hpp
+//List of wrappers supporting module opencv_stereo
+OPENCV_MODULE_opencv_stereo_WRAPPERS:INTERNAL=
 OPENCV_MODULE_opencv_stitching_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/stitching
 //The category of the module
 OPENCV_MODULE_opencv_stitching_CLASS:INTERNAL=PUBLIC
 //Flattened dependencies of opencv_stitching module
-OPENCV_MODULE_opencv_stitching_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_stitching_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_xfeatures2d
 //Extra dependencies of opencv_stitching module
 OPENCV_MODULE_opencv_stitching_DEPS_EXT:INTERNAL=
 //Flattened dependencies of opencv_stitching module (for linker)
-OPENCV_MODULE_opencv_stitching_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_stitching_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_xfeatures2d
 //Brief description of opencv_stitching module
 OPENCV_MODULE_opencv_stitching_DESCRIPTION:INTERNAL=Images stitching
 //List of header files for opencv_stitching
@@ -2089,6 +2987,37 @@ OPENCV_MODULE_opencv_stitching_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_features2
 OPENCV_MODULE_opencv_stitching_SOURCES:INTERNAL=/Users/Chao/opencv/modules/stitching/src/autocalib.cpp;/Users/Chao/opencv/modules/stitching/src/blenders.cpp;/Users/Chao/opencv/modules/stitching/src/camera.cpp;/Users/Chao/opencv/modules/stitching/src/exposure_compensate.cpp;/Users/Chao/opencv/modules/stitching/src/matchers.cpp;/Users/Chao/opencv/modules/stitching/src/motion_estimators.cpp;/Users/Chao/opencv/modules/stitching/src/seam_finders.cpp;/Users/Chao/opencv/modules/stitching/src/stitcher.cpp;/Users/Chao/opencv/modules/stitching/src/timelapsers.cpp;/Users/Chao/opencv/modules/stitching/src/util.cpp;/Users/Chao/opencv/modules/stitching/src/warpers.cpp;/Users/Chao/opencv/modules/stitching/src/warpers_cuda.cpp;/Users/Chao/opencv/modules/stitching/src/opencl/multibandblend.cl;/Users/Chao/opencv/modules/stitching/src/opencl/warpers.cl;/Users/Chao/opencv/build/o4a/modules/stitching/opencl_kernels_stitching.cpp;/Users/Chao/opencv/build/o4a/modules/stitching/opencl_kernels_stitching.hpp;/Users/Chao/opencv/modules/stitching/src/precomp.hpp;/Users/Chao/opencv/modules/stitching/src/util_log.hpp
 //List of wrappers supporting module opencv_stitching
 OPENCV_MODULE_opencv_stitching_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_structured_light_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/structured_light
+//The category of the module
+OPENCV_MODULE_opencv_structured_light_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Extra dependencies of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_structured_light module (for
+// linker)
+OPENCV_MODULE_opencv_structured_light_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Brief description of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_DESCRIPTION:INTERNAL=Structured Light API
+//List of header files for opencv_structured_light
+OPENCV_MODULE_opencv_structured_light_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light.hpp;/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/graycodepattern.hpp;/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/sinusoidalpattern.hpp;/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/structured_light.hpp
+OPENCV_MODULE_opencv_structured_light_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_structured_light_LABEL:INTERNAL=Extra;opencv_structured_light
+OPENCV_MODULE_opencv_structured_light_LINK_DEPS:INTERNAL=
+//Location of opencv_structured_light module sources
+OPENCV_MODULE_opencv_structured_light_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/structured_light
+//Optional dependencies of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_OPT_DEPS:INTERNAL=opencv_viz
+//Optional private dependencies of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_structured_light module
+OPENCV_MODULE_opencv_structured_light_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_calib3d;opencv_phase_unwrapping
+//List of source files for opencv_structured_light
+OPENCV_MODULE_opencv_structured_light_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/structured_light/src/graycodepattern.cpp;/Users/Chao/opencv_contrib/modules/structured_light/src/sinusoidalpattern.cpp;/Users/Chao/opencv_contrib/modules/structured_light/src/precomp.hpp
+//List of wrappers supporting module opencv_structured_light
+OPENCV_MODULE_opencv_structured_light_WRAPPERS:INTERNAL=java;python2;python3
 OPENCV_MODULE_opencv_superres_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/superres
 //The category of the module
 OPENCV_MODULE_opencv_superres_CLASS:INTERNAL=PUBLIC
@@ -2119,6 +3048,97 @@ OPENCV_MODULE_opencv_superres_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_video
 OPENCV_MODULE_opencv_superres_SOURCES:INTERNAL=/Users/Chao/opencv/modules/superres/src/btv_l1.cpp;/Users/Chao/opencv/modules/superres/src/btv_l1_cuda.cpp;/Users/Chao/opencv/modules/superres/src/frame_source.cpp;/Users/Chao/opencv/modules/superres/src/input_array_utility.cpp;/Users/Chao/opencv/modules/superres/src/optical_flow.cpp;/Users/Chao/opencv/modules/superres/src/super_resolution.cpp;/Users/Chao/opencv/modules/superres/src/opencl/superres_btvl1.cl;/Users/Chao/opencv/build/o4a/modules/superres/opencl_kernels_superres.cpp;/Users/Chao/opencv/build/o4a/modules/superres/opencl_kernels_superres.hpp;/Users/Chao/opencv/modules/superres/src/input_array_utility.hpp;/Users/Chao/opencv/modules/superres/src/precomp.hpp;/Users/Chao/opencv/modules/superres/src/ring_buffer.hpp
 //List of wrappers supporting module opencv_superres
 OPENCV_MODULE_opencv_superres_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_surface_matching_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/surface_matching
+//The category of the module
+OPENCV_MODULE_opencv_surface_matching_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_DEPS:INTERNAL=opencv_core;opencv_flann
+//Extra dependencies of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_surface_matching module (for
+// linker)
+OPENCV_MODULE_opencv_surface_matching_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann
+//Brief description of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_DESCRIPTION:INTERNAL=3D point features
+//List of header files for opencv_surface_matching
+OPENCV_MODULE_opencv_surface_matching_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/icp.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/pose_3d.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/ppf_helpers.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/ppf_match_3d.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/t_hash_int.hpp
+OPENCV_MODULE_opencv_surface_matching_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_surface_matching_LABEL:INTERNAL=Extra;opencv_surface_matching
+OPENCV_MODULE_opencv_surface_matching_LINK_DEPS:INTERNAL=
+//Location of opencv_surface_matching module sources
+OPENCV_MODULE_opencv_surface_matching_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/surface_matching
+//Optional dependencies of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_surface_matching module
+OPENCV_MODULE_opencv_surface_matching_REQ_DEPS:INTERNAL=opencv_core;opencv_flann
+//List of source files for opencv_surface_matching
+OPENCV_MODULE_opencv_surface_matching_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/surface_matching/src/icp.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/pose_3d.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/ppf_helpers.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/ppf_match_3d.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/t_hash_int.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/c_utils.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/hash_murmur.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/hash_murmur64.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/hash_murmur86.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/precomp.hpp
+//List of wrappers supporting module opencv_surface_matching
+OPENCV_MODULE_opencv_surface_matching_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_text_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/text
+//The category of the module
+OPENCV_MODULE_opencv_text_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_text module
+OPENCV_MODULE_opencv_text_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+//Extra dependencies of opencv_text module
+OPENCV_MODULE_opencv_text_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_text module (for linker)
+OPENCV_MODULE_opencv_text_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+//Brief description of opencv_text module
+OPENCV_MODULE_opencv_text_DESCRIPTION:INTERNAL=Text Detection and Recognition
+//List of header files for opencv_text
+OPENCV_MODULE_opencv_text_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/text/include/opencv2/text.hpp;/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/erfilter.hpp;/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/ocr.hpp;/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/textDetector.hpp
+OPENCV_MODULE_opencv_text_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_text_LABEL:INTERNAL=Extra;opencv_text
+OPENCV_MODULE_opencv_text_LINK_DEPS:INTERNAL=
+//Location of opencv_text module sources
+OPENCV_MODULE_opencv_text_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/text
+//Optional dependencies of opencv_text module
+OPENCV_MODULE_opencv_text_OPT_DEPS:INTERNAL=opencv_highgui
+//Optional private dependencies of opencv_text module
+OPENCV_MODULE_opencv_text_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_text module
+OPENCV_MODULE_opencv_text_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_text module
+OPENCV_MODULE_opencv_text_REQ_DEPS:INTERNAL=opencv_ml;opencv_imgproc;opencv_core;opencv_features2d;opencv_dnn
+//List of source files for opencv_text
+OPENCV_MODULE_opencv_text_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/text/src/erfilter.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_beamsearch_decoder.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_hmm_decoder.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_holistic.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_tesseract.cpp;/Users/Chao/opencv_contrib/modules/text/src/text_detectorCNN.cpp;/Users/Chao/opencv_contrib/modules/text/src/precomp.hpp
+//List of wrappers supporting module opencv_text
+OPENCV_MODULE_opencv_text_WRAPPERS:INTERNAL=java;python2;python3
+OPENCV_MODULE_opencv_tracking_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/tracking
+//The category of the module
+OPENCV_MODULE_opencv_tracking_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_datasets
+//Extra dependencies of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_tracking module (for linker)
+OPENCV_MODULE_opencv_tracking_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_datasets
+//Brief description of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_DESCRIPTION:INTERNAL=Tracking API
+//List of header files for opencv_tracking
+OPENCV_MODULE_opencv_tracking_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/feature.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/kalman_filters.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/onlineBoosting.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/onlineMIL.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/tldDataset.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/tracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/tracking.hpp
+OPENCV_MODULE_opencv_tracking_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_tracking_LABEL:INTERNAL=Extra;opencv_tracking
+OPENCV_MODULE_opencv_tracking_LINK_DEPS:INTERNAL=
+//Location of opencv_tracking module sources
+OPENCV_MODULE_opencv_tracking_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/tracking
+//Optional dependencies of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_OPT_DEPS:INTERNAL=opencv_dnn;opencv_datasets
+//Optional private dependencies of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_tracking module
+OPENCV_MODULE_opencv_tracking_REQ_DEPS:INTERNAL=opencv_imgproc;opencv_core;opencv_video;opencv_plot
+//List of source files for opencv_tracking
+OPENCV_MODULE_opencv_tracking_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/tracking/src/augmented_unscented_kalman.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/feature.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/featureColorName.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrUtils.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/mosseTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/multiTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/multiTracker_alt.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/onlineBoosting.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/onlineMIL.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldDataset.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldDetector.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldEnsembleClassifier.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldUtils.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerBoosting.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerBoostingModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerFeature.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerFeatureSet.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerKCF.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMIL.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMILModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMedianFlow.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerSampler.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerSamplerAlgorithm.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerStateEstimator.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tracking_utils.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/unscented_kalman.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/opencl/tldDetector.cl;/Users/Chao/opencv_contrib/modules/tracking/src/opencl/tmm.cl;/Users/Chao/opencv/build/o4a/modules/tracking/opencl_kernels_tracking.cpp;/Users/Chao/opencv/build/o4a/modules/tracking/opencl_kernels_tracking.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/PFSolver.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/TrackingFunctionPF.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrTracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrUtils.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/multiTracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldDetector.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldEnsembleClassifier.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldModel.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldTracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldUtils.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerBoostingModel.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMILModel.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tracking_utils.hpp
+//List of wrappers supporting module opencv_tracking
+OPENCV_MODULE_opencv_tracking_WRAPPERS:INTERNAL=java;python2;python3
 //Location of opencv_ts module sources
 OPENCV_MODULE_opencv_ts_LOCATION:INTERNAL=/Users/Chao/opencv/modules/ts
 OPENCV_MODULE_opencv_video_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/video
@@ -2223,7 +3243,7 @@ OPENCV_MODULE_opencv_world_LINK_DEPS:INTERNAL=
 //Location of opencv_world module sources
 OPENCV_MODULE_opencv_world_LOCATION:INTERNAL=/Users/Chao/opencv/modules/world
 //Optional dependencies of opencv_world module
-OPENCV_MODULE_opencv_world_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULE_opencv_world_OPT_DEPS:INTERNAL=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 //Optional private dependencies of opencv_world module
 OPENCV_MODULE_opencv_world_PRIVATE_OPT_DEPS:INTERNAL=
 //Required private dependencies of opencv_world module
@@ -2232,10 +3252,130 @@ OPENCV_MODULE_opencv_world_PRIVATE_REQ_DEPS:INTERNAL=
 OPENCV_MODULE_opencv_world_REQ_DEPS:INTERNAL=opencv_core
 //List of wrappers supporting module opencv_world
 OPENCV_MODULE_opencv_world_WRAPPERS:INTERNAL=
+OPENCV_MODULE_opencv_xfeatures2d_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/xfeatures2d
+//The category of the module
+OPENCV_MODULE_opencv_xfeatures2d_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Extra dependencies of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_xfeatures2d module (for linker)
+OPENCV_MODULE_opencv_xfeatures2d_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Brief description of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_DESCRIPTION:INTERNAL=Contributed/Experimental Algorithms for Salient 2D Features Detection
+//List of header files for opencv_xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d/cuda.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d/nonfree.hpp
+OPENCV_MODULE_opencv_xfeatures2d_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_xfeatures2d_LABEL:INTERNAL=Extra;opencv_xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_LINK_DEPS:INTERNAL=
+//Location of opencv_xfeatures2d module sources
+OPENCV_MODULE_opencv_xfeatures2d_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/xfeatures2d
+//Optional dependencies of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_OPT_DEPS:INTERNAL=opencv_shape;opencv_ml;opencv_cudaarithm
+//Optional private dependencies of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_xfeatures2d module
+OPENCV_MODULE_opencv_xfeatures2d_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_features2d;opencv_calib3d
+//List of source files for opencv_xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/xfeatures2d/src/affine_feature2d.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/boostdesc.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/brief.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/daisy.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/ellipticKeyPoint.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/fast.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/freak.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/harris_lapace_detector.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/latch.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/lucid.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/msd.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/grayscale_bitmap.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_clusterizer.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_sampler.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures_sqfd.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/sift.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/stardetector.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.cuda.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.ocl.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/vgg.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/xfeatures2d_init.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/opencl/surf.cl;/Users/Chao/opencv/build/o4a/modules/xfeatures2d/opencl_kernels_xfeatures2d.cpp;/Users/Chao/opencv/build/o4a/modules/xfeatures2d/opencl_kernels_xfeatures2d.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/constants.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/distance.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/grayscale_bitmap.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_clusterizer.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_sampler.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/similarity.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.hpp
+//List of wrappers supporting module opencv_xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_WRAPPERS:INTERNAL=java;python2;python3
+OPENCV_MODULE_opencv_ximgproc_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/ximgproc
+//The category of the module
+OPENCV_MODULE_opencv_ximgproc_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_DEPS:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Extra dependencies of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_ximgproc module (for linker)
+OPENCV_MODULE_opencv_ximgproc_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+//Brief description of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_DESCRIPTION:INTERNAL=Extended image processing module. It includes edge-aware filters and etc.
+//List of header files for opencv_ximgproc
+OPENCV_MODULE_opencv_ximgproc_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/deriche_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/disparity_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/edge_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/edgeboxes.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/estimated_covariance.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/fast_hough_transform.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/fast_line_detector.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/fourier_descriptors.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/lsc.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/paillou_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/peilin.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/ridgefilter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/seeds.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/segmentation.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/slic.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/sparse_match_interpolator.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/structured_edge_detection.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/weighted_median_filter.hpp
+OPENCV_MODULE_opencv_ximgproc_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_ximgproc_LABEL:INTERNAL=Extra;opencv_ximgproc
+OPENCV_MODULE_opencv_ximgproc_LINK_DEPS:INTERNAL=
+//Location of opencv_ximgproc module sources
+OPENCV_MODULE_opencv_ximgproc_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/ximgproc
+//Optional dependencies of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_ximgproc module
+OPENCV_MODULE_opencv_ximgproc_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_calib3d;opencv_imgcodecs
+//List of source files for opencv_ximgproc
+OPENCV_MODULE_opencv_ximgproc_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/ximgproc/src/adaptive_manifold_filter_n.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/anisodiff.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/bilateral_texture_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/deriche_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/disparity_filters.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/domain_transform.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/dtfilter_cpu.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/edgeaware_filters_common.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/edgeboxes.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/estimated_covariance.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fast_hough_transform.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fast_line_detector.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fgs_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fourier_descriptors.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/graphsegmentation.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/guided_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/joint_bilateral_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/l0_smooth.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/lsc.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/niblack_thresholding.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/paillou_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/peilin.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/ridgedetectionfilter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/rolling_guidance_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/seeds.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/selectivesearchsegmentation.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/slic.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/sparse_match_interpolators.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/structured_edge_detection.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/thinning.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/weighted_median_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/opencl/anisodiff.cl;/Users/Chao/opencv/build/o4a/modules/ximgproc/opencl_kernels_ximgproc.cpp;/Users/Chao/opencv/build/o4a/modules/ximgproc/opencl_kernels_ximgproc.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/advanced_types.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/dtfilter_cpu.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/dtfilter_cpu.inl.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/edgeaware_filters_common.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/precomp.hpp
+//List of wrappers supporting module opencv_ximgproc
+OPENCV_MODULE_opencv_ximgproc_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_xobjdetect_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/xobjdetect
+//The category of the module
+OPENCV_MODULE_opencv_xobjdetect_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs
+//Extra dependencies of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_xobjdetect module (for linker)
+OPENCV_MODULE_opencv_xobjdetect_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs
+//Brief description of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_DESCRIPTION:INTERNAL=Object detection algorithms
+//List of header files for opencv_xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/xobjdetect/include/opencv2/xobjdetect.hpp
+OPENCV_MODULE_opencv_xobjdetect_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_xobjdetect_LABEL:INTERNAL=Extra;opencv_xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_LINK_DEPS:INTERNAL=
+//Location of opencv_xobjdetect module sources
+OPENCV_MODULE_opencv_xobjdetect_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/xobjdetect
+//Optional dependencies of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_xobjdetect module
+OPENCV_MODULE_opencv_xobjdetect_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs
+//List of source files for opencv_xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/xobjdetect/src/feature_evaluator.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/lbpfeatures.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/waldboost.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/wbdetector.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/feature_evaluator.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/waldboost.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/wbdetector.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/cascadeclassifier.h;/Users/Chao/opencv_contrib/modules/xobjdetect/src/lbpfeatures.h
+//List of wrappers supporting module opencv_xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_WRAPPERS:INTERNAL=python2;python3
+OPENCV_MODULE_opencv_xphoto_BINARY_DIR:INTERNAL=/Users/Chao/opencv/build/o4a/modules/xphoto
+//The category of the module
+OPENCV_MODULE_opencv_xphoto_CLASS:INTERNAL=PUBLIC
+//Flattened dependencies of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//Extra dependencies of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_DEPS_EXT:INTERNAL=
+//Flattened dependencies of opencv_xphoto module (for linker)
+OPENCV_MODULE_opencv_xphoto_DEPS_TO_LINK:INTERNAL=opencv_core;opencv_imgproc
+//Brief description of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_DESCRIPTION:INTERNAL=Addon to basic photo module
+//List of header files for opencv_xphoto
+OPENCV_MODULE_opencv_xphoto_HEADERS:INTERNAL=/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/bm3d_image_denoising.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/dct_image_denoising.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/inpainting.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/white_balance.hpp
+OPENCV_MODULE_opencv_xphoto_IS_PART_OF_WORLD:INTERNAL=ON
+OPENCV_MODULE_opencv_xphoto_LABEL:INTERNAL=Extra;opencv_xphoto
+OPENCV_MODULE_opencv_xphoto_LINK_DEPS:INTERNAL=
+//Location of opencv_xphoto module sources
+OPENCV_MODULE_opencv_xphoto_LOCATION:INTERNAL=/Users/Chao/opencv_contrib/modules/xphoto
+//Optional dependencies of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_OPT_DEPS:INTERNAL=
+//Optional private dependencies of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_PRIVATE_OPT_DEPS:INTERNAL=
+//Required private dependencies of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_PRIVATE_REQ_DEPS:INTERNAL=
+//Required dependencies of opencv_xphoto module
+OPENCV_MODULE_opencv_xphoto_REQ_DEPS:INTERNAL=opencv_core;opencv_imgproc
+//List of source files for opencv_xphoto
+OPENCV_MODULE_opencv_xphoto_SOURCES:INTERNAL=/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_image_denoising.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/dct_image_denoising.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/grayworld_white_balance.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/inpainting.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/learning_based_color_balance.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/simple_color_balance.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/advanced_types.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/annf.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/blending.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_commons.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_step1.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_step2.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_structs.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms_1D.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms_2D.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms_haar.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/gcgraph.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/kaiser_window.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/learning_based_color_balance_model.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/norm2.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/photomontage.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/whs.hpp
+//List of wrappers supporting module opencv_xphoto
+OPENCV_MODULE_opencv_xphoto_WRAPPERS:INTERNAL=python2;python3
 //List of OpenCV modules included into the world
 OPENCV_WORLD_MODULES:INTERNAL=
 //List of OpenCVModules targets
-OpenCVModules_TARGETS:INTERNAL=libcpufeatures;libtiff;libjpeg;libwebp;libjasper;libpng;IlmImf;tbb;libprotobuf;opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_superres;opencv_features2d;opencv_calib3d;opencv_stitching;opencv_videostab;opencv_aruco;opencv_java
+OpenCVModules_TARGETS:INTERNAL=libcpufeatures;libtiff;libjpeg;libwebp;libjasper;libpng;IlmImf;tbb;libprotobuf;opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_reg;opencv_surface_matching;opencv_video;opencv_xphoto;opencv_bgsegm;opencv_dnn;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_xobjdetect;opencv_highgui;opencv_superres;opencv_bioinspired;opencv_dpm;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_rgbd;opencv_stereo;opencv_structured_light;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_aruco;opencv_java;opencv_optflow;opencv_stitching
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON2INTERP_FOUND:INTERNAL=TRUE
@@ -2249,7 +3389,7 @@ PYTHON2_NUMPY_VERSION:INTERNAL=
 PYTHON2_VERSION_MAJOR:INTERNAL=2
 PYTHON2_VERSION_MINOR:INTERNAL=7
 PYTHON2_VERSION_STRING:INTERNAL=2.7.10
-PYTHON3INTERP_FOUND:INTERNAL=TRUE
+PYTHON3INTERP_FOUND:INTERNAL=
 PYTHON3LIBS_FOUND:INTERNAL=
 PYTHON3LIBS_VERSION_STRING:INTERNAL=
 PYTHON3_DEBUG_LIBRARIES:INTERNAL=
@@ -2257,9 +3397,11 @@ PYTHON3_INCLUDE_PATH:INTERNAL=
 //Python libraries
 PYTHON3_LIBRARIES:INTERNAL=
 PYTHON3_NUMPY_VERSION:INTERNAL=
-PYTHON3_VERSION_MAJOR:INTERNAL=3
-PYTHON3_VERSION_MINOR:INTERNAL=6
-PYTHON3_VERSION_STRING:INTERNAL=3.6.3
+PYTHON3_VERSION_MAJOR:INTERNAL=
+PYTHON3_VERSION_MINOR:INTERNAL=
+PYTHON3_VERSION_STRING:INTERNAL=
+//ADVANCED property for variable: PYTHON_EXECUTABLE
+PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //TBB_INTERFACE_VERSION parsed from /Users/Chao/opencv/build/o4a/3rdparty/tbb/tbb-2018_U1/include/tbb/tbb_stddef.h
 TBB_INTERFACE_VERSION:INTERNAL=10001
 //TBB_VERSION_MAJOR parsed from /Users/Chao/opencv/build/o4a/3rdparty/tbb/tbb-2018_U1/include/tbb/tbb_stddef.h

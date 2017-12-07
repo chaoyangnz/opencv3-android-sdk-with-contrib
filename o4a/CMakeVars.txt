@@ -64,7 +64,7 @@ ANDROID_RELRO=ON
 ANDROID_RTTI=ON
 ANDROID_SDK_OS=macosx
 ANDROID_SDK_TARGET=
-ANDROID_SDK_TARGETS=android-9;android-11;android-14;android-16;android-21;android-22;android-23;android-25;android-26;android-27
+ANDROID_SDK_TARGETS=android-9;android-10;android-11;android-14;android-16;android-21;android-22;android-23;android-25;android-26;android-27
 ANDROID_SDK_TOOLS_PATH=/Users/Chao/Library/Android/sdk/tools
 ANDROID_SDK_TOOLS_SOURCE_PROPERTIES_LINES=Pkg.UserSrc=false;Pkg.Revision=25.2.5;Platform.MinPlatformToolsRev=20
 ANDROID_SO_UNDEFINED=OFF
@@ -126,26 +126,50 @@ BUILD_WITH_DYNAMIC_IPP=OFF
 BUILD_ZLIB=OFF
 BUILD_opencv_apps=OFF
 BUILD_opencv_aruco=ON
+BUILD_opencv_bgsegm=ON
+BUILD_opencv_bioinspired=ON
 BUILD_opencv_calib3d=ON
+BUILD_opencv_ccalib=ON
 BUILD_opencv_core=ON
+BUILD_opencv_datasets=ON
 BUILD_opencv_dnn=ON
+BUILD_opencv_dpm=ON
+BUILD_opencv_face=ON
 BUILD_opencv_features2d=ON
 BUILD_opencv_flann=ON
+BUILD_opencv_fuzzy=ON
 BUILD_opencv_highgui=ON
+BUILD_opencv_img_hash=ON
 BUILD_opencv_imgcodecs=ON
 BUILD_opencv_imgproc=ON
 BUILD_opencv_java=ON
 BUILD_opencv_js=OFF
+BUILD_opencv_line_descriptor=ON
 BUILD_opencv_ml=ON
 BUILD_opencv_objdetect=ON
+BUILD_opencv_optflow=ON
+BUILD_opencv_phase_unwrapping=ON
 BUILD_opencv_photo=ON
+BUILD_opencv_plot=ON
+BUILD_opencv_reg=ON
+BUILD_opencv_rgbd=ON
+BUILD_opencv_saliency=ON
 BUILD_opencv_shape=ON
+BUILD_opencv_stereo=ON
 BUILD_opencv_stitching=ON
+BUILD_opencv_structured_light=ON
 BUILD_opencv_superres=ON
+BUILD_opencv_surface_matching=ON
+BUILD_opencv_text=ON
+BUILD_opencv_tracking=ON
 BUILD_opencv_video=ON
 BUILD_opencv_videoio=ON
 BUILD_opencv_videostab=ON
 BUILD_opencv_world=OFF
+BUILD_opencv_xfeatures2d=ON
+BUILD_opencv_ximgproc=ON
+BUILD_opencv_xobjdetect=ON
+BUILD_opencv_xphoto=ON
 CACHED_CPU_BASELINE_FLAGS= -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer 
 CAN_BUILD_ANDROID_PROJECTS=TRUE
 CCACHE_PROGRAM=CCACHE_PROGRAM-NOTFOUND
@@ -857,10 +881,10 @@ CMAKE_GENERATOR_TOOLSET=
 CMAKE_HELPER_SCRIPT=/Users/Chao/opencv/build/o4a/OpenCVGenPkgConfig.info.cmake
 CMAKE_HOME_DIRECTORY=/Users/Chao/opencv
 CMAKE_HOST_APPLE=1
-CMAKE_HOST_SYSTEM=Darwin-16.7.0
+CMAKE_HOST_SYSTEM=Darwin-17.2.0
 CMAKE_HOST_SYSTEM_NAME=Darwin
 CMAKE_HOST_SYSTEM_PROCESSOR=x86_64
-CMAKE_HOST_SYSTEM_VERSION=16.7.0
+CMAKE_HOST_SYSTEM_VERSION=17.2.0
 CMAKE_HOST_UNIX=1
 CMAKE_INCLUDE_FLAG_C=-I
 CMAKE_INCLUDE_FLAG_CXX=-I
@@ -993,6 +1017,7 @@ CMAKE_TWEAK_VERSION=0
 CMAKE_UNAME=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE=FALSE
 CMAKE_VERSION=3.9.4
+COMPILER_SUPPORTS_CXX11=1
 CPACK_BINARY_7Z=
 CPACK_BINARY_BUNDLE=
 CPACK_BINARY_CYGWIN=
@@ -1149,6 +1174,9 @@ CV_PARALLEL_FRAMEWORK=TBB (ver 2018.0 interface 10001)
 CV_TRACE=ON
 CXX_TEST_WAS_RUN=1
 C_TEST_WAS_RUN=1
+Caffe_INCLUDE_DIR=Caffe_INCLUDE_DIR-NOTFOUND
+Caffe_LIBS=Caffe_LIBS-NOTFOUND
+Ceres_DIR=Ceres_DIR-NOTFOUND
 EIGEN_INCLUDE_PATH=EIGEN_INCLUDE_PATH-NOTFOUND
 ENABLE_BUILD_HARDENING=OFF
 ENABLE_CCACHE=ON
@@ -1163,16 +1191,22 @@ ENABLE_PROFILING=OFF
 ENABLE_PYLINT=OFF
 ENABLE_SOLUTION_FOLDERS=OFF
 EXECUTABLE_OUTPUT_PATH=/Users/Chao/opencv/build/o4a/bin
-EXTRA_MODULES_VCSVERSION=3.3.1-73-g004ac553-dirty
+EXTRA_MODULES_VCSVERSION=3.3.1-73-g004ac553
 FILE=
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp=[/Users/Chao/anaconda3/bin/python3][v3.6.3(3.4)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp=[/usr/bin/python2.7][v2.7.10(2.7)]
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB=[/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/libz.so][/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include][v1.2.3(1.2.3)]
 GENERATE_ABI_DESCRIPTOR=OFF
+GFLAGS_INCLUDE_DIR=GFLAGS_INCLUDE_DIR-NOTFOUND
+GFLAGS_LIBRARY=
+GFLAGS_NAMESPACE=
 GIT_EXECUTABLE=/usr/bin/git
 GIT_FOUND=TRUE
 GIT_RESULT=0
 GIT_VERSION_STRING=2.13.6 (Apple Git-96)
+GLOG_INCLUDE_DIR=GLOG_INCLUDE_DIR-NOTFOUND
+GLOG_LIBRARY=
 Git_FOUND=TRUE
+Glog_LIBS=Glog_LIBS-NOTFOUND
 HAVE_ASSERT_H=1
 HAVE_CMAKE_SIZEOF_UNSIGNED_SHORT=TRUE
 HAVE_CONCURRENCY=0
@@ -1210,6 +1244,7 @@ HAVE_CXX_WNO_MISLEADING_INDENTATION=
 HAVE_CXX_WNO_MISSING_DECLARATIONS=1
 HAVE_CXX_WNO_MISSING_PROTOTYPES=
 HAVE_CXX_WNO_NARROWING=1
+HAVE_CXX_WNO_OVERLOADED_VIRTUAL=1
 HAVE_CXX_WNO_PARENTHESES=1
 HAVE_CXX_WNO_SHADOW=1
 HAVE_CXX_WNO_SHORTEN_64_TO_32=
@@ -1304,7 +1339,11 @@ HAVE_UNISTD_H=1
 HAVE_WEBP=1
 HAVE_WORDS_BIGENDIAN=TRUE
 HAVE_opencv_aruco=ON
+HAVE_opencv_bgsegm=ON
+HAVE_opencv_bioinspired=ON
 HAVE_opencv_calib3d=ON
+HAVE_opencv_ccalib=ON
+HAVE_opencv_cnn_3dobj=OFF
 HAVE_opencv_core=ON
 HAVE_opencv_cudaarithm=OFF
 HAVE_opencv_cudabgsegm=OFF
@@ -1318,28 +1357,55 @@ HAVE_opencv_cudaoptflow=OFF
 HAVE_opencv_cudastereo=OFF
 HAVE_opencv_cudawarping=OFF
 HAVE_opencv_cudev=OFF
+HAVE_opencv_cvv=OFF
+HAVE_opencv_datasets=ON
 HAVE_opencv_dnn=ON
+HAVE_opencv_dnn_modern=OFF
+HAVE_opencv_dpm=ON
+HAVE_opencv_face=ON
 HAVE_opencv_features2d=ON
 HAVE_opencv_flann=ON
+HAVE_opencv_freetype=OFF
+HAVE_opencv_fuzzy=ON
+HAVE_opencv_hdf=OFF
 HAVE_opencv_highgui=ON
+HAVE_opencv_img_hash=ON
 HAVE_opencv_imgcodecs=ON
 HAVE_opencv_imgproc=ON
 HAVE_opencv_java=ON
 HAVE_opencv_js=OFF
+HAVE_opencv_line_descriptor=ON
+HAVE_opencv_matlab=OFF
 HAVE_opencv_ml=ON
 HAVE_opencv_objdetect=ON
+HAVE_opencv_optflow=ON
+HAVE_opencv_phase_unwrapping=ON
 HAVE_opencv_photo=ON
+HAVE_opencv_plot=ON
 HAVE_opencv_python2=OFF
 HAVE_opencv_python3=OFF
+HAVE_opencv_reg=ON
+HAVE_opencv_rgbd=ON
+HAVE_opencv_saliency=ON
+HAVE_opencv_sfm=OFF
 HAVE_opencv_shape=ON
+HAVE_opencv_stereo=ON
 HAVE_opencv_stitching=ON
+HAVE_opencv_structured_light=ON
 HAVE_opencv_superres=ON
+HAVE_opencv_surface_matching=ON
+HAVE_opencv_text=ON
+HAVE_opencv_tracking=ON
 HAVE_opencv_ts=OFF
 HAVE_opencv_video=ON
 HAVE_opencv_videoio=ON
 HAVE_opencv_videostab=ON
 HAVE_opencv_viz=OFF
 HAVE_opencv_world=OFF
+HAVE_opencv_xfeatures2d=ON
+HAVE_opencv_ximgproc=ON
+HAVE_opencv_xobjdetect=ON
+HAVE_opencv_xphoto=ON
 HELPER_SCRIPT=
 set(BUILD_SHARED_LIBS "OFF")
 
@@ -1359,19 +1425,11 @@ set(OPENCV_INCLUDE_INSTALL_PATH "sdk/native/jni/include")
 
 set(OPENCV_3P_LIB_INSTALL_PATH "sdk/native/3rdparty/libs/mips")
 
-set(_modules "opencv_dnn;opencv_ml;opencv_objdetect;opencv_shape;opencv_stitching;opencv_superres;opencv_videostab;opencv_video;opencv_photo;opencv_aruco;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_imgproc;opencv_flann;opencv_core")
+set(_modules "opencv_stitching;opencv_superres;opencv_videostab;opencv_photo;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_xfeatures2d;opencv_shape;opencv_video;opencv_ml;opencv_ximgproc;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_flann;opencv_xobjdetect;opencv_imgcodecs;opencv_objdetect;opencv_xphoto;opencv_imgproc;opencv_core")
 
 set(_extra "z;dl;m;log")
 
 set(_3rdparty "libcpufeatures;libprotobuf;libjpeg;libwebp;libpng;libtiff;libjasper;IlmImf;tbb")
-
-set(TARGET_LOCATION_opencv_dnn "$<TARGET_FILE:opencv_dnn>")
-
-set(TARGET_LOCATION_opencv_ml "$<TARGET_FILE:opencv_ml>")
-
-set(TARGET_LOCATION_opencv_objdetect "$<TARGET_FILE:opencv_objdetect>")
-
-set(TARGET_LOCATION_opencv_shape "$<TARGET_FILE:opencv_shape>")
 
 set(TARGET_LOCATION_opencv_stitching "$<TARGET_FILE:opencv_stitching>")
 
@@ -1379,11 +1437,61 @@ set(TARGET_LOCATION_opencv_superres "$<TARGET_FILE:opencv_superres>")
 
 set(TARGET_LOCATION_opencv_videostab "$<TARGET_FILE:opencv_videostab>")
 
-set(TARGET_LOCATION_opencv_video "$<TARGET_FILE:opencv_video>")
-
 set(TARGET_LOCATION_opencv_photo "$<TARGET_FILE:opencv_photo>")
 
 set(TARGET_LOCATION_opencv_aruco "$<TARGET_FILE:opencv_aruco>")
+
+set(TARGET_LOCATION_opencv_bgsegm "$<TARGET_FILE:opencv_bgsegm>")
+
+set(TARGET_LOCATION_opencv_bioinspired "$<TARGET_FILE:opencv_bioinspired>")
+
+set(TARGET_LOCATION_opencv_ccalib "$<TARGET_FILE:opencv_ccalib>")
+
+set(TARGET_LOCATION_opencv_dpm "$<TARGET_FILE:opencv_dpm>")
+
+set(TARGET_LOCATION_opencv_face "$<TARGET_FILE:opencv_face>")
+
+set(TARGET_LOCATION_opencv_fuzzy "$<TARGET_FILE:opencv_fuzzy>")
+
+set(TARGET_LOCATION_opencv_img_hash "$<TARGET_FILE:opencv_img_hash>")
+
+set(TARGET_LOCATION_opencv_line_descriptor "$<TARGET_FILE:opencv_line_descriptor>")
+
+set(TARGET_LOCATION_opencv_optflow "$<TARGET_FILE:opencv_optflow>")
+
+set(TARGET_LOCATION_opencv_reg "$<TARGET_FILE:opencv_reg>")
+
+set(TARGET_LOCATION_opencv_rgbd "$<TARGET_FILE:opencv_rgbd>")
+
+set(TARGET_LOCATION_opencv_saliency "$<TARGET_FILE:opencv_saliency>")
+
+set(TARGET_LOCATION_opencv_stereo "$<TARGET_FILE:opencv_stereo>")
+
+set(TARGET_LOCATION_opencv_structured_light "$<TARGET_FILE:opencv_structured_light>")
+
+set(TARGET_LOCATION_opencv_phase_unwrapping "$<TARGET_FILE:opencv_phase_unwrapping>")
+
+set(TARGET_LOCATION_opencv_surface_matching "$<TARGET_FILE:opencv_surface_matching>")
+
+set(TARGET_LOCATION_opencv_tracking "$<TARGET_FILE:opencv_tracking>")
+
+set(TARGET_LOCATION_opencv_datasets "$<TARGET_FILE:opencv_datasets>")
+
+set(TARGET_LOCATION_opencv_text "$<TARGET_FILE:opencv_text>")
+
+set(TARGET_LOCATION_opencv_dnn "$<TARGET_FILE:opencv_dnn>")
+
+set(TARGET_LOCATION_opencv_plot "$<TARGET_FILE:opencv_plot>")
+
+set(TARGET_LOCATION_opencv_xfeatures2d "$<TARGET_FILE:opencv_xfeatures2d>")
+
+set(TARGET_LOCATION_opencv_shape "$<TARGET_FILE:opencv_shape>")
+
+set(TARGET_LOCATION_opencv_video "$<TARGET_FILE:opencv_video>")
+
+set(TARGET_LOCATION_opencv_ml "$<TARGET_FILE:opencv_ml>")
+
+set(TARGET_LOCATION_opencv_ximgproc "$<TARGET_FILE:opencv_ximgproc>")
 
 set(TARGET_LOCATION_opencv_calib3d "$<TARGET_FILE:opencv_calib3d>")
 
@@ -1393,11 +1501,17 @@ set(TARGET_LOCATION_opencv_highgui "$<TARGET_FILE:opencv_highgui>")
 
 set(TARGET_LOCATION_opencv_videoio "$<TARGET_FILE:opencv_videoio>")
 
+set(TARGET_LOCATION_opencv_flann "$<TARGET_FILE:opencv_flann>")
+
+set(TARGET_LOCATION_opencv_xobjdetect "$<TARGET_FILE:opencv_xobjdetect>")
+
 set(TARGET_LOCATION_opencv_imgcodecs "$<TARGET_FILE:opencv_imgcodecs>")
 
-set(TARGET_LOCATION_opencv_imgproc "$<TARGET_FILE:opencv_imgproc>")
+set(TARGET_LOCATION_opencv_objdetect "$<TARGET_FILE:opencv_objdetect>")
 
-set(TARGET_LOCATION_opencv_flann "$<TARGET_FILE:opencv_flann>")
+set(TARGET_LOCATION_opencv_xphoto "$<TARGET_FILE:opencv_xphoto>")
+
+set(TARGET_LOCATION_opencv_imgproc "$<TARGET_FILE:opencv_imgproc>")
 
 set(TARGET_LOCATION_opencv_core "$<TARGET_FILE:opencv_core>")
 
@@ -1463,6 +1577,18 @@ M_LIBRARY=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/lib
 NDK_CCACHE=NDK_CCACHE-NOTFOUND
 OCV_COMPILER_FAIL_REGEX=command line option .* is valid for .* but not for C\+\+;command line option .* is valid for .* but not for C;unrecognized .*option;unknown .*option;ignoring unknown option;warning D9002;option .*not supported;[Uu]nknown option;[Ww]arning: [Oo]ption;command option .* is not recognized;not supported in this configuration, ignored;File with unknown suffix passed to linker;WARNING: unknown flag:
 OCV_DOWNLOAD_TBB_HASH_3rdparty_tbb_2018_U1_tar_gz=b2f2fa09adf44a22f4024049907f774b
+OCV_DOWNLOAD_TINY_DNN_HASH_3rdparty_tinydnn_v1_0_0a3_tar_gz=adb1c512e09ca2c7a6faef36f9c53e59
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_bgm_bi_i=232c966b13651bd0e46a1497b0852191
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_bgm_hd_i=324426a24fa56ad9c5b8e3e0b3e5303e
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_bgm_i=0ea90e7a8f3f7876d450e4149c97c74f
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_binboost_064_i=202e1b3e9fec871b04da31f7f016679f
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_binboost_128_i=98ea99d399965c03d555cef3ea502a0b
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_binboost_256_i=e6dcfa9f647779eb1ce446a8d759b6ea
+OCV_DOWNLOAD_XFEATURES2D_BOOSTDESC_HASH_downloads_xfeatures2d_boostdesc_lbgm_i=0ae0675534aa318d9668f2a179c2a052
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_120_i=151805e03568c9f490a5e3a872777b75
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_48_i=e8d0dcd54d1bcfdc29203d011a797179
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_64_i=7126a5d9a8884ebca5aea5d63d677225
+OCV_DOWNLOAD_XFEATURES2D_VGG_HASH_downloads_xfeatures2d_vgg_generated_80_i=7cd47228edec52b6d82f46511af325c5
 OPENCV_3P_LIB_INSTALL_PATH=sdk/native/3rdparty/libs/mips
 OPENCV_3RDPARTY_COMPONENTS=libcpufeatures;libprotobuf;libjpeg;libwebp;libpng;libtiff;libjasper;IlmImf;tbb
 OPENCV_3RDPARTY_COMPONENTS_CONFIGMAKE=cpufeatures libprotobuf libjpeg libwebp libpng libtiff libjasper IlmImf tbb
@@ -1706,36 +1832,60 @@ OPENCV_LIBVERSION=3.3.1
 OPENCV_LIB_INSTALL_PATH=sdk/native/libs/mips
 OPENCV_LICENSE_FILE=/Users/Chao/opencv/LICENSE
 OPENCV_LINKER_LIBS=dl;m;log;tbb
-OPENCV_MODULES=opencv_dnn;opencv_ml;opencv_objdetect;opencv_shape;opencv_stitching;opencv_superres;opencv_videostab;opencv_video;opencv_photo;opencv_aruco;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_imgproc;opencv_flann;opencv_core
-OPENCV_MODULES_BUILD=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_superres;opencv_features2d;opencv_calib3d;opencv_stitching;opencv_videostab;opencv_aruco;opencv_java
-OPENCV_MODULES_BUILD_ST=core;flann;imgproc;ml;objdetect;photo;video;dnn;imgcodecs;shape;videoio;highgui;superres;features2d;calib3d;stitching;videostab;aruco;java
-OPENCV_MODULES_CONFIGCMAKE=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_java
-OPENCV_MODULES_CONFIGMAKE=dnn ml objdetect shape stitching superres videostab video photo aruco calib3d features2d highgui videoio imgcodecs imgproc flann core
+OPENCV_MODULES=opencv_stitching;opencv_superres;opencv_videostab;opencv_photo;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_xfeatures2d;opencv_shape;opencv_video;opencv_ml;opencv_ximgproc;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_flann;opencv_xobjdetect;opencv_imgcodecs;opencv_objdetect;opencv_xphoto;opencv_imgproc;opencv_core
+OPENCV_MODULES_BUILD=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_reg;opencv_surface_matching;opencv_video;opencv_xphoto;opencv_bgsegm;opencv_dnn;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_xobjdetect;opencv_highgui;opencv_superres;opencv_bioinspired;opencv_dpm;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_rgbd;opencv_stereo;opencv_structured_light;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_aruco;opencv_java;opencv_optflow;opencv_stitching
+OPENCV_MODULES_BUILD_ST=core;flann;imgproc;ml;objdetect;phase_unwrapping;photo;plot;reg;surface_matching;video;xphoto;bgsegm;dnn;face;fuzzy;img_hash;imgcodecs;shape;videoio;xobjdetect;highgui;superres;bioinspired;dpm;features2d;line_descriptor;saliency;text;calib3d;ccalib;datasets;rgbd;stereo;structured_light;tracking;videostab;xfeatures2d;ximgproc;aruco;java;optflow;stitching
+OPENCV_MODULES_CONFIGCMAKE=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto;opencv_java
+OPENCV_MODULES_CONFIGMAKE=stitching superres videostab photo aruco bgsegm bioinspired ccalib dpm face fuzzy img_hash line_descriptor optflow reg rgbd saliency stereo structured_light phase_unwrapping surface_matching tracking datasets text dnn plot xfeatures2d shape video ml ximgproc calib3d features2d highgui videoio flann xobjdetect imgcodecs objdetect xphoto imgproc core
 OPENCV_MODULES_DISABLED_AUTO=
 OPENCV_MODULES_DISABLED_AUTO_ST=
-OPENCV_MODULES_DISABLED_FORCE=opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_python2;opencv_python3;opencv_ts;opencv_viz
-OPENCV_MODULES_DISABLED_FORCE_ST=cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;python2;python3;ts;viz
+OPENCV_MODULES_DISABLED_FORCE=opencv_cudaarithm;opencv_cudabgsegm;opencv_cudacodec;opencv_cudafeatures2d;opencv_cudafilters;opencv_cudaimgproc;opencv_cudalegacy;opencv_cudaobjdetect;opencv_cudaoptflow;opencv_cudastereo;opencv_cudawarping;opencv_cudev;opencv_python2;opencv_python3;opencv_ts;opencv_viz;opencv_cnn_3dobj;opencv_cvv;opencv_dnn_modern;opencv_freetype;opencv_hdf;opencv_matlab;opencv_sfm
+OPENCV_MODULES_DISABLED_FORCE_ST=cudaarithm;cudabgsegm;cudacodec;cudafeatures2d;cudafilters;cudaimgproc;cudalegacy;cudaobjdetect;cudaoptflow;cudastereo;cudawarping;cudev;python2;python3;ts;viz;cnn_3dobj;cvv;dnn_modern;freetype;hdf;matlab;sfm
 OPENCV_MODULES_DISABLED_USER=opencv_js;opencv_world
 OPENCV_MODULES_DISABLED_USER_ST=js;world
-OPENCV_MODULES_PUBLIC=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULES_PUBLIC=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_DEFINITIONS_CONFIGMAKE=#define HAVE_OPENCV_ARUCO
+#define HAVE_OPENCV_BGSEGM
+#define HAVE_OPENCV_BIOINSPIRED
 #define HAVE_OPENCV_CALIB3D
+#define HAVE_OPENCV_CCALIB
 #define HAVE_OPENCV_CORE
+#define HAVE_OPENCV_DATASETS
 #define HAVE_OPENCV_DNN
+#define HAVE_OPENCV_DPM
+#define HAVE_OPENCV_FACE
 #define HAVE_OPENCV_FEATURES2D
 #define HAVE_OPENCV_FLANN
+#define HAVE_OPENCV_FUZZY
 #define HAVE_OPENCV_HIGHGUI
+#define HAVE_OPENCV_IMG_HASH
 #define HAVE_OPENCV_IMGCODECS
 #define HAVE_OPENCV_IMGPROC
+#define HAVE_OPENCV_LINE_DESCRIPTOR
 #define HAVE_OPENCV_ML
 #define HAVE_OPENCV_OBJDETECT
+#define HAVE_OPENCV_OPTFLOW
+#define HAVE_OPENCV_PHASE_UNWRAPPING
 #define HAVE_OPENCV_PHOTO
+#define HAVE_OPENCV_PLOT
+#define HAVE_OPENCV_REG
+#define HAVE_OPENCV_RGBD
+#define HAVE_OPENCV_SALIENCY
 #define HAVE_OPENCV_SHAPE
+#define HAVE_OPENCV_STEREO
 #define HAVE_OPENCV_STITCHING
+#define HAVE_OPENCV_STRUCTURED_LIGHT
 #define HAVE_OPENCV_SUPERRES
+#define HAVE_OPENCV_SURFACE_MATCHING
+#define HAVE_OPENCV_TEXT
+#define HAVE_OPENCV_TRACKING
 #define HAVE_OPENCV_VIDEO
 #define HAVE_OPENCV_VIDEOIO
 #define HAVE_OPENCV_VIDEOSTAB
+#define HAVE_OPENCV_XFEATURES2D
+#define HAVE_OPENCV_XIMGPROC
+#define HAVE_OPENCV_XOBJDETECT
+#define HAVE_OPENCV_XPHOTO
 
 
 OPENCV_MODULE_opencv_aruco_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/aruco
@@ -1755,6 +1905,40 @@ OPENCV_MODULE_opencv_aruco_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_aruco_REQ_DEPS=opencv_core;opencv_imgproc;opencv_calib3d
 OPENCV_MODULE_opencv_aruco_SOURCES=/Users/Chao/opencv_contrib/modules/aruco/src/aruco.cpp;/Users/Chao/opencv_contrib/modules/aruco/src/charuco.cpp;/Users/Chao/opencv_contrib/modules/aruco/src/dictionary.cpp;/Users/Chao/opencv_contrib/modules/aruco/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/aruco/src/predefined_dictionaries.hpp
 OPENCV_MODULE_opencv_aruco_WRAPPERS=java;python2;python3
+OPENCV_MODULE_opencv_bgsegm_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/bgsegm
+OPENCV_MODULE_opencv_bgsegm_CLASS=PUBLIC
+OPENCV_MODULE_opencv_bgsegm_DEPS=opencv_core;opencv_imgproc;opencv_video
+OPENCV_MODULE_opencv_bgsegm_DEPS_EXT=
+OPENCV_MODULE_opencv_bgsegm_DEPS_TO_LINK=opencv_core;opencv_imgproc;opencv_video
+OPENCV_MODULE_opencv_bgsegm_DESCRIPTION=Background Segmentation Algorithms
+OPENCV_MODULE_opencv_bgsegm_HEADERS=/Users/Chao/opencv_contrib/modules/bgsegm/include/opencv2/bgsegm.hpp
+OPENCV_MODULE_opencv_bgsegm_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_bgsegm_LABEL=Extra;opencv_bgsegm
+OPENCV_MODULE_opencv_bgsegm_LINK_DEPS=
+OPENCV_MODULE_opencv_bgsegm_LOCATION=/Users/Chao/opencv_contrib/modules/bgsegm
+OPENCV_MODULE_opencv_bgsegm_OPT_DEPS=
+OPENCV_MODULE_opencv_bgsegm_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_bgsegm_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_bgsegm_REQ_DEPS=opencv_core;opencv_imgproc;opencv_video
+OPENCV_MODULE_opencv_bgsegm_SOURCES=/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_gaussmix.cpp;/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_gmg.cpp;/Users/Chao/opencv_contrib/modules/bgsegm/src/bgfg_subcnt.cpp;/Users/Chao/opencv_contrib/modules/bgsegm/src/precomp.hpp
+OPENCV_MODULE_opencv_bgsegm_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_bioinspired_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/bioinspired
+OPENCV_MODULE_opencv_bioinspired_CLASS=PUBLIC
+OPENCV_MODULE_opencv_bioinspired_DEPS=opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui
+OPENCV_MODULE_opencv_bioinspired_DEPS_EXT=
+OPENCV_MODULE_opencv_bioinspired_DEPS_TO_LINK=opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui
+OPENCV_MODULE_opencv_bioinspired_DESCRIPTION=Biologically inspired algorithms
+OPENCV_MODULE_opencv_bioinspired_HEADERS=/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/bioinspired.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/retina.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/retinafasttonemapping.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/transientareassegmentationmodule.hpp
+OPENCV_MODULE_opencv_bioinspired_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_bioinspired_LABEL=Extra;opencv_bioinspired
+OPENCV_MODULE_opencv_bioinspired_LINK_DEPS=
+OPENCV_MODULE_opencv_bioinspired_LOCATION=/Users/Chao/opencv_contrib/modules/bioinspired
+OPENCV_MODULE_opencv_bioinspired_OPT_DEPS=opencv_highgui;opencv_ocl
+OPENCV_MODULE_opencv_bioinspired_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_bioinspired_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_bioinspired_REQ_DEPS=opencv_core
+OPENCV_MODULE_opencv_bioinspired_SOURCES=/Users/Chao/opencv_contrib/modules/bioinspired/src/basicretinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/imagelogpolprojection.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/magnoretinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/parvoretinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retina.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retina_ocl.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinacolor.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinafasttonemapping.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinafilter.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/transientareassegmentationmodule.cpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/opencl/retina_kernel.cl;/Users/Chao/opencv/build/o4a/modules/bioinspired/opencl_kernels_bioinspired.cpp;/Users/Chao/opencv/build/o4a/modules/bioinspired/opencl_kernels_bioinspired.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/basicretinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/imagelogpolprojection.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/magnoretinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/parvoretinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retina_ocl.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinacolor.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/retinafilter.hpp;/Users/Chao/opencv_contrib/modules/bioinspired/src/templatebuffer.hpp
+OPENCV_MODULE_opencv_bioinspired_WRAPPERS=java;python2;python3
 OPENCV_MODULE_opencv_calib3d_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/calib3d
 OPENCV_MODULE_opencv_calib3d_CLASS=PUBLIC
 OPENCV_MODULE_opencv_calib3d_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
@@ -1772,6 +1956,24 @@ OPENCV_MODULE_opencv_calib3d_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_calib3d_REQ_DEPS=opencv_imgproc;opencv_features2d
 OPENCV_MODULE_opencv_calib3d_SOURCES=/Users/Chao/opencv/modules/calib3d/src/ap3p.cpp;/Users/Chao/opencv/modules/calib3d/src/calibinit.cpp;/Users/Chao/opencv/modules/calib3d/src/calibration.cpp;/Users/Chao/opencv/modules/calib3d/src/checkchessboard.cpp;/Users/Chao/opencv/modules/calib3d/src/circlesgrid.cpp;/Users/Chao/opencv/modules/calib3d/src/compat_ptsetreg.cpp;/Users/Chao/opencv/modules/calib3d/src/compat_stereo.cpp;/Users/Chao/opencv/modules/calib3d/src/dls.cpp;/Users/Chao/opencv/modules/calib3d/src/epnp.cpp;/Users/Chao/opencv/modules/calib3d/src/fisheye.cpp;/Users/Chao/opencv/modules/calib3d/src/five-point.cpp;/Users/Chao/opencv/modules/calib3d/src/fundam.cpp;/Users/Chao/opencv/modules/calib3d/src/homography_decomp.cpp;/Users/Chao/opencv/modules/calib3d/src/levmarq.cpp;/Users/Chao/opencv/modules/calib3d/src/main.cpp;/Users/Chao/opencv/modules/calib3d/src/p3p.cpp;/Users/Chao/opencv/modules/calib3d/src/polynom_solver.cpp;/Users/Chao/opencv/modules/calib3d/src/posit.cpp;/Users/Chao/opencv/modules/calib3d/src/ptsetreg.cpp;/Users/Chao/opencv/modules/calib3d/src/quadsubpix.cpp;/Users/Chao/opencv/modules/calib3d/src/rho.cpp;/Users/Chao/opencv/modules/calib3d/src/solvepnp.cpp;/Users/Chao/opencv/modules/calib3d/src/stereobm.cpp;/Users/Chao/opencv/modules/calib3d/src/stereosgbm.cpp;/Users/Chao/opencv/modules/calib3d/src/triangulate.cpp;/Users/Chao/opencv/modules/calib3d/src/upnp.cpp;/Users/Chao/opencv/modules/calib3d/src/opencl/stereobm.cl;/Users/Chao/opencv/build/o4a/modules/calib3d/opencl_kernels_calib3d.cpp;/Users/Chao/opencv/build/o4a/modules/calib3d/opencl_kernels_calib3d.hpp;/Users/Chao/opencv/modules/calib3d/src/circlesgrid.hpp;/Users/Chao/opencv/modules/calib3d/src/fisheye.hpp;/Users/Chao/opencv/modules/calib3d/src/precomp.hpp;/Users/Chao/opencv/modules/calib3d/src/ap3p.h;/Users/Chao/opencv/modules/calib3d/src/dls.h;/Users/Chao/opencv/modules/calib3d/src/epnp.h;/Users/Chao/opencv/modules/calib3d/src/p3p.h;/Users/Chao/opencv/modules/calib3d/src/polynom_solver.h;/Users/Chao/opencv/modules/calib3d/src/rho.h;/Users/Chao/opencv/modules/calib3d/src/upnp.h
 OPENCV_MODULE_opencv_calib3d_WRAPPERS=java;python2;python3
+OPENCV_MODULE_opencv_ccalib_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/ccalib
+OPENCV_MODULE_opencv_ccalib_CLASS=PUBLIC
+OPENCV_MODULE_opencv_ccalib_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_ccalib_DEPS_EXT=
+OPENCV_MODULE_opencv_ccalib_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_ccalib_DESCRIPTION=Custom Calibration Pattern
+OPENCV_MODULE_opencv_ccalib_HEADERS=/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib.hpp;/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib/multicalib.hpp;/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib/omnidir.hpp;/Users/Chao/opencv_contrib/modules/ccalib/include/opencv2/ccalib/randpattern.hpp
+OPENCV_MODULE_opencv_ccalib_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_ccalib_LABEL=Extra;opencv_ccalib
+OPENCV_MODULE_opencv_ccalib_LINK_DEPS=
+OPENCV_MODULE_opencv_ccalib_LOCATION=/Users/Chao/opencv_contrib/modules/ccalib
+OPENCV_MODULE_opencv_ccalib_OPT_DEPS=
+OPENCV_MODULE_opencv_ccalib_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_ccalib_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_ccalib_REQ_DEPS=opencv_core;opencv_imgproc;opencv_calib3d;opencv_features2d;opencv_highgui
+OPENCV_MODULE_opencv_ccalib_SOURCES=/Users/Chao/opencv_contrib/modules/ccalib/src/ccalib.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/multicalib.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/omnidir.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/randpattern.cpp;/Users/Chao/opencv_contrib/modules/ccalib/src/precomp.hpp
+OPENCV_MODULE_opencv_ccalib_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_cnn_3dobj_LOCATION=/Users/Chao/opencv_contrib/modules/cnn_3dobj
 OPENCV_MODULE_opencv_core_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/core
 OPENCV_MODULE_opencv_core_CLASS=PUBLIC
 OPENCV_MODULE_opencv_core_DEPS=
@@ -1801,6 +2003,24 @@ OPENCV_MODULE_opencv_cudaoptflow_LOCATION=/Users/Chao/opencv/modules/cudaoptflow
 OPENCV_MODULE_opencv_cudastereo_LOCATION=/Users/Chao/opencv/modules/cudastereo
 OPENCV_MODULE_opencv_cudawarping_LOCATION=/Users/Chao/opencv/modules/cudawarping
 OPENCV_MODULE_opencv_cudev_LOCATION=/Users/Chao/opencv/modules/cudev
+OPENCV_MODULE_opencv_cvv_LOCATION=/Users/Chao/opencv_contrib/modules/cvv
+OPENCV_MODULE_opencv_datasets_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/datasets
+OPENCV_MODULE_opencv_datasets_CLASS=PUBLIC
+OPENCV_MODULE_opencv_datasets_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text
+OPENCV_MODULE_opencv_datasets_DEPS_EXT=
+OPENCV_MODULE_opencv_datasets_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text
+OPENCV_MODULE_opencv_datasets_DESCRIPTION=datasets framework
+OPENCV_MODULE_opencv_datasets_HEADERS=/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ar_hmdb.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ar_sports.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/dataset.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/fr_adience.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/fr_lfw.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/gr_chalearn.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/gr_skig.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/hpe_humaneva.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/hpe_parse.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ir_affine.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/ir_robot.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/is_bsds.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/is_weizmann.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/msm_epfl.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/msm_middlebury.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_imagenet.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_mnist.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_pascal.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/or_sun.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/pd_caltech.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/pd_inria.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/slam_kitti.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/slam_tumindoor.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/tr_chars.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/tr_icdar.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/tr_svt.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/track_alov.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/track_vot.hpp;/Users/Chao/opencv_contrib/modules/datasets/include/opencv2/datasets/util.hpp
+OPENCV_MODULE_opencv_datasets_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_datasets_LABEL=Extra;opencv_datasets
+OPENCV_MODULE_opencv_datasets_LINK_DEPS=
+OPENCV_MODULE_opencv_datasets_LOCATION=/Users/Chao/opencv_contrib/modules/datasets
+OPENCV_MODULE_opencv_datasets_OPT_DEPS=
+OPENCV_MODULE_opencv_datasets_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_datasets_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_datasets_REQ_DEPS=opencv_core;opencv_imgcodecs;opencv_ml;opencv_flann;opencv_text
+OPENCV_MODULE_opencv_datasets_SOURCES=/Users/Chao/opencv_contrib/modules/datasets/src/ar_hmdb.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/ar_sports.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/dataset.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/fr_adience.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/fr_lfw.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/gr_chalearn.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/gr_skig.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/hpe_humaneva.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/hpe_parse.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/ir_affine.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/ir_robot.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/is_bsds.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/is_weizmann.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/msm_epfl.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/msm_middlebury.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_imagenet.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_mnist.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_pascal.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/or_sun.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/pd_caltech.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/pd_inria.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/slam_kitti.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/slam_tumindoor.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tinyxml2/tinyxml2.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tr_chars.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tr_icdar.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tr_svt.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/track_alov.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/track_vot.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/util.cpp;/Users/Chao/opencv_contrib/modules/datasets/src/tinyxml2/tinyxml2.h
+OPENCV_MODULE_opencv_datasets_WRAPPERS=python2;python3
 OPENCV_MODULE_opencv_dnn_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/dnn
 OPENCV_MODULE_opencv_dnn_CLASS=PUBLIC
 OPENCV_MODULE_opencv_dnn_DEPS=opencv_core;opencv_imgproc
@@ -1818,6 +2038,41 @@ OPENCV_MODULE_opencv_dnn_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_dnn_REQ_DEPS=opencv_core;opencv_imgproc
 OPENCV_MODULE_opencv_dnn_SOURCES=/Users/Chao/opencv/modules/dnn/src/caffe/caffe_importer.cpp;/Users/Chao/opencv/modules/dnn/src/caffe/caffe_io.cpp;/Users/Chao/opencv/modules/dnn/src/caffe/caffe_shrinker.cpp;/Users/Chao/opencv/modules/dnn/src/darknet/darknet_importer.cpp;/Users/Chao/opencv/modules/dnn/src/darknet/darknet_io.cpp;/Users/Chao/opencv/modules/dnn/src/dnn.cpp;/Users/Chao/opencv/modules/dnn/src/halide_scheduler.cpp;/Users/Chao/opencv/modules/dnn/src/init.cpp;/Users/Chao/opencv/modules/dnn/src/layers/batch_norm_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/blank_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/concat_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/convolution_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/crop_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/detection_output_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/elementwise_layers.cpp;/Users/Chao/opencv/modules/dnn/src/layers/eltwise_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/flatten_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/fully_connected_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/layers_common.cpp;/Users/Chao/opencv/modules/dnn/src/layers/lrn_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/max_unpooling_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/mvn_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/normalize_bbox_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/padding_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/permute_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/pooling_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/prior_box_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/recurrent_layers.cpp;/Users/Chao/opencv/modules/dnn/src/layers/region_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/reorg_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/reshape_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/resize_nearest_neighbor_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/scale_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/shift_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/slice_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/softmax_layer.cpp;/Users/Chao/opencv/modules/dnn/src/layers/split_layer.cpp;/Users/Chao/opencv/modules/dnn/src/nms.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/common.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/math_functions.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_conv_spatial.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_inner_product.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_lrn.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_pool.cpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/src/ocl4dnn_softmax.cpp;/Users/Chao/opencv/modules/dnn/src/op_halide.cpp;/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_importer.cpp;/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_io.cpp;/Users/Chao/opencv/modules/dnn/src/torch/THDiskFile.cpp;/Users/Chao/opencv/modules/dnn/src/torch/THFile.cpp;/Users/Chao/opencv/modules/dnn/src/torch/THGeneral.cpp;/Users/Chao/opencv/modules/dnn/src/torch/torch_importer.cpp;/Users/Chao/opencv/modules/dnn/src/opencl/activations.cl;/Users/Chao/opencv/modules/dnn/src/opencl/batchnorm.cl;/Users/Chao/opencv/modules/dnn/src/opencl/col2im.cl;/Users/Chao/opencv/modules/dnn/src/opencl/concat.cl;/Users/Chao/opencv/modules/dnn/src/opencl/conv_layer_spatial.cl;/Users/Chao/opencv/modules/dnn/src/opencl/conv_spatial_helper.cl;/Users/Chao/opencv/modules/dnn/src/opencl/dummy.cl;/Users/Chao/opencv/modules/dnn/src/opencl/gemm_image.cl;/Users/Chao/opencv/modules/dnn/src/opencl/im2col.cl;/Users/Chao/opencv/modules/dnn/src/opencl/lrn.cl;/Users/Chao/opencv/modules/dnn/src/opencl/math.cl;/Users/Chao/opencv/modules/dnn/src/opencl/matvec_mul.cl;/Users/Chao/opencv/modules/dnn/src/opencl/ocl4dnn_lrn.cl;/Users/Chao/opencv/modules/dnn/src/opencl/ocl4dnn_pooling.cl;/Users/Chao/opencv/modules/dnn/src/opencl/pooling.cl;/Users/Chao/opencv/modules/dnn/src/opencl/softmax.cl;/Users/Chao/opencv/modules/dnn/src/opencl/softmax_loss.cl;/Users/Chao/opencv/build/o4a/modules/dnn/opencl_kernels_dnn.cpp;/Users/Chao/opencv/build/o4a/modules/dnn/opencl_kernels_dnn.hpp;/Users/Chao/opencv/modules/dnn/src/caffe/caffe_io.hpp;/Users/Chao/opencv/modules/dnn/src/caffe/glog_emulator.hpp;/Users/Chao/opencv/modules/dnn/src/darknet/darknet_io.hpp;/Users/Chao/opencv/modules/dnn/src/halide_scheduler.hpp;/Users/Chao/opencv/modules/dnn/src/layers/layers_common.hpp;/Users/Chao/opencv/modules/dnn/src/layers/layers_common.simd.hpp;/Users/Chao/opencv/modules/dnn/src/nms.inl.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/common.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/default_kernel_config.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/math_functions.hpp;/Users/Chao/opencv/modules/dnn/src/ocl4dnn/include/ocl4dnn.hpp;/Users/Chao/opencv/modules/dnn/src/op_halide.hpp;/Users/Chao/opencv/modules/dnn/src/precomp.hpp;/Users/Chao/opencv/modules/dnn/src/tensorflow/tf_io.hpp;/Users/Chao/opencv/modules/dnn/src/torch/THDiskFile.h;/Users/Chao/opencv/modules/dnn/src/torch/THFile.h;/Users/Chao/opencv/modules/dnn/src/torch/THFilePrivate.h;/Users/Chao/opencv/modules/dnn/src/torch/THGeneral.h
 OPENCV_MODULE_opencv_dnn_WRAPPERS=matlab;java;python2;python3
+OPENCV_MODULE_opencv_dnn_modern_LOCATION=/Users/Chao/opencv_contrib/modules/dnn_modern
+OPENCV_MODULE_opencv_dpm_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/dpm
+OPENCV_MODULE_opencv_dpm_CLASS=PUBLIC
+OPENCV_MODULE_opencv_dpm_DEPS=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs;opencv_videoio;opencv_highgui
+OPENCV_MODULE_opencv_dpm_DEPS_EXT=
+OPENCV_MODULE_opencv_dpm_DEPS_TO_LINK=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs;opencv_videoio;opencv_highgui
+OPENCV_MODULE_opencv_dpm_DESCRIPTION=Object Detection
+OPENCV_MODULE_opencv_dpm_HEADERS=/Users/Chao/opencv_contrib/modules/dpm/include/opencv2/dpm.hpp
+OPENCV_MODULE_opencv_dpm_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_dpm_LABEL=Extra;opencv_dpm
+OPENCV_MODULE_opencv_dpm_LINK_DEPS=
+OPENCV_MODULE_opencv_dpm_LOCATION=/Users/Chao/opencv_contrib/modules/dpm
+OPENCV_MODULE_opencv_dpm_OPT_DEPS=opencv_highgui
+OPENCV_MODULE_opencv_dpm_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_dpm_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_dpm_REQ_DEPS=opencv_core;opencv_imgproc;opencv_objdetect
+OPENCV_MODULE_opencv_dpm_SOURCES=/Users/Chao/opencv_contrib/modules/dpm/src/dpm_cascade.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_cascade_detector.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_convolution.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_feature.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_model.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_nms.cpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_cascade.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_convolution.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_feature.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_model.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/dpm_nms.hpp;/Users/Chao/opencv_contrib/modules/dpm/src/precomp.hpp
+OPENCV_MODULE_opencv_dpm_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_face_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/face
+OPENCV_MODULE_opencv_face_CLASS=PUBLIC
+OPENCV_MODULE_opencv_face_DEPS=opencv_core;opencv_imgproc;opencv_objdetect
+OPENCV_MODULE_opencv_face_DEPS_EXT=
+OPENCV_MODULE_opencv_face_DEPS_TO_LINK=opencv_core;opencv_imgproc;opencv_objdetect
+OPENCV_MODULE_opencv_face_DESCRIPTION=Face recognition etc
+OPENCV_MODULE_opencv_face_HEADERS=/Users/Chao/opencv_contrib/modules/face/include/opencv2/face.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/bif.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facemark.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facemarkAAM.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facemarkLBF.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/facerec.hpp;/Users/Chao/opencv_contrib/modules/face/include/opencv2/face/predict_collector.hpp
+OPENCV_MODULE_opencv_face_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_face_LABEL=Extra;opencv_face
+OPENCV_MODULE_opencv_face_LINK_DEPS=
+OPENCV_MODULE_opencv_face_LOCATION=/Users/Chao/opencv_contrib/modules/face
+OPENCV_MODULE_opencv_face_OPT_DEPS=
+OPENCV_MODULE_opencv_face_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_face_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_face_REQ_DEPS=opencv_core;opencv_imgproc;opencv_objdetect
+OPENCV_MODULE_opencv_face_SOURCES=/Users/Chao/opencv_contrib/modules/face/src/bif.cpp;/Users/Chao/opencv_contrib/modules/face/src/eigen_faces.cpp;/Users/Chao/opencv_contrib/modules/face/src/face_basic.cpp;/Users/Chao/opencv_contrib/modules/face/src/facemark.cpp;/Users/Chao/opencv_contrib/modules/face/src/facemarkAAM.cpp;/Users/Chao/opencv_contrib/modules/face/src/facemarkLBF.cpp;/Users/Chao/opencv_contrib/modules/face/src/facerec.cpp;/Users/Chao/opencv_contrib/modules/face/src/fisher_faces.cpp;/Users/Chao/opencv_contrib/modules/face/src/lbph_faces.cpp;/Users/Chao/opencv_contrib/modules/face/src/predict_collector.cpp;/Users/Chao/opencv_contrib/modules/face/src/face_utils.hpp;/Users/Chao/opencv_contrib/modules/face/src/precomp.hpp
+OPENCV_MODULE_opencv_face_WRAPPERS=python2;python3
 OPENCV_MODULE_opencv_features2d_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/features2d
 OPENCV_MODULE_opencv_features2d_CLASS=PUBLIC
 OPENCV_MODULE_opencv_features2d_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui
@@ -1852,6 +2107,25 @@ OPENCV_MODULE_opencv_flann_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_flann_REQ_DEPS=opencv_core
 OPENCV_MODULE_opencv_flann_SOURCES=/Users/Chao/opencv/modules/flann/src/flann.cpp;/Users/Chao/opencv/modules/flann/src/miniflann.cpp;/Users/Chao/opencv/modules/flann/src/precomp.hpp
 OPENCV_MODULE_opencv_flann_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_freetype_LOCATION=/Users/Chao/opencv_contrib/modules/freetype
+OPENCV_MODULE_opencv_fuzzy_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/fuzzy
+OPENCV_MODULE_opencv_fuzzy_CLASS=PUBLIC
+OPENCV_MODULE_opencv_fuzzy_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_fuzzy_DEPS_EXT=
+OPENCV_MODULE_opencv_fuzzy_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_fuzzy_DESCRIPTION=Fuzzy mathematical image processing
+OPENCV_MODULE_opencv_fuzzy_HEADERS=/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F0_math.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_F1_math.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/fuzzy_image.hpp;/Users/Chao/opencv_contrib/modules/fuzzy/include/opencv2/fuzzy/types.hpp
+OPENCV_MODULE_opencv_fuzzy_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_fuzzy_LABEL=Extra;opencv_fuzzy
+OPENCV_MODULE_opencv_fuzzy_LINK_DEPS=
+OPENCV_MODULE_opencv_fuzzy_LOCATION=/Users/Chao/opencv_contrib/modules/fuzzy
+OPENCV_MODULE_opencv_fuzzy_OPT_DEPS=
+OPENCV_MODULE_opencv_fuzzy_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_fuzzy_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_fuzzy_REQ_DEPS=opencv_imgproc;opencv_core
+OPENCV_MODULE_opencv_fuzzy_SOURCES=/Users/Chao/opencv_contrib/modules/fuzzy/src/fuzzy_F0_math.cpp;/Users/Chao/opencv_contrib/modules/fuzzy/src/fuzzy_F1_math.cpp;/Users/Chao/opencv_contrib/modules/fuzzy/src/fuzzy_image.cpp;/Users/Chao/opencv_contrib/modules/fuzzy/src/precomp.hpp
+OPENCV_MODULE_opencv_fuzzy_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_hdf_LOCATION=/Users/Chao/opencv_contrib/modules/hdf
 OPENCV_MODULE_opencv_highgui_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/highgui
 OPENCV_MODULE_opencv_highgui_CLASS=PUBLIC
 OPENCV_MODULE_opencv_highgui_DEPS=opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio
@@ -1869,6 +2143,23 @@ OPENCV_MODULE_opencv_highgui_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_highgui_REQ_DEPS=opencv_imgproc;opencv_imgcodecs
 OPENCV_MODULE_opencv_highgui_SOURCES=/Users/Chao/opencv/modules/highgui/src/window.cpp;/Users/Chao/opencv/modules/highgui/src/roiSelector.cpp;/Users/Chao/opencv/modules/highgui/src/precomp.hpp
 OPENCV_MODULE_opencv_highgui_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_img_hash_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/img_hash
+OPENCV_MODULE_opencv_img_hash_CLASS=PUBLIC
+OPENCV_MODULE_opencv_img_hash_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_img_hash_DEPS_EXT=
+OPENCV_MODULE_opencv_img_hash_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_img_hash_DESCRIPTION=Image hash algorithms
+OPENCV_MODULE_opencv_img_hash_HEADERS=/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/average_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/block_mean_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/color_moment_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/img_hash_base.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/marr_hildreth_hash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/phash.hpp;/Users/Chao/opencv_contrib/modules/img_hash/include/opencv2/img_hash/radial_variance_hash.hpp
+OPENCV_MODULE_opencv_img_hash_IS_PART_OF_WORLD=OFF
+OPENCV_MODULE_opencv_img_hash_LABEL=Extra;opencv_img_hash
+OPENCV_MODULE_opencv_img_hash_LINK_DEPS=
+OPENCV_MODULE_opencv_img_hash_LOCATION=/Users/Chao/opencv_contrib/modules/img_hash
+OPENCV_MODULE_opencv_img_hash_OPT_DEPS=
+OPENCV_MODULE_opencv_img_hash_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_img_hash_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_img_hash_REQ_DEPS=opencv_imgproc;opencv_core
+OPENCV_MODULE_opencv_img_hash_SOURCES=/Users/Chao/opencv_contrib/modules/img_hash/src/average_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/block_mean_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/color_moment_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/img_hash_base.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/marr_hildreth_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/phash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/radial_variance_hash.cpp;/Users/Chao/opencv_contrib/modules/img_hash/src/precomp.hpp
+OPENCV_MODULE_opencv_img_hash_WRAPPERS=java;python2;python3
 OPENCV_MODULE_opencv_imgcodecs_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/imgcodecs
 OPENCV_MODULE_opencv_imgcodecs_CLASS=PUBLIC
 OPENCV_MODULE_opencv_imgcodecs_DEPS=opencv_core;opencv_imgproc
@@ -1905,15 +2196,15 @@ OPENCV_MODULE_opencv_imgproc_SOURCES=/Users/Chao/opencv/modules/imgproc/src/accu
 OPENCV_MODULE_opencv_imgproc_WRAPPERS=java;js;python2;python3
 OPENCV_MODULE_opencv_java_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/java
 OPENCV_MODULE_opencv_java_CLASS=BINDINGS
-OPENCV_MODULE_opencv_java_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_aruco
+OPENCV_MODULE_opencv_java_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_video;opencv_dnn;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_text;opencv_calib3d;opencv_datasets;opencv_structured_light;opencv_tracking;opencv_xfeatures2d;opencv_aruco
 OPENCV_MODULE_opencv_java_DEPS_EXT=
-OPENCV_MODULE_opencv_java_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_aruco
+OPENCV_MODULE_opencv_java_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_video;opencv_dnn;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_bioinspired;opencv_features2d;opencv_text;opencv_calib3d;opencv_datasets;opencv_structured_light;opencv_tracking;opencv_xfeatures2d;opencv_aruco
 OPENCV_MODULE_opencv_java_DESCRIPTION=The java bindings
 OPENCV_MODULE_opencv_java_IS_PART_OF_WORLD=OFF
 OPENCV_MODULE_opencv_java_LABEL=Main;opencv_java
 OPENCV_MODULE_opencv_java_LINK_DEPS=
 OPENCV_MODULE_opencv_java_LOCATION=/Users/Chao/opencv/modules/java
-OPENCV_MODULE_opencv_java_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_videoio;opencv_aruco
+OPENCV_MODULE_opencv_java_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_videoio;opencv_aruco;opencv_bioinspired;opencv_img_hash;opencv_phase_unwrapping;opencv_structured_light;opencv_text;opencv_tracking;opencv_xfeatures2d
 OPENCV_MODULE_opencv_java_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_java_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_java_REQ_DEPS=opencv_core;opencv_imgproc
@@ -1929,6 +2220,24 @@ OPENCV_MODULE_opencv_js_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_js_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_js_REQ_DEPS=
 OPENCV_MODULE_opencv_js_WRAPPERS=
+OPENCV_MODULE_opencv_line_descriptor_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_CLASS=PUBLIC
+OPENCV_MODULE_opencv_line_descriptor_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+OPENCV_MODULE_opencv_line_descriptor_DEPS_EXT=
+OPENCV_MODULE_opencv_line_descriptor_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+OPENCV_MODULE_opencv_line_descriptor_DESCRIPTION=Line descriptor
+OPENCV_MODULE_opencv_line_descriptor_HEADERS=/Users/Chao/opencv_contrib/modules/line_descriptor/include/opencv2/line_descriptor.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/include/opencv2/line_descriptor/descriptor.hpp
+OPENCV_MODULE_opencv_line_descriptor_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_line_descriptor_LABEL=Extra;opencv_line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_LINK_DEPS=
+OPENCV_MODULE_opencv_line_descriptor_LOCATION=/Users/Chao/opencv_contrib/modules/line_descriptor
+OPENCV_MODULE_opencv_line_descriptor_OPT_DEPS=opencv_features2d
+OPENCV_MODULE_opencv_line_descriptor_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_line_descriptor_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_line_descriptor_REQ_DEPS=opencv_imgproc
+OPENCV_MODULE_opencv_line_descriptor_SOURCES=/Users/Chao/opencv_contrib/modules/line_descriptor/src/LSDDetector.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/binary_descriptor.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/binary_descriptor_matcher.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/draw.cpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/bitarray.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/bitops.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/line_descriptor/src/types.hpp
+OPENCV_MODULE_opencv_line_descriptor_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_matlab_LOCATION=/Users/Chao/opencv_contrib/modules/matlab
 OPENCV_MODULE_opencv_matlab_OPT_DEPS=opencv_dnn
 OPENCV_MODULE_opencv_matlab_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_matlab_PRIVATE_REQ_DEPS=
@@ -1968,6 +2277,40 @@ OPENCV_MODULE_opencv_objdetect_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_objdetect_REQ_DEPS=opencv_core;opencv_imgproc
 OPENCV_MODULE_opencv_objdetect_SOURCES=/Users/Chao/opencv/modules/objdetect/src/cascadedetect.cpp;/Users/Chao/opencv/modules/objdetect/src/cascadedetect_convert.cpp;/Users/Chao/opencv/modules/objdetect/src/detection_based_tracker.cpp;/Users/Chao/opencv/modules/objdetect/src/haar.cpp;/Users/Chao/opencv/modules/objdetect/src/hog.cpp;/Users/Chao/opencv/modules/objdetect/src/main.cpp;/Users/Chao/opencv/modules/objdetect/src/opencl/cascadedetect.cl;/Users/Chao/opencv/modules/objdetect/src/opencl/objdetect_hog.cl;/Users/Chao/opencv/build/o4a/modules/objdetect/opencl_kernels_objdetect.cpp;/Users/Chao/opencv/build/o4a/modules/objdetect/opencl_kernels_objdetect.hpp;/Users/Chao/opencv/modules/objdetect/src/cascadedetect.hpp;/Users/Chao/opencv/modules/objdetect/src/haar.hpp;/Users/Chao/opencv/modules/objdetect/src/precomp.hpp
 OPENCV_MODULE_opencv_objdetect_WRAPPERS=java;js;python2;python3
+OPENCV_MODULE_opencv_optflow_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/optflow
+OPENCV_MODULE_opencv_optflow_CLASS=PUBLIC
+OPENCV_MODULE_opencv_optflow_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ximgproc
+OPENCV_MODULE_opencv_optflow_DEPS_EXT=
+OPENCV_MODULE_opencv_optflow_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ximgproc
+OPENCV_MODULE_opencv_optflow_DESCRIPTION=Optical Flow Algorithms
+OPENCV_MODULE_opencv_optflow_HEADERS=/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow.hpp;/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow/motempl.hpp;/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow/pcaflow.hpp;/Users/Chao/opencv_contrib/modules/optflow/include/opencv2/optflow/sparse_matching_gpc.hpp
+OPENCV_MODULE_opencv_optflow_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_optflow_LABEL=Extra;opencv_optflow
+OPENCV_MODULE_opencv_optflow_LINK_DEPS=
+OPENCV_MODULE_opencv_optflow_LOCATION=/Users/Chao/opencv_contrib/modules/optflow
+OPENCV_MODULE_opencv_optflow_OPT_DEPS=
+OPENCV_MODULE_opencv_optflow_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_optflow_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_optflow_REQ_DEPS=opencv_core;opencv_imgproc;opencv_video;opencv_ximgproc;opencv_imgcodecs
+OPENCV_MODULE_opencv_optflow_SOURCES=/Users/Chao/opencv_contrib/modules/optflow/src/deepflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/dis_flow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/interfaces.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/motempl.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/optical_flow_io.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/pcaflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/simpleflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/sparse_matching_gpc.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/sparsetodenseflow.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/variational_refinement.cpp;/Users/Chao/opencv_contrib/modules/optflow/src/opencl/dis_flow.cl;/Users/Chao/opencv_contrib/modules/optflow/src/opencl/sparse_matching_gpc.cl;/Users/Chao/opencv_contrib/modules/optflow/src/opencl/updatemotionhistory.cl;/Users/Chao/opencv/build/o4a/modules/optflow/opencl_kernels_optflow.cpp;/Users/Chao/opencv/build/o4a/modules/optflow/opencl_kernels_optflow.hpp;/Users/Chao/opencv_contrib/modules/optflow/src/precomp.hpp
+OPENCV_MODULE_opencv_optflow_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_phase_unwrapping_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_CLASS=PUBLIC
+OPENCV_MODULE_opencv_phase_unwrapping_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_phase_unwrapping_DEPS_EXT=
+OPENCV_MODULE_opencv_phase_unwrapping_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_phase_unwrapping_DESCRIPTION=Phase Unwrapping API
+OPENCV_MODULE_opencv_phase_unwrapping_HEADERS=/Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping.hpp;/Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping/histogramphaseunwrapping.hpp;/Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping/phase_unwrapping.hpp
+OPENCV_MODULE_opencv_phase_unwrapping_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_phase_unwrapping_LABEL=Extra;opencv_phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_LINK_DEPS=
+OPENCV_MODULE_opencv_phase_unwrapping_LOCATION=/Users/Chao/opencv_contrib/modules/phase_unwrapping
+OPENCV_MODULE_opencv_phase_unwrapping_OPT_DEPS=
+OPENCV_MODULE_opencv_phase_unwrapping_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_phase_unwrapping_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_phase_unwrapping_REQ_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_phase_unwrapping_SOURCES=/Users/Chao/opencv_contrib/modules/phase_unwrapping/src/histogramphaseunwrapping.cpp;/Users/Chao/opencv_contrib/modules/phase_unwrapping/src/precomp.hpp
+OPENCV_MODULE_opencv_phase_unwrapping_WRAPPERS=java;python2;python3
 OPENCV_MODULE_opencv_photo_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/photo
 OPENCV_MODULE_opencv_photo_CLASS=PUBLIC
 OPENCV_MODULE_opencv_photo_DEPS=opencv_core;opencv_imgproc
@@ -1985,18 +2328,87 @@ OPENCV_MODULE_opencv_photo_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_photo_REQ_DEPS=opencv_imgproc
 OPENCV_MODULE_opencv_photo_SOURCES=/Users/Chao/opencv/modules/photo/src/align.cpp;/Users/Chao/opencv/modules/photo/src/calibrate.cpp;/Users/Chao/opencv/modules/photo/src/contrast_preserve.cpp;/Users/Chao/opencv/modules/photo/src/denoise_tvl1.cpp;/Users/Chao/opencv/modules/photo/src/denoising.cpp;/Users/Chao/opencv/modules/photo/src/denoising.cuda.cpp;/Users/Chao/opencv/modules/photo/src/hdr_common.cpp;/Users/Chao/opencv/modules/photo/src/inpaint.cpp;/Users/Chao/opencv/modules/photo/src/merge.cpp;/Users/Chao/opencv/modules/photo/src/npr.cpp;/Users/Chao/opencv/modules/photo/src/seamless_cloning.cpp;/Users/Chao/opencv/modules/photo/src/seamless_cloning_impl.cpp;/Users/Chao/opencv/modules/photo/src/tonemap.cpp;/Users/Chao/opencv/modules/photo/src/opencl/nlmeans.cl;/Users/Chao/opencv/build/o4a/modules/photo/opencl_kernels_photo.cpp;/Users/Chao/opencv/build/o4a/modules/photo/opencl_kernels_photo.hpp;/Users/Chao/opencv/modules/photo/src/arrays.hpp;/Users/Chao/opencv/modules/photo/src/contrast_preserve.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_denoising_invoker.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_denoising_invoker_commons.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_denoising_opencl.hpp;/Users/Chao/opencv/modules/photo/src/fast_nlmeans_multi_denoising_invoker.hpp;/Users/Chao/opencv/modules/photo/src/hdr_common.hpp;/Users/Chao/opencv/modules/photo/src/npr.hpp;/Users/Chao/opencv/modules/photo/src/precomp.hpp;/Users/Chao/opencv/modules/photo/src/seamless_cloning.hpp
 OPENCV_MODULE_opencv_photo_WRAPPERS=java;python2;python3
+OPENCV_MODULE_opencv_plot_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/plot
+OPENCV_MODULE_opencv_plot_CLASS=PUBLIC
+OPENCV_MODULE_opencv_plot_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_plot_DEPS_EXT=
+OPENCV_MODULE_opencv_plot_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_plot_DESCRIPTION=Plot function for Mat data.
+OPENCV_MODULE_opencv_plot_HEADERS=/Users/Chao/opencv_contrib/modules/plot/include/opencv2/plot.hpp
+OPENCV_MODULE_opencv_plot_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_plot_LABEL=Extra;opencv_plot
+OPENCV_MODULE_opencv_plot_LINK_DEPS=
+OPENCV_MODULE_opencv_plot_LOCATION=/Users/Chao/opencv_contrib/modules/plot
+OPENCV_MODULE_opencv_plot_OPT_DEPS=
+OPENCV_MODULE_opencv_plot_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_plot_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_plot_REQ_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_plot_SOURCES=/Users/Chao/opencv_contrib/modules/plot/src/plot.cpp;/Users/Chao/opencv_contrib/modules/plot/src/precomp.hpp
+OPENCV_MODULE_opencv_plot_WRAPPERS=python2;python3
 OPENCV_MODULE_opencv_python2_LOCATION=/Users/Chao/opencv/modules/python
-OPENCV_MODULE_opencv_python2_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULE_opencv_python2_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_python2_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_python2_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_python2_REQ_DEPS=
 OPENCV_MODULE_opencv_python2_WRAPPERS=
 OPENCV_MODULE_opencv_python3_LOCATION=/Users/Chao/opencv/modules/python
-OPENCV_MODULE_opencv_python3_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULE_opencv_python3_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_python3_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_python3_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_python3_REQ_DEPS=
 OPENCV_MODULE_opencv_python3_WRAPPERS=
+OPENCV_MODULE_opencv_reg_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/reg
+OPENCV_MODULE_opencv_reg_CLASS=PUBLIC
+OPENCV_MODULE_opencv_reg_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_reg_DEPS_EXT=
+OPENCV_MODULE_opencv_reg_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_reg_DESCRIPTION=Image Registration
+OPENCV_MODULE_opencv_reg_HEADERS=/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/map.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapaffine.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapper.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradaffine.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradeuclid.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradproj.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradshift.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mappergradsimilar.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapperpyramid.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapprojec.hpp;/Users/Chao/opencv_contrib/modules/reg/include/opencv2/reg/mapshift.hpp
+OPENCV_MODULE_opencv_reg_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_reg_LABEL=Extra;opencv_reg
+OPENCV_MODULE_opencv_reg_LINK_DEPS=
+OPENCV_MODULE_opencv_reg_LOCATION=/Users/Chao/opencv_contrib/modules/reg
+OPENCV_MODULE_opencv_reg_OPT_DEPS=
+OPENCV_MODULE_opencv_reg_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_reg_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_reg_REQ_DEPS=opencv_imgproc;opencv_core
+OPENCV_MODULE_opencv_reg_SOURCES=/Users/Chao/opencv_contrib/modules/reg/src/map.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapaffine.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapper.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradaffine.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradeuclid.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradproj.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradshift.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mappergradsimilar.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapperpyramid.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapprojec.cpp;/Users/Chao/opencv_contrib/modules/reg/src/mapshift.cpp;/Users/Chao/opencv_contrib/modules/reg/src/precomp.hpp
+OPENCV_MODULE_opencv_reg_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_rgbd_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/rgbd
+OPENCV_MODULE_opencv_rgbd_CLASS=PUBLIC
+OPENCV_MODULE_opencv_rgbd_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_rgbd_DEPS_EXT=
+OPENCV_MODULE_opencv_rgbd_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_rgbd_DESCRIPTION=RGBD algorithms
+OPENCV_MODULE_opencv_rgbd_HEADERS=/Users/Chao/opencv_contrib/modules/rgbd/include/opencv2/rgbd.hpp;/Users/Chao/opencv_contrib/modules/rgbd/include/opencv2/rgbd/linemod.hpp
+OPENCV_MODULE_opencv_rgbd_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_rgbd_LABEL=Extra;opencv_rgbd
+OPENCV_MODULE_opencv_rgbd_LINK_DEPS=
+OPENCV_MODULE_opencv_rgbd_LOCATION=/Users/Chao/opencv_contrib/modules/rgbd
+OPENCV_MODULE_opencv_rgbd_OPT_DEPS=
+OPENCV_MODULE_opencv_rgbd_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_rgbd_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_rgbd_REQ_DEPS=opencv_core;opencv_calib3d;opencv_imgproc
+OPENCV_MODULE_opencv_rgbd_SOURCES=/Users/Chao/opencv_contrib/modules/rgbd/src/depth_cleaner.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/depth_registration.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/depth_to_3d.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/linemod.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/normal.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/odometry.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/plane.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/utils.cpp;/Users/Chao/opencv_contrib/modules/rgbd/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/rgbd/src/depth_to_3d.h;/Users/Chao/opencv_contrib/modules/rgbd/src/utils.h
+OPENCV_MODULE_opencv_rgbd_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_saliency_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/saliency
+OPENCV_MODULE_opencv_saliency_CLASS=PUBLIC
+OPENCV_MODULE_opencv_saliency_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+OPENCV_MODULE_opencv_saliency_DEPS_EXT=
+OPENCV_MODULE_opencv_saliency_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+OPENCV_MODULE_opencv_saliency_DESCRIPTION=Saliency API
+OPENCV_MODULE_opencv_saliency_HEADERS=/Users/Chao/opencv_contrib/modules/saliency/include/opencv2/saliency.hpp;/Users/Chao/opencv_contrib/modules/saliency/include/opencv2/saliency/saliencyBaseClasses.hpp;/Users/Chao/opencv_contrib/modules/saliency/include/opencv2/saliency/saliencySpecializedClasses.hpp
+OPENCV_MODULE_opencv_saliency_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_saliency_LABEL=Extra;opencv_saliency
+OPENCV_MODULE_opencv_saliency_LINK_DEPS=
+OPENCV_MODULE_opencv_saliency_LOCATION=/Users/Chao/opencv_contrib/modules/saliency
+OPENCV_MODULE_opencv_saliency_OPT_DEPS=
+OPENCV_MODULE_opencv_saliency_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_saliency_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_saliency_REQ_DEPS=opencv_imgproc;opencv_features2d
+OPENCV_MODULE_opencv_saliency_SOURCES=/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmFile.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmShow.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/FilterTIG.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/ValStructVec.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/objectnessBING.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/motionSaliency.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/motionSaliencyBinWangApr2014.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/objectness.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/saliency.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/staticSaliency.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/staticSaliencyFineGrained.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/staticSaliencySpectralResidual.cpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmFile.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmShow.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/CmTimer.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/BING/kyheader.hpp;/Users/Chao/opencv_contrib/modules/saliency/src/precomp.hpp
+OPENCV_MODULE_opencv_saliency_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_sfm_LOCATION=/Users/Chao/opencv_contrib/modules/sfm
 OPENCV_MODULE_opencv_shape_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/shape
 OPENCV_MODULE_opencv_shape_CLASS=PUBLIC
 OPENCV_MODULE_opencv_shape_DEPS=opencv_core;opencv_imgproc;opencv_video
@@ -2014,11 +2426,28 @@ OPENCV_MODULE_opencv_shape_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_shape_REQ_DEPS=opencv_core;opencv_imgproc;opencv_video
 OPENCV_MODULE_opencv_shape_SOURCES=/Users/Chao/opencv/modules/shape/src/aff_trans.cpp;/Users/Chao/opencv/modules/shape/src/emdL1.cpp;/Users/Chao/opencv/modules/shape/src/haus_dis.cpp;/Users/Chao/opencv/modules/shape/src/hist_cost.cpp;/Users/Chao/opencv/modules/shape/src/sc_dis.cpp;/Users/Chao/opencv/modules/shape/src/tps_trans.cpp;/Users/Chao/opencv/modules/shape/src/emdL1_def.hpp;/Users/Chao/opencv/modules/shape/src/precomp.hpp;/Users/Chao/opencv/modules/shape/src/scd_def.hpp
 OPENCV_MODULE_opencv_shape_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_stereo_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/stereo
+OPENCV_MODULE_opencv_stereo_CLASS=PUBLIC
+OPENCV_MODULE_opencv_stereo_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_stereo_DEPS_EXT=
+OPENCV_MODULE_opencv_stereo_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_stereo_DESCRIPTION=Stereo Correspondence
+OPENCV_MODULE_opencv_stereo_HEADERS=/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo.hpp;/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo/descriptor.hpp;/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo/matching.hpp;/Users/Chao/opencv_contrib/modules/stereo/include/opencv2/stereo/stereo.hpp
+OPENCV_MODULE_opencv_stereo_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_stereo_LABEL=Extra;opencv_stereo
+OPENCV_MODULE_opencv_stereo_LINK_DEPS=
+OPENCV_MODULE_opencv_stereo_LOCATION=/Users/Chao/opencv_contrib/modules/stereo
+OPENCV_MODULE_opencv_stereo_OPT_DEPS=
+OPENCV_MODULE_opencv_stereo_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_stereo_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_stereo_REQ_DEPS=opencv_imgproc;opencv_features2d;opencv_core;opencv_calib3d
+OPENCV_MODULE_opencv_stereo_SOURCES=/Users/Chao/opencv_contrib/modules/stereo/src/descriptor.cpp;/Users/Chao/opencv_contrib/modules/stereo/src/stereo_binary_bm.cpp;/Users/Chao/opencv_contrib/modules/stereo/src/stereo_binary_sgbm.cpp;/Users/Chao/opencv_contrib/modules/stereo/src/precomp.hpp
+OPENCV_MODULE_opencv_stereo_WRAPPERS=
 OPENCV_MODULE_opencv_stitching_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/stitching
 OPENCV_MODULE_opencv_stitching_CLASS=PUBLIC
-OPENCV_MODULE_opencv_stitching_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_stitching_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_xfeatures2d
 OPENCV_MODULE_opencv_stitching_DEPS_EXT=
-OPENCV_MODULE_opencv_stitching_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_stitching_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_xfeatures2d
 OPENCV_MODULE_opencv_stitching_DESCRIPTION=Images stitching
 OPENCV_MODULE_opencv_stitching_HEADERS=/Users/Chao/opencv/modules/stitching/include/opencv2/stitching.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/warpers.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/autocalib.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/blenders.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/camera.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/matchers.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/seam_finders.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/timelapsers.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/util.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/warpers.hpp;/Users/Chao/opencv/modules/stitching/include/opencv2/stitching/detail/warpers_inl.hpp
 OPENCV_MODULE_opencv_stitching_IS_PART_OF_WORLD=ON
@@ -2031,6 +2460,23 @@ OPENCV_MODULE_opencv_stitching_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_stitching_REQ_DEPS=opencv_imgproc;opencv_features2d;opencv_calib3d;opencv_flann
 OPENCV_MODULE_opencv_stitching_SOURCES=/Users/Chao/opencv/modules/stitching/src/autocalib.cpp;/Users/Chao/opencv/modules/stitching/src/blenders.cpp;/Users/Chao/opencv/modules/stitching/src/camera.cpp;/Users/Chao/opencv/modules/stitching/src/exposure_compensate.cpp;/Users/Chao/opencv/modules/stitching/src/matchers.cpp;/Users/Chao/opencv/modules/stitching/src/motion_estimators.cpp;/Users/Chao/opencv/modules/stitching/src/seam_finders.cpp;/Users/Chao/opencv/modules/stitching/src/stitcher.cpp;/Users/Chao/opencv/modules/stitching/src/timelapsers.cpp;/Users/Chao/opencv/modules/stitching/src/util.cpp;/Users/Chao/opencv/modules/stitching/src/warpers.cpp;/Users/Chao/opencv/modules/stitching/src/warpers_cuda.cpp;/Users/Chao/opencv/modules/stitching/src/opencl/multibandblend.cl;/Users/Chao/opencv/modules/stitching/src/opencl/warpers.cl;/Users/Chao/opencv/build/o4a/modules/stitching/opencl_kernels_stitching.cpp;/Users/Chao/opencv/build/o4a/modules/stitching/opencl_kernels_stitching.hpp;/Users/Chao/opencv/modules/stitching/src/precomp.hpp;/Users/Chao/opencv/modules/stitching/src/util_log.hpp
 OPENCV_MODULE_opencv_stitching_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_structured_light_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/structured_light
+OPENCV_MODULE_opencv_structured_light_CLASS=PUBLIC
+OPENCV_MODULE_opencv_structured_light_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_structured_light_DEPS_EXT=
+OPENCV_MODULE_opencv_structured_light_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_structured_light_DESCRIPTION=Structured Light API
+OPENCV_MODULE_opencv_structured_light_HEADERS=/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light.hpp;/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/graycodepattern.hpp;/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/sinusoidalpattern.hpp;/Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/structured_light.hpp
+OPENCV_MODULE_opencv_structured_light_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_structured_light_LABEL=Extra;opencv_structured_light
+OPENCV_MODULE_opencv_structured_light_LINK_DEPS=
+OPENCV_MODULE_opencv_structured_light_LOCATION=/Users/Chao/opencv_contrib/modules/structured_light
+OPENCV_MODULE_opencv_structured_light_OPT_DEPS=opencv_viz
+OPENCV_MODULE_opencv_structured_light_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_structured_light_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_structured_light_REQ_DEPS=opencv_core;opencv_imgproc;opencv_calib3d;opencv_phase_unwrapping
+OPENCV_MODULE_opencv_structured_light_SOURCES=/Users/Chao/opencv_contrib/modules/structured_light/src/graycodepattern.cpp;/Users/Chao/opencv_contrib/modules/structured_light/src/sinusoidalpattern.cpp;/Users/Chao/opencv_contrib/modules/structured_light/src/precomp.hpp
+OPENCV_MODULE_opencv_structured_light_WRAPPERS=java;python2;python3
 OPENCV_MODULE_opencv_superres_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/superres
 OPENCV_MODULE_opencv_superres_CLASS=PUBLIC
 OPENCV_MODULE_opencv_superres_DEPS=opencv_core;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio
@@ -2048,6 +2494,57 @@ OPENCV_MODULE_opencv_superres_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_superres_REQ_DEPS=opencv_imgproc;opencv_video
 OPENCV_MODULE_opencv_superres_SOURCES=/Users/Chao/opencv/modules/superres/src/btv_l1.cpp;/Users/Chao/opencv/modules/superres/src/btv_l1_cuda.cpp;/Users/Chao/opencv/modules/superres/src/frame_source.cpp;/Users/Chao/opencv/modules/superres/src/input_array_utility.cpp;/Users/Chao/opencv/modules/superres/src/optical_flow.cpp;/Users/Chao/opencv/modules/superres/src/super_resolution.cpp;/Users/Chao/opencv/modules/superres/src/opencl/superres_btvl1.cl;/Users/Chao/opencv/build/o4a/modules/superres/opencl_kernels_superres.cpp;/Users/Chao/opencv/build/o4a/modules/superres/opencl_kernels_superres.hpp;/Users/Chao/opencv/modules/superres/src/input_array_utility.hpp;/Users/Chao/opencv/modules/superres/src/precomp.hpp;/Users/Chao/opencv/modules/superres/src/ring_buffer.hpp
 OPENCV_MODULE_opencv_superres_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_surface_matching_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/surface_matching
+OPENCV_MODULE_opencv_surface_matching_CLASS=PUBLIC
+OPENCV_MODULE_opencv_surface_matching_DEPS=opencv_core;opencv_flann
+OPENCV_MODULE_opencv_surface_matching_DEPS_EXT=
+OPENCV_MODULE_opencv_surface_matching_DEPS_TO_LINK=opencv_core;opencv_flann
+OPENCV_MODULE_opencv_surface_matching_DESCRIPTION=3D point features
+OPENCV_MODULE_opencv_surface_matching_HEADERS=/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/icp.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/pose_3d.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/ppf_helpers.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/ppf_match_3d.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/include/opencv2/surface_matching/t_hash_int.hpp
+OPENCV_MODULE_opencv_surface_matching_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_surface_matching_LABEL=Extra;opencv_surface_matching
+OPENCV_MODULE_opencv_surface_matching_LINK_DEPS=
+OPENCV_MODULE_opencv_surface_matching_LOCATION=/Users/Chao/opencv_contrib/modules/surface_matching
+OPENCV_MODULE_opencv_surface_matching_OPT_DEPS=
+OPENCV_MODULE_opencv_surface_matching_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_surface_matching_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_surface_matching_REQ_DEPS=opencv_core;opencv_flann
+OPENCV_MODULE_opencv_surface_matching_SOURCES=/Users/Chao/opencv_contrib/modules/surface_matching/src/icp.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/pose_3d.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/ppf_helpers.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/ppf_match_3d.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/t_hash_int.cpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/c_utils.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/hash_murmur.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/hash_murmur64.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/hash_murmur86.hpp;/Users/Chao/opencv_contrib/modules/surface_matching/src/precomp.hpp
+OPENCV_MODULE_opencv_surface_matching_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_text_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/text
+OPENCV_MODULE_opencv_text_CLASS=PUBLIC
+OPENCV_MODULE_opencv_text_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+OPENCV_MODULE_opencv_text_DEPS_EXT=
+OPENCV_MODULE_opencv_text_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d
+OPENCV_MODULE_opencv_text_DESCRIPTION=Text Detection and Recognition
+OPENCV_MODULE_opencv_text_HEADERS=/Users/Chao/opencv_contrib/modules/text/include/opencv2/text.hpp;/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/erfilter.hpp;/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/ocr.hpp;/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/textDetector.hpp
+OPENCV_MODULE_opencv_text_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_text_LABEL=Extra;opencv_text
+OPENCV_MODULE_opencv_text_LINK_DEPS=
+OPENCV_MODULE_opencv_text_LOCATION=/Users/Chao/opencv_contrib/modules/text
+OPENCV_MODULE_opencv_text_OPT_DEPS=opencv_highgui
+OPENCV_MODULE_opencv_text_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_text_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_text_REQ_DEPS=opencv_ml;opencv_imgproc;opencv_core;opencv_features2d;opencv_dnn
+OPENCV_MODULE_opencv_text_SOURCES=/Users/Chao/opencv_contrib/modules/text/src/erfilter.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_beamsearch_decoder.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_hmm_decoder.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_holistic.cpp;/Users/Chao/opencv_contrib/modules/text/src/ocr_tesseract.cpp;/Users/Chao/opencv_contrib/modules/text/src/text_detectorCNN.cpp;/Users/Chao/opencv_contrib/modules/text/src/precomp.hpp
+OPENCV_MODULE_opencv_text_WRAPPERS=java;python2;python3
+OPENCV_MODULE_opencv_tracking_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/tracking
+OPENCV_MODULE_opencv_tracking_CLASS=PUBLIC
+OPENCV_MODULE_opencv_tracking_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_datasets
+OPENCV_MODULE_opencv_tracking_DEPS_EXT=
+OPENCV_MODULE_opencv_tracking_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_datasets
+OPENCV_MODULE_opencv_tracking_DESCRIPTION=Tracking API
+OPENCV_MODULE_opencv_tracking_HEADERS=/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/feature.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/kalman_filters.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/onlineBoosting.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/onlineMIL.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/tldDataset.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/tracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/include/opencv2/tracking/tracking.hpp
+OPENCV_MODULE_opencv_tracking_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_tracking_LABEL=Extra;opencv_tracking
+OPENCV_MODULE_opencv_tracking_LINK_DEPS=
+OPENCV_MODULE_opencv_tracking_LOCATION=/Users/Chao/opencv_contrib/modules/tracking
+OPENCV_MODULE_opencv_tracking_OPT_DEPS=opencv_dnn;opencv_datasets
+OPENCV_MODULE_opencv_tracking_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_tracking_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_tracking_REQ_DEPS=opencv_imgproc;opencv_core;opencv_video;opencv_plot
+OPENCV_MODULE_opencv_tracking_SOURCES=/Users/Chao/opencv_contrib/modules/tracking/src/augmented_unscented_kalman.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/feature.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/featureColorName.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrUtils.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/mosseTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/multiTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/multiTracker_alt.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/onlineBoosting.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/onlineMIL.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldDataset.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldDetector.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldEnsembleClassifier.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldTracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldUtils.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tracker.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerBoosting.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerBoostingModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerFeature.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerFeatureSet.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerKCF.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMIL.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMILModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMedianFlow.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerModel.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerSampler.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerSamplerAlgorithm.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerStateEstimator.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/tracking_utils.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/unscented_kalman.cpp;/Users/Chao/opencv_contrib/modules/tracking/src/opencl/tldDetector.cl;/Users/Chao/opencv_contrib/modules/tracking/src/opencl/tmm.cl;/Users/Chao/opencv/build/o4a/modules/tracking/opencl_kernels_tracking.cpp;/Users/Chao/opencv/build/o4a/modules/tracking/opencl_kernels_tracking.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/PFSolver.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/TrackingFunctionPF.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrTracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/gtrUtils.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/multiTracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldDetector.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldEnsembleClassifier.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldModel.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldTracker.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tldUtils.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerBoostingModel.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/trackerMILModel.hpp;/Users/Chao/opencv_contrib/modules/tracking/src/tracking_utils.hpp
+OPENCV_MODULE_opencv_tracking_WRAPPERS=java;python2;python3
 OPENCV_MODULE_opencv_ts_LOCATION=/Users/Chao/opencv/modules/ts
 OPENCV_MODULE_opencv_video_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/video
 OPENCV_MODULE_opencv_video_CLASS=PUBLIC
@@ -2107,12 +2604,80 @@ OPENCV_MODULE_opencv_world_IS_PART_OF_WORLD=OFF
 OPENCV_MODULE_opencv_world_LABEL=Main;opencv_world
 OPENCV_MODULE_opencv_world_LINK_DEPS=
 OPENCV_MODULE_opencv_world_LOCATION=/Users/Chao/opencv/modules/world
-OPENCV_MODULE_opencv_world_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco
+OPENCV_MODULE_opencv_world_OPT_DEPS=opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_datasets;opencv_dpm;opencv_face;opencv_fuzzy;opencv_line_descriptor;opencv_optflow;opencv_phase_unwrapping;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_surface_matching;opencv_text;opencv_tracking;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_MODULE_opencv_world_PRIVATE_OPT_DEPS=
 OPENCV_MODULE_opencv_world_PRIVATE_REQ_DEPS=
 OPENCV_MODULE_opencv_world_REQ_DEPS=opencv_core
 OPENCV_MODULE_opencv_world_WRAPPERS=
-OPENCV_MOD_LIST=opencv_aruco;opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_shape;opencv_stitching;opencv_superres;opencv_video;opencv_videoio;opencv_videostab
+OPENCV_MODULE_opencv_xfeatures2d_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_CLASS=PUBLIC
+OPENCV_MODULE_opencv_xfeatures2d_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_xfeatures2d_DEPS_EXT=
+OPENCV_MODULE_opencv_xfeatures2d_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_xfeatures2d_DESCRIPTION=Contributed/Experimental Algorithms for Salient 2D Features Detection
+OPENCV_MODULE_opencv_xfeatures2d_HEADERS=/Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d/cuda.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d/nonfree.hpp
+OPENCV_MODULE_opencv_xfeatures2d_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_xfeatures2d_LABEL=Extra;opencv_xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_LINK_DEPS=
+OPENCV_MODULE_opencv_xfeatures2d_LOCATION=/Users/Chao/opencv_contrib/modules/xfeatures2d
+OPENCV_MODULE_opencv_xfeatures2d_OPT_DEPS=opencv_shape;opencv_ml;opencv_cudaarithm
+OPENCV_MODULE_opencv_xfeatures2d_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_xfeatures2d_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_xfeatures2d_REQ_DEPS=opencv_core;opencv_imgproc;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_xfeatures2d_SOURCES=/Users/Chao/opencv_contrib/modules/xfeatures2d/src/affine_feature2d.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/boostdesc.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/brief.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/daisy.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/ellipticKeyPoint.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/fast.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/freak.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/harris_lapace_detector.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/latch.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/lucid.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/msd.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/grayscale_bitmap.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_clusterizer.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_sampler.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures_sqfd.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/sift.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/stardetector.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.cuda.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.ocl.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/vgg.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/xfeatures2d_init.cpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/opencl/surf.cl;/Users/Chao/opencv/build/o4a/modules/xfeatures2d/opencl_kernels_xfeatures2d.cpp;/Users/Chao/opencv/build/o4a/modules/xfeatures2d/opencl_kernels_xfeatures2d.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/constants.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/distance.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/grayscale_bitmap.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_clusterizer.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/pct_sampler.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/pct_signatures/similarity.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/xfeatures2d/src/surf.hpp
+OPENCV_MODULE_opencv_xfeatures2d_WRAPPERS=java;python2;python3
+OPENCV_MODULE_opencv_ximgproc_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/ximgproc
+OPENCV_MODULE_opencv_ximgproc_CLASS=PUBLIC
+OPENCV_MODULE_opencv_ximgproc_DEPS=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_ximgproc_DEPS_EXT=
+OPENCV_MODULE_opencv_ximgproc_DEPS_TO_LINK=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d
+OPENCV_MODULE_opencv_ximgproc_DESCRIPTION=Extended image processing module. It includes edge-aware filters and etc.
+OPENCV_MODULE_opencv_ximgproc_HEADERS=/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/deriche_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/disparity_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/edge_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/edgeboxes.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/estimated_covariance.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/fast_hough_transform.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/fast_line_detector.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/fourier_descriptors.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/lsc.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/paillou_filter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/peilin.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/ridgefilter.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/seeds.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/segmentation.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/slic.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/sparse_match_interpolator.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/structured_edge_detection.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/include/opencv2/ximgproc/weighted_median_filter.hpp
+OPENCV_MODULE_opencv_ximgproc_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_ximgproc_LABEL=Extra;opencv_ximgproc
+OPENCV_MODULE_opencv_ximgproc_LINK_DEPS=
+OPENCV_MODULE_opencv_ximgproc_LOCATION=/Users/Chao/opencv_contrib/modules/ximgproc
+OPENCV_MODULE_opencv_ximgproc_OPT_DEPS=
+OPENCV_MODULE_opencv_ximgproc_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_ximgproc_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_ximgproc_REQ_DEPS=opencv_core;opencv_imgproc;opencv_calib3d;opencv_imgcodecs
+OPENCV_MODULE_opencv_ximgproc_SOURCES=/Users/Chao/opencv_contrib/modules/ximgproc/src/adaptive_manifold_filter_n.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/anisodiff.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/bilateral_texture_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/deriche_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/disparity_filters.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/domain_transform.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/dtfilter_cpu.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/edgeaware_filters_common.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/edgeboxes.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/estimated_covariance.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fast_hough_transform.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fast_line_detector.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fgs_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/fourier_descriptors.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/graphsegmentation.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/guided_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/joint_bilateral_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/l0_smooth.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/lsc.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/niblack_thresholding.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/paillou_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/peilin.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/ridgedetectionfilter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/rolling_guidance_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/seeds.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/selectivesearchsegmentation.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/slic.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/sparse_match_interpolators.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/structured_edge_detection.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/thinning.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/weighted_median_filter.cpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/opencl/anisodiff.cl;/Users/Chao/opencv/build/o4a/modules/ximgproc/opencl_kernels_ximgproc.cpp;/Users/Chao/opencv/build/o4a/modules/ximgproc/opencl_kernels_ximgproc.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/advanced_types.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/dtfilter_cpu.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/dtfilter_cpu.inl.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/edgeaware_filters_common.hpp;/Users/Chao/opencv_contrib/modules/ximgproc/src/precomp.hpp
+OPENCV_MODULE_opencv_ximgproc_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_xobjdetect_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_CLASS=PUBLIC
+OPENCV_MODULE_opencv_xobjdetect_DEPS=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs
+OPENCV_MODULE_opencv_xobjdetect_DEPS_EXT=
+OPENCV_MODULE_opencv_xobjdetect_DEPS_TO_LINK=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs
+OPENCV_MODULE_opencv_xobjdetect_DESCRIPTION=Object detection algorithms
+OPENCV_MODULE_opencv_xobjdetect_HEADERS=/Users/Chao/opencv_contrib/modules/xobjdetect/include/opencv2/xobjdetect.hpp
+OPENCV_MODULE_opencv_xobjdetect_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_xobjdetect_LABEL=Extra;opencv_xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_LINK_DEPS=
+OPENCV_MODULE_opencv_xobjdetect_LOCATION=/Users/Chao/opencv_contrib/modules/xobjdetect
+OPENCV_MODULE_opencv_xobjdetect_OPT_DEPS=
+OPENCV_MODULE_opencv_xobjdetect_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_xobjdetect_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_xobjdetect_REQ_DEPS=opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs
+OPENCV_MODULE_opencv_xobjdetect_SOURCES=/Users/Chao/opencv_contrib/modules/xobjdetect/src/feature_evaluator.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/lbpfeatures.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/waldboost.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/wbdetector.cpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/feature_evaluator.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/precomp.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/waldboost.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/wbdetector.hpp;/Users/Chao/opencv_contrib/modules/xobjdetect/src/cascadeclassifier.h;/Users/Chao/opencv_contrib/modules/xobjdetect/src/lbpfeatures.h
+OPENCV_MODULE_opencv_xobjdetect_WRAPPERS=python2;python3
+OPENCV_MODULE_opencv_xphoto_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/xphoto
+OPENCV_MODULE_opencv_xphoto_CLASS=PUBLIC
+OPENCV_MODULE_opencv_xphoto_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_xphoto_DEPS_EXT=
+OPENCV_MODULE_opencv_xphoto_DEPS_TO_LINK=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_xphoto_DESCRIPTION=Addon to basic photo module
+OPENCV_MODULE_opencv_xphoto_HEADERS=/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/bm3d_image_denoising.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/dct_image_denoising.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/inpainting.hpp;/Users/Chao/opencv_contrib/modules/xphoto/include/opencv2/xphoto/white_balance.hpp
+OPENCV_MODULE_opencv_xphoto_IS_PART_OF_WORLD=ON
+OPENCV_MODULE_opencv_xphoto_LABEL=Extra;opencv_xphoto
+OPENCV_MODULE_opencv_xphoto_LINK_DEPS=
+OPENCV_MODULE_opencv_xphoto_LOCATION=/Users/Chao/opencv_contrib/modules/xphoto
+OPENCV_MODULE_opencv_xphoto_OPT_DEPS=
+OPENCV_MODULE_opencv_xphoto_PRIVATE_OPT_DEPS=
+OPENCV_MODULE_opencv_xphoto_PRIVATE_REQ_DEPS=
+OPENCV_MODULE_opencv_xphoto_REQ_DEPS=opencv_core;opencv_imgproc
+OPENCV_MODULE_opencv_xphoto_SOURCES=/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_image_denoising.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/dct_image_denoising.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/grayworld_white_balance.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/inpainting.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/learning_based_color_balance.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/simple_color_balance.cpp;/Users/Chao/opencv_contrib/modules/xphoto/src/advanced_types.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/annf.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/blending.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_commons.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_step1.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_step2.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_invoker_structs.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms_1D.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms_2D.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/bm3d_denoising_transforms_haar.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/gcgraph.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/kaiser_window.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/learning_based_color_balance_model.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/norm2.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/photomontage.hpp;/Users/Chao/opencv_contrib/modules/xphoto/src/whs.hpp
+OPENCV_MODULE_opencv_xphoto_WRAPPERS=python2;python3
+OPENCV_MOD_LIST=opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_calib3d;opencv_ccalib;opencv_core;opencv_datasets;opencv_dnn;opencv_dpm;opencv_face;opencv_features2d;opencv_flann;opencv_fuzzy;opencv_highgui;opencv_img_hash;opencv_imgcodecs;opencv_imgproc;opencv_line_descriptor;opencv_ml;opencv_objdetect;opencv_optflow;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_reg;opencv_rgbd;opencv_saliency;opencv_shape;opencv_stereo;opencv_stitching;opencv_structured_light;opencv_superres;opencv_surface_matching;opencv_text;opencv_tracking;opencv_video;opencv_videoio;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_xobjdetect;opencv_xphoto
 OPENCV_OTHER_INSTALL_PATH=sdk/etc
 OPENCV_PACKAGE_ARCH_SUFFIX=mips
 OPENCV_PC_FILE_NAME=opencv.pc
@@ -2148,12 +2713,12 @@ OPENEXR_VERSION=1.7.1
 OPT=
 OUTPUT=Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_3ffee"
-[1/2] Building C object CMakeFiles/cmTC_3ffee.dir/TestEndianess.c.o
-[2/2] Linking C executable cmTC_3ffee
+Run Build Command:"/usr/local/bin/ninja" "cmTC_38d30"
+[1/2] Building C object CMakeFiles/cmTC_38d30.dir/TestEndianess.c.o
+[2/2] Linking C executable cmTC_38d30
 
-OUTPUT_LINES=Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp;;Run Build Command:"/usr/local/bin/ninja" "cmTC_c7a5a";[1/2] Building C object CMakeFiles/cmTC_c7a5a.dir/src.c.o;cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C [enabled by default];src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]; #pragma; ^;[2/2] Linking C executable cmTC_c7a5a;
-OpenCVModules_TARGETS=libcpufeatures;libtiff;libjpeg;libwebp;libjasper;libpng;IlmImf;tbb;libprotobuf;opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_superres;opencv_features2d;opencv_calib3d;opencv_stitching;opencv_videostab;opencv_aruco;opencv_java
+OUTPUT_LINES=Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp;;Run Build Command:"/usr/local/bin/ninja" "cmTC_ad922";[1/2] Building C object CMakeFiles/cmTC_ad922.dir/src.c.o;cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C [enabled by default];src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]; #pragma; ^;[2/2] Linking C executable cmTC_ad922;
+OpenCVModules_TARGETS=libcpufeatures;libtiff;libjpeg;libwebp;libjasper;libpng;IlmImf;tbb;libprotobuf;opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_phase_unwrapping;opencv_photo;opencv_plot;opencv_reg;opencv_surface_matching;opencv_video;opencv_xphoto;opencv_bgsegm;opencv_dnn;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_xobjdetect;opencv_highgui;opencv_superres;opencv_bioinspired;opencv_dpm;opencv_features2d;opencv_line_descriptor;opencv_saliency;opencv_text;opencv_calib3d;opencv_ccalib;opencv_datasets;opencv_rgbd;opencv_stereo;opencv_structured_light;opencv_tracking;opencv_videostab;opencv_xfeatures2d;opencv_ximgproc;opencv_aruco;opencv_java;opencv_optflow;opencv_stitching
 OpenCV_ANDROID_NATIVE_API_LEVEL_CONFIGCMAKE=9
 OpenCV_BINARY_DIR=/Users/Chao/opencv/build/o4a
 OpenCV_HAL=OpenCV_HAL
@@ -2203,11 +2768,11 @@ PYTHON2_PACKAGES_PATH=
 PYTHON2_VERSION_MAJOR=2
 PYTHON2_VERSION_MINOR=7
 PYTHON2_VERSION_STRING=2.7.10
-PYTHON3INTERP_FOUND=TRUE
+PYTHON3INTERP_FOUND=
 PYTHON3LIBS_FOUND=
 PYTHON3LIBS_VERSION_STRING=
 PYTHON3_DEBUG_LIBRARIES=
-PYTHON3_EXECUTABLE=/Users/Chao/anaconda3/bin/python3
+PYTHON3_EXECUTABLE=
 PYTHON3_INCLUDE_DIR=
 PYTHON3_INCLUDE_DIR2=
 PYTHON3_INCLUDE_PATH=
@@ -2217,11 +2782,12 @@ PYTHON3_LIBRARY_DEBUG=
 PYTHON3_NUMPY_INCLUDE_DIRS=
 PYTHON3_NUMPY_VERSION=
 PYTHON3_PACKAGES_PATH=
-PYTHON3_VERSION_MAJOR=3
-PYTHON3_VERSION_MINOR=6
-PYTHON3_VERSION_STRING=3.6.3
+PYTHON3_VERSION_MAJOR=
+PYTHON3_VERSION_MINOR=
+PYTHON3_VERSION_STRING=
 PYTHON_DEFAULT_AVAILABLE=TRUE
 PYTHON_DEFAULT_EXECUTABLE=/usr/bin/python2.7
+PYTHON_EXECUTABLE=/usr/bin/python
 PkgConfig_FOUND=FALSE
 ProgramFiles_ENV_PATH=
 RUN_CONFIGURE=ON
@@ -2264,7 +2830,9 @@ TIFF_VERSION_BIG=43
 TIFF_VERSION_CLASSIC=42
 TIFF_VERSION_LINES=#define TIFF_VERSION_CLASSIC 42;#define TIFF_VERSION_BIG 43
 TIFF_VERSION_STRING=4.0.2
-TIMESTAMP=2017-11-03T11:21:02Z
+TIMESTAMP=2017-12-07T08:18:12Z
+TINYDNN_INCLUDE_DIR=TINYDNN_INCLUDE_DIR-NOTFOUND
+TINYDNN_INCLUDE_DIRS=
 TOOL_OS_SUFFIX=
 UNIX=1
 USE_IPPICV=FALSE
@@ -2480,11 +3048,11 @@ _lang=C
 _language=C
 _libname=tbb
 _line=
-_modules=opencv_dnn;opencv_ml;opencv_objdetect;opencv_shape;opencv_stitching;opencv_superres;opencv_videostab;opencv_video;opencv_photo;opencv_aruco;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_imgproc;opencv_flann;opencv_core
+_modules=opencv_stitching;opencv_superres;opencv_videostab;opencv_photo;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_xfeatures2d;opencv_shape;opencv_video;opencv_ml;opencv_ximgproc;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_flann;opencv_xobjdetect;opencv_imgcodecs;opencv_objdetect;opencv_xphoto;opencv_imgproc;opencv_core
 _output=/Users/Chao/opencv/build/o4a/3rdparty/lib/mips
 _output_name=tbb
 _regex=
-_rev_deps=opencv_aruco;$<LINK_ONLY:tbb>;$<LINK_ONLY:log>;$<LINK_ONLY:m>;$<LINK_ONLY:dl>;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_imgproc;opencv_flann;opencv_core
+_rev_deps=opencv_xphoto;$<LINK_ONLY:tbb>;$<LINK_ONLY:log>;$<LINK_ONLY:m>;$<LINK_ONLY:dl>;opencv_imgproc;opencv_core
 _test_file=/Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp/TestEndianess.c
 _test_language=C
 _type=STATIC_LIBRARY
@@ -2498,10 +3066,10 @@ compile_java_tutorials_SOURCE_DIR=/Users/Chao/opencv/samples/java/tutorial_code
 cpack_input_file=/usr/local/Cellar/cmake/3.9.4_1/share/cmake/Templates/CPackConfig.cmake.in
 cpack_source_input_file=/usr/local/Cellar/cmake/3.9.4_1/share/cmake/Templates/CPackConfig.cmake.in
 dep=
-deps=opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;$<LINK_ONLY:dl>;$<LINK_ONLY:m>;$<LINK_ONLY:log>;$<LINK_ONLY:tbb>
+deps=opencv_core;opencv_imgproc;$<LINK_ONLY:dl>;$<LINK_ONLY:m>;$<LINK_ONLY:log>;$<LINK_ONLY:tbb>
 deps_3rdparty=libcpufeatures;libprotobuf;libjpeg;libwebp;libpng;libtiff;libjasper;IlmImf;tbb
 deps_extra=z;dl;m;log
-deps_modules=opencv_dnn;opencv_ml;opencv_objdetect;opencv_shape;opencv_stitching;opencv_superres;opencv_videostab;opencv_video;opencv_photo;opencv_aruco;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_imgcodecs;opencv_imgproc;opencv_flann;opencv_core
+deps_modules=opencv_stitching;opencv_superres;opencv_videostab;opencv_photo;opencv_aruco;opencv_bgsegm;opencv_bioinspired;opencv_ccalib;opencv_dpm;opencv_face;opencv_fuzzy;opencv_img_hash;opencv_line_descriptor;opencv_optflow;opencv_reg;opencv_rgbd;opencv_saliency;opencv_stereo;opencv_structured_light;opencv_phase_unwrapping;opencv_surface_matching;opencv_tracking;opencv_datasets;opencv_text;opencv_dnn;opencv_plot;opencv_xfeatures2d;opencv_shape;opencv_video;opencv_ml;opencv_ximgproc;opencv_calib3d;opencv_features2d;opencv_highgui;opencv_videoio;opencv_flann;opencv_xobjdetect;opencv_imgcodecs;opencv_objdetect;opencv_xphoto;opencv_imgproc;opencv_core
 detection_based_tracker_LIB_DEPENDS=general;dl;general;m;general;log;general;tbb;general;opencv_java;
 example-15-puzzle_BINARY_DIR=/Users/Chao/opencv/build/o4a/samples/android/15-puzzle
 example-15-puzzle_SOURCE_DIR=/Users/Chao/opencv/samples/android/15-puzzle
@@ -2520,6 +3088,7 @@ example-tutorial-2-mixedprocessing_SOURCE_DIR=/Users/Chao/opencv/samples/android
 example-tutorial-3-cameracontrol_BINARY_DIR=/Users/Chao/opencv/build/o4a/samples/android/tutorial-3-cameracontrol
 example-tutorial-3-cameracontrol_SOURCE_DIR=/Users/Chao/opencv/samples/android/tutorial-3-cameracontrol
 f=
+gflags_DIR=gflags_DIR-NOTFOUND
 hal=
 item=
 lang=
@@ -2557,27 +3126,51 @@ name=
 opencv_aruco_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/aruco
 opencv_aruco_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
 opencv_aruco_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/aruco
+opencv_bgsegm_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/bgsegm
+opencv_bgsegm_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_video;general;dl;general;m;general;log;general;tbb;
+opencv_bgsegm_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/bgsegm
+opencv_bioinspired_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/bioinspired
+opencv_bioinspired_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;dl;general;m;general;log;general;tbb;
+opencv_bioinspired_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/bioinspired
 opencv_calib3d_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/calib3d
 opencv_calib3d_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
 opencv_calib3d_SOURCE_DIR=/Users/Chao/opencv/modules/calib3d
+opencv_ccalib_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/ccalib
+opencv_ccalib_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_ccalib_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/ccalib
 opencv_core_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/core
 opencv_core_LIB_DEPENDS=general;dl;general;m;general;log;general;tbb;general;z;general;libcpufeatures;
 opencv_core_SOURCE_DIR=/Users/Chao/opencv/modules/core
+opencv_datasets_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/datasets
+opencv_datasets_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_text;general;dl;general;m;general;log;general;tbb;
+opencv_datasets_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/datasets
 opencv_dnn_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/dnn
 opencv_dnn_BUILD_TORCH_IMPORTER=ON
 opencv_dnn_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;general;libprotobuf;
 opencv_dnn_PERF_CAFFE=OFF
 opencv_dnn_PERF_CLCAFFE=OFF
 opencv_dnn_SOURCE_DIR=/Users/Chao/opencv/modules/dnn
+opencv_dpm_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/dpm
+opencv_dpm_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_objdetect;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;dl;general;m;general;log;general;tbb;
+opencv_dpm_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/dpm
+opencv_face_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/face
+opencv_face_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_objdetect;general;dl;general;m;general;log;general;tbb;
+opencv_face_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/face
 opencv_features2d_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/features2d
 opencv_features2d_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;dl;general;m;general;log;general;tbb;
 opencv_features2d_SOURCE_DIR=/Users/Chao/opencv/modules/features2d
 opencv_flann_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/flann
 opencv_flann_LIB_DEPENDS=general;opencv_core;general;dl;general;m;general;log;general;tbb;
 opencv_flann_SOURCE_DIR=/Users/Chao/opencv/modules/flann
+opencv_fuzzy_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/fuzzy
+opencv_fuzzy_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+opencv_fuzzy_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/fuzzy
 opencv_highgui_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/highgui
 opencv_highgui_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;dl;general;m;general;log;general;tbb;
 opencv_highgui_SOURCE_DIR=/Users/Chao/opencv/modules/highgui
+opencv_img_hash_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/img_hash
+opencv_img_hash_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+opencv_img_hash_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/img_hash
 opencv_imgcodecs_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/imgcodecs
 opencv_imgcodecs_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;general;z;general;libjpeg;general;libwebp;general;libpng;general;libtiff;general;libjasper;general;IlmImf;
 opencv_imgcodecs_SOURCE_DIR=/Users/Chao/opencv/modules/imgcodecs
@@ -2585,26 +3178,62 @@ opencv_imgproc_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/imgproc
 opencv_imgproc_LIB_DEPENDS=general;opencv_core;general;dl;general;m;general;log;general;tbb;
 opencv_imgproc_SOURCE_DIR=/Users/Chao/opencv/modules/imgproc
 opencv_java_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/java
-opencv_java_LIB_DEPENDS=general;-Wl,-whole-archive;general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_video;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_aruco;general;opencv_shape;general;opencv_superres;general;opencv_stitching;general;opencv_videostab;general;-Wl,-no-whole-archive;general;dl;general;m;general;log;general;tbb;general;jnigraphics;general;log;general;dl;general;z;general;dl;general;m;general;log;general;tbb;
+opencv_java_LIB_DEPENDS=general;-Wl,-whole-archive;general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_phase_unwrapping;general;opencv_photo;general;opencv_plot;general;opencv_video;general;opencv_dnn;general;opencv_img_hash;general;opencv_imgcodecs;general;opencv_shape;general;opencv_videoio;general;opencv_highgui;general;opencv_bioinspired;general;opencv_features2d;general;opencv_text;general;opencv_calib3d;general;opencv_datasets;general;opencv_structured_light;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_aruco;general;opencv_reg;general;opencv_surface_matching;general;opencv_xphoto;general;opencv_bgsegm;general;opencv_face;general;opencv_fuzzy;general;opencv_xobjdetect;general;opencv_superres;general;opencv_dpm;general;opencv_line_descriptor;general;opencv_saliency;general;opencv_ccalib;general;opencv_rgbd;general;opencv_stereo;general;opencv_videostab;general;opencv_ximgproc;general;opencv_optflow;general;opencv_stitching;general;-Wl,-no-whole-archive;general;dl;general;m;general;log;general;tbb;general;jnigraphics;general;log;general;dl;general;z;general;dl;general;m;general;log;general;tbb;
 opencv_java_SOURCE_DIR=/Users/Chao/opencv/modules/java
+opencv_line_descriptor_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/line_descriptor
+opencv_line_descriptor_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
+opencv_line_descriptor_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/line_descriptor
 opencv_ml_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/ml
 opencv_ml_LIB_DEPENDS=general;opencv_core;general;dl;general;m;general;log;general;tbb;
 opencv_ml_SOURCE_DIR=/Users/Chao/opencv/modules/ml
 opencv_objdetect_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/objdetect
 opencv_objdetect_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
 opencv_objdetect_SOURCE_DIR=/Users/Chao/opencv/modules/objdetect
+opencv_optflow_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/optflow
+opencv_optflow_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_video;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_ximgproc;general;dl;general;m;general;log;general;tbb;
+opencv_optflow_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/optflow
+opencv_phase_unwrapping_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/phase_unwrapping
+opencv_phase_unwrapping_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+opencv_phase_unwrapping_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/phase_unwrapping
 opencv_photo_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/photo
 opencv_photo_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
 opencv_photo_SOURCE_DIR=/Users/Chao/opencv/modules/photo
+opencv_plot_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/plot
+opencv_plot_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+opencv_plot_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/plot
+opencv_reg_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/reg
+opencv_reg_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+opencv_reg_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/reg
+opencv_rgbd_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/rgbd
+opencv_rgbd_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_rgbd_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/rgbd
+opencv_saliency_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/saliency
+opencv_saliency_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
+opencv_saliency_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/saliency
 opencv_shape_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/shape
 opencv_shape_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_video;general;dl;general;m;general;log;general;tbb;
 opencv_shape_SOURCE_DIR=/Users/Chao/opencv/modules/shape
+opencv_stereo_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/stereo
+opencv_stereo_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_stereo_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/stereo
 opencv_stitching_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/stitching
-opencv_stitching_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_stitching_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_video;general;opencv_imgcodecs;general;opencv_shape;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;opencv_xfeatures2d;general;dl;general;m;general;log;general;tbb;
 opencv_stitching_SOURCE_DIR=/Users/Chao/opencv/modules/stitching
+opencv_structured_light_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/structured_light
+opencv_structured_light_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_phase_unwrapping;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_structured_light_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/structured_light
 opencv_superres_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/superres
 opencv_superres_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_video;general;opencv_imgcodecs;general;opencv_videoio;general;dl;general;m;general;log;general;tbb;
 opencv_superres_SOURCE_DIR=/Users/Chao/opencv/modules/superres
+opencv_surface_matching_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/surface_matching
+opencv_surface_matching_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;dl;general;m;general;log;general;tbb;
+opencv_surface_matching_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/surface_matching
+opencv_text_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/text
+opencv_text_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;dl;general;m;general;log;general;tbb;
+opencv_text_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/text
+opencv_tracking_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/tracking
+opencv_tracking_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_plot;general;opencv_video;general;opencv_dnn;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_text;general;opencv_datasets;general;dl;general;m;general;log;general;tbb;
+opencv_tracking_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/tracking
 opencv_video_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/video
 opencv_video_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
 opencv_video_SOURCE_DIR=/Users/Chao/opencv/modules/video
@@ -2614,6 +3243,18 @@ opencv_videoio_SOURCE_DIR=/Users/Chao/opencv/modules/videoio
 opencv_videostab_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/videostab
 opencv_videostab_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_photo;general;opencv_video;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
 opencv_videostab_SOURCE_DIR=/Users/Chao/opencv/modules/videostab
+opencv_xfeatures2d_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/xfeatures2d
+opencv_xfeatures2d_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_ml;general;opencv_video;general;opencv_imgcodecs;general;opencv_shape;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_xfeatures2d_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/xfeatures2d
+opencv_ximgproc_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/ximgproc
+opencv_ximgproc_LIB_DEPENDS=general;opencv_core;general;opencv_flann;general;opencv_imgproc;general;opencv_imgcodecs;general;opencv_videoio;general;opencv_highgui;general;opencv_features2d;general;opencv_calib3d;general;dl;general;m;general;log;general;tbb;
+opencv_ximgproc_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/ximgproc
+opencv_xobjdetect_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/xobjdetect
+opencv_xobjdetect_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;opencv_objdetect;general;opencv_imgcodecs;general;dl;general;m;general;log;general;tbb;
+opencv_xobjdetect_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/xobjdetect
+opencv_xphoto_BINARY_DIR=/Users/Chao/opencv/build/o4a/modules/xphoto
+opencv_xphoto_LIB_DEPENDS=general;opencv_core;general;opencv_imgproc;general;dl;general;m;general;log;general;tbb;
+opencv_xphoto_SOURCE_DIR=/Users/Chao/opencv_contrib/modules/xphoto
 openexr_BINARY_DIR=/Users/Chao/opencv/build/o4a/3rdparty/openexr
 openexr_SOURCE_DIR=/Users/Chao/opencv/3rdparty/openexr
 output_name=tbb

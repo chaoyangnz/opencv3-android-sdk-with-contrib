@@ -1,0 +1,461 @@
+ok: class CLASS ::.Bioinspired : , name: Bioinspired, base: 
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired.hpp =====
+Namespaces: set([])
+Ignore header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired.hpp
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/bioinspired.hpp =====
+Namespaces: set([])
+Ignore header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/bioinspired.hpp
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/retina.hpp =====
+Namespaces: set([u'cv', u'cv.bioinspired'])
+
+--- Incoming ---
+[u'const cv.bioinspired.RETINA_COLOR_RANDOM', '0', [], [], None, '']
+ok: CONST RETINA_COLOR_RANDOM=0
+
+--- Incoming ---
+[u'const cv.bioinspired.RETINA_COLOR_DIAGONAL', '1', [], [], None, '']
+ok: CONST RETINA_COLOR_DIAGONAL=1
+
+--- Incoming ---
+[u'const cv.bioinspired.RETINA_COLOR_BAYER', '2', [], [], None, '']
+ok: CONST RETINA_COLOR_BAYER=2
+
+--- Incoming ---
+[   u'class cv.bioinspired.Retina',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief class which allows the Gipsa/Listic Labs model to be used with OpenCV.\n\nThis retina model allows spatio-temporal image processing (applied on still images, video sequences).\nAs a summary, these are the retina model properties:\n- It applies a spectral whithening (mid-frequency details enhancement)\n- high frequency spatio-temporal noise reduction\n- low frequency luminance to be reduced (luminance range compression)\n- local logarithmic luminance compression allows details to be enhanced in low light conditions\n\nUSE : this model can be used basically for spatio-temporal video effects but also for :\n_using the getParvo method output matrix : texture analysiswith enhanced signal to noise ratio and enhanced details robust against input images luminance ranges\n_using the getMagno method output matrix : motion analysis also with the previously cited properties\n\nfor more information, reer to the following papers :\nBenoit A., Caplier A., Durette B., Herault, J., "USING HUMAN VISUAL SYSTEM MODELING FOR BIO-INSPIRED LOW LEVEL IMAGE PROCESSING", Elsevier, Computer Vision and Image Understanding 114 (2010), pp. 758-773, DOI: http://dx.doi.org/10.1016/j.cviu.2010.01.011\nVision: Images, Signals and Neural Networks: Models of Neural Processing in Visual Perception (Progress in Neural Processing),By: Jeanny Herault, ISBN: 9814273686. WAPI (Tower ID): 113266891.\n\nThe retina filter includes the research contributions of phd/research collegues from which code has been redrawn by the author :\ntake a look at the retinacolor.hpp module to discover Brice Chaix de Lavarene color mosaicing/demosaicing and the reference paper:\nB. Chaix de Lavarene, D. Alleysson, B. Durette, J. Herault (2007). "Efficient demosaicing through recursive filtering", IEEE International Conference on Image Processing ICIP 2007\ntake a look at imagelogpolprojection.hpp to discover retina spatial log sampling which originates from Barthelemy Durette phd with Jeanny Herault. A Retina / V1 cortex projection is also proposed and originates from Jeanny\'s discussions.\nmore informations in the above cited Jeanny Heraults\'s book.']
+ok: class CLASS cv.bioinspired::.Retina : Algorithm, name: Retina, base: Algorithm
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getInputSize',
+    u'Size',
+    ['/V'],
+    [],
+    u'Size',
+    u'@brief Retreive retina input buffer size\n@return the retina input buffer size']
+ok: FUNC <Size cv.bioinspired.Retina.getInputSize []>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getOutputSize',
+    u'Size',
+    ['/V'],
+    [],
+    u'Size',
+    u'@brief Retreive retina output buffer size that can be different from the input if a spatial log\ntransformation is applied\n@return the retina output buffer size']
+ok: FUNC <Size cv.bioinspired.Retina.getOutputSize []>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.setup',
+    u'void',
+    ['/V'],
+    [   [u'String', u'retinaParameterFile', u'""', []],
+        [u'bool', u'applyDefaultSetupOnFailure', u'true', ['/C']]],
+    u'void',
+    u'@brief Try to open an XML retina parameters file to adjust current retina instance setup\n\n- if the xml file does not exist, then default setup is applied\n- warning, Exceptions are thrown if read XML file is not valid\n@param retinaParameterFile the parameters filename\n@param applyDefaultSetupOnFailure set to true if an error must be thrown on error\n\nYou can retrieve the current parameters structure using the method Retina::getParameters and update\nit before running method Retina::setup.']
+ok: FUNC <void cv.bioinspired.Retina.setup [ARG String retinaParameterFile="", ARG bool applyDefaultSetupOnFailure=true]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.printSetup',
+    u'String',
+    ['/V'],
+    [],
+    u'String',
+    u'@brief Outputs a string showing the used parameters setup\n@return a string which contains formated parameters information']
+ok: FUNC <String cv.bioinspired.Retina.printSetup []>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.write',
+    u'void',
+    ['/V'],
+    [[u'String', u'fs', u'', []]],
+    u'void',
+    u'@brief Write xml/yml formated parameters information\n@param fs the filename of the xml file that will be open and writen with formatted parameters\ninformation']
+ok: FUNC <void cv.bioinspired.Retina.write [ARG String fs=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.setupOPLandIPLParvoChannel',
+    u'void',
+    ['/V'],
+    [   [u'bool', u'colorMode', u'true', ['/C']],
+        [u'bool', u'normaliseOutput', u'true', ['/C']],
+        [   u'float',
+            u'photoreceptorsLocalAdaptationSensitivity',
+            u'0.7f',
+            ['/C']],
+        [u'float', u'photoreceptorsTemporalConstant', u'0.5f', ['/C']],
+        [u'float', u'photoreceptorsSpatialConstant', u'0.53f', ['/C']],
+        [u'float', u'horizontalCellsGain', u'0.f', ['/C']],
+        [u'float', u'HcellsTemporalConstant', u'1.f', ['/C']],
+        [u'float', u'HcellsSpatialConstant', u'7.f', ['/C']],
+        [u'float', u'ganglionCellsSensitivity', u'0.7f', ['/C']]],
+    u'void',
+    u'@brief Setup the OPL and IPL parvo channels (see biologocal model)\n\nOPL is referred as Outer Plexiform Layer of the retina, it allows the spatio-temporal filtering\nwhich withens the spectrum and reduces spatio-temporal noise while attenuating global luminance\n(low frequency energy) IPL parvo is the OPL next processing stage, it refers to a part of the\nInner Plexiform layer of the retina, it allows high contours sensitivity in foveal vision. See\nreference papers for more informations.\nfor more informations, please have a look at the paper Benoit A., Caplier A., Durette B., Herault, J., "USING HUMAN VISUAL SYSTEM MODELING FOR BIO-INSPIRED LOW LEVEL IMAGE PROCESSING", Elsevier, Computer Vision and Image Understanding 114 (2010), pp. 758-773, DOI: http://dx.doi.org/10.1016/j.cviu.2010.01.011\n@param colorMode specifies if (true) color is processed of not (false) to then processing gray\nlevel image\n@param normaliseOutput specifies if (true) output is rescaled between 0 and 255 of not (false)\n@param photoreceptorsLocalAdaptationSensitivity the photoreceptors sensitivity renage is 0-1\n(more log compression effect when value increases)\n@param photoreceptorsTemporalConstant the time constant of the first order low pass filter of\nthe photoreceptors, use it to cut high temporal frequencies (noise or fast motion), unit is\nframes, typical value is 1 frame\n@param photoreceptorsSpatialConstant the spatial constant of the first order low pass filter of\nthe photoreceptors, use it to cut high spatial frequencies (noise or thick contours), unit is\npixels, typical value is 1 pixel\n@param horizontalCellsGain gain of the horizontal cells network, if 0, then the mean value of\nthe output is zero, if the parameter is near 1, then, the luminance is not filtered and is\nstill reachable at the output, typicall value is 0\n@param HcellsTemporalConstant the time constant of the first order low pass filter of the\nhorizontal cells, use it to cut low temporal frequencies (local luminance variations), unit is\nframes, typical value is 1 frame, as the photoreceptors\n@param HcellsSpatialConstant the spatial constant of the first order low pass filter of the\nhorizontal cells, use it to cut low spatial frequencies (local luminance), unit is pixels,\ntypical value is 5 pixel, this value is also used for local contrast computing when computing\nthe local contrast adaptation at the ganglion cells level (Inner Plexiform Layer parvocellular\nchannel model)\n@param ganglionCellsSensitivity the compression strengh of the ganglion cells local adaptation\noutput, set a value between 0.6 and 1 for best results, a high value increases more the low\nvalue sensitivity... and the output saturates faster, recommended value: 0.7']
+ok: FUNC <void cv.bioinspired.Retina.setupOPLandIPLParvoChannel [ARG bool colorMode=true, ARG bool normaliseOutput=true, ARG float photoreceptorsLocalAdaptationSensitivity=0.7f, ARG float photoreceptorsTemporalConstant=0.5f, ARG float photoreceptorsSpatialConstant=0.53f, ARG float horizontalCellsGain=0.f, ARG float HcellsTemporalConstant=1.f, ARG float HcellsSpatialConstant=7.f, ARG float ganglionCellsSensitivity=0.7f]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.setupIPLMagnoChannel',
+    u'void',
+    ['/V'],
+    [   [u'bool', u'normaliseOutput', u'true', ['/C']],
+        [u'float', u'parasolCells_beta', u'0.f', ['/C']],
+        [u'float', u'parasolCells_tau', u'0.f', ['/C']],
+        [u'float', u'parasolCells_k', u'7.f', ['/C']],
+        [u'float', u'amacrinCellsTemporalCutFrequency', u'1.2f', ['/C']],
+        [u'float', u'V0CompressionParameter', u'0.95f', ['/C']],
+        [u'float', u'localAdaptintegration_tau', u'0.f', ['/C']],
+        [u'float', u'localAdaptintegration_k', u'7.f', ['/C']]],
+    u'void',
+    u'@brief Set parameters values for the Inner Plexiform Layer (IPL) magnocellular channel\n\nthis channel processes signals output from OPL processing stage in peripheral vision, it allows\nmotion information enhancement. It is decorrelated from the details channel. See reference\npapers for more details.\n\n@param normaliseOutput specifies if (true) output is rescaled between 0 and 255 of not (false)\n@param parasolCells_beta the low pass filter gain used for local contrast adaptation at the\nIPL level of the retina (for ganglion cells local adaptation), typical value is 0\n@param parasolCells_tau the low pass filter time constant used for local contrast adaptation\nat the IPL level of the retina (for ganglion cells local adaptation), unit is frame, typical\nvalue is 0 (immediate response)\n@param parasolCells_k the low pass filter spatial constant used for local contrast adaptation\nat the IPL level of the retina (for ganglion cells local adaptation), unit is pixels, typical\nvalue is 5\n@param amacrinCellsTemporalCutFrequency the time constant of the first order high pass fiter of\nthe magnocellular way (motion information channel), unit is frames, typical value is 1.2\n@param V0CompressionParameter the compression strengh of the ganglion cells local adaptation\noutput, set a value between 0.6 and 1 for best results, a high value increases more the low\nvalue sensitivity... and the output saturates faster, recommended value: 0.95\n@param localAdaptintegration_tau specifies the temporal constant of the low pas filter\ninvolved in the computation of the local "motion mean" for the local adaptation computation\n@param localAdaptintegration_k specifies the spatial constant of the low pas filter involved\nin the computation of the local "motion mean" for the local adaptation computation']
+ok: FUNC <void cv.bioinspired.Retina.setupIPLMagnoChannel [ARG bool normaliseOutput=true, ARG float parasolCells_beta=0.f, ARG float parasolCells_tau=0.f, ARG float parasolCells_k=7.f, ARG float amacrinCellsTemporalCutFrequency=1.2f, ARG float V0CompressionParameter=0.95f, ARG float localAdaptintegration_tau=0.f, ARG float localAdaptintegration_k=7.f]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.run',
+    u'void',
+    ['/V'],
+    [['Mat', u'inputImage', '', []]],
+    u'void',
+    u'@brief Method which allows retina to be applied on an input image,\n\nafter run, encapsulated retina module is ready to deliver its outputs using dedicated\nacccessors, see getParvo and getMagno methods\n@param inputImage the input Mat image to be processed, can be gray level or BGR coded in any\nformat (from 8bit to 16bits)']
+ok: FUNC <void cv.bioinspired.Retina.run [ARG Mat inputImage=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.applyFastToneMapping',
+    u'void',
+    ['/V'],
+    [   ['Mat', u'inputImage', '', []],
+        ['Mat', u'outputToneMappedImage', '', ['/O']]],
+    u'void',
+    u"@brief Method which processes an image in the aim to correct its luminance correct\nbacklight problems, enhance details in shadows.\n\nThis method is designed to perform High Dynamic Range image tone mapping (compress \\>8bit/pixel\nimages to 8bit/pixel). This is a simplified version of the Retina Parvocellular model\n(simplified version of the run/getParvo methods call) since it does not include the\nspatio-temporal filter modelling the Outer Plexiform Layer of the retina that performs spectral\nwhitening and many other stuff. However, it works great for tone mapping and in a faster way.\n\nCheck the demos and experiments section to see examples and the way to perform tone mapping\nusing the original retina model and the method.\n\n@param inputImage the input image to process (should be coded in float format : CV_32F,\nCV_32FC1, CV_32F_C3, CV_32F_C4, the 4th channel won't be considered).\n@param outputToneMappedImage the output 8bit/channel tone mapped image (CV_8U or CV_8UC3 format)."]
+ok: FUNC <void cv.bioinspired.Retina.applyFastToneMapping [ARG Mat inputImage=, ARG Mat outputToneMappedImage=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getParvo',
+    u'void',
+    ['/V'],
+    [['Mat', u'retinaOutput_parvo', '', ['/O']]],
+    u'void',
+    u'@brief Accessor of the details channel of the retina (models foveal vision).\n\nWarning, getParvoRAW methods return buffers that are not rescaled within range [0;255] while\nthe non RAW method allows a normalized matrix to be retrieved.\n\n@param retinaOutput_parvo the output buffer (reallocated if necessary), format can be :\n-   a Mat, this output is rescaled for standard 8bits image processing use in OpenCV\n-   RAW methods actually return a 1D matrix (encoding is R1, R2, ... Rn, G1, G2, ..., Gn, B1,\nB2, ...Bn), this output is the original retina filter model output, without any\nquantification or rescaling.\n@see getParvoRAW']
+ok: FUNC <void cv.bioinspired.Retina.getParvo [ARG Mat retinaOutput_parvo=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getParvoRAW',
+    u'void',
+    ['/V'],
+    [['Mat', u'retinaOutput_parvo', '', ['/O']]],
+    u'void',
+    u'@brief Accessor of the details channel of the retina (models foveal vision).\n@see getParvo']
+ok: FUNC <void cv.bioinspired.Retina.getParvoRAW [ARG Mat retinaOutput_parvo=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getMagno',
+    u'void',
+    ['/V'],
+    [['Mat', u'retinaOutput_magno', '', ['/O']]],
+    u'void',
+    u'@brief Accessor of the motion channel of the retina (models peripheral vision).\n\nWarning, getMagnoRAW methods return buffers that are not rescaled within range [0;255] while\nthe non RAW method allows a normalized matrix to be retrieved.\n@param retinaOutput_magno the output buffer (reallocated if necessary), format can be :\n-   a Mat, this output is rescaled for standard 8bits image processing use in OpenCV\n-   RAW methods actually return a 1D matrix (encoding is M1, M2,... Mn), this output is the\noriginal retina filter model output, without any quantification or rescaling.\n@see getMagnoRAW']
+ok: FUNC <void cv.bioinspired.Retina.getMagno [ARG Mat retinaOutput_magno=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getMagnoRAW',
+    u'void',
+    ['/V'],
+    [['Mat', u'retinaOutput_magno', '', ['/O']]],
+    u'void',
+    u'@brief Accessor of the motion channel of the retina (models peripheral vision).\n@see getMagno']
+ok: FUNC <void cv.bioinspired.Retina.getMagnoRAW [ARG Mat retinaOutput_magno=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getMagnoRAW',
+    u'Mat',
+    ['/V'],
+    [],
+    u'Mat',
+    u'@overload']
+ok: FUNC <Mat cv.bioinspired.Retina.getMagnoRAW []>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.getParvoRAW',
+    u'Mat',
+    ['/V'],
+    [],
+    u'Mat',
+    u'@overload']
+ok: FUNC <Mat cv.bioinspired.Retina.getParvoRAW []>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.setColorSaturation',
+    u'void',
+    ['/V'],
+    [   [u'bool', u'saturateColors', u'true', ['/C']],
+        [u'float', u'colorSaturationValue', u'4.0f', ['/C']]],
+    u'void',
+    u'@brief Activate color saturation as the final step of the color demultiplexing process -\\> this\nsaturation is a sigmoide function applied to each channel of the demultiplexed image.\n@param saturateColors boolean that activates color saturation (if true) or desactivate (if false)\n@param colorSaturationValue the saturation factor : a simple factor applied on the chrominance\nbuffers']
+ok: FUNC <void cv.bioinspired.Retina.setColorSaturation [ARG bool saturateColors=true, ARG float colorSaturationValue=4.0f]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.clearBuffers',
+    u'void',
+    ['/V'],
+    [],
+    u'void',
+    u'@brief Clears all retina buffers\n\n(equivalent to opening the eyes after a long period of eye close ;o) whatchout the temporal\ntransition occuring just after this method call.']
+ok: FUNC <void cv.bioinspired.Retina.clearBuffers []>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.activateMovingContoursProcessing',
+    u'void',
+    ['/V'],
+    [[u'bool', u'activate', u'', ['/C']]],
+    u'void',
+    u'@brief Activate/desactivate the Magnocellular pathway processing (motion information extraction), by\ndefault, it is activated\n@param activate true if Magnocellular output should be activated, false if not... if activated,\nthe Magnocellular output can be retrieved using the **getMagno** methods']
+ok: FUNC <void cv.bioinspired.Retina.activateMovingContoursProcessing [ARG bool activate=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.activateContoursProcessing',
+    u'void',
+    ['/V'],
+    [[u'bool', u'activate', u'', ['/C']]],
+    u'void',
+    u'@brief Activate/desactivate the Parvocellular pathway processing (contours information extraction), by\ndefault, it is activated\n@param activate true if Parvocellular (contours information extraction) output should be\nactivated, false if not... if activated, the Parvocellular output can be retrieved using the\nRetina::getParvo methods']
+ok: FUNC <void cv.bioinspired.Retina.activateContoursProcessing [ARG bool activate=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.create',
+    u'Ptr_Retina',
+    ['/S'],
+    [[u'Size', u'inputSize', u'', []]],
+    u'Ptr<Retina>',
+    u'@overload']
+ok: FUNC <Ptr_Retina cv.bioinspired.Retina.create [ARG Size inputSize=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.Retina.create',
+    u'Ptr_Retina',
+    ['/S'],
+    [   [u'Size', u'inputSize', u'', []],
+        [u'bool', u'colorMode', u'', ['/C']],
+        [u'int', u'colorSamplingMethod', u'RETINA_COLOR_BAYER', []],
+        [u'bool', u'useRetinaLogSampling', u'false', ['/C']],
+        [u'float', u'reductionFactor', u'1.0f', ['/C']],
+        [u'float', u'samplingStrenght', u'10.0f', ['/C']]],
+    u'Ptr<Retina>',
+    u'@brief Constructors from standardized interfaces : retreive a smart pointer to a Retina instance\n\n@param inputSize the input frame size\n@param colorMode the chosen processing mode : with or without color processing\n@param colorSamplingMethod specifies which kind of color sampling will be used :\n-   cv::bioinspired::RETINA_COLOR_RANDOM: each pixel position is either R, G or B in a random choice\n-   cv::bioinspired::RETINA_COLOR_DIAGONAL: color sampling is RGBRGBRGB..., line 2 BRGBRGBRG..., line 3, GBRGBRGBR...\n-   cv::bioinspired::RETINA_COLOR_BAYER: standard bayer sampling\n@param useRetinaLogSampling activate retina log sampling, if true, the 2 following parameters can\nbe used\n@param reductionFactor only usefull if param useRetinaLogSampling=true, specifies the reduction\nfactor of the output frame (as the center (fovea) is high resolution and corners can be\nunderscaled, then a reduction of the output is allowed without precision leak\n@param samplingStrenght only usefull if param useRetinaLogSampling=true, specifies the strenght of\nthe log scale that is applied']
+ok: FUNC <Ptr_Retina cv.bioinspired.Retina.create [ARG Size inputSize=, ARG bool colorMode=, ARG int colorSamplingMethod=RETINA_COLOR_BAYER, ARG bool useRetinaLogSampling=false, ARG float reductionFactor=1.0f, ARG float samplingStrenght=10.0f]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/retinafasttonemapping.hpp =====
+Namespaces: set([u'cv', u'cv.bioinspired'])
+
+--- Incoming ---
+[   u'class cv.bioinspired.RetinaFastToneMapping',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief  a wrapper class which allows the tone mapping algorithm of Meylan&al(2007) to be used with OpenCV.\n\nThis algorithm is already implemented in thre Retina class (retina::applyFastToneMapping) but used it does not require all the retina model to be allocated. This allows a light memory use for low memory devices (smartphones, etc.\nAs a summary, these are the model properties:\n- 2 stages of local luminance adaptation with a different local neighborhood for each.\n- first stage models the retina photorecetors local luminance adaptation\n- second stage models th ganglion cells local information adaptation\n- compared to the initial publication, this class uses spatio-temporal low pass filters instead of spatial only filters.\nthis can help noise robustness and temporal stability for video sequence use cases.\n\nfor more information, read to the following papers :\nMeylan L., Alleysson D., and Susstrunk S., A Model of Retinal Local Adaptation for the Tone Mapping of Color Filter Array Images, Journal of Optical Society of America, A, Vol. 24, N 9, September, 1st, 2007, pp. 2807-2816Benoit A., Caplier A., Durette B., Herault, J., "USING HUMAN VISUAL SYSTEM MODELING FOR BIO-INSPIRED LOW LEVEL IMAGE PROCESSING", Elsevier, Computer Vision and Image Understanding 114 (2010), pp. 758-773, DOI: http://dx.doi.org/10.1016/j.cviu.2010.01.011\nregarding spatio-temporal filter and the bigger retina model :\nVision: Images, Signals and Neural Networks: Models of Neural Processing in Visual Perception (Progress in Neural Processing),By: Jeanny Herault, ISBN: 9814273686. WAPI (Tower ID): 113266891.']
+ok: class CLASS cv.bioinspired::.RetinaFastToneMapping : Algorithm, name: RetinaFastToneMapping, base: Algorithm
+
+--- Incoming ---
+[   u'cv.bioinspired.RetinaFastToneMapping.applyFastToneMapping',
+    u'void',
+    ['/V'],
+    [   ['Mat', u'inputImage', '', []],
+        ['Mat', u'outputToneMappedImage', '', ['/O']]],
+    u'void',
+    u"@brief applies a luminance correction (initially High Dynamic Range (HDR) tone mapping)\n\nusing only the 2 local adaptation stages of the retina parvocellular channel : photoreceptors\nlevel and ganlion cells level. Spatio temporal filtering is applied but limited to temporal\nsmoothing and eventually high frequencies attenuation. This is a lighter method than the one\navailable using the regular retina::run method. It is then faster but it does not include\ncomplete temporal filtering nor retina spectral whitening. Then, it can have a more limited\neffect on images with a very high dynamic range. This is an adptation of the original still\nimage HDR tone mapping algorithm of David Alleyson, Sabine Susstruck and Laurence Meylan's\nwork, please cite: -> Meylan L., Alleysson D., and Susstrunk S., A Model of Retinal Local\nAdaptation for the Tone Mapping of Color Filter Array Images, Journal of Optical Society of\nAmerica, A, Vol. 24, N 9, September, 1st, 2007, pp. 2807-2816\n\n@param inputImage the input image to process RGB or gray levels\n@param outputToneMappedImage the output tone mapped image"]
+ok: FUNC <void cv.bioinspired.RetinaFastToneMapping.applyFastToneMapping [ARG Mat inputImage=, ARG Mat outputToneMappedImage=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.RetinaFastToneMapping.setup',
+    u'void',
+    ['/V'],
+    [   [u'float', u'photoreceptorsNeighborhoodRadius', u'3.f', ['/C']],
+        [u'float', u'ganglioncellsNeighborhoodRadius', u'1.f', ['/C']],
+        [u'float', u'meanLuminanceModulatorK', u'1.f', ['/C']]],
+    u'void',
+    u'@brief updates tone mapping behaviors by adjusing the local luminance computation area\n\n@param photoreceptorsNeighborhoodRadius the first stage local adaptation area\n@param ganglioncellsNeighborhoodRadius the second stage local adaptation area\n@param meanLuminanceModulatorK the factor applied to modulate the meanLuminance information\n(default is 1, see reference paper)']
+ok: FUNC <void cv.bioinspired.RetinaFastToneMapping.setup [ARG float photoreceptorsNeighborhoodRadius=3.f, ARG float ganglioncellsNeighborhoodRadius=1.f, ARG float meanLuminanceModulatorK=1.f]>
+
+--- Incoming ---
+[   u'cv.bioinspired.RetinaFastToneMapping.create',
+    u'Ptr_RetinaFastToneMapping',
+    ['/S'],
+    [[u'Size', u'inputSize', u'', []]],
+    u'Ptr<RetinaFastToneMapping>',
+    '']
+ok: FUNC <Ptr_RetinaFastToneMapping cv.bioinspired.RetinaFastToneMapping.create [ARG Size inputSize=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/bioinspired/include/opencv2/bioinspired/transientareassegmentationmodule.hpp =====
+Namespaces: set([u'cv', u'cv.bioinspired'])
+
+--- Incoming ---
+[   u'class cv.bioinspired.TransientAreasSegmentationModule',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief class which provides a transient/moving areas segmentation module\n\nperform a locally adapted segmentation by using the retina magno input data Based on Alexandre\nBENOIT thesis: "Le syst\xe8me visuel humain au secours de la vision par ordinateur"\n\n3 spatio temporal filters are used:\n- a first one which filters the noise and local variations of the input motion energy\n- a second (more powerfull low pass spatial filter) which gives the neighborhood motion energy the\nsegmentation consists in the comparison of these both outputs, if the local motion energy is higher\nto the neighborhood otion energy, then the area is considered as moving and is segmented\n- a stronger third low pass filter helps decision by providing a smooth information about the\n"motion context" in a wider area']
+ok: class CLASS cv.bioinspired::.TransientAreasSegmentationModule : Algorithm, name: TransientAreasSegmentationModule, base: Algorithm
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.getSize',
+    u'Size',
+    ['/V'],
+    [],
+    u'Size',
+    u'@brief return the sze of the manage input and output images']
+ok: FUNC <Size cv.bioinspired.TransientAreasSegmentationModule.getSize []>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.setup',
+    u'void',
+    ['/V'],
+    [   [u'String', u'segmentationParameterFile', u'""', []],
+        [u'bool', u'applyDefaultSetupOnFailure', u'true', ['/C']]],
+    u'void',
+    u'@brief try to open an XML segmentation parameters file to adjust current segmentation instance setup\n\n- if the xml file does not exist, then default setup is applied\n- warning, Exceptions are thrown if read XML file is not valid\n@param segmentationParameterFile : the parameters filename\n@param applyDefaultSetupOnFailure : set to true if an error must be thrown on error']
+ok: FUNC <void cv.bioinspired.TransientAreasSegmentationModule.setup [ARG String segmentationParameterFile="", ARG bool applyDefaultSetupOnFailure=true]>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.printSetup',
+    u'String',
+    ['/V'],
+    [],
+    u'String',
+    u'@brief parameters setup display method\n@return a string which contains formatted parameters information']
+ok: FUNC <String cv.bioinspired.TransientAreasSegmentationModule.printSetup []>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.write',
+    u'void',
+    ['/V'],
+    [[u'String', u'fs', u'', []]],
+    u'void',
+    u'@brief write xml/yml formated parameters information\n@param fs : the filename of the xml file that will be open and writen with formatted parameters information']
+ok: FUNC <void cv.bioinspired.TransientAreasSegmentationModule.write [ARG String fs=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.run',
+    u'void',
+    ['/V'],
+    [   ['Mat', u'inputToSegment', '', []],
+        [u'int', u'channelIndex', u'0', ['/C']]],
+    u'void',
+    u'@brief main processing method, get result using methods getSegmentationPicture()\n@param inputToSegment : the image to process, it must match the instance buffer size !\n@param channelIndex : the channel to process in case of multichannel images']
+ok: FUNC <void cv.bioinspired.TransientAreasSegmentationModule.run [ARG Mat inputToSegment=, ARG int channelIndex=0]>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.getSegmentationPicture',
+    u'void',
+    ['/V'],
+    [['Mat', u'transientAreas', '', ['/O']]],
+    u'void',
+    u'@brief access function\n@return the last segmentation result: a boolean picture which is resampled between 0 and 255 for a display purpose']
+ok: FUNC <void cv.bioinspired.TransientAreasSegmentationModule.getSegmentationPicture [ARG Mat transientAreas=]>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.clearAllBuffers',
+    u'void',
+    ['/V'],
+    [],
+    u'void',
+    u'@brief cleans all the buffers of the instance']
+ok: FUNC <void cv.bioinspired.TransientAreasSegmentationModule.clearAllBuffers []>
+
+--- Incoming ---
+[   u'cv.bioinspired.TransientAreasSegmentationModule.create',
+    u'Ptr_TransientAreasSegmentationModule',
+    ['/S'],
+    [[u'Size', u'inputSize', u'', []]],
+    u'Ptr<TransientAreasSegmentationModule>',
+    u'@brief allocator\n@param inputSize : size of the images input to segment (output will be the same size)']
+ok: FUNC <Ptr_TransientAreasSegmentationModule cv.bioinspired.TransientAreasSegmentationModule.create [ARG Size inputSize=]>
+
+
+===== Generating... =====
+CLASS cv.bioinspired::.RetinaFastToneMapping : Algorithm
+FUNC <Ptr_RetinaFastToneMapping cv.bioinspired.RetinaFastToneMapping.create [ARG Size inputSize=]>
+java: RetinaFastToneMapping create(Size inputSize)
+FUNC <void cv.bioinspired.RetinaFastToneMapping.applyFastToneMapping [ARG Mat inputImage=, ARG Mat outputToneMappedImage=]>
+java: void applyFastToneMapping(Mat inputImage, Mat outputToneMappedImage)
+FUNC <void cv.bioinspired.RetinaFastToneMapping.setup [ARG float photoreceptorsNeighborhoodRadius=3.f, ARG float ganglioncellsNeighborhoodRadius=1.f, ARG float meanLuminanceModulatorK=1.f]>
+java: void setup(float photoreceptorsNeighborhoodRadius, float ganglioncellsNeighborhoodRadius, float meanLuminanceModulatorK)
+java: void setup()
+CLASS cv.bioinspired::.TransientAreasSegmentationModule : Algorithm
+FUNC <Ptr_TransientAreasSegmentationModule cv.bioinspired.TransientAreasSegmentationModule.create [ARG Size inputSize=]>
+java: TransientAreasSegmentationModule create(Size inputSize)
+FUNC <Size cv.bioinspired.TransientAreasSegmentationModule.getSize []>
+java: Size getSize()
+FUNC <String cv.bioinspired.TransientAreasSegmentationModule.printSetup []>
+java: String printSetup()
+FUNC <void cv.bioinspired.TransientAreasSegmentationModule.clearAllBuffers []>
+java: void clearAllBuffers()
+FUNC <void cv.bioinspired.TransientAreasSegmentationModule.getSegmentationPicture [ARG Mat transientAreas=]>
+java: void getSegmentationPicture(Mat transientAreas)
+FUNC <void cv.bioinspired.TransientAreasSegmentationModule.run [ARG Mat inputToSegment=, ARG int channelIndex=0]>
+java: void run(Mat inputToSegment, int channelIndex)
+java: void run(Mat inputToSegment)
+FUNC <void cv.bioinspired.TransientAreasSegmentationModule.setup [ARG String segmentationParameterFile="", ARG bool applyDefaultSetupOnFailure=true]>
+java: void setup(String segmentationParameterFile, boolean applyDefaultSetupOnFailure)
+java: void setup()
+FUNC <void cv.bioinspired.TransientAreasSegmentationModule.write [ARG String fs=]>
+java: void write(String fs)
+CLASS cv.bioinspired::.Retina : Algorithm
+FUNC <Mat cv.bioinspired.Retina.getMagnoRAW []>
+java: Mat getMagnoRAW()
+FUNC <Mat cv.bioinspired.Retina.getParvoRAW []>
+java: Mat getParvoRAW()
+FUNC <Ptr_Retina cv.bioinspired.Retina.create [ARG Size inputSize=, ARG bool colorMode=, ARG int colorSamplingMethod=RETINA_COLOR_BAYER, ARG bool useRetinaLogSampling=false, ARG float reductionFactor=1.0f, ARG float samplingStrenght=10.0f]>
+java: Retina create(Size inputSize, boolean colorMode, int colorSamplingMethod, boolean useRetinaLogSampling, float reductionFactor, float samplingStrenght)
+java: Retina create(Size inputSize, boolean colorMode)
+FUNC <Ptr_Retina cv.bioinspired.Retina.create [ARG Size inputSize=]>
+java: Retina create(Size inputSize)
+FUNC <Size cv.bioinspired.Retina.getInputSize []>
+java: Size getInputSize()
+FUNC <Size cv.bioinspired.Retina.getOutputSize []>
+java: Size getOutputSize()
+FUNC <String cv.bioinspired.Retina.printSetup []>
+java: String printSetup()
+FUNC <void cv.bioinspired.Retina.activateContoursProcessing [ARG bool activate=]>
+java: void activateContoursProcessing(boolean activate)
+FUNC <void cv.bioinspired.Retina.activateMovingContoursProcessing [ARG bool activate=]>
+java: void activateMovingContoursProcessing(boolean activate)
+FUNC <void cv.bioinspired.Retina.applyFastToneMapping [ARG Mat inputImage=, ARG Mat outputToneMappedImage=]>
+java: void applyFastToneMapping(Mat inputImage, Mat outputToneMappedImage)
+FUNC <void cv.bioinspired.Retina.clearBuffers []>
+java: void clearBuffers()
+FUNC <void cv.bioinspired.Retina.getMagno [ARG Mat retinaOutput_magno=]>
+java: void getMagno(Mat retinaOutput_magno)
+FUNC <void cv.bioinspired.Retina.getMagnoRAW [ARG Mat retinaOutput_magno=]>
+java: void getMagnoRAW(Mat retinaOutput_magno)
+FUNC <void cv.bioinspired.Retina.getParvo [ARG Mat retinaOutput_parvo=]>
+java: void getParvo(Mat retinaOutput_parvo)
+FUNC <void cv.bioinspired.Retina.getParvoRAW [ARG Mat retinaOutput_parvo=]>
+java: void getParvoRAW(Mat retinaOutput_parvo)
+FUNC <void cv.bioinspired.Retina.run [ARG Mat inputImage=]>
+java: void run(Mat inputImage)
+FUNC <void cv.bioinspired.Retina.setColorSaturation [ARG bool saturateColors=true, ARG float colorSaturationValue=4.0f]>
+java: void setColorSaturation(boolean saturateColors, float colorSaturationValue)
+java: void setColorSaturation()
+FUNC <void cv.bioinspired.Retina.setup [ARG String retinaParameterFile="", ARG bool applyDefaultSetupOnFailure=true]>
+java: void setup(String retinaParameterFile, boolean applyDefaultSetupOnFailure)
+java: void setup()
+FUNC <void cv.bioinspired.Retina.setupIPLMagnoChannel [ARG bool normaliseOutput=true, ARG float parasolCells_beta=0.f, ARG float parasolCells_tau=0.f, ARG float parasolCells_k=7.f, ARG float amacrinCellsTemporalCutFrequency=1.2f, ARG float V0CompressionParameter=0.95f, ARG float localAdaptintegration_tau=0.f, ARG float localAdaptintegration_k=7.f]>
+java: void setupIPLMagnoChannel(boolean normaliseOutput, float parasolCells_beta, float parasolCells_tau, float parasolCells_k, float amacrinCellsTemporalCutFrequency, float V0CompressionParameter, float localAdaptintegration_tau, float localAdaptintegration_k)
+java: void setupIPLMagnoChannel()
+FUNC <void cv.bioinspired.Retina.setupOPLandIPLParvoChannel [ARG bool colorMode=true, ARG bool normaliseOutput=true, ARG float photoreceptorsLocalAdaptationSensitivity=0.7f, ARG float photoreceptorsTemporalConstant=0.5f, ARG float photoreceptorsSpatialConstant=0.53f, ARG float horizontalCellsGain=0.f, ARG float HcellsTemporalConstant=1.f, ARG float HcellsSpatialConstant=7.f, ARG float ganglionCellsSensitivity=0.7f]>
+java: void setupOPLandIPLParvoChannel(boolean colorMode, boolean normaliseOutput, float photoreceptorsLocalAdaptationSensitivity, float photoreceptorsTemporalConstant, float photoreceptorsSpatialConstant, float horizontalCellsGain, float HcellsTemporalConstant, float HcellsSpatialConstant, float ganglionCellsSensitivity)
+java: void setupOPLandIPLParvoChannel()
+FUNC <void cv.bioinspired.Retina.write [ARG String fs=]>
+java: void write(String fs)
+CLASS ::.Bioinspired : 
+[CONST RETINA_COLOR_RANDOM=0, CONST RETINA_COLOR_DIAGONAL=1, CONST RETINA_COLOR_BAYER=2]

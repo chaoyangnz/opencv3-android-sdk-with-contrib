@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Darwin-16.7.0")
+set(CMAKE_HOST_SYSTEM "Darwin-17.2.0")
 set(CMAKE_HOST_SYSTEM_NAME "Darwin")
-set(CMAKE_HOST_SYSTEM_VERSION "16.7.0")
+set(CMAKE_HOST_SYSTEM_VERSION "17.2.0")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/Users/Chao/opencv/platforms/android/android.toolchain.cmake")

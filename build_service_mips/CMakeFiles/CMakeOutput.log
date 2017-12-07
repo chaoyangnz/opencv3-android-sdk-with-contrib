@@ -1,5 +1,5 @@
 The target system is: Android - 1 - mips
-The host system is: Darwin - 16.7.0 - x86_64
+The host system is: Darwin - 17.2.0 - x86_64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++ 
 Build flags: -fexceptions;-frtti;-fpic;-Wno-psabi;--sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips;-fno-strict-aliasing;-finline-functions;-funwind-tables;-fmessage-length=0;-fno-inline-functions-called-once;-fgcse-after-reload;-frerun-cse-after-loop;-frename-registers;-fsigned-char;-no-canonical-prefixes;-fdata-sections;-ffunction-sections;-Wa,--noexecstack;
@@ -29,17 +29,17 @@ The C compiler identification is GNU, found in "/Users/Chao/opencv/build/build_s
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_077bf"
-[1/2] Building CXX object CMakeFiles/cmTC_077bf.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_077bf
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c214a"
+[1/2] Building CXX object CMakeFiles/cmTC_c214a.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_c214a
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_87dbf"
-[1/2] Building CXX object CMakeFiles/cmTC_87dbf.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_87dbf
+Run Build Command:"/usr/local/bin/ninja" "cmTC_83d1f"
+[1/2] Building CXX object CMakeFiles/cmTC_83d1f.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_83d1f
 Using built-in specs.
 COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc
 COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper
@@ -49,17 +49,17 @@ Thread model: posix
 gcc version 4.9 20140827 (prerelease) (GCC) 
 COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/bin/
 LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/
-COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_87dbf' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL'
- /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cccqbrwR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_87dbf /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_87dbf.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o
+COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_83d1f' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL'
+ /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccFJ6gJo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_83d1f /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_83d1f.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(mipsel-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_87dbf"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_87dbf.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_87dbf]
+  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_83d1f"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_83d1f.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_83d1f]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper]
@@ -69,13 +69,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.9 20140827 (prerelease) (GCC) ]
   ignore line: [COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/bin/]
   ignore line: [LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_87dbf' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL']
-  link line: [ /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cccqbrwR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_87dbf /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_87dbf.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_83d1f' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL']
+  link line: [ /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccFJ6gJo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_83d1f /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_83d1f.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o]
     arg [/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cccqbrwR.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccFJ6gJo.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-ldl] ==> ignore
@@ -91,7 +91,7 @@ Parsed CXX implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_87dbf] ==> ignore
+    arg [cmTC_83d1f] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/libs/mips] ==> dir [/libs/mips]
     arg [-L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9] ==> dir [/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9]
@@ -106,7 +106,7 @@ Parsed CXX implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_87dbf.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_83d1f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a] ==> lib [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a]
     arg [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a] ==> lib [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a]
     arg [-lm] ==> lib [m]
@@ -130,9 +130,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_8e09e"
-[1/2] Building CXX object CMakeFiles/cmTC_8e09e.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_8e09e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_2f6f8"
+[1/2] Building CXX object CMakeFiles/cmTC_2f6f8.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_2f6f8
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -197,9 +197,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_8e09e"
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_04803"
-[1/2] Building CXX object CMakeFiles/cmTC_04803.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_04803
+Run Build Command:"/usr/local/bin/ninja" "cmTC_62444"
+[1/2] Building CXX object CMakeFiles/cmTC_62444.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_62444
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -264,9 +264,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_04803"
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_831b4"
-[1/2] Building CXX object CMakeFiles/cmTC_831b4.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_831b4
+Run Build Command:"/usr/local/bin/ninja" "cmTC_62c00"
+[1/2] Building CXX object CMakeFiles/cmTC_62c00.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_62c00
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -329,17 +329,17 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_831b4"
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_10a1e"
-[1/2] Building C object CMakeFiles/cmTC_10a1e.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_10a1e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_570d1"
+[1/2] Building C object CMakeFiles/cmTC_570d1.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_570d1
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_88a40"
-[1/2] Building C object CMakeFiles/cmTC_88a40.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_88a40
+Run Build Command:"/usr/local/bin/ninja" "cmTC_d03d9"
+[1/2] Building C object CMakeFiles/cmTC_d03d9.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_d03d9
 Using built-in specs.
 COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc
 COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper
@@ -349,17 +349,17 @@ Thread model: posix
 gcc version 4.9 20140827 (prerelease) (GCC) 
 COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/bin/
 LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/
-COLLECT_GCC_OPTIONS='-fexceptions' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_88a40' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL'
- /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc5qlMyH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_88a40 /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_88a40.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o
+COLLECT_GCC_OPTIONS='-fexceptions' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_d03d9' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL'
+ /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc1LxKwO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_d03d9 /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_d03d9.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(mipsel-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_88a40"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_88a40.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_88a40]
+  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_d03d9"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_d03d9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_d03d9]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper]
@@ -369,13 +369,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.9 20140827 (prerelease) (GCC) ]
   ignore line: [COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/bin/]
   ignore line: [LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_88a40' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL']
-  link line: [ /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc5qlMyH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_88a40 /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_88a40.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-fpic' '-Wno-psabi' '-fno-strict-aliasing' '-finline-functions' '-funwind-tables' '-fmessage-length=0' '-fno-inline-functions-called-once' '-fgcse-after-reload' '-frerun-cse-after-loop' '-frename-registers' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'cmTC_d03d9' '-L/libs/mips' '-march=mips32' '-mllsc' '-mips32' '-mno-synci' '-mabi=32' '-mfpxx' '-EL']
+  link line: [ /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc1LxKwO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips --eh-frame-hdr -EL -mips32 -dynamic-linker /system/bin/linker -melf32ltsmip -z noexecstack -z relro -z now -o cmTC_d03d9 /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o -L/libs/mips -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9/../../../../mipsel-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --no-undefined -rpath-link /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_d03d9.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtend_android.o]
     arg [/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/mipsel-linux-android/4.9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc5qlMyH.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc1LxKwO.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-ldl] ==> ignore
@@ -391,7 +391,7 @@ Parsed C implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_88a40] ==> ignore
+    arg [cmTC_d03d9] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/libs/mips] ==> dir [/libs/mips]
     arg [-L/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9] ==> dir [/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/mipsel-linux-android/4.9]
@@ -406,7 +406,7 @@ Parsed C implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_88a40.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_d03d9.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a] ==> lib [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libsupc++.a]
     arg [-lgcc] ==> lib [gcc]
     arg [-lc] ==> lib [c]
@@ -428,9 +428,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_cde2d"
-[1/2] Building C object CMakeFiles/cmTC_cde2d.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_cde2d
+Run Build Command:"/usr/local/bin/ninja" "cmTC_31927"
+[1/2] Building C object CMakeFiles/cmTC_31927.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_31927
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -442,9 +442,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_cde2d"
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_5d4e9"
-[1/2] Building C object CMakeFiles/cmTC_5d4e9.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_5d4e9
+Run Build Command:"/usr/local/bin/ninja" "cmTC_aa511"
+[1/2] Building C object CMakeFiles/cmTC_aa511.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_aa511
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -456,9 +456,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_5d4e9"
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_9cd3f"
-[1/2] Building C object CMakeFiles/cmTC_9cd3f.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_9cd3f
+Run Build Command:"/usr/local/bin/ninja" "cmTC_f75c2"
+[1/2] Building C object CMakeFiles/cmTC_f75c2.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_f75c2
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -468,25 +468,25 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_9cd3f"
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_e3e1e"
-[1/2] Building C object CMakeFiles/cmTC_e3e1e.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_e3e1e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_e3769"
+[1/2] Building C object CMakeFiles/cmTC_e3769.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_e3769
 
 
 Determining if the include file malloc.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_0857d"
-[1/2] Building C object CMakeFiles/cmTC_0857d.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_0857d
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0ab2b"
+[1/2] Building C object CMakeFiles/cmTC_0ab2b.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_0ab2b
 
 
 Determining if the memalign exist passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_976db"
-[1/2] Building C object CMakeFiles/cmTC_976db.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_976db
+Run Build Command:"/usr/local/bin/ninja" "cmTC_b7063"
+[1/2] Building C object CMakeFiles/cmTC_b7063.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b7063
 
 File /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -506,41 +506,41 @@ int main(int argc, char** argv)
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_2a8ef"
-[1/2] Building C object CMakeFiles/cmTC_2a8ef.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_2a8ef
+Run Build Command:"/usr/local/bin/ninja" "cmTC_8c283"
+[1/2] Building C object CMakeFiles/cmTC_8c283.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_8c283
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_9c0bb"
-[1/2] Building C object CMakeFiles/cmTC_9c0bb.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_9c0bb
+Run Build Command:"/usr/local/bin/ninja" "cmTC_a2f51"
+[1/2] Building C object CMakeFiles/cmTC_a2f51.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a2f51
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_1fc4e"
-[1/2] Building C object CMakeFiles/cmTC_1fc4e.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_1fc4e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c86bb"
+[1/2] Building C object CMakeFiles/cmTC_c86bb.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c86bb
 
 
 Determining size of unsigned short passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_fbf30"
-[1/2] Building C object CMakeFiles/cmTC_fbf30.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
-[2/2] Linking C executable cmTC_fbf30
+Run Build Command:"/usr/local/bin/ninja" "cmTC_f1982"
+[1/2] Building C object CMakeFiles/cmTC_f1982.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+[2/2] Linking C executable cmTC_f1982
 
 
 Determining if the system is big endian passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_e52ce"
-[1/2] Building C object CMakeFiles/cmTC_e52ce.dir/TestEndianess.c.o
-[2/2] Linking C executable cmTC_e52ce
+Run Build Command:"/usr/local/bin/ninja" "cmTC_3687d"
+[1/2] Building C object CMakeFiles/cmTC_3687d.dir/TestEndianess.c.o
+[2/2] Linking C executable cmTC_3687d
 
 TestEndianess.c:
 /* A 16 bit integer is required. */
@@ -571,48 +571,48 @@ int main(int argc, char *argv[])
 Determining if the include file assert.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_435b0"
-[1/2] Building C object CMakeFiles/cmTC_435b0.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_435b0
+Run Build Command:"/usr/local/bin/ninja" "cmTC_bdc19"
+[1/2] Building C object CMakeFiles/cmTC_bdc19.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_bdc19
 
 
 Determining if the include file fcntl.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_6c301"
-[1/2] Building C object CMakeFiles/cmTC_6c301.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_6c301
+Run Build Command:"/usr/local/bin/ninja" "cmTC_99e69"
+[1/2] Building C object CMakeFiles/cmTC_99e69.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_99e69
 
 
 Determining if the include file string.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_925e8"
-[1/2] Building C object CMakeFiles/cmTC_925e8.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_925e8
+Run Build Command:"/usr/local/bin/ninja" "cmTC_09fe7"
+[1/2] Building C object CMakeFiles/cmTC_09fe7.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_09fe7
 
 
 Determining if the include file unistd.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_54221"
-[1/2] Building C object CMakeFiles/cmTC_54221.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_54221
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c8eeb"
+[1/2] Building C object CMakeFiles/cmTC_c8eeb.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c8eeb
 
 
 Determining if the function mmap exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_78204"
-[1/2] Building C object CMakeFiles/cmTC_78204.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_78204
+Run Build Command:"/usr/local/bin/ninja" "cmTC_84183"
+[1/2] Building C object CMakeFiles/cmTC_84183.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_84183
 
 
 Determining if the include file semaphore.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_mips/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_ced5a"
-[1/2] Building C object CMakeFiles/cmTC_ced5a.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_ced5a
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c1fec"
+[1/2] Building C object CMakeFiles/cmTC_c1fec.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c1fec
 
 

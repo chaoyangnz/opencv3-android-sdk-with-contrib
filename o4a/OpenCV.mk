@@ -18,7 +18,7 @@ OPENCV_LIBS_DIR:=$(OPENCV_THIS_DIR)/lib/$(OPENCV_TARGET_ARCH_ABI)
 OPENCV_3RDPARTY_LIBS_DIR:=$(OPENCV_THIS_DIR)/3rdparty/lib/$(OPENCV_TARGET_ARCH_ABI)
 OPENCV_BASEDIR:="/Users/Chao/opencv"
 OPENCV_LOCAL_C_INCLUDES:="/Users/Chao/opencv/build/o4a" "/Users/Chao/opencv/include" "/Users/Chao/opencv/include/opencv"
-OPENCV_MODULES:=dnn ml objdetect shape stitching superres videostab video photo aruco calib3d features2d highgui videoio imgcodecs imgproc flann core
+OPENCV_MODULES:=stitching superres videostab photo aruco bgsegm bioinspired ccalib dpm face fuzzy img_hash line_descriptor optflow reg rgbd saliency stereo structured_light phase_unwrapping surface_matching tracking datasets text dnn plot xfeatures2d shape video ml ximgproc calib3d features2d highgui videoio flann xobjdetect imgcodecs objdetect xphoto imgproc core
 OPENCV_SUB_MK:=$(call my-dir)/OpenCV-$(TARGET_ARCH_ABI).mk
 
 ifeq ($(OPENCV_LIB_TYPE),)

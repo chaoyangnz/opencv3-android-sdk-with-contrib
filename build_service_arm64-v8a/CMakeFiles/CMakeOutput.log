@@ -1,5 +1,5 @@
 The target system is: Android - 1 - aarch64
-The host system is: Darwin - 16.7.0 - x86_64
+The host system is: Darwin - 17.2.0 - x86_64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-g++ 
 Build flags: -fexceptions;-frtti;-Wno-psabi;--sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64;-funwind-tables;-fsigned-char;-no-canonical-prefixes;-fdata-sections;-ffunction-sections;-Wa,--noexecstack;
@@ -29,17 +29,17 @@ The C compiler identification is GNU, found in "/Users/Chao/opencv/build/build_s
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_7bd5e"
-[1/2] Building CXX object CMakeFiles/cmTC_7bd5e.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_7bd5e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_ce6ec"
+[1/2] Building CXX object CMakeFiles/cmTC_ce6ec.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_ce6ec
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_76ae7"
-[1/2] Building CXX object CMakeFiles/cmTC_76ae7.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_76ae7
+Run Build Command:"/usr/local/bin/ninja" "cmTC_92a9e"
+[1/2] Building CXX object CMakeFiles/cmTC_92a9e.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_92a9e
 Using built-in specs.
 COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc
 COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper
@@ -49,17 +49,17 @@ Thread model: posix
 gcc version 4.9 20140827 (prerelease) (GCC) 
 COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/bin/
 LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/
-COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_76ae7' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64'
- /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cchYhfVs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_76ae7 /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_76ae7.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o
+COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_92a9e' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64'
+ /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccq1fxem.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_92a9e /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_92a9e.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_76ae7"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_76ae7.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_76ae7]
+  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_92a9e"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_92a9e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_92a9e]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper]
@@ -69,13 +69,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.9 20140827 (prerelease) (GCC) ]
   ignore line: [COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/bin/]
   ignore line: [LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_76ae7' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cchYhfVs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_76ae7 /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_76ae7.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-frtti' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_92a9e' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccq1fxem.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_92a9e /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_92a9e.dir/CMakeCXXCompilerABI.cpp.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lm -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o]
     arg [/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cchYhfVs.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccq1fxem.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-ldl] ==> ignore
@@ -94,7 +94,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_76ae7] ==> ignore
+    arg [cmTC_92a9e] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/libs/arm64-v8a] ==> dir [/libs/arm64-v8a]
     arg [-L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9] ==> dir [/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9]
@@ -108,7 +108,7 @@ Parsed CXX implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_76ae7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_92a9e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a] ==> lib [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_static.a]
     arg [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a] ==> lib [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a]
     arg [-lm] ==> lib [m]
@@ -133,9 +133,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_0e51d"
-[1/2] Building CXX object CMakeFiles/cmTC_0e51d.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_0e51d
+Run Build Command:"/usr/local/bin/ninja" "cmTC_02674"
+[1/2] Building CXX object CMakeFiles/cmTC_02674.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_02674
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -200,9 +200,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_0e51d"
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_25f4e"
-[1/2] Building CXX object CMakeFiles/cmTC_25f4e.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_25f4e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0f894"
+[1/2] Building CXX object CMakeFiles/cmTC_0f894.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_0f894
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -267,9 +267,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_25f4e"
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_afa47"
-[1/2] Building CXX object CMakeFiles/cmTC_afa47.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_afa47
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0f4c2"
+[1/2] Building CXX object CMakeFiles/cmTC_0f4c2.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_0f4c2
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -332,17 +332,17 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_afa47"
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_1e10f"
-[1/2] Building C object CMakeFiles/cmTC_1e10f.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_1e10f
+Run Build Command:"/usr/local/bin/ninja" "cmTC_e646f"
+[1/2] Building C object CMakeFiles/cmTC_e646f.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_e646f
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_83aa6"
-[1/2] Building C object CMakeFiles/cmTC_83aa6.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_83aa6
+Run Build Command:"/usr/local/bin/ninja" "cmTC_33e6d"
+[1/2] Building C object CMakeFiles/cmTC_33e6d.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_33e6d
 Using built-in specs.
 COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc
 COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper
@@ -352,17 +352,17 @@ Thread model: posix
 gcc version 4.9 20140827 (prerelease) (GCC) 
 COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/bin/
 LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/
-COLLECT_GCC_OPTIONS='-fexceptions' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_83aa6' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64'
- /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc9eohN5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_83aa6 /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_83aa6.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o
+COLLECT_GCC_OPTIONS='-fexceptions' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_33e6d' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64'
+ /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccM18wgC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_33e6d /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_33e6d.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_83aa6"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_83aa6.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_83aa6]
+  ignore line: [Run Build Command:"/usr/local/bin/ninja" "cmTC_33e6d"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_33e6d.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_33e6d]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper]
@@ -372,13 +372,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.9 20140827 (prerelease) (GCC) ]
   ignore line: [COMPILER_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/bin/]
   ignore line: [LIBRARY_PATH=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64/:/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/:/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_83aa6' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc9eohN5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_83aa6 /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_83aa6.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-fexceptions' '-Wno-psabi' '-funwind-tables' '-fsigned-char' '-fdata-sections' '-ffunction-sections' '-fPIE' '-pie' '-v' '-o' 'cmTC_33e6d' '-L/libs/arm64-v8a' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2 -plugin /Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so -plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper -plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccM18wgC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-ldl -plugin-opt=-pass-through=-lgcc --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64 --eh-frame-hdr -dynamic-linker /system/bin/linker64 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -z noexecstack -z relro -z now -pie -o cmTC_33e6d /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o -L/libs/arm64-v8a -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib/../lib64 -L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9/../../../../aarch64-linux-android/lib -L/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib --no-undefined --gc-sections -z noexecstack -z relro -z now -z nocopyreloc CMakeFiles/cmTC_33e6d.dir/CMakeCCompilerABI.c.o /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a -lgcc -lc -ldl -lgcc /Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtend_android.o]
     arg [/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../libexec/gcc/aarch64-linux-android/4.9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//cc9eohN5.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/var/folders/84/7_y8dwv57nv49t5zn0dw9h5h0000gp/T//ccM18wgC.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-ldl] ==> ignore
@@ -397,7 +397,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_83aa6] ==> ignore
+    arg [cmTC_33e6d] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/platforms/android-21/arch-arm64/usr/lib/crtbegin_dynamic.o] ==> ignore
     arg [-L/libs/arm64-v8a] ==> dir [/libs/arm64-v8a]
     arg [-L/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9] ==> dir [/Users/Chao/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9]
@@ -411,7 +411,7 @@ Parsed C implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [-znocopyreloc] ==> ignore
-    arg [CMakeFiles/cmTC_83aa6.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_33e6d.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a] ==> lib [/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libsupc++.a]
     arg [-lgcc] ==> lib [gcc]
     arg [-lc] ==> lib [c]
@@ -434,9 +434,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_adac7"
-[1/2] Building C object CMakeFiles/cmTC_adac7.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_adac7
+Run Build Command:"/usr/local/bin/ninja" "cmTC_7febb"
+[1/2] Building C object CMakeFiles/cmTC_7febb.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_7febb
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -448,9 +448,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_adac7"
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_b155b"
-[1/2] Building C object CMakeFiles/cmTC_b155b.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_b155b
+Run Build Command:"/usr/local/bin/ninja" "cmTC_3b19c"
+[1/2] Building C object CMakeFiles/cmTC_3b19c.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_3b19c
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -462,9 +462,9 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_b155b"
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_8c92e"
-[1/2] Building C object CMakeFiles/cmTC_8c92e.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_8c92e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_d9325"
+[1/2] Building C object CMakeFiles/cmTC_d9325.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_d9325
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -474,17 +474,17 @@ Run Build Command:"/usr/local/bin/ninja" "cmTC_8c92e"
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_cdfc8"
-[1/2] Building C object CMakeFiles/cmTC_cdfc8.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_cdfc8
+Run Build Command:"/usr/local/bin/ninja" "cmTC_30683"
+[1/2] Building C object CMakeFiles/cmTC_30683.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_30683
 
 
 Determining if the posix_memalign exist passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_bfb3e"
-[1/2] Building C object CMakeFiles/cmTC_bfb3e.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_bfb3e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_44ab0"
+[1/2] Building C object CMakeFiles/cmTC_44ab0.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_44ab0
 
 File /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -504,17 +504,17 @@ int main(int argc, char** argv)
 Determining if the include file malloc.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_07ef4"
-[1/2] Building C object CMakeFiles/cmTC_07ef4.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_07ef4
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0a34f"
+[1/2] Building C object CMakeFiles/cmTC_0a34f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_0a34f
 
 
 Determining if the memalign exist passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_4c9b6"
-[1/2] Building C object CMakeFiles/cmTC_4c9b6.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_4c9b6
+Run Build Command:"/usr/local/bin/ninja" "cmTC_eb6fc"
+[1/2] Building C object CMakeFiles/cmTC_eb6fc.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_eb6fc
 
 File /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -534,41 +534,41 @@ int main(int argc, char** argv)
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_9a6b3"
-[1/2] Building C object CMakeFiles/cmTC_9a6b3.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_9a6b3
+Run Build Command:"/usr/local/bin/ninja" "cmTC_895f9"
+[1/2] Building C object CMakeFiles/cmTC_895f9.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_895f9
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_d8135"
-[1/2] Building C object CMakeFiles/cmTC_d8135.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_d8135
+Run Build Command:"/usr/local/bin/ninja" "cmTC_08e94"
+[1/2] Building C object CMakeFiles/cmTC_08e94.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_08e94
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_186fa"
-[1/2] Building C object CMakeFiles/cmTC_186fa.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_186fa
+Run Build Command:"/usr/local/bin/ninja" "cmTC_8a44e"
+[1/2] Building C object CMakeFiles/cmTC_8a44e.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_8a44e
 
 
 Determining size of unsigned short passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_20e91"
-[1/2] Building C object CMakeFiles/cmTC_20e91.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
-[2/2] Linking C executable cmTC_20e91
+Run Build Command:"/usr/local/bin/ninja" "cmTC_cf822"
+[1/2] Building C object CMakeFiles/cmTC_cf822.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+[2/2] Linking C executable cmTC_cf822
 
 
 Determining if the system is big endian passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_05e9e"
-[1/2] Building C object CMakeFiles/cmTC_05e9e.dir/TestEndianess.c.o
-[2/2] Linking C executable cmTC_05e9e
+Run Build Command:"/usr/local/bin/ninja" "cmTC_06e46"
+[1/2] Building C object CMakeFiles/cmTC_06e46.dir/TestEndianess.c.o
+[2/2] Linking C executable cmTC_06e46
 
 TestEndianess.c:
 /* A 16 bit integer is required. */
@@ -599,56 +599,56 @@ int main(int argc, char *argv[])
 Determining if the include file assert.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_dbdd3"
-[1/2] Building C object CMakeFiles/cmTC_dbdd3.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_dbdd3
+Run Build Command:"/usr/local/bin/ninja" "cmTC_2ed3c"
+[1/2] Building C object CMakeFiles/cmTC_2ed3c.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2ed3c
 
 
 Determining if the include file fcntl.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_6f310"
-[1/2] Building C object CMakeFiles/cmTC_6f310.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_6f310
+Run Build Command:"/usr/local/bin/ninja" "cmTC_83d48"
+[1/2] Building C object CMakeFiles/cmTC_83d48.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_83d48
 
 
 Determining if the include file search.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_9621c"
-[1/2] Building C object CMakeFiles/cmTC_9621c.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_9621c
+Run Build Command:"/usr/local/bin/ninja" "cmTC_c2156"
+[1/2] Building C object CMakeFiles/cmTC_c2156.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_c2156
 
 
 Determining if the include file string.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_cbd50"
-[1/2] Building C object CMakeFiles/cmTC_cbd50.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_cbd50
+Run Build Command:"/usr/local/bin/ninja" "cmTC_8b05e"
+[1/2] Building C object CMakeFiles/cmTC_8b05e.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_8b05e
 
 
 Determining if the include file unistd.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_ccf24"
-[1/2] Building C object CMakeFiles/cmTC_ccf24.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_ccf24
+Run Build Command:"/usr/local/bin/ninja" "cmTC_3e834"
+[1/2] Building C object CMakeFiles/cmTC_3e834.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3e834
 
 
 Determining if the function mmap exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_0e40a"
-[1/2] Building C object CMakeFiles/cmTC_0e40a.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_0e40a
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0feee"
+[1/2] Building C object CMakeFiles/cmTC_0feee.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_0feee
 
 
 Determining if the include file semaphore.h exists passed with the following output:
 Change Dir: /Users/Chao/opencv/build/build_service_arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_0ac8c"
-[1/2] Building C object CMakeFiles/cmTC_0ac8c.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_0ac8c
+Run Build Command:"/usr/local/bin/ninja" "cmTC_83eb6"
+[1/2] Building C object CMakeFiles/cmTC_83eb6.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_83eb6
 
 

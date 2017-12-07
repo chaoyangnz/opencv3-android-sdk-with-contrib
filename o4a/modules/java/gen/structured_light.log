@@ -1,0 +1,292 @@
+ok: class CLASS ::.Structured_light : , name: Structured_light, base: 
+
+===== Common header : /Users/Chao/opencv/modules/features2d/misc/java/src/cpp/features2d_converters.hpp =====
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light.hpp =====
+Namespaces: set([])
+Ignore header: /Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light.hpp
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/graycodepattern.hpp =====
+Namespaces: set([u'cv.structured_light', u'cv'])
+
+--- Incoming ---
+[   u'class cv.structured_light.GrayCodePattern',
+    u': cv::structured_light::StructuredLightPattern',
+    [],
+    [],
+    None,
+    u'@brief Class implementing the Gray-code pattern, based on @cite UNDERWORLD.\n*\n*  The generation of the pattern images is performed with Gray encoding using the traditional white and black colors.\n*\n*  The information about the two image axes x, y is encoded separately into two different pattern sequences.\n*  A projector P with resolution (P_res_x, P_res_y) will result in Ncols = log 2 (P_res_x) encoded pattern images representing the columns, and\n*  in Nrows = log 2 (P_res_y) encoded pattern images representing the rows.\n*  For example a projector with resolution 1024x768 will result in Ncols = 10 and Nrows = 10.\n\n*  However, the generated pattern sequence consists of both regular color and color-inverted images: inverted pattern images are images\n*  with the same structure as the original but with inverted colors.\n*  This provides an effective method for easily determining the intensity value of each pixel when it is lit (highest value) and\n*  when it is not lit (lowest value). So for a a projector with resolution 1024x768, the number of pattern images will be Ncols * 2 + Nrows * 2 = 40.\n*']
+ok: class CLASS cv.structured_light::.GrayCodePattern : StructuredLightPattern, name: GrayCodePattern, base: StructuredLightPattern
+
+--- Incoming ---
+[   u'cv.structured_light.GrayCodePattern.create',
+    u'Ptr_GrayCodePattern',
+    ['/S'],
+    [[u'int', u'width', u'', []], [u'int', u'height', u'', []]],
+    u'Ptr<GrayCodePattern>',
+    u'@brief Constructor\n@param parameters GrayCodePattern parameters GrayCodePattern::Params: the width and the height of the projector.']
+ok: FUNC <Ptr_GrayCodePattern cv.structured_light.GrayCodePattern.create [ARG int width=, ARG int height=]>
+
+--- Incoming ---
+[   u'cv.structured_light.GrayCodePattern.getNumberOfPatternImages',
+    u'size_t',
+    ['/C', '/V', '/PV'],
+    [],
+    u'size_t',
+    u'@brief Get the number of pattern images needed for the graycode pattern.\n*\n* @return The number of pattern images needed for the graycode pattern.\n*']
+ok: FUNC <size_t cv.structured_light.GrayCodePattern.getNumberOfPatternImages []>
+
+--- Incoming ---
+[   u'cv.structured_light.GrayCodePattern.setWhiteThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'size_t', u'value', u'', []]],
+    u'void',
+    u'@brief Sets the value for white threshold, needed for decoding.\n*\n*  White threshold is a number between 0-255 that represents the minimum brightness difference required for valid pixels, between the graycode pattern and its inverse images; used in getProjPixel method.\n*\n*  @param value The desired white threshold value.\n*']
+ok: FUNC <void cv.structured_light.GrayCodePattern.setWhiteThreshold [ARG size_t value=]>
+
+--- Incoming ---
+[   u'cv.structured_light.GrayCodePattern.setBlackThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'size_t', u'value', u'', []]],
+    u'void',
+    u'@brief Sets the value for black threshold, needed for decoding (shadowsmasks computation).\n*\n*  Black threshold is a number between 0-255 that represents the minimum brightness difference required for valid pixels, between the fully illuminated (white) and the not illuminated images (black); used in computeShadowMasks method.\n*\n*  @param value The desired black threshold value.\n*']
+ok: FUNC <void cv.structured_light.GrayCodePattern.setBlackThreshold [ARG size_t value=]>
+
+--- Incoming ---
+[   u'cv.structured_light.GrayCodePattern.getImagesForShadowMasks',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [['Mat', u'blackImage', '', ['/IO']], ['Mat', u'whiteImage', '', ['/IO']]],
+    u'void',
+    u"@brief Generates the all-black and all-white images needed for shadowMasks computation.\n*\n*  To identify shadow regions, the regions of two images where the pixels are not lit by projector's light and thus where there is not coded information,\n*  the 3DUNDERWORLD algorithm computes a shadow mask for the two cameras views, starting from a white and a black images captured by each camera.\n*  This method generates these two additional images to project.\n*\n*  @param blackImage The generated all-black CV_8U image, at projector's resolution.\n*  @param whiteImage The generated all-white CV_8U image, at projector's resolution."]
+ok: FUNC <void cv.structured_light.GrayCodePattern.getImagesForShadowMasks [ARG Mat blackImage=, ARG Mat whiteImage=]>
+
+--- Incoming ---
+[   u'cv.structured_light.GrayCodePattern.getProjPixel',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [   ['vector_Mat', u'patternImages', '', []],
+        [u'int', u'x', u'', []],
+        [u'int', u'y', u'', []],
+        [u'Point', u'projPix', u'', ['/Ref']]],
+    u'bool',
+    u"@brief For a (x,y) pixel of a camera returns the corresponding projector pixel.\n*\n*  The function decodes each pixel in the pattern images acquired by a camera into their corresponding decimal numbers representing the projector's column and row,\n*  providing a mapping between camera's and projector's pixel.\n*\n*  @param patternImages The pattern images acquired by the camera, stored in a grayscale vector < Mat >.\n*  @param x x coordinate of the image pixel.\n*  @param y y coordinate of the image pixel.\n*  @param projPix Projector's pixel corresponding to the camera's pixel: projPix.x and projPix.y are the image coordinates of the projector\u2019s pixel corresponding to the pixel being decoded in a camera."]
+ok: FUNC <bool cv.structured_light.GrayCodePattern.getProjPixel [ARG vector_Mat patternImages=, ARG int x=, ARG int y=, ARG Point projPix=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/sinusoidalpattern.hpp =====
+Namespaces: set([u'cv.structured_light', u'cv'])
+
+--- Incoming ---
+[u'const cv.structured_light.FTP', u'0', [], [], None, '']
+ok: CONST FTP=0
+
+--- Incoming ---
+[u'const cv.structured_light.PSP', u'1', [], [], None, '']
+ok: CONST PSP=1
+
+--- Incoming ---
+[u'const cv.structured_light.FAPS', u'2', [], [], None, '']
+ok: CONST FAPS=2
+
+--- Incoming ---
+[   u'class cv.structured_light.SinusoidalPattern',
+    u': cv::structured_light::StructuredLightPattern',
+    [],
+    [],
+    None,
+    u'* @brief Class implementing Fourier transform profilometry (FTP) , phase-shifting profilometry (PSP)\n* and Fourier-assisted phase-shifting profilometry (FAPS) based on @cite faps.\n\n* This class generates sinusoidal patterns that can be used with FTP, PSP and FAPS.']
+ok: class CLASS cv.structured_light::.SinusoidalPattern : StructuredLightPattern, name: SinusoidalPattern, base: StructuredLightPattern
+
+--- Incoming ---
+[   u'struct cv.structured_light.SinusoidalPattern.Params',
+    '',
+    [],
+    [   [u'int', u'width', '', ['/RW']],
+        [u'int', u'height', '', ['/RW']],
+        [u'int', u'nbrOfPeriods', '', ['/RW']],
+        [u'float', u'shiftValue', '', ['/RW']],
+        [u'int', u'methodId', '', ['/RW']],
+        [u'int', u'nbrOfPixelsBetweenMarkers', '', ['/RW']],
+        [u'bool', u'horizontal', '', ['/RW']],
+        [u'bool', u'setMarkers', '', ['/RW']]],
+    None,
+    u"* @brief Parameters of SinusoidalPattern constructor\n* @param width Projector's width.\n* @param height Projector's height.\n* @param nbrOfPeriods Number of period along the patterns direction.\n* @param shiftValue Phase shift between two consecutive patterns.\n* @param methodId Allow to choose between FTP, PSP and FAPS.\n* @param nbrOfPixelsBetweenMarkers Number of pixels between two consecutive markers on the same row.\n* @param setMarkers Allow to set markers on the patterns.\n* @param markersLocation vector used to store markers location on the patterns."]
+ok: class CLASS cv.structured_light::SinusoidalPattern.Params : , name: Params, base: 
+
+--- Incoming ---
+[u'cv.structured_light.SinusoidalPattern.Params.Params', '', [], [], None, '']
+ok: FUNC < cv.structured_light.SinusoidalPattern.Params.Params []>
+
+--- Incoming ---
+[   u'cv.structured_light.SinusoidalPattern.create',
+    u'Ptr_SinusoidalPattern',
+    ['/S'],
+    [   [   u'Ptr_SinusoidalPattern_Params',
+            u'parameters',
+            u'makePtr<SinusoidalPattern::Params>()',
+            []]],
+    u'Ptr<SinusoidalPattern>',
+    u'* @brief Constructor.\n* @param parameters SinusoidalPattern parameters SinusoidalPattern::Params: width, height of the projector and patterns parameters.\n*']
+ok: FUNC <Ptr_SinusoidalPattern cv.structured_light.SinusoidalPattern.create [ARG Ptr_SinusoidalPattern_Params parameters=makePtr<SinusoidalPattern::Params>()]>
+
+--- Incoming ---
+[   u'cv.structured_light.SinusoidalPattern.computePhaseMap',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'patternImages', '', []],
+        ['Mat', u'wrappedPhaseMap', '', ['/O']],
+        ['Mat', u'shadowMask', u'Mat()', ['/O']],
+        ['Mat', u'fundamental', u'Mat()', []]],
+    u'void',
+    u'* @brief Compute a wrapped phase map from sinusoidal patterns.\n* @param patternImages Input data to compute the wrapped phase map.\n* @param wrappedPhaseMap Wrapped phase map obtained through one of the three methods.\n* @param shadowMask Mask used to discard shadow regions.\n* @param fundamental Fundamental matrix used to compute epipolar lines and ease the matching step.']
+ok: FUNC <void cv.structured_light.SinusoidalPattern.computePhaseMap [ARG vector_Mat patternImages=, ARG Mat wrappedPhaseMap=, ARG Mat shadowMask=Mat(), ARG Mat fundamental=Mat()]>
+
+--- Incoming ---
+[   u'cv.structured_light.SinusoidalPattern.unwrapPhaseMap',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'wrappedPhaseMap', '', []],
+        ['Mat', u'unwrappedPhaseMap', '', ['/O']],
+        [u'Size', u'camSize', u'', []],
+        ['Mat', u'shadowMask', u'Mat()', []]],
+    u'void',
+    u'* @brief Unwrap the wrapped phase map to remove phase ambiguities.\n* @param wrappedPhaseMap The wrapped phase map computed from the pattern.\n* @param unwrappedPhaseMap The unwrapped phase map used to find correspondences between the two devices.\n* @param camSize Resolution of the camera.\n* @param shadowMask Mask used to discard shadow regions.']
+ok: FUNC <void cv.structured_light.SinusoidalPattern.unwrapPhaseMap [ARG vector_Mat wrappedPhaseMap=, ARG Mat unwrappedPhaseMap=, ARG Size camSize=, ARG Mat shadowMask=Mat()]>
+
+--- Incoming ---
+[   u'cv.structured_light.SinusoidalPattern.findProCamMatches',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'projUnwrappedPhaseMap', '', []],
+        ['Mat', u'camUnwrappedPhaseMap', '', []],
+        ['vector_Mat', u'matches', '', ['/O']]],
+    u'void',
+    u"* @brief Find correspondences between the two devices thanks to unwrapped phase maps.\n* @param projUnwrappedPhaseMap Projector's unwrapped phase map.\n* @param camUnwrappedPhaseMap Camera's unwrapped phase map.\n* @param matches Images used to display correspondences map."]
+ok: FUNC <void cv.structured_light.SinusoidalPattern.findProCamMatches [ARG Mat projUnwrappedPhaseMap=, ARG Mat camUnwrappedPhaseMap=, ARG vector_Mat matches=]>
+
+--- Incoming ---
+[   u'cv.structured_light.SinusoidalPattern.computeDataModulationTerm',
+    u'void',
+    ['/V', '/PV'],
+    [   ['vector_Mat', u'patternImages', '', []],
+        ['Mat', u'dataModulationTerm', '', ['/O']],
+        ['Mat', u'shadowMask', '', []]],
+    u'void',
+    u'* @brief compute the data modulation term.\n* @param patternImages captured images with projected patterns.\n* @param dataModulationTerm Mat where the data modulation term is saved.\n* @param shadowMask Mask used to discard shadow regions.']
+ok: FUNC <void cv.structured_light.SinusoidalPattern.computeDataModulationTerm [ARG vector_Mat patternImages=, ARG Mat dataModulationTerm=, ARG Mat shadowMask=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/structured_light/include/opencv2/structured_light/structured_light.hpp =====
+Namespaces: set([u'cv.structured_light', u'cv'])
+
+--- Incoming ---
+[u'const cv.structured_light.DECODE_3D_UNDERWORLD', u'0', [], [], None, '']
+ok: CONST DECODE_3D_UNDERWORLD=0
+
+--- Incoming ---
+[   u'class cv.structured_light.StructuredLightPattern',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief Abstract base class for generating and decoding structured light patterns.']
+ok: class CLASS cv.structured_light::.StructuredLightPattern : Algorithm, name: StructuredLightPattern, base: Algorithm
+
+--- Incoming ---
+[   u'cv.structured_light.StructuredLightPattern.generate',
+    u'bool',
+    ['/V', '/PV'],
+    [['vector_Mat', u'patternImages', '', ['/O']]],
+    u'bool',
+    u"@brief Generates the structured light pattern to project.\n\n@param patternImages The generated pattern: a vector<Mat>, in which each image is a CV_8U Mat at projector's resolution."]
+ok: FUNC <bool cv.structured_light.StructuredLightPattern.generate [ARG vector_Mat patternImages=]>
+
+--- Incoming ---
+[   u'cv.structured_light.StructuredLightPattern.decode',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [   [u'vector_vector_Mat', u'patternImages', u'', ['/C', '/Ref']],
+        ['Mat', u'disparityMap', '', ['/O']],
+        ['vector_Mat', u'blackImages', u'vector_Mat()', []],
+        ['vector_Mat', u'whiteImages', u'vector_Mat()', []],
+        [u'int', u'flags', u'DECODE_3D_UNDERWORLD', []]],
+    u'bool',
+    u'@brief Decodes the structured light pattern, generating a disparity map\n\n@param patternImages The acquired pattern images to decode (vector<vector<Mat>>), loaded as grayscale and previously rectified.\n@param disparityMap The decoding result: a CV_64F Mat at image resolution, storing the computed disparity map.\n@param blackImages The all-black images needed for shadowMasks computation.\n@param whiteImages The all-white images needed for shadowMasks computation.\n@param flags Flags setting decoding algorithms. Default: DECODE_3D_UNDERWORLD.\n@note All the images must be at the same resolution.']
+ok: FUNC <bool cv.structured_light.StructuredLightPattern.decode [ARG vector_vector_Mat patternImages=, ARG Mat disparityMap=, ARG vector_Mat blackImages=vector_Mat(), ARG vector_Mat whiteImages=vector_Mat(), ARG int flags=DECODE_3D_UNDERWORLD]>
+
+
+===== Generating... =====
+CLASS cv.structured_light::.SinusoidalPattern : StructuredLightPattern
+FUNC <Ptr_SinusoidalPattern cv.structured_light.SinusoidalPattern.create [ARG Ptr_SinusoidalPattern_Params parameters=makePtr<SinusoidalPattern::Params>()]>
+java: SinusoidalPattern create()
+java: SinusoidalPattern create()
+FUNC <void cv.structured_light.SinusoidalPattern.computeDataModulationTerm [ARG vector_Mat patternImages=, ARG Mat dataModulationTerm=, ARG Mat shadowMask=]>
+java: void computeDataModulationTerm(List<Mat> patternImages, Mat dataModulationTerm, Mat shadowMask)
+FUNC <void cv.structured_light.SinusoidalPattern.computePhaseMap [ARG vector_Mat patternImages=, ARG Mat wrappedPhaseMap=, ARG Mat shadowMask=Mat(), ARG Mat fundamental=Mat()]>
+java: void computePhaseMap(List<Mat> patternImages, Mat wrappedPhaseMap, Mat shadowMask, Mat fundamental)
+java: void computePhaseMap(List<Mat> patternImages, Mat wrappedPhaseMap)
+FUNC <void cv.structured_light.SinusoidalPattern.findProCamMatches [ARG Mat projUnwrappedPhaseMap=, ARG Mat camUnwrappedPhaseMap=, ARG vector_Mat matches=]>
+java: void findProCamMatches(Mat projUnwrappedPhaseMap, Mat camUnwrappedPhaseMap, List<Mat> matches)
+FUNC <void cv.structured_light.SinusoidalPattern.unwrapPhaseMap [ARG vector_Mat wrappedPhaseMap=, ARG Mat unwrappedPhaseMap=, ARG Size camSize=, ARG Mat shadowMask=Mat()]>
+java: void unwrapPhaseMap(List<Mat> wrappedPhaseMap, Mat unwrappedPhaseMap, Size camSize, Mat shadowMask)
+java: void unwrapPhaseMap(List<Mat> wrappedPhaseMap, Mat unwrappedPhaseMap, Size camSize)
+CLASS ::.Structured_light : 
+[CONST FTP=0, CONST PSP=1, CONST FAPS=2, CONST DECODE_3D_UNDERWORLD=0]
+CLASS cv.structured_light::.StructuredLightPattern : Algorithm
+FUNC <bool cv.structured_light.StructuredLightPattern.decode [ARG vector_vector_Mat patternImages=, ARG Mat disparityMap=, ARG vector_Mat blackImages=vector_Mat(), ARG vector_Mat whiteImages=vector_Mat(), ARG int flags=DECODE_3D_UNDERWORLD]>
+SKIP:bool decode(vector_vector_Mat patternImages, Mat& disparityMap, vector_Mat blackImages = vector_Mat(), vector_Mat whiteImages = vector_Mat(), int flags = DECODE_3D_UNDERWORLD)	 due to ARG typevector_vector_Mat/I
+FUNC <bool cv.structured_light.StructuredLightPattern.generate [ARG vector_Mat patternImages=]>
+java: boolean generate(List<Mat> patternImages)
+CLASS cv.structured_light::SinusoidalPattern.Params : 
+FUNC < cv.structured_light.SinusoidalPattern.Params.Params []>
+java:  Params()
+FUNC <int cv.structured_light.SinusoidalPattern.Params.get_width []>
+java: int get_width()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_width [ARG int width=]>
+java: void set_width(int width)
+FUNC <int cv.structured_light.SinusoidalPattern.Params.get_height []>
+java: int get_height()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_height [ARG int height=]>
+java: void set_height(int height)
+FUNC <int cv.structured_light.SinusoidalPattern.Params.get_nbrOfPeriods []>
+java: int get_nbrOfPeriods()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_nbrOfPeriods [ARG int nbrOfPeriods=]>
+java: void set_nbrOfPeriods(int nbrOfPeriods)
+FUNC <float cv.structured_light.SinusoidalPattern.Params.get_shiftValue []>
+java: float get_shiftValue()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_shiftValue [ARG float shiftValue=]>
+java: void set_shiftValue(float shiftValue)
+FUNC <int cv.structured_light.SinusoidalPattern.Params.get_methodId []>
+java: int get_methodId()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_methodId [ARG int methodId=]>
+java: void set_methodId(int methodId)
+FUNC <int cv.structured_light.SinusoidalPattern.Params.get_nbrOfPixelsBetweenMarkers []>
+java: int get_nbrOfPixelsBetweenMarkers()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_nbrOfPixelsBetweenMarkers [ARG int nbrOfPixelsBetweenMarkers=]>
+java: void set_nbrOfPixelsBetweenMarkers(int nbrOfPixelsBetweenMarkers)
+FUNC <bool cv.structured_light.SinusoidalPattern.Params.get_horizontal []>
+java: boolean get_horizontal()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_horizontal [ARG bool horizontal=]>
+java: void set_horizontal(boolean horizontal)
+FUNC <bool cv.structured_light.SinusoidalPattern.Params.get_setMarkers []>
+java: boolean get_setMarkers()
+FUNC <void cv.structured_light.SinusoidalPattern.Params.set_setMarkers [ARG bool setMarkers=]>
+java: void set_setMarkers(boolean setMarkers)
+CLASS cv.structured_light::.GrayCodePattern : StructuredLightPattern
+FUNC <Ptr_GrayCodePattern cv.structured_light.GrayCodePattern.create [ARG int width=, ARG int height=]>
+java: GrayCodePattern create(int width, int height)
+FUNC <bool cv.structured_light.GrayCodePattern.getProjPixel [ARG vector_Mat patternImages=, ARG int x=, ARG int y=, ARG Point projPix=]>
+java: boolean getProjPixel(List<Mat> patternImages, int x, int y, Point projPix)
+FUNC <size_t cv.structured_light.GrayCodePattern.getNumberOfPatternImages []>
+java: long getNumberOfPatternImages()
+FUNC <void cv.structured_light.GrayCodePattern.getImagesForShadowMasks [ARG Mat blackImage=, ARG Mat whiteImage=]>
+java: void getImagesForShadowMasks(Mat blackImage, Mat whiteImage)
+FUNC <void cv.structured_light.GrayCodePattern.setBlackThreshold [ARG size_t value=]>
+java: void setBlackThreshold(long value)
+FUNC <void cv.structured_light.GrayCodePattern.setWhiteThreshold [ARG size_t value=]>
+java: void setWhiteThreshold(long value)

@@ -298,6 +298,25 @@ rule CXX_STATIC_LIBRARY_LINKER__opencv_objdetect
 #############################################
 # Rule for compiling CXX files.
 
+rule CXX_COMPILER__opencv_phase_unwrapping
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_phase_unwrapping
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
 rule CXX_COMPILER__opencv_photo
   depfile = $DEP_FILE
   deps = gcc
@@ -309,6 +328,63 @@ rule CXX_COMPILER__opencv_photo
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__opencv_photo
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_plot
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_plot
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_reg
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_reg
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_surface_matching
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_surface_matching
   command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -336,6 +412,44 @@ rule CXX_STATIC_LIBRARY_LINKER__opencv_video
 #############################################
 # Rule for compiling CXX files.
 
+rule CXX_COMPILER__opencv_xphoto
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_xphoto
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_bgsegm
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_bgsegm
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
 rule CXX_COMPILER__opencv_dnn
   depfile = $DEP_FILE
   deps = gcc
@@ -347,6 +461,63 @@ rule CXX_COMPILER__opencv_dnn
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__opencv_dnn
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_face
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_face
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_fuzzy
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_fuzzy
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_img_hash
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_img_hash
   command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -412,6 +583,25 @@ rule CXX_STATIC_LIBRARY_LINKER__opencv_videoio
 #############################################
 # Rule for compiling CXX files.
 
+rule CXX_COMPILER__opencv_xobjdetect
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_xobjdetect
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
 rule CXX_COMPILER__opencv_highgui
   depfile = $DEP_FILE
   deps = gcc
@@ -450,6 +640,44 @@ rule CXX_STATIC_LIBRARY_LINKER__opencv_superres
 #############################################
 # Rule for compiling CXX files.
 
+rule CXX_COMPILER__opencv_bioinspired
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_bioinspired
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_dpm
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_dpm
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
 rule CXX_COMPILER__opencv_features2d
   depfile = $DEP_FILE
   deps = gcc
@@ -461,6 +689,63 @@ rule CXX_COMPILER__opencv_features2d
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__opencv_features2d
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_line_descriptor
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_line_descriptor
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_saliency
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_saliency
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_text
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_text
   command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -488,7 +773,7 @@ rule CXX_STATIC_LIBRARY_LINKER__opencv_calib3d
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__opencv_stitching
+rule CXX_COMPILER__opencv_ccalib
   depfile = $DEP_FILE
   deps = gcc
   command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -498,7 +783,102 @@ rule CXX_COMPILER__opencv_stitching
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__opencv_stitching
+rule CXX_STATIC_LIBRARY_LINKER__opencv_ccalib
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_datasets
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_datasets
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_rgbd
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_rgbd
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_stereo
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_stereo
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_structured_light
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_structured_light
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_tracking
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_tracking
   command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -518,6 +898,44 @@ rule CXX_COMPILER__opencv_videostab
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__opencv_videostab
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_xfeatures2d
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_xfeatures2d
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_ximgproc
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_ximgproc
   command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -558,6 +976,44 @@ rule CXX_COMPILER__opencv_java
 rule CXX_SHARED_LIBRARY_LINKER__opencv_java
   command = $PRE_LINK && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -Wl,-soname,$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES "/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/libgnustl_static.a" "/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/libsupc++.a" -lm && $POST_BUILD
   description = Linking CXX shared library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_optflow
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_optflow
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__opencv_stitching
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__opencv_stitching
+  command = $PRE_LINK && /usr/local/Cellar/cmake/3.9.4_1/bin/cmake -E remove $TARGET_FILE && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
 

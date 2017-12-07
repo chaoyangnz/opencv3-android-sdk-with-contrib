@@ -1,0 +1,74 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/include/opencv2/text.hpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/erfilter.hpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/ocr.hpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/include/opencv2/text/textDetector.hpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/erfilter.cpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/ocr_beamsearch_decoder.cpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/ocr_hmm_decoder.cpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/ocr_holistic.cpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/ocr_tesseract.cpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/text_detectorCNN.cpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/text/src/precomp.hpp",
+			"labels" : [ "Extra", "opencv_text", "Module" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/o4a/cvconfig.h"
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv/build/o4a/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_text", "Module" ],
+		"name" : "opencv_text"
+	}
+}

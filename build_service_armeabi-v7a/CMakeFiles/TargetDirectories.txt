@@ -2,7 +2,6 @@
 /Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/list_install_components.dir
 /Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/rebuild_cache.dir
 /Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/package_source.dir
-/Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/check_pylint.dir
 /Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/opencv_perf_tests.dir
 /Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/edit_cache.dir
 /Users/Chao/opencv/build/build_service_armeabi-v7a/CMakeFiles/gen-pkgconfig.dir

@@ -1,0 +1,62 @@
+PORTED FUNCs LIST (20 of 30):
+
+ Mat createOCRHMMTransitionsTable(String vocabulary, vector_String lexicon)
+ Ptr_ERFilter createERFilterNM1(String filename, int thresholdDelta = 1, float minArea = (float)0.00025, float maxArea = (float)0.13, float minProbability = (float)0.4, bool nonMaxSuppression = true, float minProbabilityDiff = (float)0.1)
+ Ptr_ERFilter createERFilterNM2(String filename, float minProbability = (float)0.3)
+ void computeNMChannels(Mat _src, vector_Mat& _channels, int _mode = ERFILTER_NM_RGBLGrad)
+ void detectRegions(Mat image, Ptr_ERFilter er_filter1, Ptr_ERFilter er_filter2, vector_Rect& groups_rects, int method = ERGROUPING_ORIENTATION_HORIZ, String filename = String(), float minProbability = (float)0.5)
+ void detectRegions(Mat image, Ptr_ERFilter er_filter1, Ptr_ERFilter er_filter2, vector_vector_Point& regions)
+ void erGrouping(Mat image, Mat channel, vector_vector_Point regions, vector_Rect& groups_rects, int method = ERGROUPING_ORIENTATION_HORIZ, String filename = String(), float minProbablity = (float)0.5)
+static Ptr_OCRBeamSearchDecoder create(String filename, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode = OCR_DECODER_VITERBI, int beam_size = 500)
+ String run(Mat image, Mat mask, int min_confidence, int component_level = 0)
+ String run(Mat image, int min_confidence, int component_level = 0)
+ void detect(Mat inputImage, vector_Rect& Bbox, vector_float& confidence)
+static Ptr_OCRTesseract create(c_string datapath = 0, c_string language = 0, c_string char_whitelist = 0, int oem = OEM_DEFAULT, int psmode = PSM_AUTO)
+ String run(Mat image, Mat mask, int min_confidence, int component_level = 0)
+ String run(Mat image, int min_confidence, int component_level = 0)
+ void setWhiteList(String char_whitelist)
+static Ptr_OCRHMMDecoder create(String filename, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode = OCR_DECODER_VITERBI, int classifier = OCR_KNN_CLASSIFIER)
+ String run(Mat image, Mat mask, int min_confidence, int component_level = 0)
+ String run(Mat image, int min_confidence, int component_level = 0)
+static Ptr_TextDetectorCNN create(String modelArchFilename, String modelWeightsFilename)
+ void detect(Mat inputImage, vector_Rect& Bbox, vector_float& confidence)
+
+SKIPPED FUNCs LIST (10 of 30):
+
+ Ptr_ERFilter createERFilterNM1(Ptr_ERFilter_Callback cb, int thresholdDelta = 1, float minArea = (float)0.00025, float maxArea = (float)0.13, float minProbability = (float)0.4, bool nonMaxSuppression = true, float minProbabilityDiff = (float)0.1)
+// Unknown type 'Ptr_ERFilter_Callback' (I), skipping the function
+
+ Ptr_ERFilter createERFilterNM2(Ptr_ERFilter_Callback cb, float minProbability = (float)0.3)
+// Unknown type 'Ptr_ERFilter_Callback' (I), skipping the function
+
+ Ptr_ERFilter_Callback loadClassifierNM1(String filename)
+// Return type 'Ptr_ERFilter_Callback' is not supported, skipping the function
+
+ Ptr_ERFilter_Callback loadClassifierNM2(String filename)
+// Return type 'Ptr_ERFilter_Callback' is not supported, skipping the function
+
+ Ptr_OCRBeamSearchDecoder_ClassifierCallback loadOCRBeamSearchClassifierCNN(String filename)
+// Return type 'Ptr_OCRBeamSearchDecoder_ClassifierCallback' is not supported, skipping the function
+
+ Ptr_OCRHMMDecoder_ClassifierCallback loadOCRHMMClassifier(String filename, int classifier)
+// Return type 'Ptr_OCRHMMDecoder_ClassifierCallback' is not supported, skipping the function
+
+ Ptr_OCRHMMDecoder_ClassifierCallback loadOCRHMMClassifierCNN(String filename)
+// Return type 'Ptr_OCRHMMDecoder_ClassifierCallback' is not supported, skipping the function
+
+ Ptr_OCRHMMDecoder_ClassifierCallback loadOCRHMMClassifierNM(String filename)
+// Return type 'Ptr_OCRHMMDecoder_ClassifierCallback' is not supported, skipping the function
+
+static Ptr_OCRBeamSearchDecoder create(Ptr_OCRBeamSearchDecoder_ClassifierCallback classifier, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode = OCR_DECODER_VITERBI, int beam_size = 500)
+// Unknown type 'Ptr_OCRBeamSearchDecoder_ClassifierCallback' (I), skipping the function
+
+static Ptr_OCRHMMDecoder create(Ptr_OCRHMMDecoder_ClassifierCallback classifier, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode = OCR_DECODER_VITERBI)
+// Unknown type 'Ptr_OCRHMMDecoder_ClassifierCallback' (I), skipping the function
+
+
+0 def args - 12 funcs
+1 def args - 10 funcs
+2 def args - 3 funcs
+3 def args - 2 funcs
+5 def args - 1 funcs
+6 def args - 2 funcs

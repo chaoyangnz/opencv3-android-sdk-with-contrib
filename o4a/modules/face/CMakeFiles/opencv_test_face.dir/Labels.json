@@ -1,0 +1,46 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_bif.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_facemark.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_facemark_aam.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_facemark_lbf.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_loadsave.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_main.cpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		},
+		
+		{
+			"file" : "/Users/Chao/opencv_contrib/modules/face/test/test_precomp.hpp",
+			"labels" : [ "Extra", "opencv_face", "AccuracyTest" ]
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "Extra", "opencv_face", "AccuracyTest" ],
+		"name" : "opencv_test_face"
+	}
+}

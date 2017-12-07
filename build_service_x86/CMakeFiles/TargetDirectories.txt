@@ -2,7 +2,6 @@
 /Users/Chao/opencv/build/build_service_x86/CMakeFiles/list_install_components.dir
 /Users/Chao/opencv/build/build_service_x86/CMakeFiles/rebuild_cache.dir
 /Users/Chao/opencv/build/build_service_x86/CMakeFiles/package_source.dir
-/Users/Chao/opencv/build/build_service_x86/CMakeFiles/check_pylint.dir
 /Users/Chao/opencv/build/build_service_x86/CMakeFiles/opencv_perf_tests.dir
 /Users/Chao/opencv/build/build_service_x86/CMakeFiles/edit_cache.dir
 /Users/Chao/opencv/build/build_service_x86/CMakeFiles/gen-pkgconfig.dir

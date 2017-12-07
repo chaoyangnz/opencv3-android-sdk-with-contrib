@@ -1,0 +1,1138 @@
+ok: class CLASS ::.Xfeatures2d : , name: Xfeatures2d, base: 
+
+===== Common header : /Users/Chao/opencv/modules/features2d/misc/java/src/cpp/features2d_converters.hpp =====
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d.hpp =====
+Namespaces: set([u'cv.xfeatures2d', u'cv'])
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.FREAK',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class implementing the FREAK (*Fast Retina Keypoint*) keypoint descriptor, described in @cite AOV12 .\n\nThe algorithm propose a novel keypoint descriptor inspired by the human visual system and more\nprecisely the retina, coined Fast Retina Key- point (FREAK). A cascade of binary strings is\ncomputed by efficiently comparing image intensities over a retinal sampling pattern. FREAKs are in\ngeneral faster to compute with lower memory load and also more robust than SIFT, SURF or BRISK.\nThey are competitive alternatives to existing keypoints in particular for embedded applications.\n\n@note\n-   An example on how to use the FREAK descriptor can be found at\nopencv_source_code/samples/cpp/freak_demo.cpp']
+ok: class CLASS cv.xfeatures2d::.FREAK : Feature2D, name: FREAK, base: Feature2D
+
+--- Incoming ---
+[u'const cv.xfeatures2d.FREAK.NB_SCALES', u'64', [], [], None, '']
+ok: CONST NB_SCALES=64
+
+--- Incoming ---
+[u'const cv.xfeatures2d.FREAK.NB_PAIRS', u'512', [], [], None, '']
+ok: CONST NB_PAIRS=512
+
+--- Incoming ---
+[u'const cv.xfeatures2d.FREAK.NB_ORIENPAIRS', u'45', [], [], None, '']
+ok: CONST NB_ORIENPAIRS=45
+
+--- Incoming ---
+[   u'cv.xfeatures2d.FREAK.create',
+    u'Ptr_FREAK',
+    ['/S'],
+    [   [u'bool', u'orientationNormalized', u'true', []],
+        [u'bool', u'scaleNormalized', u'true', []],
+        [u'float', u'patternScale', u'22.0f', []],
+        [u'int', u'nOctaves', u'4', []],
+        [   u'vector_int',
+            u'selectedPairs',
+            u'std::vector<int>()',
+            ['/C', '/Ref']]],
+    u'Ptr<FREAK>',
+    u'@param orientationNormalized Enable orientation normalization.\n@param scaleNormalized Enable scale normalization.\n@param patternScale Scaling of the description pattern.\n@param nOctaves Number of octaves covered by the detected keypoints.\n@param selectedPairs (Optional) user defined selected pairs indexes,']
+ok: FUNC <Ptr_FREAK cv.xfeatures2d.FREAK.create [ARG bool orientationNormalized=true, ARG bool scaleNormalized=true, ARG float patternScale=22.0f, ARG int nOctaves=4, ARG vector_int selectedPairs=std::vector<int>()]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.StarDetector',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief The class implements the keypoint detector introduced by @cite Agrawal08, synonym of StarDetector. :']
+ok: class CLASS cv.xfeatures2d::.StarDetector : Feature2D, name: StarDetector, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.StarDetector.create',
+    u'Ptr_StarDetector',
+    ['/S'],
+    [   [u'int', u'maxSize', u'45', []],
+        [u'int', u'responseThreshold', u'30', []],
+        [u'int', u'lineThresholdProjected', u'10', []],
+        [u'int', u'lineThresholdBinarized', u'8', []],
+        [u'int', u'suppressNonmaxSize', u'5', []]],
+    u'Ptr<StarDetector>',
+    '']
+ok: FUNC <Ptr_StarDetector cv.xfeatures2d.StarDetector.create [ARG int maxSize=45, ARG int responseThreshold=30, ARG int lineThresholdProjected=10, ARG int lineThresholdBinarized=8, ARG int suppressNonmaxSize=5]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.BriefDescriptorExtractor',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class for computing BRIEF descriptors described in @cite calon2010 .\n\n@param bytes legth of the descriptor in bytes, valid values are: 16, 32 (default) or 64 .\n@param use_orientation sample patterns using keypoints orientation, disabled by default.']
+ok: class CLASS cv.xfeatures2d::.BriefDescriptorExtractor : Feature2D, name: BriefDescriptorExtractor, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.BriefDescriptorExtractor.create',
+    u'Ptr_BriefDescriptorExtractor',
+    ['/S'],
+    [   [u'int', u'bytes', u'32', []],
+        [u'bool', u'use_orientation', u'false', []]],
+    u'Ptr<BriefDescriptorExtractor>',
+    '']
+ok: FUNC <Ptr_BriefDescriptorExtractor cv.xfeatures2d.BriefDescriptorExtractor.create [ARG int bytes=32, ARG bool use_orientation=false]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.LUCID',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class implementing the locally uniform comparison image descriptor, described in @cite LUCID\n\nAn image descriptor that can be computed very fast, while being\nabout as robust as, for example, SURF or BRIEF.\n\n@note It requires a color image as input.']
+ok: class CLASS cv.xfeatures2d::.LUCID : Feature2D, name: LUCID, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.LUCID.create',
+    u'Ptr_LUCID',
+    ['/S'],
+    [   [u'int', u'lucid_kernel', u'1', ['/C']],
+        [u'int', u'blur_kernel', u'2', ['/C']]],
+    u'Ptr<LUCID>',
+    u'* @param lucid_kernel kernel for descriptor construction, where 1=3x3, 2=5x5, 3=7x7 and so forth\n* @param blur_kernel kernel for blurring image prior to descriptor construction, where 1=3x3, 2=5x5, 3=7x7 and so forth']
+ok: FUNC <Ptr_LUCID cv.xfeatures2d.LUCID.create [ARG int lucid_kernel=1, ARG int blur_kernel=2]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.LATCH',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'latch Class for computing the LATCH descriptor.\nIf you find this code useful, please add a reference to the following paper in your work:\nGil Levi and Tal Hassner, "LATCH: Learned Arrangements of Three Patch Codes", arXiv preprint arXiv:1501.03719, 15 Jan. 2015\n\nLATCH is a binary descriptor based on learned comparisons of triplets of image patches.\n\n* bytes is the size of the descriptor - can be 64, 32, 16, 8, 4, 2 or 1\n* rotationInvariance - whether or not the descriptor should compansate for orientation changes.\n* half_ssd_size - the size of half of the mini-patches size. For example, if we would like to compare triplets of patches of size 7x7x\nthen the half_ssd_size should be (7-1)/2 = 3.\n\nNote: the descriptor can be coupled with any keypoint extractor. The only demand is that if you use set rotationInvariance = True then\nyou will have to use an extractor which estimates the patch orientation (in degrees). Examples for such extractors are ORB and SIFT.\n\nNote: a complete example can be found under /samples/cpp/tutorial_code/xfeatures2D/latch_match.cpp']
+ok: class CLASS cv.xfeatures2d::.LATCH : Feature2D, name: LATCH, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.LATCH.create',
+    u'Ptr_LATCH',
+    ['/S'],
+    [   [u'int', u'bytes', u'32', []],
+        [u'bool', u'rotationInvariance', u'true', []],
+        [u'int', u'half_ssd_size', u'3', []]],
+    u'Ptr<LATCH>',
+    '']
+ok: FUNC <Ptr_LATCH cv.xfeatures2d.LATCH.create [ARG int bytes=32, ARG bool rotationInvariance=true, ARG int half_ssd_size=3]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.DAISY',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class implementing DAISY descriptor, described in @cite Tola10\n\n@param radius radius of the descriptor at the initial scale\n@param q_radius amount of radial range division quantity\n@param q_theta amount of angular range division quantity\n@param q_hist amount of gradient orientations range division quantity\n@param norm choose descriptors normalization type, where\nDAISY::NRM_NONE will not do any normalization (default),\nDAISY::NRM_PARTIAL mean that histograms are normalized independently for L2 norm equal to 1.0,\nDAISY::NRM_FULL mean that descriptors are normalized for L2 norm equal to 1.0,\nDAISY::NRM_SIFT mean that descriptors are normalized for L2 norm equal to 1.0 but no individual one is bigger than 0.154 as in SIFT\n@param H optional 3x3 homography matrix used to warp the grid of daisy but sampling keypoints remains unwarped on image\n@param interpolation switch to disable interpolation for speed improvement at minor quality loss\n@param use_orientation sample patterns using keypoints orientation, disabled by default.']
+ok: class CLASS cv.xfeatures2d::.DAISY : Feature2D, name: DAISY, base: Feature2D
+
+--- Incoming ---
+[u'const cv.xfeatures2d.DAISY.NRM_NONE', u'100', [], [], None, '']
+ok: CONST NRM_NONE=100
+
+--- Incoming ---
+[u'const cv.xfeatures2d.DAISY.NRM_PARTIAL', u'101', [], [], None, '']
+ok: CONST NRM_PARTIAL=101
+
+--- Incoming ---
+[u'const cv.xfeatures2d.DAISY.NRM_FULL', u'102', [], [], None, '']
+ok: CONST NRM_FULL=102
+
+--- Incoming ---
+[u'const cv.xfeatures2d.DAISY.NRM_SIFT', u'103', [], [], None, '']
+ok: CONST NRM_SIFT=103
+
+--- Incoming ---
+[   u'cv.xfeatures2d.DAISY.create',
+    u'Ptr_DAISY',
+    ['/S'],
+    [   [u'float', u'radius', u'15', []],
+        [u'int', u'q_radius', u'3', []],
+        [u'int', u'q_theta', u'8', []],
+        [u'int', u'q_hist', u'8', []],
+        [u'int', u'norm', u'DAISY::NRM_NONE', []],
+        ['Mat', u'H', u'Mat()', []],
+        [u'bool', u'interpolation', u'true', []],
+        [u'bool', u'use_orientation', u'false', []]],
+    u'Ptr<DAISY>',
+    '']
+ok: FUNC <Ptr_DAISY cv.xfeatures2d.DAISY.create [ARG float radius=15, ARG int q_radius=3, ARG int q_theta=8, ARG int q_hist=8, ARG int norm=DAISY::NRM_NONE, ARG Mat H=Mat(), ARG bool interpolation=true, ARG bool use_orientation=false]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.MSDDetector',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class implementing the MSD (*Maximal Self-Dissimilarity*) keypoint detector, described in @cite Tombari14.\n\nThe algorithm implements a novel interest point detector stemming from the intuition that image patches\nwhich are highly dissimilar over a relatively large extent of their surroundings hold the property of\nbeing repeatable and distinctive. This concept of "contextual self-dissimilarity" reverses the key\nparadigm of recent successful techniques such as the Local Self-Similarity descriptor and the Non-Local\nMeans filter, which build upon the presence of similar - rather than dissimilar - patches. Moreover,\nit extends to contextual information the local self-dissimilarity notion embedded in established\ndetectors of corner-like interest points, thereby achieving enhanced repeatability, distinctiveness and\nlocalization accuracy.']
+ok: class CLASS cv.xfeatures2d::.MSDDetector : Feature2D, name: MSDDetector, base: Feature2D
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.VGG',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class implementing VGG (Oxford Visual Geometry Group) descriptor trained end to end\nusing "Descriptor Learning Using Convex Optimisation" (DLCO) aparatus described in @cite Simonyan14.\n\n@param desc type of descriptor to use, VGG::VGG_120 is default (120 dimensions float)\nAvailable types are VGG::VGG_120, VGG::VGG_80, VGG::VGG_64, VGG::VGG_48\n@param isigma gaussian kernel value for image blur (default is 1.4f)\n@param img_normalize use image sample intensity normalization (enabled by default)\n@param use_orientation sample patterns using keypoints orientation, enabled by default\n@param scale_factor adjust the sampling window of detected keypoints to 64.0f (VGG sampling window)\n6.25f is default and fits for KAZE, SURF detected keypoints window ratio\n6.75f should be the scale for SIFT detected keypoints window ratio\n5.00f should be the scale for AKAZE, MSD, AGAST, FAST, BRISK keypoints window ratio\n0.75f should be the scale for ORB keypoints ratio\n\n@param dsc_normalize clamp descriptors to 255 and convert to uchar CV_8UC1 (disabled by default)']
+ok: class CLASS cv.xfeatures2d::.VGG : Feature2D, name: VGG, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.VGG.create',
+    u'Ptr_VGG',
+    ['/S'],
+    [   [u'int', u'desc', u'VGG::VGG_120', []],
+        [u'float', u'isigma', u'1.4f', []],
+        [u'bool', u'img_normalize', u'true', []],
+        [u'bool', u'use_scale_orientation', u'true', []],
+        [u'float', u'scale_factor', u'6.25f', []],
+        [u'bool', u'dsc_normalize', u'false', []]],
+    u'Ptr<VGG>',
+    '']
+ok: FUNC <Ptr_VGG cv.xfeatures2d.VGG.create [ARG int desc=VGG::VGG_120, ARG float isigma=1.4f, ARG bool img_normalize=true, ARG bool use_scale_orientation=true, ARG float scale_factor=6.25f, ARG bool dsc_normalize=false]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.VGG.compute',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'image', '', []],
+        [u'vector_KeyPoint', u'keypoints', u'', ['/Ref']],
+        ['Mat', u'descriptors', '', ['/O']]],
+    u'void',
+    u'* @param image image to extract descriptors\n* @param keypoints of interest within image\n* @param descriptors resulted descriptors array']
+ok: FUNC <void cv.xfeatures2d.VGG.compute [ARG Mat image=, ARG vector_KeyPoint keypoints=, ARG Mat descriptors=]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.BoostDesc',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class implementing BoostDesc (Learning Image Descriptors with Boosting), described in\n@cite Trzcinski13a and @cite Trzcinski13b.\n\n@param desc type of descriptor to use, BoostDesc::BINBOOST_256 is default (256 bit long dimension)\nAvailable types are: BoostDesc::BGM, BoostDesc::BGM_HARD, BoostDesc::BGM_BILINEAR, BoostDesc::LBGM,\nBoostDesc::BINBOOST_64, BoostDesc::BINBOOST_128, BoostDesc::BINBOOST_256\n@param use_orientation sample patterns using keypoints orientation, enabled by default\n@param scale_factor adjust the sampling window of detected keypoints\n6.25f is default and fits for KAZE, SURF detected keypoints window ratio\n6.75f should be the scale for SIFT detected keypoints window ratio\n5.00f should be the scale for AKAZE, MSD, AGAST, FAST, BRISK keypoints window ratio\n0.75f should be the scale for ORB keypoints ratio\n1.50f was the default in original implementation\n\n@note BGM is the base descriptor where each binary dimension is computed as the output of a single weak learner.\nBGM_HARD and BGM_BILINEAR refers to same BGM but use different type of gradient binning. In the BGM_HARD that\nuse ASSIGN_HARD binning type the gradient is assigned to the nearest orientation bin. In the BGM_BILINEAR that use\nASSIGN_BILINEAR binning type the gradient is assigned to the two neighbouring bins. In the BGM and all other modes that use\nASSIGN_SOFT binning type the gradient is assigned to 8 nearest bins according to the cosine value between the gradient\nangle and the bin center. LBGM (alias FP-Boost) is the floating point extension where each dimension is computed\nas a linear combination of the weak learner responses. BINBOOST and subvariants are the binary extensions of LBGM\nwhere each bit is computed as a thresholded linear combination of a set of weak learners.\nBoostDesc header files (boostdesc_*.i) was exported from original binaries with export-boostdesc.py script from\nsamples subfolder.']
+ok: class CLASS cv.xfeatures2d::.BoostDesc : Feature2D, name: BoostDesc, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.BoostDesc.create',
+    u'Ptr_BoostDesc',
+    ['/S'],
+    [   [u'int', u'desc', u'BoostDesc::BINBOOST_256', []],
+        [u'bool', u'use_scale_orientation', u'true', []],
+        [u'float', u'scale_factor', u'6.25f', []]],
+    u'Ptr<BoostDesc>',
+    '']
+ok: FUNC <Ptr_BoostDesc cv.xfeatures2d.BoostDesc.create [ARG int desc=BoostDesc::BINBOOST_256, ARG bool use_scale_orientation=true, ARG float scale_factor=6.25f]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.PCTSignatures',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'* @brief Class implementing PCT (position-color-texture) signature extraction\n*       as described in @cite KrulisLS16.\n*       The algorithm is divided to a feature sampler and a clusterizer.\n*       Feature sampler produces samples at given set of coordinates.\n*       Clusterizer then produces clusters of these samples using k-means algorithm.\n*       Resulting set of clusters is the signature of the input image.\n*\n*       A signature is an array of SIGNATURE_DIMENSION-dimensional points.\n*       Used dimensions are:\n*       weight, x, y position; lab color, contrast, entropy.\n* @cite KrulisLS16\n* @cite BeecksUS10']
+ok: class CLASS cv.xfeatures2d::.PCTSignatures : Algorithm, name: PCTSignatures, base: Algorithm
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L0_25', '0', [], [], None, '']
+ok: CONST L0_25=0
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L0_5', '1', [], [], None, '']
+ok: CONST L0_5=1
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L1', '2', [], [], None, '']
+ok: CONST L1=2
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L2', '3', [], [], None, '']
+ok: CONST L2=3
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L2SQUARED', '4', [], [], None, '']
+ok: CONST L2SQUARED=4
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L5', '5', [], [], None, '']
+ok: CONST L5=5
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.L_INFINITY', '6', [], [], None, '']
+ok: CONST L_INFINITY=6
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.UNIFORM', '0', [], [], None, '']
+ok: CONST UNIFORM=0
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.REGULAR', '1', [], [], None, '']
+ok: CONST REGULAR=1
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.NORMAL', '2', [], [], None, '']
+ok: CONST NORMAL=2
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.MINUS', '0', [], [], None, '']
+ok: CONST MINUS=0
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.GAUSSIAN', '1', [], [], None, '']
+ok: CONST GAUSSIAN=1
+
+--- Incoming ---
+[u'const cv.xfeatures2d.PCTSignatures.HEURISTIC', '2', [], [], None, '']
+ok: CONST HEURISTIC=2
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.create',
+    u'Ptr_PCTSignatures',
+    ['/S'],
+    [   [u'int', u'initSampleCount', u'2000', ['/C']],
+        [u'int', u'initSeedCount', u'400', ['/C']],
+        [u'int', u'pointDistribution', u'0', ['/C']]],
+    u'Ptr<PCTSignatures>',
+    u'* @brief Creates PCTSignatures algorithm using sample and seed count.\n*       It generates its own sets of sampling points and clusterization seed indexes.\n* @param initSampleCount Number of points used for image sampling.\n* @param initSeedCount Number of initial clusterization seeds.\n*       Must be lower or equal to initSampleCount\n* @param pointDistribution Distribution of generated points. Default: UNIFORM.\n*       Available: UNIFORM, REGULAR, NORMAL.\n* @return Created algorithm.']
+ok: FUNC <Ptr_PCTSignatures cv.xfeatures2d.PCTSignatures.create [ARG int initSampleCount=2000, ARG int initSeedCount=400, ARG int pointDistribution=0]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.create',
+    u'Ptr_PCTSignatures',
+    ['/S'],
+    [   [u'vector_Point2f', u'initSamplingPoints', u'', ['/C', '/Ref']],
+        [u'int', u'initSeedCount', u'', ['/C']]],
+    u'Ptr<PCTSignatures>',
+    u'* @brief Creates PCTSignatures algorithm using pre-generated sampling points\n*       and number of clusterization seeds. It uses the provided\n*       sampling points and generates its own clusterization seed indexes.\n* @param initSamplingPoints Sampling points used in image sampling.\n* @param initSeedCount Number of initial clusterization seeds.\n*       Must be lower or equal to initSamplingPoints.size().\n* @return Created algorithm.']
+ok: FUNC <Ptr_PCTSignatures cv.xfeatures2d.PCTSignatures.create [ARG vector_Point2f initSamplingPoints=, ARG int initSeedCount=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.create',
+    u'Ptr_PCTSignatures',
+    ['/S'],
+    [   [u'vector_Point2f', u'initSamplingPoints', u'', ['/C', '/Ref']],
+        [u'vector_int', u'initClusterSeedIndexes', u'', ['/C', '/Ref']]],
+    u'Ptr<PCTSignatures>',
+    u'* @brief Creates PCTSignatures algorithm using pre-generated sampling points\n*       and clusterization seeds indexes.\n* @param initSamplingPoints Sampling points used in image sampling.\n* @param initClusterSeedIndexes Indexes of initial clusterization seeds.\n*       Its size must be lower or equal to initSamplingPoints.size().\n* @return Created algorithm.']
+ok: FUNC <Ptr_PCTSignatures cv.xfeatures2d.PCTSignatures.create [ARG vector_Point2f initSamplingPoints=, ARG vector_int initClusterSeedIndexes=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.computeSignature',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [['Mat', u'image', '', []], ['Mat', u'signature', '', ['/O']]],
+    u'void',
+    u'* @brief Computes signature of given image.\n* @param image Input image of CV_8U type.\n* @param signature Output computed signature.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.computeSignature [ARG Mat image=, ARG Mat signature=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.computeSignatures',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [   [u'vector_Mat', u'images', u'', ['/C', '/Ref']],
+        [u'vector_Mat', u'signatures', u'', ['/Ref']]],
+    u'void',
+    u'* @brief Computes signatures for multiple images in parallel.\n* @param images Vector of input images of CV_8U type.\n* @param signatures Vector of computed signatures.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.computeSignatures [ARG vector_Mat images=, ARG vector_Mat signatures=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.drawSignature',
+    u'void',
+    ['/S'],
+    [   ['Mat', u'source', '', []],
+        ['Mat', u'signature', '', []],
+        ['Mat', u'result', '', ['/O']],
+        [u'float', u'radiusToShorterSideRatio', u'1.0 / 8', []],
+        [u'int', u'borderThickness', u'1', []]],
+    u'void',
+    u'* @brief Draws signature in the source image and outputs the result.\n*       Signatures are visualized as a circle\n*       with radius based on signature weight\n*       and color based on signature color.\n*       Contrast and entropy are not visualized.\n* @param source Source image.\n* @param signature Image signature.\n* @param result Output result.\n* @param radiusToShorterSideRatio Determines maximal radius of signature in the output image.\n* @param borderThickness Border thickness of the visualized signature.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.drawSignature [ARG Mat source=, ARG Mat signature=, ARG Mat result=, ARG float radiusToShorterSideRatio=1.0 / 8, ARG int borderThickness=1]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.generateInitPoints',
+    u'void',
+    ['/S'],
+    [   [u'vector_Point2f', u'initPoints', u'', ['/Ref']],
+        [u'int', u'count', u'', ['/C']],
+        [u'int', u'pointDistribution', u'', []]],
+    u'void',
+    u'* @brief Generates initial sampling points according to selected point distribution.\n* @param initPoints Output vector where the generated points will be saved.\n* @param count Number of points to generate.\n* @param pointDistribution Point distribution selector.\n*       Available: UNIFORM, REGULAR, NORMAL.\n* @note Generated coordinates are in range [0..1)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.generateInitPoints [ARG vector_Point2f initPoints=, ARG int count=, ARG int pointDistribution=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getSampleCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Number of initial samples taken from the image.']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getSampleCount []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getGrayscaleBits',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Color resolution of the greyscale bitmap represented in allocated bits\n*       (i.e., value 4 means that 16 shades of grey are used).\n*       The greyscale bitmap is used for computing contrast and entropy values.']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getGrayscaleBits []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setGrayscaleBits',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'grayscaleBits', u'', []]],
+    u'void',
+    u'* @brief Color resolution of the greyscale bitmap represented in allocated bits\n*       (i.e., value 4 means that 16 shades of grey are used).\n*       The greyscale bitmap is used for computing contrast and entropy values.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setGrayscaleBits [ARG int grayscaleBits=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWindowRadius',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Size of the texture sampling window used to compute contrast and entropy\n*       (center of the window is always in the pixel selected by x,y coordinates\n*       of the corresponding feature sample).']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getWindowRadius []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWindowRadius',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'radius', u'', []]],
+    u'void',
+    u'* @brief Size of the texture sampling window used to compute contrast and entropy\n*       (center of the window is always in the pixel selected by x,y coordinates\n*       of the corresponding feature sample).']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWindowRadius [ARG int radius=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightX',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightX []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightX',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightX [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightY',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightY []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightY',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightY [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightL',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightL []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightL',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightL [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightA',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightA []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightA',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightA [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightB',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightB []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightB',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightB [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightContrast',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightContrast []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightContrast',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightContrast [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getWeightEntropy',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getWeightEntropy []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeightEntropy',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'weight', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space\n*       (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeightEntropy [ARG float weight=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getSamplingPoints',
+    u'vector_Point2f',
+    ['/C', '/V', '/PV'],
+    [],
+    u'std::vector<Point2f>',
+    u'* @brief Initial samples taken from the image.\n*       These sampled features become the input for clustering.']
+ok: FUNC <vector_Point2f cv.xfeatures2d.PCTSignatures.getSamplingPoints []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeight',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'idx', u'', []], [u'float', u'value', u'', []]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space.\n* @param idx ID of the weight\n* @param value Value of the weight\n* @note\n*       WEIGHT_IDX = 0;\n*       X_IDX = 1;\n*       Y_IDX = 2;\n*       L_IDX = 3;\n*       A_IDX = 4;\n*       B_IDX = 5;\n*       CONTRAST_IDX = 6;\n*       ENTROPY_IDX = 7;']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeight [ARG int idx=, ARG float value=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setWeights',
+    u'void',
+    ['/V', '/PV'],
+    [[u'vector_float', u'weights', u'', ['/C', '/Ref']]],
+    u'void',
+    u'* @brief Weights (multiplicative constants) that linearly stretch individual axes of the feature space.\n* @param weights Values of all weights.\n* @note\n*       WEIGHT_IDX = 0;\n*       X_IDX = 1;\n*       Y_IDX = 2;\n*       L_IDX = 3;\n*       A_IDX = 4;\n*       B_IDX = 5;\n*       CONTRAST_IDX = 6;\n*       ENTROPY_IDX = 7;']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setWeights [ARG vector_float weights=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setTranslation',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'idx', u'', []], [u'float', u'value', u'', []]],
+    u'void',
+    u'* @brief Translations of the individual axes of the feature space.\n* @param idx ID of the translation\n* @param value Value of the translation\n* @note\n*       WEIGHT_IDX = 0;\n*       X_IDX = 1;\n*       Y_IDX = 2;\n*       L_IDX = 3;\n*       A_IDX = 4;\n*       B_IDX = 5;\n*       CONTRAST_IDX = 6;\n*       ENTROPY_IDX = 7;']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setTranslation [ARG int idx=, ARG float value=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setTranslations',
+    u'void',
+    ['/V', '/PV'],
+    [[u'vector_float', u'translations', u'', ['/C', '/Ref']]],
+    u'void',
+    u'* @brief Translations of the individual axes of the feature space.\n* @param translations Values of all translations.\n* @note\n*       WEIGHT_IDX = 0;\n*       X_IDX = 1;\n*       Y_IDX = 2;\n*       L_IDX = 3;\n*       A_IDX = 4;\n*       B_IDX = 5;\n*       CONTRAST_IDX = 6;\n*       ENTROPY_IDX = 7;']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setTranslations [ARG vector_float translations=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setSamplingPoints',
+    u'void',
+    ['/V', '/PV'],
+    [[u'vector_Point2f', u'samplingPoints', u'', []]],
+    u'void',
+    u'* @brief Sets sampling points used to sample the input image.\n* @param samplingPoints Vector of sampling points in range [0..1)\n* @note Number of sampling points must be greater or equal to clusterization seed count.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setSamplingPoints [ARG vector_Point2f samplingPoints=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getInitSeedIndexes',
+    u'vector_int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'std::vector<int>',
+    u'* @brief Initial seeds (initial number of clusters) for the k-means algorithm.']
+ok: FUNC <vector_int cv.xfeatures2d.PCTSignatures.getInitSeedIndexes []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setInitSeedIndexes',
+    u'void',
+    ['/V', '/PV'],
+    [[u'vector_int', u'initSeedIndexes', u'', []]],
+    u'void',
+    u'* @brief Initial seed indexes for the k-means algorithm.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setInitSeedIndexes [ARG vector_int initSeedIndexes=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getInitSeedCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Number of initial seeds (initial number of clusters) for the k-means algorithm.']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getInitSeedCount []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getIterationCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Number of iterations of the k-means clustering.\n*       We use fixed number of iterations, since the modified clustering is pruning clusters\n*       (not iteratively refining k clusters).']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getIterationCount []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setIterationCount',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'iterationCount', u'', []]],
+    u'void',
+    u'* @brief Number of iterations of the k-means clustering.\n*       We use fixed number of iterations, since the modified clustering is pruning clusters\n*       (not iteratively refining k clusters).']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setIterationCount [ARG int iterationCount=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getMaxClustersCount',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Maximal number of generated clusters. If the number is exceeded,\n*       the clusters are sorted by their weights and the smallest clusters are cropped.']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getMaxClustersCount []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setMaxClustersCount',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'maxClustersCount', u'', []]],
+    u'void',
+    u'* @brief Maximal number of generated clusters. If the number is exceeded,\n*       the clusters are sorted by their weights and the smallest clusters are cropped.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setMaxClustersCount [ARG int maxClustersCount=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getClusterMinSize',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief This parameter multiplied by the index of iteration gives lower limit for cluster size.\n*       Clusters containing fewer points than specified by the limit have their centroid dismissed\n*       and points are reassigned.']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getClusterMinSize []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setClusterMinSize',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'clusterMinSize', u'', []]],
+    u'void',
+    u'* @brief This parameter multiplied by the index of iteration gives lower limit for cluster size.\n*       Clusters containing fewer points than specified by the limit have their centroid dismissed\n*       and points are reassigned.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setClusterMinSize [ARG int clusterMinSize=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getJoiningDistance',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Threshold euclidean distance between two centroids.\n*       If two cluster centers are closer than this distance,\n*       one of the centroid is dismissed and points are reassigned.']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getJoiningDistance []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setJoiningDistance',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'joiningDistance', u'', []]],
+    u'void',
+    u'* @brief Threshold euclidean distance between two centroids.\n*       If two cluster centers are closer than this distance,\n*       one of the centroid is dismissed and points are reassigned.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setJoiningDistance [ARG float joiningDistance=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getDropThreshold',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [],
+    u'float',
+    u'* @brief Remove centroids in k-means whose weight is lesser or equal to given threshold.']
+ok: FUNC <float cv.xfeatures2d.PCTSignatures.getDropThreshold []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setDropThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'float', u'dropThreshold', u'', []]],
+    u'void',
+    u'* @brief Remove centroids in k-means whose weight is lesser or equal to given threshold.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setDropThreshold [ARG float dropThreshold=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.getDistanceFunction',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    u'* @brief Distance function selector used for measuring distance between two points in k-means.']
+ok: FUNC <int cv.xfeatures2d.PCTSignatures.getDistanceFunction []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignatures.setDistanceFunction',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'distanceFunction', u'', []]],
+    u'void',
+    u'* @brief Distance function selector used for measuring distance between two points in k-means.\n*       Available: L0_25, L0_5, L1, L2, L2SQUARED, L5, L_INFINITY.']
+ok: FUNC <void cv.xfeatures2d.PCTSignatures.setDistanceFunction [ARG int distanceFunction=]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.PCTSignaturesSQFD',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'* @brief Class implementing Signature Quadratic Form Distance (SQFD).\n* @see Christian Beecks, Merih Seran Uysal, Thomas Seidl.\n*   Signature quadratic form distance.\n*   In Proceedings of the ACM International Conference on Image and Video Retrieval, pages 438-445.\n*   ACM, 2010.\n* @cite BeecksUS10']
+ok: class CLASS cv.xfeatures2d::.PCTSignaturesSQFD : Algorithm, name: PCTSignaturesSQFD, base: Algorithm
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignaturesSQFD.create',
+    u'Ptr_PCTSignaturesSQFD',
+    ['/S'],
+    [   [u'int', u'distanceFunction', u'3', ['/C']],
+        [u'int', u'similarityFunction', u'2', ['/C']],
+        [u'float', u'similarityParameter', u'1.0f', ['/C']]],
+    u'Ptr<PCTSignaturesSQFD>',
+    u'* @brief Creates the algorithm instance using selected distance function,\n*       similarity function and similarity function parameter.\n* @param distanceFunction Distance function selector. Default: L2\n*       Available: L0_25, L0_5, L1, L2, L2SQUARED, L5, L_INFINITY\n* @param similarityFunction Similarity function selector. Default: HEURISTIC\n*       Available: MINUS, GAUSSIAN, HEURISTIC\n* @param similarityParameter Parameter of the similarity function.']
+ok: FUNC <Ptr_PCTSignaturesSQFD cv.xfeatures2d.PCTSignaturesSQFD.create [ARG int distanceFunction=3, ARG int similarityFunction=2, ARG float similarityParameter=1.0f]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignaturesSQFD.computeQuadraticFormDistance',
+    u'float',
+    ['/C', '/V', '/PV'],
+    [['Mat', u'_signature0', '', []], ['Mat', u'_signature1', '', []]],
+    u'float',
+    u'* @brief Computes Signature Quadratic Form Distance of two signatures.\n* @param _signature0 The first signature.\n* @param _signature1 The second signature.']
+ok: FUNC <float cv.xfeatures2d.PCTSignaturesSQFD.computeQuadraticFormDistance [ARG Mat _signature0=, ARG Mat _signature1=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.PCTSignaturesSQFD.computeQuadraticFormDistances',
+    u'void',
+    ['/C', '/V', '/PV'],
+    [   [u'Mat', u'sourceSignature', u'', ['/C', '/Ref']],
+        [u'vector_Mat', u'imageSignatures', u'', ['/C', '/Ref']],
+        [u'vector_float', u'distances', u'', ['/Ref']]],
+    u'void',
+    u'* @brief Computes Signature Quadratic Form Distance between the reference signature\n*       and each of the other image signatures.\n* @param sourceSignature The signature to measure distance of other signatures from.\n* @param imageSignatures Vector of signatures to measure distance from the source signature.\n* @param distances Output vector of measured distances.']
+ok: FUNC <void cv.xfeatures2d.PCTSignaturesSQFD.computeQuadraticFormDistances [ARG Mat sourceSignature=, ARG vector_Mat imageSignatures=, ARG vector_float distances=]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.HarrisLaplaceFeatureDetector',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'* @brief Class implementing the Harris-Laplace feature detector as described in @cite Mikolajczyk2004.']
+ok: class CLASS cv.xfeatures2d::.HarrisLaplaceFeatureDetector : Feature2D, name: HarrisLaplaceFeatureDetector, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.HarrisLaplaceFeatureDetector.create',
+    u'Ptr_HarrisLaplaceFeatureDetector',
+    ['/S'],
+    [   [u'int', u'numOctaves', u'6', []],
+        [u'float', u'corn_thresh', u'0.01f', []],
+        [u'float', u'DOG_thresh', u'0.01f', []],
+        [u'int', u'maxCorners', u'5000', []],
+        [u'int', u'num_layers', u'4', []]],
+    u'Ptr<HarrisLaplaceFeatureDetector>',
+    u'* @brief Creates a new implementation instance.\n*\n* @param numOctaves the number of octaves in the scale-space pyramid\n* @param corn_thresh the threshold for the Harris cornerness measure\n* @param DOG_thresh the threshold for the Difference-of-Gaussians scale selection\n* @param maxCorners the maximum number of corners to consider\n* @param num_layers the number of intermediate scales per octave']
+ok: FUNC <Ptr_HarrisLaplaceFeatureDetector cv.xfeatures2d.HarrisLaplaceFeatureDetector.create [ARG int numOctaves=6, ARG float corn_thresh=0.01f, ARG float DOG_thresh=0.01f, ARG int maxCorners=5000, ARG int num_layers=4]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d/cuda.hpp =====
+Namespaces: set([u'cv.xfeatures2d', u'cv.cuda', u'cv'])
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.X_ROW', u'0', [], [], None, '']
+class not found: CONST X_ROW=0
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.Y_ROW', u'0+1', [], [], None, '']
+class not found: CONST Y_ROW=0+1
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.LAPLACIAN_ROW', u'0+2', [], [], None, '']
+class not found: CONST LAPLACIAN_ROW=0+2
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.OCTAVE_ROW', u'0+3', [], [], None, '']
+class not found: CONST OCTAVE_ROW=0+3
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.SIZE_ROW', u'0+4', [], [], None, '']
+class not found: CONST SIZE_ROW=0+4
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.ANGLE_ROW', u'0+5', [], [], None, '']
+class not found: CONST ANGLE_ROW=0+5
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.HESSIAN_ROW', u'0+6', [], [], None, '']
+class not found: CONST HESSIAN_ROW=0+6
+
+--- Incoming ---
+[u'const cv.cuda.SURF_CUDA.ROWS_COUNT', u'0+7', [], [], None, '']
+class not found: CONST ROWS_COUNT=0+7
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/xfeatures2d/include/opencv2/xfeatures2d/nonfree.hpp =====
+Namespaces: set([u'cv.xfeatures2d', u'cv.cuda', u'cv'])
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.SIFT',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class for extracting keypoints and computing descriptors using the Scale Invariant Feature Transform\n(SIFT) algorithm by D. Lowe @cite Lowe04 .']
+ok: class CLASS cv.xfeatures2d::.SIFT : Feature2D, name: SIFT, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SIFT.create',
+    u'Ptr_SIFT',
+    ['/S'],
+    [   [u'int', u'nfeatures', u'0', []],
+        [u'int', u'nOctaveLayers', u'3', []],
+        [u'double', u'contrastThreshold', u'0.04', []],
+        [u'double', u'edgeThreshold', u'10', []],
+        [u'double', u'sigma', u'1.6', []]],
+    u'Ptr<SIFT>',
+    u'@param nfeatures The number of best features to retain. The features are ranked by their scores\n(measured in SIFT algorithm as the local contrast)\n\n@param nOctaveLayers The number of layers in each octave. 3 is the value used in D. Lowe paper. The\nnumber of octaves is computed automatically from the image resolution.\n\n@param contrastThreshold The contrast threshold used to filter out weak features in semi-uniform\n(low-contrast) regions. The larger the threshold, the less features are produced by the detector.\n\n@param edgeThreshold The threshold used to filter out edge-like features. Note that the its meaning\nis different from the contrastThreshold, i.e. the larger the edgeThreshold, the less features are\nfiltered out (more features are retained).\n\n@param sigma The sigma of the Gaussian applied to the input image at the octave \\#0. If your image\nis captured with a weak camera with soft lenses, you might want to reduce the number.']
+ok: FUNC <Ptr_SIFT cv.xfeatures2d.SIFT.create [ARG int nfeatures=0, ARG int nOctaveLayers=3, ARG double contrastThreshold=0.04, ARG double edgeThreshold=10, ARG double sigma=1.6]>
+
+--- Incoming ---
+[   u'class cv.xfeatures2d.SURF',
+    u': cv::xfeatures2d::Feature2D',
+    [],
+    [],
+    None,
+    u'@brief Class for extracting Speeded Up Robust Features from an image @cite Bay06 .\n\nThe algorithm parameters:\n-   member int extended\n-   0 means that the basic descriptors (64 elements each) shall be computed\n-   1 means that the extended descriptors (128 elements each) shall be computed\n-   member int upright\n-   0 means that detector computes orientation of each feature.\n-   1 means that the orientation is not computed (which is much, much faster). For example,\nif you match images from a stereo pair, or do image stitching, the matched features\nlikely have very similar angles, and you can speed up feature extraction by setting\nupright=1.\n-   member double hessianThreshold\nThreshold for the keypoint detector. Only features, whose hessian is larger than\nhessianThreshold are retained by the detector. Therefore, the larger the value, the less\nkeypoints you will get. A good default value could be from 300 to 500, depending from the\nimage contrast.\n-   member int nOctaves\nThe number of a gaussian pyramid octaves that the detector uses. It is set to 4 by default.\nIf you want to get very large features, use the larger value. If you want just small\nfeatures, decrease it.\n-   member int nOctaveLayers\nThe number of images within each octave of a gaussian pyramid. It is set to 2 by default.\n@note\n-   An example using the SURF feature detector can be found at\nopencv_source_code/samples/cpp/generic_descriptor_match.cpp\n-   Another example using the SURF feature detector, extractor and matcher can be found at\nopencv_source_code/samples/cpp/matcher_simple.cpp']
+ok: class CLASS cv.xfeatures2d::.SURF : Feature2D, name: SURF, base: Feature2D
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.create',
+    u'Ptr_SURF',
+    ['/S'],
+    [   [u'double', u'hessianThreshold', u'100', []],
+        [u'int', u'nOctaves', u'4', []],
+        [u'int', u'nOctaveLayers', u'3', []],
+        [u'bool', u'extended', u'false', []],
+        [u'bool', u'upright', u'false', []]],
+    u'Ptr<SURF>',
+    u'@param hessianThreshold Threshold for hessian keypoint detector used in SURF.\n@param nOctaves Number of pyramid octaves the keypoint detector will use.\n@param nOctaveLayers Number of octave layers within each octave.\n@param extended Extended descriptor flag (true - use extended 128-element descriptors; false - use\n64-element descriptors).\n@param upright Up-right or rotated features flag (true - do not compute orientation of features;\nfalse - compute orientation).']
+ok: FUNC <Ptr_SURF cv.xfeatures2d.SURF.create [ARG double hessianThreshold=100, ARG int nOctaves=4, ARG int nOctaveLayers=3, ARG bool extended=false, ARG bool upright=false]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.setHessianThreshold',
+    u'void',
+    ['/V', '/PV'],
+    [[u'double', u'hessianThreshold', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.xfeatures2d.SURF.setHessianThreshold [ARG double hessianThreshold=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.getHessianThreshold',
+    u'double',
+    ['/C', '/V', '/PV'],
+    [],
+    u'double',
+    '']
+ok: FUNC <double cv.xfeatures2d.SURF.getHessianThreshold []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.setNOctaves',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'nOctaves', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.xfeatures2d.SURF.setNOctaves [ARG int nOctaves=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.getNOctaves',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.xfeatures2d.SURF.getNOctaves []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.setNOctaveLayers',
+    u'void',
+    ['/V', '/PV'],
+    [[u'int', u'nOctaveLayers', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.xfeatures2d.SURF.setNOctaveLayers [ARG int nOctaveLayers=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.getNOctaveLayers',
+    u'int',
+    ['/C', '/V', '/PV'],
+    [],
+    u'int',
+    '']
+ok: FUNC <int cv.xfeatures2d.SURF.getNOctaveLayers []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.setExtended',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'extended', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.xfeatures2d.SURF.setExtended [ARG bool extended=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.getExtended',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    '']
+ok: FUNC <bool cv.xfeatures2d.SURF.getExtended []>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.setUpright',
+    u'void',
+    ['/V', '/PV'],
+    [[u'bool', u'upright', u'', []]],
+    u'void',
+    '']
+ok: FUNC <void cv.xfeatures2d.SURF.setUpright [ARG bool upright=]>
+
+--- Incoming ---
+[   u'cv.xfeatures2d.SURF.getUpright',
+    u'bool',
+    ['/C', '/V', '/PV'],
+    [],
+    u'bool',
+    '']
+ok: FUNC <bool cv.xfeatures2d.SURF.getUpright []>
+
+
+===== Generating... =====
+CLASS cv.xfeatures2d::.SURF : Feature2D
+FUNC <Ptr_SURF cv.xfeatures2d.SURF.create [ARG double hessianThreshold=100, ARG int nOctaves=4, ARG int nOctaveLayers=3, ARG bool extended=false, ARG bool upright=false]>
+java: SURF create(double hessianThreshold, int nOctaves, int nOctaveLayers, boolean extended, boolean upright)
+java: SURF create()
+FUNC <bool cv.xfeatures2d.SURF.getExtended []>
+java: boolean getExtended()
+FUNC <bool cv.xfeatures2d.SURF.getUpright []>
+java: boolean getUpright()
+FUNC <double cv.xfeatures2d.SURF.getHessianThreshold []>
+java: double getHessianThreshold()
+FUNC <int cv.xfeatures2d.SURF.getNOctaveLayers []>
+java: int getNOctaveLayers()
+FUNC <int cv.xfeatures2d.SURF.getNOctaves []>
+java: int getNOctaves()
+FUNC <void cv.xfeatures2d.SURF.setExtended [ARG bool extended=]>
+java: void setExtended(boolean extended)
+FUNC <void cv.xfeatures2d.SURF.setHessianThreshold [ARG double hessianThreshold=]>
+java: void setHessianThreshold(double hessianThreshold)
+FUNC <void cv.xfeatures2d.SURF.setNOctaveLayers [ARG int nOctaveLayers=]>
+java: void setNOctaveLayers(int nOctaveLayers)
+FUNC <void cv.xfeatures2d.SURF.setNOctaves [ARG int nOctaves=]>
+java: void setNOctaves(int nOctaves)
+FUNC <void cv.xfeatures2d.SURF.setUpright [ARG bool upright=]>
+java: void setUpright(boolean upright)
+CLASS cv.xfeatures2d::.BoostDesc : Feature2D
+FUNC <Ptr_BoostDesc cv.xfeatures2d.BoostDesc.create [ARG int desc=BoostDesc::BINBOOST_256, ARG bool use_scale_orientation=true, ARG float scale_factor=6.25f]>
+java: BoostDesc create(int desc, boolean use_scale_orientation, float scale_factor)
+java: BoostDesc create()
+CLASS cv.xfeatures2d::.FREAK : Feature2D
+[CONST NB_SCALES=64, CONST NB_PAIRS=512, CONST NB_ORIENPAIRS=45]
+FUNC <Ptr_FREAK cv.xfeatures2d.FREAK.create [ARG bool orientationNormalized=true, ARG bool scaleNormalized=true, ARG float patternScale=22.0f, ARG int nOctaves=4, ARG vector_int selectedPairs=std::vector<int>()]>
+java: FREAK create(boolean orientationNormalized, boolean scaleNormalized, float patternScale, int nOctaves, MatOfInt selectedPairs)
+java: FREAK create()
+CLASS cv.xfeatures2d::.HarrisLaplaceFeatureDetector : Feature2D
+FUNC <Ptr_HarrisLaplaceFeatureDetector cv.xfeatures2d.HarrisLaplaceFeatureDetector.create [ARG int numOctaves=6, ARG float corn_thresh=0.01f, ARG float DOG_thresh=0.01f, ARG int maxCorners=5000, ARG int num_layers=4]>
+java: HarrisLaplaceFeatureDetector create(int numOctaves, float corn_thresh, float DOG_thresh, int maxCorners, int num_layers)
+java: HarrisLaplaceFeatureDetector create()
+CLASS cv.xfeatures2d::.LUCID : Feature2D
+FUNC <Ptr_LUCID cv.xfeatures2d.LUCID.create [ARG int lucid_kernel=1, ARG int blur_kernel=2]>
+java: LUCID create(int lucid_kernel, int blur_kernel)
+java: LUCID create()
+CLASS cv.xfeatures2d::.VGG : Feature2D
+FUNC <Ptr_VGG cv.xfeatures2d.VGG.create [ARG int desc=VGG::VGG_120, ARG float isigma=1.4f, ARG bool img_normalize=true, ARG bool use_scale_orientation=true, ARG float scale_factor=6.25f, ARG bool dsc_normalize=false]>
+java: VGG create(int desc, float isigma, boolean img_normalize, boolean use_scale_orientation, float scale_factor, boolean dsc_normalize)
+java: VGG create()
+FUNC <void cv.xfeatures2d.VGG.compute [ARG Mat image=, ARG vector_KeyPoint keypoints=, ARG Mat descriptors=]>
+java: void compute(Mat image, MatOfKeyPoint keypoints, Mat descriptors)
+CLASS cv.xfeatures2d::.MSDDetector : Feature2D
+CLASS cv.xfeatures2d::.SIFT : Feature2D
+FUNC <Ptr_SIFT cv.xfeatures2d.SIFT.create [ARG int nfeatures=0, ARG int nOctaveLayers=3, ARG double contrastThreshold=0.04, ARG double edgeThreshold=10, ARG double sigma=1.6]>
+java: SIFT create(int nfeatures, int nOctaveLayers, double contrastThreshold, double edgeThreshold, double sigma)
+java: SIFT create()
+CLASS cv.xfeatures2d::.PCTSignaturesSQFD : Algorithm
+FUNC <Ptr_PCTSignaturesSQFD cv.xfeatures2d.PCTSignaturesSQFD.create [ARG int distanceFunction=3, ARG int similarityFunction=2, ARG float similarityParameter=1.0f]>
+java: PCTSignaturesSQFD create(int distanceFunction, int similarityFunction, float similarityParameter)
+java: PCTSignaturesSQFD create()
+FUNC <float cv.xfeatures2d.PCTSignaturesSQFD.computeQuadraticFormDistance [ARG Mat _signature0=, ARG Mat _signature1=]>
+java: float computeQuadraticFormDistance(Mat _signature0, Mat _signature1)
+FUNC <void cv.xfeatures2d.PCTSignaturesSQFD.computeQuadraticFormDistances [ARG Mat sourceSignature=, ARG vector_Mat imageSignatures=, ARG vector_float distances=]>
+java: void computeQuadraticFormDistances(Mat sourceSignature, List<Mat> imageSignatures, MatOfFloat distances)
+CLASS cv.xfeatures2d::.DAISY : Feature2D
+[CONST NRM_NONE=100, CONST NRM_PARTIAL=101, CONST NRM_FULL=102, CONST NRM_SIFT=103]
+FUNC <Ptr_DAISY cv.xfeatures2d.DAISY.create [ARG float radius=15, ARG int q_radius=3, ARG int q_theta=8, ARG int q_hist=8, ARG int norm=DAISY::NRM_NONE, ARG Mat H=Mat(), ARG bool interpolation=true, ARG bool use_orientation=false]>
+java: DAISY create(float radius, int q_radius, int q_theta, int q_hist, int norm, Mat H, boolean interpolation, boolean use_orientation)
+java: DAISY create()
+CLASS ::.Xfeatures2d : 
+CLASS cv.xfeatures2d::.LATCH : Feature2D
+FUNC <Ptr_LATCH cv.xfeatures2d.LATCH.create [ARG int bytes=32, ARG bool rotationInvariance=true, ARG int half_ssd_size=3]>
+java: LATCH create(int bytes, boolean rotationInvariance, int half_ssd_size)
+java: LATCH create()
+CLASS cv.xfeatures2d::.BriefDescriptorExtractor : Feature2D
+FUNC <Ptr_BriefDescriptorExtractor cv.xfeatures2d.BriefDescriptorExtractor.create [ARG int bytes=32, ARG bool use_orientation=false]>
+java: BriefDescriptorExtractor create(int bytes, boolean use_orientation)
+java: BriefDescriptorExtractor create()
+CLASS cv.xfeatures2d::.StarDetector : Feature2D
+FUNC <Ptr_StarDetector cv.xfeatures2d.StarDetector.create [ARG int maxSize=45, ARG int responseThreshold=30, ARG int lineThresholdProjected=10, ARG int lineThresholdBinarized=8, ARG int suppressNonmaxSize=5]>
+java: StarDetector create(int maxSize, int responseThreshold, int lineThresholdProjected, int lineThresholdBinarized, int suppressNonmaxSize)
+java: StarDetector create()
+CLASS cv.xfeatures2d::.PCTSignatures : Algorithm
+[CONST L0_25=0, CONST L0_5=1, CONST L1=2, CONST L2=3, CONST L2SQUARED=4, CONST L5=5, CONST L_INFINITY=6, CONST UNIFORM=0, CONST REGULAR=1, CONST NORMAL=2, CONST MINUS=0, CONST GAUSSIAN=1, CONST HEURISTIC=2]
+FUNC <Ptr_PCTSignatures cv.xfeatures2d.PCTSignatures.create [ARG int initSampleCount=2000, ARG int initSeedCount=400, ARG int pointDistribution=0]>
+java: PCTSignatures create(int initSampleCount, int initSeedCount, int pointDistribution)
+java: PCTSignatures create()
+FUNC <Ptr_PCTSignatures cv.xfeatures2d.PCTSignatures.create [ARG vector_Point2f initSamplingPoints=, ARG int initSeedCount=]>
+java: PCTSignatures create(MatOfPoint2f initSamplingPoints, int initSeedCount)
+FUNC <Ptr_PCTSignatures cv.xfeatures2d.PCTSignatures.create [ARG vector_Point2f initSamplingPoints=, ARG vector_int initClusterSeedIndexes=]>
+java: PCTSignatures create(MatOfPoint2f initSamplingPoints, MatOfInt initClusterSeedIndexes)
+FUNC <float cv.xfeatures2d.PCTSignatures.getDropThreshold []>
+java: float getDropThreshold()
+FUNC <float cv.xfeatures2d.PCTSignatures.getJoiningDistance []>
+java: float getJoiningDistance()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightA []>
+java: float getWeightA()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightB []>
+java: float getWeightB()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightContrast []>
+java: float getWeightContrast()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightEntropy []>
+java: float getWeightEntropy()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightL []>
+java: float getWeightL()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightX []>
+java: float getWeightX()
+FUNC <float cv.xfeatures2d.PCTSignatures.getWeightY []>
+java: float getWeightY()
+FUNC <int cv.xfeatures2d.PCTSignatures.getClusterMinSize []>
+java: int getClusterMinSize()
+FUNC <int cv.xfeatures2d.PCTSignatures.getDistanceFunction []>
+java: int getDistanceFunction()
+FUNC <int cv.xfeatures2d.PCTSignatures.getGrayscaleBits []>
+java: int getGrayscaleBits()
+FUNC <int cv.xfeatures2d.PCTSignatures.getInitSeedCount []>
+java: int getInitSeedCount()
+FUNC <int cv.xfeatures2d.PCTSignatures.getIterationCount []>
+java: int getIterationCount()
+FUNC <int cv.xfeatures2d.PCTSignatures.getMaxClustersCount []>
+java: int getMaxClustersCount()
+FUNC <int cv.xfeatures2d.PCTSignatures.getSampleCount []>
+java: int getSampleCount()
+FUNC <int cv.xfeatures2d.PCTSignatures.getWindowRadius []>
+java: int getWindowRadius()
+FUNC <vector_Point2f cv.xfeatures2d.PCTSignatures.getSamplingPoints []>
+java: MatOfPoint2f getSamplingPoints()
+FUNC <vector_int cv.xfeatures2d.PCTSignatures.getInitSeedIndexes []>
+java: MatOfInt getInitSeedIndexes()
+FUNC <void cv.xfeatures2d.PCTSignatures.computeSignature [ARG Mat image=, ARG Mat signature=]>
+java: void computeSignature(Mat image, Mat signature)
+FUNC <void cv.xfeatures2d.PCTSignatures.computeSignatures [ARG vector_Mat images=, ARG vector_Mat signatures=]>
+java: void computeSignatures(List<Mat> images, List<Mat> signatures)
+FUNC <void cv.xfeatures2d.PCTSignatures.drawSignature [ARG Mat source=, ARG Mat signature=, ARG Mat result=, ARG float radiusToShorterSideRatio=1.0 / 8, ARG int borderThickness=1]>
+java: void drawSignature(Mat source, Mat signature, Mat result, float radiusToShorterSideRatio, int borderThickness)
+java: void drawSignature(Mat source, Mat signature, Mat result)
+FUNC <void cv.xfeatures2d.PCTSignatures.generateInitPoints [ARG vector_Point2f initPoints=, ARG int count=, ARG int pointDistribution=]>
+java: void generateInitPoints(MatOfPoint2f initPoints, int count, int pointDistribution)
+FUNC <void cv.xfeatures2d.PCTSignatures.setClusterMinSize [ARG int clusterMinSize=]>
+java: void setClusterMinSize(int clusterMinSize)
+FUNC <void cv.xfeatures2d.PCTSignatures.setDistanceFunction [ARG int distanceFunction=]>
+java: void setDistanceFunction(int distanceFunction)
+FUNC <void cv.xfeatures2d.PCTSignatures.setDropThreshold [ARG float dropThreshold=]>
+java: void setDropThreshold(float dropThreshold)
+FUNC <void cv.xfeatures2d.PCTSignatures.setGrayscaleBits [ARG int grayscaleBits=]>
+java: void setGrayscaleBits(int grayscaleBits)
+FUNC <void cv.xfeatures2d.PCTSignatures.setInitSeedIndexes [ARG vector_int initSeedIndexes=]>
+java: void setInitSeedIndexes(MatOfInt initSeedIndexes)
+FUNC <void cv.xfeatures2d.PCTSignatures.setIterationCount [ARG int iterationCount=]>
+java: void setIterationCount(int iterationCount)
+FUNC <void cv.xfeatures2d.PCTSignatures.setJoiningDistance [ARG float joiningDistance=]>
+java: void setJoiningDistance(float joiningDistance)
+FUNC <void cv.xfeatures2d.PCTSignatures.setMaxClustersCount [ARG int maxClustersCount=]>
+java: void setMaxClustersCount(int maxClustersCount)
+FUNC <void cv.xfeatures2d.PCTSignatures.setSamplingPoints [ARG vector_Point2f samplingPoints=]>
+java: void setSamplingPoints(MatOfPoint2f samplingPoints)
+FUNC <void cv.xfeatures2d.PCTSignatures.setTranslation [ARG int idx=, ARG float value=]>
+java: void setTranslation(int idx, float value)
+FUNC <void cv.xfeatures2d.PCTSignatures.setTranslations [ARG vector_float translations=]>
+java: void setTranslations(MatOfFloat translations)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeight [ARG int idx=, ARG float value=]>
+java: void setWeight(int idx, float value)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightA [ARG float weight=]>
+java: void setWeightA(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightB [ARG float weight=]>
+java: void setWeightB(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightContrast [ARG float weight=]>
+java: void setWeightContrast(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightEntropy [ARG float weight=]>
+java: void setWeightEntropy(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightL [ARG float weight=]>
+java: void setWeightL(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightX [ARG float weight=]>
+java: void setWeightX(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeightY [ARG float weight=]>
+java: void setWeightY(float weight)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWeights [ARG vector_float weights=]>
+java: void setWeights(MatOfFloat weights)
+FUNC <void cv.xfeatures2d.PCTSignatures.setWindowRadius [ARG int radius=]>
+java: void setWindowRadius(int radius)

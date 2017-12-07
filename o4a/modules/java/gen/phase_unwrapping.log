@@ -1,0 +1,63 @@
+ok: class CLASS ::.Phase_unwrapping : , name: Phase_unwrapping, base: 
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping.hpp =====
+Namespaces: set([])
+Ignore header: /Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping.hpp
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping/histogramphaseunwrapping.hpp =====
+Namespaces: set([u'cv', u'cv.phase_unwrapping'])
+
+--- Incoming ---
+[   u'class cv.phase_unwrapping.HistogramPhaseUnwrapping',
+    u': cv::phase_unwrapping::PhaseUnwrapping',
+    [],
+    [],
+    None,
+    u'@brief Class implementing two-dimensional phase unwrapping based on @cite histogramUnwrapping\n* This algorithm belongs to the quality-guided phase unwrapping methods.\n* First, it computes a reliability map from second differences between a pixel and its eight neighbours.\n* Reliability values lie between 0 and 16*pi*pi. Then, this reliability map is used to compute\n* the reliabilities of "edges". An edge is an entity defined by two pixels that are connected\n* horizontally or vertically. Its reliability is found by adding the the reliabilities of the\n* two pixels connected through it. Edges are sorted in a histogram based on their reliability values.\n* This histogram is then used to unwrap pixels, starting from the highest quality pixel.\n\n* The wrapped phase map and the unwrapped result are stored in CV_32FC1 Mat.']
+ok: class CLASS cv.phase_unwrapping::.HistogramPhaseUnwrapping : PhaseUnwrapping, name: HistogramPhaseUnwrapping, base: PhaseUnwrapping
+
+--- Incoming ---
+[   u'cv.phase_unwrapping.HistogramPhaseUnwrapping.getInverseReliabilityMap',
+    u'void',
+    ['/V', '/PV'],
+    [['Mat', u'reliabilityMap', '', ['/O']]],
+    u'void',
+    u'* @brief Get the reliability map computed from the wrapped phase map.\n\n* @param reliabilityMap Image where the reliability map is stored.']
+ok: FUNC <void cv.phase_unwrapping.HistogramPhaseUnwrapping.getInverseReliabilityMap [ARG Mat reliabilityMap=]>
+
+
+===== Header: /Users/Chao/opencv_contrib/modules/phase_unwrapping/include/opencv2/phase_unwrapping/phase_unwrapping.hpp =====
+Namespaces: set([u'cv', u'cv.phase_unwrapping'])
+
+--- Incoming ---
+[   u'class cv.phase_unwrapping.PhaseUnwrapping',
+    ': cv::Algorithm',
+    [],
+    [],
+    None,
+    u'@brief Abstract base class for phase unwrapping.']
+ok: class CLASS cv.phase_unwrapping::.PhaseUnwrapping : Algorithm, name: PhaseUnwrapping, base: Algorithm
+
+--- Incoming ---
+[   u'cv.phase_unwrapping.PhaseUnwrapping.unwrapPhaseMap',
+    u'void',
+    ['/V', '/PV'],
+    [   ['Mat', u'wrappedPhaseMap', '', []],
+        ['Mat', u'unwrappedPhaseMap', '', ['/O']],
+        ['Mat', u'shadowMask', u'Mat()', []]],
+    u'void',
+    u'* @brief Unwraps a 2D phase map.\n\n* @param wrappedPhaseMap The wrapped phase map that needs to be unwrapped.\n* @param unwrappedPhaseMap The unwrapped phase map.\n* @param shadowMask Optional parameter used when some pixels do not hold any phase information in the wrapped phase map.']
+ok: FUNC <void cv.phase_unwrapping.PhaseUnwrapping.unwrapPhaseMap [ARG Mat wrappedPhaseMap=, ARG Mat unwrappedPhaseMap=, ARG Mat shadowMask=Mat()]>
+
+
+===== Generating... =====
+CLASS cv.phase_unwrapping::.PhaseUnwrapping : Algorithm
+FUNC <void cv.phase_unwrapping.PhaseUnwrapping.unwrapPhaseMap [ARG Mat wrappedPhaseMap=, ARG Mat unwrappedPhaseMap=, ARG Mat shadowMask=Mat()]>
+java: void unwrapPhaseMap(Mat wrappedPhaseMap, Mat unwrappedPhaseMap, Mat shadowMask)
+java: void unwrapPhaseMap(Mat wrappedPhaseMap, Mat unwrappedPhaseMap)
+CLASS cv.phase_unwrapping::.HistogramPhaseUnwrapping : PhaseUnwrapping
+FUNC <void cv.phase_unwrapping.HistogramPhaseUnwrapping.getInverseReliabilityMap [ARG Mat reliabilityMap=]>
+java: void getInverseReliabilityMap(Mat reliabilityMap)
+CLASS ::.Phase_unwrapping : 

@@ -4,10 +4,10 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_b4437"
-[1/2] Building CXX object CMakeFiles/cmTC_b4437.dir/cxx11.cpp.o
-FAILED: CMakeFiles/cmTC_b4437.dir/cxx11.cpp.o 
-/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack -o CMakeFiles/cmTC_b4437.dir/cxx11.cpp.o -c /Users/Chao/opencv/cmake/checks/cxx11.cpp
+Run Build Command:"/usr/local/bin/ninja" "cmTC_60342"
+[1/2] Building CXX object CMakeFiles/cmTC_60342.dir/cxx11.cpp.o
+FAILED: CMakeFiles/cmTC_60342.dir/cxx11.cpp.o 
+/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-g++  -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -frtti -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack -o CMakeFiles/cmTC_60342.dir/cxx11.cpp.o -c /Users/Chao/opencv/cmake/checks/cxx11.cpp
 /Users/Chao/opencv/cmake/checks/cxx11.cpp:4:2: error: #error "C++11 is not supported"
  #error "C++11 is not supported"
   ^
@@ -31,13 +31,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_21976"
-[1/2] Building CXX object CMakeFiles/cmTC_21976.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_715b3"
+[1/2] Building CXX object CMakeFiles/cmTC_715b3.dir/src.cxx.o
 cc1plus: warning: command line option '-Wmissing-prototypes' is valid for C/ObjC but not for C++ [enabled by default]
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
-[2/2] Linking CXX executable cmTC_21976
+[2/2] Linking CXX executable cmTC_715b3
 
 ===== END =====
 
@@ -50,13 +50,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_72e86"
-[1/2] Building CXX object CMakeFiles/cmTC_72e86.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_e7267"
+[1/2] Building CXX object CMakeFiles/cmTC_e7267.dir/src.cxx.o
 cc1plus: warning: command line option '-Wstrict-prototypes' is valid for C/ObjC but not for C++ [enabled by default]
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
-[2/2] Linking CXX executable cmTC_72e86
+[2/2] Linking CXX executable cmTC_e7267
 
 ===== END =====
 
@@ -69,13 +69,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_bae25"
-[1/2] Building C object CMakeFiles/cmTC_bae25.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_76a42"
+[1/2] Building C object CMakeFiles/cmTC_76a42.dir/src.c.o
 cc1: warning: command line option '-Wsign-promo' is valid for C++/ObjC++ but not for C [enabled by default]
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
-[2/2] Linking C executable cmTC_bae25
+[2/2] Linking C executable cmTC_76a42
 
 ===== END =====
 
@@ -88,13 +88,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_9ff99"
-[1/2] Building C object CMakeFiles/cmTC_9ff99.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_cf670"
+[1/2] Building C object CMakeFiles/cmTC_cf670.dir/src.c.o
 cc1: warning: command line option '-Wno-delete-non-virtual-dtor' is valid for C++/ObjC++ but not for C [enabled by default]
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
-[2/2] Linking C executable cmTC_9ff99
+[2/2] Linking C executable cmTC_cf670
 
 ===== END =====
 
@@ -107,13 +107,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_75b37"
-[1/2] Building CXX object CMakeFiles/cmTC_75b37.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_fbe40"
+[1/2] Building CXX object CMakeFiles/cmTC_fbe40.dir/src.cxx.o
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1plus: warning: unrecognized command line option "-Wno-unnamed-type-template-args" [enabled by default]
-[2/2] Linking CXX executable cmTC_75b37
+[2/2] Linking CXX executable cmTC_fbe40
 
 ===== END =====
 
@@ -126,13 +126,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_7943c"
-[1/2] Building C object CMakeFiles/cmTC_7943c.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_bbe10"
+[1/2] Building C object CMakeFiles/cmTC_bbe10.dir/src.c.o
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1: warning: unrecognized command line option "-Wno-unnamed-type-template-args" [enabled by default]
-[2/2] Linking C executable cmTC_7943c
+[2/2] Linking C executable cmTC_bbe10
 
 ===== END =====
 
@@ -145,13 +145,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_2ec22"
-[1/2] Building CXX object CMakeFiles/cmTC_2ec22.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_6dc59"
+[1/2] Building CXX object CMakeFiles/cmTC_6dc59.dir/src.cxx.o
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1plus: warning: unrecognized command line option "-Wno-implicit-fallthrough" [enabled by default]
-[2/2] Linking CXX executable cmTC_2ec22
+[2/2] Linking CXX executable cmTC_6dc59
 
 ===== END =====
 
@@ -164,13 +164,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_57e04"
-[1/2] Building C object CMakeFiles/cmTC_57e04.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_4e3bc"
+[1/2] Building C object CMakeFiles/cmTC_4e3bc.dir/src.c.o
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1: warning: unrecognized command line option "-Wno-implicit-fallthrough" [enabled by default]
-[2/2] Linking C executable cmTC_57e04
+[2/2] Linking C executable cmTC_4e3bc
 
 ===== END =====
 
@@ -183,23 +183,23 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_c7a5a"
-[1/2] Building C object CMakeFiles/cmTC_c7a5a.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_ad922"
+[1/2] Building C object CMakeFiles/cmTC_ad922.dir/src.c.o
 cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C [enabled by default]
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
-[2/2] Linking C executable cmTC_c7a5a
+[2/2] Linking C executable cmTC_ad922
 
 ===== END =====
 
 Determining if the posix_memalign exist failed with the following output:
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_65cc7"
-[1/2] Building C object CMakeFiles/cmTC_65cc7.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_65cc7.dir/CheckSymbolExists.c.o 
-/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -o CMakeFiles/cmTC_65cc7.dir/CheckSymbolExists.c.o   -c CheckSymbolExists.c
+Run Build Command:"/usr/local/bin/ninja" "cmTC_fef85"
+[1/2] Building C object CMakeFiles/cmTC_fef85.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_fef85.dir/CheckSymbolExists.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -o CMakeFiles/cmTC_fef85.dir/CheckSymbolExists.c.o   -c CheckSymbolExists.c
 CheckSymbolExists.c: In function 'main':
 CheckSymbolExists.c:8:19: error: 'posix_memalign' undeclared (first use in this function)
    return ((int*)(&posix_memalign))[argc];
@@ -232,10 +232,10 @@ int main(int argc, char** argv)
 Determining if the include file io.h exists failed with the following output:
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_23379"
-[1/2] Building C object CMakeFiles/cmTC_23379.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_23379.dir/CheckIncludeFile.c.o 
-/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -o CMakeFiles/cmTC_23379.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
+Run Build Command:"/usr/local/bin/ninja" "cmTC_f1ba8"
+[1/2] Building C object CMakeFiles/cmTC_f1ba8.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_f1ba8.dir/CheckIncludeFile.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -o CMakeFiles/cmTC_f1ba8.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
 CheckIncludeFile.c:1:16: fatal error: io.h: No such file or directory
  #include <io.h>
                 ^
@@ -246,12 +246,12 @@ ninja: build stopped: subcommand failed.
 Determining if the function jbg_newlen exists failed with the following output:
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_c8cc8"
-[1/2] Building C object CMakeFiles/cmTC_c8cc8.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_c8cc8
-FAILED: cmTC_c8cc8 
-: && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=jbg_newlen -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG  -Wl,--no-undefined -Wl,-rpath-link,/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc CMakeFiles/cmTC_c8cc8.dir/CheckFunctionExists.c.o -o cmTC_c8cc8   "/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/libsupc++.a" && :
-CMakeFiles/cmTC_c8cc8.dir/CheckFunctionExists.c.o: In function `main':
+Run Build Command:"/usr/local/bin/ninja" "cmTC_0a4a0"
+[1/2] Building C object CMakeFiles/cmTC_0a4a0.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_0a4a0
+FAILED: cmTC_0a4a0 
+: && /Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=jbg_newlen -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG  -Wl,--no-undefined -Wl,-rpath-link,/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/lib -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,-z,nocopyreloc CMakeFiles/cmTC_0a4a0.dir/CheckFunctionExists.c.o -o cmTC_0a4a0   "/Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/libsupc++.a" && :
+CMakeFiles/cmTC_0a4a0.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text.startup.main+0x10): undefined reference to `jbg_newlen'
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.
@@ -260,10 +260,10 @@ ninja: build stopped: subcommand failed.
 Determining if the include file search.h exists failed with the following output:
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_e9eef"
-[1/2] Building C object CMakeFiles/cmTC_e9eef.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_e9eef.dir/CheckIncludeFile.c.o 
-/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -o CMakeFiles/cmTC_e9eef.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
+Run Build Command:"/usr/local/bin/ninja" "cmTC_a4040"
+[1/2] Building C object CMakeFiles/cmTC_a4040.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_a4040.dir/CheckIncludeFile.c.o 
+/Users/Chao/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc -DANDROID -isystem /Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips/usr/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -isystem /Users/Chao/android-ndk-r10e/sources/cxx-stl/gnu-libstdc++/4.8/include/backward -fexceptions -fpic -Wno-psabi --sysroot=/Users/Chao/android-ndk-r10e/platforms/android-9/arch-mips -fno-strict-aliasing -finline-functions -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -fsigned-char -no-canonical-prefixes -fdata-sections -ffunction-sections -Wa,--noexecstack    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -fomit-frame-pointer  -fvisibility=hidden  -fomit-frame-pointer -funswitch-loops -finline-limit=300 -O3 -DNDEBUG -o CMakeFiles/cmTC_a4040.dir/CheckIncludeFile.c.o   -c CheckIncludeFile.c
 CheckIncludeFile.c:1:20: fatal error: search.h: No such file or directory
  #include <search.h>
                     ^
@@ -280,13 +280,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_d7474"
-[1/2] Building C object CMakeFiles/cmTC_d7474.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_5dd8e"
+[1/2] Building C object CMakeFiles/cmTC_5dd8e.dir/src.c.o
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1: warning: unrecognized command line option "-Wno-misleading-indentation" [enabled by default]
-[2/2] Linking C executable cmTC_d7474
+[2/2] Linking C executable cmTC_5dd8e
 
 ===== END =====
 
@@ -299,13 +299,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_8ab6c"
-[1/2] Building C object CMakeFiles/cmTC_8ab6c.dir/src.c.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_efe99"
+[1/2] Building C object CMakeFiles/cmTC_efe99.dir/src.c.o
 src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1: warning: unrecognized command line option "-Wno-shift-negative-value" [enabled by default]
-[2/2] Linking C executable cmTC_8ab6c
+[2/2] Linking C executable cmTC_efe99
 
 ===== END =====
 
@@ -318,13 +318,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_f03d2"
-[1/2] Building CXX object CMakeFiles/cmTC_f03d2.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_d5bf8"
+[1/2] Building CXX object CMakeFiles/cmTC_d5bf8.dir/src.cxx.o
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1plus: warning: unrecognized command line option "-Wno-misleading-indentation" [enabled by default]
-[2/2] Linking CXX executable cmTC_f03d2
+[2/2] Linking CXX executable cmTC_d5bf8
 
 ===== END =====
 
@@ -337,13 +337,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_4fc40"
-[1/2] Building CXX object CMakeFiles/cmTC_4fc40.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_2bef8"
+[1/2] Building CXX object CMakeFiles/cmTC_2bef8.dir/src.cxx.o
 cc1plus: warning: command line option '-Wno-missing-prototypes' is valid for C/ObjC but not for C++ [enabled by default]
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
-[2/2] Linking CXX executable cmTC_4fc40
+[2/2] Linking CXX executable cmTC_2bef8
 
 ===== END =====
 
@@ -356,13 +356,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_a7db1"
-[1/2] Building CXX object CMakeFiles/cmTC_a7db1.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_ee8ab"
+[1/2] Building CXX object CMakeFiles/cmTC_ee8ab.dir/src.cxx.o
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1plus: warning: unrecognized command line option "-Wno-tautological-undefined-compare" [enabled by default]
-[2/2] Linking CXX executable cmTC_a7db1
+[2/2] Linking CXX executable cmTC_ee8ab
 
 ===== END =====
 
@@ -375,13 +375,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_b4896"
-[1/2] Building CXX object CMakeFiles/cmTC_b4896.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_06545"
+[1/2] Building CXX object CMakeFiles/cmTC_06545.dir/src.cxx.o
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1plus: warning: unrecognized command line option "-Wno-unused-const-variable" [enabled by default]
-[2/2] Linking CXX executable cmTC_b4896
+[2/2] Linking CXX executable cmTC_06545
 
 ===== END =====
 
@@ -394,13 +394,13 @@ Compilation failed:
 ===== BUILD LOG =====
 Change Dir: /Users/Chao/opencv/build/o4a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/ninja" "cmTC_b0c84"
-[1/2] Building CXX object CMakeFiles/cmTC_b0c84.dir/src.cxx.o
+Run Build Command:"/usr/local/bin/ninja" "cmTC_7c618"
+[1/2] Building CXX object CMakeFiles/cmTC_7c618.dir/src.cxx.o
 src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
  #pragma
  ^
 cc1plus: warning: unrecognized command line option "-Wno-shorten-64-to-32" [enabled by default]
-[2/2] Linking CXX executable cmTC_b0c84
+[2/2] Linking CXX executable cmTC_7c618
 
 ===== END =====
 

@@ -1,0 +1,32 @@
+PORTED FUNCs LIST (23 of 23):
+
+static Ptr_ColorMomentHash create()
+static Ptr_AverageHash create()
+static Ptr_MarrHildrethHash create(float alpha = 2.0f, float scale = 1.0f)
+ float getAlpha()
+ float getScale()
+ void setKernelParam(float alpha, float scale)
+ double compare(Mat hashOne, Mat hashTwo)
+ void compute(Mat inputArr, Mat& outputArr)
+static Ptr_BlockMeanHash create(int mode = BLOCK_MEAN_HASH_MODE_0)
+ vector_double getMean()
+ void setMode(int mode)
+static Ptr_RadialVarianceHash create(double sigma = 1, int numOfAngleLine = 180)
+ double getSigma()
+ int getNumOfAngleLine()
+ void setNumOfAngleLine(int value)
+ void setSigma(double value)
+ void averageHash(Mat inputArr, Mat& outputArr)
+ void blockMeanHash(Mat inputArr, Mat& outputArr, int mode = BLOCK_MEAN_HASH_MODE_0)
+ void colorMomentHash(Mat inputArr, Mat& outputArr)
+ void marrHildrethHash(Mat inputArr, Mat& outputArr, float alpha = 2.0f, float scale = 1.0f)
+ void pHash(Mat inputArr, Mat& outputArr)
+ void radialVarianceHash(Mat inputArr, Mat& outputArr, double sigma = 1, int numOfAngleLine = 180)
+static Ptr_PHash create()
+
+SKIPPED FUNCs LIST (0 of 23):
+
+
+0 def args - 17 funcs
+1 def args - 2 funcs
+2 def args - 4 funcs

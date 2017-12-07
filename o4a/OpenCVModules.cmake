@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget libcpufeatures libtiff libjpeg libwebp libjasper libpng IlmImf tbb libprotobuf opencv_core opencv_flann opencv_imgproc opencv_ml opencv_objdetect opencv_photo opencv_video opencv_dnn opencv_imgcodecs opencv_shape opencv_videoio opencv_highgui opencv_superres opencv_features2d opencv_calib3d opencv_stitching opencv_videostab opencv_aruco opencv_java)
+foreach(_expectedTarget libcpufeatures libtiff libjpeg libwebp libjasper libpng IlmImf tbb libprotobuf opencv_core opencv_flann opencv_imgproc opencv_ml opencv_objdetect opencv_phase_unwrapping opencv_photo opencv_plot opencv_reg opencv_surface_matching opencv_video opencv_xphoto opencv_bgsegm opencv_dnn opencv_face opencv_fuzzy opencv_img_hash opencv_imgcodecs opencv_shape opencv_videoio opencv_xobjdetect opencv_highgui opencv_superres opencv_bioinspired opencv_dpm opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_rgbd opencv_stereo opencv_structured_light opencv_tracking opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_aruco opencv_java opencv_optflow opencv_stitching)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -125,11 +125,39 @@ set_target_properties(opencv_objdetect PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
+# Create imported target opencv_phase_unwrapping
+add_library(opencv_phase_unwrapping STATIC IMPORTED)
+
+set_target_properties(opencv_phase_unwrapping PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
 # Create imported target opencv_photo
 add_library(opencv_photo STATIC IMPORTED)
 
 set_target_properties(opencv_photo PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_plot
+add_library(opencv_plot STATIC IMPORTED)
+
+set_target_properties(opencv_plot PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_reg
+add_library(opencv_reg STATIC IMPORTED)
+
+set_target_properties(opencv_reg PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_surface_matching
+add_library(opencv_surface_matching STATIC IMPORTED)
+
+set_target_properties(opencv_surface_matching PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
 # Create imported target opencv_video
@@ -139,11 +167,46 @@ set_target_properties(opencv_video PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
+# Create imported target opencv_xphoto
+add_library(opencv_xphoto STATIC IMPORTED)
+
+set_target_properties(opencv_xphoto PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_bgsegm
+add_library(opencv_bgsegm STATIC IMPORTED)
+
+set_target_properties(opencv_bgsegm PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_video;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
 # Create imported target opencv_dnn
 add_library(opencv_dnn STATIC IMPORTED)
 
 set_target_properties(opencv_dnn PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:libprotobuf>"
+)
+
+# Create imported target opencv_face
+add_library(opencv_face STATIC IMPORTED)
+
+set_target_properties(opencv_face PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_objdetect;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_fuzzy
+add_library(opencv_fuzzy STATIC IMPORTED)
+
+set_target_properties(opencv_fuzzy PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_img_hash
+add_library(opencv_img_hash STATIC IMPORTED)
+
+set_target_properties(opencv_img_hash PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
 # Create imported target opencv_imgcodecs
@@ -167,6 +230,13 @@ set_target_properties(opencv_videoio PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_imgcodecs;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
+# Create imported target opencv_xobjdetect
+add_library(opencv_xobjdetect STATIC IMPORTED)
+
+set_target_properties(opencv_xobjdetect PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
 # Create imported target opencv_highgui
 add_library(opencv_highgui STATIC IMPORTED)
 
@@ -181,11 +251,46 @@ set_target_properties(opencv_superres PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
+# Create imported target opencv_bioinspired
+add_library(opencv_bioinspired STATIC IMPORTED)
+
+set_target_properties(opencv_bioinspired PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_dpm
+add_library(opencv_dpm STATIC IMPORTED)
+
+set_target_properties(opencv_dpm PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_objdetect;opencv_imgcodecs;opencv_videoio;opencv_highgui;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
 # Create imported target opencv_features2d
 add_library(opencv_features2d STATIC IMPORTED)
 
 set_target_properties(opencv_features2d PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_line_descriptor
+add_library(opencv_line_descriptor STATIC IMPORTED)
+
+set_target_properties(opencv_line_descriptor PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_saliency
+add_library(opencv_saliency STATIC IMPORTED)
+
+set_target_properties(opencv_saliency PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_text
+add_library(opencv_text STATIC IMPORTED)
+
+set_target_properties(opencv_text PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
 # Create imported target opencv_calib3d
@@ -195,11 +300,46 @@ set_target_properties(opencv_calib3d PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
-# Create imported target opencv_stitching
-add_library(opencv_stitching STATIC IMPORTED)
+# Create imported target opencv_ccalib
+add_library(opencv_ccalib STATIC IMPORTED)
 
-set_target_properties(opencv_stitching PROPERTIES
+set_target_properties(opencv_ccalib PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_datasets
+add_library(opencv_datasets STATIC IMPORTED)
+
+set_target_properties(opencv_datasets PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_rgbd
+add_library(opencv_rgbd STATIC IMPORTED)
+
+set_target_properties(opencv_rgbd PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_stereo
+add_library(opencv_stereo STATIC IMPORTED)
+
+set_target_properties(opencv_stereo PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_structured_light
+add_library(opencv_structured_light STATIC IMPORTED)
+
+set_target_properties(opencv_structured_light PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_tracking
+add_library(opencv_tracking STATIC IMPORTED)
+
+set_target_properties(opencv_tracking PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_datasets;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
 # Create imported target opencv_videostab
@@ -207,6 +347,20 @@ add_library(opencv_videostab STATIC IMPORTED)
 
 set_target_properties(opencv_videostab PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_photo;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_xfeatures2d
+add_library(opencv_xfeatures2d STATIC IMPORTED)
+
+set_target_properties(opencv_xfeatures2d PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_ximgproc
+add_library(opencv_ximgproc STATIC IMPORTED)
+
+set_target_properties(opencv_ximgproc PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
 # Create imported target opencv_aruco
@@ -221,6 +375,20 @@ add_library(opencv_java SHARED IMPORTED)
 
 set_target_properties(opencv_java PROPERTIES
   INTERFACE_LINK_LIBRARIES "jnigraphics;log;dl;z"
+)
+
+# Create imported target opencv_optflow
+add_library(opencv_optflow STATIC IMPORTED)
+
+set_target_properties(opencv_optflow PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_ximgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
+)
+
+# Create imported target opencv_stitching
+add_library(opencv_stitching STATIC IMPORTED)
+
+set_target_properties(opencv_stitching PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_video;opencv_imgcodecs;opencv_shape;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_xfeatures2d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>"
 )
 
 # Import target "libcpufeatures" for configuration "Release"
@@ -321,11 +489,39 @@ set_target_properties(opencv_objdetect PROPERTIES
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_objdetect.a"
   )
 
+# Import target "opencv_phase_unwrapping" for configuration "Release"
+set_property(TARGET opencv_phase_unwrapping APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_phase_unwrapping PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_phase_unwrapping.a"
+  )
+
 # Import target "opencv_photo" for configuration "Release"
 set_property(TARGET opencv_photo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_photo PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_photo.a"
+  )
+
+# Import target "opencv_plot" for configuration "Release"
+set_property(TARGET opencv_plot APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_plot PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_plot.a"
+  )
+
+# Import target "opencv_reg" for configuration "Release"
+set_property(TARGET opencv_reg APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_reg PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_reg.a"
+  )
+
+# Import target "opencv_surface_matching" for configuration "Release"
+set_property(TARGET opencv_surface_matching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_surface_matching PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_surface_matching.a"
   )
 
 # Import target "opencv_video" for configuration "Release"
@@ -335,11 +531,46 @@ set_target_properties(opencv_video PROPERTIES
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_video.a"
   )
 
+# Import target "opencv_xphoto" for configuration "Release"
+set_property(TARGET opencv_xphoto APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_xphoto PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_xphoto.a"
+  )
+
+# Import target "opencv_bgsegm" for configuration "Release"
+set_property(TARGET opencv_bgsegm APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_bgsegm PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_bgsegm.a"
+  )
+
 # Import target "opencv_dnn" for configuration "Release"
 set_property(TARGET opencv_dnn APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_dnn PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_dnn.a"
+  )
+
+# Import target "opencv_face" for configuration "Release"
+set_property(TARGET opencv_face APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_face PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_face.a"
+  )
+
+# Import target "opencv_fuzzy" for configuration "Release"
+set_property(TARGET opencv_fuzzy APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_fuzzy PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_fuzzy.a"
+  )
+
+# Import target "opencv_img_hash" for configuration "Release"
+set_property(TARGET opencv_img_hash APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_img_hash PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_img_hash.a"
   )
 
 # Import target "opencv_imgcodecs" for configuration "Release"
@@ -363,6 +594,13 @@ set_target_properties(opencv_videoio PROPERTIES
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_videoio.a"
   )
 
+# Import target "opencv_xobjdetect" for configuration "Release"
+set_property(TARGET opencv_xobjdetect APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_xobjdetect PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_xobjdetect.a"
+  )
+
 # Import target "opencv_highgui" for configuration "Release"
 set_property(TARGET opencv_highgui APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_highgui PROPERTIES
@@ -377,11 +615,46 @@ set_target_properties(opencv_superres PROPERTIES
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_superres.a"
   )
 
+# Import target "opencv_bioinspired" for configuration "Release"
+set_property(TARGET opencv_bioinspired APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_bioinspired PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_bioinspired.a"
+  )
+
+# Import target "opencv_dpm" for configuration "Release"
+set_property(TARGET opencv_dpm APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_dpm PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_dpm.a"
+  )
+
 # Import target "opencv_features2d" for configuration "Release"
 set_property(TARGET opencv_features2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_features2d PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_features2d.a"
+  )
+
+# Import target "opencv_line_descriptor" for configuration "Release"
+set_property(TARGET opencv_line_descriptor APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_line_descriptor PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_line_descriptor.a"
+  )
+
+# Import target "opencv_saliency" for configuration "Release"
+set_property(TARGET opencv_saliency APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_saliency PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_saliency.a"
+  )
+
+# Import target "opencv_text" for configuration "Release"
+set_property(TARGET opencv_text APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_text PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_text.a"
   )
 
 # Import target "opencv_calib3d" for configuration "Release"
@@ -391,11 +664,46 @@ set_target_properties(opencv_calib3d PROPERTIES
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_calib3d.a"
   )
 
-# Import target "opencv_stitching" for configuration "Release"
-set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(opencv_stitching PROPERTIES
+# Import target "opencv_ccalib" for configuration "Release"
+set_property(TARGET opencv_ccalib APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_ccalib PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_stitching.a"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_ccalib.a"
+  )
+
+# Import target "opencv_datasets" for configuration "Release"
+set_property(TARGET opencv_datasets APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_datasets PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_datasets.a"
+  )
+
+# Import target "opencv_rgbd" for configuration "Release"
+set_property(TARGET opencv_rgbd APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_rgbd PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_rgbd.a"
+  )
+
+# Import target "opencv_stereo" for configuration "Release"
+set_property(TARGET opencv_stereo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_stereo PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_stereo.a"
+  )
+
+# Import target "opencv_structured_light" for configuration "Release"
+set_property(TARGET opencv_structured_light APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_structured_light PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_structured_light.a"
+  )
+
+# Import target "opencv_tracking" for configuration "Release"
+set_property(TARGET opencv_tracking APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_tracking PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_tracking.a"
   )
 
 # Import target "opencv_videostab" for configuration "Release"
@@ -403,6 +711,20 @@ set_property(TARGET opencv_videostab APPEND PROPERTY IMPORTED_CONFIGURATIONS REL
 set_target_properties(opencv_videostab PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_videostab.a"
+  )
+
+# Import target "opencv_xfeatures2d" for configuration "Release"
+set_property(TARGET opencv_xfeatures2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_xfeatures2d PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_xfeatures2d.a"
+  )
+
+# Import target "opencv_ximgproc" for configuration "Release"
+set_property(TARGET opencv_ximgproc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_ximgproc PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_ximgproc.a"
   )
 
 # Import target "opencv_aruco" for configuration "Release"
@@ -417,6 +739,20 @@ set_property(TARGET opencv_java APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_java PROPERTIES
   IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_java3.so"
   IMPORTED_SONAME_RELEASE "libopencv_java3.so"
+  )
+
+# Import target "opencv_optflow" for configuration "Release"
+set_property(TARGET opencv_optflow APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_optflow PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_optflow.a"
+  )
+
+# Import target "opencv_stitching" for configuration "Release"
+set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_stitching PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "/Users/Chao/opencv/build/o4a/lib/mips/libopencv_stitching.a"
   )
 
 # This file does not depend on other imported targets which have
