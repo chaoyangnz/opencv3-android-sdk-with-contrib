@@ -47,3 +47,9 @@ externalNativeBuild {
     }
 }
 ```
+
+# The last
+
+Thanks to OpenCV, recently I developed an App sucessfully.
+
+![](https://i.imgur.com/VnT0c7U.gifv)
