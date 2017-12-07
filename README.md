@@ -6,7 +6,7 @@ The official build doesn't provide contrib modules. This build includes all the 
 
 Go to `./OpenCV-android-sdk`, just like the offical SDK, all are there including contrib modules.
 
-For someone who are curious about the generated JNI code, go to `./o4a` or other build intermediate directories.
+~~For someone who are curious about the generated JNI code, go to `./o4a` or other build intermediate directories.~~
 
 ## How to build yourself
 
