@@ -16,7 +16,9 @@ Please refer to http://yangchao.me/post/build-opencv-android-sdk/
 
 ## import into existing project
 
-In Android Studio, `File -> New -> Import Module..`, select `OpenCV-android-sdk/sdk/java`, then a new library module will be imported.
+- In Android Studio, `File -> New -> Import Module..`, select `OpenCV-android-sdk/sdk/java`, then a new library module will be imported.
+
+- Copy the pre-compiled libs in `OpenCV-android-sdk/sdk/native/libs` into `jniLibs` of your Android studio module.
 
 ## Avoid installing `OpenCV Manager`
 
