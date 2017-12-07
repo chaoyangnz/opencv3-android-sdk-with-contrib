@@ -1,6 +1,0 @@
-# view AndroidManifest.xml #generated:12
--keep class org.opencv.samples.tutorial3.Tutorial3Activity { <init>(...); }
-
-# view res/layout/tutorial3_surface_view.xml #generated:6
--keep class org.opencv.samples.tutorial3.Tutorial3View { <init>(...); }
-

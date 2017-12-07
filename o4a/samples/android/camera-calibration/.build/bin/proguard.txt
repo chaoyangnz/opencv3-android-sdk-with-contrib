@@ -1,6 +1,0 @@
-# view res/layout/camera_calibration_surface_view.xml #generated:7
--keep class org.opencv.android.JavaCameraView { <init>(...); }
-
-# view AndroidManifest.xml #generated:12
--keep class org.opencv.samples.cameracalibration.CameraCalibrationActivity { <init>(...); }
-
