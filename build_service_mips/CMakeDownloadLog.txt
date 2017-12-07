@@ -1,1 +1,0 @@
-use_cache "/Users/Chao/opencv/.cache"

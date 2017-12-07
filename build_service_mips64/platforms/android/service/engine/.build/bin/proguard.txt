@@ -1,6 +1,0 @@
-# view AndroidManifest.xml #generated:14
--keep class org.opencv.engine.OpenCVEngineService { <init>(...); }
-
-# view AndroidManifest.xml #generated:20
--keep class org.opencv.engine.manager.ManagerActivity { <init>(...); }
-
