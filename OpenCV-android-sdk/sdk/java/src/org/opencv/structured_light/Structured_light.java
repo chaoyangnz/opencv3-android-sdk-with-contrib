@@ -6,6 +6,9 @@ package org.opencv.structured_light;
 
 
 
+// C++: class Structured_light
+//javadoc: Structured_light
+
 public class Structured_light {
 
     public static final int

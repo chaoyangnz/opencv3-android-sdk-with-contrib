@@ -9,6 +9,7 @@ import org.opencv.core.TermCriteria;
 
 // C++: class SparsePyrLKOpticalFlow
 //javadoc: SparsePyrLKOpticalFlow
+
 public class SparsePyrLKOpticalFlow extends SparseOpticalFlow {
 
     protected SparsePyrLKOpticalFlow(long addr) { super(addr); }

@@ -8,6 +8,7 @@ package org.opencv.tracking;
 
 // C++: class TrackerKCF
 //javadoc: TrackerKCF
+
 public class TrackerKCF extends Tracker {
 
     protected TrackerKCF(long addr) { super(addr); }

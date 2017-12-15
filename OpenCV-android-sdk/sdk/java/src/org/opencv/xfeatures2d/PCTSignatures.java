@@ -15,6 +15,7 @@ import org.opencv.utils.Converters;
 
 // C++: class PCTSignatures
 //javadoc: PCTSignatures
+
 public class PCTSignatures extends Algorithm {
 
     protected PCTSignatures(long addr) { super(addr); }

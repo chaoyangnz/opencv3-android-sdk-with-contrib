@@ -8,6 +8,7 @@ package org.opencv.tracking;
 
 // C++: class TrackerMedianFlow
 //javadoc: TrackerMedianFlow
+
 public class TrackerMedianFlow extends Tracker {
 
     protected TrackerMedianFlow(long addr) { super(addr); }

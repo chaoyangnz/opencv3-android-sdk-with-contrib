@@ -9,6 +9,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class DAISY
 //javadoc: DAISY
+
 public class DAISY extends Feature2D {
 
     protected DAISY(long addr) { super(addr); }

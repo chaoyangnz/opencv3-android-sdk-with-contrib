@@ -10,6 +10,7 @@ import org.opencv.core.Rect2d;
 
 // C++: class Tracker
 //javadoc: Tracker
+
 public class Tracker extends Algorithm {
 
     protected Tracker(long addr) { super(addr); }

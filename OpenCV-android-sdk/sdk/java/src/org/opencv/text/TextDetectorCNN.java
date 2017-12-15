@@ -14,6 +14,7 @@ import org.opencv.utils.Converters;
 
 // C++: class TextDetectorCNN
 //javadoc: TextDetectorCNN
+
 public class TextDetectorCNN extends TextDetector {
 
     protected TextDetectorCNN(long addr) { super(addr); }

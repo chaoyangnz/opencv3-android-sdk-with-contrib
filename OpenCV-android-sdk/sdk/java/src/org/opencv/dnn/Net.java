@@ -15,6 +15,7 @@ import org.opencv.utils.Converters;
 
 // C++: class Net
 //javadoc: Net
+
 public class Net {
 
     protected final long nativeObj;
@@ -279,47 +280,43 @@ public class Net {
 
 
     //
-    // C++:  void forward(vector_Mat outputBlobs, String outputName = String())
+    // C++:  void forward(vector_Mat& outputBlobs, String outputName = String())
     //
 
     //javadoc: Net::forward(outputBlobs, outputName)
     public  void forward(List<Mat> outputBlobs, String outputName)
     {
-        Mat outputBlobs_mat = Converters.vector_Mat_to_Mat(outputBlobs);
+        Mat outputBlobs_mat = new Mat();
         forward_2(nativeObj, outputBlobs_mat.nativeObj, outputName);
-        
+        Converters.Mat_to_vector_Mat(outputBlobs_mat, outputBlobs);
+        outputBlobs_mat.release();
         return;
     }
 
     //javadoc: Net::forward(outputBlobs)
     public  void forward(List<Mat> outputBlobs)
     {
-        Mat outputBlobs_mat = Converters.vector_Mat_to_Mat(outputBlobs);
+        Mat outputBlobs_mat = new Mat();
         forward_3(nativeObj, outputBlobs_mat.nativeObj);
-        
+        Converters.Mat_to_vector_Mat(outputBlobs_mat, outputBlobs);
+        outputBlobs_mat.release();
         return;
     }
 
 
     //
-    // C++:  void forward(vector_Mat outputBlobs, vector_String outBlobNames)
+    // C++:  void forward(vector_Mat& outputBlobs, vector_String outBlobNames)
     //
 
     //javadoc: Net::forward(outputBlobs, outBlobNames)
     public  void forward(List<Mat> outputBlobs, List<String> outBlobNames)
     {
-        Mat outputBlobs_mat = Converters.vector_Mat_to_Mat(outputBlobs);
+        Mat outputBlobs_mat = new Mat();
         forward_4(nativeObj, outputBlobs_mat.nativeObj, outBlobNames);
-        
+        Converters.Mat_to_vector_Mat(outputBlobs_mat, outputBlobs);
+        outputBlobs_mat.release();
         return;
     }
-
-
-    //
-    // C++:  void forward(vector_vector_Mat outputBlobs, vector_String outBlobNames)
-    //
-
-    // Unknown type 'vector_vector_Mat' (I), skipping the function
 
 
     //
@@ -553,11 +550,11 @@ public class Net {
     // C++:  void enableFusion(bool fusion)
     private static native void enableFusion_0(long nativeObj, boolean fusion);
 
-    // C++:  void forward(vector_Mat outputBlobs, String outputName = String())
+    // C++:  void forward(vector_Mat& outputBlobs, String outputName = String())
     private static native void forward_2(long nativeObj, long outputBlobs_mat_nativeObj, String outputName);
     private static native void forward_3(long nativeObj, long outputBlobs_mat_nativeObj);
 
-    // C++:  void forward(vector_Mat outputBlobs, vector_String outBlobNames)
+    // C++:  void forward(vector_Mat& outputBlobs, vector_String outBlobNames)
     private static native void forward_4(long nativeObj, long outputBlobs_mat_nativeObj, List<String> outBlobNames);
 
     // C++:  void getLayerTypes(vector_String& layersTypes)

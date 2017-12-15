@@ -14,6 +14,9 @@ import org.opencv.core.Scalar;
 import org.opencv.core.TermCriteria;
 import org.opencv.utils.Converters;
 
+// C++: class Core
+//javadoc: Core
+
 public class Core {
 
     // these constants are wrapped inside functions to prevent inlining

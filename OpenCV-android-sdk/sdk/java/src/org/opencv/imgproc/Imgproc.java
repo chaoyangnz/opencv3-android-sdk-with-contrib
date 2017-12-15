@@ -21,6 +21,9 @@ import org.opencv.core.Size;
 import org.opencv.core.TermCriteria;
 import org.opencv.utils.Converters;
 
+// C++: class Imgproc
+//javadoc: Imgproc
+
 public class Imgproc {
 
     private static final int
@@ -130,6 +133,7 @@ public class Imgproc {
             INTER_CUBIC = 2,
             INTER_AREA = 3,
             INTER_LANCZOS4 = 4,
+            INTER_LINEAR_EXACT = 5,
             INTER_MAX = 7,
             WARP_FILL_OUTLIERS = 8,
             WARP_INVERSE_MAP = 16,

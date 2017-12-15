@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class ImgHashBase
 //javadoc: ImgHashBase
+
 public class ImgHashBase extends Algorithm {
 
     protected ImgHashBase(long addr) { super(addr); }

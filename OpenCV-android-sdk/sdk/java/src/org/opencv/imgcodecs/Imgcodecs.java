@@ -12,6 +12,9 @@ import org.opencv.core.MatOfByte;
 import org.opencv.core.MatOfInt;
 import org.opencv.utils.Converters;
 
+// C++: class Imgcodecs
+//javadoc: Imgcodecs
+
 public class Imgcodecs {
 
     public static final int

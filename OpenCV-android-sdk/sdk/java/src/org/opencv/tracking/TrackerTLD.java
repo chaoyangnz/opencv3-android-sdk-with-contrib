@@ -8,6 +8,7 @@ package org.opencv.tracking;
 
 // C++: class TrackerTLD
 //javadoc: TrackerTLD
+
 public class TrackerTLD extends Tracker {
 
     protected TrackerTLD(long addr) { super(addr); }

@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class Boost
 //javadoc: Boost
+
 public class Boost extends DTrees {
 
     protected Boost(long addr) { super(addr); }

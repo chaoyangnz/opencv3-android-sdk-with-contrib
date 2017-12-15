@@ -8,6 +8,7 @@ package org.opencv.video;
 
 // C++: class DualTVL1OpticalFlow
 //javadoc: DualTVL1OpticalFlow
+
 public class DualTVL1OpticalFlow extends DenseOpticalFlow {
 
     protected DualTVL1OpticalFlow(long addr) { super(addr); }

@@ -16,6 +16,7 @@ import org.opencv.utils.Converters;
 
 // C++: class CascadeClassifier
 //javadoc: CascadeClassifier
+
 public class CascadeClassifier {
 
     protected final long nativeObj;

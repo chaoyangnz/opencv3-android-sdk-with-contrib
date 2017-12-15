@@ -8,6 +8,7 @@ package org.opencv.text;
 
 // C++: class BaseOCR
 //javadoc: BaseOCR
+
 public class BaseOCR {
 
     protected final long nativeObj;

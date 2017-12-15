@@ -8,6 +8,7 @@ package org.opencv.tracking;
 
 // C++: class TrackerGOTURN
 //javadoc: TrackerGOTURN
+
 public class TrackerGOTURN extends Tracker {
 
     protected TrackerGOTURN(long addr) { super(addr); }

@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class DictValue
 //javadoc: DictValue
+
 public class DictValue {
 
     protected final long nativeObj;

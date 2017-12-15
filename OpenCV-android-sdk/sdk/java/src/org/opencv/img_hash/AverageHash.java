@@ -8,6 +8,7 @@ package org.opencv.img_hash;
 
 // C++: class AverageHash
 //javadoc: AverageHash
+
 public class AverageHash extends ImgHashBase {
 
     protected AverageHash(long addr) { super(addr); }

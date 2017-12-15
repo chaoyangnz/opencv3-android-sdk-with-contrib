@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class PhaseUnwrapping
 //javadoc: PhaseUnwrapping
+
 public class PhaseUnwrapping extends Algorithm {
 
     protected PhaseUnwrapping(long addr) { super(addr); }

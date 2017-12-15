@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class javaDescriptorExtractor
 //javadoc: javaDescriptorExtractor
+@Deprecated
 public class DescriptorExtractor {
 
     protected final long nativeObj;

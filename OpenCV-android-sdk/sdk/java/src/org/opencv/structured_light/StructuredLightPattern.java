@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class StructuredLightPattern
 //javadoc: StructuredLightPattern
+
 public class StructuredLightPattern extends Algorithm {
 
     protected StructuredLightPattern(long addr) { super(addr); }

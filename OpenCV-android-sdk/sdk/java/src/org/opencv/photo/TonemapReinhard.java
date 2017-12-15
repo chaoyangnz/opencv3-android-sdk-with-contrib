@@ -8,6 +8,7 @@ package org.opencv.photo;
 
 // C++: class TonemapReinhard
 //javadoc: TonemapReinhard
+
 public class TonemapReinhard extends Tonemap {
 
     protected TonemapReinhard(long addr) { super(addr); }

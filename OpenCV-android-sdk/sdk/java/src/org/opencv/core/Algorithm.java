@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class Algorithm
 //javadoc: Algorithm
+
 public class Algorithm {
 
     protected final long nativeObj;
@@ -30,6 +31,20 @@ public class Algorithm {
 
 
     //
+    // C++:  bool empty()
+    //
+
+    //javadoc: Algorithm::empty()
+    public  boolean empty()
+    {
+        
+        boolean retVal = empty_0(nativeObj);
+        
+        return retVal;
+    }
+
+
+    //
     // C++:  void clear()
     //
 
@@ -41,6 +56,13 @@ public class Algorithm {
         
         return;
     }
+
+
+    //
+    // C++:  void read(FileNode fn)
+    //
+
+    // Unknown type 'FileNode' (I), skipping the function
 
 
     //
@@ -57,6 +79,13 @@ public class Algorithm {
     }
 
 
+    //
+    // C++:  void write(Ptr_FileStorage fs, String name = String())
+    //
+
+    // Unknown type 'Ptr_FileStorage' (I), skipping the function
+
+
     @Override
     protected void finalize() throws Throwable {
         delete(nativeObj);
@@ -66,6 +95,9 @@ public class Algorithm {
 
     // C++:  String getDefaultName()
     private static native String getDefaultName_0(long nativeObj);
+
+    // C++:  bool empty()
+    private static native boolean empty_0(long nativeObj);
 
     // C++:  void clear()
     private static native void clear_0(long nativeObj);

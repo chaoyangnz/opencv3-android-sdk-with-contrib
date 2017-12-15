@@ -11,6 +11,9 @@ import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfRect;
 import org.opencv.utils.Converters;
 
+// C++: class Objdetect
+//javadoc: Objdetect
+
 public class Objdetect {
 
     public static final int

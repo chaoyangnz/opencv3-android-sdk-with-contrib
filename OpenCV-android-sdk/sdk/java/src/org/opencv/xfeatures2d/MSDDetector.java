@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class MSDDetector
 //javadoc: MSDDetector
+
 public class MSDDetector extends Feature2D {
 
     protected MSDDetector(long addr) { super(addr); }

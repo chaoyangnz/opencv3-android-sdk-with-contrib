@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class BlockMeanHash
 //javadoc: BlockMeanHash
+
 public class BlockMeanHash extends ImgHashBase {
 
     protected BlockMeanHash(long addr) { super(addr); }

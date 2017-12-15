@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class Board
 //javadoc: Board
+
 public class Board {
 
     protected final long nativeObj;

@@ -10,6 +10,7 @@ import org.opencv.core.TermCriteria;
 
 // C++: class SVM
 //javadoc: SVM
+
 public class SVM extends StatModel {
 
     protected SVM(long addr) { super(addr); }

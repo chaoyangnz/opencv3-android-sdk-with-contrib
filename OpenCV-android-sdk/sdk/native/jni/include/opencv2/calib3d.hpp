@@ -396,7 +396,7 @@ and a rotation matrix.
 It optionally returns three rotation matrices, one for each axis, and the three Euler angles in
 degrees (as the return value) that could be used in OpenGL. Note, there is always more than one
 sequence of rotations about the three principal axes that results in the same orientation of an
-object, eg. see @cite Slabaugh . Returned tree rotation matrices and corresponding three Euler angles
+object, e.g. see @cite Slabaugh . Returned tree rotation matrices and corresponding three Euler angles
 are only one of the possible solutions.
  */
 CV_EXPORTS_W Vec3d RQDecomp3x3( InputArray src, OutputArray mtxR, OutputArray mtxQ,
@@ -421,8 +421,8 @@ matrix and the position of a camera.
 
 It optionally returns three rotation matrices, one for each axis, and three Euler angles that could
 be used in OpenGL. Note, there is always more than one sequence of rotations about the three
-principal axes that results in the same orientation of an object, eg. see @cite Slabaugh . Returned
-tree rotation matrices and corresponding three Euler angules are only one of the possible solutions.
+principal axes that results in the same orientation of an object, e.g. see @cite Slabaugh . Returned
+tree rotation matrices and corresponding three Euler angles are only one of the possible solutions.
 
 The function is based on RQDecomp3x3 .
  */
@@ -563,7 +563,7 @@ Estimation" (@cite penate2013exhaustive). In this case the function also estimat
 assuming that both have the same value. Then the cameraMatrix is updated with the estimated
 focal length.
 -   **SOLVEPNP_AP3P** Method is based on the paper of Tong Ke and Stergios I. Roumeliotis.
-"An Efficient Algebraic Solution to the Perspective-Three-Point Problem". In this case the
+"An Efficient Algebraic Solution to the Perspective-Three-Point Problem" (@cite Ke17). In this case the
 function requires exactly four object and image points.
 
 The function estimates the object pose given a set of object points, their corresponding image
@@ -585,9 +585,12 @@ projections, as well as the camera matrix and the distortion coefficients.
    -   The methods **SOLVEPNP_DLS** and **SOLVEPNP_UPNP** cannot be used as the current implementations are
        unstable and sometimes give completely wrong results. If you pass one of these two
        flags, **SOLVEPNP_EPNP** method will be used instead.
-   -   The minimum number of points is 4. In the case of **SOLVEPNP_P3P** and **SOLVEPNP_AP3P**
+   -   The minimum number of points is 4 in the general case. In the case of **SOLVEPNP_P3P** and **SOLVEPNP_AP3P**
        methods, it is required to use exactly 4 points (the first 3 points are used to estimate all the solutions
        of the P3P problem, the last one is used to retain the best solution that minimizes the reprojection error).
+   -   With **SOLVEPNP_ITERATIVE** method and `useExtrinsicGuess=true`, the minimum number of points is 3 (3 points
+       are sufficient to compute a pose but there are up to 4 solutions). The initial solution should be close to the
+       global solution to converge.
  */
 CV_EXPORTS_W bool solvePnP( InputArray objectPoints, InputArray imagePoints,
                             InputArray cameraMatrix, InputArray distCoeffs,
@@ -658,9 +661,9 @@ the model coordinate system to the camera coordinate system. A P3P problem has u
 @param tvecs Output translation vectors.
 @param flags Method for solving a P3P problem:
 -   **SOLVEPNP_P3P** Method is based on the paper of X.S. Gao, X.-R. Hou, J. Tang, H.-F. Chang
-"Complete Solution Classification for the Perspective-Three-Point Problem".
+"Complete Solution Classification for the Perspective-Three-Point Problem" (@cite gao2003complete).
 -   **SOLVEPNP_AP3P** Method is based on the paper of Tong Ke and Stergios I. Roumeliotis.
-"An Efficient Algebraic Solution to the Perspective-Three-Point Problem".
+"An Efficient Algebraic Solution to the Perspective-Three-Point Problem" (@cite Ke17).
 
 The function estimates the object pose given 3 object points, their corresponding image
 projections, as well as the camera matrix and the distortion coefficients.
@@ -1205,7 +1208,7 @@ findFundamentalMat .
 @param threshold Optional threshold used to filter out the outliers. If the parameter is greater
 than zero, all the point pairs that do not comply with the epipolar geometry (that is, the points
 for which \f$|\texttt{points2[i]}^T*\texttt{F}*\texttt{points1[i]}|>\texttt{threshold}\f$ ) are
-rejected prior to computing the homographies. Otherwise,all the points are considered inliers.
+rejected prior to computing the homographies. Otherwise, all the points are considered inliers.
 
 The function computes the rectification transformations without knowing intrinsic parameters of the
 cameras and their relative position in the space, which explains the suffix "uncalibrated". Another
@@ -1249,7 +1252,7 @@ assumed.
 @param alpha Free scaling parameter between 0 (when all the pixels in the undistorted image are
 valid) and 1 (when all the source image pixels are retained in the undistorted image). See
 stereoRectify for details.
-@param newImgSize Image size after rectification. By default,it is set to imageSize .
+@param newImgSize Image size after rectification. By default, it is set to imageSize .
 @param validPixROI Optional output rectangle that outlines all-good-pixels region in the
 undistorted image. See roi1, roi2 description in stereoRectify .
 @param centerPrincipalPoint Optional flag that indicates whether in the new camera matrix the
@@ -1260,7 +1263,7 @@ best fit a subset of the source image (determined by alpha) to the corrected ima
 The function computes and returns the optimal new camera matrix based on the free scaling parameter.
 By varying this parameter, you may retrieve only sensible pixels alpha=0 , keep all the original
 image pixels if there is valuable information in the corners alpha=1 , or get something in between.
-When alpha\>0 , the undistortion result is likely to have some black pixels corresponding to
+When alpha\>0 , the undistorted result is likely to have some black pixels corresponding to
 "virtual" pixels outside of the captured distorted image. The original camera matrix, distortion
 coefficients, the computed new camera matrix, and newImageSize should be passed to
 initUndistortRectifyMap to produce the maps for remap .
@@ -1456,7 +1459,7 @@ floating-point (single or double precision).
 Note that this function assumes that points1 and points2 are feature points from cameras with the
 same camera matrix.
 @param R Recovered relative rotation.
-@param t Recoverd relative translation.
+@param t Recovered relative translation.
 @param mask Input/output mask for inliers in points1 and points2.
 :   If it is not empty, then it marks inliers in points1 and points2 for then given essential
 matrix E. Only these inliers will be used to recover pose. In the output mask only inliers
@@ -1499,7 +1502,7 @@ CV_EXPORTS_W int recoverPose( InputArray E, InputArray points1, InputArray point
 floating-point (single or double precision).
 @param points2 Array of the second image points of the same size and format as points1 .
 @param R Recovered relative rotation.
-@param t Recoverd relative translation.
+@param t Recovered relative translation.
 @param focal Focal length of the camera. Note that this function assumes that points1 and points2
 are feature points from cameras with same focal length and principal point.
 @param pp principal point of the camera.
@@ -1532,7 +1535,7 @@ floating-point (single or double precision).
 Note that this function assumes that points1 and points2 are feature points from cameras with the
 same camera matrix.
 @param R Recovered relative rotation.
-@param t Recoverd relative translation.
+@param t Recovered relative translation.
 @param distanceThresh threshold distance which is used to filter out far away points (i.e. infinite points).
 @param mask Input/output mask for inliers in points1 and points2.
 :   If it is not empty, then it marks inliers in points1 and points2 for then given essential

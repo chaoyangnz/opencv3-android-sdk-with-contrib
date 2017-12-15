@@ -8,6 +8,7 @@ import org.opencv.core.Rect;
 
 // C++: class StereoBM
 //javadoc: StereoBM
+
 public class StereoBM extends StereoMatcher {
 
     protected StereoBM(long addr) { super(addr); }

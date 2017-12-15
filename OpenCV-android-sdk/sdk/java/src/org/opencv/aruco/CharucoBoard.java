@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class CharucoBoard
 //javadoc: CharucoBoard
+
 public class CharucoBoard extends Board {
 
     protected CharucoBoard(long addr) { super(addr); }

@@ -8,6 +8,7 @@ package org.opencv.video;
 
 // C++: class FarnebackOpticalFlow
 //javadoc: FarnebackOpticalFlow
+
 public class FarnebackOpticalFlow extends DenseOpticalFlow {
 
     protected FarnebackOpticalFlow(long addr) { super(addr); }

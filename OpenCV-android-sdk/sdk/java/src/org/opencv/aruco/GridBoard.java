@@ -9,6 +9,7 @@ import org.opencv.core.Size;
 
 // C++: class GridBoard
 //javadoc: GridBoard
+
 public class GridBoard extends Board {
 
     protected GridBoard(long addr) { super(addr); }

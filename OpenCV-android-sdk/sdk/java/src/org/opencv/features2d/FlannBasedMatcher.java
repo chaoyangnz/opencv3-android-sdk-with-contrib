@@ -8,6 +8,7 @@ package org.opencv.features2d;
 
 // C++: class FlannBasedMatcher
 //javadoc: FlannBasedMatcher
+
 public class FlannBasedMatcher extends DescriptorMatcher {
 
     protected FlannBasedMatcher(long addr) { super(addr); }

@@ -6,6 +6,9 @@ package org.opencv.videoio;
 
 
 
+// C++: class Videoio
+//javadoc: Videoio
+
 public class Videoio {
 
     public static final int

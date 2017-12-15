@@ -17,6 +17,7 @@ import org.opencv.utils.Converters;
 
 // C++: class HOGDescriptor
 //javadoc: HOGDescriptor
+
 public class HOGDescriptor {
 
     protected final long nativeObj;

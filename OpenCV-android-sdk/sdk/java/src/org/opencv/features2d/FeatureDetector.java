@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class javaFeatureDetector
 //javadoc: javaFeatureDetector
+@Deprecated
 public class FeatureDetector {
 
     protected final long nativeObj;
@@ -82,6 +83,7 @@ public class FeatureDetector {
     //
 
     //javadoc: javaFeatureDetector::create(detectorType)
+    @Deprecated
     public static FeatureDetector create(int detectorType)
     {
         

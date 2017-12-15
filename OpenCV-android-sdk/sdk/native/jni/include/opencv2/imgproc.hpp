@@ -117,6 +117,8 @@ f_y(x,y))\f$, and then the value of the polynomial at \f$(f_x(x,y), f_y(x,y))\f$
 interpolated pixel value. In OpenCV, you can choose between several interpolation methods. See
 resize for details.
 
+@note The geometrical transformations do not work with `CV_8S` or `CV_32S` images.
+
     @defgroup imgproc_misc Miscellaneous Image Transformations
     @defgroup imgproc_draw Drawing Functions
 
@@ -277,6 +279,8 @@ enum InterpolationFlags{
     INTER_AREA           = 3,
     /** Lanczos interpolation over 8x8 neighborhood */
     INTER_LANCZOS4       = 4,
+    /** Bit exact bilinear interpolation */
+    INTER_LINEAR_EXACT = 5,
     /** mask for interpolation codes */
     INTER_MAX            = 7,
     /** flag, fills all of the destination image pixels. If some of them correspond to outliers in the
@@ -1257,7 +1261,7 @@ to edit those, as to tailor it for their own application.
 @param _sigma_scale Sigma for Gaussian filter. It is computed as sigma = _sigma_scale/_scale.
 @param _quant Bound to the quantization error on the gradient norm.
 @param _ang_th Gradient angle tolerance in degrees.
-@param _log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advancent refinement
+@param _log_eps Detection threshold: -log10(NFA) \> log_eps. Used only when advance refinement
 is chosen.
 @param _density_th Minimal density of aligned region points in the enclosing rectangle.
 @param _n_bins Number of bins in pseudo-ordering of gradient modulus.
@@ -1699,7 +1703,7 @@ CV_EXPORTS_W void Laplacian( InputArray src, OutputArray dst, int ddepth,
 
 /** @brief Finds edges in an image using the Canny algorithm @cite Canny86 .
 
-The function finds edges in the input image image and marks them in the output map edges using the
+The function finds edges in the input image and marks them in the output map edges using the
 Canny algorithm. The smallest value between threshold1 and threshold2 is used for edge linking. The
 largest value is used to find initial segments of strong edges. See
 <http://en.wikipedia.org/wiki/Canny_edge_detector>
@@ -2090,7 +2094,7 @@ Example: :
 
 @note Usually the function detects the centers of circles well. However, it may fail to find correct
 radii. You can assist to the function by specifying the radius range ( minRadius and maxRadius ) if
-you know it. Or, you may ignore the returned radius, use only the center, and find the correct
+you know it. Or, you may set maxRadius to 0 to return centers only without radius search, and find the correct
 radius using an additional procedure.
 
 @param image 8-bit, single-channel, grayscale input image.
@@ -2352,7 +2356,7 @@ borderMode=BORDER_TRANSPARENT, it means that the pixels in the destination image
 corresponds to the "outliers" in the source image are not modified by the function.
 @param borderValue Value used in case of a constant border. By default, it is 0.
 @note
-Due to current implementaion limitations the size of an input and output images should be less than 32767x32767.
+Due to current implementation limitations the size of an input and output images should be less than 32767x32767.
  */
 CV_EXPORTS_W void remap( InputArray src, OutputArray dst,
                          InputArray map1, InputArray map2,
@@ -2623,7 +2627,7 @@ CV_EXPORTS_AS(integral3) void integral( InputArray src, OutputArray sum,
 //! @addtogroup imgproc_motion
 //! @{
 
-/** @brief Adds an image to the accumulator.
+/** @brief Adds an image to the accumulator image.
 
 The function adds src or some of its elements to dst :
 
@@ -2631,7 +2635,7 @@ The function adds src or some of its elements to dst :
 
 The function supports multi-channel images. Each channel is processed independently.
 
-The functions accumulate\* can be used, for example, to collect statistics of a scene background
+The function cv::accumulate can be used, for example, to collect statistics of a scene background
 viewed by a still camera and for the further foreground-background segmentation.
 
 @param src Input image of type CV_8UC(n), CV_16UC(n), CV_32FC(n) or CV_64FC(n), where n is a positive integer.
@@ -2643,7 +2647,7 @@ viewed by a still camera and for the further foreground-background segmentation.
 CV_EXPORTS_W void accumulate( InputArray src, InputOutputArray dst,
                               InputArray mask = noArray() );
 
-/** @brief Adds the square of a source image to the accumulator.
+/** @brief Adds the square of a source image to the accumulator image.
 
 The function adds the input image src or its selected region, raised to a power of 2, to the
 accumulator dst :
@@ -2662,7 +2666,7 @@ floating-point.
 CV_EXPORTS_W void accumulateSquare( InputArray src, InputOutputArray dst,
                                     InputArray mask = noArray() );
 
-/** @brief Adds the per-element product of two input images to the accumulator.
+/** @brief Adds the per-element product of two input images to the accumulator image.
 
 The function adds the product of two images or their selected regions to the accumulator dst :
 
@@ -2672,7 +2676,7 @@ The function supports multi-channel images. Each channel is processed independen
 
 @param src1 First input image, 1- or 3-channel, 8-bit or 32-bit floating point.
 @param src2 Second input image of the same type and the same size as src1 .
-@param dst %Accumulator with the same number of channels as input images, 32-bit or 64-bit
+@param dst %Accumulator image with the same number of channels as input images, 32-bit or 64-bit
 floating-point.
 @param mask Optional operation mask.
 
@@ -2805,7 +2809,8 @@ The function can process the image in-place.
 @param src Source 8-bit single-channel image.
 @param dst Destination image of the same size and the same type as src.
 @param maxValue Non-zero value assigned to the pixels for which the condition is satisfied
-@param adaptiveMethod Adaptive thresholding algorithm to use, see cv::AdaptiveThresholdTypes
+@param adaptiveMethod Adaptive thresholding algorithm to use, see cv::AdaptiveThresholdTypes.
+The BORDER_REPLICATE | BORDER_ISOLATED is used to process boundaries.
 @param thresholdType Thresholding type that must be either THRESH_BINARY or THRESH_BINARY_INV,
 see cv::ThresholdTypes.
 @param blockSize Size of a pixel neighborhood that is used to calculate a threshold value for the
@@ -4212,7 +4217,7 @@ intersecting region and the red vertices are returned by the function.
 
 @param rect1 First rectangle
 @param rect2 Second rectangle
-@param intersectingRegion The output array of the verticies of the intersecting region. It returns
+@param intersectingRegion The output array of the vertices of the intersecting region. It returns
 at most 8 vertices. Stored as std::vector\<cv::Point2f\> or cv::Mat as Mx1 of type CV_32FC2.
 @returns One of cv::RectanglesIntersectTypes
  */
@@ -4584,6 +4589,11 @@ draws the contours, all the nested contours, all the nested-to-nested contours, 
 parameter is only taken into account when there is hierarchy available.
 @param offset Optional contour shift parameter. Shift all the drawn contours by the specified
 \f$\texttt{offset}=(dx,dy)\f$ .
+@note When thickness=CV_FILLED, the function is designed to handle connected components with holes correctly
+even when no hierarchy date is provided. This is done by analyzing all the outlines together
+using even-odd rule. This may give incorrect results if you have a joint collection of separately retrieved
+contours. In order to solve this problem, you need to call drawContours separately for each sub-group
+of contours, or iterate over the collection using contourIdx parameter.
  */
 CV_EXPORTS_W void drawContours( InputOutputArray image, InputArrayOfArrays contours,
                               int contourIdx, const Scalar& color,

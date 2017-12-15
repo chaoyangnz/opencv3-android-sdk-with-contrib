@@ -8,6 +8,7 @@ package org.opencv.video;
 
 // C++: class BackgroundSubtractorKNN
 //javadoc: BackgroundSubtractorKNN
+
 public class BackgroundSubtractorKNN extends BackgroundSubtractor {
 
     protected BackgroundSubtractorKNN(long addr) { super(addr); }

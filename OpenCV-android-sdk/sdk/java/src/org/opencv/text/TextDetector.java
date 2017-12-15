@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class TextDetector
 //javadoc: TextDetector
+
 public class TextDetector {
 
     protected final long nativeObj;

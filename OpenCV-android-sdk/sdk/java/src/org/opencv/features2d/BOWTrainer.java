@@ -11,6 +11,7 @@ import org.opencv.utils.Converters;
 
 // C++: class BOWTrainer
 //javadoc: BOWTrainer
+
 public class BOWTrainer {
 
     protected final long nativeObj;

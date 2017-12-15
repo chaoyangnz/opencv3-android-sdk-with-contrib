@@ -8,6 +8,7 @@ package org.opencv.core;
 
 // C++: class TickMeter
 //javadoc: TickMeter
+
 public class TickMeter {
 
     protected final long nativeObj;

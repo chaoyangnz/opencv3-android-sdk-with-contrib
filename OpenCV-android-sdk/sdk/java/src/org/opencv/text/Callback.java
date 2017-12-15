@@ -8,6 +8,7 @@ package org.opencv.text;
 
 // C++: class Callback
 //javadoc: Callback
+
 public class Callback {
 
     protected final long nativeObj;

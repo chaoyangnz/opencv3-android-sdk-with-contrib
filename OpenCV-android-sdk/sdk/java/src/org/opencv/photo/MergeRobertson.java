@@ -11,6 +11,7 @@ import org.opencv.utils.Converters;
 
 // C++: class MergeRobertson
 //javadoc: MergeRobertson
+
 public class MergeRobertson extends MergeExposures {
 
     protected MergeRobertson(long addr) { super(addr); }

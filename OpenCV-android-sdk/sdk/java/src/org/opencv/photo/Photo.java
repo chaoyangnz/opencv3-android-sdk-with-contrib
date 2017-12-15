@@ -11,6 +11,9 @@ import org.opencv.core.MatOfFloat;
 import org.opencv.core.Point;
 import org.opencv.utils.Converters;
 
+// C++: class Photo
+//javadoc: Photo
+
 public class Photo {
 
     private static final int

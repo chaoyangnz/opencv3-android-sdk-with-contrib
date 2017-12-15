@@ -8,6 +8,7 @@ import org.opencv.core.Algorithm;
 
 // C++: class BaseCascadeClassifier
 //javadoc: BaseCascadeClassifier
+
 public class BaseCascadeClassifier extends Algorithm {
 
     protected BaseCascadeClassifier(long addr) { super(addr); }

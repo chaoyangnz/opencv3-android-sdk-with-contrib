@@ -8,6 +8,7 @@ package org.opencv.photo;
 
 // C++: class CalibrateDebevec
 //javadoc: CalibrateDebevec
+
 public class CalibrateDebevec extends CalibrateCRF {
 
     protected CalibrateDebevec(long addr) { super(addr); }

@@ -8,6 +8,7 @@ package org.opencv.text;
 
 // C++: class ClassifierCallback
 //javadoc: ClassifierCallback
+
 public class ClassifierCallback {
 
     protected final long nativeObj;

@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class BoostDesc
 //javadoc: BoostDesc
+
 public class BoostDesc extends Feature2D {
 
     protected BoostDesc(long addr) { super(addr); }

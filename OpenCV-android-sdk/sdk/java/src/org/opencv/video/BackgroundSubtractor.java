@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class BackgroundSubtractor
 //javadoc: BackgroundSubtractor
+
 public class BackgroundSubtractor extends Algorithm {
 
     protected BackgroundSubtractor(long addr) { super(addr); }

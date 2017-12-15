@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class BOWImgDescriptorExtractor
 //javadoc: BOWImgDescriptorExtractor
+
 public class BOWImgDescriptorExtractor {
 
     protected final long nativeObj;

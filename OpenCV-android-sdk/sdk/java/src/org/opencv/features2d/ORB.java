@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class ORB
 //javadoc: ORB
+
 public class ORB extends Feature2D {
 
     protected ORB(long addr) { super(addr); }

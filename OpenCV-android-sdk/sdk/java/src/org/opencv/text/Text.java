@@ -12,6 +12,9 @@ import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfRect;
 import org.opencv.utils.Converters;
 
+// C++: class Text
+//javadoc: Text
+
 public class Text {
 
     public static final int

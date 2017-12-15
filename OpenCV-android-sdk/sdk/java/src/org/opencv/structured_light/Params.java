@@ -8,6 +8,7 @@ package org.opencv.structured_light;
 
 // C++: class Params
 //javadoc: Params
+
 public class Params {
 
     protected final long nativeObj;

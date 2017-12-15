@@ -8,6 +8,7 @@ package org.opencv.calib3d;
 
 // C++: class StereoSGBM
 //javadoc: StereoSGBM
+
 public class StereoSGBM extends StereoMatcher {
 
     protected StereoSGBM(long addr) { super(addr); }

@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class CalibrateCRF
 //javadoc: CalibrateCRF
+
 public class CalibrateCRF extends Algorithm {
 
     protected CalibrateCRF(long addr) { super(addr); }

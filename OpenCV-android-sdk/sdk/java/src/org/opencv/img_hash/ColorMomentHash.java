@@ -8,6 +8,7 @@ package org.opencv.img_hash;
 
 // C++: class ColorMomentHash
 //javadoc: ColorMomentHash
+
 public class ColorMomentHash extends ImgHashBase {
 
     protected ColorMomentHash(long addr) { super(addr); }

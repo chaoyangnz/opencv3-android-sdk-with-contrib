@@ -8,6 +8,7 @@ package org.opencv.photo;
 
 // C++: class TonemapMantiuk
 //javadoc: TonemapMantiuk
+
 public class TonemapMantiuk extends Tonemap {
 
     protected TonemapMantiuk(long addr) { super(addr); }

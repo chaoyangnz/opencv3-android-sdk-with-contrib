@@ -8,6 +8,7 @@ package org.opencv.features2d;
 
 // C++: class BFMatcher
 //javadoc: BFMatcher
+
 public class BFMatcher extends DescriptorMatcher {
 
     protected BFMatcher(long addr) { super(addr); }

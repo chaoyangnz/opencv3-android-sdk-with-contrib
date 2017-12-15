@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class OCRTesseract
 //javadoc: OCRTesseract
+
 public class OCRTesseract extends BaseOCR {
 
     protected OCRTesseract(long addr) { super(addr); }

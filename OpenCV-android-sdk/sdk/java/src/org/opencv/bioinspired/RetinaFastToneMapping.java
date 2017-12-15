@@ -10,6 +10,7 @@ import org.opencv.core.Size;
 
 // C++: class RetinaFastToneMapping
 //javadoc: RetinaFastToneMapping
+
 public class RetinaFastToneMapping extends Algorithm {
 
     protected RetinaFastToneMapping(long addr) { super(addr); }

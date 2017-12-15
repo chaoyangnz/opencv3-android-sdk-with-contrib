@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class VideoCapture
 //javadoc: VideoCapture
+
 public class VideoCapture {
 
     protected final long nativeObj;

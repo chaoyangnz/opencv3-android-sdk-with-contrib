@@ -14,6 +14,7 @@ import org.opencv.utils.Converters;
 
 // C++: class MSER
 //javadoc: MSER
+
 public class MSER extends Feature2D {
 
     protected MSER(long addr) { super(addr); }

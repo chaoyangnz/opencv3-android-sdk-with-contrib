@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class AlignExposures
 //javadoc: AlignExposures
+
 public class AlignExposures extends Algorithm {
 
     protected AlignExposures(long addr) { super(addr); }

@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class StarDetector
 //javadoc: StarDetector
+
 public class StarDetector extends Feature2D {
 
     protected StarDetector(long addr) { super(addr); }

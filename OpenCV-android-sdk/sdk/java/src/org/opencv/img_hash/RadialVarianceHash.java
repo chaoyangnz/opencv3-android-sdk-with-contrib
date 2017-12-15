@@ -8,6 +8,7 @@ package org.opencv.img_hash;
 
 // C++: class RadialVarianceHash
 //javadoc: RadialVarianceHash
+
 public class RadialVarianceHash extends ImgHashBase {
 
     protected RadialVarianceHash(long addr) { super(addr); }

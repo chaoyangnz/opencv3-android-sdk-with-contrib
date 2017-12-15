@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class OCRBeamSearchDecoder
 //javadoc: OCRBeamSearchDecoder
+
 public class OCRBeamSearchDecoder extends BaseOCR {
 
     protected OCRBeamSearchDecoder(long addr) { super(addr); }

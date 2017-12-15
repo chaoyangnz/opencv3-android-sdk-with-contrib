@@ -11,6 +11,7 @@ import org.opencv.core.Size;
 
 // C++: class TransientAreasSegmentationModule
 //javadoc: TransientAreasSegmentationModule
+
 public class TransientAreasSegmentationModule extends Algorithm {
 
     protected TransientAreasSegmentationModule(long addr) { super(addr); }

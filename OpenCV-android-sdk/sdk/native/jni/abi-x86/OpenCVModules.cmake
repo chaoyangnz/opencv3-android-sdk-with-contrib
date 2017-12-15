@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget libcpufeatures libtiff libjpeg libwebp libjasper libpng IlmImf tbb ippiw ittnotify libprotobuf opencv_core opencv_flann opencv_imgproc opencv_ml opencv_objdetect opencv_phase_unwrapping opencv_photo opencv_plot opencv_reg opencv_surface_matching opencv_video opencv_xphoto opencv_bgsegm opencv_dnn opencv_face opencv_fuzzy opencv_img_hash opencv_imgcodecs opencv_shape opencv_videoio opencv_xobjdetect opencv_highgui opencv_superres opencv_bioinspired opencv_dpm opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_rgbd opencv_stereo opencv_structured_light opencv_tracking opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_aruco opencv_java opencv_optflow opencv_stitching)
+foreach(_expectedTarget libcpufeatures libjpeg libtiff libwebp libjasper libpng IlmImf tbb ippiw ittnotify libprotobuf opencv_core opencv_flann opencv_imgproc opencv_ml opencv_objdetect opencv_phase_unwrapping opencv_photo opencv_plot opencv_reg opencv_surface_matching opencv_video opencv_xphoto opencv_dnn opencv_fuzzy opencv_img_hash opencv_imgcodecs opencv_shape opencv_videoio opencv_xobjdetect opencv_highgui opencv_superres opencv_bioinspired opencv_dpm opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_rgbd opencv_stereo opencv_structured_light opencv_tracking opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_aruco opencv_bgsegm opencv_face opencv_java opencv_optflow opencv_stitching)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -54,15 +54,15 @@ endif()
 # Create imported target libcpufeatures
 add_library(libcpufeatures STATIC IMPORTED)
 
+# Create imported target libjpeg
+add_library(libjpeg STATIC IMPORTED)
+
 # Create imported target libtiff
 add_library(libtiff STATIC IMPORTED)
 
 set_target_properties(libtiff PROPERTIES
   INTERFACE_LINK_LIBRARIES "z"
 )
-
-# Create imported target libjpeg
-add_library(libjpeg STATIC IMPORTED)
 
 # Create imported target libwebp
 add_library(libwebp STATIC IMPORTED)
@@ -193,25 +193,11 @@ set_target_properties(opencv_xphoto PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>"
 )
 
-# Create imported target opencv_bgsegm
-add_library(opencv_bgsegm STATIC IMPORTED)
-
-set_target_properties(opencv_bgsegm PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_video;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>"
-)
-
 # Create imported target opencv_dnn
 add_library(opencv_dnn STATIC IMPORTED)
 
 set_target_properties(opencv_dnn PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>;\$<LINK_ONLY:libprotobuf>"
-)
-
-# Create imported target opencv_face
-add_library(opencv_face STATIC IMPORTED)
-
-set_target_properties(opencv_face PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_objdetect;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>"
 )
 
 # Create imported target opencv_fuzzy
@@ -387,6 +373,20 @@ add_library(opencv_aruco STATIC IMPORTED)
 
 set_target_properties(opencv_aruco PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>"
+)
+
+# Create imported target opencv_bgsegm
+add_library(opencv_bgsegm STATIC IMPORTED)
+
+set_target_properties(opencv_bgsegm PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_video;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>"
+)
+
+# Create imported target opencv_face
+add_library(opencv_face STATIC IMPORTED)
+
+set_target_properties(opencv_face PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_plot;opencv_video;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_datasets;opencv_tracking;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tbb>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>"
 )
 
 # Create imported target opencv_java

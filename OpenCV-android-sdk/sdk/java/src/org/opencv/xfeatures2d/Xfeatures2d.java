@@ -6,6 +6,9 @@ package org.opencv.xfeatures2d;
 
 
 
+// C++: class Xfeatures2d
+//javadoc: Xfeatures2d
+
 public class Xfeatures2d {
 
 

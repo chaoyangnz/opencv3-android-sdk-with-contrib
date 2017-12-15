@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class SIFT
 //javadoc: SIFT
+
 public class SIFT extends Feature2D {
 
     protected SIFT(long addr) { super(addr); }

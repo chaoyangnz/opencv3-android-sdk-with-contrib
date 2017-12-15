@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class BriefDescriptorExtractor
 //javadoc: BriefDescriptorExtractor
+
 public class BriefDescriptorExtractor extends Feature2D {
 
     protected BriefDescriptorExtractor(long addr) { super(addr); }

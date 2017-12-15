@@ -14,6 +14,7 @@ import org.opencv.utils.Converters;
 
 // C++: class BRISK
 //javadoc: BRISK
+
 public class BRISK extends Feature2D {
 
     protected BRISK(long addr) { super(addr); }

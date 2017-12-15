@@ -6,6 +6,9 @@ package org.opencv.tracking;
 
 
 
+// C++: class Tracking
+//javadoc: Tracking
+
 public class Tracking {
 
 

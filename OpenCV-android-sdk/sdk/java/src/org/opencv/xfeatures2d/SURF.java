@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class SURF
 //javadoc: SURF
+
 public class SURF extends Feature2D {
 
     protected SURF(long addr) { super(addr); }

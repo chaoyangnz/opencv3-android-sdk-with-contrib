@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class EM
 //javadoc: EM
+
 public class EM extends StatModel {
 
     protected EM(long addr) { super(addr); }

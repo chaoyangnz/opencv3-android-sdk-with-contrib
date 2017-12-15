@@ -15,6 +15,9 @@ import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.utils.Converters;
 
+// C++: class Dnn
+//javadoc: Dnn
+
 public class Dnn {
 
     public static final int
@@ -190,6 +193,7 @@ public class Dnn {
     //
 
     //javadoc: createCaffeImporter(prototxt, caffeModel)
+    @Deprecated
     public static Importer createCaffeImporter(String prototxt, String caffeModel)
     {
         
@@ -199,6 +203,7 @@ public class Dnn {
     }
 
     //javadoc: createCaffeImporter(prototxt)
+    @Deprecated
     public static Importer createCaffeImporter(String prototxt)
     {
         
@@ -213,6 +218,7 @@ public class Dnn {
     //
 
     //javadoc: createTensorflowImporter(model)
+    @Deprecated
     public static Importer createTensorflowImporter(String model)
     {
         
@@ -227,6 +233,7 @@ public class Dnn {
     //
 
     //javadoc: createTorchImporter(filename, isBinary)
+    @Deprecated
     public static Importer createTorchImporter(String filename, boolean isBinary)
     {
         
@@ -236,6 +243,7 @@ public class Dnn {
     }
 
     //javadoc: createTorchImporter(filename)
+    @Deprecated
     public static Importer createTorchImporter(String filename)
     {
         

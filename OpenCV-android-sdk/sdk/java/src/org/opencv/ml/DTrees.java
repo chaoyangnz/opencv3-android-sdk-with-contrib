@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class DTrees
 //javadoc: DTrees
+
 public class DTrees extends StatModel {
 
     protected DTrees(long addr) { super(addr); }

@@ -8,6 +8,7 @@ import org.opencv.core.Algorithm;
 
 // C++: class Importer
 //javadoc: Importer
+@Deprecated
 public class Importer extends Algorithm {
 
     protected Importer(long addr) { super(addr); }

@@ -10,6 +10,7 @@ import org.opencv.core.TermCriteria;
 
 // C++: class ANN_MLP
 //javadoc: ANN_MLP
+
 public class ANN_MLP extends StatModel {
 
     protected ANN_MLP(long addr) { super(addr); }
@@ -21,6 +22,8 @@ public class ANN_MLP extends StatModel {
             IDENTITY = 0,
             SIGMOID_SYM = 1,
             GAUSSIAN = 2,
+            RELU = 3,
+            LEAKYRELU = 4,
             UPDATE_WEIGHTS = 1,
             NO_INPUT_SCALE = 2,
             NO_OUTPUT_SCALE = 4;

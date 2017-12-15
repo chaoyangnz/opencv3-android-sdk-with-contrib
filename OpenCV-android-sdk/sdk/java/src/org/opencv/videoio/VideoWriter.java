@@ -10,6 +10,7 @@ import org.opencv.core.Size;
 
 // C++: class VideoWriter
 //javadoc: VideoWriter
+
 public class VideoWriter {
 
     protected final long nativeObj;

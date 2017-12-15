@@ -9,6 +9,7 @@ import org.opencv.core.TermCriteria;
 
 // C++: class BOWKMeansTrainer
 //javadoc: BOWKMeansTrainer
+
 public class BOWKMeansTrainer extends BOWTrainer {
 
     protected BOWKMeansTrainer(long addr) { super(addr); }

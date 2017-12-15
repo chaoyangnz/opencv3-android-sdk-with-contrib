@@ -6,6 +6,9 @@ package org.opencv.img_hash;
 
 import org.opencv.core.Mat;
 
+// C++: class Img_hash
+//javadoc: Img_hash
+
 public class Img_hash {
 
     public static final int

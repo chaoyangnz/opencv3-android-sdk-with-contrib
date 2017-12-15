@@ -8,6 +8,7 @@ package org.opencv.ml;
 
 // C++: class ParamGrid
 //javadoc: ParamGrid
+
 public class ParamGrid {
 
     protected final long nativeObj;

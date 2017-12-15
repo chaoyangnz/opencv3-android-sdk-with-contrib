@@ -8,6 +8,7 @@ import org.opencv.core.Mat;
 
 // C++: class CalibrateRobertson
 //javadoc: CalibrateRobertson
+
 public class CalibrateRobertson extends CalibrateCRF {
 
     protected CalibrateRobertson(long addr) { super(addr); }

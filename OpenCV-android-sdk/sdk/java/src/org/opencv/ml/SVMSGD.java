@@ -10,6 +10,7 @@ import org.opencv.core.TermCriteria;
 
 // C++: class SVMSGD
 //javadoc: SVMSGD
+
 public class SVMSGD extends StatModel {
 
     protected SVMSGD(long addr) { super(addr); }

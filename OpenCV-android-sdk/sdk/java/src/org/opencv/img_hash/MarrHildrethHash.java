@@ -8,6 +8,7 @@ package org.opencv.img_hash;
 
 // C++: class MarrHildrethHash
 //javadoc: MarrHildrethHash
+
 public class MarrHildrethHash extends ImgHashBase {
 
     protected MarrHildrethHash(long addr) { super(addr); }

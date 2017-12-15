@@ -11,6 +11,7 @@ import org.opencv.utils.Converters;
 
 // C++: class MergeDebevec
 //javadoc: MergeDebevec
+
 public class MergeDebevec extends MergeExposures {
 
     protected MergeDebevec(long addr) { super(addr); }

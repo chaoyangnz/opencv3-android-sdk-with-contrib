@@ -8,6 +8,7 @@ package org.opencv.tracking;
 
 // C++: class TrackerMOSSE
 //javadoc: TrackerMOSSE
+
 public class TrackerMOSSE extends Tracker {
 
     protected TrackerMOSSE(long addr) { super(addr); }

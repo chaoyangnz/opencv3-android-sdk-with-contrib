@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class SinusoidalPattern
 //javadoc: SinusoidalPattern
+
 public class SinusoidalPattern extends StructuredLightPattern {
 
     protected SinusoidalPattern(long addr) { super(addr); }

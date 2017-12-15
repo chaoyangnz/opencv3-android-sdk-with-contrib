@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class HarrisLaplaceFeatureDetector
 //javadoc: HarrisLaplaceFeatureDetector
+
 public class HarrisLaplaceFeatureDetector extends Feature2D {
 
     protected HarrisLaplaceFeatureDetector(long addr) { super(addr); }

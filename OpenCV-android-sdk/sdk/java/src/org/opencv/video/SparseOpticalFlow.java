@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class SparseOpticalFlow
 //javadoc: SparseOpticalFlow
+
 public class SparseOpticalFlow extends Algorithm {
 
     protected SparseOpticalFlow(long addr) { super(addr); }

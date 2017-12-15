@@ -8,6 +8,7 @@ import org.opencv.features2d.Feature2D;
 
 // C++: class LUCID
 //javadoc: LUCID
+
 public class LUCID extends Feature2D {
 
     protected LUCID(long addr) { super(addr); }

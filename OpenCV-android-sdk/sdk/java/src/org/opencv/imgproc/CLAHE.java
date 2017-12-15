@@ -10,6 +10,7 @@ import org.opencv.core.Size;
 
 // C++: class CLAHE
 //javadoc: CLAHE
+
 public class CLAHE extends Algorithm {
 
     protected CLAHE(long addr) { super(addr); }

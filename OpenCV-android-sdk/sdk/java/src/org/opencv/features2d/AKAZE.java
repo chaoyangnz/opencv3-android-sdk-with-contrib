@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class AKAZE
 //javadoc: AKAZE
+
 public class AKAZE extends Feature2D {
 
     protected AKAZE(long addr) { super(addr); }

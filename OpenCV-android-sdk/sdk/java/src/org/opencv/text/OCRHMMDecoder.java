@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class OCRHMMDecoder
 //javadoc: OCRHMMDecoder
+
 public class OCRHMMDecoder extends BaseOCR {
 
     protected OCRHMMDecoder(long addr) { super(addr); }

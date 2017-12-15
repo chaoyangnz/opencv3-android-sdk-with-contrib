@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class VGG
 //javadoc: VGG
+
 public class VGG extends Feature2D {
 
     protected VGG(long addr) { super(addr); }

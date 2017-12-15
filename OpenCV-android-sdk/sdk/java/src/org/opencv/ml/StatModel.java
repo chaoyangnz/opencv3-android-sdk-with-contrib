@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class StatModel
 //javadoc: StatModel
+
 public class StatModel extends Algorithm {
 
     protected StatModel(long addr) { super(addr); }

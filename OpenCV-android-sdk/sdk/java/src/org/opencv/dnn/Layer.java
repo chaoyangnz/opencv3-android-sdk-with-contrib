@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class Layer
 //javadoc: Layer
+
 public class Layer extends Algorithm {
 
     protected Layer(long addr) { super(addr); }
@@ -45,25 +46,6 @@ public class Layer extends Algorithm {
         finalize_1(nativeObj, inputs_mat.nativeObj, outputs_mat.nativeObj);
         Converters.Mat_to_vector_Mat(outputs_mat, outputs);
         outputs_mat.release();
-        return;
-    }
-
-
-    //
-    // C++:  void forward(vector_Mat inputs, vector_Mat& outputs, vector_Mat& internals)
-    //
-
-    //javadoc: Layer::forward(inputs, outputs, internals)
-    public  void forward(List<Mat> inputs, List<Mat> outputs, List<Mat> internals)
-    {
-        Mat inputs_mat = Converters.vector_Mat_to_Mat(inputs);
-        Mat outputs_mat = Converters.vector_Mat_to_Mat(outputs);
-        Mat internals_mat = Converters.vector_Mat_to_Mat(internals);
-        forward_0(nativeObj, inputs_mat.nativeObj, outputs_mat.nativeObj, internals_mat.nativeObj);
-        Converters.Mat_to_vector_Mat(outputs_mat, outputs);
-        outputs_mat.release();
-        Converters.Mat_to_vector_Mat(internals_mat, internals);
-        internals_mat.release();
         return;
     }
 
@@ -169,9 +151,6 @@ public class Layer extends Algorithm {
 
     // C++:  void finalize(vector_Mat inputs, vector_Mat& outputs)
     private static native void finalize_1(long nativeObj, long inputs_mat_nativeObj, long outputs_mat_nativeObj);
-
-    // C++:  void forward(vector_Mat inputs, vector_Mat& outputs, vector_Mat& internals)
-    private static native void forward_0(long nativeObj, long inputs_mat_nativeObj, long outputs_mat_nativeObj, long internals_mat_nativeObj);
 
     // C++:  void run(vector_Mat inputs, vector_Mat& outputs, vector_Mat& internals)
     private static native void run_0(long nativeObj, long inputs_mat_nativeObj, long outputs_mat_nativeObj, long internals_mat_nativeObj);

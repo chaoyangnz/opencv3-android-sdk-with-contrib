@@ -8,6 +8,7 @@ package org.opencv.tracking;
 
 // C++: class TrackerMIL
 //javadoc: TrackerMIL
+
 public class TrackerMIL extends Tracker {
 
     protected TrackerMIL(long addr) { super(addr); }

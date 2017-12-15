@@ -8,6 +8,7 @@ import org.opencv.core.Algorithm;
 
 // C++: class ERFilter
 //javadoc: ERFilter
+
 public class ERFilter extends Algorithm {
 
     protected ERFilter(long addr) { super(addr); }

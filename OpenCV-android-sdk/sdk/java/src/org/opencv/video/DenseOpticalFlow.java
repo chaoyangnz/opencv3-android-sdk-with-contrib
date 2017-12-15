@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class DenseOpticalFlow
 //javadoc: DenseOpticalFlow
+
 public class DenseOpticalFlow extends Algorithm {
 
     protected DenseOpticalFlow(long addr) { super(addr); }

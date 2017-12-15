@@ -14,6 +14,7 @@ import org.opencv.utils.Converters;
 
 // C++: class DescriptorMatcher
 //javadoc: DescriptorMatcher
+
 public class DescriptorMatcher extends Algorithm {
 
     protected DescriptorMatcher(long addr) { super(addr); }
@@ -299,6 +300,13 @@ public class DescriptorMatcher extends Algorithm {
 
 
     //
+    // C++:  void read(FileNode arg1)
+    //
+
+    // Unknown type 'FileNode' (I), skipping the function
+
+
+    //
     // C++:  void read(String fileName)
     //
 
@@ -324,6 +332,13 @@ public class DescriptorMatcher extends Algorithm {
         
         return;
     }
+
+
+    //
+    // C++:  void write(Ptr_FileStorage fs, String name = String())
+    //
+
+    // Unknown type 'Ptr_FileStorage' (I), skipping the function
 
 
     //

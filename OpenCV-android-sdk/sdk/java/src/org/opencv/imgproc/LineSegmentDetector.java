@@ -10,6 +10,7 @@ import org.opencv.core.Size;
 
 // C++: class LineSegmentDetector
 //javadoc: LineSegmentDetector
+
 public class LineSegmentDetector extends Algorithm {
 
     protected LineSegmentDetector(long addr) { super(addr); }

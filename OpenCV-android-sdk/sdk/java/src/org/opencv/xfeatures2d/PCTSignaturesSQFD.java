@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class PCTSignaturesSQFD
 //javadoc: PCTSignaturesSQFD
+
 public class PCTSignaturesSQFD extends Algorithm {
 
     protected PCTSignaturesSQFD(long addr) { super(addr); }

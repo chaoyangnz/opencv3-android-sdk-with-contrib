@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class GrayCodePattern
 //javadoc: GrayCodePattern
+
 public class GrayCodePattern extends StructuredLightPattern {
 
     protected GrayCodePattern(long addr) { super(addr); }

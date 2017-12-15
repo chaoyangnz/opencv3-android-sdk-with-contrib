@@ -8,6 +8,7 @@ import org.opencv.core.Mat;
 
 // C++: class KalmanFilter
 //javadoc: KalmanFilter
+
 public class KalmanFilter {
 
     protected final long nativeObj;

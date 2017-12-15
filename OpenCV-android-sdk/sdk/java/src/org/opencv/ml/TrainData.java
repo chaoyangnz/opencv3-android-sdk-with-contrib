@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class TrainData
 //javadoc: TrainData
+
 public class TrainData {
 
     protected final long nativeObj;

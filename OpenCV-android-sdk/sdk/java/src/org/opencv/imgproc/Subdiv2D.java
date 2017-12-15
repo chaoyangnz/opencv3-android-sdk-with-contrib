@@ -17,6 +17,7 @@ import org.opencv.utils.Converters;
 
 // C++: class Subdiv2D
 //javadoc: Subdiv2D
+
 public class Subdiv2D {
 
     protected final long nativeObj;

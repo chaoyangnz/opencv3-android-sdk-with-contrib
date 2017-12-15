@@ -8,6 +8,7 @@ package org.opencv.photo;
 
 // C++: class TonemapDurand
 //javadoc: TonemapDurand
+
 public class TonemapDurand extends Tonemap {
 
     protected TonemapDurand(long addr) { super(addr); }

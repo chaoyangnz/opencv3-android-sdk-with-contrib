@@ -14,6 +14,7 @@ import org.opencv.utils.Converters;
 
 // C++: class MultiTracker
 //javadoc: MultiTracker
+
 public class MultiTracker extends Algorithm {
 
     protected MultiTracker(long addr) { super(addr); }

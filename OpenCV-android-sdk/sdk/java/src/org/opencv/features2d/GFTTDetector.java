@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class GFTTDetector
 //javadoc: GFTTDetector
+
 public class GFTTDetector extends Feature2D {
 
     protected GFTTDetector(long addr) { super(addr); }

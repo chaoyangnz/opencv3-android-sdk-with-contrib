@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class StereoMatcher
 //javadoc: StereoMatcher
+
 public class StereoMatcher extends Algorithm {
 
     protected StereoMatcher(long addr) { super(addr); }

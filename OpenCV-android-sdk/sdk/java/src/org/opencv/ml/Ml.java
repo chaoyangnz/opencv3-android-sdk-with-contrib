@@ -6,6 +6,9 @@ package org.opencv.ml;
 
 
 
+// C++: class Ml
+//javadoc: Ml
+
 public class Ml {
 
     public static final int

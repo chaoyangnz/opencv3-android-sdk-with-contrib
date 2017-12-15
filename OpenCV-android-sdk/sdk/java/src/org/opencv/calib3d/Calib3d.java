@@ -16,6 +16,9 @@ import org.opencv.core.Size;
 import org.opencv.core.TermCriteria;
 import org.opencv.utils.Converters;
 
+// C++: class Calib3d
+//javadoc: Calib3d
+
 public class Calib3d {
 
     public static final int

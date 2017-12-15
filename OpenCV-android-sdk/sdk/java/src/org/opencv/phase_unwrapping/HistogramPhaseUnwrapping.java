@@ -8,6 +8,7 @@ import org.opencv.core.Mat;
 
 // C++: class HistogramPhaseUnwrapping
 //javadoc: HistogramPhaseUnwrapping
+
 public class HistogramPhaseUnwrapping extends PhaseUnwrapping {
 
     protected HistogramPhaseUnwrapping(long addr) { super(addr); }

@@ -8,6 +8,7 @@ package org.opencv.img_hash;
 
 // C++: class PHash
 //javadoc: PHash
+
 public class PHash extends ImgHashBase {
 
     protected PHash(long addr) { super(addr); }

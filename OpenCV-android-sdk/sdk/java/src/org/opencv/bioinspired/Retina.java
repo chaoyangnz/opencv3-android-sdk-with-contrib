@@ -11,6 +11,7 @@ import org.opencv.core.Size;
 
 // C++: class Retina
 //javadoc: Retina
+
 public class Retina extends Algorithm {
 
     protected Retina(long addr) { super(addr); }

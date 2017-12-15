@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class MergeExposures
 //javadoc: MergeExposures
+
 public class MergeExposures extends Algorithm {
 
     protected MergeExposures(long addr) { super(addr); }

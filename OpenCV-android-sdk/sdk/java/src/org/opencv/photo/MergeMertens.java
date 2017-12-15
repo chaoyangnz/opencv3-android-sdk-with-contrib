@@ -11,6 +11,7 @@ import org.opencv.utils.Converters;
 
 // C++: class MergeMertens
 //javadoc: MergeMertens
+
 public class MergeMertens extends MergeExposures {
 
     protected MergeMertens(long addr) { super(addr); }

@@ -8,6 +8,7 @@ import org.opencv.core.Mat;
 
 // C++: class Dictionary
 //javadoc: Dictionary
+
 public class Dictionary {
 
     protected final long nativeObj;

@@ -13,6 +13,7 @@ import org.opencv.utils.Converters;
 
 // C++: class FREAK
 //javadoc: FREAK
+
 public class FREAK extends Feature2D {
 
     protected FREAK(long addr) { super(addr); }

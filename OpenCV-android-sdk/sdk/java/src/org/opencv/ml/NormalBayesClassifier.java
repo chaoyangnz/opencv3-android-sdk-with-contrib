@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class NormalBayesClassifier
 //javadoc: NormalBayesClassifier
+
 public class NormalBayesClassifier extends StatModel {
 
     protected NormalBayesClassifier(long addr) { super(addr); }

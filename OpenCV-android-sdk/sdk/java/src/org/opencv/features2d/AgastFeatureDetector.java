@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class AgastFeatureDetector
 //javadoc: AgastFeatureDetector
+
 public class AgastFeatureDetector extends Feature2D {
 
     protected AgastFeatureDetector(long addr) { super(addr); }

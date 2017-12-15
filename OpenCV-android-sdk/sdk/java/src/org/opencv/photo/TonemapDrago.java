@@ -8,6 +8,7 @@ package org.opencv.photo;
 
 // C++: class TonemapDrago
 //javadoc: TonemapDrago
+
 public class TonemapDrago extends Tonemap {
 
     protected TonemapDrago(long addr) { super(addr); }

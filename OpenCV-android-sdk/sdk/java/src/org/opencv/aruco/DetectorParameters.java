@@ -8,6 +8,7 @@ package org.opencv.aruco;
 
 // C++: class DetectorParameters
 //javadoc: DetectorParameters
+
 public class DetectorParameters {
 
     protected final long nativeObj;

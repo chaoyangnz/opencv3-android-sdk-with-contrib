@@ -13,6 +13,9 @@ import org.opencv.core.MatOfKeyPoint;
 import org.opencv.core.Scalar;
 import org.opencv.utils.Converters;
 
+// C++: class Features2d
+//javadoc: Features2d
+
 public class Features2d {
 
     public static final int

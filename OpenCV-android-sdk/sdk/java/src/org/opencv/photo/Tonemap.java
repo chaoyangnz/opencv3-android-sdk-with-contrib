@@ -9,6 +9,7 @@ import org.opencv.core.Mat;
 
 // C++: class Tonemap
 //javadoc: Tonemap
+
 public class Tonemap extends Algorithm {
 
     protected Tonemap(long addr) { super(addr); }

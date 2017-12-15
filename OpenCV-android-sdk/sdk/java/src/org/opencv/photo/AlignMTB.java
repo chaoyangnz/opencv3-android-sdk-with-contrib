@@ -12,6 +12,7 @@ import org.opencv.utils.Converters;
 
 // C++: class AlignMTB
 //javadoc: AlignMTB
+
 public class AlignMTB extends AlignExposures {
 
     protected AlignMTB(long addr) { super(addr); }

@@ -8,6 +8,7 @@ import java.lang.String;
 
 // C++: class KAZE
 //javadoc: KAZE
+
 public class KAZE extends Feature2D {
 
     protected KAZE(long addr) { super(addr); }
