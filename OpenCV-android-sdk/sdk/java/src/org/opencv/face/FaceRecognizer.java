@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,7 @@ import java.util.List;
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfInt;
+import org.opencv.face.PredictCollector;
 import org.opencv.utils.Converters;
 
 // C++: class FaceRecognizer
@@ -19,6 +19,8 @@ public class FaceRecognizer extends Algorithm {
 
     protected FaceRecognizer(long addr) { super(addr); }
 
+    // internal usage only
+    public static FaceRecognizer __fromPtr__(long addr) { return new FaceRecognizer(addr); }
 
     //
     // C++:  String getLabelInfo(int label)

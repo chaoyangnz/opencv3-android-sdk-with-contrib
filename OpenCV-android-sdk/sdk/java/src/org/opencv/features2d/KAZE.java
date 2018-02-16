@@ -1,10 +1,11 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.features2d;
 
 import java.lang.String;
+import org.opencv.features2d.Feature2D;
+import org.opencv.features2d.KAZE;
 
 // C++: class KAZE
 //javadoc: KAZE
@@ -13,6 +14,8 @@ public class KAZE extends Feature2D {
 
     protected KAZE(long addr) { super(addr); }
 
+    // internal usage only
+    public static KAZE __fromPtr__(long addr) { return new KAZE(addr); }
 
     public static final int
             DIFF_PM_G1 = 0,
@@ -29,7 +32,7 @@ public class KAZE extends Feature2D {
     public static KAZE create(boolean extended, boolean upright, float threshold, int nOctaves, int nOctaveLayers, int diffusivity)
     {
         
-        KAZE retVal = new KAZE(create_0(extended, upright, threshold, nOctaves, nOctaveLayers, diffusivity));
+        KAZE retVal = KAZE.__fromPtr__(create_0(extended, upright, threshold, nOctaves, nOctaveLayers, diffusivity));
         
         return retVal;
     }
@@ -38,7 +41,7 @@ public class KAZE extends Feature2D {
     public static KAZE create()
     {
         
-        KAZE retVal = new KAZE(create_1());
+        KAZE retVal = KAZE.__fromPtr__(create_1());
         
         return retVal;
     }

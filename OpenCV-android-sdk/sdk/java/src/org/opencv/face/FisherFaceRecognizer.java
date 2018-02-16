@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.face;
 
-
+import org.opencv.face.BasicFaceRecognizer;
+import org.opencv.face.FisherFaceRecognizer;
 
 // C++: class FisherFaceRecognizer
 //javadoc: FisherFaceRecognizer
@@ -13,6 +13,8 @@ public class FisherFaceRecognizer extends BasicFaceRecognizer {
 
     protected FisherFaceRecognizer(long addr) { super(addr); }
 
+    // internal usage only
+    public static FisherFaceRecognizer __fromPtr__(long addr) { return new FisherFaceRecognizer(addr); }
 
     //
     // C++: static Ptr_FisherFaceRecognizer create(int num_components = 0, double threshold = DBL_MAX)
@@ -22,7 +24,7 @@ public class FisherFaceRecognizer extends BasicFaceRecognizer {
     public static FisherFaceRecognizer create(int num_components, double threshold)
     {
         
-        FisherFaceRecognizer retVal = new FisherFaceRecognizer(create_0(num_components, threshold));
+        FisherFaceRecognizer retVal = FisherFaceRecognizer.__fromPtr__(create_0(num_components, threshold));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class FisherFaceRecognizer extends BasicFaceRecognizer {
     public static FisherFaceRecognizer create()
     {
         
-        FisherFaceRecognizer retVal = new FisherFaceRecognizer(create_1());
+        FisherFaceRecognizer retVal = FisherFaceRecognizer.__fromPtr__(create_1());
         
         return retVal;
     }

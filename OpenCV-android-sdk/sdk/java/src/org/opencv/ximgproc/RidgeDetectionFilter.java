@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,7 @@ package org.opencv.ximgproc;
 
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
+import org.opencv.ximgproc.RidgeDetectionFilter;
 
 // C++: class RidgeDetectionFilter
 //javadoc: RidgeDetectionFilter
@@ -14,6 +14,8 @@ public class RidgeDetectionFilter extends Algorithm {
 
     protected RidgeDetectionFilter(long addr) { super(addr); }
 
+    // internal usage only
+    public static RidgeDetectionFilter __fromPtr__(long addr) { return new RidgeDetectionFilter(addr); }
 
     //
     // C++: static Ptr_RidgeDetectionFilter create(int ddepth = CV_32FC1, int dx = 1, int dy = 1, int ksize = 3, int out_dtype = CV_8UC1, double scale = 1, double delta = 0, int borderType = BORDER_DEFAULT)
@@ -23,7 +25,7 @@ public class RidgeDetectionFilter extends Algorithm {
     public static RidgeDetectionFilter create(int ddepth, int dx, int dy, int ksize, int out_dtype, double scale, double delta, int borderType)
     {
         
-        RidgeDetectionFilter retVal = new RidgeDetectionFilter(create_0(ddepth, dx, dy, ksize, out_dtype, scale, delta, borderType));
+        RidgeDetectionFilter retVal = RidgeDetectionFilter.__fromPtr__(create_0(ddepth, dx, dy, ksize, out_dtype, scale, delta, borderType));
         
         return retVal;
     }
@@ -32,7 +34,7 @@ public class RidgeDetectionFilter extends Algorithm {
     public static RidgeDetectionFilter create(int ddepth, int dx, int dy, int ksize, int out_dtype, double scale, double delta)
     {
         
-        RidgeDetectionFilter retVal = new RidgeDetectionFilter(create_1(ddepth, dx, dy, ksize, out_dtype, scale, delta));
+        RidgeDetectionFilter retVal = RidgeDetectionFilter.__fromPtr__(create_1(ddepth, dx, dy, ksize, out_dtype, scale, delta));
         
         return retVal;
     }
@@ -41,7 +43,7 @@ public class RidgeDetectionFilter extends Algorithm {
     public static RidgeDetectionFilter create()
     {
         
-        RidgeDetectionFilter retVal = new RidgeDetectionFilter(create_2());
+        RidgeDetectionFilter retVal = RidgeDetectionFilter.__fromPtr__(create_2());
         
         return retVal;
     }

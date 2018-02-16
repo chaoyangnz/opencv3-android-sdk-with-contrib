@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class ImgHashBase extends Algorithm {
 
     protected ImgHashBase(long addr) { super(addr); }
 
+    // internal usage only
+    public static ImgHashBase __fromPtr__(long addr) { return new ImgHashBase(addr); }
 
     //
     // C++:  double compare(Mat hashOne, Mat hashTwo)

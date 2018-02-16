@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xfeatures2d;
 
 import org.opencv.features2d.Feature2D;
+import org.opencv.xfeatures2d.LATCH;
 
 // C++: class LATCH
 //javadoc: LATCH
@@ -13,6 +13,8 @@ public class LATCH extends Feature2D {
 
     protected LATCH(long addr) { super(addr); }
 
+    // internal usage only
+    public static LATCH __fromPtr__(long addr) { return new LATCH(addr); }
 
     //
     // C++: static Ptr_LATCH create(int bytes = 32, bool rotationInvariance = true, int half_ssd_size = 3, double sigma = 2.0)
@@ -22,7 +24,7 @@ public class LATCH extends Feature2D {
     public static LATCH create(int bytes, boolean rotationInvariance, int half_ssd_size, double sigma)
     {
         
-        LATCH retVal = new LATCH(create_0(bytes, rotationInvariance, half_ssd_size, sigma));
+        LATCH retVal = LATCH.__fromPtr__(create_0(bytes, rotationInvariance, half_ssd_size, sigma));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class LATCH extends Feature2D {
     public static LATCH create()
     {
         
-        LATCH retVal = new LATCH(create_1());
+        LATCH retVal = LATCH.__fromPtr__(create_1());
         
         return retVal;
     }

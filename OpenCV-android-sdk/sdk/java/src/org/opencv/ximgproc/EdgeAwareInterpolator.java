@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.ximgproc;
 
-
+import org.opencv.ximgproc.SparseMatchInterpolator;
 
 // C++: class EdgeAwareInterpolator
 //javadoc: EdgeAwareInterpolator
@@ -13,6 +12,8 @@ public class EdgeAwareInterpolator extends SparseMatchInterpolator {
 
     protected EdgeAwareInterpolator(long addr) { super(addr); }
 
+    // internal usage only
+    public static EdgeAwareInterpolator __fromPtr__(long addr) { return new EdgeAwareInterpolator(addr); }
 
     //
     // C++:  bool getUsePostProcessing()

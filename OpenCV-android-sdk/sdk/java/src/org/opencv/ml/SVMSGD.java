@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,8 @@ package org.opencv.ml;
 import java.lang.String;
 import org.opencv.core.Mat;
 import org.opencv.core.TermCriteria;
+import org.opencv.ml.SVMSGD;
+import org.opencv.ml.StatModel;
 
 // C++: class SVMSGD
 //javadoc: SVMSGD
@@ -15,6 +16,8 @@ public class SVMSGD extends StatModel {
 
     protected SVMSGD(long addr) { super(addr); }
 
+    // internal usage only
+    public static SVMSGD __fromPtr__(long addr) { return new SVMSGD(addr); }
 
     public static final int
             SGD = 0,
@@ -45,7 +48,7 @@ public class SVMSGD extends StatModel {
     public static SVMSGD create()
     {
         
-        SVMSGD retVal = new SVMSGD(create_0());
+        SVMSGD retVal = SVMSGD.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -59,7 +62,7 @@ public class SVMSGD extends StatModel {
     public static SVMSGD load(String filepath, String nodeName)
     {
         
-        SVMSGD retVal = new SVMSGD(load_0(filepath, nodeName));
+        SVMSGD retVal = SVMSGD.__fromPtr__(load_0(filepath, nodeName));
         
         return retVal;
     }
@@ -68,7 +71,7 @@ public class SVMSGD extends StatModel {
     public static SVMSGD load(String filepath)
     {
         
-        SVMSGD retVal = new SVMSGD(load_1(filepath));
+        SVMSGD retVal = SVMSGD.__fromPtr__(load_1(filepath));
         
         return retVal;
     }

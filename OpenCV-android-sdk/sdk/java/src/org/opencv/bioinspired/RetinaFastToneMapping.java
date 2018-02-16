@@ -1,9 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.bioinspired;
 
+import org.opencv.bioinspired.RetinaFastToneMapping;
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
@@ -15,6 +15,8 @@ public class RetinaFastToneMapping extends Algorithm {
 
     protected RetinaFastToneMapping(long addr) { super(addr); }
 
+    // internal usage only
+    public static RetinaFastToneMapping __fromPtr__(long addr) { return new RetinaFastToneMapping(addr); }
 
     //
     // C++: static Ptr_RetinaFastToneMapping create(Size inputSize)
@@ -24,7 +26,7 @@ public class RetinaFastToneMapping extends Algorithm {
     public static RetinaFastToneMapping create(Size inputSize)
     {
         
-        RetinaFastToneMapping retVal = new RetinaFastToneMapping(create_0(inputSize.width, inputSize.height));
+        RetinaFastToneMapping retVal = RetinaFastToneMapping.__fromPtr__(create_0(inputSize.width, inputSize.height));
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,7 @@ package org.opencv.face;
 
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
+import org.opencv.face.BIF;
 
 // C++: class BIF
 //javadoc: BIF
@@ -14,6 +14,8 @@ public class BIF extends Algorithm {
 
     protected BIF(long addr) { super(addr); }
 
+    // internal usage only
+    public static BIF __fromPtr__(long addr) { return new BIF(addr); }
 
     //
     // C++: static Ptr_BIF create(int num_bands = 8, int num_rotations = 12)
@@ -23,7 +25,7 @@ public class BIF extends Algorithm {
     public static BIF create(int num_bands, int num_rotations)
     {
         
-        BIF retVal = new BIF(create_0(num_bands, num_rotations));
+        BIF retVal = BIF.__fromPtr__(create_0(num_bands, num_rotations));
         
         return retVal;
     }
@@ -32,7 +34,7 @@ public class BIF extends Algorithm {
     public static BIF create()
     {
         
-        BIF retVal = new BIF(create_1());
+        BIF retVal = BIF.__fromPtr__(create_1());
         
         return retVal;
     }

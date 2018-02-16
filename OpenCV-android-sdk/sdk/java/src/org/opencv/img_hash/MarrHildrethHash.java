@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.img_hash;
 
-
+import org.opencv.img_hash.ImgHashBase;
+import org.opencv.img_hash.MarrHildrethHash;
 
 // C++: class MarrHildrethHash
 //javadoc: MarrHildrethHash
@@ -13,6 +13,8 @@ public class MarrHildrethHash extends ImgHashBase {
 
     protected MarrHildrethHash(long addr) { super(addr); }
 
+    // internal usage only
+    public static MarrHildrethHash __fromPtr__(long addr) { return new MarrHildrethHash(addr); }
 
     //
     // C++: static Ptr_MarrHildrethHash create(float alpha = 2.0f, float scale = 1.0f)
@@ -22,7 +24,7 @@ public class MarrHildrethHash extends ImgHashBase {
     public static MarrHildrethHash create(float alpha, float scale)
     {
         
-        MarrHildrethHash retVal = new MarrHildrethHash(create_0(alpha, scale));
+        MarrHildrethHash retVal = MarrHildrethHash.__fromPtr__(create_0(alpha, scale));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class MarrHildrethHash extends ImgHashBase {
     public static MarrHildrethHash create()
     {
         
-        MarrHildrethHash retVal = new MarrHildrethHash(create_1());
+        MarrHildrethHash retVal = MarrHildrethHash.__fromPtr__(create_1());
         
         return retVal;
     }

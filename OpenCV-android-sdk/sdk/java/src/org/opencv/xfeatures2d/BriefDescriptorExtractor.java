@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xfeatures2d;
 
 import org.opencv.features2d.Feature2D;
+import org.opencv.xfeatures2d.BriefDescriptorExtractor;
 
 // C++: class BriefDescriptorExtractor
 //javadoc: BriefDescriptorExtractor
@@ -13,6 +13,8 @@ public class BriefDescriptorExtractor extends Feature2D {
 
     protected BriefDescriptorExtractor(long addr) { super(addr); }
 
+    // internal usage only
+    public static BriefDescriptorExtractor __fromPtr__(long addr) { return new BriefDescriptorExtractor(addr); }
 
     //
     // C++: static Ptr_BriefDescriptorExtractor create(int bytes = 32, bool use_orientation = false)
@@ -22,7 +24,7 @@ public class BriefDescriptorExtractor extends Feature2D {
     public static BriefDescriptorExtractor create(int bytes, boolean use_orientation)
     {
         
-        BriefDescriptorExtractor retVal = new BriefDescriptorExtractor(create_0(bytes, use_orientation));
+        BriefDescriptorExtractor retVal = BriefDescriptorExtractor.__fromPtr__(create_0(bytes, use_orientation));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class BriefDescriptorExtractor extends Feature2D {
     public static BriefDescriptorExtractor create()
     {
         
-        BriefDescriptorExtractor retVal = new BriefDescriptorExtractor(create_1());
+        BriefDescriptorExtractor retVal = BriefDescriptorExtractor.__fromPtr__(create_1());
         
         return retVal;
     }

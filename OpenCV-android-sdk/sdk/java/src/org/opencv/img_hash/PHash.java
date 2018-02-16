@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.img_hash;
 
-
+import org.opencv.img_hash.PHash;
 
 // C++: class PHash
 //javadoc: PHash
@@ -13,6 +12,8 @@ public class PHash extends ImgHashBase {
 
     protected PHash(long addr) { super(addr); }
 
+    // internal usage only
+    public static PHash __fromPtr__(long addr) { return new PHash(addr); }
 
     //
     // C++: static Ptr_PHash create()
@@ -22,7 +23,7 @@ public class PHash extends ImgHashBase {
     public static PHash create()
     {
         
-        PHash retVal = new PHash(create_0());
+        PHash retVal = PHash.__fromPtr__(create_0());
         
         return retVal;
     }

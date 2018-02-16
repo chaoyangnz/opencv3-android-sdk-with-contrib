@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,7 @@ package org.opencv.features2d;
 
 import org.opencv.core.Mat;
 import org.opencv.core.TermCriteria;
+import org.opencv.features2d.BOWTrainer;
 
 // C++: class BOWKMeansTrainer
 //javadoc: BOWKMeansTrainer
@@ -14,6 +14,8 @@ public class BOWKMeansTrainer extends BOWTrainer {
 
     protected BOWKMeansTrainer(long addr) { super(addr); }
 
+    // internal usage only
+    public static BOWKMeansTrainer __fromPtr__(long addr) { return new BOWKMeansTrainer(addr); }
 
     //
     // C++:   BOWKMeansTrainer(int clusterCount, TermCriteria termcrit = TermCriteria(), int attempts = 3, int flags = KMEANS_PP_CENTERS)

@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.video;
 
-
+import org.opencv.video.DenseOpticalFlow;
+import org.opencv.video.DualTVL1OpticalFlow;
 
 // C++: class DualTVL1OpticalFlow
 //javadoc: DualTVL1OpticalFlow
@@ -13,6 +13,8 @@ public class DualTVL1OpticalFlow extends DenseOpticalFlow {
 
     protected DualTVL1OpticalFlow(long addr) { super(addr); }
 
+    // internal usage only
+    public static DualTVL1OpticalFlow __fromPtr__(long addr) { return new DualTVL1OpticalFlow(addr); }
 
     //
     // C++: static Ptr_DualTVL1OpticalFlow create(double tau = 0.25, double lambda = 0.15, double theta = 0.3, int nscales = 5, int warps = 5, double epsilon = 0.01, int innnerIterations = 30, int outerIterations = 10, double scaleStep = 0.8, double gamma = 0.0, int medianFiltering = 5, bool useInitialFlow = false)
@@ -22,7 +24,7 @@ public class DualTVL1OpticalFlow extends DenseOpticalFlow {
     public static DualTVL1OpticalFlow create(double tau, double lambda, double theta, int nscales, int warps, double epsilon, int innnerIterations, int outerIterations, double scaleStep, double gamma, int medianFiltering, boolean useInitialFlow)
     {
         
-        DualTVL1OpticalFlow retVal = new DualTVL1OpticalFlow(create_0(tau, lambda, theta, nscales, warps, epsilon, innnerIterations, outerIterations, scaleStep, gamma, medianFiltering, useInitialFlow));
+        DualTVL1OpticalFlow retVal = DualTVL1OpticalFlow.__fromPtr__(create_0(tau, lambda, theta, nscales, warps, epsilon, innnerIterations, outerIterations, scaleStep, gamma, medianFiltering, useInitialFlow));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class DualTVL1OpticalFlow extends DenseOpticalFlow {
     public static DualTVL1OpticalFlow create()
     {
         
-        DualTVL1OpticalFlow retVal = new DualTVL1OpticalFlow(create_1());
+        DualTVL1OpticalFlow retVal = DualTVL1OpticalFlow.__fromPtr__(create_1());
         
         return retVal;
     }

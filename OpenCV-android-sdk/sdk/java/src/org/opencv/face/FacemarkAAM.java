@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.face;
 
-
+import org.opencv.face.Facemark;
 
 // C++: class FacemarkAAM
 //javadoc: FacemarkAAM
@@ -13,6 +12,8 @@ public class FacemarkAAM extends Facemark {
 
     protected FacemarkAAM(long addr) { super(addr); }
 
+    // internal usage only
+    public static FacemarkAAM __fromPtr__(long addr) { return new FacemarkAAM(addr); }
 
     @Override
     protected void finalize() throws Throwable {

@@ -1,10 +1,11 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.features2d;
 
 import java.lang.String;
+import org.opencv.features2d.FastFeatureDetector;
+import org.opencv.features2d.Feature2D;
 
 // C++: class FastFeatureDetector
 //javadoc: FastFeatureDetector
@@ -13,6 +14,8 @@ public class FastFeatureDetector extends Feature2D {
 
     protected FastFeatureDetector(long addr) { super(addr); }
 
+    // internal usage only
+    public static FastFeatureDetector __fromPtr__(long addr) { return new FastFeatureDetector(addr); }
 
     public static final int
             TYPE_5_8 = 0,
@@ -31,7 +34,7 @@ public class FastFeatureDetector extends Feature2D {
     public static FastFeatureDetector create(int threshold, boolean nonmaxSuppression, int type)
     {
         
-        FastFeatureDetector retVal = new FastFeatureDetector(create_0(threshold, nonmaxSuppression, type));
+        FastFeatureDetector retVal = FastFeatureDetector.__fromPtr__(create_0(threshold, nonmaxSuppression, type));
         
         return retVal;
     }
@@ -40,7 +43,7 @@ public class FastFeatureDetector extends Feature2D {
     public static FastFeatureDetector create()
     {
         
-        FastFeatureDetector retVal = new FastFeatureDetector(create_1());
+        FastFeatureDetector retVal = FastFeatureDetector.__fromPtr__(create_1());
         
         return retVal;
     }

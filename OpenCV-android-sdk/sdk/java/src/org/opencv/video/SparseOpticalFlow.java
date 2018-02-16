@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class SparseOpticalFlow extends Algorithm {
 
     protected SparseOpticalFlow(long addr) { super(addr); }
 
+    // internal usage only
+    public static SparseOpticalFlow __fromPtr__(long addr) { return new SparseOpticalFlow(addr); }
 
     //
     // C++:  void calc(Mat prevImg, Mat nextImg, Mat prevPts, Mat& nextPts, Mat& status, Mat& err = cv::Mat())

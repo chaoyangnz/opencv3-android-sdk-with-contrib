@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,7 @@ package org.opencv.plot;
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.Scalar;
+import org.opencv.plot.Plot2d;
 
 // C++: class Plot2d
 //javadoc: Plot2d
@@ -15,6 +15,8 @@ public class Plot2d extends Algorithm {
 
     protected Plot2d(long addr) { super(addr); }
 
+    // internal usage only
+    public static Plot2d __fromPtr__(long addr) { return new Plot2d(addr); }
 
     //
     // C++: static Ptr_Plot2d create(Mat data)
@@ -24,7 +26,7 @@ public class Plot2d extends Algorithm {
     public static Plot2d create(Mat data)
     {
         
-        Plot2d retVal = new Plot2d(create_0(data.nativeObj));
+        Plot2d retVal = Plot2d.__fromPtr__(create_0(data.nativeObj));
         
         return retVal;
     }
@@ -38,7 +40,7 @@ public class Plot2d extends Algorithm {
     public static Plot2d create(Mat dataX, Mat dataY)
     {
         
-        Plot2d retVal = new Plot2d(create_1(dataX.nativeObj, dataY.nativeObj));
+        Plot2d retVal = Plot2d.__fromPtr__(create_1(dataX.nativeObj, dataY.nativeObj));
         
         return retVal;
     }

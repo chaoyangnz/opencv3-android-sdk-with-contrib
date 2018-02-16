@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,10 @@ package org.opencv.aruco;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.opencv.aruco.Board;
+import org.opencv.aruco.CharucoBoard;
+import org.opencv.aruco.DetectorParameters;
+import org.opencv.aruco.Dictionary;
 import org.opencv.core.Mat;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
@@ -48,7 +51,7 @@ public class Aruco {
     public static Dictionary custom_dictionary_from(int nMarkers, int markerSize, Dictionary baseDictionary)
     {
         
-        Dictionary retVal = new Dictionary(custom_dictionary_from_0(nMarkers, markerSize, baseDictionary.getNativeObjAddr()));
+        Dictionary retVal = Dictionary.__fromPtr__(custom_dictionary_from_0(nMarkers, markerSize, baseDictionary.getNativeObjAddr()));
         
         return retVal;
     }
@@ -62,7 +65,7 @@ public class Aruco {
     public static Dictionary custom_dictionary(int nMarkers, int markerSize)
     {
         
-        Dictionary retVal = new Dictionary(custom_dictionary_0(nMarkers, markerSize));
+        Dictionary retVal = Dictionary.__fromPtr__(custom_dictionary_0(nMarkers, markerSize));
         
         return retVal;
     }
@@ -76,7 +79,7 @@ public class Aruco {
     public static Dictionary getPredefinedDictionary(int dict)
     {
         
-        Dictionary retVal = new Dictionary(getPredefinedDictionary_0(dict));
+        Dictionary retVal = Dictionary.__fromPtr__(getPredefinedDictionary_0(dict));
         
         return retVal;
     }

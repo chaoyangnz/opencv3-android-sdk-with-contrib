@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.video;
 
-
+import org.opencv.video.DenseOpticalFlow;
+import org.opencv.video.FarnebackOpticalFlow;
 
 // C++: class FarnebackOpticalFlow
 //javadoc: FarnebackOpticalFlow
@@ -13,6 +13,8 @@ public class FarnebackOpticalFlow extends DenseOpticalFlow {
 
     protected FarnebackOpticalFlow(long addr) { super(addr); }
 
+    // internal usage only
+    public static FarnebackOpticalFlow __fromPtr__(long addr) { return new FarnebackOpticalFlow(addr); }
 
     //
     // C++: static Ptr_FarnebackOpticalFlow create(int numLevels = 5, double pyrScale = 0.5, bool fastPyramids = false, int winSize = 13, int numIters = 10, int polyN = 5, double polySigma = 1.1, int flags = 0)
@@ -22,7 +24,7 @@ public class FarnebackOpticalFlow extends DenseOpticalFlow {
     public static FarnebackOpticalFlow create(int numLevels, double pyrScale, boolean fastPyramids, int winSize, int numIters, int polyN, double polySigma, int flags)
     {
         
-        FarnebackOpticalFlow retVal = new FarnebackOpticalFlow(create_0(numLevels, pyrScale, fastPyramids, winSize, numIters, polyN, polySigma, flags));
+        FarnebackOpticalFlow retVal = FarnebackOpticalFlow.__fromPtr__(create_0(numLevels, pyrScale, fastPyramids, winSize, numIters, polyN, polySigma, flags));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class FarnebackOpticalFlow extends DenseOpticalFlow {
     public static FarnebackOpticalFlow create()
     {
         
-        FarnebackOpticalFlow retVal = new FarnebackOpticalFlow(create_1());
+        FarnebackOpticalFlow retVal = FarnebackOpticalFlow.__fromPtr__(create_1());
         
         return retVal;
     }

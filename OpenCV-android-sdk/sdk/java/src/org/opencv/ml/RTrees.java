@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,8 @@ package org.opencv.ml;
 import java.lang.String;
 import org.opencv.core.Mat;
 import org.opencv.core.TermCriteria;
+import org.opencv.ml.DTrees;
+import org.opencv.ml.RTrees;
 
 // C++: class RTrees
 //javadoc: RTrees
@@ -15,6 +16,8 @@ public class RTrees extends DTrees {
 
     protected RTrees(long addr) { super(addr); }
 
+    // internal usage only
+    public static RTrees __fromPtr__(long addr) { return new RTrees(addr); }
 
     //
     // C++:  Mat getVarImportance()
@@ -38,7 +41,7 @@ public class RTrees extends DTrees {
     public static RTrees create()
     {
         
-        RTrees retVal = new RTrees(create_0());
+        RTrees retVal = RTrees.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -52,7 +55,7 @@ public class RTrees extends DTrees {
     public static RTrees load(String filepath, String nodeName)
     {
         
-        RTrees retVal = new RTrees(load_0(filepath, nodeName));
+        RTrees retVal = RTrees.__fromPtr__(load_0(filepath, nodeName));
         
         return retVal;
     }
@@ -61,7 +64,7 @@ public class RTrees extends DTrees {
     public static RTrees load(String filepath)
     {
         
-        RTrees retVal = new RTrees(load_1(filepath));
+        RTrees retVal = RTrees.__fromPtr__(load_1(filepath));
         
         return retVal;
     }

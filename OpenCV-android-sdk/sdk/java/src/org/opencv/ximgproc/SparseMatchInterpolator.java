@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class SparseMatchInterpolator extends Algorithm {
 
     protected SparseMatchInterpolator(long addr) { super(addr); }
 
+    // internal usage only
+    public static SparseMatchInterpolator __fromPtr__(long addr) { return new SparseMatchInterpolator(addr); }
 
     //
     // C++:  void interpolate(Mat from_image, Mat from_points, Mat to_image, Mat to_points, Mat& dense_flow)

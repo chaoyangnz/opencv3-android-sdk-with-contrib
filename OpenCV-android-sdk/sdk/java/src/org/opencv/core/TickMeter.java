@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,9 @@ public class TickMeter {
     protected TickMeter(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static TickMeter __fromPtr__(long addr) { return new TickMeter(addr); }
 
     //
     // C++:   TickMeter()

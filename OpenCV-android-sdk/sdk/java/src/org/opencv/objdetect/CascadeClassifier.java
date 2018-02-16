@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -23,6 +22,9 @@ public class CascadeClassifier {
     protected CascadeClassifier(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static CascadeClassifier __fromPtr__(long addr) { return new CascadeClassifier(addr); }
 
     //
     // C++:   CascadeClassifier(String filename)

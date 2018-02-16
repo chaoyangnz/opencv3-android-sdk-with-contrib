@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class FastLineDetector extends Algorithm {
 
     protected FastLineDetector(long addr) { super(addr); }
 
+    // internal usage only
+    public static FastLineDetector __fromPtr__(long addr) { return new FastLineDetector(addr); }
 
     //
     // C++:  void detect(Mat _image, Mat& _lines)

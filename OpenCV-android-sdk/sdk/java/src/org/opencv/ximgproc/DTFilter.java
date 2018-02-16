@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class DTFilter extends Algorithm {
 
     protected DTFilter(long addr) { super(addr); }
 
+    // internal usage only
+    public static DTFilter __fromPtr__(long addr) { return new DTFilter(addr); }
 
     //
     // C++:  void filter(Mat src, Mat& dst, int dDepth = -1)

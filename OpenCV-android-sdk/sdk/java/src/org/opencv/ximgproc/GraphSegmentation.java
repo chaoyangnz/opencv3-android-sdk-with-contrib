@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class GraphSegmentation extends Algorithm {
 
     protected GraphSegmentation(long addr) { super(addr); }
 
+    // internal usage only
+    public static GraphSegmentation __fromPtr__(long addr) { return new GraphSegmentation(addr); }
 
     //
     // C++:  double getSigma()

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,9 @@ public class KalmanFilter {
     protected KalmanFilter(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static KalmanFilter __fromPtr__(long addr) { return new KalmanFilter(addr); }
 
     //
     // C++:   KalmanFilter(int dynamParams, int measureParams, int controlParams = 0, int type = CV_32F)

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -17,6 +16,9 @@ public class VideoWriter {
     protected VideoWriter(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static VideoWriter __fromPtr__(long addr) { return new VideoWriter(addr); }
 
     //
     // C++:   VideoWriter(String filename, int apiPreference, int fourcc, double fps, Size frameSize, bool isColor = true)

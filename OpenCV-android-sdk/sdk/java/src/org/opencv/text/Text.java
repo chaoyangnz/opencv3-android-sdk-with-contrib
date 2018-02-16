@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,7 @@ import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfRect;
+import org.opencv.text.ERFilter;
 import org.opencv.utils.Converters;
 
 // C++: class Text
@@ -73,7 +73,7 @@ public class Text {
     public static ERFilter createERFilterNM1(String filename, int thresholdDelta, float minArea, float maxArea, float minProbability, boolean nonMaxSuppression, float minProbabilityDiff)
     {
         
-        ERFilter retVal = new ERFilter(createERFilterNM1_0(filename, thresholdDelta, minArea, maxArea, minProbability, nonMaxSuppression, minProbabilityDiff));
+        ERFilter retVal = ERFilter.__fromPtr__(createERFilterNM1_0(filename, thresholdDelta, minArea, maxArea, minProbability, nonMaxSuppression, minProbabilityDiff));
         
         return retVal;
     }
@@ -82,7 +82,7 @@ public class Text {
     public static ERFilter createERFilterNM1(String filename)
     {
         
-        ERFilter retVal = new ERFilter(createERFilterNM1_1(filename));
+        ERFilter retVal = ERFilter.__fromPtr__(createERFilterNM1_1(filename));
         
         return retVal;
     }
@@ -103,7 +103,7 @@ public class Text {
     public static ERFilter createERFilterNM2(String filename, float minProbability)
     {
         
-        ERFilter retVal = new ERFilter(createERFilterNM2_0(filename, minProbability));
+        ERFilter retVal = ERFilter.__fromPtr__(createERFilterNM2_0(filename, minProbability));
         
         return retVal;
     }
@@ -112,7 +112,7 @@ public class Text {
     public static ERFilter createERFilterNM2(String filename)
     {
         
-        ERFilter retVal = new ERFilter(createERFilterNM2_1(filename));
+        ERFilter retVal = ERFilter.__fromPtr__(createERFilterNM2_1(filename));
         
         return retVal;
     }

@@ -1,9 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.aruco;
 
+import org.opencv.aruco.Dictionary;
 import org.opencv.core.Mat;
 
 // C++: class Dictionary
@@ -16,6 +16,37 @@ public class Dictionary {
 
     public long getNativeObjAddr() { return nativeObj; }
 
+    // internal usage only
+    public static Dictionary __fromPtr__(long addr) { return new Dictionary(addr); }
+
+    //
+    // C++: static Mat getBitsFromByteList(Mat byteList, int markerSize)
+    //
+
+    //javadoc: Dictionary::getBitsFromByteList(byteList, markerSize)
+    public static Mat getBitsFromByteList(Mat byteList, int markerSize)
+    {
+        
+        Mat retVal = new Mat(getBitsFromByteList_0(byteList.nativeObj, markerSize));
+        
+        return retVal;
+    }
+
+
+    //
+    // C++: static Mat getByteListFromBits(Mat bits)
+    //
+
+    //javadoc: Dictionary::getByteListFromBits(bits)
+    public static Mat getByteListFromBits(Mat bits)
+    {
+        
+        Mat retVal = new Mat(getByteListFromBits_0(bits.nativeObj));
+        
+        return retVal;
+    }
+
+
     //
     // C++: static Ptr_Dictionary create(int nMarkers, int markerSize, Ptr_Dictionary baseDictionary)
     //
@@ -24,7 +55,7 @@ public class Dictionary {
     public static Dictionary create_from(int nMarkers, int markerSize, Dictionary baseDictionary)
     {
         
-        Dictionary retVal = new Dictionary(create_from_0(nMarkers, markerSize, baseDictionary.getNativeObjAddr()));
+        Dictionary retVal = Dictionary.__fromPtr__(create_from_0(nMarkers, markerSize, baseDictionary.getNativeObjAddr()));
         
         return retVal;
     }
@@ -38,7 +69,7 @@ public class Dictionary {
     public static Dictionary create(int nMarkers, int markerSize)
     {
         
-        Dictionary retVal = new Dictionary(create_0(nMarkers, markerSize));
+        Dictionary retVal = Dictionary.__fromPtr__(create_0(nMarkers, markerSize));
         
         return retVal;
     }
@@ -52,7 +83,7 @@ public class Dictionary {
     public static Dictionary get(int dict)
     {
         
-        Dictionary retVal = new Dictionary(get_0(dict));
+        Dictionary retVal = Dictionary.__fromPtr__(get_0(dict));
         
         return retVal;
     }
@@ -96,6 +127,20 @@ public class Dictionary {
 
 
     //
+    // C++: void Dictionary::bytesList
+    //
+
+    //javadoc: Dictionary::set_bytesList(bytesList)
+    public  void set_bytesList(Mat bytesList)
+    {
+        
+        set_bytesList_0(nativeObj, bytesList.nativeObj);
+        
+        return;
+    }
+
+
+    //
     // C++: int Dictionary::markerSize
     //
 
@@ -106,6 +151,20 @@ public class Dictionary {
         int retVal = get_markerSize_0(nativeObj);
         
         return retVal;
+    }
+
+
+    //
+    // C++: void Dictionary::markerSize
+    //
+
+    //javadoc: Dictionary::set_markerSize(markerSize)
+    public  void set_markerSize(int markerSize)
+    {
+        
+        set_markerSize_0(nativeObj, markerSize);
+        
+        return;
     }
 
 
@@ -123,12 +182,32 @@ public class Dictionary {
     }
 
 
+    //
+    // C++: void Dictionary::maxCorrectionBits
+    //
+
+    //javadoc: Dictionary::set_maxCorrectionBits(maxCorrectionBits)
+    public  void set_maxCorrectionBits(int maxCorrectionBits)
+    {
+        
+        set_maxCorrectionBits_0(nativeObj, maxCorrectionBits);
+        
+        return;
+    }
+
+
     @Override
     protected void finalize() throws Throwable {
         delete(nativeObj);
     }
 
 
+
+    // C++: static Mat getBitsFromByteList(Mat byteList, int markerSize)
+    private static native long getBitsFromByteList_0(long byteList_nativeObj, int markerSize);
+
+    // C++: static Mat getByteListFromBits(Mat bits)
+    private static native long getByteListFromBits_0(long bits_nativeObj);
 
     // C++: static Ptr_Dictionary create(int nMarkers, int markerSize, Ptr_Dictionary baseDictionary)
     private static native long create_from_0(int nMarkers, int markerSize, long baseDictionary_nativeObj);
@@ -146,11 +225,20 @@ public class Dictionary {
     // C++: Mat Dictionary::bytesList
     private static native long get_bytesList_0(long nativeObj);
 
+    // C++: void Dictionary::bytesList
+    private static native void set_bytesList_0(long nativeObj, long bytesList_nativeObj);
+
     // C++: int Dictionary::markerSize
     private static native int get_markerSize_0(long nativeObj);
 
+    // C++: void Dictionary::markerSize
+    private static native void set_markerSize_0(long nativeObj, int markerSize);
+
     // C++: int Dictionary::maxCorrectionBits
     private static native int get_maxCorrectionBits_0(long nativeObj);
+
+    // C++: void Dictionary::maxCorrectionBits
+    private static native void set_maxCorrectionBits_0(long nativeObj, int maxCorrectionBits);
 
     // native support for java finalize()
     private static native void delete(long nativeObj);

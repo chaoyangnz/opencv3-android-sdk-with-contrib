@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.text;
 
 import java.lang.String;
 import org.opencv.core.Mat;
+import org.opencv.text.BaseOCR;
+import org.opencv.text.OCRBeamSearchDecoder;
 
 // C++: class OCRBeamSearchDecoder
 //javadoc: OCRBeamSearchDecoder
@@ -14,6 +15,8 @@ public class OCRBeamSearchDecoder extends BaseOCR {
 
     protected OCRBeamSearchDecoder(long addr) { super(addr); }
 
+    // internal usage only
+    public static OCRBeamSearchDecoder __fromPtr__(long addr) { return new OCRBeamSearchDecoder(addr); }
 
     //
     // C++: static Ptr_OCRBeamSearchDecoder create(Ptr_OCRBeamSearchDecoder_ClassifierCallback classifier, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode = OCR_DECODER_VITERBI, int beam_size = 500)
@@ -30,7 +33,7 @@ public class OCRBeamSearchDecoder extends BaseOCR {
     public static OCRBeamSearchDecoder create(String filename, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode, int beam_size)
     {
         
-        OCRBeamSearchDecoder retVal = new OCRBeamSearchDecoder(create_0(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj, mode, beam_size));
+        OCRBeamSearchDecoder retVal = OCRBeamSearchDecoder.__fromPtr__(create_0(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj, mode, beam_size));
         
         return retVal;
     }
@@ -39,7 +42,7 @@ public class OCRBeamSearchDecoder extends BaseOCR {
     public static OCRBeamSearchDecoder create(String filename, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table)
     {
         
-        OCRBeamSearchDecoder retVal = new OCRBeamSearchDecoder(create_1(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj));
+        OCRBeamSearchDecoder retVal = OCRBeamSearchDecoder.__fromPtr__(create_1(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj));
         
         return retVal;
     }

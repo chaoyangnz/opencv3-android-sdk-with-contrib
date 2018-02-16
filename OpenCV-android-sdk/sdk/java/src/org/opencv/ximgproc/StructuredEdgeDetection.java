@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class StructuredEdgeDetection extends Algorithm {
 
     protected StructuredEdgeDetection(long addr) { super(addr); }
 
+    // internal usage only
+    public static StructuredEdgeDetection __fromPtr__(long addr) { return new StructuredEdgeDetection(addr); }
 
     //
     // C++:  void computeOrientation(Mat _src, Mat& _dst)

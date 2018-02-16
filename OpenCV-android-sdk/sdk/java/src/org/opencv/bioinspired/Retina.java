@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.bioinspired;
 
 import java.lang.String;
+import org.opencv.bioinspired.Retina;
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
@@ -16,6 +16,8 @@ public class Retina extends Algorithm {
 
     protected Retina(long addr) { super(addr); }
 
+    // internal usage only
+    public static Retina __fromPtr__(long addr) { return new Retina(addr); }
 
     //
     // C++:  Mat getMagnoRAW()
@@ -53,7 +55,7 @@ public class Retina extends Algorithm {
     public static Retina create(Size inputSize, boolean colorMode, int colorSamplingMethod, boolean useRetinaLogSampling, float reductionFactor, float samplingStrenght)
     {
         
-        Retina retVal = new Retina(create_0(inputSize.width, inputSize.height, colorMode, colorSamplingMethod, useRetinaLogSampling, reductionFactor, samplingStrenght));
+        Retina retVal = Retina.__fromPtr__(create_0(inputSize.width, inputSize.height, colorMode, colorSamplingMethod, useRetinaLogSampling, reductionFactor, samplingStrenght));
         
         return retVal;
     }
@@ -62,7 +64,7 @@ public class Retina extends Algorithm {
     public static Retina create(Size inputSize, boolean colorMode)
     {
         
-        Retina retVal = new Retina(create_1(inputSize.width, inputSize.height, colorMode));
+        Retina retVal = Retina.__fromPtr__(create_1(inputSize.width, inputSize.height, colorMode));
         
         return retVal;
     }
@@ -76,7 +78,7 @@ public class Retina extends Algorithm {
     public static Retina create(Size inputSize)
     {
         
-        Retina retVal = new Retina(create_2(inputSize.width, inputSize.height));
+        Retina retVal = Retina.__fromPtr__(create_2(inputSize.width, inputSize.height));
         
         return retVal;
     }

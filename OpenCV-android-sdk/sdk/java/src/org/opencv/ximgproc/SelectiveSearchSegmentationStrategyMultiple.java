@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.ximgproc;
 
-
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategy;
 
 // C++: class SelectiveSearchSegmentationStrategyMultiple
 //javadoc: SelectiveSearchSegmentationStrategyMultiple
@@ -13,6 +12,8 @@ public class SelectiveSearchSegmentationStrategyMultiple extends SelectiveSearch
 
     protected SelectiveSearchSegmentationStrategyMultiple(long addr) { super(addr); }
 
+    // internal usage only
+    public static SelectiveSearchSegmentationStrategyMultiple __fromPtr__(long addr) { return new SelectiveSearchSegmentationStrategyMultiple(addr); }
 
     //
     // C++:  void addStrategy(Ptr_SelectiveSearchSegmentationStrategy g, float weight)

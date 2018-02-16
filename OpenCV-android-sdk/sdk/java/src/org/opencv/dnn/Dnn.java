@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -13,6 +12,7 @@ import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfRect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
+import org.opencv.dnn.Net;
 import org.opencv.utils.Converters;
 
 // C++: class Dnn
@@ -23,6 +23,7 @@ public class Dnn {
     public static final int
             DNN_BACKEND_DEFAULT = 0,
             DNN_BACKEND_HALIDE = 1,
+            DNN_BACKEND_INFERENCE_ENGINE = 2,
             DNN_TARGET_CPU = 0,
             DNN_TARGET_OPENCL = 1;
 
@@ -189,71 +190,6 @@ public class Dnn {
 
 
     //
-    // C++:  Ptr_Importer createCaffeImporter(String prototxt, String caffeModel = String())
-    //
-
-    //javadoc: createCaffeImporter(prototxt, caffeModel)
-    @Deprecated
-    public static Importer createCaffeImporter(String prototxt, String caffeModel)
-    {
-        
-        Importer retVal = new Importer(createCaffeImporter_0(prototxt, caffeModel));
-        
-        return retVal;
-    }
-
-    //javadoc: createCaffeImporter(prototxt)
-    @Deprecated
-    public static Importer createCaffeImporter(String prototxt)
-    {
-        
-        Importer retVal = new Importer(createCaffeImporter_1(prototxt));
-        
-        return retVal;
-    }
-
-
-    //
-    // C++:  Ptr_Importer createTensorflowImporter(String model)
-    //
-
-    //javadoc: createTensorflowImporter(model)
-    @Deprecated
-    public static Importer createTensorflowImporter(String model)
-    {
-        
-        Importer retVal = new Importer(createTensorflowImporter_0(model));
-        
-        return retVal;
-    }
-
-
-    //
-    // C++:  Ptr_Importer createTorchImporter(String filename, bool isBinary = true)
-    //
-
-    //javadoc: createTorchImporter(filename, isBinary)
-    @Deprecated
-    public static Importer createTorchImporter(String filename, boolean isBinary)
-    {
-        
-        Importer retVal = new Importer(createTorchImporter_0(filename, isBinary));
-        
-        return retVal;
-    }
-
-    //javadoc: createTorchImporter(filename)
-    @Deprecated
-    public static Importer createTorchImporter(String filename)
-    {
-        
-        Importer retVal = new Importer(createTorchImporter_1(filename));
-        
-        return retVal;
-    }
-
-
-    //
     // C++:  void NMSBoxes(vector_Rect bboxes, vector_float scores, float score_threshold, float nms_threshold, vector_int& indices, float eta = 1.f, int top_k = 0)
     //
 
@@ -276,6 +212,21 @@ public class Dnn {
         Mat indices_mat = indices;
         NMSBoxes_1(bboxes_mat.nativeObj, scores_mat.nativeObj, score_threshold, nms_threshold, indices_mat.nativeObj);
         
+        return;
+    }
+
+
+    //
+    // C++:  void imagesFromBlob(Mat blob_, vector_Mat& images_)
+    //
+
+    //javadoc: imagesFromBlob(blob_, images_)
+    public static void imagesFromBlob(Mat blob_, List<Mat> images_)
+    {
+        Mat images__mat = new Mat();
+        imagesFromBlob_0(blob_.nativeObj, images__mat.nativeObj);
+        Converters.Mat_to_vector_Mat(images__mat, images_);
+        images__mat.release();
         return;
     }
 
@@ -333,20 +284,12 @@ public class Dnn {
     private static native long readNetFromTorch_0(String model, boolean isBinary);
     private static native long readNetFromTorch_1(String model);
 
-    // C++:  Ptr_Importer createCaffeImporter(String prototxt, String caffeModel = String())
-    private static native long createCaffeImporter_0(String prototxt, String caffeModel);
-    private static native long createCaffeImporter_1(String prototxt);
-
-    // C++:  Ptr_Importer createTensorflowImporter(String model)
-    private static native long createTensorflowImporter_0(String model);
-
-    // C++:  Ptr_Importer createTorchImporter(String filename, bool isBinary = true)
-    private static native long createTorchImporter_0(String filename, boolean isBinary);
-    private static native long createTorchImporter_1(String filename);
-
     // C++:  void NMSBoxes(vector_Rect bboxes, vector_float scores, float score_threshold, float nms_threshold, vector_int& indices, float eta = 1.f, int top_k = 0)
     private static native void NMSBoxes_0(long bboxes_mat_nativeObj, long scores_mat_nativeObj, float score_threshold, float nms_threshold, long indices_mat_nativeObj, float eta, int top_k);
     private static native void NMSBoxes_1(long bboxes_mat_nativeObj, long scores_mat_nativeObj, float score_threshold, float nms_threshold, long indices_mat_nativeObj);
+
+    // C++:  void imagesFromBlob(Mat blob_, vector_Mat& images_)
+    private static native void imagesFromBlob_0(long blob__nativeObj, long images__mat_nativeObj);
 
     // C++:  void shrinkCaffeModel(String src, String dst, vector_String layersTypes = std::vector<String>())
     private static native void shrinkCaffeModel_0(String src, String dst, List<String> layersTypes);

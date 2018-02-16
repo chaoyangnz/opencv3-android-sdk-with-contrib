@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class SuperpixelSEEDS extends Algorithm {
 
     protected SuperpixelSEEDS(long addr) { super(addr); }
 
+    // internal usage only
+    public static SuperpixelSEEDS __fromPtr__(long addr) { return new SuperpixelSEEDS(addr); }
 
     //
     // C++:  int getNumberOfSuperpixels()

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.ml;
 
 import java.lang.String;
 import org.opencv.core.Mat;
+import org.opencv.ml.DTrees;
+import org.opencv.ml.StatModel;
 
 // C++: class DTrees
 //javadoc: DTrees
@@ -14,6 +15,8 @@ public class DTrees extends StatModel {
 
     protected DTrees(long addr) { super(addr); }
 
+    // internal usage only
+    public static DTrees __fromPtr__(long addr) { return new DTrees(addr); }
 
     public static final int
             PREDICT_AUTO = 0,
@@ -44,7 +47,7 @@ public class DTrees extends StatModel {
     public static DTrees create()
     {
         
-        DTrees retVal = new DTrees(create_0());
+        DTrees retVal = DTrees.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -58,7 +61,7 @@ public class DTrees extends StatModel {
     public static DTrees load(String filepath, String nodeName)
     {
         
-        DTrees retVal = new DTrees(load_0(filepath, nodeName));
+        DTrees retVal = DTrees.__fromPtr__(load_0(filepath, nodeName));
         
         return retVal;
     }
@@ -67,7 +70,7 @@ public class DTrees extends StatModel {
     public static DTrees load(String filepath)
     {
         
-        DTrees retVal = new DTrees(load_1(filepath));
+        DTrees retVal = DTrees.__fromPtr__(load_1(filepath));
         
         return retVal;
     }

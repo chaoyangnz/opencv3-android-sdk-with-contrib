@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.features2d;
 
-
+import org.opencv.features2d.BFMatcher;
+import org.opencv.features2d.DescriptorMatcher;
 
 // C++: class BFMatcher
 //javadoc: BFMatcher
@@ -13,6 +13,8 @@ public class BFMatcher extends DescriptorMatcher {
 
     protected BFMatcher(long addr) { super(addr); }
 
+    // internal usage only
+    public static BFMatcher __fromPtr__(long addr) { return new BFMatcher(addr); }
 
     //
     // C++:   BFMatcher(int normType = NORM_L2, bool crossCheck = false)
@@ -45,7 +47,7 @@ public class BFMatcher extends DescriptorMatcher {
     public static BFMatcher create(int normType, boolean crossCheck)
     {
         
-        BFMatcher retVal = new BFMatcher(create_0(normType, crossCheck));
+        BFMatcher retVal = BFMatcher.__fromPtr__(create_0(normType, crossCheck));
         
         return retVal;
     }
@@ -54,7 +56,7 @@ public class BFMatcher extends DescriptorMatcher {
     public static BFMatcher create()
     {
         
-        BFMatcher retVal = new BFMatcher(create_1());
+        BFMatcher retVal = BFMatcher.__fromPtr__(create_1());
         
         return retVal;
     }

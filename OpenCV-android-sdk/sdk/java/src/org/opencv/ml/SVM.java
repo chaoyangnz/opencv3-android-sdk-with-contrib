@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,9 @@ package org.opencv.ml;
 import java.lang.String;
 import org.opencv.core.Mat;
 import org.opencv.core.TermCriteria;
+import org.opencv.ml.ParamGrid;
+import org.opencv.ml.SVM;
+import org.opencv.ml.StatModel;
 
 // C++: class SVM
 //javadoc: SVM
@@ -15,6 +17,8 @@ public class SVM extends StatModel {
 
     protected SVM(long addr) { super(addr); }
 
+    // internal usage only
+    public static SVM __fromPtr__(long addr) { return new SVM(addr); }
 
     public static final int
             C_SVC = 100,
@@ -87,7 +91,7 @@ public class SVM extends StatModel {
     public static ParamGrid getDefaultGridPtr(int param_id)
     {
         
-        ParamGrid retVal = new ParamGrid(getDefaultGridPtr_0(param_id));
+        ParamGrid retVal = ParamGrid.__fromPtr__(getDefaultGridPtr_0(param_id));
         
         return retVal;
     }
@@ -101,7 +105,7 @@ public class SVM extends StatModel {
     public static SVM create()
     {
         
-        SVM retVal = new SVM(create_0());
+        SVM retVal = SVM.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -115,7 +119,7 @@ public class SVM extends StatModel {
     public static SVM load(String filepath)
     {
         
-        SVM retVal = new SVM(load_0(filepath));
+        SVM retVal = SVM.__fromPtr__(load_0(filepath));
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class WhiteBalancer extends Algorithm {
 
     protected WhiteBalancer(long addr) { super(addr); }
 
+    // internal usage only
+    public static WhiteBalancer __fromPtr__(long addr) { return new WhiteBalancer(addr); }
 
     //
     // C++:  void balanceWhite(Mat src, Mat& dst)

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class SelectiveSearchSegmentationStrategy extends Algorithm {
 
     protected SelectiveSearchSegmentationStrategy(long addr) { super(addr); }
 
+    // internal usage only
+    public static SelectiveSearchSegmentationStrategy __fromPtr__(long addr) { return new SelectiveSearchSegmentationStrategy(addr); }
 
     //
     // C++:  float get(int r1, int r2)

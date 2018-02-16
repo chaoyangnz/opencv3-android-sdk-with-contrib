@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -8,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfDouble;
+import org.opencv.img_hash.BlockMeanHash;
+import org.opencv.img_hash.ImgHashBase;
 import org.opencv.utils.Converters;
 
 // C++: class BlockMeanHash
@@ -17,6 +18,8 @@ public class BlockMeanHash extends ImgHashBase {
 
     protected BlockMeanHash(long addr) { super(addr); }
 
+    // internal usage only
+    public static BlockMeanHash __fromPtr__(long addr) { return new BlockMeanHash(addr); }
 
     //
     // C++: static Ptr_BlockMeanHash create(int mode = BLOCK_MEAN_HASH_MODE_0)
@@ -26,7 +29,7 @@ public class BlockMeanHash extends ImgHashBase {
     public static BlockMeanHash create(int mode)
     {
         
-        BlockMeanHash retVal = new BlockMeanHash(create_0(mode));
+        BlockMeanHash retVal = BlockMeanHash.__fromPtr__(create_0(mode));
         
         return retVal;
     }
@@ -35,7 +38,7 @@ public class BlockMeanHash extends ImgHashBase {
     public static BlockMeanHash create()
     {
         
-        BlockMeanHash retVal = new BlockMeanHash(create_1());
+        BlockMeanHash retVal = BlockMeanHash.__fromPtr__(create_1());
         
         return retVal;
     }

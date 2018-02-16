@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xfeatures2d;
 
 import org.opencv.features2d.Feature2D;
+import org.opencv.xfeatures2d.StarDetector;
 
 // C++: class StarDetector
 //javadoc: StarDetector
@@ -13,6 +13,8 @@ public class StarDetector extends Feature2D {
 
     protected StarDetector(long addr) { super(addr); }
 
+    // internal usage only
+    public static StarDetector __fromPtr__(long addr) { return new StarDetector(addr); }
 
     //
     // C++: static Ptr_StarDetector create(int maxSize = 45, int responseThreshold = 30, int lineThresholdProjected = 10, int lineThresholdBinarized = 8, int suppressNonmaxSize = 5)
@@ -22,7 +24,7 @@ public class StarDetector extends Feature2D {
     public static StarDetector create(int maxSize, int responseThreshold, int lineThresholdProjected, int lineThresholdBinarized, int suppressNonmaxSize)
     {
         
-        StarDetector retVal = new StarDetector(create_0(maxSize, responseThreshold, lineThresholdProjected, lineThresholdBinarized, suppressNonmaxSize));
+        StarDetector retVal = StarDetector.__fromPtr__(create_0(maxSize, responseThreshold, lineThresholdProjected, lineThresholdBinarized, suppressNonmaxSize));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class StarDetector extends Feature2D {
     public static StarDetector create()
     {
         
-        StarDetector retVal = new StarDetector(create_1());
+        StarDetector retVal = StarDetector.__fromPtr__(create_1());
         
         return retVal;
     }

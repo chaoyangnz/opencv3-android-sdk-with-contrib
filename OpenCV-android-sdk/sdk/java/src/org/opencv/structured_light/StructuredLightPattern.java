@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -17,6 +16,8 @@ public class StructuredLightPattern extends Algorithm {
 
     protected StructuredLightPattern(long addr) { super(addr); }
 
+    // internal usage only
+    public static StructuredLightPattern __fromPtr__(long addr) { return new StructuredLightPattern(addr); }
 
     //
     // C++:  bool decode(vector_vector_Mat patternImages, Mat& disparityMap, vector_Mat blackImages = vector_Mat(), vector_Mat whiteImages = vector_Mat(), int flags = DECODE_3D_UNDERWORLD)

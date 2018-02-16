@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,7 @@ import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfFloat;
 import org.opencv.utils.Converters;
+import org.opencv.xfeatures2d.PCTSignaturesSQFD;
 
 // C++: class PCTSignaturesSQFD
 //javadoc: PCTSignaturesSQFD
@@ -18,6 +18,8 @@ public class PCTSignaturesSQFD extends Algorithm {
 
     protected PCTSignaturesSQFD(long addr) { super(addr); }
 
+    // internal usage only
+    public static PCTSignaturesSQFD __fromPtr__(long addr) { return new PCTSignaturesSQFD(addr); }
 
     //
     // C++: static Ptr_PCTSignaturesSQFD create(int distanceFunction = 3, int similarityFunction = 2, float similarityParameter = 1.0f)
@@ -27,7 +29,7 @@ public class PCTSignaturesSQFD extends Algorithm {
     public static PCTSignaturesSQFD create(int distanceFunction, int similarityFunction, float similarityParameter)
     {
         
-        PCTSignaturesSQFD retVal = new PCTSignaturesSQFD(create_0(distanceFunction, similarityFunction, similarityParameter));
+        PCTSignaturesSQFD retVal = PCTSignaturesSQFD.__fromPtr__(create_0(distanceFunction, similarityFunction, similarityParameter));
         
         return retVal;
     }
@@ -36,7 +38,7 @@ public class PCTSignaturesSQFD extends Algorithm {
     public static PCTSignaturesSQFD create()
     {
         
-        PCTSignaturesSQFD retVal = new PCTSignaturesSQFD(create_1());
+        PCTSignaturesSQFD retVal = PCTSignaturesSQFD.__fromPtr__(create_1());
         
         return retVal;
     }

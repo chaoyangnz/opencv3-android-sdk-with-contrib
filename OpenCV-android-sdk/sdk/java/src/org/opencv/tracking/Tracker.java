@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,8 @@ public class Tracker extends Algorithm {
 
     protected Tracker(long addr) { super(addr); }
 
+    // internal usage only
+    public static Tracker __fromPtr__(long addr) { return new Tracker(addr); }
 
     //
     // C++:  bool init(Mat image, Rect2d boundingBox)

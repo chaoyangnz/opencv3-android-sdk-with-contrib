@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,7 @@ package org.opencv.ximgproc;
 
 import org.opencv.core.Mat;
 import org.opencv.core.Rect;
+import org.opencv.ximgproc.DisparityFilter;
 
 // C++: class DisparityWLSFilter
 //javadoc: DisparityWLSFilter
@@ -14,6 +14,8 @@ public class DisparityWLSFilter extends DisparityFilter {
 
     protected DisparityWLSFilter(long addr) { super(addr); }
 
+    // internal usage only
+    public static DisparityWLSFilter __fromPtr__(long addr) { return new DisparityWLSFilter(addr); }
 
     //
     // C++:  Mat getConfidenceMap()

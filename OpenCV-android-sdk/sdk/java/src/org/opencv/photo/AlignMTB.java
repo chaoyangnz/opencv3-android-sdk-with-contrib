@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -8,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
+import org.opencv.photo.AlignExposures;
 import org.opencv.utils.Converters;
 
 // C++: class AlignMTB
@@ -17,6 +17,8 @@ public class AlignMTB extends AlignExposures {
 
     protected AlignMTB(long addr) { super(addr); }
 
+    // internal usage only
+    public static AlignMTB __fromPtr__(long addr) { return new AlignMTB(addr); }
 
     //
     // C++:  Point calculateShift(Mat img0, Mat img1)

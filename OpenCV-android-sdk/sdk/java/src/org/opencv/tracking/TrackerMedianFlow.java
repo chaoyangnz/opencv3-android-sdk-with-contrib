@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.tracking;
 
-
+import org.opencv.tracking.Tracker;
+import org.opencv.tracking.TrackerMedianFlow;
 
 // C++: class TrackerMedianFlow
 //javadoc: TrackerMedianFlow
@@ -13,6 +13,8 @@ public class TrackerMedianFlow extends Tracker {
 
     protected TrackerMedianFlow(long addr) { super(addr); }
 
+    // internal usage only
+    public static TrackerMedianFlow __fromPtr__(long addr) { return new TrackerMedianFlow(addr); }
 
     //
     // C++: static Ptr_TrackerMedianFlow create()
@@ -22,7 +24,7 @@ public class TrackerMedianFlow extends Tracker {
     public static TrackerMedianFlow create()
     {
         
-        TrackerMedianFlow retVal = new TrackerMedianFlow(create_0());
+        TrackerMedianFlow retVal = TrackerMedianFlow.__fromPtr__(create_0());
         
         return retVal;
     }

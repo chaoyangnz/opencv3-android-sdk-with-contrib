@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.ml;
 
-
+import org.opencv.ml.ParamGrid;
 
 // C++: class ParamGrid
 //javadoc: ParamGrid
@@ -16,6 +15,9 @@ public class ParamGrid {
 
     public long getNativeObjAddr() { return nativeObj; }
 
+    // internal usage only
+    public static ParamGrid __fromPtr__(long addr) { return new ParamGrid(addr); }
+
     //
     // C++: static Ptr_ParamGrid create(double minVal = 0., double maxVal = 0., double logstep = 1.)
     //
@@ -24,7 +26,7 @@ public class ParamGrid {
     public static ParamGrid create(double minVal, double maxVal, double logstep)
     {
         
-        ParamGrid retVal = new ParamGrid(create_0(minVal, maxVal, logstep));
+        ParamGrid retVal = ParamGrid.__fromPtr__(create_0(minVal, maxVal, logstep));
         
         return retVal;
     }
@@ -33,7 +35,7 @@ public class ParamGrid {
     public static ParamGrid create()
     {
         
-        ParamGrid retVal = new ParamGrid(create_1());
+        ParamGrid retVal = ParamGrid.__fromPtr__(create_1());
         
         return retVal;
     }

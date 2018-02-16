@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,7 @@ package org.opencv.face;
 import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
+import org.opencv.face.FaceRecognizer;
 import org.opencv.utils.Converters;
 
 // C++: class BasicFaceRecognizer
@@ -16,6 +16,8 @@ public class BasicFaceRecognizer extends FaceRecognizer {
 
     protected BasicFaceRecognizer(long addr) { super(addr); }
 
+    // internal usage only
+    public static BasicFaceRecognizer __fromPtr__(long addr) { return new BasicFaceRecognizer(addr); }
 
     //
     // C++:  Mat getEigenValues()

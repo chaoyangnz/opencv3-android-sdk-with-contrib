@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.photo;
 
-
+import org.opencv.photo.Tonemap;
 
 // C++: class TonemapReinhard
 //javadoc: TonemapReinhard
@@ -13,6 +12,8 @@ public class TonemapReinhard extends Tonemap {
 
     protected TonemapReinhard(long addr) { super(addr); }
 
+    // internal usage only
+    public static TonemapReinhard __fromPtr__(long addr) { return new TonemapReinhard(addr); }
 
     //
     // C++:  float getColorAdaptation()

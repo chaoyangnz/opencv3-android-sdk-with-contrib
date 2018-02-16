@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.face;
 
-
+import org.opencv.face.PredictCollector;
+import org.opencv.face.StandardCollector;
 
 // C++: class StandardCollector
 //javadoc: StandardCollector
@@ -13,6 +13,8 @@ public class StandardCollector extends PredictCollector {
 
     protected StandardCollector(long addr) { super(addr); }
 
+    // internal usage only
+    public static StandardCollector __fromPtr__(long addr) { return new StandardCollector(addr); }
 
     //
     // C++: static Ptr_StandardCollector create(double threshold = DBL_MAX)
@@ -22,7 +24,7 @@ public class StandardCollector extends PredictCollector {
     public static StandardCollector create(double threshold)
     {
         
-        StandardCollector retVal = new StandardCollector(create_0(threshold));
+        StandardCollector retVal = StandardCollector.__fromPtr__(create_0(threshold));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class StandardCollector extends PredictCollector {
     public static StandardCollector create()
     {
         
-        StandardCollector retVal = new StandardCollector(create_1());
+        StandardCollector retVal = StandardCollector.__fromPtr__(create_1());
         
         return retVal;
     }

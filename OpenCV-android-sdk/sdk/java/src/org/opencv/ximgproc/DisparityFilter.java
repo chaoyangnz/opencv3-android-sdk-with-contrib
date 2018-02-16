@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,8 @@ public class DisparityFilter extends Algorithm {
 
     protected DisparityFilter(long addr) { super(addr); }
 
+    // internal usage only
+    public static DisparityFilter __fromPtr__(long addr) { return new DisparityFilter(addr); }
 
     //
     // C++:  void filter(Mat disparity_map_left, Mat left_view, Mat& filtered_disparity_map, Mat disparity_map_right = Mat(), Rect ROI = Rect(), Mat right_view = Mat())

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -8,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
+import org.opencv.structured_light.GrayCodePattern;
 import org.opencv.utils.Converters;
 
 // C++: class GrayCodePattern
@@ -17,6 +17,8 @@ public class GrayCodePattern extends StructuredLightPattern {
 
     protected GrayCodePattern(long addr) { super(addr); }
 
+    // internal usage only
+    public static GrayCodePattern __fromPtr__(long addr) { return new GrayCodePattern(addr); }
 
     //
     // C++: static Ptr_GrayCodePattern create(int width, int height)
@@ -26,7 +28,7 @@ public class GrayCodePattern extends StructuredLightPattern {
     public static GrayCodePattern create(int width, int height)
     {
         
-        GrayCodePattern retVal = new GrayCodePattern(create_0(width, height));
+        GrayCodePattern retVal = GrayCodePattern.__fromPtr__(create_0(width, height));
         
         return retVal;
     }

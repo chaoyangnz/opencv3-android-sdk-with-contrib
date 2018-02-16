@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xphoto;
 
-
+import org.opencv.xphoto.WhiteBalancer;
 
 // C++: class SimpleWB
 //javadoc: SimpleWB
@@ -13,6 +12,8 @@ public class SimpleWB extends WhiteBalancer {
 
     protected SimpleWB(long addr) { super(addr); }
 
+    // internal usage only
+    public static SimpleWB __fromPtr__(long addr) { return new SimpleWB(addr); }
 
     //
     // C++:  float getInputMax()

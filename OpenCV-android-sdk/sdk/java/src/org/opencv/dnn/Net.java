@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -11,6 +10,7 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfDouble;
 import org.opencv.core.MatOfInt;
 import org.opencv.dnn.DictValue;
+import org.opencv.dnn.Layer;
 import org.opencv.utils.Converters;
 
 // C++: class Net
@@ -22,6 +22,9 @@ public class Net {
     protected Net(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static Net __fromPtr__(long addr) { return new Net(addr); }
 
     //
     // C++:   Net()
@@ -91,7 +94,7 @@ public class Net {
     public  Layer getLayer(DictValue layerId)
     {
         
-        Layer retVal = new Layer(getLayer_0(nativeObj, layerId.getNativeObjAddr()));
+        Layer retVal = Layer.__fromPtr__(getLayer_0(nativeObj, layerId.getNativeObjAddr()));
         
         return retVal;
     }
@@ -317,6 +320,13 @@ public class Net {
         outputBlobs_mat.release();
         return;
     }
+
+
+    //
+    // C++:  void forward(vector_vector_Mat& outputBlobs, vector_String outBlobNames)
+    //
+
+    // Unknown type 'vector_vector_Mat' (O), skipping the function
 
 
     //

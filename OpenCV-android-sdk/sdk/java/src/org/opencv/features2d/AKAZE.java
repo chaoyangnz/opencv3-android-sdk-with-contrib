@@ -1,10 +1,11 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.features2d;
 
 import java.lang.String;
+import org.opencv.features2d.AKAZE;
+import org.opencv.features2d.Feature2D;
 
 // C++: class AKAZE
 //javadoc: AKAZE
@@ -13,6 +14,8 @@ public class AKAZE extends Feature2D {
 
     protected AKAZE(long addr) { super(addr); }
 
+    // internal usage only
+    public static AKAZE __fromPtr__(long addr) { return new AKAZE(addr); }
 
     public static final int
             DESCRIPTOR_KAZE_UPRIGHT = 2,
@@ -29,7 +32,7 @@ public class AKAZE extends Feature2D {
     public static AKAZE create(int descriptor_type, int descriptor_size, int descriptor_channels, float threshold, int nOctaves, int nOctaveLayers, int diffusivity)
     {
         
-        AKAZE retVal = new AKAZE(create_0(descriptor_type, descriptor_size, descriptor_channels, threshold, nOctaves, nOctaveLayers, diffusivity));
+        AKAZE retVal = AKAZE.__fromPtr__(create_0(descriptor_type, descriptor_size, descriptor_channels, threshold, nOctaves, nOctaveLayers, diffusivity));
         
         return retVal;
     }
@@ -38,7 +41,7 @@ public class AKAZE extends Feature2D {
     public static AKAZE create()
     {
         
-        AKAZE retVal = new AKAZE(create_1());
+        AKAZE retVal = AKAZE.__fromPtr__(create_1());
         
         return retVal;
     }

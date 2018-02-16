@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -9,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.TermCriteria;
+import org.opencv.ml.EM;
+import org.opencv.ml.StatModel;
 import org.opencv.utils.Converters;
 
 // C++: class EM
@@ -18,6 +19,8 @@ public class EM extends StatModel {
 
     protected EM(long addr) { super(addr); }
 
+    // internal usage only
+    public static EM __fromPtr__(long addr) { return new EM(addr); }
 
     public static final int
             COV_MAT_SPHERICAL = 0,
@@ -67,7 +70,7 @@ public class EM extends StatModel {
     public static EM create()
     {
         
-        EM retVal = new EM(create_0());
+        EM retVal = EM.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -81,7 +84,7 @@ public class EM extends StatModel {
     public static EM load(String filepath, String nodeName)
     {
         
-        EM retVal = new EM(load_0(filepath, nodeName));
+        EM retVal = EM.__fromPtr__(load_0(filepath, nodeName));
         
         return retVal;
     }
@@ -90,7 +93,7 @@ public class EM extends StatModel {
     public static EM load(String filepath)
     {
         
-        EM retVal = new EM(load_1(filepath));
+        EM retVal = EM.__fromPtr__(load_1(filepath));
         
         return retVal;
     }

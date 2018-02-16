@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,9 @@ public class BaseOCR {
     protected BaseOCR(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static BaseOCR __fromPtr__(long addr) { return new BaseOCR(addr); }
 
     @Override
     protected void finalize() throws Throwable {

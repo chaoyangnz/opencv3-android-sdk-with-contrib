@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -19,6 +18,8 @@ import org.opencv.core.RotatedRect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.core.TermCriteria;
+import org.opencv.imgproc.CLAHE;
+import org.opencv.imgproc.LineSegmentDetector;
 import org.opencv.utils.Converters;
 
 // C++: class Imgproc
@@ -636,7 +637,7 @@ public class Imgproc {
     public static CLAHE createCLAHE(double clipLimit, Size tileGridSize)
     {
         
-        CLAHE retVal = new CLAHE(createCLAHE_0(clipLimit, tileGridSize.width, tileGridSize.height));
+        CLAHE retVal = CLAHE.__fromPtr__(createCLAHE_0(clipLimit, tileGridSize.width, tileGridSize.height));
         
         return retVal;
     }
@@ -645,7 +646,7 @@ public class Imgproc {
     public static CLAHE createCLAHE()
     {
         
-        CLAHE retVal = new CLAHE(createCLAHE_1());
+        CLAHE retVal = CLAHE.__fromPtr__(createCLAHE_1());
         
         return retVal;
     }
@@ -659,7 +660,7 @@ public class Imgproc {
     public static LineSegmentDetector createLineSegmentDetector(int _refine, double _scale, double _sigma_scale, double _quant, double _ang_th, double _log_eps, double _density_th, int _n_bins)
     {
         
-        LineSegmentDetector retVal = new LineSegmentDetector(createLineSegmentDetector_0(_refine, _scale, _sigma_scale, _quant, _ang_th, _log_eps, _density_th, _n_bins));
+        LineSegmentDetector retVal = LineSegmentDetector.__fromPtr__(createLineSegmentDetector_0(_refine, _scale, _sigma_scale, _quant, _ang_th, _log_eps, _density_th, _n_bins));
         
         return retVal;
     }
@@ -668,7 +669,7 @@ public class Imgproc {
     public static LineSegmentDetector createLineSegmentDetector()
     {
         
-        LineSegmentDetector retVal = new LineSegmentDetector(createLineSegmentDetector_1());
+        LineSegmentDetector retVal = LineSegmentDetector.__fromPtr__(createLineSegmentDetector_1());
         
         return retVal;
     }
@@ -820,6 +821,29 @@ public class Imgproc {
     {
         
         double retVal = contourArea_1(contour.nativeObj);
+        
+        return retVal;
+    }
+
+
+    //
+    // C++:  double getFontScaleFromHeight(int fontFace, int pixelHeight, int thickness = 1)
+    //
+
+    //javadoc: getFontScaleFromHeight(fontFace, pixelHeight, thickness)
+    public static double getFontScaleFromHeight(int fontFace, int pixelHeight, int thickness)
+    {
+        
+        double retVal = getFontScaleFromHeight_0(fontFace, pixelHeight, thickness);
+        
+        return retVal;
+    }
+
+    //javadoc: getFontScaleFromHeight(fontFace, pixelHeight)
+    public static double getFontScaleFromHeight(int fontFace, int pixelHeight)
+    {
+        
+        double retVal = getFontScaleFromHeight_1(fontFace, pixelHeight);
         
         return retVal;
     }
@@ -1203,6 +1227,20 @@ public class Imgproc {
     {
         
         HoughLinesP_1(image.nativeObj, lines.nativeObj, rho, theta, threshold);
+        
+        return;
+    }
+
+
+    //
+    // C++:  void HoughLinesPointSet(Mat _point, Mat& _lines, int lines_max, int threshold, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step)
+    //
+
+    //javadoc: HoughLinesPointSet(_point, _lines, lines_max, threshold, min_rho, max_rho, rho_step, min_theta, max_theta, theta_step)
+    public static void HoughLinesPointSet(Mat _point, Mat _lines, int lines_max, int threshold, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step)
+    {
+        
+        HoughLinesPointSet_0(_point.nativeObj, _lines.nativeObj, lines_max, threshold, min_rho, max_rho, rho_step, min_theta, max_theta, theta_step);
         
         return;
     }
@@ -3195,6 +3233,10 @@ public static Size getTextSize(String text, int fontFace, double fontScale, int 
     private static native double contourArea_0(long contour_nativeObj, boolean oriented);
     private static native double contourArea_1(long contour_nativeObj);
 
+    // C++:  double getFontScaleFromHeight(int fontFace, int pixelHeight, int thickness = 1)
+    private static native double getFontScaleFromHeight_0(int fontFace, int pixelHeight, int thickness);
+    private static native double getFontScaleFromHeight_1(int fontFace, int pixelHeight);
+
     // C++:  double matchShapes(Mat contour1, Mat contour2, int method, double parameter)
     private static native double matchShapes_0(long contour1_nativeObj, long contour2_nativeObj, int method, double parameter);
 
@@ -3264,6 +3306,9 @@ public static Size getTextSize(String text, int fontFace, double fontScale, int 
     // C++:  void HoughLinesP(Mat image, Mat& lines, double rho, double theta, int threshold, double minLineLength = 0, double maxLineGap = 0)
     private static native void HoughLinesP_0(long image_nativeObj, long lines_nativeObj, double rho, double theta, int threshold, double minLineLength, double maxLineGap);
     private static native void HoughLinesP_1(long image_nativeObj, long lines_nativeObj, double rho, double theta, int threshold);
+
+    // C++:  void HoughLinesPointSet(Mat _point, Mat& _lines, int lines_max, int threshold, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step)
+    private static native void HoughLinesPointSet_0(long _point_nativeObj, long _lines_nativeObj, int lines_max, int threshold, double min_rho, double max_rho, double rho_step, double min_theta, double max_theta, double theta_step);
 
     // C++:  void HuMoments(Moments m, Mat& hu)
     private static native void HuMoments_0(double m_m00, double m_m10, double m_m01, double m_m20, double m_m11, double m_m02, double m_m30, double m_m21, double m_m12, double m_m03, long hu_nativeObj);

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -8,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
+import org.opencv.structured_light.SinusoidalPattern;
+import org.opencv.structured_light.StructuredLightPattern;
 import org.opencv.utils.Converters;
 
 // C++: class SinusoidalPattern
@@ -17,6 +18,8 @@ public class SinusoidalPattern extends StructuredLightPattern {
 
     protected SinusoidalPattern(long addr) { super(addr); }
 
+    // internal usage only
+    public static SinusoidalPattern __fromPtr__(long addr) { return new SinusoidalPattern(addr); }
 
     //
     // C++: static Ptr_SinusoidalPattern create(Ptr_SinusoidalPattern_Params parameters = makePtr<SinusoidalPattern::Params>())
@@ -26,7 +29,7 @@ public class SinusoidalPattern extends StructuredLightPattern {
     public static SinusoidalPattern create()
     {
         
-        SinusoidalPattern retVal = new SinusoidalPattern(create_0());
+        SinusoidalPattern retVal = SinusoidalPattern.__fromPtr__(create_0());
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -16,6 +15,9 @@ public class VideoCapture {
     protected VideoCapture(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static VideoCapture __fromPtr__(long addr) { return new VideoCapture(addr); }
 
     //
     // C++:   VideoCapture(String filename, int apiPreference)

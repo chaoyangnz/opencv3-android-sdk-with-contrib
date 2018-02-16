@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -13,6 +12,8 @@ public class HistogramPhaseUnwrapping extends PhaseUnwrapping {
 
     protected HistogramPhaseUnwrapping(long addr) { super(addr); }
 
+    // internal usage only
+    public static HistogramPhaseUnwrapping __fromPtr__(long addr) { return new HistogramPhaseUnwrapping(addr); }
 
     //
     // C++:  void getInverseReliabilityMap(Mat& reliabilityMap)

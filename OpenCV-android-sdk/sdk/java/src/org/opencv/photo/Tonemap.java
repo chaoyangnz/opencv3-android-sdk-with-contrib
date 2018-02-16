@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class Tonemap extends Algorithm {
 
     protected Tonemap(long addr) { super(addr); }
 
+    // internal usage only
+    public static Tonemap __fromPtr__(long addr) { return new Tonemap(addr); }
 
     //
     // C++:  float getGamma()

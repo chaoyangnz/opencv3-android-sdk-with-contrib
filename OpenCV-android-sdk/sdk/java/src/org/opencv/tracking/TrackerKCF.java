@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.tracking;
 
-
+import org.opencv.tracking.Tracker;
+import org.opencv.tracking.TrackerKCF;
 
 // C++: class TrackerKCF
 //javadoc: TrackerKCF
@@ -13,6 +13,8 @@ public class TrackerKCF extends Tracker {
 
     protected TrackerKCF(long addr) { super(addr); }
 
+    // internal usage only
+    public static TrackerKCF __fromPtr__(long addr) { return new TrackerKCF(addr); }
 
     public static final int
             GRAY = (1 << 0),
@@ -28,7 +30,7 @@ public class TrackerKCF extends Tracker {
     public static TrackerKCF create()
     {
         
-        TrackerKCF retVal = new TrackerKCF(create_0());
+        TrackerKCF retVal = TrackerKCF.__fromPtr__(create_0());
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,9 @@ package org.opencv.aruco;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.opencv.aruco.Board;
+import org.opencv.aruco.CharucoBoard;
+import org.opencv.aruco.Dictionary;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint3f;
 import org.opencv.core.Size;
@@ -18,6 +20,8 @@ public class CharucoBoard extends Board {
 
     protected CharucoBoard(long addr) { super(addr); }
 
+    // internal usage only
+    public static CharucoBoard __fromPtr__(long addr) { return new CharucoBoard(addr); }
 
     //
     // C++: static Ptr_CharucoBoard create(int squaresX, int squaresY, float squareLength, float markerLength, Ptr_Dictionary dictionary)
@@ -27,7 +31,7 @@ public class CharucoBoard extends Board {
     public static CharucoBoard create(int squaresX, int squaresY, float squareLength, float markerLength, Dictionary dictionary)
     {
         
-        CharucoBoard retVal = new CharucoBoard(create_0(squaresX, squaresY, squareLength, markerLength, dictionary.getNativeObjAddr()));
+        CharucoBoard retVal = CharucoBoard.__fromPtr__(create_0(squaresX, squaresY, squareLength, markerLength, dictionary.getNativeObjAddr()));
         
         return retVal;
     }

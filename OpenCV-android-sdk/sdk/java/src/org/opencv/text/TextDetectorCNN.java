@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,8 @@ import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfFloat;
 import org.opencv.core.MatOfRect;
+import org.opencv.text.TextDetector;
+import org.opencv.text.TextDetectorCNN;
 import org.opencv.utils.Converters;
 
 // C++: class TextDetectorCNN
@@ -19,6 +20,8 @@ public class TextDetectorCNN extends TextDetector {
 
     protected TextDetectorCNN(long addr) { super(addr); }
 
+    // internal usage only
+    public static TextDetectorCNN __fromPtr__(long addr) { return new TextDetectorCNN(addr); }
 
     //
     // C++: static Ptr_TextDetectorCNN create(String modelArchFilename, String modelWeightsFilename)
@@ -28,7 +31,7 @@ public class TextDetectorCNN extends TextDetector {
     public static TextDetectorCNN create(String modelArchFilename, String modelWeightsFilename)
     {
         
-        TextDetectorCNN retVal = new TextDetectorCNN(create_0(modelArchFilename, modelWeightsFilename));
+        TextDetectorCNN retVal = TextDetectorCNN.__fromPtr__(create_0(modelArchFilename, modelWeightsFilename));
         
         return retVal;
     }

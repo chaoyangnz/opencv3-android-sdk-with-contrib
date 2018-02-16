@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class FastGlobalSmootherFilter extends Algorithm {
 
     protected FastGlobalSmootherFilter(long addr) { super(addr); }
 
+    // internal usage only
+    public static FastGlobalSmootherFilter __fromPtr__(long addr) { return new FastGlobalSmootherFilter(addr); }
 
     //
     // C++:  void filter(Mat src, Mat& dst)

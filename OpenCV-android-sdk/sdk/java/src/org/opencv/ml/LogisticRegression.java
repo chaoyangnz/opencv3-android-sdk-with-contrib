@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,8 @@ package org.opencv.ml;
 import java.lang.String;
 import org.opencv.core.Mat;
 import org.opencv.core.TermCriteria;
+import org.opencv.ml.LogisticRegression;
+import org.opencv.ml.StatModel;
 
 // C++: class LogisticRegression
 //javadoc: LogisticRegression
@@ -15,6 +16,8 @@ public class LogisticRegression extends StatModel {
 
     protected LogisticRegression(long addr) { super(addr); }
 
+    // internal usage only
+    public static LogisticRegression __fromPtr__(long addr) { return new LogisticRegression(addr); }
 
     public static final int
             REG_DISABLE = -1,
@@ -46,7 +49,7 @@ public class LogisticRegression extends StatModel {
     public static LogisticRegression create()
     {
         
-        LogisticRegression retVal = new LogisticRegression(create_0());
+        LogisticRegression retVal = LogisticRegression.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -60,7 +63,7 @@ public class LogisticRegression extends StatModel {
     public static LogisticRegression load(String filepath, String nodeName)
     {
         
-        LogisticRegression retVal = new LogisticRegression(load_0(filepath, nodeName));
+        LogisticRegression retVal = LogisticRegression.__fromPtr__(load_0(filepath, nodeName));
         
         return retVal;
     }
@@ -69,7 +72,7 @@ public class LogisticRegression extends StatModel {
     public static LogisticRegression load(String filepath)
     {
         
-        LogisticRegression retVal = new LogisticRegression(load_1(filepath));
+        LogisticRegression retVal = LogisticRegression.__fromPtr__(load_1(filepath));
         
         return retVal;
     }

@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.photo;
 
-
+import org.opencv.photo.CalibrateCRF;
 
 // C++: class CalibrateDebevec
 //javadoc: CalibrateDebevec
@@ -13,6 +12,8 @@ public class CalibrateDebevec extends CalibrateCRF {
 
     protected CalibrateDebevec(long addr) { super(addr); }
 
+    // internal usage only
+    public static CalibrateDebevec __fromPtr__(long addr) { return new CalibrateDebevec(addr); }
 
     //
     // C++:  bool getRandom()

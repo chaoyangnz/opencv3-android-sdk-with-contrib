@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -18,6 +17,8 @@ public class EdgeBoxes extends Algorithm {
 
     protected EdgeBoxes(long addr) { super(addr); }
 
+    // internal usage only
+    public static EdgeBoxes __fromPtr__(long addr) { return new EdgeBoxes(addr); }
 
     //
     // C++:  float getAlpha()

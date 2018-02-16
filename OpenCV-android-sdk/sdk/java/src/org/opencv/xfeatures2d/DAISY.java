@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,7 @@ package org.opencv.xfeatures2d;
 
 import org.opencv.core.Mat;
 import org.opencv.features2d.Feature2D;
+import org.opencv.xfeatures2d.DAISY;
 
 // C++: class DAISY
 //javadoc: DAISY
@@ -14,6 +14,8 @@ public class DAISY extends Feature2D {
 
     protected DAISY(long addr) { super(addr); }
 
+    // internal usage only
+    public static DAISY __fromPtr__(long addr) { return new DAISY(addr); }
 
     public static final int
             NRM_NONE = 100,
@@ -30,7 +32,7 @@ public class DAISY extends Feature2D {
     public static DAISY create(float radius, int q_radius, int q_theta, int q_hist, int norm, Mat H, boolean interpolation, boolean use_orientation)
     {
         
-        DAISY retVal = new DAISY(create_0(radius, q_radius, q_theta, q_hist, norm, H.nativeObj, interpolation, use_orientation));
+        DAISY retVal = DAISY.__fromPtr__(create_0(radius, q_radius, q_theta, q_hist, norm, H.nativeObj, interpolation, use_orientation));
         
         return retVal;
     }
@@ -39,7 +41,7 @@ public class DAISY extends Feature2D {
     public static DAISY create()
     {
         
-        DAISY retVal = new DAISY(create_1());
+        DAISY retVal = DAISY.__fromPtr__(create_1());
         
         return retVal;
     }

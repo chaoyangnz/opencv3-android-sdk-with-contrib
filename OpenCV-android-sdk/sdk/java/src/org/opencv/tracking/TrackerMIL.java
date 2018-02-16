@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.tracking;
 
-
+import org.opencv.tracking.Tracker;
+import org.opencv.tracking.TrackerMIL;
 
 // C++: class TrackerMIL
 //javadoc: TrackerMIL
@@ -13,6 +13,8 @@ public class TrackerMIL extends Tracker {
 
     protected TrackerMIL(long addr) { super(addr); }
 
+    // internal usage only
+    public static TrackerMIL __fromPtr__(long addr) { return new TrackerMIL(addr); }
 
     //
     // C++: static Ptr_TrackerMIL create()
@@ -22,7 +24,7 @@ public class TrackerMIL extends Tracker {
     public static TrackerMIL create()
     {
         
-        TrackerMIL retVal = new TrackerMIL(create_0());
+        TrackerMIL retVal = TrackerMIL.__fromPtr__(create_0());
         
         return retVal;
     }

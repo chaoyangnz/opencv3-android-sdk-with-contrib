@@ -1,10 +1,11 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.ml;
 
 import org.opencv.core.Mat;
+import org.opencv.ml.KNearest;
+import org.opencv.ml.StatModel;
 
 // C++: class KNearest
 //javadoc: KNearest
@@ -13,6 +14,8 @@ public class KNearest extends StatModel {
 
     protected KNearest(long addr) { super(addr); }
 
+    // internal usage only
+    public static KNearest __fromPtr__(long addr) { return new KNearest(addr); }
 
     public static final int
             BRUTE_FORCE = 1,
@@ -27,7 +30,7 @@ public class KNearest extends StatModel {
     public static KNearest create()
     {
         
-        KNearest retVal = new KNearest(create_0());
+        KNearest retVal = KNearest.__fromPtr__(create_0());
         
         return retVal;
     }

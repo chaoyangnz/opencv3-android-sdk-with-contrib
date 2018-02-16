@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,7 @@ import java.util.List;
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfDMatch;
+import org.opencv.features2d.DescriptorMatcher;
 import org.opencv.utils.Converters;
 
 // C++: class DescriptorMatcher
@@ -19,6 +19,8 @@ public class DescriptorMatcher extends Algorithm {
 
     protected DescriptorMatcher(long addr) { super(addr); }
 
+    // internal usage only
+    public static DescriptorMatcher __fromPtr__(long addr) { return new DescriptorMatcher(addr); }
 
     public static final int
             FLANNBASED = 1,
@@ -37,7 +39,7 @@ public class DescriptorMatcher extends Algorithm {
     public  DescriptorMatcher clone(boolean emptyTrainData)
     {
         
-        DescriptorMatcher retVal = new DescriptorMatcher(clone_0(nativeObj, emptyTrainData));
+        DescriptorMatcher retVal = DescriptorMatcher.__fromPtr__(clone_0(nativeObj, emptyTrainData));
         
         return retVal;
     }
@@ -46,7 +48,7 @@ public class DescriptorMatcher extends Algorithm {
     public  DescriptorMatcher clone()
     {
         
-        DescriptorMatcher retVal = new DescriptorMatcher(clone_1(nativeObj));
+        DescriptorMatcher retVal = DescriptorMatcher.__fromPtr__(clone_1(nativeObj));
         
         return retVal;
     }
@@ -60,7 +62,7 @@ public class DescriptorMatcher extends Algorithm {
     public static DescriptorMatcher create(String descriptorMatcherType)
     {
         
-        DescriptorMatcher retVal = new DescriptorMatcher(create_0(descriptorMatcherType));
+        DescriptorMatcher retVal = DescriptorMatcher.__fromPtr__(create_0(descriptorMatcherType));
         
         return retVal;
     }
@@ -74,7 +76,7 @@ public class DescriptorMatcher extends Algorithm {
     public static DescriptorMatcher create(int matcherType)
     {
         
-        DescriptorMatcher retVal = new DescriptorMatcher(create_1(matcherType));
+        DescriptorMatcher retVal = DescriptorMatcher.__fromPtr__(create_1(matcherType));
         
         return retVal;
     }

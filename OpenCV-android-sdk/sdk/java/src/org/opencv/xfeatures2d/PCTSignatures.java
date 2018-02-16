@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -12,6 +11,7 @@ import org.opencv.core.MatOfFloat;
 import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.utils.Converters;
+import org.opencv.xfeatures2d.PCTSignatures;
 
 // C++: class PCTSignatures
 //javadoc: PCTSignatures
@@ -20,6 +20,8 @@ public class PCTSignatures extends Algorithm {
 
     protected PCTSignatures(long addr) { super(addr); }
 
+    // internal usage only
+    public static PCTSignatures __fromPtr__(long addr) { return new PCTSignatures(addr); }
 
     public static final int
             L0_25 = 0,
@@ -45,7 +47,7 @@ public class PCTSignatures extends Algorithm {
     public static PCTSignatures create(int initSampleCount, int initSeedCount, int pointDistribution)
     {
         
-        PCTSignatures retVal = new PCTSignatures(create_0(initSampleCount, initSeedCount, pointDistribution));
+        PCTSignatures retVal = PCTSignatures.__fromPtr__(create_0(initSampleCount, initSeedCount, pointDistribution));
         
         return retVal;
     }
@@ -54,7 +56,7 @@ public class PCTSignatures extends Algorithm {
     public static PCTSignatures create()
     {
         
-        PCTSignatures retVal = new PCTSignatures(create_1());
+        PCTSignatures retVal = PCTSignatures.__fromPtr__(create_1());
         
         return retVal;
     }
@@ -68,7 +70,7 @@ public class PCTSignatures extends Algorithm {
     public static PCTSignatures create(MatOfPoint2f initSamplingPoints, int initSeedCount)
     {
         Mat initSamplingPoints_mat = initSamplingPoints;
-        PCTSignatures retVal = new PCTSignatures(create_2(initSamplingPoints_mat.nativeObj, initSeedCount));
+        PCTSignatures retVal = PCTSignatures.__fromPtr__(create_2(initSamplingPoints_mat.nativeObj, initSeedCount));
         
         return retVal;
     }
@@ -83,7 +85,7 @@ public class PCTSignatures extends Algorithm {
     {
         Mat initSamplingPoints_mat = initSamplingPoints;
         Mat initClusterSeedIndexes_mat = initClusterSeedIndexes;
-        PCTSignatures retVal = new PCTSignatures(create_3(initSamplingPoints_mat.nativeObj, initClusterSeedIndexes_mat.nativeObj));
+        PCTSignatures retVal = PCTSignatures.__fromPtr__(create_3(initSamplingPoints_mat.nativeObj, initClusterSeedIndexes_mat.nativeObj));
         
         return retVal;
     }

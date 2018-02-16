@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,8 @@ package org.opencv.face;
 import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
+import org.opencv.face.FaceRecognizer;
+import org.opencv.face.LBPHFaceRecognizer;
 import org.opencv.utils.Converters;
 
 // C++: class LBPHFaceRecognizer
@@ -16,6 +17,8 @@ public class LBPHFaceRecognizer extends FaceRecognizer {
 
     protected LBPHFaceRecognizer(long addr) { super(addr); }
 
+    // internal usage only
+    public static LBPHFaceRecognizer __fromPtr__(long addr) { return new LBPHFaceRecognizer(addr); }
 
     //
     // C++:  Mat getLabels()
@@ -39,7 +42,7 @@ public class LBPHFaceRecognizer extends FaceRecognizer {
     public static LBPHFaceRecognizer create(int radius, int neighbors, int grid_x, int grid_y, double threshold)
     {
         
-        LBPHFaceRecognizer retVal = new LBPHFaceRecognizer(create_0(radius, neighbors, grid_x, grid_y, threshold));
+        LBPHFaceRecognizer retVal = LBPHFaceRecognizer.__fromPtr__(create_0(radius, neighbors, grid_x, grid_y, threshold));
         
         return retVal;
     }
@@ -48,7 +51,7 @@ public class LBPHFaceRecognizer extends FaceRecognizer {
     public static LBPHFaceRecognizer create()
     {
         
-        LBPHFaceRecognizer retVal = new LBPHFaceRecognizer(create_1());
+        LBPHFaceRecognizer retVal = LBPHFaceRecognizer.__fromPtr__(create_1());
         
         return retVal;
     }

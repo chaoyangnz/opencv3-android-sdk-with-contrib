@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.face;
 
-
+import org.opencv.face.BasicFaceRecognizer;
+import org.opencv.face.EigenFaceRecognizer;
 
 // C++: class EigenFaceRecognizer
 //javadoc: EigenFaceRecognizer
@@ -13,6 +13,8 @@ public class EigenFaceRecognizer extends BasicFaceRecognizer {
 
     protected EigenFaceRecognizer(long addr) { super(addr); }
 
+    // internal usage only
+    public static EigenFaceRecognizer __fromPtr__(long addr) { return new EigenFaceRecognizer(addr); }
 
     //
     // C++: static Ptr_EigenFaceRecognizer create(int num_components = 0, double threshold = DBL_MAX)
@@ -22,7 +24,7 @@ public class EigenFaceRecognizer extends BasicFaceRecognizer {
     public static EigenFaceRecognizer create(int num_components, double threshold)
     {
         
-        EigenFaceRecognizer retVal = new EigenFaceRecognizer(create_0(num_components, threshold));
+        EigenFaceRecognizer retVal = EigenFaceRecognizer.__fromPtr__(create_0(num_components, threshold));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class EigenFaceRecognizer extends BasicFaceRecognizer {
     public static EigenFaceRecognizer create()
     {
         
-        EigenFaceRecognizer retVal = new EigenFaceRecognizer(create_1());
+        EigenFaceRecognizer retVal = EigenFaceRecognizer.__fromPtr__(create_1());
         
         return retVal;
     }

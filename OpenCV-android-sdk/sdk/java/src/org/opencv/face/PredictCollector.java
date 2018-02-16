@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,9 @@ public class PredictCollector {
     protected PredictCollector(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static PredictCollector __fromPtr__(long addr) { return new PredictCollector(addr); }
 
     @Override
     protected void finalize() throws Throwable {

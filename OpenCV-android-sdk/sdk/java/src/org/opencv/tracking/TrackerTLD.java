@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.tracking;
 
-
+import org.opencv.tracking.Tracker;
+import org.opencv.tracking.TrackerTLD;
 
 // C++: class TrackerTLD
 //javadoc: TrackerTLD
@@ -13,6 +13,8 @@ public class TrackerTLD extends Tracker {
 
     protected TrackerTLD(long addr) { super(addr); }
 
+    // internal usage only
+    public static TrackerTLD __fromPtr__(long addr) { return new TrackerTLD(addr); }
 
     //
     // C++: static Ptr_TrackerTLD create()
@@ -22,7 +24,7 @@ public class TrackerTLD extends Tracker {
     public static TrackerTLD create()
     {
         
-        TrackerTLD retVal = new TrackerTLD(create_0());
+        TrackerTLD retVal = TrackerTLD.__fromPtr__(create_0());
         
         return retVal;
     }

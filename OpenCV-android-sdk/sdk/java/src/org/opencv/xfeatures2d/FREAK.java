@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,7 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfInt;
 import org.opencv.features2d.Feature2D;
 import org.opencv.utils.Converters;
+import org.opencv.xfeatures2d.FREAK;
 
 // C++: class FREAK
 //javadoc: FREAK
@@ -18,6 +18,8 @@ public class FREAK extends Feature2D {
 
     protected FREAK(long addr) { super(addr); }
 
+    // internal usage only
+    public static FREAK __fromPtr__(long addr) { return new FREAK(addr); }
 
     public static final int
             NB_SCALES = 64,
@@ -33,7 +35,7 @@ public class FREAK extends Feature2D {
     public static FREAK create(boolean orientationNormalized, boolean scaleNormalized, float patternScale, int nOctaves, MatOfInt selectedPairs)
     {
         Mat selectedPairs_mat = selectedPairs;
-        FREAK retVal = new FREAK(create_0(orientationNormalized, scaleNormalized, patternScale, nOctaves, selectedPairs_mat.nativeObj));
+        FREAK retVal = FREAK.__fromPtr__(create_0(orientationNormalized, scaleNormalized, patternScale, nOctaves, selectedPairs_mat.nativeObj));
         
         return retVal;
     }
@@ -42,7 +44,7 @@ public class FREAK extends Feature2D {
     public static FREAK create()
     {
         
-        FREAK retVal = new FREAK(create_1());
+        FREAK retVal = FREAK.__fromPtr__(create_1());
         
         return retVal;
     }

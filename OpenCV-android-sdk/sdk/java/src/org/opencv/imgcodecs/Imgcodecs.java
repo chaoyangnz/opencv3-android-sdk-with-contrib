@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -39,6 +38,7 @@ public class Imgcodecs {
             CV_IMWRITE_PNG_STRATEGY_RLE = 3,
             CV_IMWRITE_PNG_STRATEGY_FIXED = 4,
             CV_IMWRITE_PXM_BINARY = 32,
+            CV_IMWRITE_EXR_TYPE = 48,
             CV_IMWRITE_WEBP_QUALITY = 64,
             CV_IMWRITE_PAM_TUPLETYPE = 128,
             CV_IMWRITE_PAM_FORMAT_NULL = 0,
@@ -72,8 +72,11 @@ public class Imgcodecs {
             IMWRITE_PNG_STRATEGY = 17,
             IMWRITE_PNG_BILEVEL = 18,
             IMWRITE_PXM_BINARY = 32,
+            IMWRITE_EXR_TYPE = (3 << 4) + 0,
             IMWRITE_WEBP_QUALITY = 64,
             IMWRITE_PAM_TUPLETYPE = 128,
+            IMWRITE_EXR_TYPE_HALF = 1,
+            IMWRITE_EXR_TYPE_FLOAT = 2,
             IMWRITE_PNG_STRATEGY_DEFAULT = 0,
             IMWRITE_PNG_STRATEGY_FILTERED = 1,
             IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY = 2,

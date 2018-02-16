@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xphoto;
 
 import org.opencv.core.Mat;
+import org.opencv.xphoto.WhiteBalancer;
 
 // C++: class LearningBasedWB
 //javadoc: LearningBasedWB
@@ -13,6 +13,8 @@ public class LearningBasedWB extends WhiteBalancer {
 
     protected LearningBasedWB(long addr) { super(addr); }
 
+    // internal usage only
+    public static LearningBasedWB __fromPtr__(long addr) { return new LearningBasedWB(addr); }
 
     //
     // C++:  float getSaturationThreshold()

@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.calib3d;
 
-
+import org.opencv.calib3d.StereoMatcher;
+import org.opencv.calib3d.StereoSGBM;
 
 // C++: class StereoSGBM
 //javadoc: StereoSGBM
@@ -13,6 +13,8 @@ public class StereoSGBM extends StereoMatcher {
 
     protected StereoSGBM(long addr) { super(addr); }
 
+    // internal usage only
+    public static StereoSGBM __fromPtr__(long addr) { return new StereoSGBM(addr); }
 
     public static final int
             MODE_SGBM = 0,
@@ -29,7 +31,7 @@ public class StereoSGBM extends StereoMatcher {
     public static StereoSGBM create(int minDisparity, int numDisparities, int blockSize, int P1, int P2, int disp12MaxDiff, int preFilterCap, int uniquenessRatio, int speckleWindowSize, int speckleRange, int mode)
     {
         
-        StereoSGBM retVal = new StereoSGBM(create_0(minDisparity, numDisparities, blockSize, P1, P2, disp12MaxDiff, preFilterCap, uniquenessRatio, speckleWindowSize, speckleRange, mode));
+        StereoSGBM retVal = StereoSGBM.__fromPtr__(create_0(minDisparity, numDisparities, blockSize, P1, P2, disp12MaxDiff, preFilterCap, uniquenessRatio, speckleWindowSize, speckleRange, mode));
         
         return retVal;
     }
@@ -38,7 +40,7 @@ public class StereoSGBM extends StereoMatcher {
     public static StereoSGBM create()
     {
         
-        StereoSGBM retVal = new StereoSGBM(create_1());
+        StereoSGBM retVal = StereoSGBM.__fromPtr__(create_1());
         
         return retVal;
     }

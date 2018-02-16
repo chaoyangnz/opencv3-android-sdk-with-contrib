@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -13,6 +12,8 @@ public class FacemarkKazemi extends Algorithm {
 
     protected FacemarkKazemi(long addr) { super(addr); }
 
+    // internal usage only
+    public static FacemarkKazemi __fromPtr__(long addr) { return new FacemarkKazemi(addr); }
 
     @Override
     protected void finalize() throws Throwable {

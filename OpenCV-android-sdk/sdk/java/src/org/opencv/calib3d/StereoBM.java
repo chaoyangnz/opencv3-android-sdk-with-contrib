@@ -1,9 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.calib3d;
 
+import org.opencv.calib3d.StereoBM;
+import org.opencv.calib3d.StereoMatcher;
 import org.opencv.core.Rect;
 
 // C++: class StereoBM
@@ -13,6 +14,8 @@ public class StereoBM extends StereoMatcher {
 
     protected StereoBM(long addr) { super(addr); }
 
+    // internal usage only
+    public static StereoBM __fromPtr__(long addr) { return new StereoBM(addr); }
 
     public static final int
             PREFILTER_NORMALIZED_RESPONSE = 0,
@@ -27,7 +30,7 @@ public class StereoBM extends StereoMatcher {
     public static StereoBM create(int numDisparities, int blockSize)
     {
         
-        StereoBM retVal = new StereoBM(create_0(numDisparities, blockSize));
+        StereoBM retVal = StereoBM.__fromPtr__(create_0(numDisparities, blockSize));
         
         return retVal;
     }
@@ -36,7 +39,7 @@ public class StereoBM extends StereoMatcher {
     public static StereoBM create()
     {
         
-        StereoBM retVal = new StereoBM(create_1());
+        StereoBM retVal = StereoBM.__fromPtr__(create_1());
         
         return retVal;
     }

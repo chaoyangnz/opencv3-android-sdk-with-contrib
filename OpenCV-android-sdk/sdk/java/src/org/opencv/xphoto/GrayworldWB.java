@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xphoto;
 
-
+import org.opencv.xphoto.WhiteBalancer;
 
 // C++: class GrayworldWB
 //javadoc: GrayworldWB
@@ -13,6 +12,8 @@ public class GrayworldWB extends WhiteBalancer {
 
     protected GrayworldWB(long addr) { super(addr); }
 
+    // internal usage only
+    public static GrayworldWB __fromPtr__(long addr) { return new GrayworldWB(addr); }
 
     //
     // C++:  float getSaturationThreshold()

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class RFFeatureGetter extends Algorithm {
 
     protected RFFeatureGetter(long addr) { super(addr); }
 
+    // internal usage only
+    public static RFFeatureGetter __fromPtr__(long addr) { return new RFFeatureGetter(addr); }
 
     //
     // C++:  void getFeatures(Mat src, Mat features, int gnrmRad, int gsmthRad, int shrink, int outNum, int gradNum)

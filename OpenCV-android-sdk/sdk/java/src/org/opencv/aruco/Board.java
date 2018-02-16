@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.aruco;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.opencv.aruco.Board;
+import org.opencv.aruco.Dictionary;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint3f;
@@ -21,6 +22,9 @@ public class Board {
 
     public long getNativeObjAddr() { return nativeObj; }
 
+    // internal usage only
+    public static Board __fromPtr__(long addr) { return new Board(addr); }
+
     //
     // C++: static Ptr_Board create(vector_Mat objPoints, Ptr_Dictionary dictionary, Mat ids)
     //
@@ -29,7 +33,7 @@ public class Board {
     public static Board create(List<Mat> objPoints, Dictionary dictionary, Mat ids)
     {
         Mat objPoints_mat = Converters.vector_Mat_to_Mat(objPoints);
-        Board retVal = new Board(create_0(objPoints_mat.nativeObj, dictionary.getNativeObjAddr(), ids.nativeObj));
+        Board retVal = Board.__fromPtr__(create_0(objPoints_mat.nativeObj, dictionary.getNativeObjAddr(), ids.nativeObj));
         
         return retVal;
     }
@@ -57,7 +61,7 @@ public class Board {
     public  Dictionary get_dictionary()
     {
         
-        Dictionary retVal = new Dictionary(get_dictionary_0(nativeObj));
+        Dictionary retVal = Dictionary.__fromPtr__(get_dictionary_0(nativeObj));
         
         return retVal;
     }

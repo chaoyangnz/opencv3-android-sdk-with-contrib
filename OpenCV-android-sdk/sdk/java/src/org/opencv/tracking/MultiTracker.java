@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,8 @@ import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect2d;
 import org.opencv.core.Rect2d;
+import org.opencv.tracking.MultiTracker;
+import org.opencv.tracking.Tracker;
 import org.opencv.utils.Converters;
 
 // C++: class MultiTracker
@@ -19,6 +20,8 @@ public class MultiTracker extends Algorithm {
 
     protected MultiTracker(long addr) { super(addr); }
 
+    // internal usage only
+    public static MultiTracker __fromPtr__(long addr) { return new MultiTracker(addr); }
 
     //
     // C++:   MultiTracker()
@@ -42,7 +45,7 @@ public class MultiTracker extends Algorithm {
     public static MultiTracker create()
     {
         
-        MultiTracker retVal = new MultiTracker(create_0());
+        MultiTracker retVal = MultiTracker.__fromPtr__(create_0());
         
         return retVal;
     }

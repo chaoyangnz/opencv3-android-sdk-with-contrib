@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -10,6 +9,8 @@ import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
 import org.opencv.utils.Converters;
+import org.opencv.ximgproc.GraphSegmentation;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategy;
 
 // C++: class SelectiveSearchSegmentation
 //javadoc: SelectiveSearchSegmentation
@@ -18,6 +19,8 @@ public class SelectiveSearchSegmentation extends Algorithm {
 
     protected SelectiveSearchSegmentation(long addr) { super(addr); }
 
+    // internal usage only
+    public static SelectiveSearchSegmentation __fromPtr__(long addr) { return new SelectiveSearchSegmentation(addr); }
 
     //
     // C++:  void addGraphSegmentation(Ptr_GraphSegmentation g)

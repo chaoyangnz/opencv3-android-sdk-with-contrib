@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -18,6 +17,9 @@ public class BOWTrainer {
     protected BOWTrainer(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static BOWTrainer __fromPtr__(long addr) { return new BOWTrainer(addr); }
 
     //
     // C++:  Mat cluster(Mat descriptors)

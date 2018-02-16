@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,8 @@ public class CLAHE extends Algorithm {
 
     protected CLAHE(long addr) { super(addr); }
 
+    // internal usage only
+    public static CLAHE __fromPtr__(long addr) { return new CLAHE(addr); }
 
     //
     // C++:  Size getTilesGridSize()

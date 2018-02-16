@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,9 @@ public class DictValue {
     protected DictValue(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static DictValue __fromPtr__(long addr) { return new DictValue(addr); }
 
     //
     // C++:   DictValue(String s)

@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.video;
 
-
+import org.opencv.video.BackgroundSubtractor;
 
 // C++: class BackgroundSubtractorKNN
 //javadoc: BackgroundSubtractorKNN
@@ -13,6 +12,8 @@ public class BackgroundSubtractorKNN extends BackgroundSubtractor {
 
     protected BackgroundSubtractorKNN(long addr) { super(addr); }
 
+    // internal usage only
+    public static BackgroundSubtractorKNN __fromPtr__(long addr) { return new BackgroundSubtractorKNN(addr); }
 
     //
     // C++:  bool getDetectShadows()

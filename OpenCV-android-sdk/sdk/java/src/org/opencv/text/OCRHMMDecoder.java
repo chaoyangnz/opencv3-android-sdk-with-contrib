@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.text;
 
 import java.lang.String;
 import org.opencv.core.Mat;
+import org.opencv.text.BaseOCR;
+import org.opencv.text.OCRHMMDecoder;
 
 // C++: class OCRHMMDecoder
 //javadoc: OCRHMMDecoder
@@ -14,6 +15,8 @@ public class OCRHMMDecoder extends BaseOCR {
 
     protected OCRHMMDecoder(long addr) { super(addr); }
 
+    // internal usage only
+    public static OCRHMMDecoder __fromPtr__(long addr) { return new OCRHMMDecoder(addr); }
 
     //
     // C++: static Ptr_OCRHMMDecoder create(Ptr_OCRHMMDecoder_ClassifierCallback classifier, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode = OCR_DECODER_VITERBI)
@@ -30,7 +33,7 @@ public class OCRHMMDecoder extends BaseOCR {
     public static OCRHMMDecoder create(String filename, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table, int mode, int classifier)
     {
         
-        OCRHMMDecoder retVal = new OCRHMMDecoder(create_0(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj, mode, classifier));
+        OCRHMMDecoder retVal = OCRHMMDecoder.__fromPtr__(create_0(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj, mode, classifier));
         
         return retVal;
     }
@@ -39,7 +42,7 @@ public class OCRHMMDecoder extends BaseOCR {
     public static OCRHMMDecoder create(String filename, String vocabulary, Mat transition_probabilities_table, Mat emission_probabilities_table)
     {
         
-        OCRHMMDecoder retVal = new OCRHMMDecoder(create_1(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj));
+        OCRHMMDecoder retVal = OCRHMMDecoder.__fromPtr__(create_1(filename, vocabulary, transition_probabilities_table.nativeObj, emission_probabilities_table.nativeObj));
         
         return retVal;
     }

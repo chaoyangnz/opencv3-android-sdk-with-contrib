@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -15,6 +14,9 @@ public class ClassifierCallback {
     protected ClassifierCallback(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static ClassifierCallback __fromPtr__(long addr) { return new ClassifierCallback(addr); }
 
     @Override
     protected void finalize() throws Throwable {

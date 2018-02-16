@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -13,6 +12,8 @@ public class Facemark extends Algorithm {
 
     protected Facemark(long addr) { super(addr); }
 
+    // internal usage only
+    public static Facemark __fromPtr__(long addr) { return new Facemark(addr); }
 
     @Override
     protected void finalize() throws Throwable {

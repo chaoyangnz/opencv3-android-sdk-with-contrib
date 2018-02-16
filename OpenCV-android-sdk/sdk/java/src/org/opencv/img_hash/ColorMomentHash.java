@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.img_hash;
 
-
+import org.opencv.img_hash.ColorMomentHash;
 
 // C++: class ColorMomentHash
 //javadoc: ColorMomentHash
@@ -13,6 +12,8 @@ public class ColorMomentHash extends ImgHashBase {
 
     protected ColorMomentHash(long addr) { super(addr); }
 
+    // internal usage only
+    public static ColorMomentHash __fromPtr__(long addr) { return new ColorMomentHash(addr); }
 
     //
     // C++: static Ptr_ColorMomentHash create()
@@ -22,7 +23,7 @@ public class ColorMomentHash extends ImgHashBase {
     public static ColorMomentHash create()
     {
         
-        ColorMomentHash retVal = new ColorMomentHash(create_0());
+        ColorMomentHash retVal = ColorMomentHash.__fromPtr__(create_0());
         
         return retVal;
     }

@@ -110,7 +110,7 @@ class AsyncServiceHelper
 
                 public void wait_install()
                 {
-                    Log.e(TAG, "Instalation was not started! Nothing to wait!");
+                    Log.e(TAG, "Installation was not started! Nothing to wait!");
                 }
             };
 
@@ -351,7 +351,7 @@ class AsyncServiceHelper
         {
             Log.d(TAG, "Cannot load library \"" + AbsPath + "\"");
             e.printStackTrace();
-            result &= false;
+            result = false;
         }
 
         return result;
@@ -377,7 +377,7 @@ class AsyncServiceHelper
             {
                 // If the dependencies list is not defined or empty.
                 String AbsLibraryPath = Path + File.separator + "libopencv_java3.so";
-                result &= loadLibrary(AbsLibraryPath);
+                result = loadLibrary(AbsLibraryPath);
             }
 
             return result;

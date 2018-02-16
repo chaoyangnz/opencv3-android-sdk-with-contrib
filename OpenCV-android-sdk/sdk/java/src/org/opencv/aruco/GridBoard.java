@@ -1,9 +1,11 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.aruco;
 
+import org.opencv.aruco.Board;
+import org.opencv.aruco.Dictionary;
+import org.opencv.aruco.GridBoard;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
 
@@ -14,6 +16,8 @@ public class GridBoard extends Board {
 
     protected GridBoard(long addr) { super(addr); }
 
+    // internal usage only
+    public static GridBoard __fromPtr__(long addr) { return new GridBoard(addr); }
 
     //
     // C++: static Ptr_GridBoard create(int markersX, int markersY, float markerLength, float markerSeparation, Ptr_Dictionary dictionary, int firstMarker = 0)
@@ -23,7 +27,7 @@ public class GridBoard extends Board {
     public static GridBoard create(int markersX, int markersY, float markerLength, float markerSeparation, Dictionary dictionary, int firstMarker)
     {
         
-        GridBoard retVal = new GridBoard(create_0(markersX, markersY, markerLength, markerSeparation, dictionary.getNativeObjAddr(), firstMarker));
+        GridBoard retVal = GridBoard.__fromPtr__(create_0(markersX, markersY, markerLength, markerSeparation, dictionary.getNativeObjAddr(), firstMarker));
         
         return retVal;
     }
@@ -32,7 +36,7 @@ public class GridBoard extends Board {
     public static GridBoard create(int markersX, int markersY, float markerLength, float markerSeparation, Dictionary dictionary)
     {
         
-        GridBoard retVal = new GridBoard(create_1(markersX, markersY, markerLength, markerSeparation, dictionary.getNativeObjAddr()));
+        GridBoard retVal = GridBoard.__fromPtr__(create_1(markersX, markersY, markerLength, markerSeparation, dictionary.getNativeObjAddr()));
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -17,6 +16,8 @@ public class CalibrateCRF extends Algorithm {
 
     protected CalibrateCRF(long addr) { super(addr); }
 
+    // internal usage only
+    public static CalibrateCRF __fromPtr__(long addr) { return new CalibrateCRF(addr); }
 
     //
     // C++:  void process(vector_Mat src, Mat& dst, Mat times)

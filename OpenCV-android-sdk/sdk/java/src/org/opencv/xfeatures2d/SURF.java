@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xfeatures2d;
 
 import org.opencv.features2d.Feature2D;
+import org.opencv.xfeatures2d.SURF;
 
 // C++: class SURF
 //javadoc: SURF
@@ -13,6 +13,8 @@ public class SURF extends Feature2D {
 
     protected SURF(long addr) { super(addr); }
 
+    // internal usage only
+    public static SURF __fromPtr__(long addr) { return new SURF(addr); }
 
     //
     // C++: static Ptr_SURF create(double hessianThreshold = 100, int nOctaves = 4, int nOctaveLayers = 3, bool extended = false, bool upright = false)
@@ -22,7 +24,7 @@ public class SURF extends Feature2D {
     public static SURF create(double hessianThreshold, int nOctaves, int nOctaveLayers, boolean extended, boolean upright)
     {
         
-        SURF retVal = new SURF(create_0(hessianThreshold, nOctaves, nOctaveLayers, extended, upright));
+        SURF retVal = SURF.__fromPtr__(create_0(hessianThreshold, nOctaves, nOctaveLayers, extended, upright));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class SURF extends Feature2D {
     public static SURF create()
     {
         
-        SURF retVal = new SURF(create_1());
+        SURF retVal = SURF.__fromPtr__(create_1());
         
         return retVal;
     }

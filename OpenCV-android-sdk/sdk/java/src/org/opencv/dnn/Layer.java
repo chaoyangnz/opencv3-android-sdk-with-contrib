@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -18,6 +17,8 @@ public class Layer extends Algorithm {
 
     protected Layer(long addr) { super(addr); }
 
+    // internal usage only
+    public static Layer __fromPtr__(long addr) { return new Layer(addr); }
 
     //
     // C++:  vector_Mat finalize(vector_Mat inputs)

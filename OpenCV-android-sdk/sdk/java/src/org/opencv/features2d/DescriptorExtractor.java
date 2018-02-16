@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -9,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfKeyPoint;
+import org.opencv.features2d.DescriptorExtractor;
 import org.opencv.utils.Converters;
 
 // C++: class javaDescriptorExtractor
@@ -20,6 +20,9 @@ public class DescriptorExtractor {
     protected DescriptorExtractor(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static DescriptorExtractor __fromPtr__(long addr) { return new DescriptorExtractor(addr); }
 
     private static final int
             OPPONENTEXTRACTOR = 1000;
@@ -50,7 +53,7 @@ public class DescriptorExtractor {
     public static DescriptorExtractor create(int extractorType)
     {
         
-        DescriptorExtractor retVal = new DescriptorExtractor(create_0(extractorType));
+        DescriptorExtractor retVal = DescriptorExtractor.__fromPtr__(create_0(extractorType));
         
         return retVal;
     }

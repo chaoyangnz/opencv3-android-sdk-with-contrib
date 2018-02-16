@@ -18,7 +18,7 @@ OPENCV_LIBS_DIR:=$(OPENCV_THIS_DIR)/../libs/$(OPENCV_TARGET_ARCH_ABI)
 OPENCV_3RDPARTY_LIBS_DIR:=$(OPENCV_THIS_DIR)/../3rdparty/libs/$(OPENCV_TARGET_ARCH_ABI)
 OPENCV_BASEDIR:=
 OPENCV_LOCAL_C_INCLUDES:="$(LOCAL_PATH)/$(OPENCV_THIS_DIR)/include/opencv" "$(LOCAL_PATH)/$(OPENCV_THIS_DIR)/include"
-OPENCV_MODULES:=stitching superres videostab aruco bgsegm bioinspired ccalib dpm face photo fuzzy img_hash line_descriptor optflow reg rgbd saliency stereo structured_light phase_unwrapping surface_matching tracking datasets text dnn plot xfeatures2d shape video ml ximgproc calib3d features2d highgui videoio flann xobjdetect imgcodecs objdetect xphoto imgproc core
+OPENCV_MODULES:=stitching superres videostab aruco bgsegm bioinspired ccalib dnn_objdetect dpm face photo fuzzy hfs img_hash line_descriptor optflow reg rgbd saliency stereo structured_light phase_unwrapping surface_matching tracking datasets text dnn plot xfeatures2d shape video ml ximgproc calib3d features2d highgui videoio flann xobjdetect imgcodecs objdetect xphoto imgproc core
 OPENCV_SUB_MK:=$(call my-dir)/OpenCV-$(TARGET_ARCH_ABI).mk
 
 ifeq ($(OPENCV_LIB_TYPE),)
@@ -87,6 +87,16 @@ LOCAL_CFLAGS:=$(USER_LOCAL_CFLAGS)
 LOCAL_STATIC_LIBRARIES:=$(USER_LOCAL_STATIC_LIBRARIES)
 LOCAL_SHARED_LIBRARIES:=$(USER_LOCAL_SHARED_LIBRARIES)
 LOCAL_LDLIBS:=$(USER_LOCAL_LDLIBS)
+
+# Details: #10229
+ifeq ($(OPENCV_SKIP_ANDROID_IPP_FIX_1),)
+  LOCAL_LDFLAGS += -Wl,--exclude-libs,libippicv.a
+  LOCAL_LDFLAGS += -Wl,--exclude-libs,libippiw.a
+else
+  ifeq ($(OPENCV_SKIP_ANDROID_IPP_FIX_2),)
+    LOCAL_LDFLAGS += -Wl,-Bsymbolic
+  endif
+endif
 
 LOCAL_C_INCLUDES += $(OPENCV_LOCAL_C_INCLUDES)
 LOCAL_CFLAGS     += $(OPENCV_LOCAL_CFLAGS)

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class SuperpixelSLIC extends Algorithm {
 
     protected SuperpixelSLIC(long addr) { super(addr); }
 
+    // internal usage only
+    public static SuperpixelSLIC __fromPtr__(long addr) { return new SuperpixelSLIC(addr); }
 
     //
     // C++:  int getNumberOfSuperpixels()

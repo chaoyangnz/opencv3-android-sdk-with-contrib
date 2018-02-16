@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.photo;
 
-
+import org.opencv.photo.Tonemap;
 
 // C++: class TonemapDurand
 //javadoc: TonemapDurand
@@ -13,6 +12,8 @@ public class TonemapDurand extends Tonemap {
 
     protected TonemapDurand(long addr) { super(addr); }
 
+    // internal usage only
+    public static TonemapDurand __fromPtr__(long addr) { return new TonemapDurand(addr); }
 
     //
     // C++:  float getContrast()

@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.bioinspired;
 
 import java.lang.String;
+import org.opencv.bioinspired.TransientAreasSegmentationModule;
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
@@ -16,6 +16,8 @@ public class TransientAreasSegmentationModule extends Algorithm {
 
     protected TransientAreasSegmentationModule(long addr) { super(addr); }
 
+    // internal usage only
+    public static TransientAreasSegmentationModule __fromPtr__(long addr) { return new TransientAreasSegmentationModule(addr); }
 
     //
     // C++: static Ptr_TransientAreasSegmentationModule create(Size inputSize)
@@ -25,7 +27,7 @@ public class TransientAreasSegmentationModule extends Algorithm {
     public static TransientAreasSegmentationModule create(Size inputSize)
     {
         
-        TransientAreasSegmentationModule retVal = new TransientAreasSegmentationModule(create_0(inputSize.width, inputSize.height));
+        TransientAreasSegmentationModule retVal = TransientAreasSegmentationModule.__fromPtr__(create_0(inputSize.width, inputSize.height));
         
         return retVal;
     }

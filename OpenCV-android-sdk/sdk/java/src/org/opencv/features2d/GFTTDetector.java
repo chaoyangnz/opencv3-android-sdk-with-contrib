@@ -1,10 +1,11 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.features2d;
 
 import java.lang.String;
+import org.opencv.features2d.Feature2D;
+import org.opencv.features2d.GFTTDetector;
 
 // C++: class GFTTDetector
 //javadoc: GFTTDetector
@@ -13,6 +14,8 @@ public class GFTTDetector extends Feature2D {
 
     protected GFTTDetector(long addr) { super(addr); }
 
+    // internal usage only
+    public static GFTTDetector __fromPtr__(long addr) { return new GFTTDetector(addr); }
 
     //
     // C++: static Ptr_GFTTDetector create(int maxCorners, double qualityLevel, double minDistance, int blockSize, int gradiantSize, bool useHarrisDetector = false, double k = 0.04)
@@ -22,7 +25,7 @@ public class GFTTDetector extends Feature2D {
     public static GFTTDetector create(int maxCorners, double qualityLevel, double minDistance, int blockSize, int gradiantSize, boolean useHarrisDetector, double k)
     {
         
-        GFTTDetector retVal = new GFTTDetector(create_0(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize, useHarrisDetector, k));
+        GFTTDetector retVal = GFTTDetector.__fromPtr__(create_0(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize, useHarrisDetector, k));
         
         return retVal;
     }
@@ -31,7 +34,7 @@ public class GFTTDetector extends Feature2D {
     public static GFTTDetector create(int maxCorners, double qualityLevel, double minDistance, int blockSize, int gradiantSize)
     {
         
-        GFTTDetector retVal = new GFTTDetector(create_1(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize));
+        GFTTDetector retVal = GFTTDetector.__fromPtr__(create_1(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize));
         
         return retVal;
     }
@@ -45,7 +48,7 @@ public class GFTTDetector extends Feature2D {
     public static GFTTDetector create(int maxCorners, double qualityLevel, double minDistance, int blockSize, boolean useHarrisDetector, double k)
     {
         
-        GFTTDetector retVal = new GFTTDetector(create_2(maxCorners, qualityLevel, minDistance, blockSize, useHarrisDetector, k));
+        GFTTDetector retVal = GFTTDetector.__fromPtr__(create_2(maxCorners, qualityLevel, minDistance, blockSize, useHarrisDetector, k));
         
         return retVal;
     }
@@ -54,7 +57,7 @@ public class GFTTDetector extends Feature2D {
     public static GFTTDetector create()
     {
         
-        GFTTDetector retVal = new GFTTDetector(create_3());
+        GFTTDetector retVal = GFTTDetector.__fromPtr__(create_3());
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.ml;
 
 import java.lang.String;
 import org.opencv.core.Mat;
+import org.opencv.ml.NormalBayesClassifier;
+import org.opencv.ml.StatModel;
 
 // C++: class NormalBayesClassifier
 //javadoc: NormalBayesClassifier
@@ -14,6 +15,8 @@ public class NormalBayesClassifier extends StatModel {
 
     protected NormalBayesClassifier(long addr) { super(addr); }
 
+    // internal usage only
+    public static NormalBayesClassifier __fromPtr__(long addr) { return new NormalBayesClassifier(addr); }
 
     //
     // C++: static Ptr_NormalBayesClassifier create()
@@ -23,7 +26,7 @@ public class NormalBayesClassifier extends StatModel {
     public static NormalBayesClassifier create()
     {
         
-        NormalBayesClassifier retVal = new NormalBayesClassifier(create_0());
+        NormalBayesClassifier retVal = NormalBayesClassifier.__fromPtr__(create_0());
         
         return retVal;
     }
@@ -37,7 +40,7 @@ public class NormalBayesClassifier extends StatModel {
     public static NormalBayesClassifier load(String filepath, String nodeName)
     {
         
-        NormalBayesClassifier retVal = new NormalBayesClassifier(load_0(filepath, nodeName));
+        NormalBayesClassifier retVal = NormalBayesClassifier.__fromPtr__(load_0(filepath, nodeName));
         
         return retVal;
     }
@@ -46,7 +49,7 @@ public class NormalBayesClassifier extends StatModel {
     public static NormalBayesClassifier load(String filepath)
     {
         
-        NormalBayesClassifier retVal = new NormalBayesClassifier(load_1(filepath));
+        NormalBayesClassifier retVal = NormalBayesClassifier.__fromPtr__(load_1(filepath));
         
         return retVal;
     }

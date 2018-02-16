@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class SuperpixelLSC extends Algorithm {
 
     protected SuperpixelLSC(long addr) { super(addr); }
 
+    // internal usage only
+    public static SuperpixelLSC __fromPtr__(long addr) { return new SuperpixelLSC(addr); }
 
     //
     // C++:  int getNumberOfSuperpixels()

@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.xfeatures2d;
 
 import org.opencv.features2d.Feature2D;
+import org.opencv.xfeatures2d.LUCID;
 
 // C++: class LUCID
 //javadoc: LUCID
@@ -13,6 +13,8 @@ public class LUCID extends Feature2D {
 
     protected LUCID(long addr) { super(addr); }
 
+    // internal usage only
+    public static LUCID __fromPtr__(long addr) { return new LUCID(addr); }
 
     //
     // C++: static Ptr_LUCID create(int lucid_kernel = 1, int blur_kernel = 2)
@@ -22,7 +24,7 @@ public class LUCID extends Feature2D {
     public static LUCID create(int lucid_kernel, int blur_kernel)
     {
         
-        LUCID retVal = new LUCID(create_0(lucid_kernel, blur_kernel));
+        LUCID retVal = LUCID.__fromPtr__(create_0(lucid_kernel, blur_kernel));
         
         return retVal;
     }
@@ -31,7 +33,7 @@ public class LUCID extends Feature2D {
     public static LUCID create()
     {
         
-        LUCID retVal = new LUCID(create_1());
+        LUCID retVal = LUCID.__fromPtr__(create_1());
         
         return retVal;
     }

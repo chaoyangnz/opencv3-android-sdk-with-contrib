@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.text;
 
 import java.lang.String;
 import org.opencv.core.Mat;
+import org.opencv.text.BaseOCR;
+import org.opencv.text.OCRTesseract;
 
 // C++: class OCRTesseract
 //javadoc: OCRTesseract
@@ -14,6 +15,8 @@ public class OCRTesseract extends BaseOCR {
 
     protected OCRTesseract(long addr) { super(addr); }
 
+    // internal usage only
+    public static OCRTesseract __fromPtr__(long addr) { return new OCRTesseract(addr); }
 
     //
     // C++: static Ptr_OCRTesseract create(c_string datapath = 0, c_string language = 0, c_string char_whitelist = 0, int oem = OEM_DEFAULT, int psmode = PSM_AUTO)
@@ -23,7 +26,7 @@ public class OCRTesseract extends BaseOCR {
     public static OCRTesseract create(String datapath, String language, String char_whitelist, int oem, int psmode)
     {
         
-        OCRTesseract retVal = new OCRTesseract(create_0(datapath, language, char_whitelist, oem, psmode));
+        OCRTesseract retVal = OCRTesseract.__fromPtr__(create_0(datapath, language, char_whitelist, oem, psmode));
         
         return retVal;
     }
@@ -32,7 +35,7 @@ public class OCRTesseract extends BaseOCR {
     public static OCRTesseract create()
     {
         
-        OCRTesseract retVal = new OCRTesseract(create_1());
+        OCRTesseract retVal = OCRTesseract.__fromPtr__(create_1());
         
         return retVal;
     }

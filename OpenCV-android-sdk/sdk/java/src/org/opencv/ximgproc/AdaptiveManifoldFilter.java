@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,7 @@ package org.opencv.ximgproc;
 
 import org.opencv.core.Algorithm;
 import org.opencv.core.Mat;
+import org.opencv.ximgproc.AdaptiveManifoldFilter;
 
 // C++: class AdaptiveManifoldFilter
 //javadoc: AdaptiveManifoldFilter
@@ -14,6 +14,8 @@ public class AdaptiveManifoldFilter extends Algorithm {
 
     protected AdaptiveManifoldFilter(long addr) { super(addr); }
 
+    // internal usage only
+    public static AdaptiveManifoldFilter __fromPtr__(long addr) { return new AdaptiveManifoldFilter(addr); }
 
     //
     // C++: static Ptr_AdaptiveManifoldFilter create()
@@ -23,7 +25,7 @@ public class AdaptiveManifoldFilter extends Algorithm {
     public static AdaptiveManifoldFilter create()
     {
         
-        AdaptiveManifoldFilter retVal = new AdaptiveManifoldFilter(create_0());
+        AdaptiveManifoldFilter retVal = AdaptiveManifoldFilter.__fromPtr__(create_0());
         
         return retVal;
     }

@@ -85,16 +85,6 @@ set_target_properties(tbb PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS tbb )
 list(APPEND _IMPORT_CHECK_FILES_FOR_tbb "${_IMPORT_PREFIX}/sdk/native/3rdparty/libs/armeabi/libtbb.a" )
 
-# Import target "tegra_hal" for configuration "Release"
-set_property(TARGET tegra_hal APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(tegra_hal PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/3rdparty/libs/armeabi/libtegra_hal.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS tegra_hal )
-list(APPEND _IMPORT_CHECK_FILES_FOR_tegra_hal "${_IMPORT_PREFIX}/sdk/native/3rdparty/libs/armeabi/libtegra_hal.a" )
-
 # Import target "libprotobuf" for configuration "Release"
 set_property(TARGET libprotobuf APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libprotobuf PROPERTIES
@@ -104,6 +94,16 @@ set_target_properties(libprotobuf PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS libprotobuf )
 list(APPEND _IMPORT_CHECK_FILES_FOR_libprotobuf "${_IMPORT_PREFIX}/sdk/native/3rdparty/libs/armeabi/liblibprotobuf.a" )
+
+# Import target "tegra_hal" for configuration "Release"
+set_property(TARGET tegra_hal APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(tegra_hal PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/3rdparty/libs/armeabi/libtegra_hal.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS tegra_hal )
+list(APPEND _IMPORT_CHECK_FILES_FOR_tegra_hal "${_IMPORT_PREFIX}/sdk/native/3rdparty/libs/armeabi/libtegra_hal.a" )
 
 # Import target "opencv_core" for configuration "Release"
 set_property(TARGET opencv_core APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -245,6 +245,16 @@ set_target_properties(opencv_fuzzy PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS opencv_fuzzy )
 list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_fuzzy "${_IMPORT_PREFIX}/sdk/native/libs/armeabi/libopencv_fuzzy.a" )
 
+# Import target "opencv_hfs" for configuration "Release"
+set_property(TARGET opencv_hfs APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_hfs PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/libs/armeabi/libopencv_hfs.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS opencv_hfs )
+list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_hfs "${_IMPORT_PREFIX}/sdk/native/libs/armeabi/libopencv_hfs.a" )
+
 # Import target "opencv_img_hash" for configuration "Release"
 set_property(TARGET opencv_img_hash APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_img_hash PROPERTIES
@@ -324,6 +334,16 @@ set_target_properties(opencv_bioinspired PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS opencv_bioinspired )
 list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_bioinspired "${_IMPORT_PREFIX}/sdk/native/libs/armeabi/libopencv_bioinspired.a" )
+
+# Import target "opencv_dnn_objdetect" for configuration "Release"
+set_property(TARGET opencv_dnn_objdetect APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_dnn_objdetect PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/libs/armeabi/libopencv_dnn_objdetect.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS opencv_dnn_objdetect )
+list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_dnn_objdetect "${_IMPORT_PREFIX}/sdk/native/libs/armeabi/libopencv_dnn_objdetect.a" )
 
 # Import target "opencv_dpm" for configuration "Release"
 set_property(TARGET opencv_dpm APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

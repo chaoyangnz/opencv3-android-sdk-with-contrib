@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,8 @@ package org.opencv.video;
 
 import org.opencv.core.Size;
 import org.opencv.core.TermCriteria;
+import org.opencv.video.SparseOpticalFlow;
+import org.opencv.video.SparsePyrLKOpticalFlow;
 
 // C++: class SparsePyrLKOpticalFlow
 //javadoc: SparsePyrLKOpticalFlow
@@ -14,6 +15,8 @@ public class SparsePyrLKOpticalFlow extends SparseOpticalFlow {
 
     protected SparsePyrLKOpticalFlow(long addr) { super(addr); }
 
+    // internal usage only
+    public static SparsePyrLKOpticalFlow __fromPtr__(long addr) { return new SparsePyrLKOpticalFlow(addr); }
 
     //
     // C++: static Ptr_SparsePyrLKOpticalFlow create(Size winSize = Size(21, 21), int maxLevel = 3, TermCriteria crit = TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, 0.01), int flags = 0, double minEigThreshold = 1e-4)
@@ -23,7 +26,7 @@ public class SparsePyrLKOpticalFlow extends SparseOpticalFlow {
     public static SparsePyrLKOpticalFlow create(Size winSize, int maxLevel, TermCriteria crit, int flags, double minEigThreshold)
     {
         
-        SparsePyrLKOpticalFlow retVal = new SparsePyrLKOpticalFlow(create_0(winSize.width, winSize.height, maxLevel, crit.type, crit.maxCount, crit.epsilon, flags, minEigThreshold));
+        SparsePyrLKOpticalFlow retVal = SparsePyrLKOpticalFlow.__fromPtr__(create_0(winSize.width, winSize.height, maxLevel, crit.type, crit.maxCount, crit.epsilon, flags, minEigThreshold));
         
         return retVal;
     }
@@ -32,7 +35,7 @@ public class SparsePyrLKOpticalFlow extends SparseOpticalFlow {
     public static SparsePyrLKOpticalFlow create()
     {
         
-        SparsePyrLKOpticalFlow retVal = new SparsePyrLKOpticalFlow(create_1());
+        SparsePyrLKOpticalFlow retVal = SparsePyrLKOpticalFlow.__fromPtr__(create_1());
         
         return retVal;
     }

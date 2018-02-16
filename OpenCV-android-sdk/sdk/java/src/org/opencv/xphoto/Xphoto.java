@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -6,6 +5,9 @@ package org.opencv.xphoto;
 
 import java.lang.String;
 import org.opencv.core.Mat;
+import org.opencv.xphoto.GrayworldWB;
+import org.opencv.xphoto.LearningBasedWB;
+import org.opencv.xphoto.SimpleWB;
 
 // C++: class Xphoto
 //javadoc: Xphoto
@@ -28,7 +30,7 @@ public class Xphoto {
     public static GrayworldWB createGrayworldWB()
     {
         
-        GrayworldWB retVal = new GrayworldWB(createGrayworldWB_0());
+        GrayworldWB retVal = GrayworldWB.__fromPtr__(createGrayworldWB_0());
         
         return retVal;
     }
@@ -42,7 +44,7 @@ public class Xphoto {
     public static LearningBasedWB createLearningBasedWB(String path_to_model)
     {
         
-        LearningBasedWB retVal = new LearningBasedWB(createLearningBasedWB_0(path_to_model));
+        LearningBasedWB retVal = LearningBasedWB.__fromPtr__(createLearningBasedWB_0(path_to_model));
         
         return retVal;
     }
@@ -51,7 +53,7 @@ public class Xphoto {
     public static LearningBasedWB createLearningBasedWB()
     {
         
-        LearningBasedWB retVal = new LearningBasedWB(createLearningBasedWB_1());
+        LearningBasedWB retVal = LearningBasedWB.__fromPtr__(createLearningBasedWB_1());
         
         return retVal;
     }
@@ -65,7 +67,7 @@ public class Xphoto {
     public static SimpleWB createSimpleWB()
     {
         
-        SimpleWB retVal = new SimpleWB(createSimpleWB_0());
+        SimpleWB retVal = SimpleWB.__fromPtr__(createSimpleWB_0());
         
         return retVal;
     }

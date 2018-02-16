@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -13,6 +12,8 @@ public class MSDDetector extends Feature2D {
 
     protected MSDDetector(long addr) { super(addr); }
 
+    // internal usage only
+    public static MSDDetector __fromPtr__(long addr) { return new MSDDetector(addr); }
 
     @Override
     protected void finalize() throws Throwable {

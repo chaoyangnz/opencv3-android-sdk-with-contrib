@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.aruco;
 
-
+import org.opencv.aruco.DetectorParameters;
 
 // C++: class DetectorParameters
 //javadoc: DetectorParameters
@@ -16,6 +15,9 @@ public class DetectorParameters {
 
     public long getNativeObjAddr() { return nativeObj; }
 
+    // internal usage only
+    public static DetectorParameters __fromPtr__(long addr) { return new DetectorParameters(addr); }
+
     //
     // C++: static Ptr_DetectorParameters create()
     //
@@ -24,7 +26,7 @@ public class DetectorParameters {
     public static DetectorParameters create()
     {
         
-        DetectorParameters retVal = new DetectorParameters(create_0());
+        DetectorParameters retVal = DetectorParameters.__fromPtr__(create_0());
         
         return retVal;
     }

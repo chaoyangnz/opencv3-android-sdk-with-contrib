@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class PhaseUnwrapping extends Algorithm {
 
     protected PhaseUnwrapping(long addr) { super(addr); }
 
+    // internal usage only
+    public static PhaseUnwrapping __fromPtr__(long addr) { return new PhaseUnwrapping(addr); }
 
     //
     // C++:  void unwrapPhaseMap(Mat wrappedPhaseMap, Mat& unwrappedPhaseMap, Mat shadowMask = Mat())

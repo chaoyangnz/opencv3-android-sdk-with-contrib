@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class StereoMatcher extends Algorithm {
 
     protected StereoMatcher(long addr) { super(addr); }
 
+    // internal usage only
+    public static StereoMatcher __fromPtr__(long addr) { return new StereoMatcher(addr); }
 
     public static final int
             DISP_SHIFT = 4,

@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.img_hash;
 
-
+import org.opencv.img_hash.AverageHash;
 
 // C++: class AverageHash
 //javadoc: AverageHash
@@ -13,6 +12,8 @@ public class AverageHash extends ImgHashBase {
 
     protected AverageHash(long addr) { super(addr); }
 
+    // internal usage only
+    public static AverageHash __fromPtr__(long addr) { return new AverageHash(addr); }
 
     //
     // C++: static Ptr_AverageHash create()
@@ -22,7 +23,7 @@ public class AverageHash extends ImgHashBase {
     public static AverageHash create()
     {
         
-        AverageHash retVal = new AverageHash(create_0());
+        AverageHash retVal = AverageHash.__fromPtr__(create_0());
         
         return retVal;
     }

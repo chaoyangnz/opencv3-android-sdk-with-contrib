@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.tracking;
 
-
+import org.opencv.tracking.Tracker;
+import org.opencv.tracking.TrackerGOTURN;
 
 // C++: class TrackerGOTURN
 //javadoc: TrackerGOTURN
@@ -13,6 +13,8 @@ public class TrackerGOTURN extends Tracker {
 
     protected TrackerGOTURN(long addr) { super(addr); }
 
+    // internal usage only
+    public static TrackerGOTURN __fromPtr__(long addr) { return new TrackerGOTURN(addr); }
 
     //
     // C++: static Ptr_TrackerGOTURN create()
@@ -22,7 +24,7 @@ public class TrackerGOTURN extends Tracker {
     public static TrackerGOTURN create()
     {
         
-        TrackerGOTURN retVal = new TrackerGOTURN(create_0());
+        TrackerGOTURN retVal = TrackerGOTURN.__fromPtr__(create_0());
         
         return retVal;
     }

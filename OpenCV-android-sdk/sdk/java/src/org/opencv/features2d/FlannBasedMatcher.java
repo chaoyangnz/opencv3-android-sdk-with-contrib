@@ -1,10 +1,10 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.features2d;
 
-
+import org.opencv.features2d.DescriptorMatcher;
+import org.opencv.features2d.FlannBasedMatcher;
 
 // C++: class FlannBasedMatcher
 //javadoc: FlannBasedMatcher
@@ -13,6 +13,8 @@ public class FlannBasedMatcher extends DescriptorMatcher {
 
     protected FlannBasedMatcher(long addr) { super(addr); }
 
+    // internal usage only
+    public static FlannBasedMatcher __fromPtr__(long addr) { return new FlannBasedMatcher(addr); }
 
     //
     // C++:   FlannBasedMatcher(Ptr_flann_IndexParams indexParams = makePtr<flann::KDTreeIndexParams>(), Ptr_flann_SearchParams searchParams = makePtr<flann::SearchParams>())
@@ -36,7 +38,7 @@ public class FlannBasedMatcher extends DescriptorMatcher {
     public static FlannBasedMatcher create()
     {
         
-        FlannBasedMatcher retVal = new FlannBasedMatcher(create_0());
+        FlannBasedMatcher retVal = FlannBasedMatcher.__fromPtr__(create_0());
         
         return retVal;
     }

@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -20,6 +19,9 @@ public class TextDetector {
     protected TextDetector(long addr) { nativeObj = addr; }
 
     public long getNativeObjAddr() { return nativeObj; }
+
+    // internal usage only
+    public static TextDetector __fromPtr__(long addr) { return new TextDetector(addr); }
 
     //
     // C++:  void detect(Mat inputImage, vector_Rect& Bbox, vector_float& confidence)

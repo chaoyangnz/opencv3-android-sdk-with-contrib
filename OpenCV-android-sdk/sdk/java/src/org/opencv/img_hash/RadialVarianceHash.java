@@ -1,10 +1,9 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.img_hash;
 
-
+import org.opencv.img_hash.RadialVarianceHash;
 
 // C++: class RadialVarianceHash
 //javadoc: RadialVarianceHash
@@ -13,6 +12,8 @@ public class RadialVarianceHash extends ImgHashBase {
 
     protected RadialVarianceHash(long addr) { super(addr); }
 
+    // internal usage only
+    public static RadialVarianceHash __fromPtr__(long addr) { return new RadialVarianceHash(addr); }
 
     //
     // C++: static Ptr_RadialVarianceHash create(double sigma = 1, int numOfAngleLine = 180)
@@ -22,7 +23,7 @@ public class RadialVarianceHash extends ImgHashBase {
     public static RadialVarianceHash create(double sigma, int numOfAngleLine)
     {
         
-        RadialVarianceHash retVal = new RadialVarianceHash(create_0(sigma, numOfAngleLine));
+        RadialVarianceHash retVal = RadialVarianceHash.__fromPtr__(create_0(sigma, numOfAngleLine));
         
         return retVal;
     }
@@ -31,7 +32,7 @@ public class RadialVarianceHash extends ImgHashBase {
     public static RadialVarianceHash create()
     {
         
-        RadialVarianceHash retVal = new RadialVarianceHash(create_1());
+        RadialVarianceHash retVal = RadialVarianceHash.__fromPtr__(create_1());
         
         return retVal;
     }

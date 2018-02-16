@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -14,6 +13,8 @@ public class ContourFitting extends Algorithm {
 
     protected ContourFitting(long addr) { super(addr); }
 
+    // internal usage only
+    public static ContourFitting __fromPtr__(long addr) { return new ContourFitting(addr); }
 
     //
     // C++:  int getCtrSize()

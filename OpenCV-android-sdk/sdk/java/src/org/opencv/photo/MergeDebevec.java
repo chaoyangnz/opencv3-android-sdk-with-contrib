@@ -1,4 +1,3 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
@@ -7,6 +6,7 @@ package org.opencv.photo;
 import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.Mat;
+import org.opencv.photo.MergeExposures;
 import org.opencv.utils.Converters;
 
 // C++: class MergeDebevec
@@ -16,6 +16,8 @@ public class MergeDebevec extends MergeExposures {
 
     protected MergeDebevec(long addr) { super(addr); }
 
+    // internal usage only
+    public static MergeDebevec __fromPtr__(long addr) { return new MergeDebevec(addr); }
 
     //
     // C++:  void process(vector_Mat src, Mat& dst, Mat times, Mat response)

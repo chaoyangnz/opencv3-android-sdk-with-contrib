@@ -1,11 +1,33 @@
-
 //
 // This file is auto-generated. Please don't modify it!
 //
 package org.opencv.ximgproc;
 
 import java.lang.String;
+import org.opencv.calib3d.StereoMatcher;
 import org.opencv.core.Mat;
+import org.opencv.ximgproc.AdaptiveManifoldFilter;
+import org.opencv.ximgproc.ContourFitting;
+import org.opencv.ximgproc.DTFilter;
+import org.opencv.ximgproc.DisparityWLSFilter;
+import org.opencv.ximgproc.EdgeAwareInterpolator;
+import org.opencv.ximgproc.EdgeBoxes;
+import org.opencv.ximgproc.FastGlobalSmootherFilter;
+import org.opencv.ximgproc.FastLineDetector;
+import org.opencv.ximgproc.GraphSegmentation;
+import org.opencv.ximgproc.GuidedFilter;
+import org.opencv.ximgproc.RFFeatureGetter;
+import org.opencv.ximgproc.SelectiveSearchSegmentation;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategy;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategyColor;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategyFill;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategyMultiple;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategySize;
+import org.opencv.ximgproc.SelectiveSearchSegmentationStrategyTexture;
+import org.opencv.ximgproc.StructuredEdgeDetection;
+import org.opencv.ximgproc.SuperpixelLSC;
+import org.opencv.ximgproc.SuperpixelSEEDS;
+import org.opencv.ximgproc.SuperpixelSLIC;
 
 // C++: class Ximgproc
 //javadoc: Ximgproc
@@ -24,6 +46,15 @@ public class Ximgproc {
             DTF_RF = 2,
             GUIDED_FILTER = 3,
             AM_FILTER = 4,
+            SLIC = 100,
+            SLICO = 101,
+            MSLIC = 102,
+            WMF_EXP = 1,
+            WMF_IV1 = 1 << 1,
+            WMF_IV2 = 1 << 2,
+            WMF_COS = 1 << 3,
+            WMF_JAC = 1 << 4,
+            WMF_OFF = 1 << 5,
             ARO_0_45 = 0,
             ARO_45_90 = 1,
             ARO_90_135 = 2,
@@ -38,16 +69,7 @@ public class Ximgproc {
             FHT_ADD = 2,
             FHT_AVE = 3,
             HDO_RAW = 0,
-            HDO_DESKEW = 1,
-            SLIC = 100,
-            SLICO = 101,
-            MSLIC = 102,
-            WMF_EXP = 1,
-            WMF_IV1 = 1 << 1,
-            WMF_IV2 = 1 << 2,
-            WMF_COS = 1 << 3,
-            WMF_JAC = 1 << 4,
-            WMF_OFF = 1 << 5;
+            HDO_DESKEW = 1;
 
 
     //
@@ -58,7 +80,7 @@ public class Ximgproc {
     public static AdaptiveManifoldFilter createAMFilter(double sigma_s, double sigma_r, boolean adjust_outliers)
     {
         
-        AdaptiveManifoldFilter retVal = new AdaptiveManifoldFilter(createAMFilter_0(sigma_s, sigma_r, adjust_outliers));
+        AdaptiveManifoldFilter retVal = AdaptiveManifoldFilter.__fromPtr__(createAMFilter_0(sigma_s, sigma_r, adjust_outliers));
         
         return retVal;
     }
@@ -67,7 +89,7 @@ public class Ximgproc {
     public static AdaptiveManifoldFilter createAMFilter(double sigma_s, double sigma_r)
     {
         
-        AdaptiveManifoldFilter retVal = new AdaptiveManifoldFilter(createAMFilter_1(sigma_s, sigma_r));
+        AdaptiveManifoldFilter retVal = AdaptiveManifoldFilter.__fromPtr__(createAMFilter_1(sigma_s, sigma_r));
         
         return retVal;
     }
@@ -81,7 +103,7 @@ public class Ximgproc {
     public static ContourFitting createContourFitting(int ctr, int fd)
     {
         
-        ContourFitting retVal = new ContourFitting(createContourFitting_0(ctr, fd));
+        ContourFitting retVal = ContourFitting.__fromPtr__(createContourFitting_0(ctr, fd));
         
         return retVal;
     }
@@ -90,7 +112,7 @@ public class Ximgproc {
     public static ContourFitting createContourFitting()
     {
         
-        ContourFitting retVal = new ContourFitting(createContourFitting_1());
+        ContourFitting retVal = ContourFitting.__fromPtr__(createContourFitting_1());
         
         return retVal;
     }
@@ -104,7 +126,7 @@ public class Ximgproc {
     public static DTFilter createDTFilter(Mat guide, double sigmaSpatial, double sigmaColor, int mode, int numIters)
     {
         
-        DTFilter retVal = new DTFilter(createDTFilter_0(guide.nativeObj, sigmaSpatial, sigmaColor, mode, numIters));
+        DTFilter retVal = DTFilter.__fromPtr__(createDTFilter_0(guide.nativeObj, sigmaSpatial, sigmaColor, mode, numIters));
         
         return retVal;
     }
@@ -113,7 +135,7 @@ public class Ximgproc {
     public static DTFilter createDTFilter(Mat guide, double sigmaSpatial, double sigmaColor)
     {
         
-        DTFilter retVal = new DTFilter(createDTFilter_1(guide.nativeObj, sigmaSpatial, sigmaColor));
+        DTFilter retVal = DTFilter.__fromPtr__(createDTFilter_1(guide.nativeObj, sigmaSpatial, sigmaColor));
         
         return retVal;
     }
@@ -123,7 +145,14 @@ public class Ximgproc {
     // C++:  Ptr_DisparityWLSFilter createDisparityWLSFilter(Ptr_StereoMatcher matcher_left)
     //
 
-    // Unknown type 'Ptr_StereoMatcher' (I), skipping the function
+    //javadoc: createDisparityWLSFilter(matcher_left)
+    public static DisparityWLSFilter createDisparityWLSFilter(StereoMatcher matcher_left)
+    {
+        
+        DisparityWLSFilter retVal = DisparityWLSFilter.__fromPtr__(createDisparityWLSFilter_0(matcher_left.getNativeObjAddr()));
+        
+        return retVal;
+    }
 
 
     //
@@ -134,7 +163,7 @@ public class Ximgproc {
     public static DisparityWLSFilter createDisparityWLSFilterGeneric(boolean use_confidence)
     {
         
-        DisparityWLSFilter retVal = new DisparityWLSFilter(createDisparityWLSFilterGeneric_0(use_confidence));
+        DisparityWLSFilter retVal = DisparityWLSFilter.__fromPtr__(createDisparityWLSFilterGeneric_0(use_confidence));
         
         return retVal;
     }
@@ -148,7 +177,7 @@ public class Ximgproc {
     public static EdgeAwareInterpolator createEdgeAwareInterpolator()
     {
         
-        EdgeAwareInterpolator retVal = new EdgeAwareInterpolator(createEdgeAwareInterpolator_0());
+        EdgeAwareInterpolator retVal = EdgeAwareInterpolator.__fromPtr__(createEdgeAwareInterpolator_0());
         
         return retVal;
     }
@@ -162,7 +191,7 @@ public class Ximgproc {
     public static EdgeBoxes createEdgeBoxes(float alpha, float beta, float eta, float minScore, int maxBoxes, float edgeMinMag, float edgeMergeThr, float clusterMinMag, float maxAspectRatio, float minBoxArea, float gamma, float kappa)
     {
         
-        EdgeBoxes retVal = new EdgeBoxes(createEdgeBoxes_0(alpha, beta, eta, minScore, maxBoxes, edgeMinMag, edgeMergeThr, clusterMinMag, maxAspectRatio, minBoxArea, gamma, kappa));
+        EdgeBoxes retVal = EdgeBoxes.__fromPtr__(createEdgeBoxes_0(alpha, beta, eta, minScore, maxBoxes, edgeMinMag, edgeMergeThr, clusterMinMag, maxAspectRatio, minBoxArea, gamma, kappa));
         
         return retVal;
     }
@@ -171,7 +200,7 @@ public class Ximgproc {
     public static EdgeBoxes createEdgeBoxes()
     {
         
-        EdgeBoxes retVal = new EdgeBoxes(createEdgeBoxes_1());
+        EdgeBoxes retVal = EdgeBoxes.__fromPtr__(createEdgeBoxes_1());
         
         return retVal;
     }
@@ -185,7 +214,7 @@ public class Ximgproc {
     public static FastGlobalSmootherFilter createFastGlobalSmootherFilter(Mat guide, double lambda, double sigma_color, double lambda_attenuation, int num_iter)
     {
         
-        FastGlobalSmootherFilter retVal = new FastGlobalSmootherFilter(createFastGlobalSmootherFilter_0(guide.nativeObj, lambda, sigma_color, lambda_attenuation, num_iter));
+        FastGlobalSmootherFilter retVal = FastGlobalSmootherFilter.__fromPtr__(createFastGlobalSmootherFilter_0(guide.nativeObj, lambda, sigma_color, lambda_attenuation, num_iter));
         
         return retVal;
     }
@@ -194,7 +223,7 @@ public class Ximgproc {
     public static FastGlobalSmootherFilter createFastGlobalSmootherFilter(Mat guide, double lambda, double sigma_color)
     {
         
-        FastGlobalSmootherFilter retVal = new FastGlobalSmootherFilter(createFastGlobalSmootherFilter_1(guide.nativeObj, lambda, sigma_color));
+        FastGlobalSmootherFilter retVal = FastGlobalSmootherFilter.__fromPtr__(createFastGlobalSmootherFilter_1(guide.nativeObj, lambda, sigma_color));
         
         return retVal;
     }
@@ -208,7 +237,7 @@ public class Ximgproc {
     public static FastLineDetector createFastLineDetector(int _length_threshold, float _distance_threshold, double _canny_th1, double _canny_th2, int _canny_aperture_size, boolean _do_merge)
     {
         
-        FastLineDetector retVal = new FastLineDetector(createFastLineDetector_0(_length_threshold, _distance_threshold, _canny_th1, _canny_th2, _canny_aperture_size, _do_merge));
+        FastLineDetector retVal = FastLineDetector.__fromPtr__(createFastLineDetector_0(_length_threshold, _distance_threshold, _canny_th1, _canny_th2, _canny_aperture_size, _do_merge));
         
         return retVal;
     }
@@ -217,7 +246,7 @@ public class Ximgproc {
     public static FastLineDetector createFastLineDetector()
     {
         
-        FastLineDetector retVal = new FastLineDetector(createFastLineDetector_1());
+        FastLineDetector retVal = FastLineDetector.__fromPtr__(createFastLineDetector_1());
         
         return retVal;
     }
@@ -231,7 +260,7 @@ public class Ximgproc {
     public static GraphSegmentation createGraphSegmentation(double sigma, float k, int min_size)
     {
         
-        GraphSegmentation retVal = new GraphSegmentation(createGraphSegmentation_0(sigma, k, min_size));
+        GraphSegmentation retVal = GraphSegmentation.__fromPtr__(createGraphSegmentation_0(sigma, k, min_size));
         
         return retVal;
     }
@@ -240,7 +269,7 @@ public class Ximgproc {
     public static GraphSegmentation createGraphSegmentation()
     {
         
-        GraphSegmentation retVal = new GraphSegmentation(createGraphSegmentation_1());
+        GraphSegmentation retVal = GraphSegmentation.__fromPtr__(createGraphSegmentation_1());
         
         return retVal;
     }
@@ -254,7 +283,7 @@ public class Ximgproc {
     public static GuidedFilter createGuidedFilter(Mat guide, int radius, double eps)
     {
         
-        GuidedFilter retVal = new GuidedFilter(createGuidedFilter_0(guide.nativeObj, radius, eps));
+        GuidedFilter retVal = GuidedFilter.__fromPtr__(createGuidedFilter_0(guide.nativeObj, radius, eps));
         
         return retVal;
     }
@@ -268,7 +297,7 @@ public class Ximgproc {
     public static RFFeatureGetter createRFFeatureGetter()
     {
         
-        RFFeatureGetter retVal = new RFFeatureGetter(createRFFeatureGetter_0());
+        RFFeatureGetter retVal = RFFeatureGetter.__fromPtr__(createRFFeatureGetter_0());
         
         return retVal;
     }
@@ -282,7 +311,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentation createSelectiveSearchSegmentation()
     {
         
-        SelectiveSearchSegmentation retVal = new SelectiveSearchSegmentation(createSelectiveSearchSegmentation_0());
+        SelectiveSearchSegmentation retVal = SelectiveSearchSegmentation.__fromPtr__(createSelectiveSearchSegmentation_0());
         
         return retVal;
     }
@@ -296,7 +325,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyColor createSelectiveSearchSegmentationStrategyColor()
     {
         
-        SelectiveSearchSegmentationStrategyColor retVal = new SelectiveSearchSegmentationStrategyColor(createSelectiveSearchSegmentationStrategyColor_0());
+        SelectiveSearchSegmentationStrategyColor retVal = SelectiveSearchSegmentationStrategyColor.__fromPtr__(createSelectiveSearchSegmentationStrategyColor_0());
         
         return retVal;
     }
@@ -310,7 +339,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyFill createSelectiveSearchSegmentationStrategyFill()
     {
         
-        SelectiveSearchSegmentationStrategyFill retVal = new SelectiveSearchSegmentationStrategyFill(createSelectiveSearchSegmentationStrategyFill_0());
+        SelectiveSearchSegmentationStrategyFill retVal = SelectiveSearchSegmentationStrategyFill.__fromPtr__(createSelectiveSearchSegmentationStrategyFill_0());
         
         return retVal;
     }
@@ -324,7 +353,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyMultiple createSelectiveSearchSegmentationStrategyMultiple(SelectiveSearchSegmentationStrategy s1, SelectiveSearchSegmentationStrategy s2, SelectiveSearchSegmentationStrategy s3, SelectiveSearchSegmentationStrategy s4)
     {
         
-        SelectiveSearchSegmentationStrategyMultiple retVal = new SelectiveSearchSegmentationStrategyMultiple(createSelectiveSearchSegmentationStrategyMultiple_0(s1.getNativeObjAddr(), s2.getNativeObjAddr(), s3.getNativeObjAddr(), s4.getNativeObjAddr()));
+        SelectiveSearchSegmentationStrategyMultiple retVal = SelectiveSearchSegmentationStrategyMultiple.__fromPtr__(createSelectiveSearchSegmentationStrategyMultiple_0(s1.getNativeObjAddr(), s2.getNativeObjAddr(), s3.getNativeObjAddr(), s4.getNativeObjAddr()));
         
         return retVal;
     }
@@ -338,7 +367,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyMultiple createSelectiveSearchSegmentationStrategyMultiple(SelectiveSearchSegmentationStrategy s1, SelectiveSearchSegmentationStrategy s2, SelectiveSearchSegmentationStrategy s3)
     {
         
-        SelectiveSearchSegmentationStrategyMultiple retVal = new SelectiveSearchSegmentationStrategyMultiple(createSelectiveSearchSegmentationStrategyMultiple_1(s1.getNativeObjAddr(), s2.getNativeObjAddr(), s3.getNativeObjAddr()));
+        SelectiveSearchSegmentationStrategyMultiple retVal = SelectiveSearchSegmentationStrategyMultiple.__fromPtr__(createSelectiveSearchSegmentationStrategyMultiple_1(s1.getNativeObjAddr(), s2.getNativeObjAddr(), s3.getNativeObjAddr()));
         
         return retVal;
     }
@@ -352,7 +381,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyMultiple createSelectiveSearchSegmentationStrategyMultiple(SelectiveSearchSegmentationStrategy s1, SelectiveSearchSegmentationStrategy s2)
     {
         
-        SelectiveSearchSegmentationStrategyMultiple retVal = new SelectiveSearchSegmentationStrategyMultiple(createSelectiveSearchSegmentationStrategyMultiple_2(s1.getNativeObjAddr(), s2.getNativeObjAddr()));
+        SelectiveSearchSegmentationStrategyMultiple retVal = SelectiveSearchSegmentationStrategyMultiple.__fromPtr__(createSelectiveSearchSegmentationStrategyMultiple_2(s1.getNativeObjAddr(), s2.getNativeObjAddr()));
         
         return retVal;
     }
@@ -366,7 +395,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyMultiple createSelectiveSearchSegmentationStrategyMultiple(SelectiveSearchSegmentationStrategy s1)
     {
         
-        SelectiveSearchSegmentationStrategyMultiple retVal = new SelectiveSearchSegmentationStrategyMultiple(createSelectiveSearchSegmentationStrategyMultiple_3(s1.getNativeObjAddr()));
+        SelectiveSearchSegmentationStrategyMultiple retVal = SelectiveSearchSegmentationStrategyMultiple.__fromPtr__(createSelectiveSearchSegmentationStrategyMultiple_3(s1.getNativeObjAddr()));
         
         return retVal;
     }
@@ -380,7 +409,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyMultiple createSelectiveSearchSegmentationStrategyMultiple()
     {
         
-        SelectiveSearchSegmentationStrategyMultiple retVal = new SelectiveSearchSegmentationStrategyMultiple(createSelectiveSearchSegmentationStrategyMultiple_4());
+        SelectiveSearchSegmentationStrategyMultiple retVal = SelectiveSearchSegmentationStrategyMultiple.__fromPtr__(createSelectiveSearchSegmentationStrategyMultiple_4());
         
         return retVal;
     }
@@ -394,7 +423,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategySize createSelectiveSearchSegmentationStrategySize()
     {
         
-        SelectiveSearchSegmentationStrategySize retVal = new SelectiveSearchSegmentationStrategySize(createSelectiveSearchSegmentationStrategySize_0());
+        SelectiveSearchSegmentationStrategySize retVal = SelectiveSearchSegmentationStrategySize.__fromPtr__(createSelectiveSearchSegmentationStrategySize_0());
         
         return retVal;
     }
@@ -408,7 +437,7 @@ public class Ximgproc {
     public static SelectiveSearchSegmentationStrategyTexture createSelectiveSearchSegmentationStrategyTexture()
     {
         
-        SelectiveSearchSegmentationStrategyTexture retVal = new SelectiveSearchSegmentationStrategyTexture(createSelectiveSearchSegmentationStrategyTexture_0());
+        SelectiveSearchSegmentationStrategyTexture retVal = SelectiveSearchSegmentationStrategyTexture.__fromPtr__(createSelectiveSearchSegmentationStrategyTexture_0());
         
         return retVal;
     }
@@ -418,7 +447,14 @@ public class Ximgproc {
     // C++:  Ptr_StereoMatcher createRightMatcher(Ptr_StereoMatcher matcher_left)
     //
 
-    // Return type 'Ptr_StereoMatcher' is not supported, skipping the function
+    //javadoc: createRightMatcher(matcher_left)
+    public static StereoMatcher createRightMatcher(StereoMatcher matcher_left)
+    {
+        
+        StereoMatcher retVal = StereoMatcher.__fromPtr__(createRightMatcher_0(matcher_left.getNativeObjAddr()));
+        
+        return retVal;
+    }
 
 
     //
@@ -429,7 +465,7 @@ public class Ximgproc {
     public static StructuredEdgeDetection createStructuredEdgeDetection(String model, RFFeatureGetter howToGetFeatures)
     {
         
-        StructuredEdgeDetection retVal = new StructuredEdgeDetection(createStructuredEdgeDetection_0(model, howToGetFeatures.getNativeObjAddr()));
+        StructuredEdgeDetection retVal = StructuredEdgeDetection.__fromPtr__(createStructuredEdgeDetection_0(model, howToGetFeatures.getNativeObjAddr()));
         
         return retVal;
     }
@@ -438,7 +474,7 @@ public class Ximgproc {
     public static StructuredEdgeDetection createStructuredEdgeDetection(String model)
     {
         
-        StructuredEdgeDetection retVal = new StructuredEdgeDetection(createStructuredEdgeDetection_1(model));
+        StructuredEdgeDetection retVal = StructuredEdgeDetection.__fromPtr__(createStructuredEdgeDetection_1(model));
         
         return retVal;
     }
@@ -452,7 +488,7 @@ public class Ximgproc {
     public static SuperpixelLSC createSuperpixelLSC(Mat image, int region_size, float ratio)
     {
         
-        SuperpixelLSC retVal = new SuperpixelLSC(createSuperpixelLSC_0(image.nativeObj, region_size, ratio));
+        SuperpixelLSC retVal = SuperpixelLSC.__fromPtr__(createSuperpixelLSC_0(image.nativeObj, region_size, ratio));
         
         return retVal;
     }
@@ -461,7 +497,7 @@ public class Ximgproc {
     public static SuperpixelLSC createSuperpixelLSC(Mat image)
     {
         
-        SuperpixelLSC retVal = new SuperpixelLSC(createSuperpixelLSC_1(image.nativeObj));
+        SuperpixelLSC retVal = SuperpixelLSC.__fromPtr__(createSuperpixelLSC_1(image.nativeObj));
         
         return retVal;
     }
@@ -475,7 +511,7 @@ public class Ximgproc {
     public static SuperpixelSEEDS createSuperpixelSEEDS(int image_width, int image_height, int image_channels, int num_superpixels, int num_levels, int prior, int histogram_bins, boolean double_step)
     {
         
-        SuperpixelSEEDS retVal = new SuperpixelSEEDS(createSuperpixelSEEDS_0(image_width, image_height, image_channels, num_superpixels, num_levels, prior, histogram_bins, double_step));
+        SuperpixelSEEDS retVal = SuperpixelSEEDS.__fromPtr__(createSuperpixelSEEDS_0(image_width, image_height, image_channels, num_superpixels, num_levels, prior, histogram_bins, double_step));
         
         return retVal;
     }
@@ -484,7 +520,7 @@ public class Ximgproc {
     public static SuperpixelSEEDS createSuperpixelSEEDS(int image_width, int image_height, int image_channels, int num_superpixels, int num_levels)
     {
         
-        SuperpixelSEEDS retVal = new SuperpixelSEEDS(createSuperpixelSEEDS_1(image_width, image_height, image_channels, num_superpixels, num_levels));
+        SuperpixelSEEDS retVal = SuperpixelSEEDS.__fromPtr__(createSuperpixelSEEDS_1(image_width, image_height, image_channels, num_superpixels, num_levels));
         
         return retVal;
     }
@@ -498,7 +534,7 @@ public class Ximgproc {
     public static SuperpixelSLIC createSuperpixelSLIC(Mat image, int algorithm, int region_size, float ruler)
     {
         
-        SuperpixelSLIC retVal = new SuperpixelSLIC(createSuperpixelSLIC_0(image.nativeObj, algorithm, region_size, ruler));
+        SuperpixelSLIC retVal = SuperpixelSLIC.__fromPtr__(createSuperpixelSLIC_0(image.nativeObj, algorithm, region_size, ruler));
         
         return retVal;
     }
@@ -507,7 +543,7 @@ public class Ximgproc {
     public static SuperpixelSLIC createSuperpixelSLIC(Mat image)
     {
         
-        SuperpixelSLIC retVal = new SuperpixelSLIC(createSuperpixelSLIC_1(image.nativeObj));
+        SuperpixelSLIC retVal = SuperpixelSLIC.__fromPtr__(createSuperpixelSLIC_1(image.nativeObj));
         
         return retVal;
     }
@@ -900,6 +936,9 @@ public class Ximgproc {
     private static native long createDTFilter_0(long guide_nativeObj, double sigmaSpatial, double sigmaColor, int mode, int numIters);
     private static native long createDTFilter_1(long guide_nativeObj, double sigmaSpatial, double sigmaColor);
 
+    // C++:  Ptr_DisparityWLSFilter createDisparityWLSFilter(Ptr_StereoMatcher matcher_left)
+    private static native long createDisparityWLSFilter_0(long matcher_left_nativeObj);
+
     // C++:  Ptr_DisparityWLSFilter createDisparityWLSFilterGeneric(bool use_confidence)
     private static native long createDisparityWLSFilterGeneric_0(boolean use_confidence);
 
@@ -957,6 +996,9 @@ public class Ximgproc {
 
     // C++:  Ptr_SelectiveSearchSegmentationStrategyTexture createSelectiveSearchSegmentationStrategyTexture()
     private static native long createSelectiveSearchSegmentationStrategyTexture_0();
+
+    // C++:  Ptr_StereoMatcher createRightMatcher(Ptr_StereoMatcher matcher_left)
+    private static native long createRightMatcher_0(long matcher_left_nativeObj);
 
     // C++:  Ptr_StructuredEdgeDetection createStructuredEdgeDetection(String model, Ptr_RFFeatureGetter howToGetFeatures = Ptr<RFFeatureGetter>())
     private static native long createStructuredEdgeDetection_0(String model, long howToGetFeatures_nativeObj);
