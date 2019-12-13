@@ -10,7 +10,7 @@ Go to `./OpenCV-android-sdk`, just like the offical SDK, all are there including
 
 ## How to build yourself
 
-Please refer to https://chaoyang.nz/post/build-opencv-android-sdk/
+Please refer to https://chao.yang.to/post/build-opencv-android-sdk/
 
 # How to Use in your Android project
 
